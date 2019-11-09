@@ -1,0 +1,1122 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20191972",
+  "Class": "patch",
+  "Title": "RHSA-2019:1972: ruby:2.5 security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2019:1972",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2019:1972"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-8324",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-8324"
+    }
+  ],
+  "Description": "Ruby is an extensible, interpreted, object-oriented, scripting language. It has features to process text files and to perform system management tasks.\n\nSecurity Fix(es):\n\n* rubygems: Installing a malicious gem may lead to arbitrary code execution (CVE-2019-8324)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-8324",
+        "Cvss2": "",
+        "Cvss3": "7.2/CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-20",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-8324",
+        "Public": "20190305"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1692520",
+        "URL": "https://bugzilla.redhat.com/1692520",
+        "Title": "CVE-2019-8324 rubygems: Installing a malicious gem may lead to arbitrary code execution"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:enterprise_linux:8"
+    ],
+    "Issued": {
+      "Date": "2019-08-07"
+    },
+    "Updated": {
+      "Date": "2019-07-30"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972001",
+                "Comment": "rubygem-psych is earlier than 0:3.0.2-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972002",
+                "Comment": "rubygem-psych is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972003",
+                "Comment": "rubygem-pg-debugsource is earlier than 0:1.0.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972004",
+                "Comment": "rubygem-pg-debugsource is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972005",
+                "Comment": "rubygem-pg is earlier than 0:1.0.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972006",
+                "Comment": "rubygem-pg is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972007",
+                "Comment": "rubygem-openssl is earlier than 0:2.1.2-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972008",
+                "Comment": "rubygem-openssl is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972009",
+                "Comment": "rubygem-mysql2-debugsource is earlier than 0:0.4.10-4.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972010",
+                "Comment": "rubygem-mysql2-debugsource is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972011",
+                "Comment": "rubygem-mysql2 is earlier than 0:0.4.10-4.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972012",
+                "Comment": "rubygem-mysql2 is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972013",
+                "Comment": "rubygem-json is earlier than 0:2.1.0-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972014",
+                "Comment": "rubygem-json is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972015",
+                "Comment": "rubygem-io-console is earlier than 0:0.4.6-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972016",
+                "Comment": "rubygem-io-console is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972017",
+                "Comment": "rubygem-bson-debugsource is earlier than 0:4.3.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972018",
+                "Comment": "rubygem-bson-debugsource is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972019",
+                "Comment": "rubygem-bson is earlier than 0:4.3.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972020",
+                "Comment": "rubygem-bson is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972021",
+                "Comment": "rubygem-bigdecimal is earlier than 0:1.3.4-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972022",
+                "Comment": "rubygem-bigdecimal is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972023",
+                "Comment": "ruby-libs is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972024",
+                "Comment": "ruby-libs is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972025",
+                "Comment": "ruby-devel is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972026",
+                "Comment": "ruby-devel is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972027",
+                "Comment": "ruby-debugsource is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972028",
+                "Comment": "ruby-debugsource is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972029",
+                "Comment": "ruby is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972030",
+                "Comment": "ruby is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972031",
+                "Comment": "rubygems-devel is earlier than 0:2.7.6-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972032",
+                "Comment": "rubygems-devel is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972033",
+                "Comment": "rubygems is earlier than 0:2.7.6-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972034",
+                "Comment": "rubygems is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972035",
+                "Comment": "rubygem-xmlrpc is earlier than 0:0.3.0-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972036",
+                "Comment": "rubygem-xmlrpc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972037",
+                "Comment": "rubygem-test-unit is earlier than 0:3.2.7-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972038",
+                "Comment": "rubygem-test-unit is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972039",
+                "Comment": "rubygem-rdoc is earlier than 0:6.0.1-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972040",
+                "Comment": "rubygem-rdoc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972041",
+                "Comment": "rubygem-rake is earlier than 0:12.3.0-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972042",
+                "Comment": "rubygem-rake is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972043",
+                "Comment": "rubygem-power_assert is earlier than 0:1.1.1-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972044",
+                "Comment": "rubygem-power_assert is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972045",
+                "Comment": "rubygem-pg-doc is earlier than 0:1.0.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972046",
+                "Comment": "rubygem-pg-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972047",
+                "Comment": "rubygem-net-telnet is earlier than 0:0.1.1-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972048",
+                "Comment": "rubygem-net-telnet is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972049",
+                "Comment": "rubygem-mysql2-doc is earlier than 0:0.4.10-4.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972050",
+                "Comment": "rubygem-mysql2-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972051",
+                "Comment": "rubygem-mongo-doc is earlier than 0:2.5.1-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972052",
+                "Comment": "rubygem-mongo-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972053",
+                "Comment": "rubygem-mongo is earlier than 0:2.5.1-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972054",
+                "Comment": "rubygem-mongo is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972055",
+                "Comment": "rubygem-minitest is earlier than 0:5.10.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972056",
+                "Comment": "rubygem-minitest is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972057",
+                "Comment": "rubygem-did_you_mean is earlier than 0:1.2.0-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972058",
+                "Comment": "rubygem-did_you_mean is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972059",
+                "Comment": "rubygem-bundler-doc is earlier than 0:1.16.1-3.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972060",
+                "Comment": "rubygem-bundler-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972061",
+                "Comment": "rubygem-bundler is earlier than 0:1.16.1-3.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972062",
+                "Comment": "rubygem-bundler is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972063",
+                "Comment": "rubygem-bson-doc is earlier than 0:4.3.0-2.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972064",
+                "Comment": "rubygem-bson-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972065",
+                "Comment": "rubygem-abrt-doc is earlier than 0:0.3.0-4.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972066",
+                "Comment": "rubygem-abrt-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972067",
+                "Comment": "rubygem-abrt is earlier than 0:0.3.0-4.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972068",
+                "Comment": "rubygem-abrt is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972069",
+                "Comment": "ruby-irb is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972070",
+                "Comment": "ruby-irb is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972071",
+                "Comment": "ruby-doc is earlier than 0:2.5.3-104.module+el8.0.0+3250+4b7d6d43"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20191972072",
+                "Comment": "ruby-doc is signed with Red Hat redhatrelease2 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
+        "Comment": "Red Hat Enterprise Linux 8 is installed"
+      }
+    ]
+  }
+}
