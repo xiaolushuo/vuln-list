@@ -187,7 +187,11 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:6"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-02-19"
@@ -201,15 +205,362 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
-        "Criterias": null,
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271001",
+                    "Comment": "yelp is earlier than 0:2.28.1-17.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271002",
+                    "Comment": "yelp is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271003",
+                    "Comment": "libproxy-webkit is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461008",
+                    "Comment": "libproxy-webkit is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271005",
+                    "Comment": "libproxy-gnome is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461002",
+                    "Comment": "libproxy-gnome is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271007",
+                    "Comment": "libproxy-mozjs is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461010",
+                    "Comment": "libproxy-mozjs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271009",
+                    "Comment": "libproxy-devel is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461004",
+                    "Comment": "libproxy-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271011",
+                    "Comment": "libproxy-kde is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461006",
+                    "Comment": "libproxy-kde is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271013",
+                    "Comment": "libproxy is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461012",
+                    "Comment": "libproxy is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271015",
+                    "Comment": "libproxy-bin is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461014",
+                    "Comment": "libproxy-bin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271017",
+                    "Comment": "libproxy-python is earlier than 0:0.3.0-4.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121461016",
+                    "Comment": "libproxy-python is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271019",
+                    "Comment": "xulrunner is earlier than 0:17.0.3-1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100861002",
+                    "Comment": "xulrunner is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271021",
+                    "Comment": "xulrunner-devel is earlier than 0:17.0.3-1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100861004",
+                    "Comment": "xulrunner-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130271023",
+                    "Comment": "firefox is earlier than 0:17.0.3-1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100861006",
+                    "Comment": "firefox is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
         "Criterions": [
           {
             "XMLName": {
@@ -218,384 +569,21 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
-            "Comment": "Red Hat Enterprise Linux 6 Client is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656004",
-            "Comment": "Red Hat Enterprise Linux 6 Server is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656005",
-            "Comment": "Red Hat Enterprise Linux 6 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656006",
-            "Comment": "Red Hat Enterprise Linux 6 ComputeNode is installed"
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           }
         ]
-      },
+      }
+    ],
+    "Criterions": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criteria"
+          "Local": "criterion"
         },
-        "Operator": "OR",
-        "Criterias": [
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271001",
-                "Comment": "yelp is earlier than 0:2.28.1-17.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271002",
-                "Comment": "yelp is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271003",
-                "Comment": "libproxy-webkit is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461008",
-                "Comment": "libproxy-webkit is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271005",
-                "Comment": "libproxy-gnome is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461002",
-                "Comment": "libproxy-gnome is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271007",
-                "Comment": "libproxy-mozjs is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461010",
-                "Comment": "libproxy-mozjs is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271009",
-                "Comment": "libproxy-devel is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461004",
-                "Comment": "libproxy-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271011",
-                "Comment": "libproxy-kde is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461006",
-                "Comment": "libproxy-kde is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271013",
-                "Comment": "libproxy is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461012",
-                "Comment": "libproxy is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271015",
-                "Comment": "libproxy-bin is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461014",
-                "Comment": "libproxy-bin is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271017",
-                "Comment": "libproxy-python is earlier than 0:0.3.0-4.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20121461016",
-                "Comment": "libproxy-python is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271019",
-                "Comment": "xulrunner is earlier than 0:17.0.3-1.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20100861002",
-                "Comment": "xulrunner is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271021",
-                "Comment": "xulrunner-devel is earlier than 0:17.0.3-1.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20100861004",
-                "Comment": "xulrunner-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20130271023",
-                "Comment": "firefox is earlier than 0:17.0.3-1.el6_3"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20100861006",
-                "Comment": "firefox is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          }
-        ],
-        "Criterions": null
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
-    ],
-    "Criterions": null
+    ]
   }
 }

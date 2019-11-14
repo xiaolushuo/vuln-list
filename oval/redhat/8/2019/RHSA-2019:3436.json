@@ -139,7 +139,8 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:enterprise_linux:8"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
       "Date": "2019-11-05"
@@ -153,381 +154,401 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": [
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
               "Local": "criteria"
             },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
+            "Operator": "OR",
+            "Criterias": [
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436001",
-                "Comment": "mod_ssl is earlier than 1:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436001",
+                    "Comment": "mod_ssl is earlier than 1:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980002",
+                    "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980002",
-                "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436003",
-                "Comment": "mod_session is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436003",
+                    "Comment": "mod_session is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980004",
+                    "Comment": "mod_session is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980004",
-                "Comment": "mod_session is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436005",
-                "Comment": "mod_proxy_html is earlier than 1:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436005",
+                    "Comment": "mod_proxy_html is earlier than 1:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980006",
+                    "Comment": "mod_proxy_html is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980006",
-                "Comment": "mod_proxy_html is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436007",
-                "Comment": "mod_md is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436007",
+                    "Comment": "mod_md is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980008",
+                    "Comment": "mod_md is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980008",
-                "Comment": "mod_md is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436009",
-                "Comment": "mod_ldap is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436009",
+                    "Comment": "mod_ldap is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980010",
+                    "Comment": "mod_ldap is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980010",
-                "Comment": "mod_ldap is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436011",
-                "Comment": "mod_http2-debugsource is earlier than 0:1.11.3-3.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436011",
+                    "Comment": "mod_http2-debugsource is earlier than 0:1.11.3-3.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980012",
+                    "Comment": "mod_http2-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980012",
-                "Comment": "mod_http2-debugsource is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436013",
-                "Comment": "mod_http2 is earlier than 0:1.11.3-3.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436013",
+                    "Comment": "mod_http2 is earlier than 0:1.11.3-3.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980014",
+                    "Comment": "mod_http2 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980014",
-                "Comment": "mod_http2 is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436015",
-                "Comment": "httpd-tools is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436015",
+                    "Comment": "httpd-tools is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980016",
+                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980016",
-                "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436017",
-                "Comment": "httpd-devel is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436017",
+                    "Comment": "httpd-devel is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980018",
+                    "Comment": "httpd-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980018",
-                "Comment": "httpd-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436019",
-                "Comment": "httpd-debugsource is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436019",
+                    "Comment": "httpd-debugsource is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980020",
+                    "Comment": "httpd-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980020",
-                "Comment": "httpd-debugsource is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436021",
-                "Comment": "httpd is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436021",
+                    "Comment": "httpd is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980022",
+                    "Comment": "httpd is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980022",
-                "Comment": "httpd is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436023",
-                "Comment": "httpd-manual is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436023",
+                    "Comment": "httpd-manual is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980024",
+                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980024",
-                "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193436025",
+                    "Comment": "httpd-filesystem is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190980026",
+                    "Comment": "httpd-filesystem is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20193436025",
-                "Comment": "httpd-filesystem is earlier than 0:2.4.37-16.module+el8.1.0+4134+e6bad0ed"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20190980026",
-                "Comment": "httpd-filesystem is signed with Red Hat redhatrelease2 key"
-              }
-            ]
+            ],
+            "Criterions": null
           }
         ],
-        "Criterions": null
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
       }
     ],
     "Criterions": [
@@ -537,8 +558,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
-        "Comment": "Red Hat Enterprise Linux 8 is installed"
+        "TestRef": "oval:com.redhat.rhsa:tst:20190966006",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

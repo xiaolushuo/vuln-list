@@ -184,7 +184,11 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7"
+      "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::client"
     ],
     "Issued": {
       "Date": "2018-10-30"
@@ -198,15 +202,222 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
-        "Criterias": null,
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071001",
+                    "Comment": "krb5-server is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439002",
+                    "Comment": "krb5-server is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071003",
+                    "Comment": "krb5-server-ldap is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439006",
+                    "Comment": "krb5-server-ldap is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071005",
+                    "Comment": "krb5-devel is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439004",
+                    "Comment": "krb5-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071007",
+                    "Comment": "krb5-workstation is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439010",
+                    "Comment": "krb5-workstation is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071009",
+                    "Comment": "krb5-libs is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439012",
+                    "Comment": "krb5-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071011",
+                    "Comment": "libkadm5 is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162591004",
+                    "Comment": "libkadm5 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183071013",
+                    "Comment": "krb5-pkinit is earlier than 0:1.15.1-34.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150439008",
+                    "Comment": "krb5-pkinit is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
         "Criterions": [
           {
             "XMLName": {
@@ -215,244 +426,21 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 Client is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364028",
-            "Comment": "Red Hat Enterprise Linux 7 Server is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364029",
-            "Comment": "Red Hat Enterprise Linux 7 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364030",
-            "Comment": "Red Hat Enterprise Linux 7 ComputeNode is installed"
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
           }
         ]
-      },
+      }
+    ],
+    "Criterions": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criteria"
+          "Local": "criterion"
         },
-        "Operator": "OR",
-        "Criterias": [
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071001",
-                "Comment": "krb5-server is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439002",
-                "Comment": "krb5-server is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071003",
-                "Comment": "krb5-server-ldap is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439006",
-                "Comment": "krb5-server-ldap is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071005",
-                "Comment": "krb5-devel is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439004",
-                "Comment": "krb5-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071007",
-                "Comment": "krb5-workstation is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439010",
-                "Comment": "krb5-workstation is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071009",
-                "Comment": "krb5-libs is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439012",
-                "Comment": "krb5-libs is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071011",
-                "Comment": "libkadm5 is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20162591004",
-                "Comment": "libkadm5 is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20183071013",
-                "Comment": "krb5-pkinit is earlier than 0:1.15.1-34.el7"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20150439008",
-                "Comment": "krb5-pkinit is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          }
-        ],
-        "Criterions": null
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
-    ],
-    "Criterions": null
+    ]
   }
 }

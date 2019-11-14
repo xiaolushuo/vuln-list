@@ -171,7 +171,8 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:6"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::server"
     ],
     "Issued": {
       "Date": "2011-12-05"
@@ -185,14 +186,14 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": null,
         "Criterions": [
           {
@@ -202,7 +203,7 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
-            "Comment": "Red Hat Enterprise Linux 6 Client is installed"
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           },
           {
             "XMLName": {
@@ -210,8 +211,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656004",
-            "Comment": "Red Hat Enterprise Linux 6 Server is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20111580001",
+            "Comment": "resource-agents is earlier than 0:3.9.2-7.el6"
           },
           {
             "XMLName": {
@@ -219,17 +220,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656005",
-            "Comment": "Red Hat Enterprise Linux 6 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656006",
-            "Comment": "Red Hat Enterprise Linux 6 ComputeNode is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20111580002",
+            "Comment": "resource-agents is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
@@ -241,17 +233,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20111580001",
-        "Comment": "resource-agents is earlier than 0:3.9.2-7.el6"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criterion"
-        },
-        "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20111580002",
-        "Comment": "resource-agents is signed with Red Hat redhatrelease2 key"
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

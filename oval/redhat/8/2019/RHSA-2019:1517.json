@@ -72,7 +72,9 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:enterprise_linux:8"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::crb",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
       "Date": "2019-06-18"
@@ -86,353 +88,373 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": [
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
               "Local": "criteria"
             },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
+            "Operator": "OR",
+            "Criterias": [
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517001",
-                "Comment": "gvfs-archive is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517001",
+                    "Comment": "gvfs-archive is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517002",
+                    "Comment": "gvfs-archive is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517002",
-                "Comment": "gvfs-archive is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517003",
-                "Comment": "gvfs-mtp is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517003",
+                    "Comment": "gvfs-mtp is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517004",
+                    "Comment": "gvfs-mtp is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517004",
-                "Comment": "gvfs-mtp is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517005",
-                "Comment": "gvfs-goa is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517005",
+                    "Comment": "gvfs-goa is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517006",
+                    "Comment": "gvfs-goa is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517006",
-                "Comment": "gvfs-goa is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517007",
-                "Comment": "gvfs-client is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517007",
+                    "Comment": "gvfs-client is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517008",
+                    "Comment": "gvfs-client is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517008",
-                "Comment": "gvfs-client is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517009",
-                "Comment": "gvfs-afp is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517009",
+                    "Comment": "gvfs-afp is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517010",
+                    "Comment": "gvfs-afp is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517010",
-                "Comment": "gvfs-afp is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517011",
-                "Comment": "gvfs-debugsource is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517011",
+                    "Comment": "gvfs-debugsource is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517012",
+                    "Comment": "gvfs-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517012",
-                "Comment": "gvfs-debugsource is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517013",
-                "Comment": "gvfs-fuse is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517013",
+                    "Comment": "gvfs-fuse is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517014",
+                    "Comment": "gvfs-fuse is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517014",
-                "Comment": "gvfs-fuse is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517015",
-                "Comment": "gvfs-afc is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517015",
+                    "Comment": "gvfs-afc is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517016",
+                    "Comment": "gvfs-afc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517016",
-                "Comment": "gvfs-afc is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517017",
-                "Comment": "gvfs-gphoto2 is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517017",
+                    "Comment": "gvfs-gphoto2 is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517018",
+                    "Comment": "gvfs-gphoto2 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517018",
-                "Comment": "gvfs-gphoto2 is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517019",
-                "Comment": "gvfs-devel is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517019",
+                    "Comment": "gvfs-devel is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517020",
+                    "Comment": "gvfs-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517020",
-                "Comment": "gvfs-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517021",
-                "Comment": "gvfs-smb is earlier than 0:1.36.2-2.el8_0.1"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517021",
+                    "Comment": "gvfs-smb is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517022",
+                    "Comment": "gvfs-smb is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517022",
-                "Comment": "gvfs-smb is signed with Red Hat redhatrelease2 key"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517023",
+                    "Comment": "gvfs is earlier than 0:1.36.2-2.el8_0.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191517024",
+                    "Comment": "gvfs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517023",
-                "Comment": "gvfs is earlier than 0:1.36.2-2.el8_0.1"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191517024",
-                "Comment": "gvfs is signed with Red Hat redhatrelease2 key"
-              }
-            ]
+            ],
+            "Criterions": null
           }
         ],
-        "Criterions": null
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
       }
     ],
     "Criterions": [
@@ -442,8 +464,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
-        "Comment": "Red Hat Enterprise Linux 8 is installed"
+        "TestRef": "oval:com.redhat.rhsa:tst:20190966006",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

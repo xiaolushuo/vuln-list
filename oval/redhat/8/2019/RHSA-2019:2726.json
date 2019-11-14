@@ -112,7 +112,8 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:enterprise_linux:8"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
       "Date": "2019-09-12"
@@ -126,241 +127,261 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": [
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
               "Local": "criteria"
             },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
+            "Operator": "OR",
+            "Criterias": [
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726001",
-                "Comment": "golang-bin is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726001",
+                    "Comment": "golang-bin is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519004",
+                    "Comment": "golang-bin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519004",
-                "Comment": "golang-bin is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726003",
-                "Comment": "golang is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726003",
+                    "Comment": "golang is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519006",
+                    "Comment": "golang is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519006",
-                "Comment": "golang is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726005",
-                "Comment": "go-toolset is earlier than 0:1.11.13-1.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726005",
+                    "Comment": "go-toolset is earlier than 0:1.11.13-1.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519008",
+                    "Comment": "go-toolset is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519008",
-                "Comment": "go-toolset is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726007",
-                "Comment": "golang-tests is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726007",
+                    "Comment": "golang-tests is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519010",
+                    "Comment": "golang-tests is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519010",
-                "Comment": "golang-tests is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726009",
-                "Comment": "golang-src is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726009",
+                    "Comment": "golang-src is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519012",
+                    "Comment": "golang-src is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519012",
-                "Comment": "golang-src is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726011",
-                "Comment": "golang-misc is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726011",
+                    "Comment": "golang-misc is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519014",
+                    "Comment": "golang-misc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519014",
-                "Comment": "golang-misc is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726013",
-                "Comment": "golang-docs is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726013",
+                    "Comment": "golang-docs is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519016",
+                    "Comment": "golang-docs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519016",
-                "Comment": "golang-docs is signed with Red Hat redhatrelease2 key"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192726015",
+                    "Comment": "golang-race is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191519002",
+                    "Comment": "golang-race is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20192726015",
-                "Comment": "golang-race is earlier than 0:1.11.13-2.module+el8.0.1+4087+d8180914"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191519002",
-                "Comment": "golang-race is signed with Red Hat redhatrelease2 key"
-              }
-            ]
+            ],
+            "Criterions": null
           }
         ],
-        "Criterions": null
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
       }
     ],
     "Criterions": [
@@ -370,8 +391,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
-        "Comment": "Red Hat Enterprise Linux 8 is installed"
+        "TestRef": "oval:com.redhat.rhsa:tst:20190966006",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

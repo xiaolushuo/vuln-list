@@ -125,7 +125,11 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:6"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::workstation",
+      "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::server"
     ],
     "Issued": {
       "Date": "2013-10-17"
@@ -139,14 +143,14 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": null,
         "Criterions": [
           {
@@ -156,7 +160,7 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
-            "Comment": "Red Hat Enterprise Linux 6 Client is installed"
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           },
           {
             "XMLName": {
@@ -164,8 +168,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656004",
-            "Comment": "Red Hat Enterprise Linux 6 Server is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20131441001",
+            "Comment": "rubygems is earlier than 0:1.3.7-4.el6_4"
           },
           {
             "XMLName": {
@@ -173,17 +177,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656005",
-            "Comment": "Red Hat Enterprise Linux 6 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656006",
-            "Comment": "Red Hat Enterprise Linux 6 ComputeNode is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20131441002",
+            "Comment": "rubygems is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
@@ -195,17 +190,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20131441001",
-        "Comment": "rubygems is earlier than 0:1.3.7-4.el6_4"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criterion"
-        },
-        "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20131441002",
-        "Comment": "rubygems is signed with Red Hat redhatrelease2 key"
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

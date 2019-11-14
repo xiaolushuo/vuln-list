@@ -165,7 +165,9 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:enterprise_linux:8"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::realtime",
+      "cpe:/a:redhat:enterprise_linux:8::nfv"
     ],
     "Issued": {
       "Date": "2019-05-14"
@@ -179,353 +181,373 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": [
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
               "Local": "criteria"
             },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
+            "Operator": "OR",
+            "Criterias": [
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174001",
-                "Comment": "kernel-rt-debug-kvm is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174001",
+                    "Comment": "kernel-rt-debug-kvm is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174002",
+                    "Comment": "kernel-rt-debug-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174002",
-                "Comment": "kernel-rt-debug-kvm is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174003",
-                "Comment": "kernel-rt-debug is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174003",
+                    "Comment": "kernel-rt-debug is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174004",
+                    "Comment": "kernel-rt-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174004",
-                "Comment": "kernel-rt-debug is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174005",
-                "Comment": "kernel-rt-core is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174005",
+                    "Comment": "kernel-rt-core is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174006",
+                    "Comment": "kernel-rt-core is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174006",
-                "Comment": "kernel-rt-core is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174007",
-                "Comment": "kernel-rt-modules-extra is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174007",
+                    "Comment": "kernel-rt-modules-extra is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174008",
+                    "Comment": "kernel-rt-modules-extra is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174008",
-                "Comment": "kernel-rt-modules-extra is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174009",
-                "Comment": "kernel-rt-debug-modules is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174009",
+                    "Comment": "kernel-rt-debug-modules is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174010",
+                    "Comment": "kernel-rt-debug-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174010",
-                "Comment": "kernel-rt-debug-modules is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174011",
-                "Comment": "kernel-rt-kvm is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174011",
+                    "Comment": "kernel-rt-kvm is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174012",
+                    "Comment": "kernel-rt-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174012",
-                "Comment": "kernel-rt-kvm is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174013",
-                "Comment": "kernel-rt-debug-devel is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174013",
+                    "Comment": "kernel-rt-debug-devel is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174014",
+                    "Comment": "kernel-rt-debug-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174014",
-                "Comment": "kernel-rt-debug-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174015",
-                "Comment": "kernel-rt-debug-modules-extra is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174015",
+                    "Comment": "kernel-rt-debug-modules-extra is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174016",
+                    "Comment": "kernel-rt-debug-modules-extra is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174016",
-                "Comment": "kernel-rt-debug-modules-extra is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174017",
-                "Comment": "kernel-rt is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174017",
+                    "Comment": "kernel-rt is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174018",
+                    "Comment": "kernel-rt is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174018",
-                "Comment": "kernel-rt is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174019",
-                "Comment": "kernel-rt-modules is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174019",
+                    "Comment": "kernel-rt-modules is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174020",
+                    "Comment": "kernel-rt-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174020",
-                "Comment": "kernel-rt-modules is signed with Red Hat redhatrelease2 key"
-              }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174021",
-                "Comment": "kernel-rt-debug-core is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174021",
+                    "Comment": "kernel-rt-debug-core is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174022",
+                    "Comment": "kernel-rt-debug-core is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               },
               {
                 "XMLName": {
                   "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
+                  "Local": "criteria"
                 },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174022",
-                "Comment": "kernel-rt-debug-core is signed with Red Hat redhatrelease2 key"
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174023",
+                    "Comment": "kernel-rt-devel is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191174024",
+                    "Comment": "kernel-rt-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
               }
-            ]
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174023",
-                "Comment": "kernel-rt-devel is earlier than 0:4.18.0-80.1.2.rt9.145.el8_0"
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criterion"
-                },
-                "Negate": false,
-                "TestRef": "oval:com.redhat.rhsa:tst:20191174024",
-                "Comment": "kernel-rt-devel is signed with Red Hat redhatrelease2 key"
-              }
-            ]
+            ],
+            "Criterions": null
           }
         ],
-        "Criterions": null
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
       }
     ],
     "Criterions": [
@@ -535,8 +557,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20190966005",
-        "Comment": "Red Hat Enterprise Linux 8 is installed"
+        "TestRef": "oval:com.redhat.rhsa:tst:20190966006",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

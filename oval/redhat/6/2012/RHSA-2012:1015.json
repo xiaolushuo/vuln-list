@@ -39,6 +39,7 @@
     "Cves": null,
     "Bugzillas": null,
     "AffectedCPEList": [
+      "cpe:/o:redhat:rhel_eus:6.0",
       "cpe:/o:redhat:rhel_eus:6.0"
     ],
     "Issued": {
@@ -53,14 +54,14 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": null,
         "Criterions": [
           {
@@ -70,7 +71,7 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
-            "Comment": "Red Hat Enterprise Linux 6 Client is installed"
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           },
           {
             "XMLName": {
@@ -78,8 +79,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656004",
-            "Comment": "Red Hat Enterprise Linux 6 Server is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20121015001",
+            "Comment": "redhat-release-server is earlier than 0:6Server-6.0.0.39.el6_0"
           },
           {
             "XMLName": {
@@ -87,17 +88,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656005",
-            "Comment": "Red Hat Enterprise Linux 6 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656006",
-            "Comment": "Red Hat Enterprise Linux 6 ComputeNode is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20121015002",
+            "Comment": "redhat-release-server is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
@@ -109,17 +101,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20121015001",
-        "Comment": "redhat-release-server is earlier than 0:6Server-6.0.0.39.el6_0"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criterion"
-        },
-        "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20121015002",
-        "Comment": "redhat-release-server is signed with Red Hat redhatrelease2 key"
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

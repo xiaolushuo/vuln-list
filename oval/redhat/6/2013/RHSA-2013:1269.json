@@ -280,7 +280,10 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:6"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::workstation",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::client"
     ],
     "Issued": {
       "Date": "2013-09-17"
@@ -294,14 +297,14 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": null,
         "Criterions": [
           {
@@ -311,7 +314,7 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
-            "Comment": "Red Hat Enterprise Linux 6 Client is installed"
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           },
           {
             "XMLName": {
@@ -319,8 +322,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656004",
-            "Comment": "Red Hat Enterprise Linux 6 Server is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20131269001",
+            "Comment": "thunderbird is earlier than 0:17.0.9-1.el6_4"
           },
           {
             "XMLName": {
@@ -328,17 +331,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656005",
-            "Comment": "Red Hat Enterprise Linux 6 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20111656006",
-            "Comment": "Red Hat Enterprise Linux 6 ComputeNode is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20100896002",
+            "Comment": "thunderbird is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
@@ -350,17 +344,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20131269001",
-        "Comment": "thunderbird is earlier than 0:17.0.9-1.el6_4"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criterion"
-        },
-        "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20100896002",
-        "Comment": "thunderbird is signed with Red Hat redhatrelease2 key"
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }

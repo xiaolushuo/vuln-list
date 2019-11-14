@@ -169,7 +169,11 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7"
+      "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2017-01-05"
@@ -183,14 +187,14 @@
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "criteria"
     },
-    "Operator": "AND",
+    "Operator": "OR",
     "Criterias": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "criteria"
         },
-        "Operator": "OR",
+        "Operator": "AND",
         "Criterias": null,
         "Criterions": [
           {
@@ -200,7 +204,7 @@
             },
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 Client is installed"
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
           },
           {
             "XMLName": {
@@ -208,8 +212,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364028",
-            "Comment": "Red Hat Enterprise Linux 7 Server is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20170020001",
+            "Comment": "gstreamer1-plugins-good is earlier than 0:1.4.5-3.el7_3"
           },
           {
             "XMLName": {
@@ -217,17 +221,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364029",
-            "Comment": "Red Hat Enterprise Linux 7 Workstation is installed"
-          },
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criterion"
-            },
-            "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364030",
-            "Comment": "Red Hat Enterprise Linux 7 ComputeNode is installed"
+            "TestRef": "oval:com.redhat.rhsa:tst:20170020002",
+            "Comment": "gstreamer1-plugins-good is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
@@ -239,17 +234,8 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20170020001",
-        "Comment": "gstreamer1-plugins-good is earlier than 0:1.4.5-3.el7_3"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "criterion"
-        },
-        "Negate": false,
-        "TestRef": "oval:com.redhat.rhsa:tst:20170020002",
-        "Comment": "gstreamer1-plugins-good is signed with Red Hat redhatrelease2 key"
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
   }
