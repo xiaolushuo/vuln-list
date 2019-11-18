@@ -1,0 +1,67 @@
+{
+  "Title": "ELSA-2009-0476:  pango security update (IMPORTANT)",
+  "Description": "[1.14.9-4]\n- Add pango-glyphstring.patch\n- Resolves: #497361",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2009-0476.html",
+      "ID": "ELSA-2009-0476"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2009-1194.html",
+      "ID": "CVE-2009-1194"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "pango is earlier than 0:1.14.9-5.el5_3"
+              },
+              {
+                "Comment": "pango is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "pango-devel is earlier than 0:1.14.9-5.el5_3"
+              },
+              {
+                "Comment": "pango-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2009-1194.html",
+      "ID": "CVE-2009-1194"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "Title": "ELSA-2007-0520:  Moderate: xorg-x11-xfs security update  (MODERATE)",
+  "Description": "[1.0.2-4]\n - Fix root priv elevation bug (242903).  Just don't delete the\n   directory and make sure when we create the directory, that we set\n   the mode using mkdir -m.",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2007-0520.html",
+      "ID": "ELSA-2007-0520"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2007-3103.html",
+      "ID": "CVE-2007-3103"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "xorg-x11-xfs-utils is earlier than 1:1.0.2-4"
+              },
+              {
+                "Comment": "xorg-x11-xfs-utils is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "xorg-x11-xfs is earlier than 1:1.0.2-4"
+              },
+              {
+                "Comment": "xorg-x11-xfs is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "MODERATE",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2007-3103.html",
+      "ID": "CVE-2007-3103"
+    }
+  ]
+}

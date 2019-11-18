@@ -1,0 +1,79 @@
+{
+  "Title": "ELSA-2009-1061:  freetype security update (IMPORTANT)",
+  "Description": "[2.2.1-21]\n- Add freetype-2009-CVEs.patch\n- Resolves: #496111",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2009-1061.html",
+      "ID": "ELSA-2009-1061"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2009-0946.html",
+      "ID": "CVE-2009-0946"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "freetype-devel is earlier than 0:2.2.1-21.el5_3"
+              },
+              {
+                "Comment": "freetype-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "freetype is earlier than 0:2.2.1-21.el5_3"
+              },
+              {
+                "Comment": "freetype is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "freetype-demos is earlier than 0:2.2.1-21.el5_3"
+              },
+              {
+                "Comment": "freetype-demos is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2009-0946.html",
+      "ID": "CVE-2009-0946"
+    }
+  ]
+}

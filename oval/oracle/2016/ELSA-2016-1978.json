@@ -1,0 +1,78 @@
+{
+  "Title": "ELSA-2016-1978:  python-twisted-web security update (IMPORTANT)",
+  "Description": "[8.2.0-5]\n- Rebase HTTPoxy patch and bump release for rebuild\nResolves: rhbz#1358789\n\n[8.2.0-4]\n- Fix HTTPoxy CVE-2016-1000111\nResolves: rhbz#1358789",
+  "Platform": [
+    "Oracle Linux 6",
+    "Oracle Linux 7"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2016-1978.html",
+      "ID": "ELSA-2016-1978"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2016-1000111.html",
+      "ID": "CVE-2016-1000111"
+    }
+  ],
+  "Criteria": {
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python-twisted-web is earlier than 0:8.2.0-5.el6_8"
+              },
+              {
+                "Comment": "python-twisted-web is signed with the Oracle Linux 6 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 6 is installed"
+          }
+        ]
+      },
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python-twisted-web is earlier than 0:12.1.0-5.el7_2"
+              },
+              {
+                "Comment": "python-twisted-web is signed with the Oracle Linux 7 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": null
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2016-1000111.html",
+      "ID": "CVE-2016-1000111"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "Title": "ELSA-2009-1625:  expat security update (MODERATE)",
+  "Description": "[1.95.8-8.3.2]\n- add security fix for CVE-2009-3560 (#531710)\n\n[1.95.8-8.3.1]\n- add security fix for CVE-2009-3720 (#531710)",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2009-1625.html",
+      "ID": "ELSA-2009-1625"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2009-3560.html",
+      "ID": "CVE-2009-3560"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2009-3720.html",
+      "ID": "CVE-2009-3720"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "expat-devel is earlier than 0:1.95.8-8.3.el5_4.2"
+              },
+              {
+                "Comment": "expat-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "expat is earlier than 0:1.95.8-8.3.el5_4.2"
+              },
+              {
+                "Comment": "expat is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "MODERATE",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2009-3560.html",
+      "ID": "CVE-2009-3560"
+    },
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2009-3720.html",
+      "ID": "CVE-2009-3720"
+    }
+  ]
+}

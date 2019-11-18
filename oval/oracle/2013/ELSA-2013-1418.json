@@ -1,0 +1,67 @@
+{
+  "Title": "ELSA-2013-1418:  libtar security update (MODERATE)",
+  "Description": "[1.2.11-17.el6_4.1]\n- fix CVE-2013-4397: buffer overflows by expanding a specially-crafted archive",
+  "Platform": [
+    "Oracle Linux 6"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2013-1418.html",
+      "ID": "ELSA-2013-1418"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2013-4397.html",
+      "ID": "CVE-2013-4397"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libtar-devel is earlier than 0:1.2.11-17.el6_4.1"
+              },
+              {
+                "Comment": "libtar-devel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libtar is earlier than 0:1.2.11-17.el6_4.1"
+              },
+              {
+                "Comment": "libtar is signed with the Oracle Linux 6 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 6 is installed"
+      }
+    ]
+  },
+  "Severity": "MODERATE",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2013-4397.html",
+      "ID": "CVE-2013-4397"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "Title": "ELSA-2009-1601:  kdelibs security update (CRITICAL)",
+  "Description": "[3.5.4-25.0.1.el5_4.1]\n- Remove Version branding\n- Maximum rpm trademark logos removed (pics/crystalsvg/*-mime-rpm*) in tarball\n\n[3.5.4-25.1]\n- bump release\n\n[3.5.4-22.2]\n- Resolves: #539716,\n   CVE-2009-0689, kdelibs remote array overrun",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2009-1601.html",
+      "ID": "ELSA-2009-1601"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2009-0689.html",
+      "ID": "CVE-2009-0689"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kdelibs-apidocs is earlier than 6:3.5.4-25.0.1.el5_4.1"
+              },
+              {
+                "Comment": "kdelibs-apidocs is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kdelibs is earlier than 6:3.5.4-25.0.1.el5_4.1"
+              },
+              {
+                "Comment": "kdelibs is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kdelibs-devel is earlier than 6:3.5.4-25.0.1.el5_4.1"
+              },
+              {
+                "Comment": "kdelibs-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "CRITICAL",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2009-0689.html",
+      "ID": "CVE-2009-0689"
+    }
+  ]
+}

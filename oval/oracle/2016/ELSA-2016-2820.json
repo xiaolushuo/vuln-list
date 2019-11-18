@@ -1,0 +1,77 @@
+{
+  "Title": "ELSA-2016-2820:  memcached security update (IMPORTANT)",
+  "Description": "[0:1.4.4-3.el6_8.1]\n- fix vulnerabilities allowing remote code execution (CVE-2016-8704,\n  CVE-2016-8705, CVE-2016-8706)",
+  "Platform": [
+    "Oracle Linux 6"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2016-2820.html",
+      "ID": "ELSA-2016-2820"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2016-8704.html",
+      "ID": "CVE-2016-8704"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2016-8705.html",
+      "ID": "CVE-2016-8705"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "memcached is earlier than 0:1.4.4-3.el6_8.1"
+              },
+              {
+                "Comment": "memcached is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "memcached-devel is earlier than 0:1.4.4-3.el6_8.1"
+              },
+              {
+                "Comment": "memcached-devel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 6 is installed"
+      }
+    ]
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2016-8704.html",
+      "ID": "CVE-2016-8704"
+    },
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2016-8705.html",
+      "ID": "CVE-2016-8705"
+    }
+  ]
+}

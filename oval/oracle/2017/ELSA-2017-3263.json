@@ -1,0 +1,79 @@
+{
+  "Title": "ELSA-2017-3263:  curl security update (MODERATE)",
+  "Description": "[7.29.0-42.el7_4.1]\n- fix buffer overflow while processing IMAP FETCH response (CVE-2017-1000257)",
+  "Platform": [
+    "Oracle Linux 7"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2017-3263.html",
+      "ID": "ELSA-2017-3263"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2017-1000257.html",
+      "ID": "CVE-2017-1000257"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "curl is earlier than 0:7.29.0-42.el7_4.1"
+              },
+              {
+                "Comment": "curl is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libcurl is earlier than 0:7.29.0-42.el7_4.1"
+              },
+              {
+                "Comment": "libcurl is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libcurl-devel is earlier than 0:7.29.0-42.el7_4.1"
+              },
+              {
+                "Comment": "libcurl-devel is signed with the Oracle Linux 7 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 7 is installed"
+      }
+    ]
+  },
+  "Severity": "MODERATE",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2017-1000257.html",
+      "ID": "CVE-2017-1000257"
+    }
+  ]
+}

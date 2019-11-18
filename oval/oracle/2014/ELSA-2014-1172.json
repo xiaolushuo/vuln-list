@@ -1,0 +1,101 @@
+{
+  "Title": "ELSA-2014-1172:  procmail security update (IMPORTANT)",
+  "Description": "[3.22-34.1]\n- Fixed buffer overflow in formail\n  Resolves: CVE-2014-3618",
+  "Platform": [
+    "Oracle Linux 5",
+    "Oracle Linux 6",
+    "Oracle Linux 7"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2014-1172.html",
+      "ID": "ELSA-2014-1172"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2014-3618.html",
+      "ID": "CVE-2014-3618"
+    }
+  ],
+  "Criteria": {
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "procmail is earlier than 0:3.22-17.1.2.0.1"
+              },
+              {
+                "Comment": "procmail is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 5 is installed"
+          }
+        ]
+      },
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "procmail is earlier than 0:3.22-25.1.el6_5.1"
+              },
+              {
+                "Comment": "procmail is signed with the Oracle Linux 6 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 6 is installed"
+          }
+        ]
+      },
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "procmail is earlier than 0:3.22-34.el7_0.1"
+              },
+              {
+                "Comment": "procmail is signed with the Oracle Linux 7 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": null
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2014-3618.html",
+      "ID": "CVE-2014-3618"
+    }
+  ]
+}

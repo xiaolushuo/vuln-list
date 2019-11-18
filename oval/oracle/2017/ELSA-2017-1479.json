@@ -1,0 +1,115 @@
+{
+  "Title": "ELSA-2017-1479:  glibc security update (IMPORTANT)",
+  "Description": "[2.5-123.0.2.el5_11.3]\n- Mitigation for CVE-2017-1000366 glibc: heap/stack gap jumping via\n  unbounded stack allocations.",
+  "Platform": [
+    "Oracle Linux 5"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2017-1479.html",
+      "ID": "ELSA-2017-1479"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2017-1000366.html",
+      "ID": "CVE-2017-1000366"
+    }
+  ],
+  "Criteria": {
+    "Operator": "AND",
+    "Criterias": [
+      {
+        "Operator": "OR",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-utils is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "glibc-utils is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-headers is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "glibc-headers is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-common is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "glibc-common is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "nscd is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "nscd is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-devel is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "glibc-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc is earlier than 0:2.5-123.0.2.el5_11.3"
+              },
+              {
+                "Comment": "glibc is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": null
+      }
+    ],
+    "Criterions": [
+      {
+        "Comment": "Oracle Linux 5 is installed"
+      }
+    ]
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2017-1000366.html",
+      "ID": "CVE-2017-1000366"
+    }
+  ]
+}

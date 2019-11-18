@@ -1,0 +1,78 @@
+{
+  "Title": "ELSA-2011-0332:  scsi-target-utils security update (IMPORTANT)",
+  "Description": "[1.0.4-3.1]\n- fix the buffer overflow bug before iscsi login (CVE-2011-0001)",
+  "Platform": [
+    "Oracle Linux 5",
+    "Oracle Linux 6"
+  ],
+  "References": [
+    {
+      "Source": "elsa",
+      "URI": "http://linux.oracle.com/errata/ELSA-2011-0332.html",
+      "ID": "ELSA-2011-0332"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2011-0001.html",
+      "ID": "CVE-2011-0001"
+    }
+  ],
+  "Criteria": {
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "scsi-target-utils is earlier than 0:1.0.8-0.el5_6.1"
+              },
+              {
+                "Comment": "scsi-target-utils is signed with the Oracle Linux 5 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 5 is installed"
+          }
+        ]
+      },
+      {
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "scsi-target-utils is earlier than 0:1.0.4-3.el6_0.1"
+              },
+              {
+                "Comment": "scsi-target-utils is signed with the Oracle Linux 6 key"
+              }
+            ]
+          }
+        ],
+        "Criterions": [
+          {
+            "Comment": "Oracle Linux 6 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": null
+  },
+  "Severity": "IMPORTANT",
+  "Cves": [
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2011-0001.html",
+      "ID": "CVE-2011-0001"
+    }
+  ]
+}
