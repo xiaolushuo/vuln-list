@@ -1,0 +1,418 @@
+{
+  "Title": "Security update for systemd",
+  "Tracking": {
+    "ID": "SUSE-SU-2019:1364-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2019-05-28T08:51:42Z",
+    "CurrentReleaseDate": "2019-05-28T08:51:42Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2019-05-28T08:51:42Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for systemd",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for systemd fixes the following issues:\n\nSecurity issues fixed:\n\n- CVE-2019-3842: Fixed a privilege escalation in pam_systemd which could be exploited by a local user (bsc#1132348).\n- CVE-2019-6454: Fixed a denial of service via crafted D-Bus message (bsc#1125352).\n- CVE-2019-3843, CVE-2019-3844: Fixed a privilege escalation where services with DynamicUser could gain new privileges or create SUID/SGID binaries (bsc#1133506, bsc#1133509).\n\nNon-security issued fixed:\n\n- logind: fix killing of scopes (bsc#1125604)\n- namespace: make MountFlags=shared work again (bsc#1124122)\n- rules: load drivers only on \u0026quot;add\u0026quot; events (bsc#1126056)\n- sysctl: Don't pass null directive argument to '%s' (bsc#1121563)\n- systemd-coredump: generate a stack trace of all core dumps and log into the journal (jsc#SLE-5933)\n- udevd: notify when max number value of children is reached only once per batch of events (bsc#1132400)\n- sd-bus: bump message queue size again (bsc#1132721)\n- Do not automatically online memory on s390x (bsc#1127557)\n- Removed sg.conf (bsc#1036463)\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "libsystemd0-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libsystemd0-32bit-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev-devel-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev1-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev1-32bit-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-32bit-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-bash-completion-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-container-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-coredump-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-devel-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-sysvinit-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "udev-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libsystemd0-mini-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev-mini-devel-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev-mini1-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "nss-myhostname-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "nss-mymachines-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "nss-systemd-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-logger-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-bash-completion-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-container-mini-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-coredump-mini-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-devel-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "systemd-mini-sysvinit-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "udev-mini-234-24.30.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2019/suse-su-20191364-1/",
+      "Description": "Link for SUSE-SU-2019:1364-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2019-May/005509.html",
+      "Description": "E-Mail link for SUSE-SU-2019:1364-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2019-3842",
+      "Description": "In systemd before v242-rc4, it was discovered that pam_systemd does not properly sanitize the environment before using the XDG_SEAT variable. It is possible for an attacker, in some particular configurations, to set a XDG_SEAT environment variable which allows for commands to be checked against polkit policies using the \"allow_active\" element rather than \"allow_any\".",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-3842.html",
+          "Description": "CVE-2019-3842"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1132348",
+          "Description": "SUSE Bug 1132348"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-container-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-coredump-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:udev-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libsystemd0-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-myhostname-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-mymachines-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-logger-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-container-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-coredump-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:udev-mini-234-24.30.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2019-3843",
+      "Description": "It was discovered that a systemd service that uses DynamicUser property can create a SUID/SGID binary that would be allowed to run as the transient service UID/GID even after the service is terminated. A local attacker may use this flaw to access resources that will be owned by a potentially different service in the future, when the UID/GID will be recycled.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-3843.html",
+          "Description": "CVE-2019-3843"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1133506",
+          "Description": "SUSE Bug 1133506"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-container-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-coredump-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:udev-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libsystemd0-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-myhostname-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-mymachines-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-logger-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-container-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-coredump-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:udev-mini-234-24.30.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2019-3844",
+      "Description": "It was discovered that a systemd service that uses DynamicUser property can get new privileges through the execution of SUID binaries, which would allow to create binaries owned by the service transient group with the setgid bit set. A local attacker may use this flaw to access resources that will be owned by a potentially different service in the future, when the GID will be recycled.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-3844.html",
+          "Description": "CVE-2019-3844"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1133509",
+          "Description": "SUSE Bug 1133509"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-container-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-coredump-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:udev-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libsystemd0-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-myhostname-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-mymachines-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-logger-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-container-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-coredump-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:udev-mini-234-24.30.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2019-6454",
+      "Description": "An issue was discovered in sd-bus in systemd 239. bus_process_object() in libsystemd/sd-bus/bus-objects.c allocates a variable-length stack buffer for temporarily storing the object path of incoming D-Bus messages. An unprivileged local user can exploit this by sending a specially crafted message to PID1, causing the stack pointer to jump over the stack guard pages into an unmapped memory region and trigger a denial of service (systemd PID1 crash and kernel panic).",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-6454.html",
+          "Description": "CVE-2019-6454"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1125352",
+          "Description": "SUSE Bug 1125352"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libsystemd0-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:libudev1-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-32bit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-container-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-coredump-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:systemd-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Basesystem 15:udev-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libsystemd0-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:libudev-mini1-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-myhostname-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-mymachines-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:nss-systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-logger-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-bash-completion-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-container-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-coredump-mini-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-devel-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:systemd-mini-sysvinit-234-24.30.1",
+            "SUSE Linux Enterprise Module for Open Buildservice Development Tools 15:udev-mini-234-24.30.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "Title": "Security update for llvm",
+  "Tracking": {
+    "ID": "openSUSE-SU-2015:0245-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2015-01-30T17:19:17Z",
+    "CurrentReleaseDate": "2015-01-30T17:19:17Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2015-01-30T17:19:17Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for llvm",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "llvm was updated to fix one security issue.\n\nThis security issue was fixed:\n- Insecure temporary file handling in clang's scan-build utility (CVE-2014-2893).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "libLLVM-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libLLVM-32bit-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libclang-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "llvm-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "llvm-clang-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "llvm-clang-devel-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "llvm-devel-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "llvm-vim-plugins-3.3-6.7.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-updates/2015-02/msg00038.html",
+      "Description": "E-Mail link for openSUSE-SU-2015:0245-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2014-2893",
+      "Description": "The GetHTMLRunDir function in the scan-build utility in Clang 3.5 and earlier allows local users to obtain sensitive information or overwrite arbitrary files via a symlink attack on temporary directories with predictable names.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2014-2893.html",
+          "Description": "CVE-2014-2893"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/874798",
+          "Description": "SUSE Bug 874798"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:libLLVM-3.3-6.7.1",
+            "openSUSE 13.1:libLLVM-32bit-3.3-6.7.1",
+            "openSUSE 13.1:libclang-3.3-6.7.1",
+            "openSUSE 13.1:llvm-3.3-6.7.1",
+            "openSUSE 13.1:llvm-clang-3.3-6.7.1",
+            "openSUSE 13.1:llvm-clang-devel-3.3-6.7.1",
+            "openSUSE 13.1:llvm-devel-3.3-6.7.1",
+            "openSUSE 13.1:llvm-vim-plugins-3.3-6.7.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

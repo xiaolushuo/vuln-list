@@ -1,0 +1,100 @@
+{
+  "Title": "Security update for libgit2",
+  "Tracking": {
+    "ID": "openSUSE-SU-2015:0673-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2015-03-31T12:36:58Z",
+    "CurrentReleaseDate": "2015-03-31T12:36:58Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2015-03-31T12:36:58Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for libgit2",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "libgit2 was updated to fix an arbitrary command execution vulnerability on case-insentitive file systems.\n\nThe following vulnerability was fixed:\n\n* When using programs using libgit2 on case-insensitive filesystems, .git/config could be overwritten, which allowed execution of arbitrary commands (boo#925040, CVE-2014-9390).\n\nThe configuration is uncommon as all default file systems on openSUSE are case sensitive.\n\nAdditionally, on openSUSE 13.2 libgit2 was updated to version 0.21.5 to backport further critical fixes.\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "libgit2-0.19.0-2.3.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libgit2-0-0.19.0-2.3.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libgit2-devel-0.19.0-2.3.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-updates/2015-04/msg00009.html",
+      "Description": "E-Mail link for openSUSE-SU-2015:0673-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2014-9390",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem.  When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2014-9390.html",
+          "Description": "CVE-2014-9390"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/910756",
+          "Description": "SUSE Bug 910756"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/925040",
+          "Description": "SUSE Bug 925040"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:libgit2-0-0.19.0-2.3.1",
+            "openSUSE 13.1:libgit2-0.19.0-2.3.1",
+            "openSUSE 13.1:libgit2-devel-0.19.0-2.3.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

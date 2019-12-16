@@ -1,0 +1,54 @@
+{
+  "Title": "Security update for roundcubemail",
+  "Tracking": {
+    "ID": "openSUSE-SU-2015:1904-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2015-10-27T11:58:17Z",
+    "CurrentReleaseDate": "2015-10-27T11:58:17Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2015-10-27T11:58:17Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for roundcubemail",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "roundcubemail was updated to version 1.0.7 to fix two security issues.\n\nThese security issues were fixed:\n- XSS issue in drag-n-drop file uploads \n- Disallow unwanted access on files in the file system. The apache2 configuration file for roundcubemail allowed access to the roundcubemail/bin folder and possibly /logs, /config and /temp, if these were not symlinks (this was only the case when the configuration was manually changed) (bsc#952006)\n\nThe package comes with a fixed configuration. If you modified the file \u0026quot;/etc/apache2/conf.d/roundcubemail.conf\u0026quot;, please replace it with the configuration \u0026quot;roundcubemail.conf.rpmnew\u0026quot; and reapply your changes. After that, a restart of apache2 is requried.\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "roundcubemail-1.0.7-2.24.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-updates/2015-11/msg00030.html",
+      "Description": "E-Mail link for openSUSE-SU-2015:1904-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": null
+}

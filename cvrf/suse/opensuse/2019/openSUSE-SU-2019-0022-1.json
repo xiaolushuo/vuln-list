@@ -1,0 +1,114 @@
+{
+  "Title": "Security update for gthumb",
+  "Tracking": {
+    "ID": "openSUSE-SU-2019:0022-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2019-04-14T07:20:55Z",
+    "CurrentReleaseDate": "2019-04-14T07:20:55Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2019-04-14T07:20:55Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for gthumb",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for gthumb fixes the following issues:\n\nSecurity issue fixed:\n\n- CVE-2018-18718: Fixed a double-free in add_themes_from_dir function from dlg-contact-sheet.c (boo#1113749)\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "gthumb-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 15.0",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "gthumb-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 42.3",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "gthumb-devel-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 15.0",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "gthumb-devel-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 42.3",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "gthumb-lang-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 15.0",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "gthumb-lang-3.6.1-lp150.5.1",
+        "RelatesToProductReference": "openSUSE Leap 42.3",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-security-announce/2019-01/msg00013.html",
+      "Description": "E-Mail link for openSUSE-SU-2019:0022-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2018-18718",
+      "Description": "An issue was discovered in gThumb through 3.6.2. There is a double-free vulnerability in the add_themes_from_dir method in dlg-contact-sheet.c because of two successive calls of g_free, each of which frees the same buffer.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2018-18718.html",
+          "Description": "CVE-2018-18718"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1113749",
+          "Description": "SUSE Bug 1113749"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE Leap 15.0:gthumb-3.6.1-lp150.5.1",
+            "openSUSE Leap 15.0:gthumb-devel-3.6.1-lp150.5.1",
+            "openSUSE Leap 15.0:gthumb-lang-3.6.1-lp150.5.1",
+            "openSUSE Leap 42.3:gthumb-3.6.1-lp150.5.1",
+            "openSUSE Leap 42.3:gthumb-devel-3.6.1-lp150.5.1",
+            "openSUSE Leap 42.3:gthumb-lang-3.6.1-lp150.5.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

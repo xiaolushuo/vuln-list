@@ -1,0 +1,94 @@
+{
+  "Title": "Security update for samba",
+  "Tracking": {
+    "ID": "SUSE-SU-2019:1574-2",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2019-06-24T09:29:54Z",
+    "CurrentReleaseDate": "2019-06-24T09:29:54Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2019-06-24T09:29:54Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for samba",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for samba fixes the following issues:\n\nSecurity issues fixed:\n\n- CVE-2019-12435: zone operations can crash rpc server; (bso#13922); (bsc#1137815).\n\nOther issues fixed:\n\n- Fix cephwrap_flistxattr() debug message; (bso#13940); (bsc#1134697).\n- Add ceph_snapshots VFS module; (jsc#SES-183).\n- Fix vfs_ceph realpath; (bso#13918); (bsc#1134452).\n- MacOS credit accounting breaks with async SESSION SETUP;\n  (bsc#1125601); (bso#13796).\n- Mac OS X SMB2 implmenetation sees Input/output error or Resource\n  temporarily unavailable and drops connection; (bso#13698)\n- Explicitly enable libcephfs POSIX ACL support; (bso#13896); (bsc#1130245).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "samba-4.9.5+git.176.375e1f05788-3.6.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 6",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "samba-ceph-4.9.5+git.176.375e1f05788-3.6.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 6",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2019/suse-su-20191574-2/",
+      "Description": "Link for SUSE-SU-2019:1574-2"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2019-June/005626.html",
+      "Description": "E-Mail link for SUSE-SU-2019:1574-2"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2019-12435",
+      "Description": "Samba 4.9.x before 4.9.9 and 4.10.x before 4.10.5 has a NULL pointer dereference, leading to Denial of Service. This is related to the AD DC DNS management server (dnsserver) RPC server process.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-12435.html",
+          "Description": "CVE-2019-12435"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1137815",
+          "Description": "SUSE Bug 1137815"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Enterprise Storage 6:samba-4.9.5+git.176.375e1f05788-3.6.1",
+            "SUSE Enterprise Storage 6:samba-ceph-4.9.5+git.176.375e1f05788-3.6.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

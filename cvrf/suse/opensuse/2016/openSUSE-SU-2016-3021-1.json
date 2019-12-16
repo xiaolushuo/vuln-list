@@ -1,0 +1,2401 @@
+{
+  "Title": "Security update for the Linux Kernel",
+  "Tracking": {
+    "ID": "openSUSE-SU-2016:3021-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2016-12-06T08:24:53Z",
+    "CurrentReleaseDate": "2016-12-06T08:24:53Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2016-12-06T08:24:53Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for the Linux Kernel",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "\n\nThe openSUSE 13.1 kernel was updated to 3.12.67 to receive various security and bugfixes.\n\nThe following security bugs were fixed:\n\n- CVE-2013-5634: arch/arm/kvm/arm.c in the Linux kernel on the ARM platform, when KVM is used, allowed host OS users to cause a denial of service (NULL pointer dereference, OOPS, and host OS crash) or possibly have unspecified other impact by omitting vCPU initialization before a KVM_GET_REG_LIST ioctl call. (bsc#994758)\n- CVE-2016-2069: Race condition in arch/x86/mm/tlb.c in the Linux kernel allowed local users to gain privileges by triggering access to a paging structure by a different CPU (bnc#963767).\n- CVE-2016-7042: The proc_keys_show function in security/keys/proc.c in the Linux kernel used an incorrect buffer size for certain timeout data, which allowed local users to cause a denial of service (stack memory corruption and panic) by reading the /proc/keys file (bnc#1004517).\n- CVE-2016-7097: The filesystem implementation in the Linux kernel preserved the setgid bit during a setxattr call, which allowed local users to gain group privileges by leveraging the existence of a setgid program with restrictions on execute permissions (bnc#995968).\n- CVE-2015-8956: The rfcomm_sock_bind function in net/bluetooth/rfcomm/sock.c in the Linux kernel allowed local users to obtain sensitive information or cause a denial of service (NULL pointer dereference) via vectors involving a bind system call on a Bluetooth RFCOMM socket (bnc#1003925).\n- CVE-2016-8658: Stack-based buffer overflow in the brcmf_cfg80211_start_ap function in drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c in the Linux kernel allowed local users to cause a denial of service (system crash) or possibly have unspecified other impact via a long SSID Information Element in a command to a Netlink socket (bnc#1004462).\n- CVE-2016-7425: The arcmsr_iop_message_xfer function in drivers/scsi/arcmsr/arcmsr_hba.c in the Linux kernel did not restrict a certain length field, which allowed local users to gain privileges or cause a denial of service (heap-based buffer overflow) via an ARCMSR_MESSAGE_WRITE_WQBUFFER control code (bnc#999932).\n- CVE-2016-6327: drivers/infiniband/ulp/srpt/ib_srpt.c in the Linux kernel allowed local users to cause a denial of service (NULL pointer dereference and system crash) by using an ABORT_TASK command to abort a device write operation (bnc#994748).\n- CVE-2016-6828: The tcp_check_send_head function in include/net/tcp.h in the Linux kernel did not properly maintain certain SACK state after a failed data copy, which allowed local users to cause a denial of service (tcp_xmit_retransmit_queue use-after-free and system crash) via a crafted SACK option (bnc#994296).\n- CVE-2016-5696: net/ipv4/tcp_input.c in the Linux kernel did not properly determine the rate of challenge ACK segments, which made it easier for remote attackers to hijack TCP sessions via a blind in-window attack (bnc#989152).\n- CVE-2016-6130: Race condition in the sclp_ctl_ioctl_sccb function in drivers/s390/char/sclp_ctl.c in the Linux kernel allowed local users to obtain sensitive information from kernel memory by changing a certain length value, aka a \u0026quot;double fetch\u0026quot; vulnerability (bnc#987542).\n- CVE-2016-6480: Race condition in the ioctl_send_fib function in drivers/scsi/aacraid/commctrl.c in the Linux kernel allowed local users to cause a denial of service (out-of-bounds access or system crash) by changing a certain size value, aka a \u0026quot;double fetch\u0026quot; vulnerability (bnc#991608).\n\nThe following non-security bugs were fixed:\n\n- aacraid: Fix RRQ overload (bsc#1003079).\n- acpi / pm: Ignore wakeup setting if the ACPI companion can't wake up (FATE#315621).\n- af_vsock: Shrink the area influenced by prepare_to_wait (bsc#994520).\n- apparmor: add missing id bounds check on dfa verification (bsc#1000304).\n- apparmor: check that xindex is in trans_table bounds (bsc#1000304).\n- apparmor: do not check for vmalloc_addr if kvzalloc() failed (bsc#1000304).\n- apparmor: do not expose kernel stack (bsc#1000304).\n- apparmor: ensure the target profile name is always audited (bsc#1000304).\n- apparmor: exec should not be returning ENOENT when it denies (bsc#1000304).\n- apparmor: fix arg_size computation for when setprocattr is null terminated (bsc#1000304).\n- apparmor: fix audit full profile hname on successful load (bsc#1000304).\n- apparmor: fix change_hat not finding hat after policy replacement (bsc#1000287).\n- apparmor: fix disconnected bind mnts reconnection (bsc#1000304).\n- apparmor: fix log failures for all profiles in a set (bsc#1000304).\n- apparmor: fix module parameters can be changed after policy is locked (bsc#1000304).\n- apparmor: fix oops in profile_unpack() when policy_db is not present (bsc#1000304).\n- apparmor: fix oops, validate buffer size in apparmor_setprocattr() (bsc#1000304).\n- apparmor: fix put() parent ref after updating the active ref (bsc#1000304).\n- apparmor: fix refcount bug in profile replacement (bsc#1000304).\n- apparmor: fix refcount race when finding a child profile (bsc#1000304).\n- apparmor: fix replacement bug that adds new child to old parent (bsc#1000304).\n- apparmor: fix uninitialized lsm_audit member (bsc#1000304).\n- apparmor: fix update the mtime of the profile file on replacement (bsc#1000304).\n- apparmor: internal paths should be treated as disconnected (bsc#1000304).\n- apparmor: use list_next_entry instead of list_entry_next (bsc#1000304).\n- arm64: Ensure pmd_present() returns false after pmd_mknotpresent() (Automatic NUMA Balancing (fate#315482)).\n- arm64: mm: remove broken \u0026amp;= operator from pmd_mknotpresent (Automatic NUMA Balancing (fate#315482)).\n- avoid dentry crash triggered by NFS (bsc#984194).\n- be2net: Do not leak iomapped memory on removal (bsc#921784 FATE#318561).\n- be2net: fix BE3-R FW download compatibility check (bsc#921784 FATE#318561).\n- be2net: fix wrong return value in be_check_ufi_compatibility() (bsc#921784 FATE#318561).\n- be2net: remove vlan promisc capability from VF's profile descriptors (bsc#921784 FATE#318561).\n- blacklist.conf:\n- blacklist.conf: 78f3d050c34b We do not support fsl hardware\n- blacklist.conf: add 5195c14c8b27 (reverted and superseded by a commit we already have)\n- blacklist.conf: Add entry for 7bf52fb891b64b8d61caf0b82060adb9db761aec The commit 7bf52fb891b6 (\u0026quot;mm: vmscan: reclaim highmem zone if buffer_heads is over limit\u0026quot;) is unnecessary as the fix is also available from commit d4debc66d1fc (\u0026quot;vmscan: remove unnecessary temporary vars in do_try_to_free_pages\u0026quot;).\n- blacklist.conf: add pointless networking follow-up fixes\n- blacklist.conf: Add two fanotify commits which we do not need (fixes tag was not quite accurate)\n- blacklist.conf: Blacklist unsupported architectures\n- blkfront: fix an error path memory leak (luckily none so far).\n- blk-mq: fix undefined behaviour in order_to_size() (fate#315209).\n- blktap2: eliminate deadlock potential from shutdown path (bsc#909994).\n- blktap2: eliminate race from deferred work queue handling (bsc#911687).\n- bond: Check length of IFLA_BOND_ARP_IP_TARGET attributes (fate#316924).\n- bonding: always set recv_probe to bond_arp_rcv in arp monitor (bsc#977687).\n- bonding: fix curr_active_slave/carrier with loadbalance arp monitoring (fate#316924).\n- bonding: Prevent IPv6 link local address on enslaved devices (fate#316924).\n- bonding: prevent out of bound accesses (fate#316924).\n- bonding: set carrier off for devices created through netlink (bsc#999577).\n- btrfs: account for non-CoW'd blocks in btrfs_abort_transaction (bsc#983619).\n- btrfs: add missing discards when unpinning extents with -o discard (bsc#904489).\n- btrfs: btrfs_issue_discard ensure offset/length are aligned to sector boundaries (bsc#904489).\n- btrfs: do not create or leak aliased root while cleaning up orphans (bsc#904489).\n- btrfs: ensure that file descriptor used with subvol ioctls is a dir (bsc#999600).\n- btrfs: explictly delete unused block groups in close_ctree and ro-remount (bsc#904489).\n- btrfs: Fix a data space underflow warning (bsc#985562, bsc#975596, bsc#984779)\n- btrfs: fix fitrim discarding device area reserved for boot loader's use (bsc#904489).\n- btrfs: handle quota reserve failure properly (bsc#1005666).\n- btrfs: iterate over unused chunk space in FITRIM (bsc#904489).\n- btrfs: make btrfs_issue_discard return bytes discarded (bsc#904489).\n- btrfs: properly track when rescan worker is running (bsc#989953).\n- btrfs: remove unnecessary locking of cleaner_mutex to avoid deadlock (bsc#904489).\n- btrfs: reorder patches to place local patches back at the end of the series\n- btrfs: skip superblocks during discard (bsc#904489).\n- btrfs: test_check_exists: Fix infinite loop when searching for free space entries (bsc#987192).\n- btrfs: waiting on qgroup rescan should not always be interruptible (bsc#992712).\n- cdc-acm: added sanity checking for probe() (bsc#993891).\n- cephfs: ignore error from invalidate_inode_pages2_range() in direct write (bsc#995153).\n- cephfs: remove warning when ceph_releasepage() is called on dirty page (bsc#995153).\n- clockevents: export clockevents_unbind_device instead of clockevents_unbind (bnc#937888).\n- conntrack: RFC5961 challenge ACK confuse conntrack LAST-ACK transition (bsc#966864).\n- cpumask, nodemask: implement cpumask/nodemask_pr_args() (bnc1003866).\n- cxgbi: fix uninitialized flowi6 (bsc#924384 FATE#318570 bsc#921338).\n- dm: fix AB-BA deadlock in __dm_destroy(). (bsc#970943)\n- drivers/hv: share Hyper-V SynIC constants with userspace (bnc#937888).\n- drivers: hv: vmbus: avoid scheduling in interrupt context in vmbus_initiate_unload() (bnc#937888).\n- drivers: hv: vmbus: avoid unneeded compiler optimizations in vmbus_wait_for_unload() (bnc#937888).\n- drivers: hv: vmbus: avoid wait_for_completion() on crash (bnc#937888).\n- drivers: hv: vmbus: Cleanup vmbus_set_event() (bnc#937888).\n- drivers: hv: vmbus: do not loose HVMSG_TIMER_EXPIRED messages (bnc#937888).\n- drivers: hv: vmbus: do not manipulate with clocksources on crash (bnc#937888).\n- drivers: hv: vmbus: Force all channel messages to be delivered on CPU 0 (bnc#937888).\n- drivers: hv: vmbus: Get rid of the unused irq variable (bnc#937888).\n- drivers: hv: vmbus: handle various crash scenarios (bnc#937888).\n- drivers: hv: vmbus: remove code duplication in message handling (bnc#937888).\n- drivers: hv: vmbus: Support handling messages on multiple CPUs (bnc#937888).\n- drivers: hv: vmbus: Support kexec on ws2012 r2 and above (bnc#937888).\n- efi: Small leak on error in runtime map code (fate#315019).\n- ext2: Enable ext2 driver in config files (bsc#976195, fate#320805)\n- ext4: Add parameter for tuning handling of ext2 (bsc#976195).\n- Fix kabi change cause by adding flock_owner to open_context (bsc#998689).\n- fix pCPU handling (luckily none so far).\n- fix xfs-handle-dquot-buffer-readahead-in-log-recovery-co.patch (bsc#1003153).\n- fs/cifs: cifs_get_root shouldn't use path with tree name (bsc#963655, bsc#979681).\n- fs/cifs: Compare prepaths when comparing superblocks (bsc#799133).\n- fs/cifs: Fix memory leaks in cifs_do_mount() (bsc#799133).\n- fs/cifs: Fix regression which breaks DFS mounting (bsc#799133).\n- fs/cifs: make share unaccessible at root level mountable (bsc#799133).\n- fs/cifs: Move check for prefix path to within cifs_get_root() (bsc#799133).\n- fs/cifs: REVERT fix wrongly prefixed path to root (bsc#963655, bsc#979681)\n- fs/select: add vmalloc fallback for select(2) (bsc#1000189).\n- ftrace/x86: Set ftrace_stub to weak to prevent gcc from using short jumps to it (bsc#984419).\n- hyperv: enable call to clockevents_unbind_device in kexec/kdump path\n- hyperv: replace KEXEC_CORE by plain KEXEC because we lack 2965faa5e0 in the base kernel\n- i40e: fix an uninitialized variable bug (bnc#857397 FATE#315659).\n- ib/IWPM: Fix a potential skb leak (bsc#924381 FATE#318568 bsc#921338).\n- ib/mlx5: Fix RC transport send queue overhead computation (bnc#865545 FATE#316891).\n- introduce NETIF_F_GSO_ENCAP_ALL helper mask (bsc#1001486).\n- iommu/amd: Update Alias-DTE in update_device_table() (bsc#975772).\n- ipv6: fix multipath route replace error recovery (bsc#930399).\n- ipv6: KABI workaround for ipv6: add complete rcu protection around np-\u0026gt;opt.\n- ipv6: send NEWLINK on RA managed/otherconf changes (bsc#934067).\n- ipv6: send only one NEWLINK when RA causes changes (bsc#934067).\n- iscsi: Add a missed complete in iscsit_close_connection (bsc#992555, bsc#987805).\n- iwlwifi: dvm: fix flush support for old firmware (bsc#940545).\n- kabi: clockevents: export clockevents_unbind again.\n- kabi: hide harmless change in struct inet_connection_sock (fate#318553).\n- kABI: protect backing-dev include in mm/migrate.\n- kABI: protect enum usb_device_speed.\n- kABI: protect struct mlx5_modify_qp_mbox_in.\n- kABI: protect struct mmc_packed (kabi).\n- kabi: work around kabi changes from commit 53f9ff48f636 (bsc#988617).\n- kaweth: fix firmware download (bsc#993890).\n- kaweth: fix oops upon failed memory allocation (bsc#993890).\n- kernel/fork: fix CLONE_CHILD_CLEARTID regression in nscd (bnc#941420).\n- kernel/printk/printk.c: fix faulty logic in the case of recursive printk (bnc#744692, bnc#789311).\n- kvm: do not handle APIC access page if in-kernel irqchip is not in use (bsc#959463).\n- kvm: vmx: defer load of APIC access page address during reset (bsc#959463).\n- libceph: enable large, variable-sized OSD requests (bsc#988715).\n- libceph: make r_request msg_size calculation clearer (bsc#988715).\n- libceph: move r_reply_op_{len,result} into struct ceph_osd_req_op (bsc#988715).\n- libceph: osdc-\u0026gt;req_mempool should be backed by a slab pool (bsc#988715).\n- libceph: rename ceph_osd_req_op::payload_len to indata_len (bsc#988715).\n- libfc: do not send ABTS when resetting exchanges (bsc#962846).\n- libfc: Do not take rdata-\u0026gt;rp_mutex when processing a -FC_EX_CLOSED ELS response (bsc#962846).\n- libfc: Fixup disc_mutex handling (bsc#962846).\n- libfc: fixup locking of ptp_setup() (bsc#962846).\n- libfc: Issue PRLI after a PRLO has been received (bsc#962846).\n- libfc: reset exchange manager during LOGO handling (bsc#962846).\n- libfc: Revisit kref handling (bnc#990245).\n- libfc: sanity check cpu number extracted from xid (bsc#988440).\n- libfc: send LOGO for PLOGI failure (bsc#962846).\n- lib/vsprintf: implement bitmap printing through '%*pb[l]' (bnc#1003866).\n- md: check command validity early in md_ioctl() (bsc#1004520).\n- md: Drop sending a change uevent when stopping (bsc#1003568).\n- md: lockless I/O submission for RAID1 (bsc#982783).\n- md/raid5: fix a recently broken BUG_ON() (bsc#1006691).\n- memcg: convert threshold to bytes (bnc#931454).\n- memcg: fix thresholds for 32b architectures (bnc#931454).\n- mm, cma: prevent nr_isolated_* counters from going negative (bnc#971975 VM performance -- git fixes).\n- mm: thp: fix SMP race condition between THP page fault and MADV_DONTNEED (VM Functionality, bnc#986445).\n- module: Issue warnings when tainting kernel (bsc#974406).\n- mpt2sas, mpt3sas: Fix panic when aer correct error occurred (bsc#997708).\n- mpt3sas: Update patches.drivers/mpt3sas-Fix-use-sas_is_tlr_enabled-API-before-enabli.patch (bsc#967640, bsc#992244).\n- msi-x: fix an error path (luckily none so far).\n- netback: fix flipping mode (bsc#996664).\n- netback: fix refounting (bsc#978094).\n- netfront: do not truncate grant references.\n- netfront: use correct linear area after linearizing an skb (bsc#1007886).\n- nfs4: reset states to use open_stateid when returning delegation voluntarily (bsc#1003400).\n- nfs: Add a stub for GETDEVICELIST (bnc#898675).\n- nfs: Do not write enable new pages while an invalidation is proceeding (bsc#999584).\n- nfsd: Use free_conn to free connection (bsc#979451).\n- nfs: Fix an LOCK/OPEN race when unlinking an open file (bsc#956514).\n- nfs: Fix a regression in the read() syscall (bsc#999584).\n- nfs: fix BUG() crash in notify_change() with patch to chown_common() (bnc#876463).\n- nfs: fix pg_test page count calculation (bnc#898675).\n- nfs: nfs4_fl_prepare_ds must be careful about reporting success (bsc#1000776).\n- nfsv4: add flock_owner to open context (bnc#998689).\n- nfsv4: change nfs4_do_setattr to take an open_context instead of a nfs4_state (bnc#998689).\n- nfsv4: change nfs4_select_rw_stateid to take a lock_context inplace of lock_owner (bnc#998689).\n- nfsv4: enhance nfs4_copy_lock_stateid to use a flock stateid if there is one (bnc#998689).\n- nfsv4: Ensure nfs_atomic_open set the dentry verifier on ENOENT (bnc#866130).\n- oom: print nodemask in the oom report (bnc#1003866).\n- packet: tpacket_snd(): fix signed/unsigned comparison (bsc#874131).\n- perf/x86/intel: Fix bug for \u0026quot;cycles:p\u0026quot; and \u0026quot;cycles:pp\u0026quot; on SLM (bsc#997896).\n- pm / hibernate: Fix 2G size issue of snapshot image verification (bsc#1004252).\n- pm / hibernate: Fix rtree_next_node() to avoid walking off list ends (bnc#860441).\n- powerpc: add kernel parameter iommu_alloc_quiet (bsc#998825).\n- printk: add kernel parameter to control writes to /dev/kmsg (bsc#979928).\n- qgroup: Prevent qgroup-\u0026gt;reserved from going subzero (bsc#993841).\n- qlcnic: potential NULL dereference in qlcnic_83xx_get_minidump_template() (bsc#922064 FATE#318609)\n- radeon: avoid boot hang in Xen Dom0 (luckily none so far).\n- ratelimit: extend to print suppressed messages on release (bsc#979928).\n- ratelimit: fix bug in time interval by resetting right begin time (bsc#979928).\n- rbd: truncate objects on cmpext short reads (bsc#988715).\n- rcu: Fix improper use or RCU in patches.kabi/ipv6-add-complete-rcu-protection-around-np-opt.kabi.patch. (bsc#961257)\n- Refresh patches.suse/CFS-0259-ceph-Asynchronous-IO-support.patch. After a write, we must free the 'request', not the 'response'. This error crept in during the backport. bsc#995153\n- Refresh patches.xen/xen3-patch-3.9 (bsc#991247).\n- Rename patches.xen/xen3-kgr-{0107,1003}-reserve-a-place-in-thread_struct-for-storing-RIP.patch to match its non-Xen counterpart.\n- Revert \u0026quot;can: dev: fix deadlock reported after bus-off\u0026quot;.\n- Revert \u0026quot;Input: i8042 - break load dependency between atkbd/psmouse and i8042\u0026quot;.\n- Revert \u0026quot;Input: i8042 - set up shared ps2_cmd_mutex for AUX ports\u0026quot;.\n- rpm/config.sh: do not prepend \u0026quot;60.\u0026quot; to release string This is needed for SLE maintenance workflow, no need for that in evergreen-13.1.\n- rpm/config.sh: Set the SP1 release string to 60.\u0026lt;RELEASE\u0026gt; (bsc#997059)\n- rpm/mkspec: Read a default release string from rpm/config.sh (bsc997059)\n- rtnetlink: avoid 0 sized arrays (fate#316924).\n- s390: add SMT support (bnc#994438, LTC#144756).\n- sched/core: Fix an SMP ordering race in try_to_wake_up() vs. schedule() (bnc#1001419).\n- sched/core: Fix a race between try_to_wake_up() and a woken up task (bsc#1002165, bsc#1001419).\n- scsi: ibmvfc: add FC Class 3 Error Recovery support (bsc#984992).\n- scsi: ibmvfc: Fix I/O hang when port is not mapped (bsc#971989)\n- scsi: ibmvfc: Set READ FCP_XFER_READY DISABLED bit in PRLI (bsc#984992).\n- sd: Fix memory leak caused by RESET_WP patch (bsc#999779).\n- squashfs3: properly handle dir_emit() failures (bsc#998795).\n- sunrpc: Add missing support for RPC_CLNT_CREATE_NO_RETRANS_TIMEOUT (bnc#868923).\n- sunrpc: Fix a regression when reconnecting (bsc#946309).\n- supported.conf: Add ext2\n- supported.conf: Add iscsi modules to -base (bsc#997299)\n- supported.conf: Add tun to -base (bsc#992593)\n- supported.conf: Add veth to -base (bsc#992591)\n- target: Fix missing complete during ABORT_TASK + CMD_T_FABRIC_STOP (bsc#987621).\n- target: Fix race between iscsi-target connection shutdown + ABORT_TASK (bsc#987621).\n- tcp: add proper TS val into RST packets (bsc#937086).\n- tcp: align tcp_xmit_size_goal() on tcp_tso_autosize() (bsc#937086).\n- tcp: fix child sockets to use system default congestion control if not set (fate#318553).\n- tcp: fix cwnd limited checking to improve congestion control (bsc#988617).\n- tcp: refresh skb timestamp at retransmit time (bsc#937086).\n- timers: Use proper base migration in add_timer_on() (bnc#993392).\n- tunnels: Do not apply GRO to multiple layers of encapsulation (bsc#1001486).\n- tunnels: Remove encapsulation offloads on decap (bsc#1001486).\n- Update patches.kabi/kabi.clockevents_unbind.patch (bnc#937888).\n- uprobes: Fix the memcg accounting (bnc#931454).\n- usb: fix typo in wMaxPacketSize validation (bsc#991665).\n- usbhid: add ATEN CS962 to list of quirky devices (bsc#1007615).\n- usb: hub: Fix auto-remount of safely removed or ejected USB-3 devices (bsc#922634).\n- usb: validate wMaxPacketValue entries in endpoint descriptors (bnc#991665).\n- vmxnet3: Wake queue from reset work (bsc#999907).\n- x86/tlb/trace: Do not trace on CPU that is offline (TLB Performance git-fixes).\n- xenbus: do not invoke -\u0026gt;is_ready() for most device states (bsc#987333).\n- xenbus: inspect the correct type in xenbus_dev_request_and_reply().\n- xen: Linux 3.12.63.\n- xen: Linux 3.12.64.\n- xen/pciback: Fix conf_space read/write overlap check.\n- xen-pciback: return proper values during BAR sizing.\n- xen: x86/mm/pat, /dev/mem: Remove superfluous error message (bsc#974620).\n- xfs: fixed signedness of error code in xfs_inode_buf_verify (bsc#1003153).\n- xfs: handle dquot buffer readahead in log recovery correctly (bsc#955446).\n- xfs: Silence warnings in xfs_vm_releasepage() (bnc#915183 bsc#987565).\n- xhci: silence warnings in switch (bnc#991665).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "cloop-2.639-11.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-7.0.2-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-devel-7.0.2-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-doc-7.0.2-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-eppic-7.0.2-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-gcore-7.0.2-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "hdjmod-1.28-16.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-6.21.1-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-devel-6.21.1-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "iscsitarget-1.4.20.3-13.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-debug-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-debug-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-debug-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-default-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-default-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-default-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-desktop-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-desktop-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-desktop-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-docs-3.12.67-58.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-ec2-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-ec2-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-ec2-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-macros-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-pae-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-pae-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-pae-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-source-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-source-vanilla-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-syms-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-trace-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-trace-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-trace-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-vanilla-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-vanilla-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-xen-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-xen-base-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-xen-devel-3.12.67-58.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libipset3-6.21.1-2.40.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ndiswrapper-1.58-37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-controller-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-pki-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-switch-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openvswitch-test-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "pcfclock-0.44-258.37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-openvswitch-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-openvswitch-test-1.11.0-0.43.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-virtualbox-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "vhba-kmp-20130607-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-devel-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-guest-tools-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-guest-x11-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-host-source-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-qt-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "virtualbox-websrv-4.2.36-2.68.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-devel-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-doc-html-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-libs-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-libs-32bit-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-tools-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-tools-domU-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xen-xend-tools-4.3.4_10-69.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xtables-addons-2.3-2.35.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-security-announce/2016-12/msg00013.html",
+      "Description": "E-Mail link for openSUSE-SU-2016:3021-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2013-5634",
+      "Description": "arch/arm/kvm/arm.c in the Linux kernel before 3.10 on the ARM platform, when KVM is used, allows host OS users to cause a denial of service (NULL pointer dereference, OOPS, and host OS crash) or possibly have unspecified other impact by omitting vCPU initialization before a KVM_GET_REG_LIST ioctl call.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2013-5634.html",
+          "Description": "CVE-2013-5634"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/994758",
+          "Description": "SUSE Bug 994758"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2015-8956",
+      "Description": "The rfcomm_sock_bind function in net/bluetooth/rfcomm/sock.c in the Linux kernel before 4.2 allows local users to obtain sensitive information or cause a denial of service (NULL pointer dereference) via vectors involving a bind system call on a Bluetooth RFCOMM socket.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2015-8956.html",
+          "Description": "CVE-2015-8956"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1003925",
+          "Description": "SUSE Bug 1003925"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "5",
+        "Vector": "AV:L/AC:M/Au:S/C:P/I:N/A:C"
+      }
+    },
+    {
+      "CVE": "CVE-2016-2069",
+      "Description": "Race condition in arch/x86/mm/tlb.c in the Linux kernel before 4.4.1 allows local users to gain privileges by triggering access to a paging structure by a different CPU.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-2069.html",
+          "Description": "CVE-2016-2069"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/870618",
+          "Description": "SUSE Bug 870618"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/963767",
+          "Description": "SUSE Bug 963767"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "3.5",
+        "Vector": "AV:L/AC:H/Au:S/C:P/I:P/A:P"
+      }
+    },
+    {
+      "CVE": "CVE-2016-5696",
+      "Description": "net/ipv4/tcp_input.c in the Linux kernel before 4.7 does not properly determine the rate of challenge ACK segments, which makes it easier for remote attackers to hijack TCP sessions via a blind in-window attack.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-5696.html",
+          "Description": "CVE-2016-5696"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/989152",
+          "Description": "SUSE Bug 989152"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/994167",
+          "Description": "SUSE Bug 994167"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "4.3",
+        "Vector": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+      }
+    },
+    {
+      "CVE": "CVE-2016-6130",
+      "Description": "Race condition in the sclp_ctl_ioctl_sccb function in drivers/s390/char/sclp_ctl.c in the Linux kernel before 4.6 allows local users to obtain sensitive information from kernel memory by changing a certain length value, aka a \"double fetch\" vulnerability.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-6130.html",
+          "Description": "CVE-2016-6130"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/987542",
+          "Description": "SUSE Bug 987542"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "2.4",
+        "Vector": "AV:L/AC:H/Au:S/C:P/I:P/A:N"
+      }
+    },
+    {
+      "CVE": "CVE-2016-6327",
+      "Description": "drivers/infiniband/ulp/srpt/ib_srpt.c in the Linux kernel before 4.5.1 allows local users to cause a denial of service (NULL pointer dereference and system crash) by using an ABORT_TASK command to abort a device write operation.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-6327.html",
+          "Description": "CVE-2016-6327"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/994748",
+          "Description": "SUSE Bug 994748"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "4.7",
+        "Vector": "AV:L/AC:M/Au:N/C:N/I:N/A:C"
+      }
+    },
+    {
+      "CVE": "CVE-2016-6480",
+      "Description": "Race condition in the ioctl_send_fib function in drivers/scsi/aacraid/commctrl.c in the Linux kernel through 4.7 allows local users to cause a denial of service (out-of-bounds access or system crash) by changing a certain size value, aka a \"double fetch\" vulnerability.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-6480.html",
+          "Description": "CVE-2016-6480"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1004418",
+          "Description": "SUSE Bug 1004418"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/991608",
+          "Description": "SUSE Bug 991608"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/991667",
+          "Description": "SUSE Bug 991667"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/992568",
+          "Description": "SUSE Bug 992568"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "6.9",
+        "Vector": "AV:L/AC:M/Au:N/C:C/I:C/A:C"
+      }
+    },
+    {
+      "CVE": "CVE-2016-6828",
+      "Description": "The tcp_check_send_head function in include/net/tcp.h in the Linux kernel before 4.7.5 does not properly maintain certain SACK state after a failed data copy, which allows local users to cause a denial of service (tcp_xmit_retransmit_queue use-after-free and system crash) via a crafted SACK option.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-6828.html",
+          "Description": "CVE-2016-6828"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1052256",
+          "Description": "SUSE Bug 1052256"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/994296",
+          "Description": "SUSE Bug 994296"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "4.4",
+        "Vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+      }
+    },
+    {
+      "CVE": "CVE-2016-7042",
+      "Description": "The proc_keys_show function in security/keys/proc.c in the Linux kernel through 4.8.2, when the GNU Compiler Collection (gcc) stack protector is enabled, uses an incorrect buffer size for certain timeout data, which allows local users to cause a denial of service (stack memory corruption and panic) by reading the /proc/keys file.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-7042.html",
+          "Description": "CVE-2016-7042"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1004517",
+          "Description": "SUSE Bug 1004517"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1025354",
+          "Description": "SUSE Bug 1025354"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "4.6",
+        "Vector": "AV:L/AC:L/Au:S/C:N/I:N/A:C"
+      }
+    },
+    {
+      "CVE": "CVE-2016-7097",
+      "Description": "The filesystem implementation in the Linux kernel through 4.8.2 preserves the setgid bit during a setxattr call, which allows local users to gain group privileges by leveraging the existence of a setgid program with restrictions on execute permissions.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-7097.html",
+          "Description": "CVE-2016-7097"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1021258",
+          "Description": "SUSE Bug 1021258"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1052256",
+          "Description": "SUSE Bug 1052256"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/870618",
+          "Description": "SUSE Bug 870618"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/995968",
+          "Description": "SUSE Bug 995968"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "3",
+        "Vector": "AV:L/AC:M/Au:S/C:P/I:P/A:N"
+      }
+    },
+    {
+      "CVE": "CVE-2016-7425",
+      "Description": "The arcmsr_iop_message_xfer function in drivers/scsi/arcmsr/arcmsr_hba.c in the Linux kernel through 4.8.2 does not restrict a certain length field, which allows local users to gain privileges or cause a denial of service (heap-based buffer overflow) via an ARCMSR_MESSAGE_WRITE_WQBUFFER control code.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-7425.html",
+          "Description": "CVE-2016-7425"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1025354",
+          "Description": "SUSE Bug 1025354"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/999932",
+          "Description": "SUSE Bug 999932"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "4.4",
+        "Vector": "AV:L/AC:M/Au:N/C:P/I:P/A:P"
+      }
+    },
+    {
+      "CVE": "CVE-2016-8658",
+      "Description": "Stack-based buffer overflow in the brcmf_cfg80211_start_ap function in drivers/net/wireless/broadcom/brcm80211/brcmfmac/cfg80211.c in the Linux kernel before 4.7.5 allows local users to cause a denial of service (system crash) or possibly have unspecified other impact via a long SSID Information Element in a command to a Netlink socket.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2016-8658.html",
+          "Description": "CVE-2016-8658"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1004462",
+          "Description": "SUSE Bug 1004462"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:cloop-2.639-11.36.1",
+            "openSUSE 13.1:cloop-kmp-default-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-desktop-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-pae-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:cloop-kmp-xen-2.639_k3.12.67_58-11.36.1",
+            "openSUSE 13.1:crash-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-devel-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-doc-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-eppic-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-gcore-7.0.2-2.36.1",
+            "openSUSE 13.1:crash-kmp-default-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-desktop-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-pae-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:crash-kmp-xen-7.0.2_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:hdjmod-1.28-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-default-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-desktop-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-pae-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:hdjmod-kmp-xen-1.28_k3.12.67_58-16.36.1",
+            "openSUSE 13.1:ipset-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-devel-6.21.1-2.40.1",
+            "openSUSE 13.1:ipset-kmp-default-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-desktop-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-pae-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:ipset-kmp-xen-6.21.1_k3.12.67_58-2.40.1",
+            "openSUSE 13.1:iscsitarget-1.4.20.3-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-default-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-desktop-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-pae-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:iscsitarget-kmp-xen-1.4.20.3_k3.12.67_58-13.36.1",
+            "openSUSE 13.1:kernel-debug-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-debug-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-default-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-desktop-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-docs-3.12.67-58.2",
+            "openSUSE 13.1:kernel-ec2-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-ec2-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-macros-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-pae-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-3.12.67-58.1",
+            "openSUSE 13.1:kernel-source-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-syms-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-trace-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-3.12.67-58.1",
+            "openSUSE 13.1:kernel-vanilla-devel-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-base-3.12.67-58.1",
+            "openSUSE 13.1:kernel-xen-devel-3.12.67-58.1",
+            "openSUSE 13.1:libipset3-6.21.1-2.40.1",
+            "openSUSE 13.1:ndiswrapper-1.58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-default-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-desktop-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:ndiswrapper-kmp-pae-1.58_k3.12.67_58-37.1",
+            "openSUSE 13.1:openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-controller-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-default-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-desktop-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-pae-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-kmp-xen-1.11.0_k3.12.67_58-0.43.1",
+            "openSUSE 13.1:openvswitch-pki-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-switch-1.11.0-0.43.1",
+            "openSUSE 13.1:openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:pcfclock-0.44-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-default-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-desktop-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:pcfclock-kmp-pae-0.44_k3.12.67_58-258.37.1",
+            "openSUSE 13.1:python-openvswitch-1.11.0-0.43.1",
+            "openSUSE 13.1:python-openvswitch-test-1.11.0-0.43.1",
+            "openSUSE 13.1:python-virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:vhba-kmp-20130607-2.36.1",
+            "openSUSE 13.1:vhba-kmp-default-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-desktop-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-pae-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:vhba-kmp-xen-20130607_k3.12.67_58-2.36.1",
+            "openSUSE 13.1:virtualbox-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-devel-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-tools-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-guest-x11-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-default-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-desktop-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-kmp-pae-4.2.36_k3.12.67_58-2.68.1",
+            "openSUSE 13.1:virtualbox-host-source-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-qt-4.2.36-2.68.1",
+            "openSUSE 13.1:virtualbox-websrv-4.2.36-2.68.1",
+            "openSUSE 13.1:xen-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-devel-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-doc-html-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-kmp-default-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-desktop-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-kmp-pae-4.3.4_10_k3.12.67_58-69.1",
+            "openSUSE 13.1:xen-libs-32bit-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-libs-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-tools-domU-4.3.4_10-69.1",
+            "openSUSE 13.1:xen-xend-tools-4.3.4_10-69.1",
+            "openSUSE 13.1:xtables-addons-2.3-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-default-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-desktop-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-pae-2.3_k3.12.67_58-2.35.1",
+            "openSUSE 13.1:xtables-addons-kmp-xen-2.3_k3.12.67_58-2.35.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {
+        "BaseScore": "5.4",
+        "Vector": "AV:L/AC:M/Au:N/C:N/I:P/A:C"
+      }
+    }
+  ]
+}

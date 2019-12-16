@@ -1,0 +1,196 @@
+{
+  "Title": "Security update for glibc",
+  "Tracking": {
+    "ID": "openSUSE-SU-2015:1387-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2015-08-06T18:29:00Z",
+    "CurrentReleaseDate": "2015-08-06T18:29:00Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2015-08-06T18:29:00Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for glibc",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "glibc was updated to fix one security issue.\n\nThis security issue was fixed:\n- CVE-2014-4043: The posix_spawn_file_actions_addopen function in glibc did not copy its path argument in accordance with the POSIX specification, which allowed context-dependent attackers to trigger use-after-free vulnerabilities (bsc#882600).\n  ",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "glibc-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-devel-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-devel-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-devel-static-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-devel-static-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-extra-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-html-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-i18ndata-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-info-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-locale-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-locale-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-obsolete-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-profile-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-profile-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-testsuite-2.18-4.38.3",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-utils-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "glibc-utils-32bit-2.18-4.38.2",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "nscd-2.18-4.38.1",
+        "RelatesToProductReference": "openSUSE 13.1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "http://lists.opensuse.org/opensuse-security-announce/2015-08/msg00012.html",
+      "Description": "E-Mail link for openSUSE-SU-2015:1387-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2014-4043",
+      "Description": "The posix_spawn_file_actions_addopen function in glibc before 2.20 does not copy its path argument in accordance with the POSIX specification, which allows context-dependent attackers to trigger use-after-free vulnerabilities.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2014-4043.html",
+          "Description": "CVE-2014-4043"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/882600",
+          "Description": "SUSE Bug 882600"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/939797",
+          "Description": "SUSE Bug 939797"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "openSUSE 13.1:glibc-2.18-4.38.1",
+            "openSUSE 13.1:glibc-32bit-2.18-4.38.2",
+            "openSUSE 13.1:glibc-devel-2.18-4.38.1",
+            "openSUSE 13.1:glibc-devel-32bit-2.18-4.38.2",
+            "openSUSE 13.1:glibc-devel-static-2.18-4.38.1",
+            "openSUSE 13.1:glibc-devel-static-32bit-2.18-4.38.2",
+            "openSUSE 13.1:glibc-extra-2.18-4.38.1",
+            "openSUSE 13.1:glibc-html-2.18-4.38.1",
+            "openSUSE 13.1:glibc-i18ndata-2.18-4.38.1",
+            "openSUSE 13.1:glibc-info-2.18-4.38.1",
+            "openSUSE 13.1:glibc-locale-2.18-4.38.1",
+            "openSUSE 13.1:glibc-locale-32bit-2.18-4.38.2",
+            "openSUSE 13.1:glibc-obsolete-2.18-4.38.1",
+            "openSUSE 13.1:glibc-profile-2.18-4.38.1",
+            "openSUSE 13.1:glibc-profile-32bit-2.18-4.38.2",
+            "openSUSE 13.1:glibc-testsuite-2.18-4.38.3",
+            "openSUSE 13.1:glibc-utils-2.18-4.38.2",
+            "openSUSE 13.1:glibc-utils-32bit-2.18-4.38.2",
+            "openSUSE 13.1:nscd-2.18-4.38.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
