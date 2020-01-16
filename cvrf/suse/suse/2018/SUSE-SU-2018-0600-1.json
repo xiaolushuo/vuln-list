@@ -21,7 +21,7 @@
       "Type": "Summary"
     },
     {
-      "Text": "This update for puppet fixes the following issues:\n\n- CVE-2017-2295: Fixed a security vulnerability where an attacker could\n  force YAML deserialization in an unsafe manner, which would lead to\n  remote code execution.\n\nIn default, this update would break a backwards compatibility\nwith Puppet agents older than 3.2.2 as the SLE11 master doesn't\nsupport other fact formats than pson in default anymore.\nIn order to allow users to continue using their SLE11 agents\na patch was added that enables sending PSON from agents.\n\nFor non-SUSE clients older that 3.2.2 a new puppet master boolean option\n\u0026quot;dangerous_fact_formats\u0026quot; was added. When it's set to true it\nenables using dangerous fact formats (e.g. YAML). When it's set\nto false, only PSON fact format is accepted. (bsc#1040151),\n(bsc#1077767)\n",
+      "Text": "This update for puppet fixes the following issues:\n\n- CVE-2017-2295: Fixed a security vulnerability where an attacker could\n  force YAML deserialization in an unsafe manner, which would lead to\n  remote code execution.\n\nIn default, this update would break a backwards compatibility\nwith Puppet agents older than 3.2.2 as the SLE11 master doesn't\nsupport other fact formats than pson in default anymore.\nIn order to allow users to continue using their SLE11 agents\na patch was added that enables sending PSON from agents.\n\nFor non-SUSE clients older that 3.2.2 a new puppet master boolean option\n'dangerous_fact_formats' was added. When it's set to true it\nenables using dangerous fact formats (e.g. YAML). When it's set\nto false, only PSON fact format is accepted. (bsc#1040151),\n(bsc#1077767)\n",
       "Title": "Details",
       "Type": "General"
     },
