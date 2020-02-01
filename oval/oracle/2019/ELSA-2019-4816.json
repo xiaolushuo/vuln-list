@@ -1,6 +1,6 @@
 {
-  "Title": "ELSA-2019-4816:  kubernetes kubeadm-ha-setup security update (IMPORTANT)",
-  "Description": "kubernetes\n[1.12.10-1.0.4]\n- fix for CVE-2019-11251\n\n[1.12.10-1.0.3]\n- replacing references to kubernetes-dashboard-amd64 with kubernetes-dashboard\n\n[1.12.10-1.0.2]\n- Added Oracle specific build files for Kubernetes\n\nkubeadm-ha-setup\n[0.0.2-1.0.61]\n- Added Support for 1.13.11 and removed support for 1.13.10\n\n[0.0.2-1.0.59]\n- Remove Support for 1.14.6\n\n[0.0.2-1.0.58]\n- Replacing reference to kubernetes-dashboard-amd64 with kubernetes-dashboard\n\n[0.0.2-1.0.57]\n- Support 1.12.10\n\n[0.0.2-1.0.56]\n- Support 1.14.6\n\n[0.0.2-1.0.55]\n- Support 1.13.10\n\n[0.0.2-1.0.54]\n- Support 1.13.9\n\n[0.0.2-1.0.53]\n- Mark 1.14 as a developer build\n\n[0.0.2-1.0.52]\n- [OLCNE-678] Restore fails when trying to restore after a failed update\n\n[0.0.2-1.0.51]\n- [OLCNE-667] Minor version update doesn't update kubeadm on all master nodes\n\n[0.0.2-1.0.50]\n- Make k8s 1.14 specific changes\n\n[0.0.2-1.0.49]\n- [OLCNE-668] Remove 1.10 and 1.11 version since they are incompatable\n\n[0.0.2-1.0.48]\n- [OLCNE-549] Support deploying 5 master nodes\n\n[0.0.2-1.0.47]\n- Only update/upgrade the controlplane images if they changed in the Release object\n\n[0.0.2-1.0.46]\n- [OLCNE-571] Fix version comparison function during upgrade\n\n[0.0.2-1.0.45]\n- Fix rpm version compare\n- [OLCNE-550] Allow kubernetes updates for patch version\n\n[0.0.2-1.0.44]\n- [OLCNE-528] Allow assume yes to deploy a single master without the prompt\n\n[0.0.2-1.0.43]\n- [OLCNE-524] Post cluster creation should check only for master nodes\n\n[0.0.2-1.0.42]\n- [OLCNE-335] Update keepalived check api server to ensure we are grepping the correct IP\n\n[0.0.2-1.0.41]\n- [OLCNE-470] Make ha.yaml an optional argument in the cli for single master cluster\n\n[0.0.2-1.0.40]\n- [OLCNE-486] Add pod cidr default and refactor ha.yaml example\n\n[0.0.2-1.0.39]\n- [OLCNE-313] Remove features: feature1_13=true from config\n\n[0.0.2-1.0.38]\n- Default kubernetes version to latest production version\n\n[0.0.2-1.0.37]\n- [OLCNE-411] Fix keepalived issue when firewalld is disable\n\n[0.0.2-1.0.36]\n- Default kubernetes version to latest production version\n\n[0.0.2-1.0.35]\n- Add addons template and config files\n\n[0.0.2-1.0.34]\n- Enhance tests\n\n[0.0.2-1.0.33]\n- fix regression of previous firewall fix\n\n[0.0.2-1.0.32]\n- Fix firewall issues during restore [ OLCNE 343 ]\n\n[0.0.2-1.0.31]\n- Fix firewall issues [ OLCNE 249, 262 ]\n\n[0.0.2-1.0.30]\n- Enhance output while validating the system\n\n[0.0.2-1.0.29]\n- [OLCNE-85] Fix DR in 1.13\n\n[0.0.2-1.0.28]\n- Fix apiserver_cert_extra_sans for 1.13 clusters\n\n[0.0.2-1.0.27]\n- Fix update/upgrade output message\n\n[0.0.2-1.0.26]\n- Fix major upgrade\n\n[0.0.2-1.0.25]\n- Add registry migration\n\n[0.0.2-1.0.24]\n- Return stdout and stderr from Run function to allow the caller decided what to display\n\n[0.0.2-1.0.23]\n- [OLCNE-170] proxy variable is inherited in remote master\n\n[0.0.2-1.0.22]\n- The Trim function doesn't work for replacing strings\n- Upgrade should use the pause container instead of pause-amd64\n\n[0.0.2-1.0.21]\n- Include 1.12.7 image and update 1.13 and metric servers info\n\n[0.0.2-1.0.20]\n- Support new registries and allow for password to have a colon\n\n[0.0.2-1.0.19]\n- --force flag for full restore\n\n[0.0.2-1.0.18]\n- Change update help message\n\n[0.0.2-1.0.17]\n- Change update message, add ha install command and ask for confirmation\n\n[0.0.2-1.0.16]\n- Change upgrade command name to update\n\n[0.0.2-1.0.15]\n- Fix upgrade for point release\n\n[0.0.2-1.0.14]\n- OLCNE-79 Move file.go to config.go\n\n[0.0.2-1.0.13]\n- OLCNE-144 Feature Flag 1.13 code\n\n[0.0.2-1.0.12]\n- Add support of upgrading HA master nodes\n\n[0.0.2-1.0.11]\n- Support deploying Kubernetes version 1.13.2\n\n[0.0.2-1.0.10]\n- CVE-2018-16875\n\n[0.0.2-1.0.9]\n- Add timeout to Run() (gitlab issues #3)\n- Rename path to linux-git.us.oracle.com/Kubernetes\n\n[0.0.2-1.0.8]\n- Remove releases.json dependency\n\n[0.0.2-1.0.7]\n- Pin dependent kubernetes packages\n\n[0.0.2-1.0.6]\n- Update deps for kube 1.13\n\n[0.0.2-1.0.5]\n- Add test runner in makefile and execute it in CI/CD\n\n[0.0.2-1.0.4]\n- Fix backup path issue again found by Tom Cocozzello\n\n[0.0.2-1.0.3]\n- [Orabug 29152516] Backup and restore /var/lib/kubelet/kubeadm-flags.env too\n- Cleanup kube-ipvs0 interface too\n- More code cleanup\n- Use map for checking kernel module\n- Fix client joining errors\n- Addressing Tom Cocozzello's review\n- Enabling IPVS in HA\n\n[0.0.2-1.0.2]\n- Update dashboard image (CVE-2018-18264)\n\n[0.0.2-1.0.1]\n- Allow Oracle certified addons to be installed via cli\n\n[0.0.1-2.0.9]\n- Use 'dep ensure' to clean up symlinks in the vendor directory\n\n[0.0.1-2.0.5]\n- Clean up un-used build scripts\n\n[0.0.1-2.0.4]\n- Add Makefile for building and testing code\n\n[0.0.1-2.0.3]\n- Fix file restore issue when it contains './'\n\n[0.0.1-2.0.2]\n- Resolve the full filepath when '.' is passed in\n- Addressing review by Muminul Islam\n\n[0.0.1-2.0.1]\n- Remove 'firewall-cmd --reload' as it can hangs OCI\n- Fix some errors reported by Shubham\n- Error out if options is not currently supported in HandleEtcdOps\n- Fix down issue\n- Dump log output to /var/log/kubeadm-ha-setup\n\n[0.0.1-1.0.37]\n- Fix kubernetes version\n- Include log printing when error occurs\n- Fix client.go regression due to new down function\n\n[0.0.1-1.0.36]\n- Remove Godeps, using dep for now\n- Check if image is not set before referencing\n- Rename getEtcdConfigV2 to getEtcdConfig\n- Adding down functionality\n- Update ha.yaml file\n\n[0.0.1-1.0.35]\n- Removing etcd.go\n- Addressing Tom Cocozzello review\n- [Orabug 28977571]\n\n[0.0.1-1.0.34]\n- Enabling full restore on HA master and single master\n- Cleanup\n- Enable single master backup\n- Double the context request timeout\n- Implement retryable AddMember\n\n[0.0.1-1.0.33]\n- Modified DR for One node case to use new etcd API\n- Enhanced the helper scripts such that it will error out\n- HealthCheck re-implementation\n\n[0.0.1-1.0.32]\n- Update dashboard image\n\n[0.0.1-1.0.31]\n- Needs to be run as a privileged user\n- Enable CoreDNS as default\n\n[0.0.1-1.0.30]\n- Enable single master setup\n\n[0.0.1-1.0.29]\n- Redesigned for setting up v1.12 HA clusters\n\n[0.0.1-1.0.28]\n- Fixes for v1.11\n- Addressing Laszlo Peter review\n- Addressing Daniel Krasinski review\n\n[0.0.1-1.0.27]\n- Fix build failure\n- Add UPL LICENSE\n- Fix the usage of defer\n- Re-try when docker pull image gets a timeout\n- Refactor SetupCreds()\n- Remove --force flag for restore\n- When something fail, we should lenghten the timeout time\n\n[0.0.1-1.0.26]\n- When context timed out catch it and print stdout, stderr\n\n[0.0.1-1.0.25]\n- Check output from docker client and probe for error\n\n[0.0.1-1.0.24]\n- Properly parse if repo has a special ':' character\n\n[0.0.1-1.0.23]\n- Checking the total nodes would be better implementation\n- Fixup etcd add member errors\n\n[0.0.1-1.0.22]\n- Pod count could be \u003e= 20\n- Remove port 30000-32767/tcp check for client node\n- Querying k8s cluster health instead of etcd for backup\n- Cosmestic fix\n- Etcd one node restore problems\n\n[0.0.1-1.0.21]\n- Check whether repo needs auth even in one node restore case\n- Fixup the restore script\n- docker pull image change in behavior in 18.03\n- Include client side image repo checking too\n- Provide a full repo path for comparison\n- Make kubernetes_developer as the sample repo\n- Use strings.Contains to compare strings\n- Fix README\n- Initial README\n- Include changes in kube.go\n\n[0.0.1-1.0.20]\n- In OCI LB can takes time to setup properly\n- Fix random string\n- [Orabug 28445064]\n- Replace RunCmdExec() with just Run()\n- Sanity check for # of master\n- Make kubeadm token default to be random\n\n[0.0.1-1.0.19]\n- Check if docker exec etcd returns Error\n- Check env first before trying to pull image\n- [Orabug 28461826]\n\n[0.0.1-1.0.18]\n- Fixing LB, kubelet, kubectl-proxy\n- Add a DEBUG flag for more verbose output\n\n[0.0.1-1.0.17]\n- Don't loop forever in client, make Run() more consistent in master\n- Fixup LB for OCI\n- Add apiserver-bind-port capability\n\n[0.0.1-1.0.17]\n- Include apiserver_cert_extra_sans and service_cidr\n\n[0.0.1-1.0.16]\n- Include restoring keepalived for one and full restore\n- For Full Restore we need to first clean up before anything else\n- Clean up DR, make backup check etcd health first\n- Properly clean-up flannel.1 and cni0\n\n[0.0.1-1.0.15]\n- DR code cleanup\n- Changed permission on the created dir to 0755\n- Fix filename not found error\n\n[0.0.1-1.0.14]\n- Don't panic()\n- In One node restore case verify the ca.crt MD5SUM\n- Full DR feature\n- Redesign of the DR\n- Include file and its line number for logging\n- Put the binary full path\n- Re-arrange varibles for ssh.go\n- Separate etcd cli to another file (etcd.go)\n- Addition to kubectl cli\n- Check if MyIP for local node is missing/empty\n\n[0.0.1-1.0.13]\n- Replace binary names\n- Include the ability to re-try master setup\n\n[0.0.1-1.0.12]\n- Renamed the whole REPO to kubeadm-ha-setup\n- Don't print out more logs as necessary\n\n[0.0.1-1.0.12]\n- Enhance ssh/sftp code\n\n[0.0.1-1.0.11]\n- Change the storePath\n- Include keepalived backup and change backup.sh/restore.sh\n\n[0.0.1-1.0.10]\n- Continuing on the restore part\n- Make the script to query all KUBEDIR directory from a single file\n- Consolidate KUBEDIR\n- Make systemd related file 0644\n\n[0.0.1-1.0.9]\n- Fixup the hardcoded directory as such we are reading from only limited source\n- Include the Docker API for restore\n- Initial implementation of DR\n\n[0.0.1-1.0.8]\n- Fixup kubeadm-setup join\n- systemctl enable kubelet\n\n[0.0.1-1.0.7]\n- Fix LoadBalancer to take care of extra steps\n\n[0.0.1-1.0.6]\n- Cleanup some stdout\n- Add token field in ha.yaml for ease of automated setup\n\n[0.0.1-1.0.5]\n- If Loadbalancer is preferred/used\n\n[0.0.1-1.0.4]\n- Remove goroutine sleep - unnecessary\n- Provides structure to store required files and cert files\n- Fix merge errors\n\n[0.0.1-1.0.3]\n- Create /run/kubeadm w-w/o --skip\n\n[0.0.1-1.0.2]\n- NoHA and LoadBalancer\n\n[0.0.1-1.0.1]\n- Initial build",
+  "Title": "ELSA-2019-4816:  kubernetes security update (IMPORTANT)",
+  "Description": "kubernetes\n[1.12.10-1.0.10]\n- [CVE-2019-16276] Kubernetes Vulnerabilities Allow Authentication Bypass, DoS\n\n[1.12.10-1.0.9]\n- Define rolling update for flannel\n\n[1.12.10-1.0.8]\n- Modify flannel/dashboard image tags to use images that have the cve fix\n\nkubeadm-ha-setup\n[0.0.2-1.0.68]\n- Pull image prior to update and fix image repo for addons\n\n[0.0.2-1.0.67]\n- Bump golang build version\n\n[0.0.2-1.0.66]\n- [CVE-2019-16276] Support patching flannel/dashboard on upgrade\n\n[0.0.2-1.0.65]\n- [CVE 2019-16276] Support deploygin 1.12 and 1.13 with CVE patched\n\n[0.0.2-1.0.64]\n- [CVE-2019-16276] Support patching etcd on upgrade\n\n[0.0.2-1.0.63]\n- [CVE-2019-16276] while upgrading a cluster patch the coredns image\n\n[0.0.2-1.0.62]\n- CVE-2019-16276 : Update flannel , etcd coredns and dashboard images.\n\n[0.0.2-1.0.61]\n- Added Support for 1.13.11 and removed support for 1.13.10\n\n[0.0.2-1.0.59]\n- Remove Support for 1.14.6\n\n[0.0.2-1.0.58]\n- Replacing reference to kubernetes-dashboard-amd64 with kubernetes-dashboard\n\n[0.0.2-1.0.57]\n- Support 1.12.10\n\n[0.0.2-1.0.56]\n- Support 1.14.6\n\n[0.0.2-1.0.55]\n- Support 1.13.10\n\n[0.0.2-1.0.54]\n- Support 1.13.9",
   "Platform": [
     "Oracle Linux 7"
   ],
@@ -19,6 +19,16 @@
       "Source": "CVE",
       "URI": "http://linux.oracle.com/cve/CVE-2019-11246.html",
       "ID": "CVE-2019-11246"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2019-16276.html",
+      "ID": "CVE-2019-16276"
+    },
+    {
+      "Source": "CVE",
+      "URI": "http://linux.oracle.com/cve/CVE-2019-11253.html",
+      "ID": "CVE-2019-11253"
     },
     {
       "Source": "CVE",
@@ -52,7 +62,7 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kubeadm is earlier than 0:1.12.10-1.0.4.el7"
+                "Comment": "kubeadm is earlier than 0:1.12.10-1.0.10.el7"
               },
               {
                 "Comment": "kubeadm is signed with the Oracle Linux 7 key"
@@ -64,7 +74,7 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kubeadm-ha-setup is earlier than 0:0.0.2-1.0.61.el7"
+                "Comment": "kubeadm-ha-setup is earlier than 0:0.0.2-1.0.68.el7"
               },
               {
                 "Comment": "kubeadm-ha-setup is signed with the Oracle Linux 7 key"
@@ -76,7 +86,19 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kubectl is earlier than 0:1.12.10-1.0.4.el7"
+                "Comment": "kubeadm-upgrade is earlier than 0:0.0.1-1.0.27.el7"
+              },
+              {
+                "Comment": "kubeadm-upgrade is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kubectl is earlier than 0:1.12.10-1.0.10.el7"
               },
               {
                 "Comment": "kubectl is signed with the Oracle Linux 7 key"
@@ -88,7 +110,7 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kubelet is earlier than 0:1.12.10-1.0.4.el7"
+                "Comment": "kubelet is earlier than 0:1.12.10-1.0.10.el7"
               },
               {
                 "Comment": "kubelet is signed with the Oracle Linux 7 key"
@@ -116,6 +138,16 @@
       "Impact": "",
       "Href": "http://linux.oracle.com/cve/CVE-2019-11246.html",
       "ID": "CVE-2019-11246"
+    },
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2019-16276.html",
+      "ID": "CVE-2019-16276"
+    },
+    {
+      "Impact": "",
+      "Href": "http://linux.oracle.com/cve/CVE-2019-11253.html",
+      "ID": "CVE-2019-11253"
     },
     {
       "Impact": "",
