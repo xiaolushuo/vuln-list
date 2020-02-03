@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for mongodb",
+  "Title": "Recommended update for mongodb",
   "Tracking": {
     "ID": "SUSE-SU-2015:0751-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-03-20T15:18:34Z",
-    "CurrentReleaseDate": "2015-03-20T15:18:34Z",
+    "InitialReleaseDate": "2014-08-27T18:20:46Z",
+    "CurrentReleaseDate": "2014-08-27T18:20:46Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-03-20T15:18:34Z",
+        "Date": "2014-08-27T18:20:46Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for mongodb",
+      "Text": "Recommended update for mongodb",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nThe MongoDB database did validate BSON incorrectly, which could have lead \nto remote attackers being able to crash the database before authentication. \n(CVE-2015-1609)\n\nSecurity Issues:\n\n    * CVE-2015-1609\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1609\u0026gt;\n\n",
+      "Text": "\nThis update for mongodb raises the virtual memory resource limits in order \nto prevent memory allocation failures on the Ceilometer barclamp.\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,7 +34,7 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "mongodb-2.4.3-0.23.1",
+        "ProductReference": "mongodb-2.4.3-0.15.1",
         "RelatesToProductReference": "SUSE OpenStack Cloud 4",
         "RelationType": "Default Component Of"
       },
@@ -59,36 +59,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2015-1609",
-      "Description": "MongoDB before 2.4.13 and 2.6.x before 2.6.8 allows remote attackers to cause a denial of service via a crafted UTF-8 string in a BSON request.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2015-1609.html",
-          "Description": "CVE-2015-1609"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/921759",
-          "Description": "SUSE Bug 921759"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE OpenStack Cloud 4:mongodb-2.4.3-0.23.1",
-            "SUSE OpenStack Cloud 5:mongodb-2.4.3-0.25.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }

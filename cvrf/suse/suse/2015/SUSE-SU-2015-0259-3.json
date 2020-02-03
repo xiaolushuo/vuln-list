@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for ntp",
+  "Title": "Recommended update for ntp",
   "Tracking": {
     "ID": "SUSE-SU-2015:0259-3",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-02-09T13:32:07Z",
-    "CurrentReleaseDate": "2015-02-09T13:32:07Z",
+    "InitialReleaseDate": "2011-12-20T21:29:36Z",
+    "CurrentReleaseDate": "2011-12-20T21:29:36Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-02-09T13:32:07Z",
+        "Date": "2011-12-20T21:29:36Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for ntp",
+      "Text": "Recommended update for ntp",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nntp has been updated to fix four security issues:\n\n    * CVE-2014-9294: ntp-keygen used a weak RNG seed, which made it easier\n      for remote attackers to defeat cryptographic protection mechanisms\n      via a brute-force attack. (bsc#910764)\n    * CVE-2014-9293: The config_auth function, when an auth key is not\n      configured, improperly generated a key, which made it easier for\n      remote attackers to defeat cryptographic protection mechanisms via a\n      brute-force attack. (bsc#910764)\n    * CVE-2014-9298: ::1 can be spoofed on some operating systems, so ACLs\n      based on IPv6 ::1 addresses could be bypassed. (bsc#910764)\n    * CVE-2014-9297: vallen is not validated in several places in\n      ntp_crypto.c, leading to potential information leak. (bsc#910764)\n\nSecurity Issues:\n\n    * CVE-2014-9294\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9294\u0026gt;\n    * CVE-2014-9293\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9293\u0026gt;\n    * CVE-2014-9298\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9298\u0026gt;\n    * CVE-2014-9297\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-9297\u0026gt;\n\n",
+      "Text": "\nThis update fixes the following issue for ntp:\n\n    * 734467: The post installation script of ntp removes\n      /etc/sysconfig/ntp\n    * 730374: Hardware Clock does not get synchronized\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,42 +34,52 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "ntp-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-4.2.4p8-1.18.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ntp-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1-LTSS",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-doc-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-doc-4.2.4p8-1.18.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ntp-doc-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1-LTSS",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-doc-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-doc-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP1-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-doc-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-doc-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "ntp-doc-4.2.4p8-1.29.32.1",
+        "ProductReference": "ntp-doc-4.2.4p8-1.18.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA",
         "RelationType": "Default Component Of"
       }
@@ -89,182 +99,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2014-9293",
-      "Description": "The config_auth function in ntpd in NTP before 4.2.7p11, when an auth key is not configured, improperly generates a key, which makes it easier for remote attackers to defeat cryptographic protection mechanisms via a brute-force attack.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "important"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-9293.html",
-          "Description": "CVE-2014-9293"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/910764",
-          "Description": "SUSE Bug 910764"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/911792",
-          "Description": "SUSE Bug 911792"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/959243",
-          "Description": "SUSE Bug 959243"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-9294",
-      "Description": "util/ntp-keygen.c in ntp-keygen in NTP before 4.2.7p230 uses a weak RNG seed, which makes it easier for remote attackers to defeat cryptographic protection mechanisms via a brute-force attack.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "important"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-9294.html",
-          "Description": "CVE-2014-9294"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/910764",
-          "Description": "SUSE Bug 910764"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/911792",
-          "Description": "SUSE Bug 911792"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/959243",
-          "Description": "SUSE Bug 959243"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-9297",
-      "Description": "** REJECT **  DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: CVE-2014-9750, CVE-2014-9751.  Reason: this ID was intended for one issue, but was associated with two issues.  Notes: All CVE users should consult CVE-2014-9750 and CVE-2014-9751 to identify the ID or IDs of interest. All references and descriptions in this candidate have been removed to prevent accidental usage.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-9297.html",
-          "Description": "CVE-2014-9297"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/911792",
-          "Description": "SUSE Bug 911792"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/948963",
-          "Description": "SUSE Bug 948963"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/959243",
-          "Description": "SUSE Bug 959243"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-9298",
-      "Description": "** REJECT **  DO NOT USE THIS CANDIDATE NUMBER.  ConsultIDs: CVE-2014-9750, CVE-2014-9751.  Reason: this ID was intended for one issue, but was associated with two issues.  Notes: All CVE users should consult CVE-2014-9750 and CVE-2014-9751 to identify the ID or IDs of interest. All references and descriptions in this candidate have been removed to prevent accidental usage.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-9298.html",
-          "Description": "CVE-2014-9298"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/911792",
-          "Description": "SUSE Bug 911792"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/948963",
-          "Description": "SUSE Bug 948963"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/959243",
-          "Description": "SUSE Bug 959243"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-LTSS:ntp-doc-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-4.2.4p8-1.29.32.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP1-TERADATA:ntp-doc-4.2.4p8-1.29.32.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }

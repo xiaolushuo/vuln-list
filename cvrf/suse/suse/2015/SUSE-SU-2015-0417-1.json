@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for vsftpd",
+  "Title": "Recommended update for vsftpd",
   "Tracking": {
     "ID": "SUSE-SU-2015:0417-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-02-24T17:37:05Z",
-    "CurrentReleaseDate": "2015-02-24T17:37:05Z",
+    "InitialReleaseDate": "2015-04-19T22:34:39Z",
+    "CurrentReleaseDate": "2015-04-19T22:34:39Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-02-24T17:37:05Z",
+        "Date": "2015-04-19T22:34:39Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for vsftpd",
+      "Text": "Recommended update for vsftpd",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nvsftpd has been updated to fix one security issue:\n\n    * CVE-2015-1419: Config option deny_file was not handled correctly\n      (bnc#915522, bnc#900326)\n\nSecurity Issues:\n\n    * CVE-2015-1419\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1419\u0026gt;\n\n",
+      "Text": "\nThis update fixes regressions with using wildcards that had been introduced \nby the previous update (bnc#922538, bnc#927612). Additionally, stat(2) \ncould be sometimes called on the wrong path, resulting incorrectly in \nENOENT (bnc#925963).\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,27 +34,27 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "vsftpd-2.0.7-4.29.1",
+        "ProductReference": "vsftpd-2.0.7-4.35.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "vsftpd-2.0.7-4.29.1",
+        "ProductReference": "vsftpd-2.0.7-4.35.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "vsftpd-2.0.7-4.29.1",
+        "ProductReference": "vsftpd-2.0.7-4.35.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "vsftpd-2.0.7-4.29.1",
+        "ProductReference": "vsftpd-2.0.7-4.35.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "vsftpd-2.0.7-4.29.1",
+        "ProductReference": "vsftpd-2.0.7-4.35.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       }
@@ -74,43 +74,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2015-1419",
-      "Description": "Unspecified vulnerability in vsftpd 3.0.2 and earlier allows remote attackers to bypass access restrictions via unknown vectors, related to deny_file parsing.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2015-1419.html",
-          "Description": "CVE-2015-1419"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/900326",
-          "Description": "SUSE Bug 900326"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/915522",
-          "Description": "SUSE Bug 915522"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:vsftpd-2.0.7-4.29.1",
-            "SUSE Linux Enterprise Server 11 SP3:vsftpd-2.0.7-4.29.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:vsftpd-2.0.7-4.29.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:vsftpd-2.0.7-4.29.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:vsftpd-2.0.7-4.29.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }

@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for SUSE Manager Server 1.7",
+  "Title": "Recommended update for sm-ncc-sync-data",
   "Tracking": {
     "ID": "SUSE-SU-2015:0928-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-05-12T21:08:27Z",
-    "CurrentReleaseDate": "2015-05-12T21:08:27Z",
+    "InitialReleaseDate": "2014-09-29T23:11:22Z",
+    "CurrentReleaseDate": "2014-09-29T23:11:22Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-05-12T21:08:27Z",
+        "Date": "2014-09-29T23:11:22Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for SUSE Manager Server 1.7",
+      "Text": "Recommended update for sm-ncc-sync-data",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nThis collective update for SUSE Manager 1.7 provides several fixes and \nenhancements.\n\nsmdba:\n\n    * Space reclamation caused ORA-00942 (table or view does not exist).\n      (bsc#906850)\n    * Optimized space reclamation for Oracle.\n    * Implement fully hot operations for PostgreSQL.\n    * System check breaks backup and other configuration.\n    * Implement rotating PostgreSQL backup feature. (bsc#896244)\n    * Set PostgreSQL max connections to the same value as for Oracle.\n\nsm-ncc-sync-data:\n\n    * Add ATI and nVidia channels for SLED11-SP3. (bsc#901108)\n\nspacecmd:\n\n    * Fix call to setCustomOptions(). (bsc#879904)\n\nspacewalk-backend:\n\n    * Fix encoding of submit message.\n    * Trigger generation of metadata if the repository contains no\n      packages. (bsc#870159)\n\nspacewalk-branding:\n\n    * Update default Spacewalk entitlement certificate.\n\nspacewalk-java:\n\n    * Introduce improved parser for xmlrpc. (CVE-2014-8162, bsc#922525)\n    * Fix more cross-site scripting bugs. (CVE-2014-7811, bsc#902915)\n    * Ffix CVE audit in case of multiversion package installed and patch in\n      multi channels. (bsc#903723)\n    * Fix automatic configuration file deployment via snippet. (bsc#898426)\n    * Download CSV button does not export all columns (\u0026quot;Base Channel\u0026quot;\n      missing). (bsc#896238)\n    * Fix cross-site scripting in system-group. (CVE-2014-7812, bsc#912886)\n\nspacewalk-setup:\n\n    * Fix XML RPC API External Entities file disclosure. (CVE-2014-8162,\n      bsc#922525)\n    * No activation if db population should be skipped. (bsc#900956)\n\nsusemanager-schema:\n\n    * Fix evr_t schema upgrade. (bsc#881111)\n\nsusemanager:\n\n    * Add tool to update the spacewalk public cert in the DB.\n    * Fix the test for the mirror credentials. (bsc#864246)\n\nHow to apply this update:\n\n1. Log in as root user to the SUSE Manager server.\n2. Stop the Spacewalk service: spacewalk-service stop\n3. Apply the patch using either zypper patch or YaST Online Update.\n4. Upgrade the database schema with spacewalk-schema-upgrade\n5. Start the Spacewalk service: spacewalk-service start\n\nSecurity Issues:\n\n    * CVE-2014-7811\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7811\u0026gt;\n    * CVE-2014-7812\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7812\u0026gt;\n    * CVE-2014-8162\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8162\u0026gt;\n\n",
+      "Text": "\nThis update for sm-ncc-sync-data contains the following changes:\n\n    * Add SUSE Cloud 4 channels. (bnc#883057)\n    * Fix parent label of the LTSS channel for SLMS.\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,7 +34,7 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "sm-ncc-sync-data-1.7.21-0.5.1",
+        "ProductReference": "sm-ncc-sync-data-1.7.20-0.5.1",
         "RelatesToProductReference": "SUSE Manager 1.7",
         "RelationType": "Default Component Of"
       },
@@ -209,201 +209,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2014-7811",
-      "Description": "Multiple cross-site scripting (XSS) vulnerabilities in Spacewalk and Red Hat Network (RHN) Satellite before 5.7.0 allow remote authenticated users to inject arbitrary web script or HTML via crafted XML data to the REST API.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-7811.html",
-          "Description": "CVE-2014-7811"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/902915",
-          "Description": "SUSE Bug 902915"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/912886",
-          "Description": "SUSE Bug 912886"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/922740",
-          "Description": "SUSE Bug 922740"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/969911",
-          "Description": "SUSE Bug 969911"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Manager 1.7:sm-ncc-sync-data-1.7.21-0.5.1",
-            "SUSE Manager 1.7:smdba-1.5-0.6.2.1",
-            "SUSE Manager 1.7:spacecmd-1.7.7.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-app-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-applet-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-common-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-tool-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-export-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-package-push-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-oracle-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-postgresql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-tools-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xml-export-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xmlrpc-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xp-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-branding-1.7.1.13-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-config-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-lib-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-oracle-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-postgresql-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-setup-1.7.9.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-taskomatic-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:susemanager-1.7.30-0.5.2",
-            "SUSE Manager 1.7:susemanager-schema-1.7.56.24-0.7.1",
-            "SUSE Manager 1.7:susemanager-tools-1.7.30-0.5.2"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {
-        "BaseScore": "4.3",
-        "Vector": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
-      }
-    },
-    {
-      "CVE": "CVE-2014-7812",
-      "Description": "Cross-site scripting (XSS) vulnerability in Spacewalk and Red Hat Network (RHN) Satellite before 5.7.0 allows remote authenticated users to inject arbitrary web script or HTML via the System Groups field.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-7812.html",
-          "Description": "CVE-2014-7812"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/912886",
-          "Description": "SUSE Bug 912886"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Manager 1.7:sm-ncc-sync-data-1.7.21-0.5.1",
-            "SUSE Manager 1.7:smdba-1.5-0.6.2.1",
-            "SUSE Manager 1.7:spacecmd-1.7.7.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-app-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-applet-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-common-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-tool-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-export-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-package-push-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-oracle-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-postgresql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-tools-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xml-export-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xmlrpc-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xp-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-branding-1.7.1.13-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-config-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-lib-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-oracle-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-postgresql-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-setup-1.7.9.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-taskomatic-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:susemanager-1.7.30-0.5.2",
-            "SUSE Manager 1.7:susemanager-schema-1.7.56.24-0.7.1",
-            "SUSE Manager 1.7:susemanager-tools-1.7.30-0.5.2"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-8162",
-      "Description": "XML external entity (XXE) in the RPC interface in Spacewalk and Red Hat Network (RHN) Satellite 5.7 and earlier allows remote attackers to read arbitrary files and possibly have other unspecified impact via unknown vectors.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-8162.html",
-          "Description": "CVE-2014-8162"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/922525",
-          "Description": "SUSE Bug 922525"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Manager 1.7:sm-ncc-sync-data-1.7.21-0.5.1",
-            "SUSE Manager 1.7:smdba-1.5-0.6.2.1",
-            "SUSE Manager 1.7:spacecmd-1.7.7.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-app-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-applet-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-common-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-config-files-tool-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-iss-export-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-package-push-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-server-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-oracle-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-sql-postgresql-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-tools-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xml-export-libs-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xmlrpc-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-backend-xp-1.7.38.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-branding-1.7.1.13-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-config-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-lib-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-oracle-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-java-postgresql-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:spacewalk-setup-1.7.9.12-0.5.1",
-            "SUSE Manager 1.7:spacewalk-taskomatic-1.7.54.34-0.5.1",
-            "SUSE Manager 1.7:susemanager-1.7.30-0.5.2",
-            "SUSE Manager 1.7:susemanager-schema-1.7.56.24-0.7.1",
-            "SUSE Manager 1.7:susemanager-tools-1.7.30-0.5.2"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }

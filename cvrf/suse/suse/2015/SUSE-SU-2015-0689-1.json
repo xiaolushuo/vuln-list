@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for the Apache Web Server",
+  "Title": "Recommended update for apache2",
   "Tracking": {
     "ID": "SUSE-SU-2015:0689-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2014-07-21T16:31:01Z",
-    "CurrentReleaseDate": "2014-07-21T16:31:01Z",
+    "InitialReleaseDate": "2014-09-11T22:20:05Z",
+    "CurrentReleaseDate": "2014-09-11T22:20:05Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2014-07-21T16:31:01Z",
+        "Date": "2014-09-11T22:20:05Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for the Apache Web Server",
+      "Text": "Recommended update for apache2",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nThis update for the Apache Web Server provides the following fixes:\n\n    * Fixed a heap-based buffer overflow on apache module mod_status.\n      (bnc#887765, CVE-2014-0226)\n    * Properly remove whitespace characters from CDATA sections to avoid\n      remote denial of service by crashing the Apache Server process.\n      (bnc#869105, CVE-2013-6438)\n    * Correction to parsing of cookie content; this can lead to a crash\n      with a specially designed cookie sent to the server. (bnc#869106,\n      CVE-2014-0098)\n    * ECC support should not be missing. (bnc#859916)\n\nThis update also introduces a new configuration parameter \nCGIDScriptTimeout, which defaults to the value of parameter Timeout. \nCGIDScriptTimeout is set to 60s if mod_cgid is loaded/active, via \n/etc/apache2/conf.d/cgid-timeout.conf. The new directive and its effect \nprevent request workers to be eaten until starvation if cgi programs do not \nsend output back to the server within the timeout set by CGIDScriptTimeout. \n(bnc#887768, CVE-2014-0231)\n\nSecurity Issues references:\n\n    * CVE-2014-0226\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0226\u0026gt;\n    * CVE-2013-6438\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6438\u0026gt;\n    * CVE-2014-0098\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0098\u0026gt;\n    * CVE-2014-0231\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0231\u0026gt;\n\n",
+      "Text": "\nThis update for the Apache Web Server introduces directives to control two \nprotocol options:\n\n    * HttpContentLengthHeadZero: Allow responses to HEAD request with\n      Content-Length of 0\n    * HttpExpectStrict: Allow the administrator to control whether clients\n      must send '100-continue'\n\nMODULE_MAGIC_NUMBER_MINOR has been increased to 24, as this change is not \nforward-compatible. Modules built against this release might not work \ncorrectly with older releases of the Apache Web Server.\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,187 +34,187 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-devel-2.2.12-1.46.1",
+        "ProductReference": "apache2-devel-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-2.2.12-1.46.1",
+        "ProductReference": "apache2-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-doc-2.2.12-1.46.1",
+        "ProductReference": "apache2-doc-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-example-pages-2.2.12-1.46.1",
+        "ProductReference": "apache2-example-pages-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-prefork-2.2.12-1.46.1",
+        "ProductReference": "apache2-prefork-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-utils-2.2.12-1.46.1",
+        "ProductReference": "apache2-utils-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "apache2-worker-2.2.12-1.46.1",
+        "ProductReference": "apache2-worker-2.2.12-1.50.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       }
@@ -234,278 +234,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2013-6438",
-      "Description": "The dav_xml_get_cdata function in main/util.c in the mod_dav module in the Apache HTTP Server before 2.4.8 does not properly remove whitespace characters from CDATA sections, which allows remote attackers to cause a denial of service (daemon crash) via a crafted DAV WRITE request.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2013-6438.html",
-          "Description": "CVE-2013-6438"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/869105",
-          "Description": "SUSE Bug 869105"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/869106",
-          "Description": "SUSE Bug 869106"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/887765",
-          "Description": "SUSE Bug 887765"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-devel-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-worker-2.2.12-1.46.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-0098",
-      "Description": "The log_cookie function in mod_log_config.c in the mod_log_config module in the Apache HTTP Server before 2.4.8 allows remote attackers to cause a denial of service (segmentation fault and daemon crash) via a crafted cookie that is not properly handled during truncation.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-0098.html",
-          "Description": "CVE-2014-0098"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/869106",
-          "Description": "SUSE Bug 869106"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/887765",
-          "Description": "SUSE Bug 887765"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-devel-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-worker-2.2.12-1.46.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-0226",
-      "Description": "Race condition in the mod_status module in the Apache HTTP Server before 2.4.10 allows remote attackers to cause a denial of service (heap-based buffer overflow), or possibly obtain sensitive credential information or execute arbitrary code, via a crafted request that triggers improper scoreboard handling within the status_handler function in modules/generators/mod_status.c and the lua_ap_scoreboard_worker function in modules/lua/lua_request.c.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-0226.html",
-          "Description": "CVE-2014-0226"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/887765",
-          "Description": "SUSE Bug 887765"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-devel-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-worker-2.2.12-1.46.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    },
-    {
-      "CVE": "CVE-2014-0231",
-      "Description": "The mod_cgid module in the Apache HTTP Server before 2.4.10 does not have a timeout mechanism, which allows remote attackers to cause a denial of service (process hang) via a request to a CGI script that does not read from its stdin file descriptor.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2014-0231.html",
-          "Description": "CVE-2014-0231"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/887768",
-          "Description": "SUSE Bug 887768"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:apache2-worker-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-devel-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-doc-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-example-pages-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-prefork-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-utils-2.2.12-1.46.1",
-            "SUSE Linux Enterprise Software Development Kit 11 SP3:apache2-worker-2.2.12-1.46.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }

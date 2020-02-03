@@ -1,27 +1,27 @@
 {
-  "Title": "Security update for dnsmasq",
+  "Title": "Recommended update for dnsmasq",
   "Tracking": {
     "ID": "SUSE-SU-2015:1015-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-05-01T11:30:15Z",
-    "CurrentReleaseDate": "2015-05-01T11:30:15Z",
+    "InitialReleaseDate": "2014-07-01T23:04:51Z",
+    "CurrentReleaseDate": "2014-07-01T23:04:51Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-05-01T11:30:15Z",
+        "Date": "2014-07-01T23:04:51Z",
         "Description": "current"
       }
     ]
   },
   "Notes": [
     {
-      "Text": "Security update for dnsmasq",
+      "Text": "Recommended update for dnsmasq",
       "Title": "Topic",
       "Type": "Summary"
     },
     {
-      "Text": "\nThe DNS server dnsmasq was updated to fix one security issue and one \nnon-security bug:\n\n    * CVE-2015-3294: A remote unauthenticated attacker could have caused a\n      denial of service (DoS) or read memory from the heap, potentially\n      disclosing information such as performed DNS queries or encryption\n      keys. (bsc#928867)\n    * bsc#923144: When answer to an upstream query is a CNAME pointing to\n      an A/AAAA record which is present locally (/etc/hosts), allow caching\n      when the upstream and local A/AAAA records have the same value.\n\nSecurity Issues:\n\n    * CVE-2015-3294\n      \u0026lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3294\u0026gt;\n\n",
+      "Text": "\nThis update provides dnsmasq version 2.71, which brings several fixes and \nenhancements. For a comprehensive list of changes, please refer to the \npackage change log. (FATE#317370)\n\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -34,32 +34,32 @@
   "ProductTree": {
     "Relationships": [
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Desktop 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA",
         "RelationType": "Default Component Of"
       },
       {
-        "ProductReference": "dnsmasq-2.71-0.12.13.1",
+        "ProductReference": "dnsmasq-2.71-0.11.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for VMWare 11 SP3",
         "RelationType": "Default Component Of"
       }
@@ -79,44 +79,5 @@
       "Description": "SUSE Security Ratings"
     }
   ],
-  "Vulnerabilities": [
-    {
-      "CVE": "CVE-2015-3294",
-      "Description": "The tcp_request function in Dnsmasq before 2.73rc4 does not properly handle the return value of the setup_reply function, which allows remote attackers to read process memory and cause a denial of service (out-of-bounds read and crash) via a malformed DNS request.",
-      "Threats": [
-        {
-          "Type": "Impact",
-          "Severity": "moderate"
-        }
-      ],
-      "References": [
-        {
-          "URL": "https://www.suse.com/security/cve/CVE-2015-3294.html",
-          "Description": "CVE-2015-3294"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/923144",
-          "Description": "SUSE Bug 923144"
-        },
-        {
-          "URL": "https://bugzilla.suse.com/928867",
-          "Description": "SUSE Bug 928867"
-        }
-      ],
-      "ProductStatuses": [
-        {
-          "Type": "Fixed",
-          "ProductID": [
-            "SUSE Linux Enterprise Desktop 11 SP3:dnsmasq-2.71-0.12.13.1",
-            "SUSE Linux Enterprise Server 11 SP3-TERADATA:dnsmasq-2.71-0.12.13.1",
-            "SUSE Linux Enterprise Server 11 SP3:dnsmasq-2.71-0.12.13.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3-TERADATA:dnsmasq-2.71-0.12.13.1",
-            "SUSE Linux Enterprise Server for SAP Applications 11 SP3:dnsmasq-2.71-0.12.13.1",
-            "SUSE Linux Enterprise Server for VMWare 11 SP3:dnsmasq-2.71-0.12.13.1"
-          ]
-        }
-      ],
-      "CVSSScoreSets": {}
-    }
-  ]
+  "Vulnerabilities": null
 }
