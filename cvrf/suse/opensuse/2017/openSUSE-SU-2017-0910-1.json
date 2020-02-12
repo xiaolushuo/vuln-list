@@ -21,7 +21,7 @@
       "Type": "Summary"
     },
     {
-      "Text": "\nThis ceph version update to 10.2.6+git fixes the following issues:\n\nSecurity issues fixed:\n- CVE-2016-9579: RGW server DoS via request with invalid HTTP Origin header (boo#1014986).\n\nBugfixes:\n- Update to version 10.2.6+git.1489493035.3ad7a68\n- \u0026quot;tools/rados: default to include clone objects when excuting \u0026quot;cache-flush-evict-all\u0026quot; (boo#1003891)\n- mon,ceph-disk: add lockbox permissions to bootstrap-osd (boo#1008435)\n- \u0026quot;ceph_volume_client: fix _recover_auth_meta() method\u0026quot; (boo#1008501)\n- \u0026quot;systemd/ceph-disk: reduce ceph-disk flock contention\u0026quot; (boo#1012100)\n- \u0026quot;doc: add verbiage to rbdmap manpage\u0026quot; and \u0026quot;Add Install section to systemd rbdmap.service file\u0026quot; (boo#1015748)\n- ceph-disk: systemd unit must run after local-fs.target (boo#1012100)\n- build/ops: restart ceph-osd@.service after 20s instead of 100ms (boo#1019616)\n- doc: add verbiage to rbdmap manpage and mention rbdmap in RBD quick start (boo#1015748)\n- doc: ceph-deploy man: remove references to mds destroy. Not implemented (boo#970642)\n\nFeature enhancements:\n- FATE#321098:\n  * rpm: deobfuscate SUSE-specific bconds\n  * rpm: consider xio bcond on x86_64 and aarch64 only\n  * rpm: remove s390 from SES ExclusiveArch\n  * rpm: limit lttng/babeltrace to architectures\n  * rpm: limit xio build\n  * rpm: enable build for s390(x) in SLE\n  * rpm: add \u0026quot;without valgrind_devel\u0026quot; configure option\n",
+      "Text": "\nThis ceph version update to 10.2.6+git fixes the following issues:\n\nSecurity issues fixed:\n- CVE-2016-9579: RGW server DoS via request with invalid HTTP Origin header (boo#1014986).\n\nBugfixes:\n- Update to version 10.2.6+git.1489493035.3ad7a68\n- 'tools/rados: default to include clone objects when excuting 'cache-flush-evict-all' (boo#1003891)\n- mon,ceph-disk: add lockbox permissions to bootstrap-osd (boo#1008435)\n- 'ceph_volume_client: fix _recover_auth_meta() method' (boo#1008501)\n- 'systemd/ceph-disk: reduce ceph-disk flock contention' (boo#1012100)\n- 'doc: add verbiage to rbdmap manpage' and 'Add Install section to systemd rbdmap.service file' (boo#1015748)\n- ceph-disk: systemd unit must run after local-fs.target (boo#1012100)\n- build/ops: restart ceph-osd@.service after 20s instead of 100ms (boo#1019616)\n- doc: add verbiage to rbdmap manpage and mention rbdmap in RBD quick start (boo#1015748)\n- doc: ceph-deploy man: remove references to mds destroy. Not implemented (boo#970642)\n\nFeature enhancements:\n- FATE#321098:\n  * rpm: deobfuscate SUSE-specific bconds\n  * rpm: consider xio bcond on x86_64 and aarch64 only\n  * rpm: remove s390 from SES ExclusiveArch\n  * rpm: limit lttng/babeltrace to architectures\n  * rpm: limit xio build\n  * rpm: enable build for s390(x) in SLE\n  * rpm: add 'without valgrind_devel' configure option\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -187,7 +187,7 @@
       "Threats": [
         {
           "Type": "Impact",
-          "Severity": "moderate"
+          "Severity": "low"
         }
       ],
       "References": [

@@ -21,7 +21,7 @@
       "Type": "Summary"
     },
     {
-      "Text": "This update for unrar to version 5.5 fixes the following issues:\n\nVersion 5.5.5\n\n* CVE-2012-6706: fixes VMSF_DELTA memory corruption (boo#1045315)\n  see https://bugs.chromium.org/p/project-zero/issues/detail?id=1286\u0026amp;can=1\u0026amp;q=unrar\u0026amp;desc=2\n\nVersion 5.5.1\n\n* Based on RAR 5.50 beta1\n* Added extraction support for .LZ archives created by Lzip\n  compressor.\n* Modern TAR tools can store high precision file times, lengthy\n  file names and large file sizes in special PAX extended headers\n  inside of TAR archive. Now WinRAR supports such PAX headers\n  and uses them when extracting TAR archives.\n* unrar no longer fails to unpack files in ZIP archives compressed\n  with XZ algorithm and encrypted with AES\n\nVersion 5.4.5.\n\n* Based on final RAR 5.40.\n* If RAR recovery volumes (.rev files) are present in the same\n  folder as usual RAR volumes, archive test command verifies .rev\n  contents after completing testing .rar files.\n  If you wish to test only .rev files without checking .rar\n  volumes, you can run: `unrar t arcname.part1.rev`.\n* If -p switch is used without optional \u0026lt;pwd\u0026gt; parameter, a\n  password can be also set with file redirection or pipe.\n* unrar treats 'arcname.partN' as 'arcname.partN.rar' if\n  'arcname.partN' does not exist and 'arcname.part#.rar' exists.\n  For example, it is allowed to run:\n  `unrar x arcname.part01` to start extraction from\n  'arcname.part01.rar'.\n",
+      "Text": "This update for unrar to version 5.5 fixes the following issues:\n\nVersion 5.5.5\n\n* CVE-2012-6706: fixes VMSF_DELTA memory corruption (boo#1045315)\n  see https://bugs.chromium.org/p/project-zero/issues/detail?id=1286\u0026can=1\u0026q=unrar\u0026desc=2\n\nVersion 5.5.1\n\n* Based on RAR 5.50 beta1\n* Added extraction support for .LZ archives created by Lzip\n  compressor.\n* Modern TAR tools can store high precision file times, lengthy\n  file names and large file sizes in special PAX extended headers\n  inside of TAR archive. Now WinRAR supports such PAX headers\n  and uses them when extracting TAR archives.\n* unrar no longer fails to unpack files in ZIP archives compressed\n  with XZ algorithm and encrypted with AES\n\nVersion 5.4.5.\n\n* Based on final RAR 5.40.\n* If RAR recovery volumes (.rev files) are present in the same\n  folder as usual RAR volumes, archive test command verifies .rev\n  contents after completing testing .rar files.\n  If you wish to test only .rev files without checking .rar\n  volumes, you can run: `unrar t arcname.part1.rev`.\n* If -p switch is used without optional \u003cpwd\u003e parameter, a\n  password can be also set with file redirection or pipe.\n* unrar treats 'arcname.partN' as 'arcname.partN.rar' if\n  'arcname.partN' does not exist and 'arcname.part#.rar' exists.\n  For example, it is allowed to run:\n  `unrar x arcname.part01` to start extraction from\n  'arcname.part01.rar'.\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -67,7 +67,7 @@
       "Threats": [
         {
           "Type": "Impact",
-          "Severity": "important"
+          "Severity": "critical"
         }
       ],
       "References": [
