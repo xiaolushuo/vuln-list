@@ -1,0 +1,49 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-19T16:39:53Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.cxf:apache-cxf"
+  },
+  "Advisory": {
+    "DatabaseId": 887,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWpjN3ItdjZmZy0yZ3Bm",
+    "GhsaId": "GHSA-jc7r-v6fg-2gpf",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-8039"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-jc7r-v6fg-2gpf"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-8039"
+      }
+    ],
+    "Description": "It is possible to configure Apache CXF to use the com.sun.net.ssl implementation via 'System.setProperty(\"java.protocol.handler.pkgs\", \"com.sun.net.ssl.internal.www.protocol\");'. When this system property is set, CXF uses some reflection to try to make the HostnameVerifier work with the old com.sun.net.ssl.HostnameVerifier interface. However, the default HostnameVerifier implementation in CXF does not implement the method in this interface, and an exception is thrown. However, in Apache CXF prior to 3.2.5 and 3.1.16 the exception is caught in the reflection code and not properly propagated. What this means is that if you are using the com.sun.net.ssl stack with CXF, an error with TLS hostname verification will not be thrown, leaving a CXF client subject to man-in-the-middle attacks.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-19T16:40:01Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects org.apache.cxf:cxf, org.apache.cxf:apache-cxf , and org.apache.cxf:apache-cxf",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.1.16"
+      },
+      "VulnerableVersionRange": "\u003c 3.1.16"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.2.5"
+      },
+      "VulnerableVersionRange": "\u003e= 3.2.0, \u003c 3.2.5"
+    }
+  ]
+}

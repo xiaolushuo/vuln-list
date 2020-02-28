@@ -1,0 +1,43 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-03-07T18:47:36Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.jmeter:ApacheJMeter"
+  },
+  "Advisory": {
+    "DatabaseId": 1282,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXdnMzctN21ydi1jZndt",
+    "GhsaId": "GHSA-wg37-7mrv-cfwm",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0187"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-wg37-7mrv-cfwm"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-0187"
+      }
+    ],
+    "Description": "Unauthenticated RCE is possible when JMeter is used in distributed mode (-r or -R command line options). Attacker can establish a RMI connection to a jmeter-server using RemoteJMeterEngine and proceed with an attack using untrusted data deserialization. This only affect tests running in Distributed mode. Note that versions before 4.0 are not able to encrypt traffic between the nodes, nor authenticate the participating nodes so upgrade to JMeter 5.1 is also advised.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-03-07T18:47:57Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects org.apache.jmeter:ApacheJMeter",
+    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "5.1"
+      },
+      "VulnerableVersionRange": "\u003c 5.1"
+    }
+  ]
+}

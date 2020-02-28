@@ -1,0 +1,43 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-08-27T17:17:14Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.santuario:xmlsec"
+  },
+  "Advisory": {
+    "DatabaseId": 1656,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTRxOTgtd3I3Mi1oMzV3",
+    "GhsaId": "GHSA-4q98-wr72-h35w",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12400"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-4q98-wr72-h35w"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-12400"
+      }
+    ],
+    "Description": "In version 2.0.3 Apache Santuario XML Security for Java, a caching mechanism was introduced to speed up creating new XML documents using a static pool of DocumentBuilders. However, if some untrusted code can register a malicious implementation with the thread context class loader first, then this implementation might be cached and re-used by Apache Santuario - XML Security for Java, leading to potential security flaws when validating signed documents, etc. The vulnerability affects Apache Santuario - XML Security for Java 2.0.x releases from 2.0.3 and all 2.1.x releases before 2.1.4.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-08-27T17:41:33Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects org.apache.santuario:xmlsec",
+    "UpdatedAt": "2019-09-25T12:20:57Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.1.4"
+      },
+      "VulnerableVersionRange": "\u003e= 2.0.3, \u003c 2.1.4"
+    }
+  ]
+}

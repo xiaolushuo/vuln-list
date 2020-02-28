@@ -1,0 +1,39 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-10-07T16:51:55Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "iodine"
+  },
+  "Advisory": {
+    "DatabaseId": 1726,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTg1cmYteGg1NC13aHAz",
+    "GhsaId": "GHSA-85rf-xh54-whp3",
+    "References": [
+      {
+        "Url": "https://github.com/boazsegev/iodine/security/advisories/GHSA-85rf-xh54-whp3"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-85rf-xh54-whp3"
+      }
+    ],
+    "Description": "## Malicious URL drafting attack against iodines static file server may allow path traversal\r\n\r\n### Impact\r\n\r\nA path traversal vulnerability was detected in iodine's static file service. This vulnerability effects any application running iodine's static file server on an effected iodine version.\r\n\r\nMalicious URL drafting may cause the static file server to attempt a response containing data from files that shouldn't be normally accessible from the public folder.\r\n\r\n### Patches\r\n\r\nThe vulnerability was patched in version 0.7.34. Please upgrade to the latest version.\r\n\r\n### Workarounds\r\n\r\nA possible workaround would be to disable the static file service and it's `X-Sendfile` support, sending static files using a secure or nginx.\r\n\r\nHowever, it would be better to upgrade iodine to the latest version, as it also contains non-security related fixes.\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Email [Boaz Segev](https://github.com/boazsegev)\r\n\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-10-07T16:52:13Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects iodine",
+    "UpdatedAt": "2019-10-07T16:52:13Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.7.34"
+      },
+      "VulnerableVersionRange": "\u003c 0.7.34"
+    }
+  ]
+}

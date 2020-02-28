@@ -1,0 +1,49 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-18T17:42:39Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "com.fasterxml.jackson.core:jackson-databind"
+  },
+  "Advisory": {
+    "DatabaseId": 865,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXJmeDYtdnA5Zy1yaDd2",
+    "GhsaId": "GHSA-rfx6-vp9g-rh7v",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2017-17485"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-rfx6-vp9g-rh7v"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2017-17485"
+      }
+    ],
+    "Description": "FasterXML jackson-databind through 2.8.10 and 2.9.x through 2.9.3 allows unauthenticated remote code execution because of an incomplete fix for the CVE-2017-7525 deserialization flaw. This is exploitable by sending maliciously crafted JSON input to the readValue method of the ObjectMapper, bypassing a blacklist that is ineffective if the Spring libraries are available in the classpath.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-18T17:42:48Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects com.fasterxml.jackson.core:jackson-databind",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.8.11"
+      },
+      "VulnerableVersionRange": "\u003c 2.8.11"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.9.4"
+      },
+      "VulnerableVersionRange": "\u003e= 2.9.0, \u003c 2.9.4"
+    }
+  ]
+}

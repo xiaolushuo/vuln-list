@@ -1,0 +1,46 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-12-06T23:20:14Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "serialize-to-js"
+  },
+  "Advisory": {
+    "DatabaseId": 1835,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTNmanEtOTN4ai0zZjNm",
+    "GhsaId": "GHSA-3fjq-93xj-3f3f",
+    "References": [
+      {
+        "Url": "https://github.com/commenthol/serialize-to-js/security/advisories/GHSA-3fjq-93xj-3f3f"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16772"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-3fjq-93xj-3f3f"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16772"
+      }
+    ],
+    "Description": "## regular expressions Cross-Site Scripting (XSS) vulnerability \r\n\r\n## Impact\r\n\r\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS). It does not properly mitigate against unsafe characters in serialized regular expressions.\r\n\r\nThis vulnerability is not affected on Node.js environment since Node.js's implementation of RegExp.prototype.toString() backslash-escapes all forward slashes in regular expressions.\r\n\r\nIf serialized data of regular expression objects are used in an environment other than Node.js, it is affected by this vulnerability.\r\n\r\n## Patches\r\n\r\nThis was patched in v3.0.1.\r\n\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-12-06T23:20:26Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects serialize-to-js",
+    "UpdatedAt": "2019-12-06T23:21:07Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.0.1"
+      },
+      "VulnerableVersionRange": "\u003c 3.0.1"
+    }
+  ]
+}

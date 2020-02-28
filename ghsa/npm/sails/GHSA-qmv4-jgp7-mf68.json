@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-02-18T23:37:57Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "sails"
+  },
+  "Advisory": {
+    "DatabaseId": 1167,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXFtdjQtamdwNy1tZjY4",
+    "GhsaId": "GHSA-qmv4-jgp7-mf68",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10549"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-qmv4-jgp7-mf68"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-10549"
+      }
+    ],
+    "Description": "Sails is an MVC style framework for building realtime web applications. Version 0.12.7 and lower have an issue with the CORS configuration where the value of the origin header is reflected as the value for the Access-Control-Allow-Origin header. This would allow an attacker to make AJAX requests to vulnerable hosts through cross site scripting or a malicious HTML Document, effectively bypassing the Same Origin Policy. Note that this is only an issue when `allRoutes` is set to `true` and `origin` is set to `*` or left commented out in the sails CORS config file. The problem can be compounded when the cors `credentials` setting is not provided. At that point authenticated cross domain requests are possible.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-02-18T23:40:10Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects sails",
+    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.12.7"
+      },
+      "VulnerableVersionRange": "\u003c 0.12.7"
+    }
+  ]
+}

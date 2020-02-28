@@ -1,0 +1,55 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-02-25T16:19:12Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.tomcat.embed:tomcat-embed-core"
+  },
+  "Advisory": {
+    "DatabaseId": 1958,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTc2N2otamZoMi1qdnJj",
+    "GhsaId": "GHSA-767j-jfh2-jvrc",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-17569"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-767j-jfh2-jvrc"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-17569"
+      }
+    ],
+    "Description": "The refactoring present in Apache Tomcat 9.0.28 to 9.0.30, 8.5.48 to 8.5.50 and 7.0.98 to 7.0.99 introduced a regression. The result of the regression was that invalid Transfer-Encoding headers were incorrectly processed leading to a possibility of HTTP Request Smuggling if Tomcat was located behind a reverse proxy that incorrectly handled the invalid Transfer-Encoding header in a particular manner. Such a reverse proxy is considered unlikely.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-02-28T01:10:58Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects org.apache.tomcat.embed:tomcat-embed-core and org.apache.tomcat:tomcat",
+    "UpdatedAt": "2020-02-28T01:10:58Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.0.31"
+      },
+      "VulnerableVersionRange": "\u003e= 9.0.28, \u003c 9.0.31"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.5.51"
+      },
+      "VulnerableVersionRange": "\u003e= 8.5.48, \u003c 8.5.51"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "7.0.100"
+      },
+      "VulnerableVersionRange": "\u003e= 7.0.98, \u003c 7.0.100"
+    }
+  ]
+}

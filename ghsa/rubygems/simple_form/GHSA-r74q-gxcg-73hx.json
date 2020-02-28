@@ -1,0 +1,46 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-09-30T19:41:01Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "simple_form"
+  },
+  "Advisory": {
+    "DatabaseId": 1719,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXI3NHEtZ3hjZy03M2h4",
+    "GhsaId": "GHSA-r74q-gxcg-73hx",
+    "References": [
+      {
+        "Url": "https://github.com/plataformatec/simple_form/security/advisories/GHSA-r74q-gxcg-73hx"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16676"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-r74q-gxcg-73hx"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16676"
+      }
+    ],
+    "Description": "## Incorrect Access Control in `file_method?` in `lib/simple_form/form_builder.rb`; a user-supplied string is invoked as a method call\r\n\r\n### Impact\r\nFor pages that build a form using user input, it is possible for an attacker to manipulate the input and send any method present in the form object. For example:\r\n\r\n```erb\r\n\u003c%= simple_form_for @user do |f| %\u003e\r\n  \u003c%= f.label @user_supplied_string %\u003e\r\n  ...\r\n\u003c% end %\u003e\r\n```\r\n\r\nThe string provided in the variable `@user_supplied_string` would be invoked as a method call inside the `@user` object (unless the string contains any of the following: `password`, `time_zone`, `country`, `email`, `phone` and `url`).\r\n\r\nBy manipulation that input, an attacker could do any of the following:\r\n\r\n- Code execution (call actions like `#destroy`)\r\n- Denial of Service (by executing a computation intensive method)\r\n- Information Disclosure (check the presence of methods, leak user information)\r\n\r\n### Patches\r\nThe problem was fixed in version `5.0`. Although it's a major version, there should be no issues with upgrading for `4.x`. The reason it was released in a major version is that the configuration `SimpleForm.file_methods` was deprecated in order to fix the problem.\r\n\r\n### Workarounds\r\nThe issue only happens with pages that build forms based on user-provided input. If your application doesn't do that, you're not affected.\r\nA workaround is to explicitly pass which type you want for an input since the issue lies on Simple Form's automatically discovery of input types. This can be done using the `as` option, like the following:\r\n```erb\r\n\u003c%= form.input :avatar, as: :file %\u003e\r\n```\r\n\r\n### References\r\n[TDB]\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [https://github.com/plataformatec/simple_form](https://github.com/plataformatec/simple_form)\r\n* Email us at [opensource@plataformatec.com.br](mailto:opensource@plataformatec.com.br)\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-09-30T19:41:15Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects simple_form",
+    "UpdatedAt": "2019-09-30T19:41:15Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "5.0.0"
+      },
+      "VulnerableVersionRange": "\u003c 5.0.0"
+    }
+  ]
+}

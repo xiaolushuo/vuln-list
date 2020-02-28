@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-30T20:35:52Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "parcel-bundler"
+  },
+  "Advisory": {
+    "DatabaseId": 931,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTM3cTYtNTc2cS12Z3I3",
+    "GhsaId": "GHSA-37q6-576q-vgr7",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-14731"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-37q6-576q-vgr7"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-14731"
+      }
+    ],
+    "Description": "An issue was discovered in HMRServer.js in Parcel parcel-bundler. Attackers are able to steal developer's code because the origin of requests is not checked by the WebSocket server, which is used for HMR (Hot Module Replacement). Anyone can receive the HMR message sent by the WebSocket server via a ws://127.0.0.1 connection (with a random TCP port number) from any origin. The random port number can be found by connecting to http://127.0.0.1 and reading the \"new WebSocket\" line in the source code.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-30T20:36:53Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects parcel-bundler",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.10.0"
+      },
+      "VulnerableVersionRange": "\u003c 1.10.0"
+    }
+  ]
+}

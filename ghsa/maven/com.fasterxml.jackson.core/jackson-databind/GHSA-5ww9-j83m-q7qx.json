@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-05-22T04:34:57Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "com.fasterxml.jackson.core:jackson-databind"
+  },
+  "Advisory": {
+    "DatabaseId": 1402,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTV3dzktajgzbS1xN3F4",
+    "GhsaId": "GHSA-5ww9-j83m-q7qx",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12086"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-5ww9-j83m-q7qx"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-12086"
+      }
+    ],
+    "Description": "A Polymorphic Typing issue was discovered in FasterXML jackson-databind 2.x before 2.9.9. When Default Typing is enabled (either globally or for a specific property) for an externally exposed JSON endpoint, the service has the mysql-connector-java jar (8.0.14 or earlier) in the classpath, and an attacker can host a crafted MySQL server reachable by the victim, an attacker can send a crafted JSON message that allows them to read arbitrary local files on the server. This occurs because of missing com.mysql.cj.jdbc.admin.MiniAdmin validation.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-05-23T09:32:24Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects com.fasterxml.jackson.core:jackson-databind",
+    "UpdatedAt": "2019-08-23T21:55:16Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.9.9"
+      },
+      "VulnerableVersionRange": "\u003e= 2.0.0, \u003c 2.9.9"
+    }
+  ]
+}

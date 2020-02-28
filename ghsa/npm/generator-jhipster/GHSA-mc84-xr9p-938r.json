@@ -1,0 +1,39 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-09-23T18:29:33Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "generator-jhipster"
+  },
+  "Advisory": {
+    "DatabaseId": 1694,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLW1jODQteHI5cC05Mzhy",
+    "GhsaId": "GHSA-mc84-xr9p-938r",
+    "References": [
+      {
+        "Url": "https://github.com/jhipster/generator-jhipster/security/advisories/GHSA-mc84-xr9p-938r"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-mc84-xr9p-938r"
+      }
+    ],
+    "Description": "## Generated code uses repository configuration that downloads over HTTP instead of HTTPS\n\n### Impact\r\nGradle users were using the http://repo.spring.io/plugins-release repositories in plain HTTP, and not HTTPS, so a man-in-the-middle attack was possible at build time.\r\n\r\n### Patches\r\n\r\nMaven users should at least upgrade to 6.3.0 while Gradle users should update to 6.3.1.\r\nIf you are not able to upgrade make sure not to use a Maven repository via `http` in your build file.\r\n\r\n### Workarounds\r\n\r\nReplace all custom repository definitions in `build.gradle` or `pom.xml` with their `https` version.\r\n\r\ne.g.\r\n\r\n```xml\r\n \u003crepository\u003e\r\n            \u003cid\u003eoss.sonatype.org-snapshot\u003c/id\u003e\r\n            \u003curl\u003ehttps://oss.sonatype.org/content/repositories/snapshots\u003c/url\u003e // \u003c-- must be httpS\r\n            \u003creleases\u003e\r\n                \u003cenabled\u003efalse\u003c/enabled\u003e\r\n            \u003c/releases\u003e\r\n            \u003csnapshots\u003e\r\n                \u003cenabled\u003etrue\u003c/enabled\u003e\r\n            \u003c/snapshots\u003e\r\n\u003c/repository\u003e\r\n```\r\n\r\n```gradle\r\nmaven { url \"https://repo.spring.io/plugins-release\" } // \u003c-- must be httpS\r\n```\r\n\r\n### References\r\n* https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H\r\n* https://max.computer/blog/how-to-take-over-the-computer-of-any-java-or-clojure-or-scala-developer/\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [https://github.com/jhipster/generator-jhipster/issues](https://github.com/jhipster/generator-jhipster/issues)\r\n\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-09-23T18:31:05Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects generator-jhipster",
+    "UpdatedAt": "2019-09-23T18:31:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "6.3.1"
+      },
+      "VulnerableVersionRange": "\u003c 6.3.1"
+    }
+  ]
+}

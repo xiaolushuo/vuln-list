@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-08-08T15:16:28Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.spark:spark-core_2.11"
+  },
+  "Advisory": {
+    "DatabaseId": 1628,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWZwNWotM2ZwZi1taGo1",
+    "GhsaId": "GHSA-fp5j-3fpf-mhj5",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10099"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-fp5j-3fpf-mhj5"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-10099"
+      }
+    ],
+    "Description": "Prior to Spark 2.3.3, in certain situations Spark would write user data to local disk unencrypted, even if spark.io.encryption.enabled=true. This includes cached blocks that are fetched to disk (controlled by spark.maxRemoteBlockSizeFetchToMem); in SparkR, using parallelize; in Pyspark, using broadcast and parallelize; and use of python udfs.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-08-08T15:18:22Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects org.apache.spark:spark-core_2.11",
+    "UpdatedAt": "2019-08-08T15:18:22Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.3.3"
+      },
+      "VulnerableVersionRange": "\u003c 2.3.3"
+    }
+  ]
+}

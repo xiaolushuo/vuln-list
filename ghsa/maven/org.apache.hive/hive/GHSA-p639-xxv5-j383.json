@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-11-21T22:24:01Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.hive:hive"
+  },
+  "Advisory": {
+    "DatabaseId": 1002,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXA2MzkteHh2NS1qMzgz",
+    "GhsaId": "GHSA-p639-xxv5-j383",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1315"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-p639-xxv5-j383"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-1315"
+      }
+    ],
+    "Description": "In Apache Hive 2.1.0 to 2.3.2, when 'COPY FROM FTP' statement is run using HPL/SQL extension to Hive, a compromised/malicious FTP server can cause the file to be written to an arbitrary location on the cluster where the command is run from. This is because FTP client code in HPL/SQL does not verify the destination location of the downloaded file. This does not affect hive cli user and hiveserver2 user as hplsql is a separate command line script and needs to be invoked differently.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-11-21T22:24:08Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.hive:hive, org.apache.hive:hive-exec, and org.apache.hive:hive-service",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.3.3"
+      },
+      "VulnerableVersionRange": "\u003e= 2.1.0, \u003c 2.3.3"
+    }
+  ]
+}

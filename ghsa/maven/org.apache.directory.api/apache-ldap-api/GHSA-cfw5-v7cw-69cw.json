@@ -1,0 +1,43 @@
+{
+  "Severity": "CRITICAL",
+  "UpdatedAt": "2018-10-19T16:42:35Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.directory.api:apache-ldap-api"
+  },
+  "Advisory": {
+    "DatabaseId": 894,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWNmdzUtdjdjdy02OWN3",
+    "GhsaId": "GHSA-cfw5-v7cw-69cw",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1337"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-cfw5-v7cw-69cw"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-1337"
+      }
+    ],
+    "Description": "In Apache LDAP API before 1.0.2, a bug in the way the SSL Filter was setup made it possible for another thread to use the connection before the TLS layer has been established, if the connection has already been used and put back in a pool of connections, leading to leaking any information contained in this request (including the credentials when sending a BIND request).",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-11-09T17:49:49Z",
+    "Severity": "CRITICAL",
+    "Summary": "Critical severity vulnerability that affects org.apache.directory.api:apache-ldap-api",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.0.2"
+      },
+      "VulnerableVersionRange": "\u003c 1.0.2"
+    }
+  ]
+}

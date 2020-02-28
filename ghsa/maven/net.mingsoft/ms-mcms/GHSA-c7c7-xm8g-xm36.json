@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-11-01T14:47:26Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "net.mingsoft:ms-mcms"
+  },
+  "Advisory": {
+    "DatabaseId": 938,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWM3YzcteG04Zy14bTM2",
+    "GhsaId": "GHSA-c7c7-xm8g-xm36",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18830"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-c7c7-xm8g-xm36"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-18830"
+      }
+    ],
+    "Description": "An issue was discovered in com\\mingsoft\\basic\\action\\web\\FileAction.java in MCMS 4.6.5. Since the upload interface does not verify the user login status, you can use this interface to upload files without setting a cookie. First, start an upload of JSP code with a .png filename, and then intercept the data packet. In the name parameter, change the suffix to jsp. In the response, the server returns the storage path of the file, which can be accessed to execute arbitrary JSP code.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-11-01T14:48:29Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects net.mingsoft:ms-mcms",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": ""
+      },
+      "VulnerableVersionRange": "\u003c= 4.6.5"
+    }
+  ]
+}

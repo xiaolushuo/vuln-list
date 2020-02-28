@@ -1,0 +1,49 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-05-29T18:53:57Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.zookeeper:zookeeper"
+  },
+  "Advisory": {
+    "DatabaseId": 1413,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTJodzItNjJjcC1wOXA3",
+    "GhsaId": "GHSA-2hw2-62cp-p9p7",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0201"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-2hw2-62cp-p9p7"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-0201"
+      }
+    ],
+    "Description": "An issue is present in Apache ZooKeeper 1.0.0 to 3.4.13 and 3.5.0-alpha to 3.5.4-beta. ZooKeeper?s getACL() command doesn?t check any permission when retrieves the ACLs of the requested node and returns all information contained in the ACL Id field as plaintext string. DigestAuthenticationProvider overloads the Id field with the hash value that is used for user authentication. As a consequence, if Digest Authentication is in use, the unsalted hash value will be disclosed by getACL() request for unauthenticated or unprivileged users.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-05-29T18:54:11Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.zookeeper:zookeeper",
+    "UpdatedAt": "2019-12-20T02:06:14Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.5.5"
+      },
+      "VulnerableVersionRange": "\u003e= 3.5.0, \u003c 3.5.5"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.4.14"
+      },
+      "VulnerableVersionRange": "\u003e= 1.0.0, \u003c 3.4.14"
+    }
+  ]
+}

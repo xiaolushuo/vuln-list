@@ -1,0 +1,39 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-09-13T13:22:11Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "smartbanner.js"
+  },
+  "Advisory": {
+    "DatabaseId": 1676,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTltcnEtY2pnaC0zMmcy",
+    "GhsaId": "GHSA-9mrq-cjgh-32g2",
+    "References": [
+      {
+        "Url": "https://github.com/ain/smartbanner.js/security/advisories/GHSA-9mrq-cjgh-32g2"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-9mrq-cjgh-32g2"
+      }
+    ],
+    "Description": "## rel noopener vulnerability\n\n### Impact\r\nClicking on smartbanner _View_ link and navigating to 3rd party page leaves `window.opener` exposed. It may allow hostile 3rd parties to abuse `window.opener`, e.g. by redirection or injection on the original page with smartbanner.\r\n\r\n### Patches\r\n`rel=\"noopener\"` is automatically populated to links as of `v1.14.1` which is a recommended upgrade to resolve the vulnerability.\r\n\r\n### Workarounds\r\nIf you can not upgrade to `v1.14.1`:\r\n1. Ensure _View_ link is only taking users to App Store or Google Play Store where security is guarded by respective app store security teams\r\n2. If _View_ link is going to a 3rd party page, limit smartbanner.js to be used on iOS that decreases the scope of the vulnerability since as of Safari 12.1,  `rel=\"noopener\"` is imposed on all `target=\"_blank\"` links.\r\n\r\n    Following combination of smartbanner meta tags can be used to achieve the above:\r\n\r\n    ```html\r\n    \u003cmeta name=\"smartbanner:enabled-platforms\" content=\"none\"\u003e\r\n    \u003cmeta name=\"smartbanner:include-user-agent-regex\" content=\"Mobile.*Safari\"\u003e\r\n    ```\r\n\r\n### References\r\n* [About rel=noopener](https://mathiasbynens.github.io/rel-noopener/)\r\n* [Safari 12.1 Release Notes](https://developer.apple.com/documentation/safari_release_notes/safari_12_1_release_notes#3130296)\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [smartbanner.js](https://github.com/ain/smartbanner.js/issues/new)\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-09-13T13:22:33Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects smartbanner.js",
+    "UpdatedAt": "2019-09-13T13:22:33Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.14.1"
+      },
+      "VulnerableVersionRange": "\u003c 1.14.1"
+    }
+  ]
+}

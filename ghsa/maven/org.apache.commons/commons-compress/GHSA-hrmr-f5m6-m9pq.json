@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-10-19T16:41:22Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.commons:commons-compress"
+  },
+  "Advisory": {
+    "DatabaseId": 890,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWhybXItZjVtNi1tOXBx",
+    "GhsaId": "GHSA-hrmr-f5m6-m9pq",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11771"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-hrmr-f5m6-m9pq"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-11771"
+      }
+    ],
+    "Description": "When reading a specially crafted ZIP archive, the read method of Apache Commons Compress 1.7 to 1.17's ZipArchiveInputStream can fail to return the correct EOF indication after the end of the stream has been reached. When combined with a java.io.InputStreamReader this can lead to an infinite stream, which can be used to mount a denial of service attack against services that use Compress' zip package.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-19T16:41:27Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.commons:commons-compress",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.18"
+      },
+      "VulnerableVersionRange": "\u003c 1.18"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-09-23T22:30:41Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.tapestry:tapestry-core"
+  },
+  "Advisory": {
+    "DatabaseId": 1695,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWZnbXItdng3Yy01d2o2",
+    "GhsaId": "GHSA-fgmr-vx7c-5wj6",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-10071"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-fgmr-vx7c-5wj6"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-10071"
+      }
+    ],
+    "Description": "The code which checks HMAC in form submissions used String.equals() for comparisons, which results in a timing side channel for the comparison of the HMAC signatures. This could lead to remote code execution if an attacker is able to determine the correct signature for their payload. The comparison should be done with a constant time algorithm instead.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-09-26T21:30:34Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.tapestry:tapestry-core",
+    "UpdatedAt": "2019-09-26T21:30:34Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "5.4.5"
+      },
+      "VulnerableVersionRange": "\u003e 5.4.0, \u003c 5.4.5"
+    }
+  ]
+}

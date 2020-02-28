@@ -1,0 +1,55 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-10-17T16:31:31Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.tomcat.embed:tomcat-embed-core"
+  },
+  "Advisory": {
+    "DatabaseId": 799,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWp4NmgtM2ZqeC1jZ3Y1",
+    "GhsaId": "GHSA-jx6h-3fjx-cgv5",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1305"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-jx6h-3fjx-cgv5"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-1305"
+      }
+    ],
+    "Description": "Security constraints defined by annotations of Servlets in Apache Tomcat 9.0.0.M1 to 9.0.4, 8.5.0 to 8.5.27, 8.0.0.RC1 to 8.0.49 and 7.0.0 to 7.0.84 were only applied once a Servlet had been loaded. Because security constraints defined in this way apply to the URL pattern and any URLs below that point, it was possible - depending on the order Servlets were loaded - for some security constraints not to be applied. This could have exposed resources to users who were not authorised to access them.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-17T16:31:48Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.tomcat.embed:tomcat-embed-core",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "7.0.85"
+      },
+      "VulnerableVersionRange": "\u003e= 7.0.0, \u003c= 7.0.84"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.5.28"
+      },
+      "VulnerableVersionRange": "\u003e= 8.5.0, \u003c= 8.5.27"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.0.5"
+      },
+      "VulnerableVersionRange": "\u003e= 9.0.0, \u003c= 9.0.4"
+    }
+  ]
+}

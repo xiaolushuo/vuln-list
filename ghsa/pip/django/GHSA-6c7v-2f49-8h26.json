@@ -1,0 +1,55 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-07-03T20:26:14Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "django"
+  },
+  "Advisory": {
+    "DatabaseId": 1562,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTZjN3YtMmY0OS04aDI2",
+    "GhsaId": "GHSA-6c7v-2f49-8h26",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12781"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-6c7v-2f49-8h26"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-12781"
+      }
+    ],
+    "Description": "An issue was discovered in Django 1.11 before 1.11.22, 2.1 before 2.1.10, and 2.2 before 2.2.3. An HTTP request is not redirected to HTTPS when the SECURE_PROXY_SSL_HEADER and SECURE_SSL_REDIRECT settings are used, and the proxy connects to Django via HTTPS. In other words, django.http.HttpRequest.scheme has incorrect behavior when a client uses HTTP.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-07-03T20:37:25Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects django",
+    "UpdatedAt": "2019-07-03T20:37:25Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.2.3"
+      },
+      "VulnerableVersionRange": "\u003e= 2.2.0, \u003c 2.2.3"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.1.10"
+      },
+      "VulnerableVersionRange": "\u003e= 2.1.0, \u003c 2.1.10"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.11.22"
+      },
+      "VulnerableVersionRange": "\u003e= 1.11.0, \u003c 1.11.22"
+    }
+  ]
+}

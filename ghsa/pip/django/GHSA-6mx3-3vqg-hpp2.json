@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-03T20:05:44Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "django"
+  },
+  "Advisory": {
+    "DatabaseId": 660,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTZteDMtM3ZxZy1ocHAy",
+    "GhsaId": "GHSA-6mx3-3vqg-hpp2",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-16984"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-6mx3-3vqg-hpp2"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-16984"
+      }
+    ],
+    "Description": "An issue was discovered in Django 2.1 before 2.1.2, in which unprivileged users can read the password hashes of arbitrary accounts. The read-only password widget used by the Django Admin to display an obfuscated password hash was bypassed if a user has only the \"view\" permission (new in Django 2.1), resulting in display of the entire password hash to those users. This may result in a vulnerability for sites with legacy user accounts using insecure hashes.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-03T20:07:39Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects django",
+    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.1.2"
+      },
+      "VulnerableVersionRange": "\u003e= 2.1, \u003c 2.1.2"
+    }
+  ]
+}

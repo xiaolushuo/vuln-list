@@ -1,0 +1,46 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-12-13T15:37:58Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "npm"
+  },
+  "Advisory": {
+    "DatabaseId": 1838,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLW02Y3gtZzZxbS1wMmN4",
+    "GhsaId": "GHSA-m6cx-g6qm-p2cx",
+    "References": [
+      {
+        "Url": "https://github.com/npm/cli/security/advisories/GHSA-m6cx-g6qm-p2cx"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16775"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-m6cx-g6qm-p2cx"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16775"
+      }
+    ],
+    "Description": "## Unauthorized File Access\r\n\r\nVersions of the npm CLI prior to 6.13.3 are vulnerable to an Arbitrary File Write. It is possible for packages to create symlinks to files outside of the`node_modules` folder through the `bin` field upon installation. A properly constructed entry in the package.json bin field would allow a package publisher to create a symlink pointing to arbitrary files on a user’s system when the package is installed.  \r\n\r\nThis behavior is possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\r\n\r\nThank you Daniel Ruf for responsibly reporting the issue!\r\n\r\nFurther information: [npm blog post](https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli)\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-12-13T15:39:19Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects npm",
+    "UpdatedAt": "2019-12-13T15:40:49Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "\u003c 6.13.3"
+      },
+      "VulnerableVersionRange": "\u003c 6.13.3"
+    }
+  ]
+}

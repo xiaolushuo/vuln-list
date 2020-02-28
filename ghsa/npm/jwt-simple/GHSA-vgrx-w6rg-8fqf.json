@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-11-06T23:13:02Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "jwt-simple"
+  },
+  "Advisory": {
+    "DatabaseId": 946,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXZncngtdzZyZy04ZnFm",
+    "GhsaId": "GHSA-vgrx-w6rg-8fqf",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10555"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-vgrx-w6rg-8fqf"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-10555"
+      }
+    ],
+    "Description": "Since \"algorithm\" isn't enforced in jwt.decode()in jwt-simple 0.3.0 and earlier, a malicious user could choose what algorithm is sent sent to the server. If the server is expecting RSA but is sent HMAC-SHA with RSA's public key, the server will think the public key is actually an HMAC private key. This could be used to forge any data an attacker wants.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-11-06T23:12:07Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects jwt-simple",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.3.1"
+      },
+      "VulnerableVersionRange": "\u003c 0.3.1"
+    }
+  ]
+}

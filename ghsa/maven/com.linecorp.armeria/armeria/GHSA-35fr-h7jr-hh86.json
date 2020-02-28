@@ -1,0 +1,46 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-12-06T18:55:39Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "com.linecorp.armeria:armeria"
+  },
+  "Advisory": {
+    "DatabaseId": 1834,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTM1ZnItaDdqci1oaDg2",
+    "GhsaId": "GHSA-35fr-h7jr-hh86",
+    "References": [
+      {
+        "Url": "https://github.com/line/armeria/security/advisories/GHSA-35fr-h7jr-hh86"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16771"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-35fr-h7jr-hh86"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16771"
+      }
+    ],
+    "Description": "## CWE-113: Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')\r\n\r\nVersions of Armeria 0.85.0 through and including 0.96.0 are vulnerable to HTTP response splitting, which allows remote attackers to inject arbitrary HTTP headers via CRLF sequences when unsanitized data is used to populate the headers of an HTTP response.\r\n\r\n### Impact\r\n\r\n1. Cross-User Defacement\r\n2. Cache Poisoning\r\n3. Cross-Site Scripting (XSS)\r\n4. Page Hijacking\r\n\r\n\r\n### Root Cause\r\n\r\nThe root cause is due to the usage of Netty without the HTTP header validation.\r\n\r\nhttps://github.com/line/armeria/blob/f0d870fde1088114070be31b67f7df0a21e835c6/core/src/main/java/com/linecorp/armeria/common/DefaultHttpHeaders.java#L23\r\n\r\n### Patches\r\n\r\nThis vulnerability has been patched in 0.97.0.\r\n\r\n### References\r\n\r\n[CWE-113: Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')](https://cwe.mitre.org/data/definitions/113.html)\r\nhttps://github.com/ratpack/ratpack/security/advisories/GHSA-mvqp-q37c-wf9j\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [GitHub](https://github.com/line/armeria/issues)\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-12-06T18:55:47Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects com.linecorp.armeria:armeria",
+    "UpdatedAt": "2019-12-06T18:55:47Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.97.0"
+      },
+      "VulnerableVersionRange": "\u003e= 0.85.0, \u003c 0.97.0"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-01-06T18:43:13Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "waitress"
+  },
+  "Advisory": {
+    "DatabaseId": 1861,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTk2OGYtNjZyNS01djc0",
+    "GhsaId": "GHSA-968f-66r5-5v74",
+    "References": [
+      {
+        "Url": "https://github.com/Pylons/waitress/security/advisories/GHSA-968f-66r5-5v74"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16789"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-968f-66r5-5v74"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16789"
+      }
+    ],
+    "Description": "### Impact\n\nThe patches introduced to fix https://github.com/Pylons/waitress/security/advisories/GHSA-m5ff-3wj3-8ph4 were not complete and still would allow an attacker to smuggle requests/split a HTTP request with invalid data.\n\nThis updates the existing CVE with ID: CVE-2019-16789\n\n### Patches\n\nWaitress version 1.4.2 has been updated to now validate HTTP headers better to avoid the issue, completely fixing all known issues with whitespace.\n\n### Workarounds\n\nThere are no work-arounds, upgrading to Waitress 1.4.2 is highly recommended.\n\n### References\n\nSee https://github.com/Pylons/waitress/security/advisories/GHSA-m5ff-3wj3-8ph4 for more information on the security issue.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n* open an issue at https://github.com/Pylons/waitress/issues (if not sensitive or security related)\n* email the Pylons Security mailing list: pylons-project-security@googlegroups.com (if security related)",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-01-06T18:44:21Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects waitress",
+    "UpdatedAt": "2020-02-26T20:34:33Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.4.2"
+      },
+      "VulnerableVersionRange": "\u003c 1.4.2"
+    }
+  ]
+}

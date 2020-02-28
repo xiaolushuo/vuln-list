@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-11-19T03:41:05Z",
+  "Package": {
+    "Ecosystem": "COMPOSER",
+    "Name": "phpoffice/phpspreadsheet"
+  },
+  "Advisory": {
+    "DatabaseId": 1801,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXZ2d3YtaDY5bS13ZzZm",
+    "GhsaId": "GHSA-vvwv-h69m-wg6f",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12331"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-vvwv-h69m-wg6f"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-12331"
+      }
+    ],
+    "Description": "PHPOffice PhpSpreadsheet before 1.8.0 has an XXE issue. The XmlScanner decodes the sheet1.xml from an .xlsx to utf-8 if something else than UTF-8 is declared in the header. This was a security measurement to prevent CVE-2018-19277 but the fix is not sufficient. By double-encoding the the xml payload to utf-7 it is possible to bypass the check for the string ?\u003c!ENTITY? and thus allowing for an xml external entity processing (XXE) attack.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-11-20T01:39:57Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects phpoffice/phpspreadsheet",
+    "UpdatedAt": "2019-11-20T01:39:57Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.8.0"
+      },
+      "VulnerableVersionRange": "\u003c 1.8.0"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2018-11-21T22:15:53Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.spark:spark-core_2.10"
+  },
+  "Advisory": {
+    "DatabaseId": 991,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXBoZzItOWM1Zy1tNHE3",
+    "GhsaId": "GHSA-phg2-9c5g-m4q7",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-17190"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-phg2-9c5g-m4q7"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-17190"
+      }
+    ],
+    "Description": "In all versions of Apache Spark, its standalone resource manager accepts code to execute on a 'master' host, that then runs that code on 'worker' hosts. The master itself does not, by design, execute user code. A specially-crafted request to the master can, however, cause the master to execute code too. Note that this does not affect standalone clusters with authentication enabled. While the master host typically has less outbound access to other resources than a worker, the execution of code on the master is nevertheless unexpected.\r\n\r\n# Mitigation\r\nEnable authentication on any Spark standalone cluster that is not otherwise secured from unwanted access, for example by network-level restrictions. Use spark.authenticate and related security properties described at https://spark.apache.org/docs/latest/security.html",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-11-21T22:19:30Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects org.apache.spark:spark-core_2.11 and org.apache.spark:spark-core_2.10",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": ""
+      },
+      "VulnerableVersionRange": "\u003e= 0"
+    }
+  ]
+}

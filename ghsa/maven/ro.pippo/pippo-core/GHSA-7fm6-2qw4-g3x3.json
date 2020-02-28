@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-24T19:46:58Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "ro.pippo:pippo-core"
+  },
+  "Advisory": {
+    "DatabaseId": 927,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTdmbTYtMnF3NC1nM3gz",
+    "GhsaId": "GHSA-7fm6-2qw4-g3x3",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-18628"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-7fm6-2qw4-g3x3"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-18628"
+      }
+    ],
+    "Description": "An issue was discovered in Pippo 1.11.0. The function SerializationSessionDataTranscoder.decode() calls ObjectInputStream.readObject() to deserialize a SessionData object without checking the object types. An attacker can create a malicious object, base64 encode it, and place it in the PIPPO_SESSION field of a cookie. Sending this cookie may lead to remote code execution.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-24T19:46:20Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects ro.pippo:pippo-core",
+    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": ""
+      },
+      "VulnerableVersionRange": "\u003c= 1.11.0"
+    }
+  ]
+}

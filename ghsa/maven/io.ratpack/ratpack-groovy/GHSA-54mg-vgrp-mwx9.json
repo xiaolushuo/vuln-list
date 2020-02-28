@@ -1,0 +1,43 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-05-14T03:48:10Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "io.ratpack:ratpack-groovy"
+  },
+  "Advisory": {
+    "DatabaseId": 1396,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTU0bWctdmdycC1td3g5",
+    "GhsaId": "GHSA-54mg-vgrp-mwx9",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11808"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-54mg-vgrp-mwx9"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-11808"
+      }
+    ],
+    "Description": "Ratpack versions before 1.6.1 generate a session ID using a cryptographically weak PRNG in the JDK's ThreadLocalRandom. This means that if an attacker can determine a small window for the server start time and obtain a session ID value, they can theoretically determine the sequence of session IDs.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-05-14T04:01:37Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects io.ratpack:ratpack-session, io.ratpack:ratpack-java, and io.ratpack:ratpack-groovy",
+    "UpdatedAt": "2019-10-10T20:52:54Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.6.1"
+      },
+      "VulnerableVersionRange": "\u003c 1.6.1"
+    }
+  ]
+}

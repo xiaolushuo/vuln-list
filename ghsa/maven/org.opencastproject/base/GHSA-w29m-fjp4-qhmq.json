@@ -1,0 +1,52 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-01-30T20:35:37Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.opencastproject:base"
+  },
+  "Advisory": {
+    "DatabaseId": 1898,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXcyOW0tZmpwNC1xaG1x",
+    "GhsaId": "GHSA-w29m-fjp4-qhmq",
+    "References": [
+      {
+        "Url": "https://github.com/opencast/opencast/security/advisories/GHSA-w29m-fjp4-qhmq"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-5230"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-w29m-fjp4-qhmq"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-5230"
+      }
+    ],
+    "Description": "### Impact\n\nOpencast allows almost arbitrary identifiers for media packages and\nelements to be used. This can be problematic for operation and security\nsince such identifiers are sometimes used for file system operations\nwhich may lead to an attacker being able to escape working directories and\nwrite files to other locations.\n\nIn addition, Opencast's Id.toString(…) vs Id.compact(…) behavior,\nthe latter trying to mitigate some of the file system problems, can\ncause errors due to identifier mismatch since an identifier may\nunintentionally change.\n\n### Patches\n\nThis issue is fixed in Opencast 7.6 and 8.1.\n\n### Workarounds\n\nThere is no workaround for this.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\n- Open an issue in [opencast/opencast](https://github.com/opencast/opencast/issues)\n- For security-relevant information, email us at security@opencast.org",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-01-30T21:21:50Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.opencastproject:base",
+    "UpdatedAt": "2020-02-11T01:11:37Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.1"
+      },
+      "VulnerableVersionRange": "\u003e= 8.0, \u003c 8.1"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "7.6"
+      },
+      "VulnerableVersionRange": "\u003c 7.6"
+    }
+  ]
+}

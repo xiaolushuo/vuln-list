@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-16T17:01:03Z",
+  "Package": {
+    "Ecosystem": "NUGET",
+    "Name": "YamlDotNet"
+  },
+  "Advisory": {
+    "DatabaseId": 698,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXJwY2gtY3FqOS1oNjVy",
+    "GhsaId": "GHSA-rpch-cqj9-h65r",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000210"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-rpch-cqj9-h65r"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-1000210"
+      }
+    ],
+    "Description": "YamlDotNet version 4.3.2 and earlier contains a Insecure Direct Object Reference vulnerability in The default behavior of Deserializer.Deserialize() will deserialize user-controlled types in the line \"currentType = Type.GetType(nodeEvent.Tag.Substring(1), throwOnError: false);\" and blindly instantiates them. that can result in Code execution in the context of the running process. This attack appear to be exploitable via Victim must parse a specially-crafted YAML file. This vulnerability appears to have been fixed in 5.0.0.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-16T17:01:10Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects YamlDotNet and YamlDotNet.Signed",
+    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "5.0.0"
+      },
+      "VulnerableVersionRange": "\u003c= 4.3.2"
+    }
+  ]
+}

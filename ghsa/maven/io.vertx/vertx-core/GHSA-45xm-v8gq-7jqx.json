@@ -1,0 +1,43 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2018-10-17T16:19:55Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "io.vertx:vertx-core"
+  },
+  "Advisory": {
+    "DatabaseId": 781,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTQ1eG0tdjhncS03anF4",
+    "GhsaId": "GHSA-45xm-v8gq-7jqx",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-12541"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-45xm-v8gq-7jqx"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-12541"
+      }
+    ],
+    "Description": "In version from 3.0.0 to 3.5.3 of Eclipse Vert.x, the WebSocket HTTP upgrade implementation buffers the full http request before doing the handshake, holding the entire request body in memory. There should be a reasonnable limit (8192 bytes) above which the WebSocket gets an HTTP response with the 413 status code and the connection gets closed.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-17T16:19:59Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects io.vertx:vertx-core",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.5.4"
+      },
+      "VulnerableVersionRange": "\u003e= 3.0.0, \u003c 3.5.4"
+    }
+  ]
+}

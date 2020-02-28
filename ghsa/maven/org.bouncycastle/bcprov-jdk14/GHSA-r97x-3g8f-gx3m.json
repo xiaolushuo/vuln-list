@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-10-17T16:23:46Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.bouncycastle:bcprov-jdk14"
+  },
+  "Advisory": {
+    "DatabaseId": 787,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXI5N3gtM2c4Zi1neDNt",
+    "GhsaId": "GHSA-r97x-3g8f-gx3m",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000340"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-r97x-3g8f-gx3m"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-1000340"
+      }
+    ],
+    "Description": "In the Bouncy Castle JCE Provider versions 1.51 to 1.55, a carry propagation bug was introduced in the implementation of squaring for several raw math classes have been fixed (org.bouncycastle.math.raw.Nat???). These classes are used by our custom elliptic curve implementations (org.bouncycastle.math.ec.custom.**), so there was the possibility of rare (in general usage) spurious calculations for elliptic curve scalar multiplications. Such errors would have been detected with high probability by the output validation for our scalar multipliers.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-17T16:23:50Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.bouncycastle:bcprov-jdk14 and org.bouncycastle:bcprov-jdk15",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.56"
+      },
+      "VulnerableVersionRange": "\u003e= 1.51, \u003c 1.56"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2018-10-19T16:16:34Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.eclipse.jetty:jetty-server"
+  },
+  "Advisory": {
+    "DatabaseId": 885,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTZ4OXgtOHF3OS05cHA2",
+    "GhsaId": "GHSA-6x9x-8qw9-9pp6",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2017-7658"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-6x9x-8qw9-9pp6"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2017-7658"
+      }
+    ],
+    "Description": "In Eclipse Jetty Server, versions 9.2.x and older, 9.3.x (all non HTTP/1.x configurations), and 9.4.x (all HTTP/1.x configurations), when presented with two content-lengths headers, Jetty ignored the second. When presented with a content-length and a chunked encoding header, the content-length was ignored (as per RFC 2616). If an intermediary decided on the shorter length, but still passed on the longer body, then body content could be interpreted by Jetty as a pipelined request. If the intermediary was imposing authorization, the fake pipelined request would bypass that authorization.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-19T16:16:38Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects org.eclipse.jetty:jetty-server",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.4.11.v20180605"
+      },
+      "VulnerableVersionRange": "\u003e= 9.4.0, \u003c 9.4.11.v20180605"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.3.24.v20180605"
+      },
+      "VulnerableVersionRange": "\u003e= 9.3.0, \u003c 9.3.24.v20180605"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.2.25.v20180606"
+      },
+      "VulnerableVersionRange": "\u003e 9.2.0, \u003c 9.2.25.v20180606"
+    }
+  ]
+}

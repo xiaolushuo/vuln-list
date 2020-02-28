@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-07-01T16:09:02Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "com.diffplug.spotless:spotless-plugin-maven"
+  },
+  "Advisory": {
+    "DatabaseId": 1558,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTd2MzUtcXd3ai1wOThn",
+    "GhsaId": "GHSA-7v35-qwwj-p98g",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-9843"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-7v35-qwwj-p98g"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-9843"
+      }
+    ],
+    "Description": "In DiffPlug Spotless before 1.20.0 (library and Maven plugin) and before 3.20.0 (Gradle plugin), the XML parser would resolve external entities over both HTTP and HTTPS and didn't respect the resolveExternalEntities setting. For example, this allows disclosure of file contents to a MITM attacker if a victim performs a spotlessApply operation on an untrusted XML file.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-07-05T21:07:40Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects com.diffplug.spotless:spotless-plugin-gradle and com.diffplug.spotless:spotless-plugin-maven",
+    "UpdatedAt": "2019-07-05T21:07:40Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.20.0"
+      },
+      "VulnerableVersionRange": "\u003c 1.20.0"
+    }
+  ]
+}

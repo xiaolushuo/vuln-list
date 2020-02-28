@@ -1,0 +1,49 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-06-20T16:02:51Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "rubygems-update"
+  },
+  "Advisory": {
+    "DatabaseId": 1547,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTV4MzItYzltZi00OWNj",
+    "GhsaId": "GHSA-5x32-c9mf-49cc",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-8320"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-5x32-c9mf-49cc"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-8320"
+      }
+    ],
+    "Description": "A Directory Traversal issue was discovered in RubyGems 2.7.6 and later through 3.0.2. Before making new directories or touching files (which now include path-checking code for symlinks), it would delete the target destination. If that destination was hidden behind a symlink, a malicious gem could delete arbitrary files on the user's machine, presuming the attacker could guess at paths. Given how frequently gem is run as sudo, and how predictable paths are on modern systems (/tmp, /usr, etc.), this could likely lead to data loss or an unusable system.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-06-20T16:06:15Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects rubygems-update",
+    "UpdatedAt": "2019-10-10T20:54:36Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.0.3"
+      },
+      "VulnerableVersionRange": "\u003e= 3.0.0, \u003c 3.0.3"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.7.9"
+      },
+      "VulnerableVersionRange": "\u003e= 2.7.6, \u003c 2.7.9"
+    }
+  ]
+}

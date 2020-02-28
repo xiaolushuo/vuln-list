@@ -1,0 +1,55 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-02-05T15:07:23Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "django"
+  },
+  "Advisory": {
+    "DatabaseId": 1915,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWhtcjQtbTJoNS0zM3F4",
+    "GhsaId": "GHSA-hmr4-m2h5-33qx",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7471"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-hmr4-m2h5-33qx"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-7471"
+      }
+    ],
+    "Description": "Django 1.11 before 1.11.28, 2.2 before 2.2.10, and 3.0 before 3.0.3 allows SQL Injection if untrusted data is used as a StringAgg delimiter (e.g., in Django applications that offer downloads of data as a series of rows with a user-specified column delimiter). By passing a suitably crafted delimiter to a contrib.postgres.aggregates.StringAgg instance, it was possible to break escaping and inject malicious SQL.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-02-11T21:03:20Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects django",
+    "UpdatedAt": "2020-02-11T21:03:20Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.0.3"
+      },
+      "VulnerableVersionRange": "\u003e= 3.0.0, \u003c 3.0.3"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.2.10"
+      },
+      "VulnerableVersionRange": "\u003e= 2.0.0, \u003c 2.2.10"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.11.28"
+      },
+      "VulnerableVersionRange": "\u003c 1.11.28"
+    }
+  ]
+}

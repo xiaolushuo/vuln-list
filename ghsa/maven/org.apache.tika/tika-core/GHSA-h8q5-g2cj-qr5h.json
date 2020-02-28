@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-10-17T15:43:19Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.tika:tika-core"
+  },
+  "Advisory": {
+    "DatabaseId": 769,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWg4cTUtZzJjai1xcjVo",
+    "GhsaId": "GHSA-h8q5-g2cj-qr5h",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-11796"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-h8q5-g2cj-qr5h"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-11796"
+      }
+    ],
+    "Description": "In Apache Tika 1.19 (CVE-2018-11761), we added an entity expansion limit for XML parsing. However, Tika reuses SAXParsers and calls reset() after each parse, which, for Xerces2 parsers, as per the documentation, removes the user-specified SecurityManager and thus removes entity expansion limits after the first parse. Apache Tika versions from 0.1 to 1.19 are therefore still vulnerable to entity expansions which can lead to a denial of service attack. Users should upgrade to 1.19.1 or later.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-17T15:43:25Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.apache.tika:tika-core",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.19.1"
+      },
+      "VulnerableVersionRange": "\u003e= 0.1, \u003c 1.19.1"
+    }
+  ]
+}

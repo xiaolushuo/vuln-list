@@ -1,0 +1,46 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-11-22T18:17:49Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "pannellum"
+  },
+  "Advisory": {
+    "DatabaseId": 1807,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLW01MngtMjlwcS13M3Z2",
+    "GhsaId": "GHSA-m52x-29pq-w3vv",
+    "References": [
+      {
+        "Url": "https://github.com/mpetroff/pannellum/security/advisories/GHSA-m52x-29pq-w3vv"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-16763"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-m52x-29pq-w3vv"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-16763"
+      }
+    ],
+    "Description": "## XSS vulnerability\r\n\r\n### Impact\r\nURLs were not sanitized for data URIs (or `vbscript:`), allowing for potential XSS attacks. Such an attack would require a user to click on a hot spot to execute and would require an attacker-provided configuration. The most plausible potential attack would be if `pannellum.htm` was hosted on a domain that shared cookies with the targeted site's user authentication; an  `\u003ciframe\u003e` could then be embedded on the attacker's site using `pannellum.htm` from the targeted site, which would allow the attacker to potentially access information from the targeted site as the authenticated user (or worse if the targeted site did not have adequate CSRF protections) if the user clicked on a hot spot in the attacker's embedded panorama viewer.\r\n\r\n### Patches\r\nThis was patched in version 2.5.5.\r\n\r\n### Workarounds\r\nDon't host `pannellum.htm` on a domain that shares cookies with user authentication.\r\n\r\n### Acknowledgments\r\nThank you to Max Schaefer of GitHub Security Lab for reporting this issue.\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-11-22T18:18:03Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects pannellum",
+    "UpdatedAt": "2019-11-22T18:28:15Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.5.5"
+      },
+      "VulnerableVersionRange": "\u003e= 2.5.0, \u003c 2.5.5"
+    }
+  ]
+}

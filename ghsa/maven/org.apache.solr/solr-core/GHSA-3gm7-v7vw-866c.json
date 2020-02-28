@@ -1,0 +1,43 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2019-08-01T19:07:52Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.solr:solr-core"
+  },
+  "Advisory": {
+    "DatabaseId": 1620,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTNnbTctdjd2dy04NjZj",
+    "GhsaId": "GHSA-3gm7-v7vw-866c",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0193"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-3gm7-v7vw-866c"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-0193"
+      }
+    ],
+    "Description": "In Apache Solr, the DataImportHandler, an optional but popular module to pull in data from databases and other sources, has a feature in which the whole DIH configuration can come from a request's \"dataConfig\" parameter. The debug mode of the DIH admin screen uses this to allow convenient debugging / development of a DIH config. Since a DIH config can contain scripts, this parameter is a security risk. Starting with version 8.2.0 of Solr, use of this parameter requires setting the Java System property \"enable.dih.dataConfigParam\" to true.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-08-01T19:17:35Z",
+    "Severity": "HIGH",
+    "Summary": "High severity vulnerability that affects org.apache.solr:solr-core",
+    "UpdatedAt": "2019-08-09T15:20:34Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.2.0"
+      },
+      "VulnerableVersionRange": "\u003c 8.2.0"
+    }
+  ]
+}

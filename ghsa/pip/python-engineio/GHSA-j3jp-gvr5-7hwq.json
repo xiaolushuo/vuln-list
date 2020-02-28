@@ -1,0 +1,46 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2019-07-30T20:47:09Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "python-engineio"
+  },
+  "Advisory": {
+    "DatabaseId": 1607,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWozanAtZ3ZyNS03aHdx",
+    "GhsaId": "GHSA-j3jp-gvr5-7hwq",
+    "References": [
+      {
+        "Url": "https://github.com/miguelgrinberg/python-engineio/security/advisories/GHSA-j3jp-gvr5-7hwq"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-13611"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-j3jp-gvr5-7hwq"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-13611"
+      }
+    ],
+    "Description": "## WebSocket cross-origin vulnerability\r\n\r\n### Impact\r\nThis is a Cross-Site Request Forgery (CSRF) vulnerability. It affects Socket.IO and Engine.IO web servers that authenticate clients using cookies.\r\n\r\n### Patches\r\npython-engineio version 3.9.0 patches this vulnerability by adding server-side Origin header checks.\r\n\r\n### Workarounds\r\nDo not use cookies for client authentication, or else add a CSRF token to the connection URL.\r\n\r\n### References\r\nhttps://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)\r\nhttps://www.christian-schneider.net/CrossSiteWebSocketHijacking.html\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [python-engineio](http://github.com/miguelgrinberg/python-engineio)\r\n\r\n",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-07-30T20:47:25Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects python-engineio",
+    "UpdatedAt": "2019-07-30T20:47:25Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "3.9.0"
+      },
+      "VulnerableVersionRange": "\u003c= 3.8.2"
+    }
+  ]
+}

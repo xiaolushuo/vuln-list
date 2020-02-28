@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2019-02-18T23:36:55Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "marked"
+  },
+  "Advisory": {
+    "DatabaseId": 1157,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXZmdmYtbXFxOC1yd3Fj",
+    "GhsaId": "GHSA-vfvf-mqq8-rwqc",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-10531"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-vfvf-mqq8-rwqc"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-10531"
+      }
+    ],
+    "Description": "marked is an application that is meant to parse and compile markdown. Due to the way that marked 0.3.5 and earlier parses input, specifically HTML entities, it's possible to bypass marked's content injection protection (`sanitize: true`) to inject a `javascript:` URL. This flaw exists because `\u0026#xNNanything;` gets parsed to what it could and leaves the rest behind, resulting in just `anything;` being left.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2019-02-18T23:58:20Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects marked",
+    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.3.6"
+      },
+      "VulnerableVersionRange": "\u003c 0.3.6"
+    }
+  ]
+}

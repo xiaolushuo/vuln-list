@@ -1,0 +1,43 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2018-10-17T16:23:33Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.bouncycastle:bcprov-jdk14"
+  },
+  "Advisory": {
+    "DatabaseId": 786,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWM4eGYtbTRmZi1qY3hq",
+    "GhsaId": "GHSA-c8xf-m4ff-jcxj",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000339"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-c8xf-m4ff-jcxj"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-1000339"
+      }
+    ],
+    "Description": "In the Bouncy Castle JCE Provider version 1.55 and earlier the primary engine class used for AES was AESFastEngine. Due to the highly table driven approach used in the algorithm it turns out that if the data channel on the CPU can be monitored the lookup table accesses are sufficient to leak information on the AES key being used. There was also a leak in AESEngine although it was substantially less. AESEngine has been modified to remove any signs of leakage (testing carried out on Intel X86-64) and is now the primary AES class for the BC JCE provider from 1.56. Use of AESFastEngine is now only recommended where otherwise deemed appropriate.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2018-10-17T16:23:38Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects org.bouncycastle:bcprov-jdk14 and org.bouncycastle:bcprov-jdk15",
+    "UpdatedAt": "2019-07-03T21:02:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.56"
+      },
+      "VulnerableVersionRange": "\u003c 1.56"
+    }
+  ]
+}
