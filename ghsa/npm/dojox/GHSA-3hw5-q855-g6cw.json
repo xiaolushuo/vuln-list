@@ -1,0 +1,79 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-03-10T18:02:10Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "dojox"
+  },
+  "Advisory": {
+    "DatabaseId": 1978,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTNodzUtcTg1NS1nNmN3",
+    "GhsaId": "GHSA-3hw5-q855-g6cw",
+    "References": [
+      {
+        "Url": "https://github.com/dojo/dojox/security/advisories/GHSA-3hw5-q855-g6cw"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-5259"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-3hw5-q855-g6cw"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-3hw5-q855-g6cw"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-5259"
+      }
+    ],
+    "Description": "The Dojox jQuery wrapper `jqMix` mixin method is vulnerable to Prototype Pollution. \n\nAffected Area:\n```\n//https://github.com/dojo/dojox/blob/master/jq.js#L442\n\t\tvar tobj = {};\n\t\tfor(var x in props){\n\t\t\t// the \u0026amp;quot;tobj\u0026amp;quot; condition avoid copying properties in \u0026amp;quot;props\u0026amp;quot;\n\t\t\t// inherited from Object.prototype.  For example, if obj has a custom\n\t\t\t// toString() method, don\u0026amp;#39;t overwrite it with the toString() method\n\t\t\t// that props inherited from Object.prototype\n\t\t\tif((tobj[x] === undefined || tobj[x] != props[x]) \u0026amp;amp;\u0026amp;amp; props[x] !== undefined \u0026amp;amp;\u0026amp;amp; obj != props[x]){\n\t\t\t\tif(dojo.isObject(obj[x]) \u0026amp;amp;\u0026amp;amp; dojo.isObject(props[x])){\n\t\t\t\t\tif(dojo.isArray(props[x])){\n\t\t\t\t\t\tobj[x] = props[x];\n\t\t\t\t\t}else{\n\t\t\t\t\t\tobj[x] = jqMix(obj[x], props[x]);\n\t\t\t\t\t}\n\t\t\t\t}else{\n\t\t\t\t\tobj[x] = props[x];\n\t\t\t\t}\n```",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-03-10T18:03:32Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects dojox",
+    "UpdatedAt": "2020-03-10T18:03:32Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.16.2"
+      },
+      "VulnerableVersionRange": "\u003e= 1.16.0, \u003c 1.16.2"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.15.3"
+      },
+      "VulnerableVersionRange": "\u003e= 1.15.0, \u003c 1.15.3"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.14.6"
+      },
+      "VulnerableVersionRange": "\u003e= 1.14.0, \u003c 1.14.6"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.13.7"
+      },
+      "VulnerableVersionRange": "\u003e= 1.13.0, \u003c 1.13.7"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.12.8"
+      },
+      "VulnerableVersionRange": "\u003e= 1.12.0, \u003c 1.12.8"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.11.10"
+      },
+      "VulnerableVersionRange": "\u003c 1.11.10"
+    }
+  ]
+}
