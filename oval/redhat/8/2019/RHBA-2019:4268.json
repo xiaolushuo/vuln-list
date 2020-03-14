@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20192720",
+  "ID": "oval:com.redhat.rhba:def:20194268",
   "Class": "patch",
-  "Title": "RHSA-2019:2720: pki-deps:10.6 security update (Important)",
+  "Title": "RHBA-2019:4268: idm:DL1 bug fix update (None)",
   "Affecteds": [
     {
       "XMLName": {
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2019:2720",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2019:2720"
+      "RefID": "RHBA-2019:4268",
+      "RefURL": "https://access.redhat.com/errata/RHBA-2019:4268"
     },
     {
       "XMLName": {
@@ -34,30 +34,52 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2019-12384",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-12384"
+      "RefID": "CVE-2019-10195",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-10195"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-14867",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-14867"
     }
   ],
-  "Description": "The Public Key Infrastructure (PKI) Deps module contains fundamental packages required as dependencies for the pki-core module by Red Hat Certificate System.\n\nSecurity Fix(es):\n\n* jackson-databind: failure to block the logback-core class from polymorphic deserialization leading to remote code execution (CVE-2019-12384)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "Bug Fix(es):\n\n* IPA upgrade fails for latest ipa package when adtrust is installed (BZ#1773516)",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Important",
+    "Severity": "None",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2019-12384",
+        "CveID": "CVE-2019-10195",
         "Cvss2": "",
-        "Cvss3": "8.1/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-        "Cwe": "CWE-502",
-        "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2019-12384",
-        "Public": "20190621"
+        "Cvss3": "5.7/CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "CWE-532 CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-10195",
+        "Public": "20191126"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-14867",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-94 CWE-400",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-14867",
+        "Public": "20190826"
       }
     ],
     "Bugzillas": [
@@ -66,9 +88,9 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1725807",
-        "URL": "https://bugzilla.redhat.com/1725807",
-        "Title": "CVE-2019-12384 jackson-databind: failure to block the logback-core class from polymorphic deserialization leading to remote code execution"
+        "ID": "1773516",
+        "URL": "https://bugzilla.redhat.com/1773516",
+        "Title": "IPA upgrade fails for latest ipa package when adtrust is installed [rhel-8.1.0.z]"
       }
     ],
     "AffectedCPEList": [
@@ -76,10 +98,10 @@
       "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
-      "Date": "2019-09-12"
+      "Date": "2019-12-17"
     },
     "Updated": {
-      "Date": "2019-09-10"
+      "Date": "2019-12-17"
     }
   },
   "Criteria": {
@@ -117,8 +139,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720001",
-                    "Comment": "python3-nss is earlier than 0:1.0.1-10.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268001",
+                    "Comment": "softhsm-devel is earlier than 0:2.4.0-2.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -126,8 +148,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529002",
-                    "Comment": "python3-nss is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268002",
+                    "Comment": "softhsm-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -145,8 +167,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720003",
-                    "Comment": "python-nss-doc is earlier than 0:1.0.1-10.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268003",
+                    "Comment": "softhsm-debugsource is earlier than 0:2.4.0-2.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -154,8 +176,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529004",
-                    "Comment": "python-nss-doc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268004",
+                    "Comment": "softhsm-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -173,8 +195,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720005",
-                    "Comment": "python-nss-debugsource is earlier than 0:1.0.1-10.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268005",
+                    "Comment": "softhsm is earlier than 0:2.4.0-2.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -182,8 +204,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529006",
-                    "Comment": "python-nss-debugsource is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268006",
+                    "Comment": "softhsm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -201,8 +223,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720007",
-                    "Comment": "xsom is earlier than 0:0-19.20110809svn.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268007",
+                    "Comment": "slapi-nis-debugsource is earlier than 0:0.56.3-2.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -210,8 +232,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529008",
-                    "Comment": "xsom is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268008",
+                    "Comment": "slapi-nis-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -229,8 +251,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720009",
-                    "Comment": "xmlstreambuffer is earlier than 0:1.5.4-8.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268009",
+                    "Comment": "slapi-nis is earlier than 0:0.56.3-2.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -238,8 +260,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529010",
-                    "Comment": "xmlstreambuffer is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268010",
+                    "Comment": "slapi-nis is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -257,8 +279,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720011",
-                    "Comment": "xml-commons-resolver is earlier than 0:1.2-26.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268011",
+                    "Comment": "opendnssec-debugsource is earlier than 0:1.4.14-1.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -266,8 +288,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529012",
-                    "Comment": "xml-commons-resolver is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268012",
+                    "Comment": "opendnssec-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -285,8 +307,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720013",
-                    "Comment": "xml-commons-apis is earlier than 0:1.4.01-25.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268013",
+                    "Comment": "opendnssec is earlier than 0:1.4.14-1.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -294,8 +316,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529014",
-                    "Comment": "xml-commons-apis is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268014",
+                    "Comment": "opendnssec is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -313,8 +335,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720015",
-                    "Comment": "xerces-j2 is earlier than 0:2.11.0-34.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268015",
+                    "Comment": "ipa-server-trust-ad is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -322,8 +344,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529016",
-                    "Comment": "xerces-j2 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268016",
+                    "Comment": "ipa-server-trust-ad is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -341,8 +363,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720017",
-                    "Comment": "xalan-j2 is earlier than 0:2.7.1-38.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268017",
+                    "Comment": "ipa-server is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -350,8 +372,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529018",
-                    "Comment": "xalan-j2 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268018",
+                    "Comment": "ipa-server is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -369,8 +391,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720019",
-                    "Comment": "velocity is earlier than 0:1.7-24.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268019",
+                    "Comment": "ipa-idoverride-memberof-plugin is earlier than 0:0.0.4-6.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -378,8 +400,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529020",
-                    "Comment": "velocity is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268020",
+                    "Comment": "ipa-idoverride-memberof-plugin is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -397,8 +419,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720021",
-                    "Comment": "stax-ex is earlier than 0:1.7.7-8.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268021",
+                    "Comment": "ipa-debugsource is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -406,8 +428,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529022",
-                    "Comment": "stax-ex is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268022",
+                    "Comment": "ipa-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -425,8 +447,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720023",
-                    "Comment": "slf4j-jdk14 is earlier than 0:1.7.25-4.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268023",
+                    "Comment": "ipa-client-samba is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -434,8 +456,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529024",
-                    "Comment": "slf4j-jdk14 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268024",
+                    "Comment": "ipa-client-samba is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -453,8 +475,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720025",
-                    "Comment": "slf4j is earlier than 0:1.7.25-4.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268025",
+                    "Comment": "ipa-client is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -462,8 +484,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529026",
-                    "Comment": "slf4j is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268026",
+                    "Comment": "ipa-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -481,8 +503,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720027",
-                    "Comment": "resteasy is earlier than 0:3.0.26-3.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268027",
+                    "Comment": "bind-dyndb-ldap-debugsource is earlier than 0:11.1-14.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -490,8 +512,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529028",
-                    "Comment": "resteasy is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268028",
+                    "Comment": "bind-dyndb-ldap-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -509,8 +531,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720029",
-                    "Comment": "relaxngDatatype is earlier than 0:2011.1-7.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268029",
+                    "Comment": "bind-dyndb-ldap is earlier than 0:11.1-14.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -518,8 +540,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529030",
-                    "Comment": "relaxngDatatype is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268030",
+                    "Comment": "bind-dyndb-ldap is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -537,8 +559,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720031",
-                    "Comment": "pki-servlet-container is earlier than 1:9.0.7-14.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268031",
+                    "Comment": "python3-yubico is earlier than 0:1.3.2-9.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -546,8 +568,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529032",
-                    "Comment": "pki-servlet-container is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268032",
+                    "Comment": "python3-yubico is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -565,8 +587,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720033",
-                    "Comment": "pki-servlet-4.0-api is earlier than 1:9.0.7-14.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268033",
+                    "Comment": "python3-qrcode-core is earlier than 0:5.1-12.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -574,8 +596,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529034",
-                    "Comment": "pki-servlet-4.0-api is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268034",
+                    "Comment": "python3-qrcode-core is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -593,8 +615,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720035",
-                    "Comment": "javassist-javadoc is earlier than 0:3.18.1-8.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268035",
+                    "Comment": "python3-qrcode is earlier than 0:5.1-12.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -602,8 +624,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529036",
-                    "Comment": "javassist-javadoc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268036",
+                    "Comment": "python3-qrcode is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -621,8 +643,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720037",
-                    "Comment": "javassist is earlier than 0:3.18.1-8.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268037",
+                    "Comment": "python3-pyusb is earlier than 0:1.0.0-9.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -630,8 +652,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529038",
-                    "Comment": "javassist is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268038",
+                    "Comment": "python3-pyusb is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -649,8 +671,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720039",
-                    "Comment": "jakarta-commons-httpclient is earlier than 1:3.1-28.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268039",
+                    "Comment": "python3-kdcproxy is earlier than 0:0.4-3.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -658,8 +680,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529040",
-                    "Comment": "jakarta-commons-httpclient is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268040",
+                    "Comment": "python3-kdcproxy is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -677,8 +699,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720041",
-                    "Comment": "jackson-module-jaxb-annotations is earlier than 0:2.7.6-4.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268041",
+                    "Comment": "python3-jwcrypto is earlier than 0:0.5.0-1.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -686,8 +708,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529042",
-                    "Comment": "jackson-module-jaxb-annotations is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268042",
+                    "Comment": "python3-jwcrypto is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -705,8 +727,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720043",
-                    "Comment": "jackson-jaxrs-providers is earlier than 0:2.9.9-1.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268043",
+                    "Comment": "python3-ipaserver is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -714,8 +736,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529044",
-                    "Comment": "jackson-jaxrs-providers is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268044",
+                    "Comment": "python3-ipaserver is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -733,8 +755,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720045",
-                    "Comment": "jackson-jaxrs-json-provider is earlier than 0:2.9.9-1.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268045",
+                    "Comment": "python3-ipalib is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -742,8 +764,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529046",
-                    "Comment": "jackson-jaxrs-json-provider is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268046",
+                    "Comment": "python3-ipalib is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -761,8 +783,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720047",
-                    "Comment": "jackson-databind is earlier than 0:2.9.9.2-1.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268047",
+                    "Comment": "python3-ipaclient is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -770,8 +792,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529048",
-                    "Comment": "jackson-databind is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268048",
+                    "Comment": "python3-ipaclient is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -789,8 +811,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720049",
-                    "Comment": "jackson-core is earlier than 0:2.9.9-1.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268049",
+                    "Comment": "python3-custodia is earlier than 0:0.6.0-3.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -798,8 +820,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529050",
-                    "Comment": "jackson-core is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268050",
+                    "Comment": "python3-custodia is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -817,8 +839,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720051",
-                    "Comment": "jackson-annotations is earlier than 0:2.9.9-1.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268051",
+                    "Comment": "ipa-server-dns is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -826,8 +848,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529052",
-                    "Comment": "jackson-annotations is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268052",
+                    "Comment": "ipa-server-dns is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -845,8 +867,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720053",
-                    "Comment": "glassfish-jaxb-txw2 is earlier than 0:2.2.11-11.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268053",
+                    "Comment": "ipa-server-common is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -854,8 +876,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529054",
-                    "Comment": "glassfish-jaxb-txw2 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268054",
+                    "Comment": "ipa-server-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -873,8 +895,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720055",
-                    "Comment": "glassfish-jaxb-runtime is earlier than 0:2.2.11-11.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268055",
+                    "Comment": "ipa-python-compat is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -882,8 +904,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529056",
-                    "Comment": "glassfish-jaxb-runtime is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268056",
+                    "Comment": "ipa-python-compat is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -901,8 +923,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720057",
-                    "Comment": "glassfish-jaxb-core is earlier than 0:2.2.11-11.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268057",
+                    "Comment": "ipa-healthcheck is earlier than 0:0.3-4.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -910,8 +932,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529058",
-                    "Comment": "glassfish-jaxb-core is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268058",
+                    "Comment": "ipa-healthcheck is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -929,8 +951,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720059",
-                    "Comment": "glassfish-jaxb-api is earlier than 0:2.2.12-8.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268059",
+                    "Comment": "ipa-common is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -938,8 +960,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529060",
-                    "Comment": "glassfish-jaxb-api is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268060",
+                    "Comment": "ipa-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -957,8 +979,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720061",
-                    "Comment": "glassfish-fastinfoset is earlier than 0:1.2.13-9.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268061",
+                    "Comment": "ipa-client-common is earlier than 0:4.8.0-13.module+el8.1.0+4923+c6efe041"
                   },
                   {
                     "XMLName": {
@@ -966,8 +988,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529062",
-                    "Comment": "glassfish-fastinfoset is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268062",
+                    "Comment": "ipa-client-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -985,8 +1007,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720063",
-                    "Comment": "bea-stax-api is earlier than 0:1.2.0-16.module+el8.0.0+3892+c903d3f0"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268063",
+                    "Comment": "custodia is earlier than 0:0.6.0-3.module+el8.1.0+4098+f286395e"
                   },
                   {
                     "XMLName": {
@@ -994,64 +1016,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529064",
-                    "Comment": "bea-stax-api is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720065",
-                    "Comment": "apache-commons-lang is earlier than 0:2.6-21.module+el8.0.0+3892+c903d3f0"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529066",
-                    "Comment": "apache-commons-lang is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192720067",
-                    "Comment": "apache-commons-collections is earlier than 0:3.2.2-10.module+el8.0.0+3892+c903d3f0"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191529068",
-                    "Comment": "apache-commons-collections is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20194268064",
+                    "Comment": "custodia is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -1075,8 +1041,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhsa:tst:20191529069",
-            "Comment": "Module pki-deps:10.6 is enabled"
+            "TestRef": "oval:com.redhat.rhba:tst:20194268065",
+            "Comment": "Module idm:DL1 is enabled"
           }
         ]
       }
