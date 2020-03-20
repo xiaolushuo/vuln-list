@@ -1,0 +1,55 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-03-19T17:29:42Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "actionview"
+  },
+  "Advisory": {
+    "DatabaseId": 1996,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTY1Y3YtcjZ4Ny03OWh2",
+    "GhsaId": "GHSA-65cv-r6x7-79hv",
+    "References": [
+      {
+        "Url": "https://github.com/rails/rails/security/advisories/GHSA-65cv-r6x7-79hv"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-5267"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-65cv-r6x7-79hv"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-65cv-r6x7-79hv"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-5267"
+      }
+    ],
+    "Description": "There is a possible XSS vulnerability in ActionView's JavaScript literal escape helpers.  Views that use the `j` or `escape_javascript` methods may be susceptible to XSS attacks.\n\n### Impact\n\nThere is a possible XSS vulnerability in the `j` and `escape_javascript` methods in ActionView.  These methods are used for escaping JavaScript string literals.  Impacted code will look something like this:\n\n```erb\n\u003cscript\u003elet a = `\u003c%= j unknown_input %\u003e`\u003c/script\u003e\n```\n\nor\n\n```erb\n\u003cscript\u003elet a = `\u003c%= escape_javascript unknown_input %\u003e`\u003c/script\u003e\n```\n\n### Releases\n\nThe 6.0.2.2 and 5.2.4.2 releases are available at the normal locations.\n\n### Workarounds\n\nFor those that can\u0026#39;t upgrade, the following monkey patch may be used:\n\n```ruby\nActionView::Helpers::JavaScriptHelper::JS_ESCAPE_MAP.merge!(\n  {\n    \"`\" =\u003e \"\\\\`\",\n    \"$\" =\u003e \"\\\\$\"\n  }\n)\n\nmodule ActionView::Helpers::JavaScriptHelper\n  alias :old_ej :escape_javascript\n  alias :old_j :j\n\n  def escape_javascript(javascript)\n    javascript = javascript.to_s\n    if javascript.empty?\n      result = \"\"\n    else\n      result = javascript.gsub(/(\\\\|\u003c\\/|\\r\\n|\\342\\200\\250|\\342\\200\\251|[\\n\\r\"']|[`]|[$])/u, JS_ESCAPE_MAP)\n    end\n    javascript.html_safe? ? result.html_safe : result\n  end\n\n  alias :j :escape_javascript\nend\n```\n\n### Patches\n\nTo aid users who aren\u0026#39;t able to upgrade immediately we have provided patches for\nthe two supported release series. They are in git-am format and consist of a\nsingle changeset.\n\n* [5-2-js-helper-xss.patch](https://gist.github.com/tenderlove/c042ff49f0347c37e99183a6502accc6#file-5-2-js-helper-xss-patch) - Patch for 5.2 series\n* [6-0-js-helper-xss.patch](https://gist.github.com/tenderlove/c042ff49f0347c37e99183a6502accc6#file-6-0-js-helper-xss-patch) - Patch for 6.0 series\n\nPlease note that only the 5.2 and 6.0 series are supported at present. Users\nof earlier unsupported releases are advised to upgrade as soon as possible as we\ncannot guarantee the continued availability of security fixes for unsupported\nreleases.\n\n### Credits\n\nThanks to Jesse Campos from Chef Secure",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-03-19T17:30:29Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects actionview",
+    "UpdatedAt": "2020-03-19T17:30:29Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "6.0.2.2"
+      },
+      "VulnerableVersionRange": "\u003e= 6.0.0, \u003c 6.0.2.2"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "5.2.4.2"
+      },
+      "VulnerableVersionRange": "\u003c 5.2.4.2"
+    }
+  ]
+}
