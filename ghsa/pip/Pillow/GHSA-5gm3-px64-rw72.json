@@ -1,0 +1,46 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-04-01T16:30:59Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "Pillow"
+  },
+  "Advisory": {
+    "DatabaseId": 2023,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTVnbTMtcHg2NC1ydzcy",
+    "GhsaId": "GHSA-5gm3-px64-rw72",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-19911"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-5gm3-px64-rw72"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-5gm3-px64-rw72"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-19911"
+      }
+    ],
+    "Description": "There is a DoS vulnerability in Pillow before 6.2.2 caused by FpxImagePlugin.py calling the range function on an unvalidated 32-bit integer if the number of bands is large. On Windows running 32-bit Python, this results in an OverflowError or MemoryError due to the 2 GB limit. However, on Linux running 64-bit Python this results in the process being terminated by the OOM killer.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-04-01T16:36:44Z",
+    "Severity": "MODERATE",
+    "Summary": "Moderate severity vulnerability that affects Pillow",
+    "UpdatedAt": "2020-04-01T16:36:44Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "6.2.2"
+      },
+      "VulnerableVersionRange": "\u003c 6.2.2"
+    }
+  ]
+}
