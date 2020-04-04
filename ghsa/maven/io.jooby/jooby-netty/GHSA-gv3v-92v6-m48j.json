@@ -1,0 +1,49 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-04-02T23:59:57Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "io.jooby:jooby-netty"
+  },
+  "Advisory": {
+    "DatabaseId": 2024,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWd2M3YtOTJ2Ni1tNDhq",
+    "GhsaId": "GHSA-gv3v-92v6-m48j",
+    "References": [
+      {
+        "Url": "https://github.com/jooby-project/jooby/security/advisories/GHSA-gv3v-92v6-m48j"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-7622"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-gv3v-92v6-m48j"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-gv3v-92v6-m48j"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-7622"
+      }
+    ],
+    "Description": "Jooby before version 2.2.1 is vulnerable to HTTP response splitting.\n\n### Root Cause\n\nThis roots cause back to this line in the Jooby codebase:\n\nhttps://github.com/jooby-project/jooby/blob/93cfc80aa20c188f71a442ea7a1827da380e1c27/modules/jooby-netty/src/main/java/io/jooby/internal/netty/NettyContext.java#L102\n\nThe `DefaultHttpHeaders` takes a parameter `validate` which, when `true` (as it is for the no-arg constructor) validates that the header isn't being abused to do HTTP Response Splitting.\n\n### Reported By\n\nThis vulnerability was reported by @JLLeitschuh ([Twitter](https://twitter.com/JLLeitschuh))",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-04-03T15:23:30Z",
+    "Severity": "LOW",
+    "Summary": "Low severity vulnerability that affects io.jooby:jooby-netty",
+    "UpdatedAt": "2020-04-03T15:23:30Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.2.1"
+      },
+      "VulnerableVersionRange": "\u003c 2.2.1"
+    }
+  ]
+}
