@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 6.0 EUS - Server Only"
+        "Red Hat Enterprise Linux 6"
       ]
     }
   ],
@@ -134,8 +134,11 @@
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:rhel_eus:6.0",
-      "cpe:/o:redhat:rhel_eus:6.0"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2012-04-03"
@@ -180,7 +183,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20120451001",
-                    "Comment": "rpm-build is earlier than 0:4.8.0-12.el6_0.2"
+                    "Comment": "rpm-build is earlier than 0:4.8.0-19.el6_2.1"
                   },
                   {
                     "XMLName": {
@@ -208,7 +211,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20120451003",
-                    "Comment": "rpm-python is earlier than 0:4.8.0-12.el6_0.2"
+                    "Comment": "rpm-python is earlier than 0:4.8.0-19.el6_2.1"
                   },
                   {
                     "XMLName": {
@@ -236,63 +239,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20120451005",
-                    "Comment": "rpm-libs is earlier than 0:4.8.0-12.el6_0.2"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111349014",
-                    "Comment": "rpm-libs is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20120451007",
-                    "Comment": "rpm is earlier than 0:4.8.0-12.el6_0.2"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111349012",
-                    "Comment": "rpm is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20120451009",
-                    "Comment": "rpm-devel is earlier than 0:4.8.0-12.el6_0.2"
+                    "Comment": "rpm-devel is earlier than 0:4.8.0-19.el6_2.1"
                   },
                   {
                     "XMLName": {
@@ -319,8 +266,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20120451007",
+                    "Comment": "rpm-libs is earlier than 0:4.8.0-19.el6_2.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111349014",
+                    "Comment": "rpm-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20120451009",
+                    "Comment": "rpm is earlier than 0:4.8.0-19.el6_2.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111349012",
+                    "Comment": "rpm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20120451011",
-                    "Comment": "rpm-cron is earlier than 0:4.8.0-12.el6_0.2"
+                    "Comment": "rpm-cron is earlier than 0:4.8.0-19.el6_2.1"
                   },
                   {
                     "XMLName": {
@@ -348,7 +351,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20120451013",
-                    "Comment": "rpm-apidocs is earlier than 0:4.8.0-12.el6_0.2"
+                    "Comment": "rpm-apidocs is earlier than 0:4.8.0-19.el6_2.1"
                   },
                   {
                     "XMLName": {
