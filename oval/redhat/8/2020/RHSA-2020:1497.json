@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20200855",
+  "ID": "oval:com.redhat.rhsa:def:20201497",
   "Class": "patch",
-  "Title": "RHSA-2020:0855: tomcat security update (Important)",
+  "Title": "RHSA-2020:1497: tigervnc security update (Moderate)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 7"
+        "Red Hat Enterprise Linux 8"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:0855",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:0855"
+      "RefID": "RHSA-2020:1497",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1497"
     },
     {
       "XMLName": {
@@ -34,30 +34,118 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-1938",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1938"
+      "RefID": "CVE-2019-15691",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15691"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15692",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15692"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15693",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15693"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15694",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15694"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15695",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15695"
     }
   ],
-  "Description": "Apache Tomcat is a servlet container for the Java Servlet and JavaServer Pages (JSP) technologies.\n\nSecurity Fix(es):\n\n* tomcat: Apache Tomcat AJP File Read/Inclusion Vulnerability (CVE-2020-1938)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "Virtual Network Computing (VNC) is a remote display system which allows users to view a computing desktop environment not only on the machine where it is running, but from anywhere on the Internet and from a wide variety of machine architectures. TigerVNC is a suite of VNC servers and clients.\n\nSecurity Fix(es):\n\n* tigervnc: Stack use-after-return due to incorrect usage of stack memory in ZRLEDecoder (CVE-2019-15691)\n\n* tigervnc: Heap buffer overflow triggered from CopyRectDecoder due to incorrect value checks (CVE-2019-15692)\n\n* tigervnc: Heap buffer overflow in TightDecoder::FilterGradient (CVE-2019-15693)\n\n* tigervnc: Heap buffer overflow in DecodeManager::decodeRect (CVE-2019-15694)\n\n* tigervnc: Stack buffer overflow in CMsgReader::readSetCursor (CVE-2019-15695)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Important",
+    "Severity": "Moderate",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-1938",
+        "CveID": "CVE-2019-15691",
         "Cvss2": "",
-        "Cvss3": "8.6/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L",
-        "Cwe": "CWE-285",
+        "Cvss3": "7.2/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-672",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-1938",
-        "Public": "20200220"
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15691",
+        "Public": "20191220"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15692",
+        "Cvss2": "",
+        "Cvss3": "7.2/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-122",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15692",
+        "Public": "20190910"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15693",
+        "Cvss2": "",
+        "Cvss3": "7.2/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-122",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15693",
+        "Public": "20191220"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15694",
+        "Cvss2": "",
+        "Cvss3": "7.2/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-122",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15694",
+        "Public": "20191220"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15695",
+        "Cvss2": "",
+        "Cvss3": "7.2/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-121",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15695",
+        "Public": "20191220"
       }
     ],
     "Bugzillas": [
@@ -66,23 +154,56 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1806398",
-        "URL": "https://bugzilla.redhat.com/1806398",
-        "Title": "CVE-2020-1938 tomcat: Apache Tomcat AJP File Read/Inclusion Vulnerability"
+        "ID": "1789527",
+        "URL": "https://bugzilla.redhat.com/1789527",
+        "Title": "CVE-2019-15692 tigervnc: Heap buffer overflow triggered from CopyRectDecoder due to incorrect value checks"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1789908",
+        "URL": "https://bugzilla.redhat.com/1789908",
+        "Title": "CVE-2019-15691 tigervnc: Stack use-after-return due to incorrect usage of stack memory in ZRLEDecoder"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1790313",
+        "URL": "https://bugzilla.redhat.com/1790313",
+        "Title": "CVE-2019-15693 tigervnc: Heap buffer overflow in TightDecoder::FilterGradient"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1790315",
+        "URL": "https://bugzilla.redhat.com/1790315",
+        "Title": "CVE-2019-15694 tigervnc: Heap buffer overflow in DecodeManager::decodeRect"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1790318",
+        "URL": "https://bugzilla.redhat.com/1790318",
+        "Title": "CVE-2019-15695 tigervnc: Stack buffer overflow in CMsgReader::readSetCursor"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
-      "Date": "2020-03-17"
+      "Date": "2020-04-16"
     },
     "Updated": {
-      "Date": "2020-03-17"
+      "Date": "2020-04-16"
     }
   },
   "Criteria": {
@@ -120,8 +241,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855001",
-                    "Comment": "tomcat-jsvc is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497001",
+                    "Comment": "tigervnc-server-applet is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -129,8 +250,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686020",
-                    "Comment": "tomcat-jsvc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497002",
+                    "Comment": "tigervnc-server-applet is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -148,8 +269,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855003",
-                    "Comment": "tomcat-javadoc is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497003",
+                    "Comment": "tigervnc-license is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -157,8 +278,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686018",
-                    "Comment": "tomcat-javadoc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497004",
+                    "Comment": "tigervnc-license is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -176,8 +297,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855005",
-                    "Comment": "tomcat-docs-webapp is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497005",
+                    "Comment": "tigervnc-icons is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -185,8 +306,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686016",
-                    "Comment": "tomcat-docs-webapp is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497006",
+                    "Comment": "tigervnc-icons is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -204,8 +325,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855007",
-                    "Comment": "tomcat-webapps is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497007",
+                    "Comment": "tigervnc-debugsource is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -213,8 +334,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686010",
-                    "Comment": "tomcat-webapps is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497008",
+                    "Comment": "tigervnc-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -232,8 +353,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855009",
-                    "Comment": "tomcat-servlet-3.0-api is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497009",
+                    "Comment": "tigervnc-server-module is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -241,8 +362,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686008",
-                    "Comment": "tomcat-servlet-3.0-api is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497010",
+                    "Comment": "tigervnc-server-module is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -260,8 +381,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855011",
-                    "Comment": "tomcat-lib is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497011",
+                    "Comment": "tigervnc-server-minimal is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -269,8 +390,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686012",
-                    "Comment": "tomcat-lib is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497012",
+                    "Comment": "tigervnc-server-minimal is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -288,8 +409,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855013",
-                    "Comment": "tomcat-jsp-2.2-api is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497013",
+                    "Comment": "tigervnc-server is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -297,8 +418,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686004",
-                    "Comment": "tomcat-jsp-2.2-api is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497014",
+                    "Comment": "tigervnc-server is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -316,8 +437,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855015",
-                    "Comment": "tomcat-el-2.2-api is earlier than 0:7.0.76-11.el7_7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497015",
+                    "Comment": "tigervnc is earlier than 0:1.9.0-14.el8_1"
                   },
                   {
                     "XMLName": {
@@ -325,64 +446,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686014",
-                    "Comment": "tomcat-el-2.2-api is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855017",
-                    "Comment": "tomcat-admin-webapps is earlier than 0:7.0.76-11.el7_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686002",
-                    "Comment": "tomcat-admin-webapps is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200855019",
-                    "Comment": "tomcat is earlier than 0:7.0.76-11.el7_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686006",
-                    "Comment": "tomcat is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201497016",
+                    "Comment": "tigervnc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -397,8 +462,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 is installed"
+            "TestRef": "oval:com.redhat.rhba:tst:20194268066",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
           }
         ]
       }
@@ -410,7 +475,7 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "TestRef": "oval:com.redhat.rhba:tst:20194268067",
         "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
