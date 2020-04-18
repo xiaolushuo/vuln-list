@@ -15,6 +15,7 @@ Collect vulnerability information and save it in parsable format automatically
 | ubuntu/     | Ubuntu           | Ubuntu CVE Tracker              | https://people.canonical.com/~ubuntu-security/cve/  |
 | cvrf/suse   | OpenSUSE/SLES    | SUSE Security CVRF              | http://ftp.suse.com/pub/projects/security/cvrf/     |
 | photon/     | Photon           | Photon Security Advisory        | https://vmware.bintray.com/photon_cve_metadata/     |
+| ghsa/       | -                | GitHub Advisory Database        | https://github.com/advisories/                      |
 
 ## Update frequency
 daily
