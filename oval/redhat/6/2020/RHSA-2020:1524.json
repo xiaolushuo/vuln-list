@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20201511",
+  "ID": "oval:com.redhat.rhsa:def:20201524",
   "Class": "patch",
-  "Title": "RHSA-2020:1511: git security update (Important)",
+  "Title": "RHSA-2020:1524: kernel security update (Important)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 7"
+        "Red Hat Enterprise Linux 6"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:1511",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1511"
+      "RefID": "RHSA-2020:1524",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1524"
     },
     {
       "XMLName": {
@@ -34,11 +34,20 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-5260",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-5260"
+      "RefID": "CVE-2017-1000371",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-1000371"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-17666",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-17666"
     }
   ],
-  "Description": "Git is a distributed revision control system with a decentralized architecture. As opposed to centralized version control systems with a client-server model, Git ensures that each working copy of a Git repository is an exact copy with complete revision history. This not only allows the user to work on and contribute to projects without the need to have permission to push the changes to their official repositories, but also makes it possible for the user to work with no network connection.\n\nSecurity Fix(es):\n\n* git: Crafted URL containing new lines can cause credential leak (CVE-2020-5260)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "The kernel packages contain the Linux kernel, the core of any Linux operating system.\n\nSecurity Fix(es):\n\n* kernel: rtl_p2p_noa_ie in drivers/net/wireless/realtek/rtlwifi/ps.c in the Linux kernel lacks a certain upper-bound check, leading to a buffer overflow (CVE-2019-17666)\n\n* kernel: offset2lib allows for the stack guard page to be jumped over (CVE-2017-1000371)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
@@ -51,13 +60,26 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-5260",
+        "CveID": "CVE-2017-1000371",
         "Cvss2": "",
-        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "Cvss3": "2.9/CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
         "Cwe": "CWE-20",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2017-1000371",
+        "Public": "20170619"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-17666",
+        "Cvss2": "",
+        "Cvss3": "6.3/CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:H",
+        "Cwe": "CWE-120",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-5260",
-        "Public": "20200414:1800"
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-17666",
+        "Public": "20191018"
       }
     ],
     "Bugzillas": [
@@ -66,23 +88,32 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1822020",
-        "URL": "https://bugzilla.redhat.com/1822020",
-        "Title": "CVE-2020-5260 git: Crafted URL containing new lines can cause credential leak"
+        "ID": "1462158",
+        "URL": "https://bugzilla.redhat.com/1462158",
+        "Title": "CVE-2017-1000371 kernel: offset2lib allows for the stack guard page to be jumped over"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1763690",
+        "URL": "https://bugzilla.redhat.com/1763690",
+        "Title": "CVE-2019-17666 kernel: rtl_p2p_noa_ie in drivers/net/wireless/realtek/rtlwifi/ps.c in the Linux kernel lacks a certain upper-bound check, leading to a buffer overflow"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::workstation",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::client"
     ],
     "Issued": {
-      "Date": "2020-04-21"
+      "Date": "2020-04-22"
     },
     "Updated": {
-      "Date": "2020-04-21"
+      "Date": "2020-04-22"
     }
   },
   "Criteria": {
@@ -105,6 +136,34 @@
               "Local": "criteria"
             },
             "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20201524027",
+                "Comment": "kernel earlier than 0:2.6.32-754.29.1.el6 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20201524028",
+                "Comment": "kernel earlier than 0:2.6.32-754.29.1.el6 is set to boot up on next boot"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
             "Criterias": [
               {
                 "XMLName": {
@@ -120,8 +179,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511001",
-                    "Comment": "git-svn is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524001",
+                    "Comment": "kernel-firmware is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -129,8 +188,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561028",
-                    "Comment": "git-svn is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842004",
+                    "Comment": "kernel-firmware is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -148,8 +207,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511003",
-                    "Comment": "git-gnome-keyring is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524003",
+                    "Comment": "kernel-doc is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -157,8 +216,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183408002",
-                    "Comment": "git-gnome-keyring is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842002",
+                    "Comment": "kernel-doc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -176,8 +235,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511005",
-                    "Comment": "git-daemon is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524005",
+                    "Comment": "kernel-abi-whitelists is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -185,8 +244,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561030",
-                    "Comment": "git-daemon is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20131645022",
+                    "Comment": "kernel-abi-whitelists is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -204,8 +263,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511007",
-                    "Comment": "perl-Git-SVN is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524007",
+                    "Comment": "perf is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -213,8 +272,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561012",
-                    "Comment": "perl-Git-SVN is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842006",
+                    "Comment": "perf is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -232,8 +291,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511009",
-                    "Comment": "gitweb is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524009",
+                    "Comment": "kernel-headers is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -241,8 +300,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561026",
-                    "Comment": "gitweb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842010",
+                    "Comment": "kernel-headers is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -260,8 +319,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511011",
-                    "Comment": "gitk is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524011",
+                    "Comment": "kernel-devel is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -269,8 +328,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561006",
-                    "Comment": "gitk is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842016",
+                    "Comment": "kernel-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -288,8 +347,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511013",
-                    "Comment": "git-p4 is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524013",
+                    "Comment": "kernel-debug-devel is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -297,8 +356,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561014",
-                    "Comment": "git-p4 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842008",
+                    "Comment": "kernel-debug-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -316,8 +375,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511015",
-                    "Comment": "git-instaweb is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524015",
+                    "Comment": "kernel-debug is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -325,8 +384,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183408014",
-                    "Comment": "git-instaweb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842014",
+                    "Comment": "kernel-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -344,8 +403,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511017",
-                    "Comment": "git-hg is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524017",
+                    "Comment": "kernel is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -353,8 +412,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561022",
-                    "Comment": "git-hg is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842012",
+                    "Comment": "kernel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -372,8 +431,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511019",
-                    "Comment": "git-gui is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524019",
+                    "Comment": "python-perf is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -381,8 +440,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561004",
-                    "Comment": "git-gui is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111530024",
+                    "Comment": "python-perf is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -400,8 +459,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511021",
-                    "Comment": "git-email is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524021",
+                    "Comment": "kernel-bootwrapper is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -409,8 +468,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561020",
-                    "Comment": "git-email is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842018",
+                    "Comment": "kernel-bootwrapper is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -428,8 +487,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511023",
-                    "Comment": "git-cvs is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524023",
+                    "Comment": "kernel-kdump-devel is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -437,8 +496,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561002",
-                    "Comment": "git-cvs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842022",
+                    "Comment": "kernel-kdump-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -456,8 +515,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511025",
-                    "Comment": "git-bzr is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201524025",
+                    "Comment": "kernel-kdump is earlier than 0:2.6.32-754.29.1.el6"
                   },
                   {
                     "XMLName": {
@@ -465,148 +524,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561008",
-                    "Comment": "git-bzr is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511027",
-                    "Comment": "git-all is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561010",
-                    "Comment": "git-all is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511029",
-                    "Comment": "emacs-git-el is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561024",
-                    "Comment": "emacs-git-el is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511031",
-                    "Comment": "emacs-git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561016",
-                    "Comment": "emacs-git is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511033",
-                    "Comment": "git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561032",
-                    "Comment": "git is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511035",
-                    "Comment": "perl-Git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561018",
-                    "Comment": "perl-Git is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100842020",
+                    "Comment": "kernel-kdump is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -621,8 +540,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 is installed"
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
           }
         ]
       }
@@ -634,7 +553,7 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
         "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
