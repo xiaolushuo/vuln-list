@@ -1,0 +1,375 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20201581",
+  "Class": "patch",
+  "Title": "RHSA-2020:1581: wavpack security update (Low)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:1581",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1581"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-19840",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-19840"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-19841",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-19841"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-1010315",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-1010315"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-1010317",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-1010317"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-1010319",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-1010319"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-11498",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-11498"
+    }
+  ],
+  "Description": "WavPack is a completely open audio compression format providing lossless, high-quality lossy, and a unique hybrid compression mode. \n\nSecurity Fix(es):\n\n* wawpack: Infinite loop in WavpackPackInit function lead to DoS (CVE-2018-19840)\n\n* wawpack: Out-of-bounds read in WavpackVerifySingleBlock function leads to DoS (CVE-2018-19841)\n\n* wavpack: Use of uninitialized variable in WavpackSetConfiguration64 leads to DoS (CVE-2019-11498)\n\n* wavpack: Divide by zero in ParseDsdiffHeaderConfig leads to crash (CVE-2019-1010315)\n\n* wavpack: Use of uninitialized variable in ParseCaffHeaderConfig leads to DoS (CVE-2019-1010317)\n\n* wavpack: Use of uninitialized variable in ParseWave64HeaderConfig leads to DoS (CVE-2019-1010319)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.2 Release Notes linked from the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Low",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-19840",
+        "Cvss2": "",
+        "Cvss3": "3.3/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-835",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-19840",
+        "Public": "20181126"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-19841",
+        "Cvss2": "",
+        "Cvss3": "3.3/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-125",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-19841",
+        "Public": "20181129"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-1010315",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-369",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-1010315",
+        "Public": "20190712"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-1010317",
+        "Cvss2": "",
+        "Cvss3": "3.3/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+        "Cwe": "CWE-20 CWE-665",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-1010317",
+        "Public": "20190806"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-1010319",
+        "Cvss2": "",
+        "Cvss3": "2.5/CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-665 CWE-369",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-1010319",
+        "Public": "20190806"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-11498",
+        "Cvss2": "",
+        "Cvss3": "4/CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-456",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-11498",
+        "Public": "20190305"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1661448",
+        "URL": "https://bugzilla.redhat.com/1661448",
+        "Title": "CVE-2018-19840 wawpack: Infinite loop in WavpackPackInit function lead to DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1661449",
+        "URL": "https://bugzilla.redhat.com/1661449",
+        "Title": "CVE-2018-19841 wawpack: Out-of-bounds read in WavpackVerifySingleBlock function leads to DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1704633",
+        "URL": "https://bugzilla.redhat.com/1704633",
+        "Title": "CVE-2019-11498 wavpack: Use of uninitialized variable in WavpackSetConfiguration64 leads to DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1729418",
+        "URL": "https://bugzilla.redhat.com/1729418",
+        "Title": "CVE-2019-1010315 wavpack: Divide by zero in ParseDsdiffHeaderConfig leads to crash"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737740",
+        "URL": "https://bugzilla.redhat.com/1737740",
+        "Title": "CVE-2019-1010319 wavpack: Use of uninitialized variable in ParseWave64HeaderConfig leads to DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737747",
+        "URL": "https://bugzilla.redhat.com/1737747",
+        "Title": "CVE-2019-1010317 wavpack: Use of uninitialized variable in ParseCaffHeaderConfig leads to DoS"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream",
+      "cpe:/a:redhat:enterprise_linux:8::crb"
+    ],
+    "Issued": {
+      "Date": "2020-04-28"
+    },
+    "Updated": {
+      "Date": "2020-04-28"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581001",
+                    "Comment": "wavpack-debugsource is earlier than 0:5.1.0-15.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581002",
+                    "Comment": "wavpack-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581003",
+                    "Comment": "wavpack-devel is earlier than 0:5.1.0-15.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581004",
+                    "Comment": "wavpack-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581005",
+                    "Comment": "wavpack is earlier than 0:5.1.0-15.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201581006",
+                    "Comment": "wavpack is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20194268066",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20194268067",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

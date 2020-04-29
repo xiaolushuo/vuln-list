@@ -1,0 +1,236 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20201712",
+  "Class": "patch",
+  "Title": "RHSA-2020:1712: edk2 security, bug fix, and enhancement update (Moderate)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:1712",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1712"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-14563",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-14563"
+    }
+  ],
+  "Description": "EDK (Embedded Development Kit) is a project to enable UEFI support for Virtual Machines. This package contains a sample 64-bit UEFI firmware for QEMU and KVM. \n\nSecurity Fix(es):\n\n* edk2: numeric truncation in MdeModulePkg/PiDxeS3BootScriptLib (CVE-2019-14563)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.2 Release Notes linked from the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Moderate",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-14563",
+        "Cvss2": "",
+        "Cvss3": "6.4/CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:H/A:L",
+        "Cwe": "CWE-190",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-14563",
+        "Public": "20200205"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1748180",
+        "URL": "https://bugzilla.redhat.com/1748180",
+        "Title": "rebase edk2 to upstream tag edk2-stable201908 for RHEL-8.2"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1751993",
+        "URL": "https://bugzilla.redhat.com/1751993",
+        "Title": "DxeImageVerificationLib handles \"DENY execute on security violation\" like \"DEFER execute on security violation\" [rhel8]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1758620",
+        "URL": "https://bugzilla.redhat.com/1758620",
+        "Title": "CVE-2019-14563 edk2: numeric truncation in MdeModulePkg/PiDxeS3BootScriptLib"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1789335",
+        "URL": "https://bugzilla.redhat.com/1789335",
+        "Title": "VM with edk2 can't boot when setting memory with '-m 2001'"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1789797",
+        "URL": "https://bugzilla.redhat.com/1789797",
+        "Title": "Backport upstream patch series: \"UefiBootManagerLib, HttpDxe: tweaks for large HTTP(S) downloads\" to improve HTTP(S) Boot experience with large (4GiB+) files"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1806359",
+        "URL": "https://bugzilla.redhat.com/1806359",
+        "Title": "bochs-display cannot show graphic wihout driver attach"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
+    ],
+    "Issued": {
+      "Date": "2020-04-28"
+    },
+    "Updated": {
+      "Date": "2020-04-28"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201712001",
+                    "Comment": "edk2-ovmf is earlier than 0:20190829git37eef91017ad-9.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190968002",
+                    "Comment": "edk2-ovmf is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201712003",
+                    "Comment": "edk2-aarch64 is earlier than 0:20190829git37eef91017ad-9.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190968004",
+                    "Comment": "edk2-aarch64 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20194268066",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20194268067",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

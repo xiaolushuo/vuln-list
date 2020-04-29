@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20200274",
+  "ID": "oval:com.redhat.rhsa:def:20201913",
   "Class": "patch",
-  "Title": "RHSA-2020:0274: openjpeg2 security update (Important)",
+  "Title": "RHSA-2020:1913: e2fsprogs security, bug fix, and enhancement update (Moderate)",
   "Affecteds": [
     {
       "XMLName": {
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:0274",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:0274"
+      "RefID": "RHSA-2020:1913",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1913"
     },
     {
       "XMLName": {
@@ -34,30 +34,30 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-6851",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6851"
+      "RefID": "CVE-2019-5094",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5094"
     }
   ],
-  "Description": "OpenJPEG is an open source library for reading and writing image files in JPEG2000 format.\n\nSecurity Fix(es):\n\n* openjpeg: Heap-based buffer overflow in opj_t1_clbl_decode_processor() (CVE-2020-6851)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "The e2fsprogs packages provide a number of utilities for creating, checking, modifying, and correcting the ext2, ext3, and ext4 file systems.\n\nThe following packages have been upgraded to a later upstream version: e2fsprogs (1.45.4). (BZ#1783777)\n\nSecurity Fix(es):\n\n* e2fsprogs: crafted ext4 partition leads to out-of-bounds write (CVE-2019-5094)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.2 Release Notes linked from the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Important",
+    "Severity": "Moderate",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-6851",
+        "CveID": "CVE-2019-5094",
         "Cvss2": "",
-        "Cvss3": "8.1/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-        "Cwe": "CWE-122",
+        "Cvss3": "6.4/CVSS:3.0/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-787",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-6851",
-        "Public": "20200113"
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5094",
+        "Public": "20190827"
       }
     ],
     "Bugzillas": [
@@ -66,21 +66,47 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1790511",
-        "URL": "https://bugzilla.redhat.com/1790511",
-        "Title": "CVE-2020-6851 openjpeg: Heap-based buffer overflow in opj_t1_clbl_decode_processor()"
+        "ID": "1768555",
+        "URL": "https://bugzilla.redhat.com/1768555",
+        "Title": "CVE-2019-5094 e2fsprogs: crafted ext4 partition leads to out-of-bounds write"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1780279",
+        "URL": "https://bugzilla.redhat.com/1780279",
+        "Title": "RFE: Update mke2fs.conf to provide easy method of making RHEL6/7-compatible filesystems"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783777",
+        "URL": "https://bugzilla.redhat.com/1783777",
+        "Title": "[Rebase] Rebase e2fsprogs to 1.45.4"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1788573",
+        "URL": "https://bugzilla.redhat.com/1788573",
+        "Title": "e2fsprogs: Document supported features/options in ext4 man page"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:enterprise_linux:8",
-      "cpe:/a:redhat:enterprise_linux:8::crb",
-      "cpe:/a:redhat:enterprise_linux:8::appstream"
+      "cpe:/o:redhat:enterprise_linux:8",
+      "cpe:/o:redhat:enterprise_linux:8::baseos"
     ],
     "Issued": {
-      "Date": "2020-01-29"
+      "Date": "2020-04-28"
     },
     "Updated": {
-      "Date": "2020-01-29"
+      "Date": "2020-04-28"
     }
   },
   "Criteria": {
@@ -118,8 +144,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274001",
-                    "Comment": "openjpeg2-devel-docs is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913001",
+                    "Comment": "e2fsprogs-debugsource is earlier than 0:1.45.4-3.el8"
                   },
                   {
                     "XMLName": {
@@ -127,8 +153,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274002",
-                    "Comment": "openjpeg2-devel-docs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913002",
+                    "Comment": "e2fsprogs-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -146,8 +172,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274003",
-                    "Comment": "openjpeg2-debugsource is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913003",
+                    "Comment": "libss is earlier than 0:1.45.4-3.el8"
                   },
                   {
                     "XMLName": {
@@ -155,8 +181,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274004",
-                    "Comment": "openjpeg2-debugsource is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913004",
+                    "Comment": "libss is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -174,8 +200,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274005",
-                    "Comment": "openjpeg2-tools is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913005",
+                    "Comment": "libcom_err-devel is earlier than 0:1.45.4-3.el8"
                   },
                   {
                     "XMLName": {
@@ -183,8 +209,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274006",
-                    "Comment": "openjpeg2-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913006",
+                    "Comment": "libcom_err-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -202,8 +228,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274007",
-                    "Comment": "openjpeg2 is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913007",
+                    "Comment": "libcom_err is earlier than 0:1.45.4-3.el8"
                   },
                   {
                     "XMLName": {
@@ -211,8 +237,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274008",
-                    "Comment": "openjpeg2 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913008",
+                    "Comment": "libcom_err is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -230,8 +256,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274009",
-                    "Comment": "openjpeg2-devel is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913009",
+                    "Comment": "e2fsprogs-libs is earlier than 0:1.45.4-3.el8"
                   },
                   {
                     "XMLName": {
@@ -239,8 +265,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274010",
-                    "Comment": "openjpeg2-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913010",
+                    "Comment": "e2fsprogs-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913011",
+                    "Comment": "e2fsprogs-devel is earlier than 0:1.45.4-3.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913012",
+                    "Comment": "e2fsprogs-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913013",
+                    "Comment": "e2fsprogs is earlier than 0:1.45.4-3.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913014",
+                    "Comment": "e2fsprogs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

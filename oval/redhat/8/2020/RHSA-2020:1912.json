@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20200274",
+  "ID": "oval:com.redhat.rhsa:def:20201912",
   "Class": "patch",
-  "Title": "RHSA-2020:0274: openjpeg2 security update (Important)",
+  "Title": "RHSA-2020:1912: bluez security update (Low)",
   "Affecteds": [
     {
       "XMLName": {
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:0274",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:0274"
+      "RefID": "RHSA-2020:1912",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1912"
     },
     {
       "XMLName": {
@@ -34,30 +34,30 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-6851",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6851"
+      "RefID": "CVE-2018-10910",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-10910"
     }
   ],
-  "Description": "OpenJPEG is an open source library for reading and writing image files in JPEG2000 format.\n\nSecurity Fix(es):\n\n* openjpeg: Heap-based buffer overflow in opj_t1_clbl_decode_processor() (CVE-2020-6851)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "The bluez packages contain the following utilities for use in Bluetooth applications: hcitool, hciattach, hciconfig, bluetoothd, l2ping, start scripts (Red Hat), and pcmcia configuration files. \n\nSecurity Fix(es):\n\n* bluez: failure in disabling Bluetooth discoverability in certain cases may lead to the unauthorized pairing of Bluetooth devices (CVE-2018-10910)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.2 Release Notes linked from the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Important",
+    "Severity": "Low",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-6851",
+        "CveID": "CVE-2018-10910",
         "Cvss2": "",
-        "Cvss3": "8.1/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-        "Cwe": "CWE-122",
+        "Cvss3": "4.5/CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+        "Cwe": "CWE-863",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-6851",
-        "Public": "20200113"
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-10910",
+        "Public": "20180720:1850"
       }
     ],
     "Bugzillas": [
@@ -66,21 +66,23 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1790511",
-        "URL": "https://bugzilla.redhat.com/1790511",
-        "Title": "CVE-2020-6851 openjpeg: Heap-based buffer overflow in opj_t1_clbl_decode_processor()"
+        "ID": "1606203",
+        "URL": "https://bugzilla.redhat.com/1606203",
+        "Title": "CVE-2018-10910 bluez: failure in disabling Bluetooth discoverability in certain cases may lead to the unauthorized pairing of Bluetooth devices"
       }
     ],
     "AffectedCPEList": [
       "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/o:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream",
       "cpe:/a:redhat:enterprise_linux:8::crb",
-      "cpe:/a:redhat:enterprise_linux:8::appstream"
+      "cpe:/o:redhat:enterprise_linux:8::baseos"
     ],
     "Issued": {
-      "Date": "2020-01-29"
+      "Date": "2020-04-28"
     },
     "Updated": {
-      "Date": "2020-01-29"
+      "Date": "2020-04-28"
     }
   },
   "Criteria": {
@@ -118,8 +120,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274001",
-                    "Comment": "openjpeg2-devel-docs is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912001",
+                    "Comment": "bluez-debugsource is earlier than 0:5.50-3.el8"
                   },
                   {
                     "XMLName": {
@@ -127,8 +129,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274002",
-                    "Comment": "openjpeg2-devel-docs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912002",
+                    "Comment": "bluez-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -146,8 +148,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274003",
-                    "Comment": "openjpeg2-debugsource is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912003",
+                    "Comment": "bluez-cups is earlier than 0:5.50-3.el8"
                   },
                   {
                     "XMLName": {
@@ -155,8 +157,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274004",
-                    "Comment": "openjpeg2-debugsource is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912004",
+                    "Comment": "bluez-cups is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -174,8 +176,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274005",
-                    "Comment": "openjpeg2-tools is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912005",
+                    "Comment": "bluez-obexd is earlier than 0:5.50-3.el8"
                   },
                   {
                     "XMLName": {
@@ -183,8 +185,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274006",
-                    "Comment": "openjpeg2-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912006",
+                    "Comment": "bluez-obexd is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -202,8 +204,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274007",
-                    "Comment": "openjpeg2 is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912007",
+                    "Comment": "bluez-libs is earlier than 0:5.50-3.el8"
                   },
                   {
                     "XMLName": {
@@ -211,8 +213,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274008",
-                    "Comment": "openjpeg2 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912008",
+                    "Comment": "bluez-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -230,8 +232,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274009",
-                    "Comment": "openjpeg2-devel is earlier than 0:2.3.1-2.el8_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912009",
+                    "Comment": "bluez-hid2hci is earlier than 0:5.50-3.el8"
                   },
                   {
                     "XMLName": {
@@ -239,8 +241,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200274010",
-                    "Comment": "openjpeg2-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912010",
+                    "Comment": "bluez-hid2hci is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912011",
+                    "Comment": "bluez is earlier than 0:5.50-3.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912012",
+                    "Comment": "bluez is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912013",
+                    "Comment": "bluez-libs-devel is earlier than 0:5.50-3.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912014",
+                    "Comment": "bluez-libs-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
