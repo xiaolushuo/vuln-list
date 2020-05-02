@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2019:1803-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2019-07-10T07:40:15Z",
-    "CurrentReleaseDate": "2019-07-10T07:40:15Z",
+    "InitialReleaseDate": "2019-07-10T07:40:11Z",
+    "CurrentReleaseDate": "2019-07-10T07:40:11Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2019-07-10T07:40:15Z",
+        "Date": "2019-07-10T07:40:11Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,16 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "kernel-firmware-20190618-3.22.1",
+        "RelatesToProductReference": "SUSE:SLE-15:Update",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ucode-amd-20190618-3.22.1",
+        "RelatesToProductReference": "SUSE:SLE-15:Update",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "kernel-firmware-20190618-3.22.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
@@ -84,7 +94,9 @@
           "Type": "Fixed",
           "ProductID": [
             "SUSE Linux Enterprise Module for Basesystem 15:kernel-firmware-20190618-3.22.1",
-            "SUSE Linux Enterprise Module for Basesystem 15:ucode-amd-20190618-3.22.1"
+            "SUSE Linux Enterprise Module for Basesystem 15:ucode-amd-20190618-3.22.1",
+            "SUSE:SLE-15:Update:kernel-firmware-20190618-3.22.1",
+            "SUSE:SLE-15:Update:ucode-amd-20190618-3.22.1"
           ]
         }
       ],
