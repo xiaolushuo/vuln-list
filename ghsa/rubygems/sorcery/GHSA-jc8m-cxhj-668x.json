@@ -1,0 +1,49 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-05-07T21:16:24Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "sorcery"
+  },
+  "Advisory": {
+    "DatabaseId": 2084,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWpjOG0tY3hoai02Njh4",
+    "GhsaId": "GHSA-jc8m-cxhj-668x",
+    "References": [
+      {
+        "Url": "https://github.com/Sorcery/sorcery/security/advisories/GHSA-jc8m-cxhj-668x"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-11052"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-jc8m-cxhj-668x"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-jc8m-cxhj-668x"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-11052"
+      }
+    ],
+    "Description": "### Impact\nBrute force vulnerability when using password authentication via Sorcery. The brute force protection submodule will prevent a brute force attack for the defined lockout period, but once expired protection will not be re-enabled until a user or malicious actor logs in successfully. This does not affect users that do not use the built-in brute force protection submodule, nor users that use permanent account lockout.\n\n### Patches\nPatched as of version `0.15.0`.\n\n### Workarounds\nCurrently no workarounds, other than monkey patching the authenticate method provided by Sorcery or upgrading to version `0.15.0`.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-05-07T21:16:46Z",
+    "Severity": "HIGH",
+    "Summary": "Improper Restriction of Excessive Authentication Attempts in Sorcery",
+    "UpdatedAt": "2020-05-07T21:16:46Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.15.0"
+      },
+      "VulnerableVersionRange": "\u003c 0.15.0"
+    }
+  ]
+}
