@@ -1,0 +1,64 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-05-11T21:16:38Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.kafka:kafka"
+  },
+  "Advisory": {
+    "DatabaseId": 2089,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTZqbWYtbXh3Zi1yM2pj",
+    "GhsaId": "GHSA-6jmf-mxwf-r3jc",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-12399"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-6jmf-mxwf-r3jc"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-6jmf-mxwf-r3jc"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-12399"
+      }
+    ],
+    "Description": "When Connect workers in Apache Kafka 2.0.0, 2.0.1, 2.1.0, 2.1.1, 2.2.0, 2.2.1, or 2.3.0 are configured with one or more config providers, and a connector is created/updated on that Connect cluster to use an externalized secret variable in a substring of a connector configuration property value, then any client can issue a request to the same Connect cluster to obtain the connector's task configuration and the response will contain the plaintext secret rather than the externalized secrets variables.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-05-12T00:39:27Z",
+    "Severity": "MODERATE",
+    "Summary": "Exposure of Sensitive Information to an Unauthorized Actor in Apache Kafka",
+    "UpdatedAt": "2020-05-12T00:39:27Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.3.1"
+      },
+      "VulnerableVersionRange": "= 2.3.0"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.2.2"
+      },
+      "VulnerableVersionRange": "\u003e= 2.2.0, \u003c= 2.2.1"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.1.2"
+      },
+      "VulnerableVersionRange": "\u003e= 2.1.0, \u003c= 2.1.1"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.0.2"
+      },
+      "VulnerableVersionRange": "\u003e= 2.0.0, \u003c= 2.0.1"
+    }
+  ]
+}
