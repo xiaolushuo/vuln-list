@@ -35,16 +35,34 @@
     "Operator": "AND",
     "Criterias": [
       {
-        "Operator": "AND",
-        "Criterias": null,
-        "Criterions": [
+        "Operator": "OR",
+        "Criterias": [
           {
-            "Comment": "python3-pip is earlier than 0:9.0.3-7.el7_8"
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python3-pip is earlier than 0:9.0.3-7.el7_7"
+              },
+              {
+                "Comment": "python3-pip is signed with the Oracle Linux 7 key"
+              }
+            ]
           },
           {
-            "Comment": "python3-pip is signed with the Oracle Linux 7 key"
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python3-pip is earlier than 0:9.0.3-7.el7_8"
+              },
+              {
+                "Comment": "python3-pip is signed with the Oracle Linux 7 key"
+              }
+            ]
           }
-        ]
+        ],
+        "Criterions": null
       }
     ],
     "Criterions": [
