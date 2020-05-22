@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20201511",
+  "ID": "oval:com.redhat.rhsa:def:20202250",
   "Class": "patch",
-  "Title": "RHSA-2020:1511: git security update (Important)",
+  "Title": "RHSA-2020:2250: dotnet3.1 security update (Important)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 7"
+        "Red Hat Enterprise Linux 8"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:1511",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:1511"
+      "RefID": "RHSA-2020:2250",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:2250"
     },
     {
       "XMLName": {
@@ -34,11 +34,20 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-5260",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-5260"
+      "RefID": "CVE-2020-1108",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1108"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-1161",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1161"
     }
   ],
-  "Description": "Git is a distributed revision control system with a decentralized architecture. As opposed to centralized version control systems with a client-server model, Git ensures that each working copy of a Git repository is an exact copy with complete revision history. This not only allows the user to work on and contribute to projects without the need to have permission to push the changes to their official repositories, but also makes it possible for the user to work with no network connection.\n\nSecurity Fix(es):\n\n* git: Crafted URL containing new lines can cause credential leak (CVE-2020-5260)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": ".NET Core is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\n\nNew versions of .NET Core that address security vulnerabilities are now available. The updated versions are .NET Core SDK 3.1.104 and .NET Core Runtime 3.1.4.\n\nSecurity Fixes:\n\n* dotnet: Denial of service via untrusted input (CVE-2020-1108)\n* dotnet: Denial of service due to infinite loop (CVE-2020-1161)\n\nDefault inclusions for applications built with .NET Core have been updated to reference the newest versions and their security fixes.\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
@@ -51,13 +60,26 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-5260",
+        "CveID": "CVE-2020-1108",
         "Cvss2": "",
-        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-        "Cwe": "CWE-20",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-20 CWE-190",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-5260",
-        "Public": "20200414:1800"
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1108",
+        "Public": "20200512"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-1161",
+        "Cvss2": "",
+        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1161",
+        "Public": "20200512"
       }
     ],
     "Bugzillas": [
@@ -66,23 +88,29 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1822020",
-        "URL": "https://bugzilla.redhat.com/1822020",
-        "Title": "CVE-2020-5260 git: Crafted URL containing new lines can cause credential leak"
+        "ID": "1827643",
+        "URL": "https://bugzilla.redhat.com/1827643",
+        "Title": "CVE-2020-1108 dotnet: Denial of service via untrusted input"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1827645",
+        "URL": "https://bugzilla.redhat.com/1827645",
+        "Title": "CVE-2020-1161 dotnet: Denial of service due to infinite loop"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::client"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
-      "Date": "2020-04-21"
+      "Date": "2020-05-21"
     },
     "Updated": {
-      "Date": "2020-04-21"
+      "Date": "2020-05-21"
     }
   },
   "Criteria": {
@@ -120,8 +148,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511001",
-                    "Comment": "git-svn is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250001",
+                    "Comment": "dotnet3.1-debugsource is earlier than 0:3.1.104-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -129,8 +157,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561028",
-                    "Comment": "git-svn is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250002",
+                    "Comment": "dotnet3.1-debugsource is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -148,8 +176,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511003",
-                    "Comment": "git-gnome-keyring is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250003",
+                    "Comment": "netstandard-targeting-pack-2.1 is earlier than 0:3.1.104-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -157,8 +185,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183408002",
-                    "Comment": "git-gnome-keyring is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200130004",
+                    "Comment": "netstandard-targeting-pack-2.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -176,8 +204,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511005",
-                    "Comment": "git-daemon is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250005",
+                    "Comment": "dotnet-templates-3.1 is earlier than 0:3.1.104-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -185,8 +213,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561030",
-                    "Comment": "git-daemon is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250006",
+                    "Comment": "dotnet-templates-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -204,8 +232,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511007",
-                    "Comment": "perl-Git-SVN is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250007",
+                    "Comment": "dotnet-targeting-pack-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -213,8 +241,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561012",
-                    "Comment": "perl-Git-SVN is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250008",
+                    "Comment": "dotnet-targeting-pack-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -232,8 +260,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511009",
-                    "Comment": "gitweb is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250009",
+                    "Comment": "dotnet-sdk-3.1 is earlier than 0:3.1.104-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -241,8 +269,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561026",
-                    "Comment": "gitweb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250010",
+                    "Comment": "dotnet-sdk-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -260,8 +288,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511011",
-                    "Comment": "gitk is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250011",
+                    "Comment": "dotnet-runtime-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -269,8 +297,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561006",
-                    "Comment": "gitk is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250012",
+                    "Comment": "dotnet-runtime-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -288,8 +316,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511013",
-                    "Comment": "git-p4 is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250013",
+                    "Comment": "dotnet-hostfxr-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -297,8 +325,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561014",
-                    "Comment": "git-p4 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250014",
+                    "Comment": "dotnet-hostfxr-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -316,8 +344,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511015",
-                    "Comment": "git-instaweb is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250015",
+                    "Comment": "dotnet-host is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -325,8 +353,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183408014",
-                    "Comment": "git-instaweb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191259010",
+                    "Comment": "dotnet-host is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -344,8 +372,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511017",
-                    "Comment": "git-hg is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250017",
+                    "Comment": "dotnet-apphost-pack-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -353,8 +381,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561022",
-                    "Comment": "git-hg is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250018",
+                    "Comment": "dotnet-apphost-pack-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -372,8 +400,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511019",
-                    "Comment": "git-gui is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250019",
+                    "Comment": "dotnet is earlier than 0:3.1.104-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -381,8 +409,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561004",
-                    "Comment": "git-gui is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191259004",
+                    "Comment": "dotnet is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -400,8 +428,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511021",
-                    "Comment": "git-email is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250021",
+                    "Comment": "aspnetcore-targeting-pack-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -409,8 +437,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561020",
-                    "Comment": "git-email is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250022",
+                    "Comment": "aspnetcore-targeting-pack-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -428,8 +456,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511023",
-                    "Comment": "git-cvs is earlier than 0:1.8.3.1-22.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250023",
+                    "Comment": "aspnetcore-runtime-3.1 is earlier than 0:3.1.4-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -437,176 +465,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561002",
-                    "Comment": "git-cvs is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511025",
-                    "Comment": "git-bzr is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561008",
-                    "Comment": "git-bzr is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511027",
-                    "Comment": "git-all is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561010",
-                    "Comment": "git-all is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511029",
-                    "Comment": "emacs-git-el is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561024",
-                    "Comment": "emacs-git-el is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511031",
-                    "Comment": "emacs-git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561016",
-                    "Comment": "emacs-git is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511033",
-                    "Comment": "git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561032",
-                    "Comment": "git is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201511035",
-                    "Comment": "perl-Git is earlier than 0:1.8.3.1-22.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152561018",
-                    "Comment": "perl-Git is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250024",
+                    "Comment": "aspnetcore-runtime-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -621,8 +481,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 is installed"
+            "TestRef": "oval:com.redhat.rhba:tst:20194268066",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
           }
         ]
       }
@@ -634,7 +494,7 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "TestRef": "oval:com.redhat.rhba:tst:20194268067",
         "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
