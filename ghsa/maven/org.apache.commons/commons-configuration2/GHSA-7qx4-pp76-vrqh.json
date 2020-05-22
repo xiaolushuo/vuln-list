@@ -1,0 +1,46 @@
+{
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-05-21T17:12:21Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.commons:commons-configuration2"
+  },
+  "Advisory": {
+    "DatabaseId": 2106,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTdxeDQtcHA3Ni12cnFo",
+    "GhsaId": "GHSA-7qx4-pp76-vrqh",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1953"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-7qx4-pp76-vrqh"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-7qx4-pp76-vrqh"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-1953"
+      }
+    ],
+    "Description": "Apache Commons Configuration uses a third-party library to parse YAML files which by default allows the instantiation of classes if the YAML includes special statements. Apache Commons Configuration versions 2.2, 2.3, 2.4, 2.5, 2.6 did not change the default settings of this library. So if a YAML file was loaded from an untrusted source, it could therefore load and execute code out of the control of the host application.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-05-21T19:08:08Z",
+    "Severity": "HIGH",
+    "Summary": "Remote code execution in Apache Commons Configuration",
+    "UpdatedAt": "2020-05-21T19:08:08Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "2.7"
+      },
+      "VulnerableVersionRange": "\u003e= 2.2, \u003c 2.7"
+    }
+  ]
+}
