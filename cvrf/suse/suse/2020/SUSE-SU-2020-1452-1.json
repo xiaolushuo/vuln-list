@@ -1,0 +1,194 @@
+{
+  "Title": "Security update for the Linux Kernel (Live Patch 4 for SLE 12 SP5)",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:1452-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-05-26T15:40:25Z",
+    "CurrentReleaseDate": "2020-05-26T15:40:25Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-05-26T15:40:25Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for the Linux Kernel (Live Patch 4 for SLE 12 SP5)",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for the Linux Kernel 4.12.14-122_20 fixes several issues.\n\nThe following security issues were fixed:\n\n- CVE-2020-12653: Fixed a buffer overflow in mwifiex_cmd_append_vsie_tlv() which could have allowed local users to gain privileges or cause a denial of service (bsc#1171254).\n- CVE-2020-12654: Fixed a heap-based buffer overflow in mwifiex_ret_wmm_get_status() which could have been triggered by a remote AP to trigger (bsc#1171252).\n- CVE-2020-1749: Fixed an improper implementation in some IPsec protocols where the data were sent unencrypted allowing an attacker to read them (bsc#1165631).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "kgraft-patch-4_12_14-95_51-default-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Live Patching 12 SP4",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP4_Update_13-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Live Patching 12 SP4",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_12_14-122_20-default-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Live Patching 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP5_Update_4-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Live Patching 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-livepatch-4_12_14-197_40-default-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Live Patching 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-livepatch-SLE15-SP1_Update_11-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Live Patching 15 SP1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20201452-1/",
+      "Description": "Link for SUSE-SU-2020:1452-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-May/006862.html",
+      "Description": "E-Mail link for SUSE-SU-2020:1452-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-12653",
+      "Description": "An issue was found in Linux kernel before 5.5.4. The mwifiex_cmd_append_vsie_tlv() function in drivers/net/wireless/marvell/mwifiex/scan.c allows local users to gain privileges or cause a denial of service because of an incorrect memcpy and buffer overflow, aka CID-b70261a288ea.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-12653.html",
+          "Description": "CVE-2020-12653"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171195",
+          "Description": "SUSE Bug 1171195"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171254",
+          "Description": "SUSE Bug 1171254"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-4_12_14-95_51-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-SLE12-SP4_Update_13-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-4_12_14-122_20-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-SLE12-SP5_Update_4-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-4_12_14-197_40-default-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-SLE15-SP1_Update_11-2-2.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-12654",
+      "Description": "An issue was found in Linux kernel before 5.5.4. mwifiex_ret_wmm_get_status() in drivers/net/wireless/marvell/mwifiex/wmm.c allows a remote AP to trigger a heap-based buffer overflow because of an incorrect memcpy, aka CID-3a9b153c5591.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-12654.html",
+          "Description": "CVE-2020-12654"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171202",
+          "Description": "SUSE Bug 1171202"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171252",
+          "Description": "SUSE Bug 1171252"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-4_12_14-95_51-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-SLE12-SP4_Update_13-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-4_12_14-122_20-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-SLE12-SP5_Update_4-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-4_12_14-197_40-default-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-SLE15-SP1_Update_11-2-2.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-1749",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-1749.html",
+          "Description": "CVE-2020-1749"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1165629",
+          "Description": "SUSE Bug 1165629"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-4_12_14-95_51-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP4:kgraft-patch-SLE12-SP4_Update_13-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-4_12_14-122_20-default-2-2.1",
+            "SUSE Linux Enterprise Live Patching 12 SP5:kgraft-patch-SLE12-SP5_Update_4-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-4_12_14-197_40-default-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-SLE15-SP1_Update_11-2-2.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
