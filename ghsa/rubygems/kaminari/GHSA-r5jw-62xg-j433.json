@@ -30,12 +30,12 @@
         "Value": "CVE-2020-11082"
       }
     ],
-    "Description": "### Impact\nThere was a vulnerability in versions of Kaminari that would allow an attacker to inject arbitrary code into pages with pagination links.\n\nFor example, an attacker could craft pagination links that link to other domain or host:\nhttps://example.com/posts?page=4\u0026original_script_name=https://another-host.example.com\n\nIn addition, an attacker could also craft pagination links that include JavaScript code that runs when a user clicks the link:\nhttps://example.com/posts?page=4\u0026original_script_name=javascript:alert(42)%3b//\n\n### Releases\nThe 1.2.1 gem including the patch has already been released.\nAll past released versions are affected by this vulnerability.\n\n### Workarounds\nApplication developers who can't update the gem can workaround by overriding the `PARAM_KEY_EXCEPT_LIST` constant.\n\n```ruby\nmodule Kaminari::Helpers\n  PARAM_KEY_EXCEPT_LIST = [:authenticity_token, :commit, :utf8, :_method, :script_name, :original_script_name].freeze\nend\n```",
+    "Description": "### Impact\nIn Kaminari before 1.2.1, there is a vulnerability that would allow an attacker to inject arbitrary code into pages with pagination links. This has been fixed in 1.2.1.\n\n### Releases\nThe 1.2.1 gem including the patch has already been released.\nAll past released versions are affected by this vulnerability.\n\n### Workarounds\nApplication developers who can't update the gem can workaround by overriding the `PARAM_KEY_EXCEPT_LIST` constant.\n\n```ruby\nmodule Kaminari::Helpers\n  PARAM_KEY_EXCEPT_LIST = [:authenticity_token, :commit, :utf8, :_method, :script_name, :original_script_name].freeze\nend\n```\n\n### Credits\nThanks to Daniel Mircea for finding the issue and sending a patch via GitHub. Also thanks to Aditya Prakash for reporting the vulnerability.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-05-28T21:10:11Z",
     "Severity": "MODERATE",
     "Summary": "Cross-Site Scripting in Kaminari",
-    "UpdatedAt": "2020-05-28T21:10:11Z",
+    "UpdatedAt": "2020-06-01T15:27:47Z",
     "WithdrawnAt": ""
   },
   "Versions": [
