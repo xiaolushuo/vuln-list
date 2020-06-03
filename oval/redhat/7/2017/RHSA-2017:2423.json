@@ -36,6 +36,15 @@
       "Source": "CVE",
       "RefID": "CVE-2017-5645",
       "RefURL": "https://access.redhat.com/security/cve/CVE-2017-5645"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-17571",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-17571"
     }
   ],
   "Description": "Log4j is a tool to help the programmer output log statements to a variety of output targets.\n\nSecurity Fix(es):\n\n* It was found that when using remote logging with log4j socket server the log4j server would deserialize any log event received via TCP or UDP. An attacker could use this flaw to send a specially crafted log event that, during deserialization, would execute arbitrary code in the context of the logger application. (CVE-2017-5645)",
@@ -58,6 +67,19 @@
         "Impact": "",
         "Href": "https://access.redhat.com/security/cve/CVE-2017-5645",
         "Public": "20170402"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-17571",
+        "Cvss2": "",
+        "Cvss3": "9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-502",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-17571",
+        "Public": "20191220"
       }
     ],
     "Bugzillas": [
@@ -73,10 +95,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::server",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::server"
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2017-08-07"
