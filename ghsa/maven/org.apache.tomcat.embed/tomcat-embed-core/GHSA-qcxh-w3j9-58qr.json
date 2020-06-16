@@ -1,0 +1,52 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-06-15T16:43:56Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.apache.tomcat.embed:tomcat-embed-core"
+  },
+  "Advisory": {
+    "DatabaseId": 2182,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXFjeGgtdzNqOS01OHFy",
+    "GhsaId": "GHSA-qcxh-w3j9-58qr",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2019-0199"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-qcxh-w3j9-58qr"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-qcxh-w3j9-58qr"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2019-0199"
+      }
+    ],
+    "Description": "The HTTP/2 implementation in Apache Tomcat 9.0.0.M1 to 9.0.14 and 8.5.0 to 8.5.37 accepted streams with excessive numbers of SETTINGS frames and also permitted clients to keep streams open without reading/writing request/response data. By keeping streams open for requests that utilised the Servlet API's blocking I/O, clients were able to cause server-side threads to block eventually leading to thread exhaustion and a DoS.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-06-15T18:51:09Z",
+    "Severity": "MODERATE",
+    "Summary": "Denial of Service in Tomcat",
+    "UpdatedAt": "2020-06-15T18:51:09Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.5.38"
+      },
+      "VulnerableVersionRange": "\u003e= 8.0.0, \u003c 8.5.38"
+    },
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.0.16"
+      },
+      "VulnerableVersionRange": "\u003e= 9.0.0, \u003c 9.0.16"
+    }
+  ]
+}

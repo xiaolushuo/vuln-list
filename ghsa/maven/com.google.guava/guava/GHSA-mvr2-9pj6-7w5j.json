@@ -1,0 +1,46 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-06-11T18:35:00Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "com.google.guava:guava"
+  },
+  "Advisory": {
+    "DatabaseId": 2170,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLW12cjItOXBqNi03dzVq",
+    "GhsaId": "GHSA-mvr2-9pj6-7w5j",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2018-10237"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-mvr2-9pj6-7w5j"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-mvr2-9pj6-7w5j"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2018-10237"
+      }
+    ],
+    "Description": "Unbounded memory allocation in Google Guava 11.0 through 24.x before 24.1.1 allows remote attackers to conduct denial of service attacks against servers that depend on this library and deserialize attacker-provided data, because the AtomicDoubleArray class (when serialized with Java serialization) and the CompoundOrdering class (when serialized with GWT serialization) perform eager allocation without appropriate checks on what a client has sent and whether the data size is reasonable.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-06-15T20:35:11Z",
+    "Severity": "MODERATE",
+    "Summary": "Denial of Service in Google Guava",
+    "UpdatedAt": "2020-06-15T20:35:11Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "24.1.1"
+      },
+      "VulnerableVersionRange": "\u003e 11.0, \u003c 24.1.1"
+    }
+  ]
+}
