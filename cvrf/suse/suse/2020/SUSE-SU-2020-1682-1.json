@@ -1,0 +1,722 @@
+{
+  "Title": "Security update for perl",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:1682-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-06-19T07:44:54Z",
+    "CurrentReleaseDate": "2020-06-19T07:44:54Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-06-19T07:44:54Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for perl",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for perl fixes the following issues:\n\n- CVE-2020-10543: Fixed a heap buffer overflow in regular expression compiler which could have \n  allowed overwriting of allocated memory with attacker's data (bsc#1171863).\n- CVE-2020-10878: Fixed multiple integer overflows which could have allowed the insertion of \n  instructions into the compiled form of Perl regular expression (bsc#1171864).\n- CVE-2020-12723: Fixed an attacker's corruption of the intermediate language state of a \n  compiled regular expression (bsc#1171866).\n- Fixed a bad warning in features.ph (bsc#1172348).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/389-ds:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/busybox:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/caasp-dex:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/cilium-etcd-operator:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/cilium-operator:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/cilium:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/configmap-reload:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/coredns:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/curl:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/etcd:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/gangway:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/grafana:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/helm-tiller:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/k8s-sidecar:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kube-apiserver:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kube-controller-manager:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kube-proxy:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kube-scheduler:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kube-state-metrics:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kubernetes-client:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/kured:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/metrics-server:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/prometheus-alertmanager:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/prometheus-node-exporter:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/prometheus-pushgateway:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/prometheus-server:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/rsyslog:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/skuba-tooling:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/velero-plugin-for-aws:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/velero-plugin-for-gcp:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/velero-plugin-for-microsoft-azure:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/velero-restic-restore-helper:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Container caasp/v5/velero:beta",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-EC2-CHOST-HVM-BYOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-EC2-CHOST-HVM-BYOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Ali",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Ali",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Azure",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Azure",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-EC2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-EC2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-GCE",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-GCE",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-OpenStack",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-OpenStack",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Development Tools 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Development Tools 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Development Tools 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Development Tools 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-ESPOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-ESPOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-ESPOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-ESPOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise High Performance Computing 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 15-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-base-32bit-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 15",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "perl-doc-5.26.1-7.12.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 15",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20201682-1/",
+      "Description": "Link for SUSE-SU-2020:1682-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-June/006983.html",
+      "Description": "E-Mail link for SUSE-SU-2020:1682-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-10543",
+      "Description": "Perl before 5.30.3 on 32-bit platforms allows a heap-based buffer overflow because nested regular expression quantifiers have an integer overflow.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-10543.html",
+          "Description": "CVE-2020-10543"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171863",
+          "Description": "SUSE Bug 1171863"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Container caasp/v5/389-ds:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/busybox:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/caasp-dex:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-etcd-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/configmap-reload:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/coredns:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/curl:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/etcd:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/gangway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/grafana:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/helm-tiller:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/k8s-sidecar:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-apiserver:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-controller-manager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-proxy:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-scheduler:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-state-metrics:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kubernetes-client:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kured:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/metrics-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-alertmanager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-node-exporter:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-pushgateway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/rsyslog:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/skuba-tooling:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-aws:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-gcp:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-microsoft-azure:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-restic-restore-helper:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero:beta:perl-base-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-doc-5.26.1-7.12.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-10878",
+      "Description": "Perl before 5.30.3 has an integer overflow related to mishandling of a \"PL_regkind[OP(n)] == NOTHING\" situation. A crafted regular expression could lead to malformed bytecode with a possibility of instruction injection.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-10878.html",
+          "Description": "CVE-2020-10878"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171864",
+          "Description": "SUSE Bug 1171864"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Container caasp/v5/389-ds:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/busybox:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/caasp-dex:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-etcd-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/configmap-reload:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/coredns:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/curl:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/etcd:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/gangway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/grafana:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/helm-tiller:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/k8s-sidecar:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-apiserver:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-controller-manager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-proxy:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-scheduler:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-state-metrics:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kubernetes-client:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kured:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/metrics-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-alertmanager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-node-exporter:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-pushgateway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/rsyslog:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/skuba-tooling:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-aws:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-gcp:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-microsoft-azure:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-restic-restore-helper:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero:beta:perl-base-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-doc-5.26.1-7.12.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-12723",
+      "Description": "regcomp.c in Perl before 5.30.3 allows a buffer overflow via a crafted regular expression because of recursive S_study_chunk calls.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-12723.html",
+          "Description": "CVE-2020-12723"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1171866",
+          "Description": "SUSE Bug 1171866"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Container caasp/v5/389-ds:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/busybox:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/caasp-dex:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-etcd-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium-operator:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/cilium:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/configmap-reload:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/coredns:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/curl:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/etcd:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/gangway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/grafana:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/helm-tiller:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/k8s-sidecar:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-apiserver:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-controller-manager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-proxy:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-scheduler:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kube-state-metrics:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kubernetes-client:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/kured:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/metrics-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-alertmanager:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-node-exporter:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-pushgateway:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/prometheus-server:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/rsyslog:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/skuba-tooling:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-aws:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-gcp:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-plugin-for-microsoft-azure:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero-restic-restore-helper:beta:perl-base-5.26.1-7.12.1",
+            "Container caasp/v5/velero:beta:perl-base-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-5.26.1-7.12.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Ali:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:perl-base-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-5.26.1-7.12.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-ESPOS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise High Performance Computing 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP1:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for Development Tools 15 SP2:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Module for additional PackageHub packages 15 SP2:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server 15-LTSS:perl-doc-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-32bit-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-base-5.26.1-7.12.1",
+            "SUSE Linux Enterprise Server for SAP Applications 15:perl-doc-5.26.1-7.12.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
