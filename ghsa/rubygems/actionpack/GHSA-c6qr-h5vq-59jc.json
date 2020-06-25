@@ -1,0 +1,46 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-06-24T17:34:00Z",
+  "Package": {
+    "Ecosystem": "RUBYGEMS",
+    "Name": "actionpack"
+  },
+  "Advisory": {
+    "DatabaseId": 2196,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLWM2cXItaDV2cS01OWpj",
+    "GhsaId": "GHSA-c6qr-h5vq-59jc",
+    "References": [
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8185"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-c6qr-h5vq-59jc"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-c6qr-h5vq-59jc"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-8185"
+      }
+    ],
+    "Description": "There is a vulnerability in versions of Rails prior to 6.0.3.2 that allowed\nan untrusted user to run any pending migrations on a Rails app running in\nproduction.\n\nThis vulnerability has been assigned the CVE identifier CVE-2020-8185.\n\nVersions Affected:  6.0.0 \u003c rails \u003c 6.0.3.2\nNot affected:       Applications with `config.action_dispatch.show_exceptions = false` (this is not a default setting in production)\nFixed Versions:     rails \u003e= 6.0.3.2\n\nImpact\n------\n\nUsing this issue, an attacker would be able to execute any migrations that\nare pending for a Rails app running in production mode. It is important to\nnote that an attacker is limited to running migrations the application\ndeveloper has already defined in their application and ones that have not\nalready ran.\n\nWorkarounds\n-----------\n\nUntil such time as the patch can be applied, application developers should\ndisable the ActionDispatch middleware in their production environment via\na line such as this one in their config/environment/production.rb:\n\n`config.middleware.delete ActionDispatch::ActionableExceptions`",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-06-24T17:40:33Z",
+    "Severity": "LOW",
+    "Summary": "Untrusted users can run pending migrations in production in Rails",
+    "UpdatedAt": "2020-06-24T17:40:33Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "6.0.3.2"
+      },
+      "VulnerableVersionRange": "\u003e= 6.0.0, \u003c= 6.0.3.1"
+    }
+  ]
+}
