@@ -1,0 +1,49 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-06-26T16:26:35Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "jsrsasign"
+  },
+  "Advisory": {
+    "DatabaseId": 2199,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLXh4eHEtY2htcC02N2c0",
+    "GhsaId": "GHSA-xxxq-chmp-67g4",
+    "References": [
+      {
+        "Url": "https://github.com/kjur/jsrsasign/security/advisories/GHSA-xxxq-chmp-67g4"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-14967"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-xxxq-chmp-67g4"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-xxxq-chmp-67g4"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-14967"
+      }
+    ],
+    "Description": "### Impact\nJsrsasign supports RSA PKCS#1 v1.5 (i.e. RSAES-PKCS1-v1_5) encryption and decryption. Its encrypted message is represented as BigInteger. When there is a valid encrypted message, a crafted message with prepending zeros can be decrypted by this vulnerability.\n\n- If you don't use RSA PKCS#1 decryption, this vulnerability is not affected.\n- Risk to forge contents of encrypted message is very low.\n- Risk to raise memory corruption is low since jsrsasign uses BigInteger class.\n\n### Patches\nUsers using RSA PKCS#1 v1.5 decryption should upgrade to 8.0.18.\n\n### Workarounds\nReject RSA PKCS#1 v1.5 encrypted message with unnecessary prepending zeros.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-06-26T16:27:08Z",
+    "Severity": "LOW",
+    "Summary": "RSA PKCS#1 decryption vulnerability with prepending zeros in jsrsasign",
+    "UpdatedAt": "2020-06-26T16:27:08Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "8.0.18"
+      },
+      "VulnerableVersionRange": "\u003c 8.0.18"
+    }
+  ]
+}
