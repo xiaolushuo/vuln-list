@@ -11,9 +11,6 @@
     "GhsaId": "GHSA-m42x-37p3-fv5w",
     "References": [
       {
-        "Url": "https://weblog.rubyonrails.org/2020/5/18/Rails-5-2-4-3-and-6-0-3-1-have-been-released/"
-      },
-      {
         "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-8162"
       },
       {
@@ -30,12 +27,12 @@
         "Value": "CVE-2020-8162"
       }
     ],
-    "Description": "There is a vulnerability in ActiveStorage's S3 adapter that allows the Content-Length of a\r\ndirect file upload to be modified by an end user.\r\n\r\nImpact\r\n------\r\n\r\nUtilizing this vulnerability, an attacker can control the Content-Length of an S3 direct upload URL without receiving a\r\nnew signature from the server. This could be used to bypass controls in place on the server to limit upload size.\r\n\r\nWorkarounds\r\n-----------\r\n\r\nThis is a low-severity security issue. As such, no workaround is necessarily\r\nuntil such time as the application can be upgraded.",
+    "Description": "There is a vulnerability in ActiveStorage's S3 adapter that allows the Content-Length of a\ndirect file upload to be modified by an end user.\n\nVersions Affected:  rails \u003c 5.2.4.2, rails \u003c 6.0.3.1\nNot affected:       Applications that do not use the direct upload functionality of the ActiveStorage S3 adapter.\nFixed Versions:     rails \u003e= 5.2.4.3, rails \u003e= 6.0.3.1\n\nImpact\n------\n\nUtilizing this vulnerability, an attacker can control the Content-Length of an S3 direct upload URL without receiving a\nnew signature from the server. This could be used to bypass controls in place on the server to limit upload size.\n\nWorkarounds\n-----------\n\nThis is a low-severity security issue. As such, no workaround is necessarily\nuntil such time as the application can be upgraded.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-05-26T15:09:48Z",
     "Severity": "LOW",
     "Summary": "Circumvention of file size limits in ActiveStorage",
-    "UpdatedAt": "2020-05-26T15:09:48Z",
+    "UpdatedAt": "2020-07-06T21:43:55Z",
     "WithdrawnAt": ""
   },
   "Versions": [
