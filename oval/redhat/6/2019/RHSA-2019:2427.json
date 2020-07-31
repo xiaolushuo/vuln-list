@@ -1,0 +1,576 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20192427",
+  "Class": "patch",
+  "Title": "RHSA-2019:2427: chromium-browser security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 6 Supplementary"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2019:2427",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2019:2427"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5850",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5850"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5851",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5851"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5852",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5852"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5853",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5853"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5854",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5854"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5855",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5855"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5856",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5856"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5857",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5857"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5858",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5858"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5859",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5859"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5860",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5860"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5861",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5861"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5862",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5862"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5864",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5864"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-5865",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-5865"
+    }
+  ],
+  "Description": "Chromium is an open-source web browser, powered by WebKit (Blink).\n\nThis update upgrades Chromium to version 76.0.3809.87.\n\nSecurity Fix(es):\n\n* chromium-browser: Use-after-free in offline page fetcher (CVE-2019-5850)\n\n* chromium-browser: Use-after-poison in offline audio context (CVE-2019-5851)\n\n* chromium-browser: Memory corruption in regexp length check (CVE-2019-5853)\n\n* chromium-browser: res: URIs can load alternative browsers (CVE-2019-5859)\n\n* chromium-browser: Use-after-free in PDFium (CVE-2019-5860)\n\n* chromium-browser: Integer overflow in PDFium (CVE-2019-5855)\n\n* chromium-browser: Insufficient checks on filesystem: URI permissions (CVE-2019-5856)\n\n* chromium-browser: Site isolation bypass from compromised renderer (CVE-2019-5865)\n\n* chromium-browser: Object leak of utility functions (CVE-2019-5852)\n\n* chromium-browser: Integer overflow in PDFium text rendering (CVE-2019-5854)\n\n* chromium-browser: Comparison of -0 and null yields crash (CVE-2019-5857)\n\n* chromium-browser: Insufficient filtering of Open URL service parameters (CVE-2019-5858)\n\n* chromium-browser: Click location incorrectly checked (CVE-2019-5861)\n\n* chromium-browser: AppCache not robust to compromised renderers (CVE-2019-5862)\n\n* chromium-browser: Insufficient port filtering in CORS for extensions (CVE-2019-5864)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5850",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5850",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5851",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5851",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5852",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5852",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5853",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5853",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5854",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5854",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5855",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5855",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5856",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5856",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5857",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5857",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5858",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5858",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5859",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5859",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5860",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5860",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5861",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5861",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5862",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5862",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5864",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5864",
+        "Public": "20190730"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-5865",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-5865",
+        "Public": "20190730"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1735496",
+        "URL": "https://bugzilla.redhat.com/1735496",
+        "Title": "CVE-2019-5852 chromium-browser: Object leak of utility functions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737721",
+        "URL": "https://bugzilla.redhat.com/1737721",
+        "Title": "CVE-2019-5850 chromium-browser: Use-after-free in offline page fetcher"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737722",
+        "URL": "https://bugzilla.redhat.com/1737722",
+        "Title": "CVE-2019-5860 chromium-browser: Use-after-free in PDFium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737723",
+        "URL": "https://bugzilla.redhat.com/1737723",
+        "Title": "CVE-2019-5853 chromium-browser: Memory corruption in regexp length check"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737724",
+        "URL": "https://bugzilla.redhat.com/1737724",
+        "Title": "CVE-2019-5851 chromium-browser: Use-after-poison in offline audio context"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737725",
+        "URL": "https://bugzilla.redhat.com/1737725",
+        "Title": "CVE-2019-5859 chromium-browser: res: URIs can load alternative browsers"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737727",
+        "URL": "https://bugzilla.redhat.com/1737727",
+        "Title": "CVE-2019-5856 chromium-browser: Insufficient checks on filesystem: URI permissions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737729",
+        "URL": "https://bugzilla.redhat.com/1737729",
+        "Title": "CVE-2019-5855 chromium-browser: Integer overflow in PDFium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737730",
+        "URL": "https://bugzilla.redhat.com/1737730",
+        "Title": "CVE-2019-5865 chromium-browser: Site isolation bypass from compromised renderer"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737731",
+        "URL": "https://bugzilla.redhat.com/1737731",
+        "Title": "CVE-2019-5858 chromium-browser: Insufficient filtering of Open URL service parameters"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737732",
+        "URL": "https://bugzilla.redhat.com/1737732",
+        "Title": "CVE-2019-5864 chromium-browser: Insufficient port filtering in CORS for extensions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737733",
+        "URL": "https://bugzilla.redhat.com/1737733",
+        "Title": "CVE-2019-5862 chromium-browser: AppCache not robust to compromised renderers"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737734",
+        "URL": "https://bugzilla.redhat.com/1737734",
+        "Title": "CVE-2019-5861 chromium-browser: Click location incorrectly checked"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737735",
+        "URL": "https://bugzilla.redhat.com/1737735",
+        "Title": "CVE-2019-5857 chromium-browser: Comparison of -0 and null yields crash"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1737736",
+        "URL": "https://bugzilla.redhat.com/1737736",
+        "Title": "CVE-2019-5854 chromium-browser: Integer overflow in PDFium text rendering"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2019-08-12"
+    },
+    "Updated": {
+      "Date": "2019-08-12"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20192427001",
+            "Comment": "chromium-browser is earlier than 0:76.0.3809.87-1.el6_10"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20141626002",
+            "Comment": "chromium-browser is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

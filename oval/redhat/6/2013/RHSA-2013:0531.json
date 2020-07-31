@@ -1,0 +1,365 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20130531",
+  "Class": "patch",
+  "Title": "RHSA-2013:0531: java-1.6.0-sun security update (Critical)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 6"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2013:0531",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2013:0531"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-0169",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-0169"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1486",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1486"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1487",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1487"
+    }
+  ],
+  "Description": "Oracle Java SE version 6 includes the Oracle Java Runtime Environment and\nthe Oracle Java Software Development Kit.\n\nThis update fixes three vulnerabilities in the Oracle Java Runtime\nEnvironment and the Oracle Java Software Development Kit. Further\ninformation about these flaws can be found on the Oracle Java SE Critical\nPatch Update Advisory page, listed in the References section.\n(CVE-2013-0169, CVE-2013-1486, CVE-2013-1487)\n\nAll users of java-1.6.0-sun are advised to upgrade to these updated\npackages, which provide Oracle Java 6 Update 41. All running instances of\nOracle Java must be restarted for the update to take effect.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Critical",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-0169",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-0169",
+        "Public": "20130204"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1486",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1486",
+        "Public": "20130219"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1487",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1487",
+        "Public": "20130219"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "907589",
+        "URL": "https://bugzilla.redhat.com/907589",
+        "Title": "CVE-2013-0169 SSL/TLS: CBC padding timing attack (lucky-13)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "913014",
+        "URL": "https://bugzilla.redhat.com/913014",
+        "Title": "CVE-2013-1486 OpenJDK: MBeanServer insufficient privilege restrictions (JMX, 8006446)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "913030",
+        "URL": "https://bugzilla.redhat.com/913030",
+        "Title": "CVE-2013-1487 Oracle JDK: unspecified vulnerability fixed in 6u41 and 7u15 (Deployment)"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2013-02-20"
+    },
+    "Updated": {
+      "Date": "2013-02-20"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531001",
+                    "Comment": "java-1.6.0-sun-demo is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282002",
+                    "Comment": "java-1.6.0-sun-demo is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531003",
+                    "Comment": "java-1.6.0-sun-src is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282008",
+                    "Comment": "java-1.6.0-sun-src is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531005",
+                    "Comment": "java-1.6.0-sun-jdbc is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282006",
+                    "Comment": "java-1.6.0-sun-jdbc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531007",
+                    "Comment": "java-1.6.0-sun-devel is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282004",
+                    "Comment": "java-1.6.0-sun-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531009",
+                    "Comment": "java-1.6.0-sun-plugin is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282010",
+                    "Comment": "java-1.6.0-sun-plugin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130531011",
+                    "Comment": "java-1.6.0-sun is earlier than 1:1.6.0.41-1jpp.1.el6_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110282012",
+                    "Comment": "java-1.6.0-sun is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

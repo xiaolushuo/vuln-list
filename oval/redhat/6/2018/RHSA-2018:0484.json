@@ -1,0 +1,855 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20180484",
+  "Class": "patch",
+  "Title": "RHSA-2018:0484: chromium-browser security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 6 Supplementary"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2018:0484",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2018:0484"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6057",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6057"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6060",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6060"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6061",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6061"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6062",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6062"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6063",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6063"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6064",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6064"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6065",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6065"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6066",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6066"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6067",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6067"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6069",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6069"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6070",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6070"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6071",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6071"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6072",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6072"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6073",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6073"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6074",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6074"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6075",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6075"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6076",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6076"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6077",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6077"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6078",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6078"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6079",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6079"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6080",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6080"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6081",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6081"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6082",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6082"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-6083",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-6083"
+    }
+  ],
+  "Description": "Chromium is an open-source web browser, powered by WebKit (Blink).\n\nThis update upgrades Chromium to version 65.0.3325.146.\n\nSecurity Fix(es):\n\n* chromium-browser: incorrect permissions on shared memory (CVE-2018-6057)\n\n* chromium-browser: use-after-free in blink (CVE-2018-6060)\n\n* chromium-browser: race condition in v8 (CVE-2018-6061)\n\n* chromium-browser: heap buffer overflow in skia (CVE-2018-6062)\n\n* chromium-browser: incorrect permissions on shared memory (CVE-2018-6063)\n\n* chromium-browser: type confusion in v8 (CVE-2018-6064)\n\n* chromium-browser: integer overflow in v8 (CVE-2018-6065)\n\n* chromium-browser: same origin bypass via canvas (CVE-2018-6066)\n\n* chromium-browser: buffer overflow in skia (CVE-2018-6067)\n\n* chromium-browser: stack buffer overflow in skia (CVE-2018-6069)\n\n* chromium-browser: csp bypass through extensions (CVE-2018-6070)\n\n* chromium-browser: heap bufffer overflow in skia (CVE-2018-6071)\n\n* chromium-browser: integer overflow in pdfium (CVE-2018-6072)\n\n* chromium-browser: heap bufffer overflow in webgl (CVE-2018-6073)\n\n* chromium-browser: mark-of-the-web bypass (CVE-2018-6074)\n\n* chromium-browser: overly permissive cross origin downloads (CVE-2018-6075)\n\n* chromium-browser: incorrect handling of url fragment identifiers in blink (CVE-2018-6076)\n\n* chromium-browser: timing attack using svg filters (CVE-2018-6077)\n\n* chromium-browser: url spoof in omnibox (CVE-2018-6078)\n\n* chromium-browser: information disclosure via texture data in webgl (CVE-2018-6079)\n\n* chromium-browser: information disclosure in ipc call (CVE-2018-6080)\n\n* chromium-browser: xss in interstitials (CVE-2018-6081)\n\n* chromium-browser: circumvention of port blocking (CVE-2018-6082)\n\n* chromium-browser: incorrect processing of appmanifests (CVE-2018-6083)\n\nFor more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6057",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6057",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6060",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6060",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6061",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6061",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6062",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6062",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6063",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6063",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6064",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6064",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6065",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6065",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6066",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6066",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6067",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6067",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6069",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6069",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6070",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6070",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6071",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6071",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6072",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6072",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6073",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6073",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6074",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6074",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6075",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6075",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6076",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6076",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6077",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6077",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6078",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6078",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6079",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6079",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6080",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6080",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6081",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6081",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6082",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6082",
+        "Public": "20180306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-6083",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-6083",
+        "Public": "20180306"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552476",
+        "URL": "https://bugzilla.redhat.com/1552476",
+        "Title": "CVE-2018-6060 chromium-browser: use-after-free in blink"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552477",
+        "URL": "https://bugzilla.redhat.com/1552477",
+        "Title": "CVE-2018-6061 chromium-browser: race condition in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552478",
+        "URL": "https://bugzilla.redhat.com/1552478",
+        "Title": "CVE-2018-6062 chromium-browser: heap buffer overflow in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552479",
+        "URL": "https://bugzilla.redhat.com/1552479",
+        "Title": "CVE-2018-6057 chromium-browser: incorrect permissions on shared memory"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552480",
+        "URL": "https://bugzilla.redhat.com/1552480",
+        "Title": "CVE-2018-6063 chromium-browser: incorrect permissions on shared memory"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552481",
+        "URL": "https://bugzilla.redhat.com/1552481",
+        "Title": "CVE-2018-6064 chromium-browser: type confusion in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552482",
+        "URL": "https://bugzilla.redhat.com/1552482",
+        "Title": "CVE-2018-6065 chromium-browser: integer overflow in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552483",
+        "URL": "https://bugzilla.redhat.com/1552483",
+        "Title": "CVE-2018-6066 chromium-browser: same origin bypass via canvas"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552484",
+        "URL": "https://bugzilla.redhat.com/1552484",
+        "Title": "CVE-2018-6067 chromium-browser: buffer overflow in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552486",
+        "URL": "https://bugzilla.redhat.com/1552486",
+        "Title": "CVE-2018-6069 chromium-browser: stack buffer overflow in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552487",
+        "URL": "https://bugzilla.redhat.com/1552487",
+        "Title": "CVE-2018-6070 chromium-browser: csp bypass through extensions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552488",
+        "URL": "https://bugzilla.redhat.com/1552488",
+        "Title": "CVE-2018-6071 chromium-browser: heap bufffer overflow in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552489",
+        "URL": "https://bugzilla.redhat.com/1552489",
+        "Title": "CVE-2018-6072 chromium-browser: integer overflow in pdfium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552490",
+        "URL": "https://bugzilla.redhat.com/1552490",
+        "Title": "CVE-2018-6073 chromium-browser: heap bufffer overflow in webgl"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552491",
+        "URL": "https://bugzilla.redhat.com/1552491",
+        "Title": "CVE-2018-6074 chromium-browser: mark-of-the-web bypass"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552492",
+        "URL": "https://bugzilla.redhat.com/1552492",
+        "Title": "CVE-2018-6075 chromium-browser: overly permissive cross origin downloads"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552493",
+        "URL": "https://bugzilla.redhat.com/1552493",
+        "Title": "CVE-2018-6076 chromium-browser: incorrect handling of url fragment identifiers in blink"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552494",
+        "URL": "https://bugzilla.redhat.com/1552494",
+        "Title": "CVE-2018-6077 chromium-browser: timing attack using svg filters"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552495",
+        "URL": "https://bugzilla.redhat.com/1552495",
+        "Title": "CVE-2018-6078 chromium-browser: url spoof in omnibox"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552496",
+        "URL": "https://bugzilla.redhat.com/1552496",
+        "Title": "CVE-2018-6079 chromium-browser: information disclosure via texture data in webgl"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552497",
+        "URL": "https://bugzilla.redhat.com/1552497",
+        "Title": "CVE-2018-6080 chromium-browser: information disclosure in ipc call"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552498",
+        "URL": "https://bugzilla.redhat.com/1552498",
+        "Title": "CVE-2018-6081 chromium-browser: xss in interstitials"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552499",
+        "URL": "https://bugzilla.redhat.com/1552499",
+        "Title": "CVE-2018-6082 chromium-browser: circumvention of port blocking"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1552500",
+        "URL": "https://bugzilla.redhat.com/1552500",
+        "Title": "CVE-2018-6083 chromium-browser: incorrect processing of appmanifests"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2018-03-12"
+    },
+    "Updated": {
+      "Date": "2018-03-12"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20180484001",
+            "Comment": "chromium-browser is earlier than 0:65.0.3325.146-2.el6_9"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20141626002",
+            "Comment": "chromium-browser is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

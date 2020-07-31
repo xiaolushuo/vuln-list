@@ -1,0 +1,186 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20131035",
+  "Class": "patch",
+  "Title": "RHSA-2013:1035: flash-plugin security update (Critical)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 6"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2013:1035",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2013:1035"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3344",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3344"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3345",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3345"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3347",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3347"
+    }
+  ],
+  "Description": "The flash-plugin package contains a Mozilla Firefox compatible Adobe Flash\nPlayer web browser plug-in.\n\nThis update fixes three vulnerabilities in Adobe Flash Player. These\nvulnerabilities are detailed in the Adobe Security bulletin APSB13-17,\nlisted in the References section. Specially-crafted SWF content could cause\nflash-plugin to crash or, potentially, execute arbitrary code when a victim\nloads a page containing the malicious SWF content. (CVE-2013-3344,\nCVE-2013-3345, CVE-2013-3347)\n\nAll users of Adobe Flash Player should install this updated package, which\nupgrades Flash Player to version 11.2.202.297.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Critical",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3344",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3344",
+        "Public": "20130709"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3345",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3345",
+        "Public": "20130709"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3347",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3347",
+        "Public": "20130709"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "982749",
+        "URL": "https://bugzilla.redhat.com/982749",
+        "Title": "CVE-2013-3344 CVE-2013-3345 CVE-2013-3347 flash-plugin: Multiple code execution flaws (APSB13-17)"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2013-07-10"
+    },
+    "Updated": {
+      "Date": "2013-07-10"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20131035001",
+            "Comment": "flash-plugin is earlier than 0:11.2.202.297-1.el6"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20100867002",
+            "Comment": "flash-plugin is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

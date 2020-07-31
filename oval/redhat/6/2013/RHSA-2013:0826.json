@@ -1,0 +1,759 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20130826",
+  "Class": "patch",
+  "Title": "RHSA-2013:0826: acroread security update (Critical)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 6"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2013:0826",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2013:0826"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2549",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2549"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2718",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2718"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2719",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2719"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2720",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2720"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2721",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2721"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2722",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2722"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2723",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2723"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2724",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2724"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2725",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2725"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2726",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2726"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2727",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2727"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2729",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2729"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2730",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2730"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2731",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2731"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2732",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2732"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2733",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2733"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2734",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2734"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2735",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2735"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2736",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2736"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2737",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2737"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3337",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3337"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3338",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3338"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3339",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3339"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3340",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3340"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3341",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3341"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-3346",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-3346"
+    }
+  ],
+  "Description": "Adobe Reader allows users to view and print documents in Portable Document\nFormat (PDF).\n\nThis update fixes multiple security flaws in Adobe Reader. These flaws are\ndetailed in the Adobe Security bulletin APSB13-15, listed in the References\nsection. A specially-crafted PDF file could cause Adobe Reader to crash or,\npotentially, execute arbitrary code as the user running Adobe Reader when\nopened. (CVE-2013-2549, CVE-2013-2718, CVE-2013-2719, CVE-2013-2720,\nCVE-2013-2721, CVE-2013-2722, CVE-2013-2723, CVE-2013-2724, CVE-2013-2725,\nCVE-2013-2726, CVE-2013-2727, CVE-2013-2729, CVE-2013-2730, CVE-2013-2731,\nCVE-2013-2732, CVE-2013-2733, CVE-2013-2734, CVE-2013-2735, CVE-2013-2736,\nCVE-2013-3337, CVE-2013-3338, CVE-2013-3339, CVE-2013-3340, CVE-2013-3341)\n\nThis update also fixes an information leak flaw in Adobe Reader.\n(CVE-2013-2737)\n\nAll Adobe Reader users should install these updated packages. They contain\nAdobe Reader version 9.5.5, which is not vulnerable to these issues. All\nrunning instances of Adobe Reader must be restarted for the update to take\neffect.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Critical",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2549",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2549",
+        "Public": "20130307"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2718",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2718",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2719",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2719",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2720",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2720",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2721",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2721",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2722",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2722",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2723",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2723",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2724",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2724",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2725",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2725",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2726",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2726",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2727",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2727",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2729",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2729",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2730",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2730",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2731",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2731",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2732",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2732",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2733",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2733",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2734",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2734",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2735",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2735",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2736",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2736",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2737",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2737",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3337",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3337",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3338",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3338",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3339",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3339",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3340",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3340",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3341",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3341",
+        "Public": "20130514"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-3346",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-3346",
+        "Public": "20130514"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "920180",
+        "URL": "https://bugzilla.redhat.com/920180",
+        "Title": "CVE-2013-2549 acroread: Unspecified vulnerability allows remote attackers to execute arbitrary code (CanSecWest 2013)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "962931",
+        "URL": "https://bugzilla.redhat.com/962931",
+        "Title": "acroread: multiple code execution flaws (APSB13-15)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "962940",
+        "URL": "https://bugzilla.redhat.com/962940",
+        "Title": "CVE-2013-2737 acroread: unspecified information leak issue (APSB13-15)"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2013-05-15"
+    },
+    "Updated": {
+      "Date": "2013-05-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130826001",
+                    "Comment": "acroread-plugin is earlier than 0:9.5.5-1.el6_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100934002",
+                    "Comment": "acroread-plugin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130826003",
+                    "Comment": "acroread is earlier than 0:9.5.5-1.el6_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100934004",
+                    "Comment": "acroread is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

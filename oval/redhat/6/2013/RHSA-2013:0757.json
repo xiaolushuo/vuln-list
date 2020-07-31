@@ -1,0 +1,1529 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20130757",
+  "Class": "patch",
+  "Title": "RHSA-2013:0757: java-1.7.0-oracle security update (Critical)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 6"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2013:0757",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2013:0757"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-0401",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-0401"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-0402",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-0402"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1488",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1488"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1491",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1491"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1518",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1518"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1537",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1537"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1540",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1540"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1557",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1557"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1558",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1558"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1561",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1561"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1563",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1563"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1564",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1564"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-1569",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-1569"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2383",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2383"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2384",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2384"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2394",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2394"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2414",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2414"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2415",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2415"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2416",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2416"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2417",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2417"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2418",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2418"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2419",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2419"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2420",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2420"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2421",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2421"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2422",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2422"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2423",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2423"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2424",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2424"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2425",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2425"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2426",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2426"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2427",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2427"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2428",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2428"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2429",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2429"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2430",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2430"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2431",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2431"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2432",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2432"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2433",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2433"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2434",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2434"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2435",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2435"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2436",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2436"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2438",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2438"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2439",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2439"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2013-2440",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2013-2440"
+    }
+  ],
+  "Description": "Oracle Java SE version 7 includes the Oracle Java Runtime Environment and\nthe Oracle Java Software Development Kit.\n\nThis update fixes several vulnerabilities in the Oracle Java Runtime\nEnvironment and the Oracle Java Software Development Kit. Further\ninformation about these flaws can be found on the Oracle Java SE Critical\nPatch Update Advisory page, listed in the References section.\n(CVE-2013-0401, CVE-2013-0402, CVE-2013-1488, CVE-2013-1491, CVE-2013-1518,\nCVE-2013-1537, CVE-2013-1540, CVE-2013-1557, CVE-2013-1558, CVE-2013-1561,\nCVE-2013-1563, CVE-2013-1564, CVE-2013-1569, CVE-2013-2383, CVE-2013-2384,\nCVE-2013-2394, CVE-2013-2414, CVE-2013-2415, CVE-2013-2416, CVE-2013-2417,\nCVE-2013-2418, CVE-2013-2419, CVE-2013-2420, CVE-2013-2421, CVE-2013-2422,\nCVE-2013-2423, CVE-2013-2424, CVE-2013-2425, CVE-2013-2426, CVE-2013-2427,\nCVE-2013-2428, CVE-2013-2429, CVE-2013-2430, CVE-2013-2431, CVE-2013-2432,\nCVE-2013-2433, CVE-2013-2434, CVE-2013-2435, CVE-2013-2436, CVE-2013-2438,\nCVE-2013-2439, CVE-2013-2440)\n\nAll users of java-1.7.0-oracle are advised to upgrade to these updated\npackages, which provide Oracle Java 7 Update 21 and resolve these issues.\nAll running instances of Oracle Java must be restarted for the update to\ntake effect.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Critical",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-0401",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-0401",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-0402",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-0402",
+        "Public": "20130306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1488",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1488",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1491",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1491",
+        "Public": "20130306"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1518",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1518",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1537",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1537",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1540",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1540",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1557",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1557",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1558",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1558",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1561",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1561",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1563",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1563",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1564",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1564",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-1569",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-1569",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2383",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2383",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2384",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2384",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2394",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2394",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2414",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2414",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2415",
+        "Cvss2": "1.9/AV:L/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-732",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2415",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2416",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2416",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2417",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:N/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2417",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2418",
+        "Cvss2": "4.6/AV:L/AC:L/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2418",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2419",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:N/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2419",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2420",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2420",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2421",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2421",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2422",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2422",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2423",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2423",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2424",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2424",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2425",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2425",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2426",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2426",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2427",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2427",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2428",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2428",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2429",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2429",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2430",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2430",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2431",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2431",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2432",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2432",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2433",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2433",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2434",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2434",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2435",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2435",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2436",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2436",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2438",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2438",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2439",
+        "Cvss2": "4.4/AV:L/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2439",
+        "Public": "20130416"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2013-2440",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2013-2440",
+        "Public": "20130416"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "920245",
+        "URL": "https://bugzilla.redhat.com/920245",
+        "Title": "CVE-2013-0401 OpenJDK: sun.awt.datatransfer.ClassLoaderObjectInputStream class may incorrectly invoke the system class loader (CanSecWest 2013, AWT, 8009305)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "920246",
+        "URL": "https://bugzilla.redhat.com/920246",
+        "Title": "CVE-2013-0402 Oracle JDK: unspecified JavaFX buffer overflow leading to JVM compromise (CanSecWest 2013, JavaFX)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "920247",
+        "URL": "https://bugzilla.redhat.com/920247",
+        "Title": "CVE-2013-1488 OpenJDK: JDBC driver manager improper toString calls (CanSecWest 2013, Libraries, 8009814)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "920248",
+        "URL": "https://bugzilla.redhat.com/920248",
+        "Title": "CVE-2013-1491 Oracle JDK: unspecified sanbox bypass (CanSecWest 2013, 2D)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952387",
+        "URL": "https://bugzilla.redhat.com/952387",
+        "Title": "CVE-2013-1537 OpenJDK: remote code loading enabled by default (RMI, 8001040)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952389",
+        "URL": "https://bugzilla.redhat.com/952389",
+        "Title": "CVE-2013-2415 OpenJDK: temporary files created with insecure permissions (JAX-WS, 8003542)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952398",
+        "URL": "https://bugzilla.redhat.com/952398",
+        "Title": "CVE-2013-2423 OpenJDK: incorrect setter access checks in MethodHandles (Hostspot, 8009677)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952509",
+        "URL": "https://bugzilla.redhat.com/952509",
+        "Title": "CVE-2013-2424 OpenJDK: MBeanInstantiator insufficient class access checks (JMX, 8006435)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952521",
+        "URL": "https://bugzilla.redhat.com/952521",
+        "Title": "CVE-2013-2429 OpenJDK: JPEGImageWriter state corruption (ImageIO, 8007918)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952524",
+        "URL": "https://bugzilla.redhat.com/952524",
+        "Title": "CVE-2013-2430 OpenJDK: JPEGImageReader state corruption (ImageIO, 8007667)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952550",
+        "URL": "https://bugzilla.redhat.com/952550",
+        "Title": "CVE-2013-2436 OpenJDK: Wrapper.convert insufficient type checks (Libraries, 8009049)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952638",
+        "URL": "https://bugzilla.redhat.com/952638",
+        "Title": "CVE-2013-2420 OpenJDK: image processing vulnerability (2D, 8007617)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952640",
+        "URL": "https://bugzilla.redhat.com/952640",
+        "Title": "CVE-2013-1558 OpenJDK: java.beans.ThreadGroupContext missing restrictions (Beans, 7200507)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952642",
+        "URL": "https://bugzilla.redhat.com/952642",
+        "Title": "CVE-2013-2422 OpenJDK: MethodUtil trampoline class incorrect restrictions (Libraries, 8009857)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952645",
+        "URL": "https://bugzilla.redhat.com/952645",
+        "Title": "CVE-2013-2431 OpenJDK: Hotspot intrinsic frames vulnerability (Hotspot, 8004336)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952646",
+        "URL": "https://bugzilla.redhat.com/952646",
+        "Title": "CVE-2013-1518 OpenJDK: JAXP missing security restrictions (JAXP, 6657673)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952648",
+        "URL": "https://bugzilla.redhat.com/952648",
+        "Title": "CVE-2013-1557 OpenJDK: LogStream.setDefaultStream() missing security restrictions (RMI, 8001329)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952649",
+        "URL": "https://bugzilla.redhat.com/952649",
+        "Title": "CVE-2013-2421 OpenJDK: Hotspot MethodHandle lookup error (Hotspot, 8009699)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952653",
+        "URL": "https://bugzilla.redhat.com/952653",
+        "Title": "CVE-2013-2426 OpenJDK: ConcurrentHashMap incorrectly calls defaultReadObject() method (Libraries, 8009063)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952656",
+        "URL": "https://bugzilla.redhat.com/952656",
+        "Title": "CVE-2013-2419 ICU: Layout Engine font processing errors (JDK 2D, 8001031)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952657",
+        "URL": "https://bugzilla.redhat.com/952657",
+        "Title": "CVE-2013-2417 OpenJDK: Network InetAddress serialization information disclosure (Networking, 8000724)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952708",
+        "URL": "https://bugzilla.redhat.com/952708",
+        "Title": "CVE-2013-2383 ICU: Layout Engine font layout and glyph table errors (JDK 2D, 8004986)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952709",
+        "URL": "https://bugzilla.redhat.com/952709",
+        "Title": "CVE-2013-2384 ICU: Layout Engine font layout and glyph table errors (JDK 2D, 8004987)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "952711",
+        "URL": "https://bugzilla.redhat.com/952711",
+        "Title": "CVE-2013-1569 ICU: Layout Engine font layout and glyph table errors (JDK 2D, 8004994)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953135",
+        "URL": "https://bugzilla.redhat.com/953135",
+        "Title": "Oracle JDK: multiple unspecified JavaFX vulnerabilities fixed in 7u21 (JavaFX)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953166",
+        "URL": "https://bugzilla.redhat.com/953166",
+        "Title": "CVE-2013-1540 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953172",
+        "URL": "https://bugzilla.redhat.com/953172",
+        "Title": "CVE-2013-1563 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Install)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953265",
+        "URL": "https://bugzilla.redhat.com/953265",
+        "Title": "CVE-2013-2394 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (2D)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953266",
+        "URL": "https://bugzilla.redhat.com/953266",
+        "Title": "CVE-2013-2416 Oracle JDK: unspecified vulnerability fixed in 7u21 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953267",
+        "URL": "https://bugzilla.redhat.com/953267",
+        "Title": "CVE-2013-2418 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953268",
+        "URL": "https://bugzilla.redhat.com/953268",
+        "Title": "CVE-2013-2425 Oracle JDK: unspecified vulnerability fixed in 7u21 (Install)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953269",
+        "URL": "https://bugzilla.redhat.com/953269",
+        "Title": "CVE-2013-2432 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (2D)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953270",
+        "URL": "https://bugzilla.redhat.com/953270",
+        "Title": "CVE-2013-2433 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953272",
+        "URL": "https://bugzilla.redhat.com/953272",
+        "Title": "CVE-2013-2434 Oracle JDK: unspecified vulnerability fixed in 7u21 (2D)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953273",
+        "URL": "https://bugzilla.redhat.com/953273",
+        "Title": "CVE-2013-2435 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953274",
+        "URL": "https://bugzilla.redhat.com/953274",
+        "Title": "CVE-2013-2439 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Install)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "953275",
+        "URL": "https://bugzilla.redhat.com/953275",
+        "Title": "CVE-2013-2440 Oracle JDK: unspecified vulnerability fixed in 7u21 and 6u45 (Deployment)"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2013-04-18"
+    },
+    "Updated": {
+      "Date": "2013-04-18"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757001",
+                    "Comment": "java-1.7.0-oracle is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121019006",
+                    "Comment": "java-1.7.0-oracle is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757003",
+                    "Comment": "java-1.7.0-oracle-javafx is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121391004",
+                    "Comment": "java-1.7.0-oracle-javafx is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757005",
+                    "Comment": "java-1.7.0-oracle-src is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121019004",
+                    "Comment": "java-1.7.0-oracle-src is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757007",
+                    "Comment": "java-1.7.0-oracle-plugin is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121019010",
+                    "Comment": "java-1.7.0-oracle-plugin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757009",
+                    "Comment": "java-1.7.0-oracle-jdbc is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121019008",
+                    "Comment": "java-1.7.0-oracle-jdbc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130757011",
+                    "Comment": "java-1.7.0-oracle-devel is earlier than 1:1.7.0.21-1jpp.1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121019002",
+                    "Comment": "java-1.7.0-oracle-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

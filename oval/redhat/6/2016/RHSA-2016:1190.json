@@ -1,0 +1,855 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20161190",
+  "Class": "patch",
+  "Title": "RHSA-2016:1190: chromium-browser security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 6 Supplementary"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2016:1190",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2016:1190"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1672",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1672"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1673",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1673"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1674",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1674"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1675",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1675"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1676",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1676"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1677",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1677"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1678",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1678"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1679",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1679"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1680",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1680"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1681",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1681"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1682",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1682"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1683",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1683"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1684",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1684"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1685",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1685"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1686",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1686"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1687",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1687"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1688",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1688"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1689",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1689"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1690",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1690"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1691",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1691"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1692",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1692"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1693",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1693"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1694",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1694"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2016-1695",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2016-1695"
+    }
+  ],
+  "Description": "Chromium is an open-source web browser, powered by WebKit (Blink).\n\nThis update upgrades Chromium to version 51.0.2704.63.\n\nSecurity Fix(es):\n\n* Multiple flaws were found in the processing of malformed web content. A web page containing malicious content could cause Chromium to crash, execute arbitrary code, or disclose sensitive information when visited by the victim. (CVE-2016-1672, CVE-2016-1673, CVE-2016-1674, CVE-2016-1675, CVE-2016-1676, CVE-2016-1678, CVE-2016-1679, CVE-2016-1680, CVE-2016-1681, CVE-2016-1695, CVE-2016-1677, CVE-2016-1682, CVE-2016-1683, CVE-2016-1684, CVE-2016-1685, CVE-2016-1686, CVE-2016-1687, CVE-2016-1688, CVE-2016-1689, CVE-2016-1690, CVE-2016-1691, CVE-2016-1692, CVE-2016-1693, CVE-2016-1694)",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1672",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1672",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1673",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1673",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1674",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1674",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1675",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1675",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1676",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1676",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1677",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1677",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1678",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1678",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1679",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1679",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1680",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1680",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1681",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1681",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1682",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1682",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1683",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1683",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1684",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1684",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1685",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1685",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1686",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1686",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1687",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1687",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1688",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1688",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1689",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1689",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1690",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1690",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1691",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1691",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1692",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1692",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1693",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1693",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1694",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1694",
+        "Public": "20160525"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2016-1695",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2016-1695",
+        "Public": "20160525"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340005",
+        "URL": "https://bugzilla.redhat.com/1340005",
+        "Title": "CVE-2016-1672 chromium-browser: cross-origin bypass in extension bindings"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340006",
+        "URL": "https://bugzilla.redhat.com/1340006",
+        "Title": "CVE-2016-1673 chromium-browser: cross-origin bypass in blink"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340007",
+        "URL": "https://bugzilla.redhat.com/1340007",
+        "Title": "CVE-2016-1674 chromium-browser: cross-origin bypass in extensions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340008",
+        "URL": "https://bugzilla.redhat.com/1340008",
+        "Title": "CVE-2016-1675 chromium-browser: cross-origin bypass in blink"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340009",
+        "URL": "https://bugzilla.redhat.com/1340009",
+        "Title": "CVE-2016-1676 chromium-browser: cross-origin bypass in extension bindings"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340010",
+        "URL": "https://bugzilla.redhat.com/1340010",
+        "Title": "CVE-2016-1677 chromium-browser: type confusion in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340011",
+        "URL": "https://bugzilla.redhat.com/1340011",
+        "Title": "CVE-2016-1678 chromium-browser: heap overflow in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340012",
+        "URL": "https://bugzilla.redhat.com/1340012",
+        "Title": "CVE-2016-1679 chromium-browser: heap use-after-free in v8 bindings"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340013",
+        "URL": "https://bugzilla.redhat.com/1340013",
+        "Title": "CVE-2016-1680 chromium-browser: heap use-after-free in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340014",
+        "URL": "https://bugzilla.redhat.com/1340014",
+        "Title": "CVE-2016-1681 chromium-browser: heap overflow in pdfium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340015",
+        "URL": "https://bugzilla.redhat.com/1340015",
+        "Title": "CVE-2016-1682 chromium-browser: csp bypass for serviceworker"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340016",
+        "URL": "https://bugzilla.redhat.com/1340016",
+        "Title": "CVE-2016-1683 chromium-browser: out-of-bounds access in libxslt"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340017",
+        "URL": "https://bugzilla.redhat.com/1340017",
+        "Title": "CVE-2016-1684 chromium-browser: integer overflow in libxslt"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340018",
+        "URL": "https://bugzilla.redhat.com/1340018",
+        "Title": "CVE-2016-1685 chromium-browser: out-of-bounds read in pdfium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340019",
+        "URL": "https://bugzilla.redhat.com/1340019",
+        "Title": "CVE-2016-1686 chromium-browser: out-of-bounds read in pdfium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340021",
+        "URL": "https://bugzilla.redhat.com/1340021",
+        "Title": "CVE-2016-1687 chromium-browser: information leak in extensions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340022",
+        "URL": "https://bugzilla.redhat.com/1340022",
+        "Title": "CVE-2016-1688 chromium-browser: out-of-bounds read in v8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340023",
+        "URL": "https://bugzilla.redhat.com/1340023",
+        "Title": "CVE-2016-1689 chromium-browser: heap buffer overflow in media"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340024",
+        "URL": "https://bugzilla.redhat.com/1340024",
+        "Title": "CVE-2016-1690 chromium-browser: heap use-after-free in autofill"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340026",
+        "URL": "https://bugzilla.redhat.com/1340026",
+        "Title": "CVE-2016-1691 chromium-browser: heap buffer-overflow in skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340027",
+        "URL": "https://bugzilla.redhat.com/1340027",
+        "Title": "CVE-2016-1692 chromium-browser: limited cross-origin bypass in serviceworker"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340028",
+        "URL": "https://bugzilla.redhat.com/1340028",
+        "Title": "CVE-2016-1693 chromium-browser: http download of software removal tool"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340029",
+        "URL": "https://bugzilla.redhat.com/1340029",
+        "Title": "CVE-2016-1694 chromium-browser: hpkp pins removed on cache clearance"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1340030",
+        "URL": "https://bugzilla.redhat.com/1340030",
+        "Title": "CVE-2016-1695 chromium-browser: various fixes from internal audits"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2016-06-01"
+    },
+    "Updated": {
+      "Date": "2016-06-01"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20161190001",
+            "Comment": "chromium-browser is earlier than 0:51.0.2704.63-1.el6"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20141626002",
+            "Comment": "chromium-browser is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

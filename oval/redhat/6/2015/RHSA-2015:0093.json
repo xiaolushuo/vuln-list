@@ -1,0 +1,939 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20150093",
+  "Class": "patch",
+  "Title": "RHSA-2015:0093: chromium-browser security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 6"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2015:0093",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2015:0093"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7923",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7923"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7924",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7924"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7925",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7925"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7926",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7926"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7927",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7927"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7928",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7928"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7929",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7929"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7930",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7930"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7931",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7931"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7932",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7932"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7933",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7933"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7934",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7934"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7935",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7935"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7936",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7936"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7937",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7937"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7938",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7938"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7939",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7939"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7940",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7940"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7941",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7941"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7942",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7942"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7943",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7943"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7944",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7944"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7945",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7945"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7946",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7946"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7947",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7947"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-7948",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7948"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2015-1346",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2015-1346"
+    }
+  ],
+  "Description": "Chromium is an open-source web browser, powered by WebKit (Blink).\n\nSeveral flaws were found in the processing of malformed web content. A web\npage containing malicious content could cause Chromium to crash or,\npotentially, execute arbitrary code with the privileges of the user running\nChromium. (CVE-2014-7923, CVE-2014-7924, CVE-2014-7925, CVE-2014-7926,\nCVE-2014-7927, CVE-2014-7928, CVE-2014-7929, CVE-2014-7930, CVE-2014-7931,\nCVE-2014-7932, CVE-2014-7933, CVE-2014-7934, CVE-2014-7935, CVE-2014-7936,\nCVE-2014-7937, CVE-2014-7938, CVE-2014-7939, CVE-2014-7940, CVE-2014-7941,\nCVE-2014-7942, CVE-2014-7943, CVE-2014-7944, CVE-2014-7945, CVE-2014-7946,\nCVE-2014-7947, CVE-2014-7948)\n\nAll Chromium users should upgrade to these updated packages, which contain\nChromium version 40.0.2214.91, which corrects these issues. After\ninstalling the update, Chromium must be restarted for the changes to take\neffect.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7923",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7923",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7924",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7924",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7925",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7925",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7926",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7926",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7927",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7927",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7928",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7928",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7929",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7929",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7930",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7930",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7931",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7931",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7932",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7932",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7933",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7933",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7934",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7934",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7935",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7935",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7936",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7936",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7937",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7937",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7938",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7938",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7939",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7939",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7940",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7940",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7941",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7941",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7942",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-456",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7942",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7943",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7943",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7944",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7944",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7945",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7945",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7946",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7946",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7947",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7947",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-7948",
+        "Cvss2": "6.4/AV:N/AC:L/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-7948",
+        "Public": "20150121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2015-1346",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2015-1346",
+        "Public": "20150121"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185202",
+        "URL": "https://bugzilla.redhat.com/1185202",
+        "Title": "CVE-2014-7923 ICU: regexp engine missing look-behind expression range check"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185203",
+        "URL": "https://bugzilla.redhat.com/1185203",
+        "Title": "CVE-2014-7924 chromium-browser: use-after-free in IndexedDB"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185204",
+        "URL": "https://bugzilla.redhat.com/1185204",
+        "Title": "CVE-2014-7925 chromium-browser: use-after-free in WebAudio"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185205",
+        "URL": "https://bugzilla.redhat.com/1185205",
+        "Title": "CVE-2014-7926 ICU: regexp engine incorrect handling of a zero length quantifier"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185206",
+        "URL": "https://bugzilla.redhat.com/1185206",
+        "Title": "CVE-2014-7927 chromium-browser: memory corruption in V8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185208",
+        "URL": "https://bugzilla.redhat.com/1185208",
+        "Title": "CVE-2014-7928 chromium-browser: memory corruption in V8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185209",
+        "URL": "https://bugzilla.redhat.com/1185209",
+        "Title": "CVE-2014-7929 chromium-browser: use-after-free in DOM"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185210",
+        "URL": "https://bugzilla.redhat.com/1185210",
+        "Title": "CVE-2014-7930 chromium-browser: use-after-free in DOM"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185211",
+        "URL": "https://bugzilla.redhat.com/1185211",
+        "Title": "CVE-2014-7931 chromium-browser: memory corruption in V8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185212",
+        "URL": "https://bugzilla.redhat.com/1185212",
+        "Title": "CVE-2014-7932 chromium-browser: use-after-free in DOM"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185213",
+        "URL": "https://bugzilla.redhat.com/1185213",
+        "Title": "CVE-2014-7933 chromium-browser: use-after-free in FFmpeg"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185214",
+        "URL": "https://bugzilla.redhat.com/1185214",
+        "Title": "CVE-2014-7934 chromium-browser: use-after-free in DOM"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185215",
+        "URL": "https://bugzilla.redhat.com/1185215",
+        "Title": "CVE-2014-7935 chromium-browser: use-after-free in Speech"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185216",
+        "URL": "https://bugzilla.redhat.com/1185216",
+        "Title": "CVE-2014-7936 chromium-browser: use-after-free in Views"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185217",
+        "URL": "https://bugzilla.redhat.com/1185217",
+        "Title": "CVE-2014-7937 chromium-browser: use-after-free in FFmpeg"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185218",
+        "URL": "https://bugzilla.redhat.com/1185218",
+        "Title": "CVE-2014-7938 chromium-browser: memory corruption in Fonts"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185219",
+        "URL": "https://bugzilla.redhat.com/1185219",
+        "Title": "CVE-2014-7939 chromium-browser: same-origin-bypass in V8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185220",
+        "URL": "https://bugzilla.redhat.com/1185220",
+        "Title": "CVE-2014-7940 ICU: uninitialized value use in the collation component"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185221",
+        "URL": "https://bugzilla.redhat.com/1185221",
+        "Title": "CVE-2014-7941 chromium-browser: out-of-bounds read in UI"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185222",
+        "URL": "https://bugzilla.redhat.com/1185222",
+        "Title": "CVE-2014-7942 chromium-browser: uninitialized-value in Fonts"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185223",
+        "URL": "https://bugzilla.redhat.com/1185223",
+        "Title": "CVE-2014-7943 chromium-browser: out-of-bounds read in Skia"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185224",
+        "URL": "https://bugzilla.redhat.com/1185224",
+        "Title": "CVE-2014-7944 chromium-browser: out-of-bounds read in PDFium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185225",
+        "URL": "https://bugzilla.redhat.com/1185225",
+        "Title": "CVE-2014-7945 chromium-browser: out-of-bounds read in PDFium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185226",
+        "URL": "https://bugzilla.redhat.com/1185226",
+        "Title": "CVE-2014-7946 chromium-browser: out-of-bounds read in Fonts"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185229",
+        "URL": "https://bugzilla.redhat.com/1185229",
+        "Title": "CVE-2014-7947 chromium-browser: out-of-bounds read in PDFium"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1185230",
+        "URL": "https://bugzilla.redhat.com/1185230",
+        "Title": "CVE-2014-7948 chromium-browser: caching error in AppCache"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2015-01-27"
+    },
+    "Updated": {
+      "Date": "2015-01-27"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20150093001",
+            "Comment": "chromium-browser is earlier than 0:40.0.2214.91-1.el6_6"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20141626002",
+            "Comment": "chromium-browser is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
