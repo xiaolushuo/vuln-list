@@ -1,0 +1,861 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20141880",
+  "Class": "patch",
+  "Title": "RHSA-2014:1880: java-1.7.1-ibm security update (Critical)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Supplementary for Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2014:1880",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2014:1880"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-3065",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-3065"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-3566",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-3566"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-4288",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-4288"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6456",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6456"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6457",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6457"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6458",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6458"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6476",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6476"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6492",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6492"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6493",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6493"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6502",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6502"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6503",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6503"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6506",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6506"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6511",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6511"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6512",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6512"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6515",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6515"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6527",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6527"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6531",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6531"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6532",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6532"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2014-6558",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2014-6558"
+    }
+  ],
+  "Description": "IBM Java SE version 7 Release 1 includes the IBM Java Runtime Environment\nand the IBM Java Software Development Kit.\n\nThis update fixes several vulnerabilities in the IBM Java Runtime\nEnvironment and the IBM Java Software Development Kit. Detailed\nvulnerability descriptions are linked from the IBM Security alerts\npage, listed in the References section. (CVE-2014-3065, CVE-2014-3566,\nCVE-2014-4288, CVE-2014-6456, CVE-2014-6457, CVE-2014-6458, CVE-2014-6476,\nCVE-2014-6492, CVE-2014-6493, CVE-2014-6502, CVE-2014-6503, CVE-2014-6506,\nCVE-2014-6511, CVE-2014-6512, CVE-2014-6515, CVE-2014-6527, CVE-2014-6531,\nCVE-2014-6532, CVE-2014-6558)\n\nThe CVE-2014-6512 issue was discovered by Florian Weimer of Red Hat\nProduct Security.\n\nNote: With this update, the IBM SDK now disables the SSL 3.0 protocol to\naddress the CVE-2014-3566 issue (also known as POODLE). Refer to the IBM\narticle linked to in the References section for additional details about\nthis change and instructions on how to re-enable SSL 3.0 support if needed.\n\nAll users of java-1.7.1-ibm are advised to upgrade to these updated\npackages, containing the IBM Java SE 7R1 SR2 release. All running instances\nof IBM Java must be restarted for the update to take effect.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Critical",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-3065",
+        "Cvss2": "6.0/AV:L/AC:H/Au:S/C:C/I:C/A:C",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-3065",
+        "Public": "20141110"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-3566",
+        "Cvss2": "5/AV:N/AC:L/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-636 CWE-757",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-3566",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-4288",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-4288",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6456",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6456",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6457",
+        "Cvss2": "4.0/AV:N/AC:H/Au:N/C:P/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6457",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6458",
+        "Cvss2": "6.2/AV:L/AC:H/Au:N/C:C/I:C/A:C",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6458",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6476",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6476",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6492",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6492",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6493",
+        "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6493",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6502",
+        "Cvss2": "2.6/AV:N/AC:H/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6502",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6503",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6503",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6506",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6506",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6511",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6511",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6512",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "CWE-345",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6512",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6515",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6515",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6527",
+        "Cvss2": "2.6/AV:N/AC:H/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6527",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6531",
+        "Cvss2": "4.3/AV:N/AC:M/Au:N/C:P/I:N/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6531",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6532",
+        "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6532",
+        "Public": "20141014"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2014-6558",
+        "Cvss2": "2.6/AV:N/AC:H/Au:N/C:N/I:P/A:N",
+        "Cvss3": "",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2014-6558",
+        "Public": "20141014"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1071210",
+        "URL": "https://bugzilla.redhat.com/1071210",
+        "Title": "CVE-2014-6512 OpenJDK: DatagramSocket connected socket missing source check (Libraries, 8039509)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1150155",
+        "URL": "https://bugzilla.redhat.com/1150155",
+        "Title": "CVE-2014-6506 OpenJDK: insufficient permission checks when setting resource bundle on system logger (Libraries, 8041564)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1150651",
+        "URL": "https://bugzilla.redhat.com/1150651",
+        "Title": "CVE-2014-6531 OpenJDK: insufficient ResourceBundle name check (Libraries, 8044274)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1150669",
+        "URL": "https://bugzilla.redhat.com/1150669",
+        "Title": "CVE-2014-6502 OpenJDK: LogRecord use of incorrect CL when loading ResourceBundle (Libraries, 8042797)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1151046",
+        "URL": "https://bugzilla.redhat.com/1151046",
+        "Title": "CVE-2014-6457 OpenJDK: Triple Handshake attack against TLS/SSL connections (JSSE, 8037066)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1151063",
+        "URL": "https://bugzilla.redhat.com/1151063",
+        "Title": "CVE-2014-6558 OpenJDK: CipherInputStream incorrect exception handling (Security, 8037846)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1151517",
+        "URL": "https://bugzilla.redhat.com/1151517",
+        "Title": "CVE-2014-6511 ICU: Layout Engine ContextualSubstitution missing boundary checks (JDK 2D, 8041540)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152756",
+        "URL": "https://bugzilla.redhat.com/1152756",
+        "Title": "CVE-2014-6532 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152757",
+        "URL": "https://bugzilla.redhat.com/1152757",
+        "Title": "CVE-2014-6503 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152758",
+        "URL": "https://bugzilla.redhat.com/1152758",
+        "Title": "CVE-2014-6456 Oracle JDK: unspecified vulnerability fixed in 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152759",
+        "URL": "https://bugzilla.redhat.com/1152759",
+        "Title": "CVE-2014-6492 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152760",
+        "URL": "https://bugzilla.redhat.com/1152760",
+        "Title": "CVE-2014-6493 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152761",
+        "URL": "https://bugzilla.redhat.com/1152761",
+        "Title": "CVE-2014-4288 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152763",
+        "URL": "https://bugzilla.redhat.com/1152763",
+        "Title": "CVE-2014-6458 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152765",
+        "URL": "https://bugzilla.redhat.com/1152765",
+        "Title": "CVE-2014-6476 Oracle JDK: unspecified vulnerability fixed in 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152766",
+        "URL": "https://bugzilla.redhat.com/1152766",
+        "Title": "CVE-2014-6515 Oracle JDK: unspecified vulnerability fixed in 6u85, 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152767",
+        "URL": "https://bugzilla.redhat.com/1152767",
+        "Title": "CVE-2014-6527 Oracle JDK: unspecified vulnerability fixed in 7u71 and 8u25 (Deployment)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1152789",
+        "URL": "https://bugzilla.redhat.com/1152789",
+        "Title": "CVE-2014-3566 SSL/TLS: Padding Oracle On Downgraded Legacy Encryption attack"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1162554",
+        "URL": "https://bugzilla.redhat.com/1162554",
+        "Title": "CVE-2014-3065 IBM JDK: privilege escalation via shared class cache"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:7",
+      "cpe:/a:redhat:rhel_extras:7"
+    ],
+    "Issued": {
+      "Date": "2014-11-20"
+    },
+    "Updated": {
+      "Date": "2014-11-20"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880001",
+                    "Comment": "java-1.7.1-ibm-jdbc is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705006",
+                    "Comment": "java-1.7.1-ibm-jdbc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880003",
+                    "Comment": "java-1.7.1-ibm-devel is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705008",
+                    "Comment": "java-1.7.1-ibm-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880005",
+                    "Comment": "java-1.7.1-ibm-demo is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705004",
+                    "Comment": "java-1.7.1-ibm-demo is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880007",
+                    "Comment": "java-1.7.1-ibm-plugin is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705002",
+                    "Comment": "java-1.7.1-ibm-plugin is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880009",
+                    "Comment": "java-1.7.1-ibm is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705012",
+                    "Comment": "java-1.7.1-ibm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141880011",
+                    "Comment": "java-1.7.1-ibm-src is earlier than 1:1.7.1.2.0-1jpp.3.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140705010",
+                    "Comment": "java-1.7.1-ibm-src is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
