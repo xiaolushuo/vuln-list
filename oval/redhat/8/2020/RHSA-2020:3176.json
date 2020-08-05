@@ -38,7 +38,7 @@
       "RefURL": "https://access.redhat.com/security/cve/CVE-2020-13692"
     }
   ],
-  "Description": "PostgreSQL is an advanced object-relational database management system. The postgresql-jdbc package includes the .jar files needed for Java programs to access a PostgreSQL database.\n\nSecurity Fix(es):\n\n* postgresql-jdbc: XML external entity (XXE) vulnerability in PgSQLXML (CVE-2020-13692)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "PostgreSQL is an advanced object-relational database management system. The postgresql-jdbc package includes the .jar files needed for Java programs to access a PostgreSQL database.\n\nSecurity Fix(es):\n\n* postgresql-jdbc: XML external entity (XXE) vulnerability in PgSQLXML (CVE-2020-13692)\n\nThis update introduces a backwards incompatible change required to resolve this issue. Refer to the Red Hat Knowledgebase article 5266441 linked to in the References section for information on how to re-enable the old insecure behavior.\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
@@ -118,7 +118,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203176001",
-                    "Comment": "postgresql-jdbc-javadoc is earlier than 0:42.2.3-3.el8_2"
+                    "Comment": "postgresql-jdbc is earlier than 0:42.2.3-3.el8_2"
                   },
                   {
                     "XMLName": {
@@ -127,7 +127,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203176002",
-                    "Comment": "postgresql-jdbc-javadoc is signed with Red Hat redhatrelease2 key"
+                    "Comment": "postgresql-jdbc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -146,7 +146,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203176003",
-                    "Comment": "postgresql-jdbc is earlier than 0:42.2.3-3.el8_2"
+                    "Comment": "postgresql-jdbc-javadoc is earlier than 0:42.2.3-3.el8_2"
                   },
                   {
                     "XMLName": {
@@ -155,7 +155,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203176004",
-                    "Comment": "postgresql-jdbc is signed with Red Hat redhatrelease2 key"
+                    "Comment": "postgresql-jdbc-javadoc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
