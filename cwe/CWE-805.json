@@ -1,0 +1,132 @@
+{
+ "ID": 805,
+ "Name": "Buffer Access with Incorrect Length Value",
+ "Description": "The software uses a sequential operation to read or write a buffer, but it uses an incorrect length value that causes it to access memory that is outside of the bounds of the buffer.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Requirements"
+    ],
+    "Strategy": "Language Selection",
+    "Description": [
+     "Use a language that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.",
+     "For example, many languages that perform their own memory management, such as Java and Perl, are not subject to buffer overflows. Other languages, such as Ada and C#, typically provide overflow protection, but the protection can be disabled by the programmer.",
+     "Be wary that a language's interface to native code may still be subject to overflows, even if the language itself is theoretically safe."
+    ]
+   },
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "Libraries or Frameworks",
+    "Description": [
+     "Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.",
+     "Examples include the Safe C String Library (SafeStr) by Messier and Viega [REF-57], and the Strsafe.h library from Microsoft [REF-56]. These libraries provide safer versions of overflow-prone string-handling functions."
+    ]
+   },
+   {
+    "Phase": [
+     "Build and Compilation"
+    ],
+    "Strategy": "Compilation or Build Hardening",
+    "Description": [
+     "Run or compile the software using features or extensions that automatically provide a protection mechanism that mitigates or eliminates buffer overflows.",
+     "For example, certain compilers and extensions provide automatic buffer overflow detection mechanisms that are built into the compiled code. Examples include the Microsoft Visual Studio /GS flag, Fedora/Red Hat FORTIFY_SOURCE GCC flag, StackGuard, and ProPolice."
+    ]
+   },
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": [
+     "Consider adhering to the following rules when allocating and managing an application's memory:",
+     "\n                     \n                  "
+    ]
+   },
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Operation"
+    ],
+    "Strategy": "Environment Hardening",
+    "Description": [
+     "Run or compile the software using features or extensions that randomly arrange the positions of a program's executable and libraries in memory. Because this makes the addresses unpredictable, it can prevent an attacker from reliably jumping to exploitable code.",
+     "Examples include Address Space Layout Randomization (ASLR) [REF-58] [REF-60] and Position-Independent Executables (PIE) [REF-64]."
+    ]
+   },
+   {
+    "Phase": [
+     "Operation"
+    ],
+    "Strategy": "Environment Hardening",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Architecture and Design",
+     "Operation"
+    ],
+    "Strategy": "Environment Hardening",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Architecture and Design",
+     "Operation"
+    ],
+    "Strategy": "Sandbox or Jail",
+    "Description": [
+     "Run the code in a \"jail\" or similar sandbox environment that enforces strict boundaries between the process and the operating system. This may effectively restrict which files can be accessed in a particular directory or which commands can be executed by the software.",
+     "OS-level examples include the Unix chroot jail, AppArmor, and SELinux. In general, managed code may provide some protection. For example, java.io.FilePermission in the Java SecurityManager allows the software to specify restrictions on file operations.",
+     "This may not be a feasible solution, and it only limits the impact to the operating system; the rest of the application may still be subject to compromise.",
+     "Be careful to avoid CWE-243 and other weaknesses related to jails."
+    ]
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": [
+   {
+    "CAPECID": 100
+   },
+   {
+    "CAPECID": 256
+   }
+  ]
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Integrity",
+     "Confidentiality",
+     "Availability"
+    ],
+    "Impact": [
+     "Read Memory",
+     "Modify Memory",
+     "Execute Unauthorized Code or Commands"
+    ]
+   },
+   {
+    "Scope": [
+     "Availability"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "DoS: Crash, Exit, or Restart",
+     "DoS: Resource Consumption (CPU)"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": null
+}

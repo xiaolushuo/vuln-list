@@ -1,0 +1,63 @@
+{
+ "ID": 1257,
+ "Name": "Improper Access Control Applied to Mirrored or Aliased Memory Regions",
+ "Description": "Aliased or mirrored memory regions in hardware designs \n            may have inconsistent read/write permissions enforced by hardware. \n            In this way, it could be possible that an untrusted agent is blocked from \n            accessing a memory region but is not blocked from accessing the \n            corresponding aliased memory region.\n            ",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design",
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Architecture and Design",
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Confidentiality"
+    ],
+    "Impact": [
+     "Read Memory"
+    ]
+   },
+   {
+    "Scope": [
+     "Integrity"
+    ],
+    "Impact": [
+     "Modify Memory"
+    ]
+   },
+   {
+    "Scope": [
+     "Availability"
+    ],
+    "Impact": [
+     "DoS: Instability"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "Hardware product designs often need to implement\n                    memory protection features that enable privileged software\n                    to define isolation memory regions and access control\n                    (read/write) policies. Isolated memory regions can be\n                    defined on different memory spaces in a design (e.g. system\n                    physical address, virtual address, memory mapped IO).\n                ",
+  "Each memory cell must be mapped and assigned a system\n                    address that the core software can use to read/write to\n                    that memory. It is possible to map the same memory cell to\n                    multiple system addresses such that read/write to any of\n                    the aliased system addresses would be decoded to the same\n                    memory cell.  \n                ",
+  "This is commonly done in hardware designs for\n                    redundancy and simplifying address decode logic. If one of\n                    the memory regions is corrupted or faults, then the\n                    hardware can switch to using the data in the mirrored\n                    memory region. Memory aliases can also be created in system\n                    address map if the address decoder unit ignores higher\n                    order address bits when mapping a smaller address region\n                    into the full system address. \n                ",
+  "A common security weakness that can exist in such\n                    memory mapping is that aliased memory regions could have\n                    different read/write access protections enforced by\n                    hardware such that an untrusted agent is blocked from\n                    accessing a memory address but is not blocked from\n                    accessing the corresponding aliased memory address. Such\n                    inconsistency can then be used to bypass the access\n                    protection and read or modify the protected memory.\n                ",
+  "An untrusted agent can also maliciously create memory\n                    aliases in the system address map if it is able to change\n                    the mapping of an address region or modify memory region\n                    sizes.  \n                "
+ ]
+}

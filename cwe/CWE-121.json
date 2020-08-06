@@ -1,0 +1,101 @@
+{
+ "ID": 121,
+ "Name": "Stack-based Buffer Overflow",
+ "Description": "A stack-based buffer overflow condition is a condition where the buffer being overwritten is allocated on the stack (i.e., is a local variable or, rarely, a parameter to a function).",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Build and Compilation"
+    ],
+    "Strategy": "Compilation or Build Hardening",
+    "Description": [
+     "Run or compile the software using features or extensions that automatically provide a protection mechanism that mitigates or eliminates buffer overflows.",
+     "For example, certain compilers and extensions provide automatic buffer overflow detection mechanisms that are built into the compiled code. Examples include the Microsoft Visual Studio /GS flag, Fedora/Red Hat FORTIFY_SOURCE GCC flag, StackGuard, and ProPolice."
+    ]
+   },
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Build and Compilation"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Operation"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Availability"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "DoS: Crash, Exit, or Restart",
+     "DoS: Resource Consumption (CPU)",
+     "DoS: Resource Consumption (Memory)"
+    ]
+   },
+   {
+    "Scope": [
+     "Integrity",
+     "Confidentiality",
+     "Availability",
+     "Access Control"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "Execute Unauthorized Code or Commands",
+     "Bypass Protection Mechanism"
+    ]
+   },
+   {
+    "Scope": [
+     "Integrity",
+     "Confidentiality",
+     "Availability",
+     "Access Control",
+     "Other"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "Execute Unauthorized Code or Commands",
+     "Bypass Protection Mechanism",
+     "Other"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": null
+}

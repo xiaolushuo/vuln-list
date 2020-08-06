@@ -1,0 +1,44 @@
+{
+ "ID": 1274,
+ "Name": "Insufficient Protections on the Volatile Memory Containing Boot Code",
+ "Description": "The protections on the product's non-volatile memory containing boot code are insufficient to prevent the bypassing of secure boot or the execution of an untrusted, boot code chosen by an adversary.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Testing"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Authentication"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "Execute Unauthorized Code or Commands",
+     "Gain Privileges or Assume Identity"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "As a part of secure-boot process, a System-on-Chip's (SoC) read-only-memory (ROM) code fetches bootloader code from Non-Volatile Memory (NVM) and stores the code in Volatile Memory (VM), such as dynamic, random-access memory (DRAM)/static, random-access memory (SRAM). The NVM is usually external to the SoC while the VM is internal to the SoC. As the code is transferred from NVM to VM, it is authenticated by the SoC's ROM code.",
+  "If the volatile-memory-region protections or access controls are insufficient to prevent modifications from an adversary or untrusted agent, the secure boot may be bypassed or replaced with the excution of an adversary’s code."
+ ]
+}

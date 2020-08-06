@@ -1,0 +1,63 @@
+{
+ "ID": 1253,
+ "Name": "Incorrect Selection of Fuse Values",
+ "Description": "The logic used to determine system-security state for the product relies on values sensed from the fuses, but it relies on 'negative' logic for an un-blown fuse.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": [
+     "Logic should be designed in a way that blown fuses do not put the product into an insecure state that can be leveraged by an attacker."
+    ]
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Access Control",
+     "Authorization"
+    ],
+    "Impact": [
+     "Bypass Protection Mechanism",
+     "Gain Privileges or Assume Identity"
+    ]
+   },
+   {
+    "Scope": [
+     "Availability"
+    ],
+    "Impact": [
+     "DoS: Crash, Exit, or Restart"
+    ]
+   },
+   {
+    "Scope": [
+     "Confidentiality"
+    ],
+    "Impact": [
+     "Read Memory"
+    ]
+   },
+   {
+    "Scope": [
+     "Integrity"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "Execute Unauthorized Code or Commands"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "Fuses are often used to store secret data, including security \n            configuration data. When not blown, a fuse is considered to store a \n            logic 0, and, when blown, it indicates a logic 1. Fuses are generally \n            considered to be one-directional, i.e., once blown to logic 1, \n            it cannot be reset to logic 0. However, if the logic used to determine \n            system-security state (by leveraging the values sensed from the fuses) \n            uses negative logic, an attacker might blow the fuse and drive the system to an unsecure state."
+ ]
+}

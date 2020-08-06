@@ -1,0 +1,44 @@
+{
+ "ID": 1272,
+ "Name": "Debug/Power State Transitions Leak Information",
+ "Description": "Sensitive information may leak as a result of a debug or power state transition when information access restrictions change as a result of the transition.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Confidentiality",
+     "Integrity",
+     "Availability",
+     "Access Control",
+     "Accountability",
+     "Authentication",
+     "Authorization",
+     "Non-Repudiation"
+    ],
+    "Impact": [
+     "Read Memory",
+     "Read Application Data"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "A device or system frequently employs many power and sleep states during its normal operation (e.g., normal power, additional power, low power, hibernate, deep sleep, etc.). Similarly, depending on the supplied credentials, a device may be operating within a debug condition. For example, a hypothetical enumeration of debug levels may be:",
+  "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t",
+  "Depending on various factors, state transitions can happen from one power or debug state to another. If there is information available in the current state and it is not properly removed before the next transistion state, there can be sensitive information leakage."
+ ]
+}

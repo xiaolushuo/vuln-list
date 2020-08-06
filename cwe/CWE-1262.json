@@ -1,0 +1,49 @@
+{
+ "ID": 1262,
+ "Name": "Register Interface Allows Software Access to Sensitive Data or Security Settings",
+ "Description": "Memory-mapped registers provide access to hardware functionality from software and if not properly secured can result in loss of confidentiality and integrity.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Confidentiality",
+     "Integrity"
+    ],
+    "Impact": [
+     "Read Memory",
+     "Read Application Data",
+     "Modify Memory",
+     "Modify Application Data",
+     "Gain Privileges or Assume Identity",
+     "Bypass Protection Mechanism",
+     "Unexpected State",
+     "Alter Execution Logic"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "It is common for software to access peripherals in an SoC through a memory-mapped register interface.  Any security-critical data accessible directly or indirectly through the register interface must have a clearly defined access control policy which is correctly implemented to protect assets in the hardware design from software."
+ ]
+}

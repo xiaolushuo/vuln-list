@@ -1,0 +1,43 @@
+{
+ "ID": 1271,
+ "Name": "Missing Known Value on Reset for Registers Holding Security Settings",
+ "Description": "The product's logic for state elements that implement security-critical functionality does not have a mechanism for being initialized to a known value on reset.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Access Control",
+     "Authentication",
+     "Authorization"
+    ],
+    "Impact": [
+     "Varies by Context"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "When a circuit is first brought out of reset, the state of storage elements will be unknown if not explicitly initialized by the logic. If registers holding security-critical state are not properly initialized before being used to control access to design assets or critical resources, there will be a timing window during which the device is in an insecure state and vulnerable to attack."
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "ID": 1258,
+ "Name": "Sensitive Information Uncleared During Hardware Debug Flows",
+ "Description": "The hardware does not fully clear security-sensitive values, such as keys and intermediate values in cryptographic operations, when debug mode is entered.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": [
+     "Whenever debug mode is enabled, all registers containing sensitive assets must be cleared."
+    ]
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Confidentiality"
+    ],
+    "Impact": [
+     "Read Memory"
+    ]
+   },
+   {
+    "Scope": [
+     "Access Control"
+    ],
+    "Impact": [
+     "Bypass Protection Mechanism"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "Security sensitive values, keys, intermediate steps of cryptographic operations, etc. are stored in temporary registers in the hardware. These values must be cleared whenever debug mode is entered. Since all internal registers can typically be accessed through the debug interface, an untrusted debugger might gain access to this sensitive data that would otherwise have been inaccessible."
+ ]
+}

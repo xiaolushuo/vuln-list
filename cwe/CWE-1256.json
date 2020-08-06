@@ -1,0 +1,39 @@
+{
+ "ID": 1256,
+ "Name": "Hardware Features Enable Physical Attacks from Software",
+ "Description": "Software-controllable device functionality such as power and clock management permits unauthorized corruption of bits.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design",
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": [
+     "Ensure proper access control mechanisms protect software-controllable features altering physical operating conditions such as clock frequency and voltage."
+    ]
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Integrity"
+    ],
+    "Impact": [
+     "Modify Memory",
+     "Modify Application Data",
+     "Bypass Protection Mechanism"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "Fault injection attacks involve strategic corruption of bits in a hardware design to achieve a desired effect such as skipping an authentication step, elevating privileges, or altering the output of a cryptographic operation. Techniques employed to flip bits include low-cost methods such as manipulation of the device clock and voltage supply as well as high-cost but more precise techniques involving lasers. It is commonly assumed that an attacker requires physical access to the device to succeed in injecting faults. This assumption is false if the device has improperly secured power management features that allow untrusted programs to manipulate clock frequency or operating voltage. For mobile devices, minimizing power consumption is critical, but these devices run a wide variety of applications with different performance requirements.  Software-controllable mechanisms to dynamically scale device voltage and frequency are common features in today’s chipsets and can be exploited by attackers if protections are not in place. Other features, such as the ability to write repeatedly to DRAM at a rapid rate from unprivileged software can result in bit flips in other memory locations (Rowhammer)."
+ ]
+}
