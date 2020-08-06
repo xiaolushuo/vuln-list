@@ -310,8 +310,8 @@
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::server"
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2020-07-29"
@@ -356,34 +356,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203217001",
-                    "Comment": "shim-unsigned-x64 is earlier than 0:15-7.el7_9"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217002",
-                    "Comment": "shim-unsigned-x64 is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217003",
                     "Comment": "shim-unsigned-ia32 is earlier than 0:15-7.el7_9"
                   },
                   {
@@ -392,7 +364,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217002",
                     "Comment": "shim-unsigned-ia32 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -411,8 +383,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217005",
-                    "Comment": "fwupdate-devel is earlier than 0:12-6.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217003",
+                    "Comment": "shim-unsigned-x64 is earlier than 0:15-7.el7_9"
                   },
                   {
                     "XMLName": {
@@ -420,8 +392,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183140078",
-                    "Comment": "fwupdate-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217004",
+                    "Comment": "shim-unsigned-x64 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217005",
+                    "Comment": "fwupdate is earlier than 0:12-6.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183140080",
+                    "Comment": "fwupdate is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -440,7 +440,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203217007",
-                    "Comment": "fwupdate-libs is earlier than 0:12-6.el7_8"
+                    "Comment": "fwupdate-devel is earlier than 0:12-6.el7_8"
                   },
                   {
                     "XMLName": {
@@ -448,8 +448,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183140084",
-                    "Comment": "fwupdate-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183140078",
+                    "Comment": "fwupdate-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -496,7 +496,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203217011",
-                    "Comment": "fwupdate is earlier than 0:12-6.el7_8"
+                    "Comment": "fwupdate-libs is earlier than 0:12-6.el7_8"
                   },
                   {
                     "XMLName": {
@@ -504,8 +504,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183140080",
-                    "Comment": "fwupdate is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183140084",
+                    "Comment": "fwupdate-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -524,454 +524,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203217013",
-                    "Comment": "grub2-efi-x64-cdboot is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217014",
-                    "Comment": "grub2-efi-x64-cdboot is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217015",
-                    "Comment": "grub2-efi-ia32-cdboot is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217016",
-                    "Comment": "grub2-efi-ia32-cdboot is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217017",
-                    "Comment": "grub2-ppc64le-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217018",
-                    "Comment": "grub2-ppc64le-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217019",
-                    "Comment": "grub2-ppc64-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217020",
-                    "Comment": "grub2-ppc64-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217021",
-                    "Comment": "grub2-ppc-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217022",
-                    "Comment": "grub2-ppc-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217023",
-                    "Comment": "grub2-pc-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217024",
-                    "Comment": "grub2-pc-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217025",
-                    "Comment": "grub2-efi-x64-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217026",
-                    "Comment": "grub2-efi-x64-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217027",
-                    "Comment": "grub2-efi-ia32-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217028",
-                    "Comment": "grub2-efi-ia32-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217029",
-                    "Comment": "grub2-efi-aa64-modules is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217030",
-                    "Comment": "grub2-efi-aa64-modules is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217031",
-                    "Comment": "grub2-common is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217032",
-                    "Comment": "grub2-common is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217033",
-                    "Comment": "grub2-tools-minimal is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217034",
-                    "Comment": "grub2-tools-minimal is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217035",
-                    "Comment": "grub2-tools-extra is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217036",
-                    "Comment": "grub2-tools-extra is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217037",
-                    "Comment": "grub2-tools is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152401004",
-                    "Comment": "grub2-tools is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217039",
-                    "Comment": "grub2-pc is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217040",
-                    "Comment": "grub2-pc is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217041",
-                    "Comment": "grub2-efi-x64 is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217042",
-                    "Comment": "grub2-efi-x64 is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217043",
-                    "Comment": "grub2-efi-ia32 is earlier than 1:2.02-0.86.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217044",
-                    "Comment": "grub2-efi-ia32 is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217045",
                     "Comment": "grub2 is earlier than 1:2.02-0.86.el7_8"
                   },
                   {
@@ -999,8 +551,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217047",
-                    "Comment": "grub2-ppc64le is earlier than 1:2.02-0.86.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217015",
+                    "Comment": "grub2-common is earlier than 1:2.02-0.86.el7_8"
                   },
                   {
                     "XMLName": {
@@ -1008,8 +560,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217048",
-                    "Comment": "grub2-ppc64le is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217016",
+                    "Comment": "grub2-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1027,7 +579,287 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217049",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217017",
+                    "Comment": "grub2-efi-aa64-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217018",
+                    "Comment": "grub2-efi-aa64-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217019",
+                    "Comment": "grub2-efi-ia32 is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217020",
+                    "Comment": "grub2-efi-ia32 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217021",
+                    "Comment": "grub2-efi-ia32-cdboot is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217022",
+                    "Comment": "grub2-efi-ia32-cdboot is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217023",
+                    "Comment": "grub2-efi-ia32-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217024",
+                    "Comment": "grub2-efi-ia32-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217025",
+                    "Comment": "grub2-efi-x64 is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217026",
+                    "Comment": "grub2-efi-x64 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217027",
+                    "Comment": "grub2-efi-x64-cdboot is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217028",
+                    "Comment": "grub2-efi-x64-cdboot is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217029",
+                    "Comment": "grub2-efi-x64-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217030",
+                    "Comment": "grub2-efi-x64-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217031",
+                    "Comment": "grub2-pc is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217032",
+                    "Comment": "grub2-pc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217033",
+                    "Comment": "grub2-pc-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217034",
+                    "Comment": "grub2-pc-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217035",
+                    "Comment": "grub2-ppc-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217036",
+                    "Comment": "grub2-ppc-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217037",
                     "Comment": "grub2-ppc64 is earlier than 1:2.02-0.86.el7_8"
                   },
                   {
@@ -1036,7 +868,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217050",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217038",
                     "Comment": "grub2-ppc64 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1055,8 +887,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217051",
-                    "Comment": "shim-x64 is earlier than 0:15-7.el7_8"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217039",
+                    "Comment": "grub2-ppc64-modules is earlier than 1:2.02-0.86.el7_8"
                   },
                   {
                     "XMLName": {
@@ -1064,8 +896,176 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203217052",
-                    "Comment": "shim-x64 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217040",
+                    "Comment": "grub2-ppc64-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217041",
+                    "Comment": "grub2-ppc64le is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217042",
+                    "Comment": "grub2-ppc64le is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217043",
+                    "Comment": "grub2-ppc64le-modules is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217044",
+                    "Comment": "grub2-ppc64le-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217045",
+                    "Comment": "grub2-tools is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152401004",
+                    "Comment": "grub2-tools is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217047",
+                    "Comment": "grub2-tools-extra is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217048",
+                    "Comment": "grub2-tools-extra is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217049",
+                    "Comment": "grub2-tools-minimal is earlier than 1:2.02-0.86.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217050",
+                    "Comment": "grub2-tools-minimal is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217051",
+                    "Comment": "mokutil is earlier than 0:15-7.el7_8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141801004",
+                    "Comment": "mokutil is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1112,7 +1112,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20203217055",
-                    "Comment": "mokutil is earlier than 0:15-7.el7_8"
+                    "Comment": "shim-x64 is earlier than 0:15-7.el7_8"
                   },
                   {
                     "XMLName": {
@@ -1120,8 +1120,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141801004",
-                    "Comment": "mokutil is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203217056",
+                    "Comment": "shim-x64 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
