@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20202070",
+  "ID": "oval:com.redhat.rhsa:def:20203385",
   "Class": "patch",
-  "Title": "RHSA-2020:2070: libreswan security update (Important)",
+  "Title": "RHSA-2020:3385: libvncserver security update (Important)",
   "Affecteds": [
     {
       "XMLName": {
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2020:2070",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2020:2070"
+      "RefID": "RHSA-2020:3385",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:3385"
     },
     {
       "XMLName": {
@@ -34,11 +34,11 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2020-1763",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1763"
+      "RefID": "CVE-2017-18922",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-18922"
     }
   ],
-  "Description": "Libreswan is an implementation of IPsec and IKE for Linux. IPsec is the Internet Protocol Security and uses strong cryptography to provide both authentication and encryption services. These services allow you to build secure tunnels through untrusted networks such as virtual private network (VPN).\n\nSecurity Fix(es):\n\n* libreswan: DoS attack via malicious IKEv1 informational exchange message (CVE-2020-1763)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "LibVNCServer is a C library that enables you to implement VNC server functionality into own programs.\n\nSecurity Fix(es):\n\n* libvncserver: websocket decoding buffer overflow (CVE-2017-18922)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
@@ -51,13 +51,13 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2020-1763",
+        "CveID": "CVE-2017-18922",
         "Cvss2": "",
-        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-        "Cwe": "CWE-125",
+        "Cvss3": "9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-122",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2020-1763",
-        "Public": "20200511"
+        "Href": "https://access.redhat.com/security/cve/CVE-2017-18922",
+        "Public": "20170215"
       }
     ],
     "Bugzillas": [
@@ -66,20 +66,21 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1814541",
-        "URL": "https://bugzilla.redhat.com/1814541",
-        "Title": "CVE-2020-1763 libreswan: DoS attack via malicious IKEv1 informational exchange message"
+        "ID": "1852356",
+        "URL": "https://bugzilla.redhat.com/1852356",
+        "Title": "CVE-2017-18922 libvncserver: websocket decoding buffer overflow"
       }
     ],
     "AffectedCPEList": [
       "cpe:/a:redhat:enterprise_linux:8",
-      "cpe:/a:redhat:enterprise_linux:8::appstream"
+      "cpe:/a:redhat:enterprise_linux:8::appstream",
+      "cpe:/a:redhat:enterprise_linux:8::crb"
     ],
     "Issued": {
-      "Date": "2020-05-12"
+      "Date": "2020-08-10"
     },
     "Updated": {
-      "Date": "2020-05-12"
+      "Date": "2020-08-10"
     }
   },
   "Criteria": {
@@ -117,8 +118,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202070001",
-                    "Comment": "libreswan is earlier than 0:3.29-7.el8_2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203385001",
+                    "Comment": "libvncserver is earlier than 0:0.9.11-15.el8_2.1"
                   },
                   {
                     "XMLName": {
@@ -126,8 +127,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391004",
-                    "Comment": "libreswan is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200920004",
+                    "Comment": "libvncserver is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -145,8 +146,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202070003",
-                    "Comment": "libreswan-debugsource is earlier than 0:3.29-7.el8_2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203385003",
+                    "Comment": "libvncserver-debugsource is earlier than 0:0.9.11-15.el8_2.1"
                   },
                   {
                     "XMLName": {
@@ -154,8 +155,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391002",
-                    "Comment": "libreswan-debugsource is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200920002",
+                    "Comment": "libvncserver-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203385005",
+                    "Comment": "libvncserver-devel is earlier than 0:0.9.11-15.el8_2.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200920006",
+                    "Comment": "libvncserver-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
