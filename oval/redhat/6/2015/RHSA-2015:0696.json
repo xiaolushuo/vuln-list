@@ -445,8 +445,8 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
@@ -493,6 +493,34 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150696001",
+                    "Comment": "freetype is earlier than 0:2.3.11-15.el6_6.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20100864002",
+                    "Comment": "freetype is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150696003",
                     "Comment": "freetype-demos is earlier than 0:2.3.11-15.el6_6.1"
                   },
                   {
@@ -520,7 +548,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150696003",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150696005",
                     "Comment": "freetype-devel is earlier than 0:2.3.11-15.el6_6.1"
                   },
                   {
@@ -529,36 +557,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20100864002",
-                    "Comment": "freetype-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150696005",
-                    "Comment": "freetype is earlier than 0:2.3.11-15.el6_6.1"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20100864006",
-                    "Comment": "freetype is signed with Red Hat redhatrelease2 key"
+                    "Comment": "freetype-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

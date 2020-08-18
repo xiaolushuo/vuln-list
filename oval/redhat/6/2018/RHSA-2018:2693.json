@@ -72,6 +72,15 @@
       "Source": "CVE",
       "RefID": "CVE-2018-12379",
       "RefURL": "https://access.redhat.com/security/cve/CVE-2018-12379"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-18499",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-18499"
     }
   ],
   "Description": "Mozilla Firefox is an open-source web browser, designed for standards compliance, performance, and portability.\n\nThis update upgrades Firefox to version 60.2.0 ESR.\n\nSecurity Fix(es):\n\n* Mozilla: Memory safety bugs fixed in Firefox 62 and Firefox ESR 60.2 (CVE-2018-12376)\n\n* Mozilla: Use-after-free in driver timers (CVE-2018-12377)\n\n* Mozilla: Use-after-free in IndexedDB (CVE-2018-12378)\n\n* Mozilla: Proxy bypass using automount and autofs (CVE-2017-16541)\n\n* Mozilla: Out-of-bounds write with malicious MAR file (CVE-2018-12379)\n\nFor more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.\n\nRed Hat would like to thank the Mozilla project for reporting these issues. Upstream acknowledges Alex Gaynor, Boris Zbarsky, Christoph Diehl, Christian Holler, Jason Kratzer, Jed Davis, Tyson Smith, Bogdan Tara, Karl Tomlinson, Mats Palmgren, Nika Layzell, Ted Campbell, Nils, Zhanjia Song, and Holger Fuhrmannek as the original reporters.",
@@ -146,6 +155,19 @@
         "Impact": "moderate",
         "Href": "https://access.redhat.com/security/cve/CVE-2018-12379",
         "Public": "20180905"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-18499",
+        "Cvss2": "",
+        "Cvss3": "7.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-829",
+        "Impact": "important",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-18499",
+        "Public": "20180905"
       }
     ],
     "Bugzillas": [
@@ -197,10 +219,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
       "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2018-09-12"

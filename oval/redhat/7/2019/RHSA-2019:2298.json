@@ -197,9 +197,9 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
@@ -245,34 +245,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192298001",
-                    "Comment": "libarchive is earlier than 0:3.1.2-12.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20161844002",
-                    "Comment": "libarchive is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192298003",
                     "Comment": "bsdcpio is earlier than 0:3.1.2-12.el7"
                   },
                   {
@@ -281,7 +253,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20161844006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20161844002",
                     "Comment": "bsdcpio is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -300,7 +272,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192298005",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192298003",
                     "Comment": "bsdtar is earlier than 0:3.1.2-12.el7"
                   },
                   {
@@ -309,8 +281,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20161844008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20161844004",
                     "Comment": "bsdtar is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192298005",
+                    "Comment": "libarchive is earlier than 0:3.1.2-12.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20161844006",
+                    "Comment": "libarchive is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -337,7 +337,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20161844004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20161844008",
                     "Comment": "libarchive-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]

@@ -73,10 +73,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::server"
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2017-08-21"
@@ -121,7 +121,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492001",
-                    "Comment": "xmlsec1-openssl-devel is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1 is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -130,7 +130,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492002",
-                    "Comment": "xmlsec1-openssl-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -149,7 +149,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492003",
-                    "Comment": "xmlsec1-gcrypt is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-devel is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -158,7 +158,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492004",
-                    "Comment": "xmlsec1-gcrypt is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -177,7 +177,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492005",
-                    "Comment": "xmlsec1-gcrypt-devel is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-gcrypt is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -186,7 +186,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492006",
-                    "Comment": "xmlsec1-gcrypt-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-gcrypt is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -205,7 +205,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492007",
-                    "Comment": "xmlsec1-gnutls-devel is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-gcrypt-devel is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -214,7 +214,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492008",
-                    "Comment": "xmlsec1-gnutls-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-gcrypt-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -233,34 +233,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492009",
-                    "Comment": "xmlsec1-nss is earlier than 0:1.2.20-7.el7_4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172492010",
-                    "Comment": "xmlsec1-nss is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172492011",
                     "Comment": "xmlsec1-gnutls is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
@@ -269,7 +241,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172492012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172492010",
                     "Comment": "xmlsec1-gnutls is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -288,8 +260,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172492011",
+                    "Comment": "xmlsec1-gnutls-devel is earlier than 0:1.2.20-7.el7_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172492012",
+                    "Comment": "xmlsec1-gnutls-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492013",
-                    "Comment": "xmlsec1-nss-devel is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-nss is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -298,7 +298,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492014",
-                    "Comment": "xmlsec1-nss-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-nss is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -317,7 +317,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492015",
-                    "Comment": "xmlsec1-devel is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-nss-devel is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -326,7 +326,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492016",
-                    "Comment": "xmlsec1-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-nss-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -373,7 +373,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492019",
-                    "Comment": "xmlsec1 is earlier than 0:1.2.20-7.el7_4"
+                    "Comment": "xmlsec1-openssl-devel is earlier than 0:1.2.20-7.el7_4"
                   },
                   {
                     "XMLName": {
@@ -382,7 +382,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20172492020",
-                    "Comment": "xmlsec1 is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xmlsec1-openssl-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

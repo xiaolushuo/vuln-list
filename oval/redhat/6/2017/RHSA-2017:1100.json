@@ -73,10 +73,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2017-04-20"
@@ -121,34 +121,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171100001",
-                    "Comment": "nss-util-devel is earlier than 0:3.28.4-1.el6_9"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926006",
-                    "Comment": "nss-util-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171100003",
                     "Comment": "nss-util is earlier than 0:3.28.4-1.el6_9"
                   },
                   {
@@ -157,7 +129,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926008",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926006",
                     "Comment": "nss-util is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -176,63 +148,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171100003",
+                    "Comment": "nss-util-devel is earlier than 0:3.28.4-1.el6_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926008",
+                    "Comment": "nss-util-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171100005",
-                    "Comment": "nss-pkcs11-devel is earlier than 0:3.28.4-1.el6_9"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926010",
-                    "Comment": "nss-pkcs11-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171100007",
-                    "Comment": "nss-tools is earlier than 0:3.28.4-1.el6_9"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926016",
-                    "Comment": "nss-tools is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171100009",
                     "Comment": "nss is earlier than 0:3.28.4-1.el6_9"
                   },
                   {
@@ -241,7 +185,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926014",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926010",
                     "Comment": "nss is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -260,7 +204,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171100011",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171100007",
                     "Comment": "nss-devel is earlier than 0:3.28.4-1.el6_9"
                   },
                   {
@@ -288,7 +232,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171100013",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171100009",
+                    "Comment": "nss-pkcs11-devel is earlier than 0:3.28.4-1.el6_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926014",
+                    "Comment": "nss-pkcs11-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171100011",
                     "Comment": "nss-sysinit is earlier than 0:3.28.4-1.el6_9"
                   },
                   {
@@ -297,8 +269,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20150926018",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926016",
                     "Comment": "nss-sysinit is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171100013",
+                    "Comment": "nss-tools is earlier than 0:3.28.4-1.el6_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20150926018",
+                    "Comment": "nss-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

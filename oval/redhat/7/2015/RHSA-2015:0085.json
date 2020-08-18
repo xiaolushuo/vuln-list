@@ -415,9 +415,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2015-01-26"
@@ -462,7 +462,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150085001",
-                    "Comment": "java-1.6.0-openjdk-devel is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
+                    "Comment": "java-1.6.0-openjdk is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
                   },
                   {
                     "XMLName": {
@@ -471,7 +471,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140685002",
-                    "Comment": "java-1.6.0-openjdk-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "java-1.6.0-openjdk is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -490,62 +490,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150085003",
-                    "Comment": "java-1.6.0-openjdk-src is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140685006",
-                    "Comment": "java-1.6.0-openjdk-src is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150085005",
-                    "Comment": "java-1.6.0-openjdk-javadoc is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140685010",
-                    "Comment": "java-1.6.0-openjdk-javadoc is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150085007",
                     "Comment": "java-1.6.0-openjdk-demo is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
                   },
                   {
@@ -554,7 +498,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140685008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140685004",
                     "Comment": "java-1.6.0-openjdk-demo is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -573,8 +517,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150085009",
-                    "Comment": "java-1.6.0-openjdk is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150085005",
+                    "Comment": "java-1.6.0-openjdk-devel is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
                   },
                   {
                     "XMLName": {
@@ -582,8 +526,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140685004",
-                    "Comment": "java-1.6.0-openjdk is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140685006",
+                    "Comment": "java-1.6.0-openjdk-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150085007",
+                    "Comment": "java-1.6.0-openjdk-javadoc is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140685008",
+                    "Comment": "java-1.6.0-openjdk-javadoc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150085009",
+                    "Comment": "java-1.6.0-openjdk-src is earlier than 1:1.6.0.34-1.13.6.1.el7_0"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140685010",
+                    "Comment": "java-1.6.0-openjdk-src is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

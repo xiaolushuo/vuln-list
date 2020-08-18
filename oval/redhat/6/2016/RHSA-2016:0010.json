@@ -197,9 +197,9 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::client",
       "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
@@ -245,7 +245,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010001",
-                    "Comment": "samba4-common is earlier than 0:4.0.0-67.el6_7.rc4"
+                    "Comment": "samba4 is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
                     "XMLName": {
@@ -253,8 +253,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506028",
-                    "Comment": "samba4-common is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506002",
+                    "Comment": "samba4 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -273,7 +273,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010003",
-                    "Comment": "samba4-winbind-clients is earlier than 0:4.0.0-67.el6_7.rc4"
+                    "Comment": "samba4-client is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
                     "XMLName": {
@@ -281,8 +281,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506022",
-                    "Comment": "samba4-winbind-clients is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506004",
+                    "Comment": "samba4-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -301,6 +301,118 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010005",
+                    "Comment": "samba4-common is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506006",
+                    "Comment": "samba4-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010007",
+                    "Comment": "samba4-dc is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506008",
+                    "Comment": "samba4-dc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010009",
+                    "Comment": "samba4-dc-libs is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506010",
+                    "Comment": "samba4-dc-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010011",
+                    "Comment": "samba4-devel is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506012",
+                    "Comment": "samba4-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010013",
                     "Comment": "samba4-libs is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
@@ -328,118 +440,6 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010007",
-                    "Comment": "samba4-devel is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506020",
-                    "Comment": "samba4-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010009",
-                    "Comment": "samba4-python is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506024",
-                    "Comment": "samba4-python is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010011",
-                    "Comment": "samba4-dc is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506016",
-                    "Comment": "samba4-dc is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010013",
-                    "Comment": "samba4-dc-libs is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506004",
-                    "Comment": "samba4-dc-libs is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010015",
                     "Comment": "samba4-pidl is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
@@ -449,7 +449,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506016",
                     "Comment": "samba4-pidl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -469,7 +469,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010017",
-                    "Comment": "samba4-winbind is earlier than 0:4.0.0-67.el6_7.rc4"
+                    "Comment": "samba4-python is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
                     "XMLName": {
@@ -477,8 +477,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506026",
-                    "Comment": "samba4-winbind is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506018",
+                    "Comment": "samba4-python is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -497,62 +497,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010019",
-                    "Comment": "samba4-test is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506012",
-                    "Comment": "samba4-test is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010021",
-                    "Comment": "samba4-winbind-krb5-locator is earlier than 0:4.0.0-67.el6_7.rc4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506018",
-                    "Comment": "samba4-winbind-krb5-locator is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010023",
                     "Comment": "samba4-swat is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
@@ -561,7 +505,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506010",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506020",
                     "Comment": "samba4-swat is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -580,8 +524,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160010025",
-                    "Comment": "samba4-client is earlier than 0:4.0.0-67.el6_7.rc4"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010021",
+                    "Comment": "samba4-test is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
                     "XMLName": {
@@ -589,8 +533,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506002",
-                    "Comment": "samba4-client is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506022",
+                    "Comment": "samba4-test is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010023",
+                    "Comment": "samba4-winbind is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506024",
+                    "Comment": "samba4-winbind is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160010025",
+                    "Comment": "samba4-winbind-clients is earlier than 0:4.0.0-67.el6_7.rc4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506026",
+                    "Comment": "samba4-winbind-clients is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -609,7 +609,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160010027",
-                    "Comment": "samba4 is earlier than 0:4.0.0-67.el6_7.rc4"
+                    "Comment": "samba4-winbind-krb5-locator is earlier than 0:4.0.0-67.el6_7.rc4"
                   },
                   {
                     "XMLName": {
@@ -617,8 +617,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506006",
-                    "Comment": "samba4 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506028",
+                    "Comment": "samba4-winbind-krb5-locator is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

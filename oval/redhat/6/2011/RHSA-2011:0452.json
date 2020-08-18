@@ -73,10 +73,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2011-04-18"
@@ -121,6 +121,34 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110452001",
+                    "Comment": "libtiff is earlier than 0:3.9.4-1.el6_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110318002",
+                    "Comment": "libtiff is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110452003",
                     "Comment": "libtiff-devel is earlier than 0:3.9.4-1.el6_0.3"
                   },
                   {
@@ -148,7 +176,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110452003",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110452005",
                     "Comment": "libtiff-static is earlier than 0:3.9.4-1.el6_0.3"
                   },
                   {
@@ -157,36 +185,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110318002",
-                    "Comment": "libtiff-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110452005",
-                    "Comment": "libtiff is earlier than 0:3.9.4-1.el6_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110318006",
-                    "Comment": "libtiff is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libtiff-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

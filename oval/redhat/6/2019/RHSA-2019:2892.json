@@ -197,10 +197,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2019-09-24"
@@ -245,7 +245,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192892001",
-                    "Comment": "qemu-kvm-tools is earlier than 2:0.12.1.2-2.506.el6_10.5"
+                    "Comment": "qemu-guest-agent is earlier than 2:0.12.1.2-2.506.el6_10.5"
                   },
                   {
                     "XMLName": {
@@ -253,8 +253,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110345002",
-                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20121234002",
+                    "Comment": "qemu-guest-agent is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -273,6 +273,34 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192892003",
+                    "Comment": "qemu-img is earlier than 2:0.12.1.2-2.506.el6_10.5"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110345002",
+                    "Comment": "qemu-img is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192892005",
                     "Comment": "qemu-kvm is earlier than 2:0.12.1.2-2.506.el6_10.5"
                   },
                   {
@@ -300,8 +328,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192892005",
-                    "Comment": "qemu-img is earlier than 2:0.12.1.2-2.506.el6_10.5"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192892007",
+                    "Comment": "qemu-kvm-tools is earlier than 2:0.12.1.2-2.506.el6_10.5"
                   },
                   {
                     "XMLName": {
@@ -310,35 +338,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110345006",
-                    "Comment": "qemu-img is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192892007",
-                    "Comment": "qemu-guest-agent is earlier than 2:0.12.1.2-2.506.el6_10.5"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20121234002",
-                    "Comment": "qemu-guest-agent is signed with Red Hat redhatrelease2 key"
+                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

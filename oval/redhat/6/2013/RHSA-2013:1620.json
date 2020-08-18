@@ -100,10 +100,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-11-20"
@@ -156,7 +156,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376186",
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376182",
                     "Comment": "xorg-x11-server-Xdmx is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -176,6 +176,90 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20131620003",
+                    "Comment": "xorg-x11-server-Xephyr is earlier than 0:1.13.0-23.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376184",
+                    "Comment": "xorg-x11-server-Xephyr is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20131620005",
+                    "Comment": "xorg-x11-server-Xnest is earlier than 0:1.13.0-23.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376186",
+                    "Comment": "xorg-x11-server-Xnest is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20131620007",
+                    "Comment": "xorg-x11-server-Xorg is earlier than 0:1.13.0-23.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376188",
+                    "Comment": "xorg-x11-server-Xorg is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20131620009",
                     "Comment": "xorg-x11-server-Xvfb is earlier than 0:1.13.0-23.el6"
                   },
                   {
@@ -203,92 +287,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20131620005",
-                    "Comment": "xorg-x11-server-devel is earlier than 0:1.13.0-23.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376184",
-                    "Comment": "xorg-x11-server-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20131620007",
-                    "Comment": "xorg-x11-server-Xnest is earlier than 0:1.13.0-23.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376188",
-                    "Comment": "xorg-x11-server-Xnest is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20131620009",
-                    "Comment": "xorg-x11-server-source is earlier than 0:1.13.0-23.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376182",
-                    "Comment": "xorg-x11-server-source is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20131620011",
-                    "Comment": "xorg-x11-server-Xephyr is earlier than 0:1.13.0-23.el6"
+                    "Comment": "xorg-x11-server-common is earlier than 0:1.13.0-23.el6"
                   },
                   {
                     "XMLName": {
@@ -296,8 +296,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376196",
-                    "Comment": "xorg-x11-server-Xephyr is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376192",
+                    "Comment": "xorg-x11-server-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -316,7 +316,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20131620013",
-                    "Comment": "xorg-x11-server-Xorg is earlier than 0:1.13.0-23.el6"
+                    "Comment": "xorg-x11-server-devel is earlier than 0:1.13.0-23.el6"
                   },
                   {
                     "XMLName": {
@@ -324,8 +324,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376192",
-                    "Comment": "xorg-x11-server-Xorg is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376194",
+                    "Comment": "xorg-x11-server-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -344,7 +344,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20131620015",
-                    "Comment": "xorg-x11-server-common is earlier than 0:1.13.0-23.el6"
+                    "Comment": "xorg-x11-server-source is earlier than 0:1.13.0-23.el6"
                   },
                   {
                     "XMLName": {
@@ -352,8 +352,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20141376194",
-                    "Comment": "xorg-x11-server-common is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20141376196",
+                    "Comment": "xorg-x11-server-source is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

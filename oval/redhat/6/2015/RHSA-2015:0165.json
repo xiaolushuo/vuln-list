@@ -104,8 +104,8 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
@@ -152,7 +152,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165001",
-                    "Comment": "subversion-svn2cl is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -161,7 +161,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110258002",
-                    "Comment": "subversion-svn2cl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mod_dav_svn is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -180,7 +180,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165003",
-                    "Comment": "subversion-devel is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "subversion is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -188,8 +188,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258012",
-                    "Comment": "subversion-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258004",
+                    "Comment": "subversion is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -208,7 +208,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165005",
-                    "Comment": "subversion-kde is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "subversion-devel is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -216,8 +216,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258004",
-                    "Comment": "subversion-kde is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258006",
+                    "Comment": "subversion-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -236,7 +236,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165007",
-                    "Comment": "subversion-ruby is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "subversion-gnome is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -244,8 +244,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258016",
-                    "Comment": "subversion-ruby is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258008",
+                    "Comment": "subversion-gnome is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -264,6 +264,62 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165009",
+                    "Comment": "subversion-javahl is earlier than 0:1.6.11-12.el6_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258010",
+                    "Comment": "subversion-javahl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150165011",
+                    "Comment": "subversion-kde is earlier than 0:1.6.11-12.el6_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258012",
+                    "Comment": "subversion-kde is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150165013",
                     "Comment": "subversion-perl is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
@@ -291,64 +347,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150165011",
-                    "Comment": "subversion-gnome is earlier than 0:1.6.11-12.el6_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258018",
-                    "Comment": "subversion-gnome is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150165013",
-                    "Comment": "subversion-javahl is earlier than 0:1.6.11-12.el6_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258008",
-                    "Comment": "subversion-javahl is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165015",
-                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "subversion-ruby is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -356,8 +356,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258006",
-                    "Comment": "mod_dav_svn is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258016",
+                    "Comment": "subversion-ruby is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -376,7 +376,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150165017",
-                    "Comment": "subversion is earlier than 0:1.6.11-12.el6_6"
+                    "Comment": "subversion-svn2cl is earlier than 0:1.6.11-12.el6_6"
                   },
                   {
                     "XMLName": {
@@ -384,8 +384,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110258010",
-                    "Comment": "subversion is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110258018",
+                    "Comment": "subversion-svn2cl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

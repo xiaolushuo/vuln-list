@@ -217,10 +217,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::client"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2018-10-30"
@@ -385,7 +385,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865108",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865106",
                     "Comment": "libXcursor is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -413,7 +413,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865106",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865108",
                     "Comment": "libXcursor-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -441,7 +441,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141870004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141870002",
                     "Comment": "libXfont is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -469,7 +469,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141870002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141870004",
                     "Comment": "libXfont-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -497,7 +497,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865004",
                     "Comment": "libXfont2 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -525,7 +525,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865006",
                     "Comment": "libXfont2-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -545,34 +545,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059021",
-                    "Comment": "freeglut-devel is earlier than 0:3.0.0-8.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059022",
-                    "Comment": "freeglut-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059023",
                     "Comment": "freeglut is earlier than 0:3.0.0-8.el7"
                   },
                   {
@@ -581,7 +553,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059024",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059022",
                     "Comment": "freeglut is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -600,7 +572,91 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059023",
+                    "Comment": "freeglut-devel is earlier than 0:3.0.0-8.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059024",
+                    "Comment": "freeglut-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059025",
+                    "Comment": "vulkan is earlier than 0:1.1.73.0-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865120",
+                    "Comment": "vulkan is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059027",
+                    "Comment": "vulkan-devel is earlier than 0:1.1.73.0-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865122",
+                    "Comment": "vulkan-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059029",
                     "Comment": "vulkan-filesystem is earlier than 0:1.1.73.0-1.el7"
                   },
                   {
@@ -628,62 +684,6 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059027",
-                    "Comment": "vulkan is earlier than 0:1.1.73.0-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865122",
-                    "Comment": "vulkan is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059029",
-                    "Comment": "vulkan-devel is earlier than 0:1.1.73.0-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865120",
-                    "Comment": "vulkan-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059031",
                     "Comment": "libxcb is earlier than 0:1.13-1.el7"
                   },
@@ -693,7 +693,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865038",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865034",
                     "Comment": "libxcb is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -749,7 +749,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865034",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865038",
                     "Comment": "libxcb-doc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -797,7 +797,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059039",
-                    "Comment": "libwacom-data is earlier than 0:0.30-1.el7"
+                    "Comment": "libwacom is earlier than 0:0.30-1.el7"
                   },
                   {
                     "XMLName": {
@@ -805,8 +805,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865114",
-                    "Comment": "libwacom-data is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865110",
+                    "Comment": "libwacom is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -825,7 +825,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059041",
-                    "Comment": "libwacom is earlier than 0:0.30-1.el7"
+                    "Comment": "libwacom-data is earlier than 0:0.30-1.el7"
                   },
                   {
                     "XMLName": {
@@ -834,7 +834,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171865112",
-                    "Comment": "libwacom is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libwacom-data is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -861,7 +861,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865110",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865114",
                     "Comment": "libwacom-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -889,7 +889,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865118",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865116",
                     "Comment": "libinput is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -917,7 +917,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865116",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865118",
                     "Comment": "libinput-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -937,7 +937,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059049",
-                    "Comment": "glx-utils is earlier than 0:8.3.0-10.el7"
+                    "Comment": "egl-utils is earlier than 0:8.3.0-10.el7"
                   },
                   {
                     "XMLName": {
@@ -946,7 +946,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059050",
-                    "Comment": "glx-utils is signed with Red Hat redhatrelease2 key"
+                    "Comment": "egl-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -965,7 +965,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059051",
-                    "Comment": "mesa-demos is earlier than 0:8.3.0-10.el7"
+                    "Comment": "glx-utils is earlier than 0:8.3.0-10.el7"
                   },
                   {
                     "XMLName": {
@@ -974,7 +974,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059052",
-                    "Comment": "mesa-demos is signed with Red Hat redhatrelease2 key"
+                    "Comment": "glx-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -993,7 +993,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059053",
-                    "Comment": "egl-utils is earlier than 0:8.3.0-10.el7"
+                    "Comment": "mesa-demos is earlier than 0:8.3.0-10.el7"
                   },
                   {
                     "XMLName": {
@@ -1002,7 +1002,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059054",
-                    "Comment": "egl-utils is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mesa-demos is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1057,7 +1057,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865024",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865022",
                     "Comment": "libepoxy is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1085,7 +1085,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865022",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865024",
                     "Comment": "libepoxy-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1469,7 +1469,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059087",
-                    "Comment": "xorg-x11-drv-intel is earlier than 0:2.99.917-28.20180530.el7"
+                    "Comment": "intel-gpu-tools is earlier than 0:2.99.917-28.20180530.el7"
                   },
                   {
                     "XMLName": {
@@ -1478,7 +1478,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059088",
-                    "Comment": "xorg-x11-drv-intel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "intel-gpu-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1497,7 +1497,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059089",
-                    "Comment": "intel-gpu-tools is earlier than 0:2.99.917-28.20180530.el7"
+                    "Comment": "xorg-x11-drv-intel is earlier than 0:2.99.917-28.20180530.el7"
                   },
                   {
                     "XMLName": {
@@ -1506,7 +1506,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059090",
-                    "Comment": "intel-gpu-tools is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xorg-x11-drv-intel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1589,7 +1589,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865098",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865096",
                     "Comment": "xkeyboard-config is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1617,7 +1617,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865096",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865098",
                     "Comment": "xkeyboard-config-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1693,7 +1693,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059103",
-                    "Comment": "xorg-x11-xkb-utils is earlier than 0:7.7-14.el7"
+                    "Comment": "xorg-x11-xkb-extras is earlier than 0:7.7-14.el7"
                   },
                   {
                     "XMLName": {
@@ -1702,7 +1702,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059104",
-                    "Comment": "xorg-x11-xkb-utils is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xorg-x11-xkb-extras is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1721,7 +1721,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059105",
-                    "Comment": "xorg-x11-xkb-utils-devel is earlier than 0:7.7-14.el7"
+                    "Comment": "xorg-x11-xkb-utils is earlier than 0:7.7-14.el7"
                   },
                   {
                     "XMLName": {
@@ -1730,7 +1730,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059106",
-                    "Comment": "xorg-x11-xkb-utils-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xorg-x11-xkb-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1749,7 +1749,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059107",
-                    "Comment": "xorg-x11-xkb-extras is earlier than 0:7.7-14.el7"
+                    "Comment": "xorg-x11-xkb-utils-devel is earlier than 0:7.7-14.el7"
                   },
                   {
                     "XMLName": {
@@ -1758,7 +1758,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059108",
-                    "Comment": "xorg-x11-xkb-extras is signed with Red Hat redhatrelease2 key"
+                    "Comment": "xorg-x11-xkb-utils-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1889,34 +1889,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059117",
-                    "Comment": "libX11-devel is earlier than 0:1.6.5-2.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865130",
-                    "Comment": "libX11-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059119",
                     "Comment": "libX11 is earlier than 0:1.6.5-2.el7"
                   },
                   {
@@ -1925,7 +1897,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865134",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865130",
                     "Comment": "libX11 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1944,7 +1916,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059121",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059119",
                     "Comment": "libX11-common is earlier than 0:1.6.5-2.el7"
                   },
                   {
@@ -1955,6 +1927,34 @@
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171865132",
                     "Comment": "libX11-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059121",
+                    "Comment": "libX11-devel is earlier than 0:1.6.5-2.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865134",
+                    "Comment": "libX11-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2057,7 +2057,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059129",
-                    "Comment": "libglvnd-devel is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
+                    "Comment": "libglvnd is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
                   },
                   {
                     "XMLName": {
@@ -2066,7 +2066,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059130",
-                    "Comment": "libglvnd-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libglvnd is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2085,34 +2085,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059131",
-                    "Comment": "libglvnd-opengl is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059132",
-                    "Comment": "libglvnd-opengl is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059133",
                     "Comment": "libglvnd-core-devel is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
                   },
                   {
@@ -2121,7 +2093,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059134",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059132",
                     "Comment": "libglvnd-core-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2140,8 +2112,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059133",
+                    "Comment": "libglvnd-devel is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059134",
+                    "Comment": "libglvnd-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059135",
-                    "Comment": "libglvnd-glx is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
+                    "Comment": "libglvnd-egl is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
                   },
                   {
                     "XMLName": {
@@ -2150,7 +2150,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059136",
-                    "Comment": "libglvnd-glx is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libglvnd-egl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2197,7 +2197,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059139",
-                    "Comment": "libglvnd is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
+                    "Comment": "libglvnd-glx is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
                   },
                   {
                     "XMLName": {
@@ -2206,7 +2206,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059140",
-                    "Comment": "libglvnd is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libglvnd-glx is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2225,7 +2225,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059141",
-                    "Comment": "libglvnd-egl is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
+                    "Comment": "libglvnd-opengl is earlier than 1:1.0.1-0.8.git5baa1e5.el7"
                   },
                   {
                     "XMLName": {
@@ -2234,7 +2234,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059142",
-                    "Comment": "libglvnd-egl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libglvnd-opengl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2253,90 +2253,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059143",
-                    "Comment": "mesa-filesystem is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865164",
-                    "Comment": "mesa-filesystem is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059145",
-                    "Comment": "mesa-libgbm is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865160",
-                    "Comment": "mesa-libgbm is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059147",
-                    "Comment": "mesa-libGLES is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865170",
-                    "Comment": "mesa-libGLES is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059149",
                     "Comment": "mesa-dri-drivers is earlier than 0:18.0.5-3.el7"
                   },
                   {
@@ -2345,7 +2261,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865162",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865144",
                     "Comment": "mesa-dri-drivers is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2364,8 +2280,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059151",
-                    "Comment": "mesa-libglapi is earlier than 0:18.0.5-3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059145",
+                    "Comment": "mesa-filesystem is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2373,8 +2289,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865158",
-                    "Comment": "mesa-libglapi is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865146",
+                    "Comment": "mesa-filesystem is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2392,63 +2308,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059153",
-                    "Comment": "mesa-libGL is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865154",
-                    "Comment": "mesa-libGL is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059155",
-                    "Comment": "mesa-libEGL-devel is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865168",
-                    "Comment": "mesa-libEGL-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059157",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059147",
                     "Comment": "mesa-libEGL is earlier than 0:18.0.5-3.el7"
                   },
                   {
@@ -2457,7 +2317,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865156",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865148",
                     "Comment": "mesa-libEGL is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2476,7 +2336,63 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059159",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059149",
+                    "Comment": "mesa-libEGL-devel is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865150",
+                    "Comment": "mesa-libEGL-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059151",
+                    "Comment": "mesa-libGL is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865152",
+                    "Comment": "mesa-libGL is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059153",
                     "Comment": "mesa-libGL-devel is earlier than 0:18.0.5-3.el7"
                   },
                   {
@@ -2485,7 +2401,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865172",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865154",
                     "Comment": "mesa-libGL-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2504,8 +2420,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059161",
-                    "Comment": "mesa-libxatracker is earlier than 0:18.0.5-3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059155",
+                    "Comment": "mesa-libGLES is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2513,8 +2429,92 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865166",
-                    "Comment": "mesa-libxatracker is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865156",
+                    "Comment": "mesa-libGLES is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059157",
+                    "Comment": "mesa-libGLES-devel is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865158",
+                    "Comment": "mesa-libGLES-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059159",
+                    "Comment": "mesa-libOSMesa is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865160",
+                    "Comment": "mesa-libOSMesa is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059161",
+                    "Comment": "mesa-libOSMesa-devel is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865162",
+                    "Comment": "mesa-libOSMesa-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2533,7 +2533,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059163",
-                    "Comment": "mesa-vdpau-drivers is earlier than 0:18.0.5-3.el7"
+                    "Comment": "mesa-libgbm is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2541,8 +2541,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059164",
-                    "Comment": "mesa-vdpau-drivers is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865164",
+                    "Comment": "mesa-libgbm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2569,7 +2569,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865148",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865166",
                     "Comment": "mesa-libgbm-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2589,7 +2589,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059167",
-                    "Comment": "mesa-libwayland-egl-devel is earlier than 0:18.0.5-3.el7"
+                    "Comment": "mesa-libglapi is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2597,8 +2597,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059168",
-                    "Comment": "mesa-libwayland-egl-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865168",
+                    "Comment": "mesa-libglapi is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2617,62 +2617,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059169",
-                    "Comment": "mesa-libGLES-devel is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865150",
-                    "Comment": "mesa-libGLES-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059171",
-                    "Comment": "mesa-vulkan-drivers is earlier than 0:18.0.5-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865152",
-                    "Comment": "mesa-vulkan-drivers is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059173",
                     "Comment": "mesa-libwayland-egl is earlier than 0:18.0.5-3.el7"
                   },
                   {
@@ -2681,7 +2625,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059174",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059170",
                     "Comment": "mesa-libwayland-egl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2700,8 +2644,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059175",
-                    "Comment": "mesa-libOSMesa is earlier than 0:18.0.5-3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059171",
+                    "Comment": "mesa-libwayland-egl-devel is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2709,8 +2653,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865144",
-                    "Comment": "mesa-libOSMesa is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059172",
+                    "Comment": "mesa-libwayland-egl-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059173",
+                    "Comment": "mesa-libxatracker is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865170",
+                    "Comment": "mesa-libxatracker is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059175",
+                    "Comment": "mesa-libxatracker-devel is earlier than 0:18.0.5-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865172",
+                    "Comment": "mesa-libxatracker-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2729,7 +2729,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059177",
-                    "Comment": "mesa-libOSMesa-devel is earlier than 0:18.0.5-3.el7"
+                    "Comment": "mesa-vdpau-drivers is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2737,8 +2737,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865146",
-                    "Comment": "mesa-libOSMesa-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059178",
+                    "Comment": "mesa-vdpau-drivers is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2757,7 +2757,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059179",
-                    "Comment": "mesa-libxatracker-devel is earlier than 0:18.0.5-3.el7"
+                    "Comment": "mesa-vulkan-drivers is earlier than 0:18.0.5-3.el7"
                   },
                   {
                     "XMLName": {
@@ -2766,7 +2766,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171865174",
-                    "Comment": "mesa-libxatracker-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mesa-vulkan-drivers is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2793,7 +2793,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233002",
                     "Comment": "tigervnc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2813,62 +2813,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059183",
-                    "Comment": "tigervnc-server-minimal is earlier than 0:1.8.0-13.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233002",
-                    "Comment": "tigervnc-server-minimal is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059185",
-                    "Comment": "tigervnc-server is earlier than 0:1.8.0-13.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233004",
-                    "Comment": "tigervnc-server is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059187",
                     "Comment": "tigervnc-icons is earlier than 0:1.8.0-13.el7"
                   },
                   {
@@ -2877,7 +2821,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233010",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233004",
                     "Comment": "tigervnc-icons is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2896,7 +2840,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059189",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059185",
                     "Comment": "tigervnc-license is earlier than 0:1.8.0-13.el7"
                   },
                   {
@@ -2905,7 +2849,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233006",
                     "Comment": "tigervnc-license is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2924,7 +2868,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059191",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059187",
+                    "Comment": "tigervnc-server is earlier than 0:1.8.0-13.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233008",
+                    "Comment": "tigervnc-server is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059189",
                     "Comment": "tigervnc-server-applet is earlier than 0:1.8.0-13.el7"
                   },
                   {
@@ -2933,8 +2905,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152233012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233010",
                     "Comment": "tigervnc-server-applet is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059191",
+                    "Comment": "tigervnc-server-minimal is earlier than 0:1.8.0-13.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152233012",
+                    "Comment": "tigervnc-server-minimal is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2981,62 +2981,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059195",
-                    "Comment": "libdrm is earlier than 0:2.4.91-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865020",
-                    "Comment": "libdrm is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059197",
-                    "Comment": "libdrm-devel is earlier than 0:2.4.91-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171865018",
-                    "Comment": "libdrm-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059199",
                     "Comment": "drm-utils is earlier than 0:2.4.91-3.el7"
                   },
                   {
@@ -3064,8 +3008,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059201",
-                    "Comment": "xorg-x11-server-common is earlier than 0:1.20.1-3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059197",
+                    "Comment": "libdrm is earlier than 0:2.4.91-3.el7"
                   },
                   {
                     "XMLName": {
@@ -3073,8 +3017,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983014",
-                    "Comment": "xorg-x11-server-common is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865018",
+                    "Comment": "libdrm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059199",
+                    "Comment": "libdrm-devel is earlier than 0:2.4.91-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171865020",
+                    "Comment": "libdrm-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059201",
+                    "Comment": "xorg-x11-server-Xdmx is earlier than 0:1.20.1-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983002",
+                    "Comment": "xorg-x11-server-Xdmx is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -3101,7 +3101,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983004",
                     "Comment": "xorg-x11-server-Xephyr is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -3121,118 +3121,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183059205",
-                    "Comment": "xorg-x11-server-Xorg is earlier than 0:1.20.1-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983016",
-                    "Comment": "xorg-x11-server-Xorg is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059207",
-                    "Comment": "xorg-x11-server-source is earlier than 0:1.20.1-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983002",
-                    "Comment": "xorg-x11-server-source is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059209",
-                    "Comment": "xorg-x11-server-Xdmx is earlier than 0:1.20.1-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983004",
-                    "Comment": "xorg-x11-server-Xdmx is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059211",
-                    "Comment": "xorg-x11-server-devel is earlier than 0:1.20.1-3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983010",
-                    "Comment": "xorg-x11-server-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059213",
                     "Comment": "xorg-x11-server-Xnest is earlier than 0:1.20.1-3.el7"
                   },
                   {
@@ -3260,7 +3148,63 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059215",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059207",
+                    "Comment": "xorg-x11-server-Xorg is earlier than 0:1.20.1-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983008",
+                    "Comment": "xorg-x11-server-Xorg is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059209",
+                    "Comment": "xorg-x11-server-Xvfb is earlier than 0:1.20.1-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983010",
+                    "Comment": "xorg-x11-server-Xvfb is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059211",
                     "Comment": "xorg-x11-server-Xwayland is earlier than 0:1.20.1-3.el7"
                   },
                   {
@@ -3269,7 +3213,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059216",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059212",
                     "Comment": "xorg-x11-server-Xwayland is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -3288,8 +3232,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183059217",
-                    "Comment": "xorg-x11-server-Xvfb is earlier than 0:1.20.1-3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059213",
+                    "Comment": "xorg-x11-server-common is earlier than 0:1.20.1-3.el7"
                   },
                   {
                     "XMLName": {
@@ -3297,8 +3241,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141983008",
-                    "Comment": "xorg-x11-server-Xvfb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983012",
+                    "Comment": "xorg-x11-server-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059215",
+                    "Comment": "xorg-x11-server-devel is earlier than 0:1.20.1-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983014",
+                    "Comment": "xorg-x11-server-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183059217",
+                    "Comment": "xorg-x11-server-source is earlier than 0:1.20.1-3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141983016",
+                    "Comment": "xorg-x11-server-source is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

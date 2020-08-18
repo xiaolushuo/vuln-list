@@ -73,10 +73,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::server",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2016-05-09"
@@ -129,7 +129,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704002",
                     "Comment": "libcacard is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -149,7 +149,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160724003",
-                    "Comment": "qemu-kvm-tools is earlier than 10:1.5.3-105.el7_2.4"
+                    "Comment": "libcacard-devel is earlier than 10:1.5.3-105.el7_2.4"
                   },
                   {
                     "XMLName": {
@@ -157,8 +157,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704010",
-                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704004",
+                    "Comment": "libcacard-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -177,7 +177,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160724005",
-                    "Comment": "libcacard-devel is earlier than 10:1.5.3-105.el7_2.4"
+                    "Comment": "libcacard-tools is earlier than 10:1.5.3-105.el7_2.4"
                   },
                   {
                     "XMLName": {
@@ -185,8 +185,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704012",
-                    "Comment": "libcacard-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704006",
+                    "Comment": "libcacard-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -213,7 +213,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704010",
                     "Comment": "qemu-img is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -233,34 +233,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160724009",
-                    "Comment": "qemu-kvm-common is earlier than 10:1.5.3-105.el7_2.4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704004",
-                    "Comment": "qemu-kvm-common is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160724011",
                     "Comment": "qemu-kvm is earlier than 10:1.5.3-105.el7_2.4"
                   },
                   {
@@ -269,7 +241,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704014",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704012",
                     "Comment": "qemu-kvm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -288,8 +260,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160724013",
-                    "Comment": "libcacard-tools is earlier than 10:1.5.3-105.el7_2.4"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160724011",
+                    "Comment": "qemu-kvm-common is earlier than 10:1.5.3-105.el7_2.4"
                   },
                   {
                     "XMLName": {
@@ -297,8 +269,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704006",
-                    "Comment": "libcacard-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704014",
+                    "Comment": "qemu-kvm-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160724013",
+                    "Comment": "qemu-kvm-tools is earlier than 10:1.5.3-105.el7_2.4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704016",
+                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

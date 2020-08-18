@@ -73,10 +73,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2014-03-24"
@@ -121,34 +121,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140321001",
-                    "Comment": "net-snmp-utils is earlier than 1:5.5-49.el6_5.1"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131150002",
-                    "Comment": "net-snmp-utils is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140321003",
                     "Comment": "net-snmp is earlier than 1:5.5-49.el6_5.1"
                   },
                   {
@@ -157,7 +129,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131150010",
+                    "TestRef": "oval:com.redhat.rhba:tst:20131150002",
                     "Comment": "net-snmp is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -176,7 +148,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140321005",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140321003",
                     "Comment": "net-snmp-devel is earlier than 1:5.5-49.el6_5.1"
                   },
                   {
@@ -185,7 +157,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131150008",
+                    "TestRef": "oval:com.redhat.rhba:tst:20131150004",
                     "Comment": "net-snmp-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -204,8 +176,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140321007",
-                    "Comment": "net-snmp-python is earlier than 1:5.5-49.el6_5.1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140321005",
+                    "Comment": "net-snmp-libs is earlier than 1:5.5-49.el6_5.1"
                   },
                   {
                     "XMLName": {
@@ -214,7 +186,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhba:tst:20131150006",
-                    "Comment": "net-snmp-python is signed with Red Hat redhatrelease2 key"
+                    "Comment": "net-snmp-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -232,7 +204,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140321009",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140321007",
                     "Comment": "net-snmp-perl is earlier than 1:5.5-49.el6_5.1"
                   },
                   {
@@ -241,7 +213,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131150012",
+                    "TestRef": "oval:com.redhat.rhba:tst:20131150008",
                     "Comment": "net-snmp-perl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -260,8 +232,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140321011",
-                    "Comment": "net-snmp-libs is earlier than 1:5.5-49.el6_5.1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140321009",
+                    "Comment": "net-snmp-python is earlier than 1:5.5-49.el6_5.1"
                   },
                   {
                     "XMLName": {
@@ -269,8 +241,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131150004",
-                    "Comment": "net-snmp-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20131150010",
+                    "Comment": "net-snmp-python is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140321011",
+                    "Comment": "net-snmp-utils is earlier than 1:5.5-49.el6_5.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20131150012",
+                    "Comment": "net-snmp-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

@@ -73,9 +73,9 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
@@ -149,34 +149,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192047003",
-                    "Comment": "libcgroup-tools is earlier than 0:0.41-21.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192047004",
-                    "Comment": "libcgroup-tools is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192047005",
                     "Comment": "libcgroup-devel is earlier than 0:0.41-21.el7"
                   },
                   {
@@ -185,7 +157,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192047006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192047004",
                     "Comment": "libcgroup-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -204,7 +176,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192047007",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192047005",
                     "Comment": "libcgroup-pam is earlier than 0:0.41-21.el7"
                   },
                   {
@@ -213,8 +185,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192047008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192047006",
                     "Comment": "libcgroup-pam is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192047007",
+                    "Comment": "libcgroup-tools is earlier than 0:0.41-21.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192047008",
+                    "Comment": "libcgroup-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

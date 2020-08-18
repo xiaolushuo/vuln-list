@@ -259,9 +259,9 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::server",
       "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
       "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
@@ -307,7 +307,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160722001",
-                    "Comment": "openssl-devel is earlier than 1:1.0.1e-51.el7_2.5"
+                    "Comment": "openssl is earlier than 1:1.0.1e-51.el7_2.5"
                   },
                   {
                     "XMLName": {
@@ -316,7 +316,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhba:tst:20171929002",
-                    "Comment": "openssl-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "openssl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -335,7 +335,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160722003",
-                    "Comment": "openssl-perl is earlier than 1:1.0.1e-51.el7_2.5"
+                    "Comment": "openssl-devel is earlier than 1:1.0.1e-51.el7_2.5"
                   },
                   {
                     "XMLName": {
@@ -344,7 +344,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhba:tst:20171929004",
-                    "Comment": "openssl-perl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "openssl-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -363,34 +363,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160722005",
-                    "Comment": "openssl-static is earlier than 1:1.0.1e-51.el7_2.5"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171929006",
-                    "Comment": "openssl-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160722007",
                     "Comment": "openssl-libs is earlier than 1:1.0.1e-51.el7_2.5"
                   },
                   {
@@ -399,7 +371,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171929010",
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929006",
                     "Comment": "openssl-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -418,8 +390,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160722009",
-                    "Comment": "openssl is earlier than 1:1.0.1e-51.el7_2.5"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160722007",
+                    "Comment": "openssl-perl is earlier than 1:1.0.1e-51.el7_2.5"
                   },
                   {
                     "XMLName": {
@@ -428,7 +400,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhba:tst:20171929008",
-                    "Comment": "openssl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "openssl-perl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160722009",
+                    "Comment": "openssl-static is earlier than 1:1.0.1e-51.el7_2.5"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929010",
+                    "Comment": "openssl-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

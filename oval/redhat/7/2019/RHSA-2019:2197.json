@@ -361,9 +361,9 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
@@ -409,7 +409,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192197001",
-                    "Comment": "elfutils-default-yama-scope is earlier than 0:0.176-2.el7"
+                    "Comment": "elfutils is earlier than 0:0.176-2.el7"
                   },
                   {
                     "XMLName": {
@@ -417,8 +417,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192197002",
-                    "Comment": "elfutils-default-yama-scope is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhea:tst:20150369002",
+                    "Comment": "elfutils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -437,7 +437,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192197003",
-                    "Comment": "elfutils-libs is earlier than 0:0.176-2.el7"
+                    "Comment": "elfutils-default-yama-scope is earlier than 0:0.176-2.el7"
                   },
                   {
                     "XMLName": {
@@ -445,8 +445,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhea:tst:20150369010",
-                    "Comment": "elfutils-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192197004",
+                    "Comment": "elfutils-default-yama-scope is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -465,6 +465,62 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192197005",
+                    "Comment": "elfutils-devel is earlier than 0:0.176-2.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhea:tst:20150369004",
+                    "Comment": "elfutils-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192197007",
+                    "Comment": "elfutils-devel-static is earlier than 0:0.176-2.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhea:tst:20150369006",
+                    "Comment": "elfutils-devel-static is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192197009",
                     "Comment": "elfutils-libelf is earlier than 0:0.176-2.el7"
                   },
                   {
@@ -492,62 +548,6 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192197007",
-                    "Comment": "elfutils is earlier than 0:0.176-2.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhea:tst:20150369004",
-                    "Comment": "elfutils is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192197009",
-                    "Comment": "elfutils-devel is earlier than 0:0.176-2.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhea:tst:20150369002",
-                    "Comment": "elfutils-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192197011",
                     "Comment": "elfutils-libelf-devel is earlier than 0:0.176-2.el7"
                   },
@@ -557,7 +557,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhea:tst:20150369006",
+                    "TestRef": "oval:com.redhat.rhea:tst:20150369010",
                     "Comment": "elfutils-libelf-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -605,7 +605,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20192197015",
-                    "Comment": "elfutils-devel-static is earlier than 0:0.176-2.el7"
+                    "Comment": "elfutils-libs is earlier than 0:0.176-2.el7"
                   },
                   {
                     "XMLName": {
@@ -614,7 +614,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhea:tst:20150369014",
-                    "Comment": "elfutils-devel-static is signed with Red Hat redhatrelease2 key"
+                    "Comment": "elfutils-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

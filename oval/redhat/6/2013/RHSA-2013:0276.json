@@ -2197,10 +2197,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-02-20"
@@ -2245,7 +2245,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130276001",
-                    "Comment": "libvirt-devel is earlier than 0:0.10.2-18.el6"
+                    "Comment": "libvirt is earlier than 0:0.10.2-18.el6"
                   },
                   {
                     "XMLName": {
@@ -2253,8 +2253,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131581004",
-                    "Comment": "libvirt-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20131581002",
+                    "Comment": "libvirt is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2273,34 +2273,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130276003",
-                    "Comment": "libvirt-lock-sanlock is earlier than 0:0.10.2-18.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131581002",
-                    "Comment": "libvirt-lock-sanlock is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130276005",
                     "Comment": "libvirt-client is earlier than 0:0.10.2-18.el6"
                   },
                   {
@@ -2309,7 +2281,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131581008",
+                    "TestRef": "oval:com.redhat.rhba:tst:20131581004",
                     "Comment": "libvirt-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -2328,8 +2300,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130276007",
-                    "Comment": "libvirt is earlier than 0:0.10.2-18.el6"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130276005",
+                    "Comment": "libvirt-devel is earlier than 0:0.10.2-18.el6"
                   },
                   {
                     "XMLName": {
@@ -2337,8 +2309,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131581010",
-                    "Comment": "libvirt is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20131581006",
+                    "Comment": "libvirt-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130276007",
+                    "Comment": "libvirt-lock-sanlock is earlier than 0:0.10.2-18.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20131581008",
+                    "Comment": "libvirt-lock-sanlock is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -2365,7 +2365,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20131581006",
+                    "TestRef": "oval:com.redhat.rhba:tst:20131581010",
                     "Comment": "libvirt-python is signed with Red Hat redhatrelease2 key"
                   }
                 ]

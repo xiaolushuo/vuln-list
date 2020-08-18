@@ -927,10 +927,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
       "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2017-05-09"
@@ -983,7 +983,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20142021006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20142021002",
                     "Comment": "jasper is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1003,34 +1003,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20171208003",
-                    "Comment": "jasper-utils is earlier than 0:1.900.1-30.el7_3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20142021004",
-                    "Comment": "jasper-utils is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171208005",
                     "Comment": "jasper-devel is earlier than 0:1.900.1-30.el7_3"
                   },
                   {
@@ -1039,7 +1011,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20142021002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20142021004",
                     "Comment": "jasper-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1058,7 +1030,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20171208007",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171208005",
                     "Comment": "jasper-libs is earlier than 0:1.900.1-30.el7_3"
                   },
                   {
@@ -1067,8 +1039,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20142021008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20142021006",
                     "Comment": "jasper-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171208007",
+                    "Comment": "jasper-utils is earlier than 0:1.900.1-30.el7_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20142021008",
+                    "Comment": "jasper-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

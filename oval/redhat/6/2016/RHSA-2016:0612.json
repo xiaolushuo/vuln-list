@@ -291,8 +291,8 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
@@ -450,7 +450,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612009",
-                    "Comment": "pytalloc is earlier than 0:2.1.5-1.el6_7"
+                    "Comment": "libtalloc is earlier than 0:2.1.5-1.el6_7"
                   },
                   {
                     "XMLName": {
@@ -459,7 +459,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612010",
-                    "Comment": "pytalloc is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libtalloc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -506,7 +506,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612013",
-                    "Comment": "libtalloc is earlier than 0:2.1.5-1.el6_7"
+                    "Comment": "pytalloc is earlier than 0:2.1.5-1.el6_7"
                   },
                   {
                     "XMLName": {
@@ -515,7 +515,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612014",
-                    "Comment": "libtalloc is signed with Red Hat redhatrelease2 key"
+                    "Comment": "pytalloc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -562,7 +562,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612017",
-                    "Comment": "libldb is earlier than 0:1.1.25-2.el6_7"
+                    "Comment": "ldb-tools is earlier than 0:1.1.25-2.el6_7"
                   },
                   {
                     "XMLName": {
@@ -570,8 +570,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160009008",
-                    "Comment": "libldb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160009002",
+                    "Comment": "ldb-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -590,6 +590,34 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612019",
+                    "Comment": "libldb is earlier than 0:1.1.25-2.el6_7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160009004",
+                    "Comment": "libldb is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612021",
                     "Comment": "libldb-devel is earlier than 0:1.1.25-2.el6_7"
                   },
                   {
@@ -617,7 +645,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612021",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612023",
                     "Comment": "pyldb is earlier than 0:1.1.25-2.el6_7"
                   },
                   {
@@ -626,7 +654,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160009010",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160009008",
                     "Comment": "pyldb is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -645,7 +673,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612023",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612025",
                     "Comment": "pyldb-devel is earlier than 0:1.1.25-2.el6_7"
                   },
                   {
@@ -654,7 +682,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160009002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160009010",
                     "Comment": "pyldb-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -673,91 +701,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612025",
-                    "Comment": "ldb-tools is earlier than 0:1.1.25-2.el6_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160009004",
-                    "Comment": "ldb-tools is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612027",
-                    "Comment": "libtevent-devel is earlier than 0:0.9.26-2.el6_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612028",
-                    "Comment": "libtevent-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612029",
-                    "Comment": "python-tevent is earlier than 0:0.9.26-2.el6_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612030",
-                    "Comment": "python-tevent is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612031",
                     "Comment": "libtevent is earlier than 0:0.9.26-2.el6_7"
                   },
                   {
@@ -766,7 +710,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612032",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612028",
                     "Comment": "libtevent is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -785,8 +729,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612033",
-                    "Comment": "ipa-python is earlier than 0:3.0.0-47.el6_7.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612029",
+                    "Comment": "libtevent-devel is earlier than 0:0.9.26-2.el6_7"
                   },
                   {
                     "XMLName": {
@@ -794,8 +738,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111533004",
-                    "Comment": "ipa-python is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612030",
+                    "Comment": "libtevent-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612031",
+                    "Comment": "python-tevent is earlier than 0:0.9.26-2.el6_7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612032",
+                    "Comment": "python-tevent is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612033",
+                    "Comment": "ipa-admintools is earlier than 0:3.0.0-47.el6_7.2"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111533002",
+                    "Comment": "ipa-admintools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -822,7 +822,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111533008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111533004",
                     "Comment": "ipa-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -842,7 +842,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612037",
-                    "Comment": "ipa-server is earlier than 0:3.0.0-47.el6_7.2"
+                    "Comment": "ipa-python is earlier than 0:3.0.0-47.el6_7.2"
                   },
                   {
                     "XMLName": {
@@ -850,8 +850,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111533002",
-                    "Comment": "ipa-server is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111533006",
+                    "Comment": "ipa-python is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -870,7 +870,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612039",
-                    "Comment": "ipa-server-trust-ad is earlier than 0:3.0.0-47.el6_7.2"
+                    "Comment": "ipa-server is earlier than 0:3.0.0-47.el6_7.2"
                   },
                   {
                     "XMLName": {
@@ -878,8 +878,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130528006",
-                    "Comment": "ipa-server-trust-ad is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111533008",
+                    "Comment": "ipa-server is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -906,7 +906,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111533006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111533010",
                     "Comment": "ipa-server-selinux is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -926,7 +926,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612043",
-                    "Comment": "ipa-admintools is earlier than 0:3.0.0-47.el6_7.2"
+                    "Comment": "ipa-server-trust-ad is earlier than 0:3.0.0-47.el6_7.2"
                   },
                   {
                     "XMLName": {
@@ -934,8 +934,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111533010",
-                    "Comment": "ipa-admintools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130528012",
+                    "Comment": "ipa-server-trust-ad is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -962,7 +962,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130515008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130515002",
                     "Comment": "openchange is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -982,34 +982,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612047",
-                    "Comment": "openchange-devel is earlier than 0:1.0-7.el6_7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130515006",
-                    "Comment": "openchange-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20160612049",
                     "Comment": "openchange-client is earlier than 0:1.0-7.el6_7"
                   },
                   {
@@ -1037,6 +1009,34 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160612049",
+                    "Comment": "openchange-devel is earlier than 0:1.0-7.el6_7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130515006",
+                    "Comment": "openchange-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612051",
                     "Comment": "openchange-devel-docs is earlier than 0:1.0-7.el6_7"
                   },
@@ -1046,7 +1046,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130515002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130515008",
                     "Comment": "openchange-devel-docs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -1066,7 +1066,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612053",
-                    "Comment": "samba4-winbind-krb5-locator is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4 is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1074,8 +1074,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506018",
-                    "Comment": "samba4-winbind-krb5-locator is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506002",
+                    "Comment": "samba4 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1094,7 +1094,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612055",
-                    "Comment": "samba4-test is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-client is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1102,8 +1102,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506012",
-                    "Comment": "samba4-test is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506004",
+                    "Comment": "samba4-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1122,7 +1122,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612057",
-                    "Comment": "samba4-dc-libs is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-common is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1130,8 +1130,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506004",
-                    "Comment": "samba4-dc-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506006",
+                    "Comment": "samba4-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1150,7 +1150,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612059",
-                    "Comment": "samba4-pidl is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-dc is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1159,7 +1159,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130506008",
-                    "Comment": "samba4-pidl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "samba4-dc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1178,7 +1178,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612061",
-                    "Comment": "samba4-python is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-dc-libs is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1186,8 +1186,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506024",
-                    "Comment": "samba4-python is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506010",
+                    "Comment": "samba4-dc-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1206,7 +1206,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612063",
-                    "Comment": "samba4-common is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-devel is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1214,8 +1214,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506028",
-                    "Comment": "samba4-common is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506012",
+                    "Comment": "samba4-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1262,7 +1262,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612067",
-                    "Comment": "samba4-devel is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-pidl is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1270,8 +1270,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506020",
-                    "Comment": "samba4-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506016",
+                    "Comment": "samba4-pidl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1290,7 +1290,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612069",
-                    "Comment": "samba4-winbind is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-python is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1298,8 +1298,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506026",
-                    "Comment": "samba4-winbind is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506018",
+                    "Comment": "samba4-python is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1318,7 +1318,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612071",
-                    "Comment": "samba4 is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-test is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1326,8 +1326,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506006",
-                    "Comment": "samba4 is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506022",
+                    "Comment": "samba4-test is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1346,7 +1346,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612073",
-                    "Comment": "samba4-winbind-clients is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-winbind is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1354,8 +1354,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506022",
-                    "Comment": "samba4-winbind-clients is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506024",
+                    "Comment": "samba4-winbind is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1374,7 +1374,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612075",
-                    "Comment": "samba4-client is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-winbind-clients is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1382,8 +1382,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506002",
-                    "Comment": "samba4-client is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506026",
+                    "Comment": "samba4-winbind-clients is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1402,7 +1402,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20160612077",
-                    "Comment": "samba4-dc is earlier than 0:4.2.10-6.el6_7"
+                    "Comment": "samba4-winbind-krb5-locator is earlier than 0:4.2.10-6.el6_7"
                   },
                   {
                     "XMLName": {
@@ -1410,8 +1410,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130506016",
-                    "Comment": "samba4-dc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130506028",
+                    "Comment": "samba4-winbind-krb5-locator is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

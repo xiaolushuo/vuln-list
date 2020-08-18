@@ -239,10 +239,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2011-12-05"
@@ -287,7 +287,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111526001",
-                    "Comment": "glibc-utils is earlier than 0:2.12-1.47.el6"
+                    "Comment": "glibc is earlier than 0:2.12-1.47.el6"
                   },
                   {
                     "XMLName": {
@@ -295,8 +295,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763012",
-                    "Comment": "glibc-utils is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763002",
+                    "Comment": "glibc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -323,7 +323,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763008",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763004",
                     "Comment": "glibc-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -343,34 +343,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111526005",
-                    "Comment": "glibc-headers is earlier than 0:2.12-1.47.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763010",
-                    "Comment": "glibc-headers is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111526007",
                     "Comment": "glibc-devel is earlier than 0:2.12-1.47.el6"
                   },
                   {
@@ -398,8 +370,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111526009",
-                    "Comment": "nscd is earlier than 0:2.12-1.47.el6"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111526007",
+                    "Comment": "glibc-headers is earlier than 0:2.12-1.47.el6"
                   },
                   {
                     "XMLName": {
@@ -407,8 +379,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763014",
-                    "Comment": "nscd is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763008",
+                    "Comment": "glibc-headers is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111526009",
+                    "Comment": "glibc-static is earlier than 0:2.12-1.47.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763010",
+                    "Comment": "glibc-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -427,7 +427,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111526011",
-                    "Comment": "glibc is earlier than 0:2.12-1.47.el6"
+                    "Comment": "glibc-utils is earlier than 0:2.12-1.47.el6"
                   },
                   {
                     "XMLName": {
@@ -435,8 +435,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763004",
-                    "Comment": "glibc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763012",
+                    "Comment": "glibc-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -455,7 +455,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111526013",
-                    "Comment": "glibc-static is earlier than 0:2.12-1.47.el6"
+                    "Comment": "nscd is earlier than 0:2.12-1.47.el6"
                   },
                   {
                     "XMLName": {
@@ -463,8 +463,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20120763002",
-                    "Comment": "glibc-static is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763014",
+                    "Comment": "nscd is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

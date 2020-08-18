@@ -185,9 +185,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2017-04-12"
@@ -232,7 +232,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20170906001",
-                    "Comment": "httpd-manual is earlier than 0:2.4.6-45.el7_3.4"
+                    "Comment": "httpd is earlier than 0:2.4.6-45.el7_3.4"
                   },
                   {
                     "XMLName": {
@@ -241,7 +241,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140921002",
-                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                    "Comment": "httpd is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -260,34 +260,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20170906003",
-                    "Comment": "mod_proxy_html is earlier than 1:2.4.6-45.el7_3.4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140921016",
-                    "Comment": "mod_proxy_html is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20170906005",
                     "Comment": "httpd-devel is earlier than 0:2.4.6-45.el7_3.4"
                   },
                   {
@@ -315,8 +287,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20170906007",
-                    "Comment": "mod_ldap is earlier than 0:2.4.6-45.el7_3.4"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170906005",
+                    "Comment": "httpd-manual is earlier than 0:2.4.6-45.el7_3.4"
                   },
                   {
                     "XMLName": {
@@ -324,8 +296,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140921014",
-                    "Comment": "mod_ldap is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140921006",
+                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170906007",
+                    "Comment": "httpd-tools is earlier than 0:2.4.6-45.el7_3.4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140921008",
+                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -344,7 +344,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20170906009",
-                    "Comment": "httpd is earlier than 0:2.4.6-45.el7_3.4"
+                    "Comment": "mod_ldap is earlier than 0:2.4.6-45.el7_3.4"
                   },
                   {
                     "XMLName": {
@@ -353,7 +353,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140921010",
-                    "Comment": "httpd is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mod_ldap is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -372,7 +372,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20170906011",
-                    "Comment": "mod_session is earlier than 0:2.4.6-45.el7_3.4"
+                    "Comment": "mod_proxy_html is earlier than 1:2.4.6-45.el7_3.4"
                   },
                   {
                     "XMLName": {
@@ -381,7 +381,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140921012",
-                    "Comment": "mod_session is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mod_proxy_html is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -400,7 +400,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20170906013",
-                    "Comment": "httpd-tools is earlier than 0:2.4.6-45.el7_3.4"
+                    "Comment": "mod_session is earlier than 0:2.4.6-45.el7_3.4"
                   },
                   {
                     "XMLName": {
@@ -408,8 +408,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140921006",
-                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140921014",
+                    "Comment": "mod_session is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -436,7 +436,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140921008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140921016",
                     "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
                   }
                 ]

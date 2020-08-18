@@ -53,7 +53,7 @@
         },
         "CveID": "CVE-2020-8608",
         "Cvss2": "",
-        "Cvss3": "7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:H",
+        "Cvss3": "5.6/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
         "Cwe": "CWE-122",
         "Impact": "",
         "Href": "https://access.redhat.com/security/cve/CVE-2020-8608",
@@ -75,8 +75,8 @@
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::server"
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2020-03-31"
@@ -121,7 +121,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20201208001",
-                    "Comment": "qemu-kvm-tools is earlier than 10:1.5.3-173.el7_8.1"
+                    "Comment": "qemu-img is earlier than 10:1.5.3-173.el7_8.1"
                   },
                   {
                     "XMLName": {
@@ -130,7 +130,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140704010",
-                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
+                    "Comment": "qemu-img is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -149,34 +149,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20201208003",
-                    "Comment": "qemu-kvm-common is earlier than 10:1.5.3-173.el7_8.1"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704004",
-                    "Comment": "qemu-kvm-common is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201208005",
                     "Comment": "qemu-kvm is earlier than 10:1.5.3-173.el7_8.1"
                   },
                   {
@@ -185,7 +157,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704014",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704012",
                     "Comment": "qemu-kvm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -204,8 +176,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201208007",
-                    "Comment": "qemu-img is earlier than 10:1.5.3-173.el7_8.1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201208005",
+                    "Comment": "qemu-kvm-common is earlier than 10:1.5.3-173.el7_8.1"
                   },
                   {
                     "XMLName": {
@@ -213,8 +185,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140704002",
-                    "Comment": "qemu-img is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704014",
+                    "Comment": "qemu-kvm-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201208007",
+                    "Comment": "qemu-kvm-tools is earlier than 10:1.5.3-173.el7_8.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140704016",
+                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

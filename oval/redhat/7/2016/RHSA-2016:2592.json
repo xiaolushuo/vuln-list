@@ -569,9 +569,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2016-11-03"
@@ -644,34 +644,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592003",
-                    "Comment": "python-rhsm-certificates is earlier than 0:1.17.9-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592004",
-                    "Comment": "python-rhsm-certificates is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592005",
                     "Comment": "python-rhsm is earlier than 0:1.17.9-1.el7"
                   },
                   {
@@ -680,7 +652,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592004",
                     "Comment": "python-rhsm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -699,8 +671,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592005",
+                    "Comment": "python-rhsm-certificates is earlier than 0:1.17.9-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592006",
+                    "Comment": "python-rhsm-certificates is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592007",
-                    "Comment": "subscription-manager-plugin-ostree is earlier than 0:1.17.15-1.el7"
+                    "Comment": "subscription-manager is earlier than 0:1.17.15-1.el7"
                   },
                   {
                     "XMLName": {
@@ -709,7 +709,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592008",
-                    "Comment": "subscription-manager-plugin-ostree is signed with Red Hat redhatrelease2 key"
+                    "Comment": "subscription-manager is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -728,34 +728,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592009",
-                    "Comment": "subscription-manager-initial-setup-addon is earlier than 0:1.17.15-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592010",
-                    "Comment": "subscription-manager-initial-setup-addon is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592011",
                     "Comment": "subscription-manager-gui is earlier than 0:1.17.15-1.el7"
                   },
                   {
@@ -764,7 +736,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592010",
                     "Comment": "subscription-manager-gui is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -783,8 +755,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592013",
-                    "Comment": "subscription-manager-plugin-container is earlier than 0:1.17.15-1.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592011",
+                    "Comment": "subscription-manager-initial-setup-addon is earlier than 0:1.17.15-1.el7"
                   },
                   {
                     "XMLName": {
@@ -792,8 +764,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592014",
-                    "Comment": "subscription-manager-plugin-container is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592012",
+                    "Comment": "subscription-manager-initial-setup-addon is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -811,7 +783,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592015",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592013",
                     "Comment": "subscription-manager-migration is earlier than 0:1.17.15-1.el7"
                   },
                   {
@@ -820,7 +792,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162592016",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592014",
                     "Comment": "subscription-manager-migration is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -839,8 +811,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592015",
+                    "Comment": "subscription-manager-plugin-container is earlier than 0:1.17.15-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162592016",
+                    "Comment": "subscription-manager-plugin-container is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592017",
-                    "Comment": "subscription-manager is earlier than 0:1.17.15-1.el7"
+                    "Comment": "subscription-manager-plugin-ostree is earlier than 0:1.17.15-1.el7"
                   },
                   {
                     "XMLName": {
@@ -849,7 +849,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162592018",
-                    "Comment": "subscription-manager is signed with Red Hat redhatrelease2 key"
+                    "Comment": "subscription-manager-plugin-ostree is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

@@ -105,9 +105,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2014-10-01"
@@ -152,34 +152,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141352001",
-                    "Comment": "libvirt-daemon-driver-network is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914010",
-                    "Comment": "libvirt-daemon-driver-network is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352003",
                     "Comment": "libvirt is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -188,7 +160,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914002",
                     "Comment": "libvirt is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -207,8 +179,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352005",
-                    "Comment": "libvirt-daemon-driver-storage is earlier than 0:1.1.1-29.el7_0.3"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352003",
+                    "Comment": "libvirt-client is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
                     "XMLName": {
@@ -216,8 +188,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914040",
-                    "Comment": "libvirt-daemon-driver-storage is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914004",
+                    "Comment": "libvirt-client is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352005",
+                    "Comment": "libvirt-daemon is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914006",
+                    "Comment": "libvirt-daemon is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -244,7 +244,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914026",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914008",
                     "Comment": "libvirt-daemon-config-network is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -264,7 +264,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141352009",
-                    "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:1.1.1-29.el7_0.3"
+                    "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
                     "XMLName": {
@@ -272,8 +272,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914002",
-                    "Comment": "libvirt-daemon-driver-nwfilter is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914010",
+                    "Comment": "libvirt-daemon-config-nwfilter is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -292,34 +292,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141352011",
-                    "Comment": "libvirt-docs is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914028",
-                    "Comment": "libvirt-docs is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352013",
                     "Comment": "libvirt-daemon-driver-interface is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -347,147 +319,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352015",
-                    "Comment": "libvirt-python is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914018",
-                    "Comment": "libvirt-python is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352017",
-                    "Comment": "libvirt-client is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914014",
-                    "Comment": "libvirt-client is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352019",
-                    "Comment": "libvirt-daemon is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914008",
-                    "Comment": "libvirt-daemon is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352021",
-                    "Comment": "libvirt-devel is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914032",
-                    "Comment": "libvirt-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352023",
-                    "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:1.1.1-29.el7_0.3"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914020",
-                    "Comment": "libvirt-daemon-config-nwfilter is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352025",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352013",
                     "Comment": "libvirt-daemon-driver-lxc is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -496,7 +328,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914038",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914014",
                     "Comment": "libvirt-daemon-driver-lxc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -515,7 +347,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352027",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352015",
+                    "Comment": "libvirt-daemon-driver-network is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914016",
+                    "Comment": "libvirt-daemon-driver-network is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352017",
                     "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -524,7 +384,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914018",
                     "Comment": "libvirt-daemon-driver-nodedev is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -543,7 +403,63 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352029",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352019",
+                    "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914020",
+                    "Comment": "libvirt-daemon-driver-nwfilter is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352021",
+                    "Comment": "libvirt-daemon-driver-qemu is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914022",
+                    "Comment": "libvirt-daemon-driver-qemu is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352023",
                     "Comment": "libvirt-daemon-driver-secret is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -571,8 +487,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352031",
-                    "Comment": "libvirt-daemon-driver-qemu is earlier than 0:1.1.1-29.el7_0.3"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352025",
+                    "Comment": "libvirt-daemon-driver-storage is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
                     "XMLName": {
@@ -580,8 +496,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914016",
-                    "Comment": "libvirt-daemon-driver-qemu is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914026",
+                    "Comment": "libvirt-daemon-driver-storage is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -599,7 +515,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352033",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352027",
                     "Comment": "libvirt-daemon-kvm is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -608,7 +524,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914022",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914028",
                     "Comment": "libvirt-daemon-kvm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -627,7 +543,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352035",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352029",
                     "Comment": "libvirt-daemon-lxc is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -655,7 +571,63 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352037",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352031",
+                    "Comment": "libvirt-devel is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914032",
+                    "Comment": "libvirt-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352033",
+                    "Comment": "libvirt-docs is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914034",
+                    "Comment": "libvirt-docs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352035",
                     "Comment": "libvirt-lock-sanlock is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -683,7 +655,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141352039",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352037",
                     "Comment": "libvirt-login-shell is earlier than 0:1.1.1-29.el7_0.3"
                   },
                   {
@@ -692,8 +664,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140914034",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914038",
                     "Comment": "libvirt-login-shell is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141352039",
+                    "Comment": "libvirt-python is earlier than 0:1.1.1-29.el7_0.3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140914040",
+                    "Comment": "libvirt-python is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

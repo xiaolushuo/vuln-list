@@ -380,9 +380,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2016-11-03"
@@ -427,7 +427,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162597001",
-                    "Comment": "firewalld-filesystem is earlier than 0:0.4.3.2-8.el7"
+                    "Comment": "firewall-applet is earlier than 0:0.4.3.2-8.el7"
                   },
                   {
                     "XMLName": {
@@ -436,7 +436,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162597002",
-                    "Comment": "firewalld-filesystem is signed with Red Hat redhatrelease2 key"
+                    "Comment": "firewall-applet is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -455,34 +455,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162597003",
-                    "Comment": "python-firewall is earlier than 0:0.4.3.2-8.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162597004",
-                    "Comment": "python-firewall is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162597005",
                     "Comment": "firewall-config is earlier than 0:0.4.3.2-8.el7"
                   },
                   {
@@ -491,7 +463,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162597006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162597004",
                     "Comment": "firewall-config is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -510,7 +482,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162597007",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162597005",
                     "Comment": "firewalld is earlier than 0:0.4.3.2-8.el7"
                   },
                   {
@@ -519,7 +491,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162597008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162597006",
                     "Comment": "firewalld is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -538,8 +510,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162597007",
+                    "Comment": "firewalld-filesystem is earlier than 0:0.4.3.2-8.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162597008",
+                    "Comment": "firewalld-filesystem is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162597009",
-                    "Comment": "firewall-applet is earlier than 0:0.4.3.2-8.el7"
+                    "Comment": "python-firewall is earlier than 0:0.4.3.2-8.el7"
                   },
                   {
                     "XMLName": {
@@ -548,7 +548,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162597010",
-                    "Comment": "firewall-applet is signed with Red Hat redhatrelease2 key"
+                    "Comment": "python-firewall is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

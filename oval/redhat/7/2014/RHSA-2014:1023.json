@@ -228,10 +228,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::client"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2014-08-06"
@@ -304,34 +304,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141023001",
-                    "Comment": "kernel-abi-whitelists is earlier than 0:3.10.0-123.6.3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678002",
-                    "Comment": "kernel-abi-whitelists is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023003",
                     "Comment": "kernel is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
@@ -340,7 +312,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678002",
                     "Comment": "kernel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -359,8 +331,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023005",
-                    "Comment": "kernel-tools is earlier than 0:3.10.0-123.6.3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023003",
+                    "Comment": "kernel-abi-whitelists is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
                     "XMLName": {
@@ -368,8 +340,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678012",
-                    "Comment": "kernel-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678004",
+                    "Comment": "kernel-abi-whitelists is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023005",
+                    "Comment": "kernel-bootwrapper is earlier than 0:3.10.0-123.6.3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678006",
+                    "Comment": "kernel-bootwrapper is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -396,7 +396,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678008",
                     "Comment": "kernel-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -416,7 +416,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141023009",
-                    "Comment": "perf is earlier than 0:3.10.0-123.6.3.el7"
+                    "Comment": "kernel-debug-devel is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
                     "XMLName": {
@@ -424,8 +424,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678018",
-                    "Comment": "perf is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678010",
+                    "Comment": "kernel-debug-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -452,7 +452,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678010",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678012",
                     "Comment": "kernel-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -472,7 +472,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141023013",
-                    "Comment": "kernel-tools-libs is earlier than 0:3.10.0-123.6.3.el7"
+                    "Comment": "kernel-doc is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
                     "XMLName": {
@@ -480,8 +480,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678016",
-                    "Comment": "kernel-tools-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678014",
+                    "Comment": "kernel-doc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -508,7 +508,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678014",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678016",
                     "Comment": "kernel-headers is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -528,7 +528,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141023017",
-                    "Comment": "kernel-debug-devel is earlier than 0:3.10.0-123.6.3.el7"
+                    "Comment": "kernel-kdump is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
                     "XMLName": {
@@ -536,8 +536,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678006",
-                    "Comment": "kernel-debug-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678018",
+                    "Comment": "kernel-kdump is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -556,118 +556,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20141023019",
-                    "Comment": "kernel-doc is earlier than 0:3.10.0-123.6.3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678020",
-                    "Comment": "kernel-doc is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023021",
-                    "Comment": "python-perf is earlier than 0:3.10.0-123.6.3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678024",
-                    "Comment": "python-perf is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023023",
-                    "Comment": "kernel-tools-libs-devel is earlier than 0:3.10.0-123.6.3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678022",
-                    "Comment": "kernel-tools-libs-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023025",
-                    "Comment": "kernel-bootwrapper is earlier than 0:3.10.0-123.6.3.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678030",
-                    "Comment": "kernel-bootwrapper is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023027",
                     "Comment": "kernel-kdump-devel is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
@@ -676,7 +564,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140678026",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678020",
                     "Comment": "kernel-kdump-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -695,8 +583,92 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20141023029",
-                    "Comment": "kernel-kdump is earlier than 0:3.10.0-123.6.3.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023021",
+                    "Comment": "kernel-tools is earlier than 0:3.10.0-123.6.3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678022",
+                    "Comment": "kernel-tools is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023023",
+                    "Comment": "kernel-tools-libs is earlier than 0:3.10.0-123.6.3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678024",
+                    "Comment": "kernel-tools-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023025",
+                    "Comment": "kernel-tools-libs-devel is earlier than 0:3.10.0-123.6.3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678026",
+                    "Comment": "kernel-tools-libs-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023027",
+                    "Comment": "perf is earlier than 0:3.10.0-123.6.3.el7"
                   },
                   {
                     "XMLName": {
@@ -705,7 +677,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140678028",
-                    "Comment": "kernel-kdump is signed with Red Hat redhatrelease2 key"
+                    "Comment": "perf is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20141023029",
+                    "Comment": "python-perf is earlier than 0:3.10.0-123.6.3.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140678030",
+                    "Comment": "python-perf is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

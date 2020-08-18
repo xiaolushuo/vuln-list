@@ -259,10 +259,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
-      "cpe:/o:redhat:enterprise_linux:7::client"
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2019-07-22"
@@ -307,7 +307,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810001",
-                    "Comment": "java-11-openjdk-javadoc-debug is earlier than 1:11.0.4.11-0.el7_6"
+                    "Comment": "java-11-openjdk is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -315,8 +315,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521026",
-                    "Comment": "java-11-openjdk-javadoc-debug is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521002",
+                    "Comment": "java-11-openjdk is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -335,7 +335,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810003",
-                    "Comment": "java-11-openjdk-devel is earlier than 1:11.0.4.11-0.el7_6"
+                    "Comment": "java-11-openjdk-debug is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -344,7 +344,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183521004",
-                    "Comment": "java-11-openjdk-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "java-11-openjdk-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -363,90 +363,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810005",
-                    "Comment": "java-11-openjdk-demo-debug is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521030",
-                    "Comment": "java-11-openjdk-demo-debug is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810007",
-                    "Comment": "java-11-openjdk-src-debug is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521010",
-                    "Comment": "java-11-openjdk-src-debug is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810009",
-                    "Comment": "java-11-openjdk-devel-debug is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521020",
-                    "Comment": "java-11-openjdk-devel-debug is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810011",
                     "Comment": "java-11-openjdk-demo is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
@@ -455,7 +371,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521016",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521006",
                     "Comment": "java-11-openjdk-demo is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -474,8 +390,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810013",
-                    "Comment": "java-11-openjdk-src is earlier than 1:11.0.4.11-0.el7_6"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810007",
+                    "Comment": "java-11-openjdk-demo-debug is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521008",
+                    "Comment": "java-11-openjdk-demo-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810009",
+                    "Comment": "java-11-openjdk-devel is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521010",
+                    "Comment": "java-11-openjdk-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810011",
+                    "Comment": "java-11-openjdk-devel-debug is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -484,7 +456,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183521012",
-                    "Comment": "java-11-openjdk-src is signed with Red Hat redhatrelease2 key"
+                    "Comment": "java-11-openjdk-devel-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810013",
+                    "Comment": "java-11-openjdk-headless is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521014",
+                    "Comment": "java-11-openjdk-headless is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -503,90 +503,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810015",
-                    "Comment": "java-11-openjdk-jmods-debug is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521014",
-                    "Comment": "java-11-openjdk-jmods-debug is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810017",
-                    "Comment": "java-11-openjdk-javadoc-zip-debug is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521028",
-                    "Comment": "java-11-openjdk-javadoc-zip-debug is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810019",
-                    "Comment": "java-11-openjdk-jmods is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521022",
-                    "Comment": "java-11-openjdk-jmods is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810021",
                     "Comment": "java-11-openjdk-headless-debug is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
@@ -595,7 +511,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521016",
                     "Comment": "java-11-openjdk-headless-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -614,35 +530,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810023",
-                    "Comment": "java-11-openjdk-javadoc-zip is earlier than 1:11.0.4.11-0.el7_6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521032",
-                    "Comment": "java-11-openjdk-javadoc-zip is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810025",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810017",
                     "Comment": "java-11-openjdk-javadoc is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
@@ -670,8 +558,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191810027",
-                    "Comment": "java-11-openjdk-debug is earlier than 1:11.0.4.11-0.el7_6"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810019",
+                    "Comment": "java-11-openjdk-javadoc-debug is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521020",
+                    "Comment": "java-11-openjdk-javadoc-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810021",
+                    "Comment": "java-11-openjdk-javadoc-zip is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521022",
+                    "Comment": "java-11-openjdk-javadoc-zip is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810023",
+                    "Comment": "java-11-openjdk-javadoc-zip-debug is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -680,7 +624,63 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183521024",
-                    "Comment": "java-11-openjdk-debug is signed with Red Hat redhatrelease2 key"
+                    "Comment": "java-11-openjdk-javadoc-zip-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810025",
+                    "Comment": "java-11-openjdk-jmods is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521026",
+                    "Comment": "java-11-openjdk-jmods is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191810027",
+                    "Comment": "java-11-openjdk-jmods-debug is earlier than 1:11.0.4.11-0.el7_6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521028",
+                    "Comment": "java-11-openjdk-jmods-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -699,7 +699,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810029",
-                    "Comment": "java-11-openjdk is earlier than 1:11.0.4.11-0.el7_6"
+                    "Comment": "java-11-openjdk-src is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -707,8 +707,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521006",
-                    "Comment": "java-11-openjdk is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521030",
+                    "Comment": "java-11-openjdk-src is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -727,7 +727,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20191810031",
-                    "Comment": "java-11-openjdk-headless is earlier than 1:11.0.4.11-0.el7_6"
+                    "Comment": "java-11-openjdk-src-debug is earlier than 1:11.0.4.11-0.el7_6"
                   },
                   {
                     "XMLName": {
@@ -735,8 +735,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183521002",
-                    "Comment": "java-11-openjdk-headless is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183521032",
+                    "Comment": "java-11-openjdk-src-debug is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

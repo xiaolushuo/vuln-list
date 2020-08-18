@@ -104,10 +104,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-02-20"
@@ -152,7 +152,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509001",
-                    "Comment": "infinipath-psm-devel is earlier than 0:3.0.1-115.1015_open.1.el6"
+                    "Comment": "infinipath-psm is earlier than 0:3.0.1-115.1015_open.1.el6"
                   },
                   {
                     "XMLName": {
@@ -161,7 +161,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509002",
-                    "Comment": "infinipath-psm-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "infinipath-psm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -180,7 +180,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509003",
-                    "Comment": "infinipath-psm is earlier than 0:3.0.1-115.1015_open.1.el6"
+                    "Comment": "infinipath-psm-devel is earlier than 0:3.0.1-115.1015_open.1.el6"
                   },
                   {
                     "XMLName": {
@@ -189,7 +189,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509004",
-                    "Comment": "infinipath-psm is signed with Red Hat redhatrelease2 key"
+                    "Comment": "infinipath-psm-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -236,90 +236,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509007",
-                    "Comment": "libibverbs-utils is earlier than 0:1.1.6-5.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509008",
-                    "Comment": "libibverbs-utils is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509009",
-                    "Comment": "libibverbs-devel-static is earlier than 0:1.1.6-5.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509010",
-                    "Comment": "libibverbs-devel-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509011",
-                    "Comment": "libibverbs-devel is earlier than 0:1.1.6-5.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509012",
-                    "Comment": "libibverbs-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509013",
                     "Comment": "libibverbs is earlier than 0:1.1.6-5.el6"
                   },
                   {
@@ -328,7 +244,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509014",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509008",
                     "Comment": "libibverbs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -347,8 +263,92 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509009",
+                    "Comment": "libibverbs-devel is earlier than 0:1.1.6-5.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509010",
+                    "Comment": "libibverbs-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509011",
+                    "Comment": "libibverbs-devel-static is earlier than 0:1.1.6-5.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509012",
+                    "Comment": "libibverbs-devel-static is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509013",
+                    "Comment": "libibverbs-utils is earlier than 0:1.1.6-5.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509014",
+                    "Comment": "libibverbs-utils is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509015",
-                    "Comment": "libmlx4-static is earlier than 0:1.0.4-1.el6"
+                    "Comment": "libmlx4 is earlier than 0:1.0.4-1.el6"
                   },
                   {
                     "XMLName": {
@@ -357,7 +357,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509016",
-                    "Comment": "libmlx4-static is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libmlx4 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -376,7 +376,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509017",
-                    "Comment": "libmlx4 is earlier than 0:1.0.4-1.el6"
+                    "Comment": "libmlx4-static is earlier than 0:1.0.4-1.el6"
                   },
                   {
                     "XMLName": {
@@ -385,7 +385,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509018",
-                    "Comment": "libmlx4 is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libmlx4-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -432,7 +432,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509021",
-                    "Comment": "libibumad-static is earlier than 0:1.3.8-1.el6"
+                    "Comment": "libibumad-devel is earlier than 0:1.3.8-1.el6"
                   },
                   {
                     "XMLName": {
@@ -441,7 +441,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509022",
-                    "Comment": "libibumad-static is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libibumad-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -460,7 +460,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509023",
-                    "Comment": "libibumad-devel is earlier than 0:1.3.8-1.el6"
+                    "Comment": "libibumad-static is earlier than 0:1.3.8-1.el6"
                   },
                   {
                     "XMLName": {
@@ -469,7 +469,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509024",
-                    "Comment": "libibumad-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libibumad-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -516,34 +516,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509027",
-                    "Comment": "libibmad-static is earlier than 0:1.3.9-1.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509028",
-                    "Comment": "libibmad-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509029",
                     "Comment": "libibmad-devel is earlier than 0:1.3.9-1.el6"
                   },
                   {
@@ -552,7 +524,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509030",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509028",
                     "Comment": "libibmad-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -571,63 +543,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509029",
+                    "Comment": "libibmad-static is earlier than 0:1.3.9-1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509030",
+                    "Comment": "libibmad-static is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509031",
-                    "Comment": "opensm-devel is earlier than 0:3.3.15-1.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509032",
-                    "Comment": "opensm-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509033",
-                    "Comment": "opensm-static is earlier than 0:3.3.15-1.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509034",
-                    "Comment": "opensm-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509035",
                     "Comment": "opensm is earlier than 0:3.3.15-1.el6"
                   },
                   {
@@ -636,7 +580,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509036",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509032",
                     "Comment": "opensm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -655,7 +599,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509037",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509033",
+                    "Comment": "opensm-devel is earlier than 0:3.3.15-1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509034",
+                    "Comment": "opensm-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509035",
                     "Comment": "opensm-libs is earlier than 0:3.3.15-1.el6"
                   },
                   {
@@ -664,8 +636,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509038",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509036",
                     "Comment": "opensm-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509037",
+                    "Comment": "opensm-static is earlier than 0:3.3.15-1.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509038",
+                    "Comment": "opensm-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -712,7 +712,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509041",
-                    "Comment": "ibutils-libs is earlier than 0:1.5.7-7.el6"
+                    "Comment": "ibutils-devel is earlier than 0:1.5.7-7.el6"
                   },
                   {
                     "XMLName": {
@@ -721,7 +721,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509042",
-                    "Comment": "ibutils-libs is signed with Red Hat redhatrelease2 key"
+                    "Comment": "ibutils-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -740,7 +740,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509043",
-                    "Comment": "ibutils-devel is earlier than 0:1.5.7-7.el6"
+                    "Comment": "ibutils-libs is earlier than 0:1.5.7-7.el6"
                   },
                   {
                     "XMLName": {
@@ -749,7 +749,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509044",
-                    "Comment": "ibutils-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "ibutils-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -880,34 +880,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509053",
-                    "Comment": "infiniband-diags-devel-static is earlier than 0:1.5.12-5.el6"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509054",
-                    "Comment": "infiniband-diags-devel-static is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509055",
                     "Comment": "infiniband-diags-devel is earlier than 0:1.5.12-5.el6"
                   },
                   {
@@ -916,7 +888,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130509056",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509054",
                     "Comment": "infiniband-diags-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -935,8 +907,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509055",
+                    "Comment": "infiniband-diags-devel-static is earlier than 0:1.5.12-5.el6"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130509056",
+                    "Comment": "infiniband-diags-devel-static is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509057",
-                    "Comment": "librdmacm-utils is earlier than 0:1.0.17-0.git4b5c1aa.el6"
+                    "Comment": "librdmacm is earlier than 0:1.0.17-0.git4b5c1aa.el6"
                   },
                   {
                     "XMLName": {
@@ -945,7 +945,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509058",
-                    "Comment": "librdmacm-utils is signed with Red Hat redhatrelease2 key"
+                    "Comment": "librdmacm is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -1020,7 +1020,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509063",
-                    "Comment": "librdmacm is earlier than 0:1.0.17-0.git4b5c1aa.el6"
+                    "Comment": "librdmacm-utils is earlier than 0:1.0.17-0.git4b5c1aa.el6"
                   },
                   {
                     "XMLName": {
@@ -1029,7 +1029,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130509064",
-                    "Comment": "librdmacm is signed with Red Hat redhatrelease2 key"
+                    "Comment": "librdmacm-utils is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

@@ -135,10 +135,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-05-13"
@@ -191,7 +191,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111245008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111245002",
                     "Comment": "httpd is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -211,34 +211,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130815003",
-                    "Comment": "httpd-tools is earlier than 0:2.2.15-28.el6_4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111245010",
-                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130815005",
                     "Comment": "httpd-devel is earlier than 0:2.2.15-28.el6_4"
                   },
                   {
@@ -266,8 +238,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130815007",
-                    "Comment": "mod_ssl is earlier than 1:2.2.15-28.el6_4"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130815005",
+                    "Comment": "httpd-manual is earlier than 0:2.2.15-28.el6_4"
                   },
                   {
                     "XMLName": {
@@ -276,7 +248,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111245006",
-                    "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
+                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130815007",
+                    "Comment": "httpd-tools is earlier than 0:2.2.15-28.el6_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111245008",
+                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -295,7 +295,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130815009",
-                    "Comment": "httpd-manual is earlier than 0:2.2.15-28.el6_4"
+                    "Comment": "mod_ssl is earlier than 1:2.2.15-28.el6_4"
                   },
                   {
                     "XMLName": {
@@ -303,8 +303,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111245002",
-                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111245010",
+                    "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

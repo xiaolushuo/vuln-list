@@ -104,10 +104,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
-      "cpe:/o:redhat:enterprise_linux:6::computenode",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::server"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2013-03-07"
@@ -160,7 +160,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910014",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910002",
                     "Comment": "ruby is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -180,7 +180,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130612003",
-                    "Comment": "ruby-irb is earlier than 0:1.8.7.352-10.el6_4"
+                    "Comment": "ruby-devel is earlier than 0:1.8.7.352-10.el6_4"
                   },
                   {
                     "XMLName": {
@@ -188,8 +188,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910018",
-                    "Comment": "ruby-irb is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910004",
+                    "Comment": "ruby-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -208,6 +208,62 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130612005",
+                    "Comment": "ruby-docs is earlier than 0:1.8.7.352-10.el6_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910006",
+                    "Comment": "ruby-docs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130612007",
+                    "Comment": "ruby-irb is earlier than 0:1.8.7.352-10.el6_4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910008",
+                    "Comment": "ruby-irb is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130612009",
                     "Comment": "ruby-libs is earlier than 0:1.8.7.352-10.el6_4"
                   },
                   {
@@ -235,7 +291,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130612007",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20130612011",
                     "Comment": "ruby-rdoc is earlier than 0:1.8.7.352-10.el6_4"
                   },
                   {
@@ -244,64 +300,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910012",
                     "Comment": "ruby-rdoc is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130612009",
-                    "Comment": "ruby-devel is earlier than 0:1.8.7.352-10.el6_4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910006",
-                    "Comment": "ruby-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20130612011",
-                    "Comment": "ruby-static is earlier than 0:1.8.7.352-10.el6_4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910002",
-                    "Comment": "ruby-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -328,7 +328,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910014",
                     "Comment": "ruby-ri is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -348,7 +348,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20130612015",
-                    "Comment": "ruby-docs is earlier than 0:1.8.7.352-10.el6_4"
+                    "Comment": "ruby-static is earlier than 0:1.8.7.352-10.el6_4"
                   },
                   {
                     "XMLName": {
@@ -357,7 +357,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110910016",
-                    "Comment": "ruby-docs is signed with Red Hat redhatrelease2 key"
+                    "Comment": "ruby-static is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -384,7 +384,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110910008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110910018",
                     "Comment": "ruby-tcltk is signed with Red Hat redhatrelease2 key"
                   }
                 ]

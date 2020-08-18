@@ -210,7 +210,7 @@
         },
         "ID": "1575536",
         "URL": "https://bugzilla.redhat.com/1575536",
-        "Title": "CVE-2018-1000301 curl: Out-of-bounds heap read when missing RTSP headers allows information leak of denial of service"
+        "Title": "CVE-2018-1000301 curl: Out-of-bounds heap read when missing RTSP headers allows information leak or denial of service"
       },
       {
         "XMLName": {
@@ -224,10 +224,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::client",
       "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::client"
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2018-10-30"
@@ -272,34 +272,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20183157001",
-                    "Comment": "libcurl-devel is earlier than 0:7.29.0-51.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152159006",
-                    "Comment": "libcurl-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183157003",
                     "Comment": "curl is earlier than 0:7.29.0-51.el7"
                   },
                   {
@@ -308,7 +280,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152159004",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152159002",
                     "Comment": "curl is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -327,7 +299,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20183157005",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183157003",
                     "Comment": "libcurl is earlier than 0:7.29.0-51.el7"
                   },
                   {
@@ -336,8 +308,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20152159002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152159004",
                     "Comment": "libcurl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183157005",
+                    "Comment": "libcurl-devel is earlier than 0:7.29.0-51.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152159006",
+                    "Comment": "libcurl-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },

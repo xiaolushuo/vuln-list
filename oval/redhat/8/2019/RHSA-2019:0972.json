@@ -73,8 +73,8 @@
     ],
     "AffectedCPEList": [
       "cpe:/a:redhat:enterprise_linux:8",
-      "cpe:/a:redhat:enterprise_linux:8::crb",
-      "cpe:/a:redhat:enterprise_linux:8::appstream"
+      "cpe:/a:redhat:enterprise_linux:8::appstream",
+      "cpe:/a:redhat:enterprise_linux:8::crb"
     ],
     "Issued": {
       "Date": "2019-05-07"
@@ -119,7 +119,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20190972001",
-                    "Comment": "openwsman-debugsource is earlier than 0:2.6.5-5.el8"
+                    "Comment": "libwsman-devel is earlier than 0:2.6.5-5.el8"
                   },
                   {
                     "XMLName": {
@@ -128,7 +128,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20190972002",
-                    "Comment": "openwsman-debugsource is signed with Red Hat redhatrelease2 key"
+                    "Comment": "libwsman-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -175,62 +175,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20190972005",
-                    "Comment": "openwsman-python3 is earlier than 0:2.6.5-5.el8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190972006",
-                    "Comment": "openwsman-python3 is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190972007",
-                    "Comment": "openwsman-server is earlier than 0:2.6.5-5.el8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190972008",
-                    "Comment": "openwsman-server is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190972009",
                     "Comment": "openwsman-client is earlier than 0:2.6.5-5.el8"
                   },
                   {
@@ -239,7 +183,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190972010",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190972006",
                     "Comment": "openwsman-client is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -258,8 +202,64 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190972007",
+                    "Comment": "openwsman-debugsource is earlier than 0:2.6.5-5.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190972008",
+                    "Comment": "openwsman-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190972009",
+                    "Comment": "openwsman-python3 is earlier than 0:2.6.5-5.el8"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20190972010",
+                    "Comment": "openwsman-python3 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20190972011",
-                    "Comment": "libwsman-devel is earlier than 0:2.6.5-5.el8"
+                    "Comment": "openwsman-server is earlier than 0:2.6.5-5.el8"
                   },
                   {
                     "XMLName": {
@@ -268,7 +268,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20190972012",
-                    "Comment": "libwsman-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "openwsman-server is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

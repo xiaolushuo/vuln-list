@@ -82,10 +82,10 @@
     ],
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:6",
-      "cpe:/o:redhat:enterprise_linux:6::workstation",
-      "cpe:/o:redhat:enterprise_linux:6::server",
       "cpe:/o:redhat:enterprise_linux:6::client",
-      "cpe:/o:redhat:enterprise_linux:6::computenode"
+      "cpe:/o:redhat:enterprise_linux:6::computenode",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
       "Date": "2011-10-11"
@@ -130,34 +130,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111364001",
-                    "Comment": "kdelibs-apidocs is earlier than 6:4.3.4-11.el6_1.4"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110464002",
-                    "Comment": "kdelibs-apidocs is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111364003",
                     "Comment": "kdelibs is earlier than 6:4.3.4-11.el6_1.4"
                   },
                   {
@@ -166,7 +138,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110464008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110464002",
                     "Comment": "kdelibs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -185,8 +157,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20111364005",
-                    "Comment": "kdelibs-devel is earlier than 6:4.3.4-11.el6_1.4"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111364003",
+                    "Comment": "kdelibs-apidocs is earlier than 6:4.3.4-11.el6_1.4"
                   },
                   {
                     "XMLName": {
@@ -195,7 +167,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20110464004",
-                    "Comment": "kdelibs-devel is signed with Red Hat redhatrelease2 key"
+                    "Comment": "kdelibs-apidocs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111364005",
+                    "Comment": "kdelibs-common is earlier than 6:4.3.4-11.el6_1.4"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110464006",
+                    "Comment": "kdelibs-common is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -214,7 +214,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20111364007",
-                    "Comment": "kdelibs-common is earlier than 6:4.3.4-11.el6_1.4"
+                    "Comment": "kdelibs-devel is earlier than 6:4.3.4-11.el6_1.4"
                   },
                   {
                     "XMLName": {
@@ -222,8 +222,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110464006",
-                    "Comment": "kdelibs-common is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20110464008",
+                    "Comment": "kdelibs-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

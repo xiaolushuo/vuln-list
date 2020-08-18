@@ -74,9 +74,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2015-05-12"
@@ -121,7 +121,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150983001",
-                    "Comment": "tomcat-lib is earlier than 0:7.0.54-2.el7_1"
+                    "Comment": "tomcat is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
                     "XMLName": {
@@ -129,8 +129,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686012",
-                    "Comment": "tomcat-lib is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686002",
+                    "Comment": "tomcat is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -157,7 +157,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686002",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686004",
                     "Comment": "tomcat-admin-webapps is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -177,62 +177,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150983005",
-                    "Comment": "tomcat-el-2.2-api is earlier than 0:7.0.54-2.el7_1"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686014",
-                    "Comment": "tomcat-el-2.2-api is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983007",
-                    "Comment": "tomcat-jsp-2.2-api is earlier than 0:7.0.54-2.el7_1"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686004",
-                    "Comment": "tomcat-jsp-2.2-api is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983009",
                     "Comment": "tomcat-docs-webapp is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
@@ -241,7 +185,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686016",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686006",
                     "Comment": "tomcat-docs-webapp is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -260,7 +204,35 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983011",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983007",
+                    "Comment": "tomcat-el-2.2-api is earlier than 0:7.0.54-2.el7_1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686008",
+                    "Comment": "tomcat-el-2.2-api is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983009",
                     "Comment": "tomcat-javadoc is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
@@ -269,7 +241,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686018",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686010",
                     "Comment": "tomcat-javadoc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -288,8 +260,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983013",
-                    "Comment": "tomcat is earlier than 0:7.0.54-2.el7_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983011",
+                    "Comment": "tomcat-jsp-2.2-api is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
                     "XMLName": {
@@ -297,8 +269,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686006",
-                    "Comment": "tomcat is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686012",
+                    "Comment": "tomcat-jsp-2.2-api is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -316,7 +288,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983015",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983013",
                     "Comment": "tomcat-jsvc is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
@@ -325,7 +297,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686020",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686014",
                     "Comment": "tomcat-jsvc is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -344,8 +316,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20150983017",
-                    "Comment": "tomcat-webapps is earlier than 0:7.0.54-2.el7_1"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983015",
+                    "Comment": "tomcat-lib is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
                     "XMLName": {
@@ -353,8 +325,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686010",
-                    "Comment": "tomcat-webapps is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686016",
+                    "Comment": "tomcat-lib is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150983017",
+                    "Comment": "tomcat-servlet-3.0-api is earlier than 0:7.0.54-2.el7_1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686018",
+                    "Comment": "tomcat-servlet-3.0-api is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -373,7 +373,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20150983019",
-                    "Comment": "tomcat-servlet-3.0-api is earlier than 0:7.0.54-2.el7_1"
+                    "Comment": "tomcat-webapps is earlier than 0:7.0.54-2.el7_1"
                   },
                   {
                     "XMLName": {
@@ -381,8 +381,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140686008",
-                    "Comment": "tomcat-servlet-3.0-api is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140686020",
+                    "Comment": "tomcat-webapps is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }

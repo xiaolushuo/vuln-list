@@ -358,9 +358,9 @@
     "AffectedCPEList": [
       "cpe:/o:redhat:enterprise_linux:7",
       "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::workstation",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
       "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::computenode"
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
     ],
     "Issued": {
       "Date": "2016-11-03"
@@ -405,62 +405,6 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162595001",
-                    "Comment": "mariadb-embedded-devel is earlier than 1:5.5.52-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702014",
-                    "Comment": "mariadb-embedded-devel is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162595003",
-                    "Comment": "mariadb-embedded is earlier than 1:5.5.52-1.el7"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702016",
-                    "Comment": "mariadb-embedded is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162595005",
                     "Comment": "mariadb is earlier than 1:5.5.52-1.el7"
                   },
                   {
@@ -488,7 +432,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162595007",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162595003",
                     "Comment": "mariadb-bench is earlier than 1:5.5.52-1.el7"
                   },
                   {
@@ -497,7 +441,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702006",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702004",
                     "Comment": "mariadb-bench is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -516,7 +460,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162595009",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162595005",
                     "Comment": "mariadb-devel is earlier than 1:5.5.52-1.el7"
                   },
                   {
@@ -525,7 +469,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702012",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702006",
                     "Comment": "mariadb-devel is signed with Red Hat redhatrelease2 key"
                   }
                 ]
@@ -544,8 +488,36 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20162595011",
-                    "Comment": "mariadb-server is earlier than 1:5.5.52-1.el7"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162595007",
+                    "Comment": "mariadb-embedded is earlier than 1:5.5.52-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702008",
+                    "Comment": "mariadb-embedded is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162595009",
+                    "Comment": "mariadb-embedded-devel is earlier than 1:5.5.52-1.el7"
                   },
                   {
                     "XMLName": {
@@ -554,7 +526,35 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20140702010",
-                    "Comment": "mariadb-server is signed with Red Hat redhatrelease2 key"
+                    "Comment": "mariadb-embedded-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162595011",
+                    "Comment": "mariadb-libs is earlier than 1:5.5.52-1.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702012",
+                    "Comment": "mariadb-libs is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -573,7 +573,7 @@
                     },
                     "Negate": false,
                     "TestRef": "oval:com.redhat.rhsa:tst:20162595013",
-                    "Comment": "mariadb-libs is earlier than 1:5.5.52-1.el7"
+                    "Comment": "mariadb-server is earlier than 1:5.5.52-1.el7"
                   },
                   {
                     "XMLName": {
@@ -581,8 +581,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702004",
-                    "Comment": "mariadb-libs is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702014",
+                    "Comment": "mariadb-server is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -609,7 +609,7 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20140702008",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20140702016",
                     "Comment": "mariadb-test is signed with Red Hat redhatrelease2 key"
                   }
                 ]
