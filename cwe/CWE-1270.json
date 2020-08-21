@@ -1,7 +1,7 @@
 {
  "ID": 1270,
- "Name": "Generation of Incorrect Security Identifiers",
- "Description": "The product implements a Security Identifier mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity.  However, the Security Identifiers generated in the system are incorrect.",
+ "Name": "Generation of Incorrect Security Tokens",
+ "Description": "The product implements a Security Token mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity. However, the Security Tokens generated in the system are incorrect.",
  "PotentialMitigations": {
   "Mitigation": [
    {
@@ -41,6 +41,6 @@
   ]
  },
  "ExtendedDescription": [
-  "Systems-On-Chip (Integrated circuits and hardware engines) implement Security Identifiers to differentiate/identify actions originated from various agents.  These actions could be ‘read’, ‘write’, ‘program’, ‘reset’, ‘fetch’, ‘compute’, etc.  Security identifiers are generated and assigned to every agent in the System (SoC) that is either capable of generating an action or receiving an action from another agent. Every agent could be assigned a unique, Security Identifier based on its trust level or privileges.  Hence the generation of the Security Identifiers is very important to achieve security in the SoC.  A common weakness that can exist is that the generated Security Identifiers are incorrect.  Consequently, the same agent may have multiple identifiers or multiple agents may have the same security identifier.  In either case, the security consequences could be a Denial-of-Service (DoS) or execution of an action that in turn could result in privilege escalation or unintended access."
+  "Systems-On-a-Chip (SoC) (Integrated circuits and hardware engines) implement Security Tokens to differentiate and identify actions originated from various agents. These actions could be \"read\", \"write\", \"program\", \"reset\", \"fetch\", \"compute\", etc. Security Tokens are generated and assigned to every agent on the SoC that is either capable of generating an action or receiving an action from another agent. Every agent could be assigned a unique, Security Token based on its trust level or privileges. Incorrectly generated Security Tokens could result in the same token used for multiple agents or multiple tokens being used for the same agent. This condition could result in a Denial-of-Service (DoS) or the execution of an action that in turn could result in privilege escalation or unintended access."
  ]
 }

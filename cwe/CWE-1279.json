@@ -1,7 +1,7 @@
 {
  "ID": 1279,
- "Name": "Cryptographic Primitives used without Successful Self-Test",
- "Description": "Using crypto primitives without ensuring that they have passed the self-tests might result in the exposure of sensitive information and/or other consequences. ",
+ "Name": "Cryptographic Operations are run Before Supporting Units are Ready",
+ "Description": "Performing cryptographic operations without ensuring that the supporting inputs are ready to supply valid data may compromise the cryptographic result.",
  "PotentialMitigations": {
   "Mitigation": [
    {
@@ -21,7 +21,11 @@
   ]
  },
  "RelatedAttackPatterns": {
-  "RelatedAttackPattern": null
+  "RelatedAttackPattern": [
+   {
+    "CAPECID": 97
+   }
+  ]
  },
  "CommonConsequences": {
   "Consequence": [
@@ -42,9 +46,5 @@
    }
   ]
  },
- "ExtendedDescription": [
-  "Cryptographic primitives are hardware units that are supposed to perform certain cryptographic tasks. As is the case with many systems, for both hardware and software, in order to perform correctly, a system must first attain a certain state that can be considered a valid, starting point. In other words, it can be stated that the system has now been properly initialized. However, in order to reach this valid, initial state, the system needs to have performed certain tasks and/or obtained certain other data from other parts of the system. For example, a cryptographic unit that depends on an external, random-number-generator (RNG) unit for entropy must get a signal from the RNG unit that the RNG unit is ready to supply random numbers if asked.  Or maybe a symmetric, cryptographic unit retrieves its private encryption key from a fuse unit; hence, it must ensure that the fuse unit is up and running before it can pull the fuse with the corresponding key.",
-  "However, even when the system reaches this supposedly valid, initial state, the system must “validate” that this state is indeed valid. To do this, the system performs a series of tests and compares the result with the expected values. This test is often called Power-On Self-Test (POST), Built-In Self-test (BIST), or just self-test in short. If the results of the self-test do not match the expected values, then the system assumes that something went wrong with the initialization process, and, resultingly, the system can no longer be trusted to perform its tasks reliably. ",
-  "To ensure the sanctity of the self-test process, when the self-test goes on, usually the regular input, output, and other external interfaces are not made available.\n"
- ]
+ "ExtendedDescription": null
 }

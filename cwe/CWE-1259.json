@@ -1,7 +1,7 @@
 {
  "ID": 1259,
- "Name": "Improper Protection of Security Identifiers",
- "Description": "The product implements a Security Identifier mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity.  However, the Security Identifiers are improperly protected.",
+ "Name": "Improper Restriction of Security Token Assignment",
+ "Description": "The System-On-A-Chip (SoC) implements a Security Token mechanism to differentiate what actions are allowed or disallowed when a transaction originates from an entity. However, the Security Tokens are improperly protected.",
  "PotentialMitigations": {
   "Mitigation": [
    {
@@ -17,7 +17,11 @@
   ]
  },
  "RelatedAttackPatterns": {
-  "RelatedAttackPattern": null
+  "RelatedAttackPattern": [
+   {
+    "CAPECID": 180
+   }
+  ]
  },
  "CommonConsequences": {
   "Consequence": [
@@ -40,7 +44,5 @@
    }
   ]
  },
- "ExtendedDescription": [
-  "Systems-On-Chip (Integrated circuits and hardware engines) implement Security Identifiers to differentiate/identify actions originated from various agents.  These actions could be ‘read’, ‘write’, ‘program’, ‘reset’, ‘fetch’, ‘compute’, etc.  Security identifiers are assigned to every agent in the System that is either capable of generating an action or receiving an action from other agent. Every agent could be assigned a unique Security Identifier based on its trust level or privileges.  Since the Security Identifiers are very important to achieve security in SoC, they should be protected properly.  A common weakness that can exist is that the Security Identifiers are improperly protected.  Consequently, the Security Identifier can be programmed by a malicious agent (i.e., the Security Identifier is mutable) to spoof the action as if it originated from a trusted agent."
- ]
+ "ExtendedDescription": null
 }

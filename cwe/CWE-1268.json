@@ -1,6 +1,6 @@
 {
  "ID": 1268,
- "Name": "Agents Included in Control Policy are not Contained in Less-Privileged Policy",
+ "Name": "Policy Privileges are not Assigned Consistently Between Control and Data Agents",
  "Description": "The product's hardware-enforced access control for a particular resource improperly accounts for privilege discrepancies between control and write policies.\n\t\t\t   ",
  "PotentialMitigations": {
   "Mitigation": [
@@ -21,7 +21,11 @@
   ]
  },
  "RelatedAttackPatterns": {
-  "RelatedAttackPattern": null
+  "RelatedAttackPattern": [
+   {
+    "CAPECID": 1
+   }
+  ]
  },
  "CommonConsequences": {
   "Consequence": [
@@ -47,6 +51,6 @@
  },
  "ExtendedDescription": [
   "Integrated circuits and hardware engines may provide access to resources (device-configuration, encryption keys, etc.) belonging to trusted firmware or software modules (commonly set by a BIOS or a bootloader). These accesses are typically controlled and limited by the hardware. Hardware design access control is sometimes implemented using a policy. A policy defines which entity or agent may or may not be allowed to perform an action. When a system implements multiple levels of policies, a control policy may allow direct access to a resource as well as changes to the policies themselves.",
-  "Such resources that include agents in the control policy but not in write policy could unintentionally allow the untrusted agent to insert itself in the write policy register. Inclusion in the write policy register could allow a malicious or misbehaving agent write access to resources. This action could result in security risks consisting of leaked information, leaked encryption keys, or even modification of device configuration."
+  "Resources that include agents in their control policy but not in their write policy could unintentionally allow an untrusted agent to insert itself in the write policy register. Inclusion in the write policy register could allow a malicious or misbehaving agent write access to resources. This action could result in security compromises including leaked information, leaked encryption keys, or modification of device configuration."
  ]
 }

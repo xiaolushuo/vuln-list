@@ -11,7 +11,7 @@
     "Strategy": "",
     "Description": [
      "Whenever there are multiple, physically different copies of the same value that might change and the process to update them is not instantaneous and atomic, it is impossible to assert that the original and shadow copies will always be in sync - there will always be a time period when they are out of sync. To mitigate the consequential risk, the recommendations essentially are:",
-     "\n                     \n\t\t  "
+     "\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t"
     ]
    }
   ]
@@ -39,11 +39,11 @@
   ]
  },
  "ExtendedDescription": [
-  "Having mirrored regions with different values might result in the exposure of sensitive information and/or other consequences, including loss of access control.",
-  "Due to architectural and performance constraints, one might need to duplicate a resource. The most common example of doing this in computer architecture is the concept of cache, which keeps a \"local\" copy of the data element in memory, because the time to access the memory (which is located far off from the computing core) is significantly longer compared to the time it takes to access a local copy (cache). Thus, keeping a local copy of some distant entity provides significant performance improvement. Unfortunately, this improvement also comes with a downside, since the product needs to ensure that the local copy always mirrors the original copy truthfully.  If they get out of sync somehow, the computational result is no longer true.",
-  "In designing hardware, memory is not the only thing that gets mirrored. There are many other entities that get mirrored, too: registers, memory regions, and, in some cases, even whole units. For example, for a multi-core processor, if every memory access from any of those tens of cores goes through a single memory-management unit (MMU) for security reasons, then the MMU becomes a performance bottleneck. In such cases, it might make sense to create duplicate, local MMUs that will serve only a subset of the cores of processors rather than all of them. These local copies are also called \"shadow copies\" or \"mirrored copies.\"",
-  "If the original resource that was being duplicated into these local copies never changed, the question of the local copies getting out of sync would not arise. Unfortunately, in many cases, the values inside the original copy change. For example, a memory range might be inaccessible during boot time, but once the boot process is over and the system is now in a stable state, that memory range may now be opened up for access. So, if a register(s) in the access-control unit stores the start and end addresses of the \"accessible\" memory chunks, those values would change after the boot process is over. Now, when the original copy changes, the mirrored copies must also change, and change fast.",
-  "This situation of shadow-copy-possibly-out-of-sync-with-original-copy might occur as a result of multiple scenarios, including the following:\n\t\t",
-  "\n                     \n\t\t  "
+  "Having mirrored regions with different values might result in the exposure of sensitive information or possibly system compromise.",
+  "In the interest of increased performance, one might need to duplicate a resource. A cache memory is a common example of this concept, which keeps a \"local\" copy of a data element in the high speed cache memory. Unfortunately, this speed improvement comes with a downside, since the product needs to ensure that the local copy always mirrors the original copy truthfully. If they get out of sync, the computational result is no longer true.",
+  "During hardware design, memory is not the only item which gets mirrored. There are many other entities that get mirrored, as well: registers, memory regions, and, in some cases, even whole computational units. For example, within a multi-core processor, if all memory accesses for each and every core goes through a single Memory-Management Unit (MMU) then the MMU will become a performance bottleneck. In such cases, duplicating local MMUs that will serve only a subset of the cores rather than all of them may resolve the performance issue. These local copies are also called \"shadow copies\" or \"mirrored copies.\"",
+  "If the original resource never changed, local duplicate copies getting out of sync would never be an issue. However, the values of the original copy will sometimes change. When the original copy changes, the mirrored copies must also change, and change fast.",
+  "This situation of shadow-copy-possibly-out-of-sync-with-original-copy might occur as a result of multiple scenarios, including the following:\n\t\t\t\t",
+  "\n\t\t\t\t\t\n\t\t\t\t"
  ]
 }

@@ -1,7 +1,7 @@
 {
  "ID": 1191,
- "Name": "Exposed Chip Debug and or Test Interface With Insufficient Access Control",
- "Description": "The chip does not implement or does not correctly\n             enforce access control on the debug/test interface, thus allowing an\n             attacker to exercise the debug/test interface to access a portion of\n           the chip internal registers that typically would not be\n           exposed.",
+ "Name": "Exposed Chip Debug and Test Interface With Insufficient or Missing Authorization",
+ "Description": "The chip does not implement or does not correctly check whether users are authorized to access internal registers.",
  "PotentialMitigations": {
   "Mitigation": [
    {
@@ -9,15 +9,19 @@
      "Architecture and Design"
     ],
     "Strategy": "Separation of Privilege",
-    "Description": [
-     "\n                    Implement an access control mechanism to exercise the debug\n                    interface in order to control and observe security-sensitive\n                    chip internals. \n                  ",
-     "\n                    Password checking logic should be resistant to timing\n                    attacks. Security-sensitive data stored in registers, such\n                    as keys, etc. should be cleared when entering debug mode.\n                  "
-    ]
+    "Description": null
    }
   ]
  },
  "RelatedAttackPatterns": {
-  "RelatedAttackPattern": null
+  "RelatedAttackPattern": [
+   {
+    "CAPECID": 1
+   },
+   {
+    "CAPECID": 180
+   }
+  ]
  },
  "CommonConsequences": {
   "Consequence": [
@@ -72,6 +76,6 @@
   ]
  },
  "ExtendedDescription": [
-  "Integrated circuits can expose the chip internals through a\n              scan chain interconnected through internal registers etc., through\n              scan flip-flops. A Joint Test Action Group (JTAG) compatible test access port usually\n              provides access to this scan chain for debugging the chip. Since\n              almost every asset in the chip can be accessed over this debug\n              interface, chip manufacturers typically insert some form of\n              password-based or challenge-response based access control\n              mechanisms to prevent misuse. This mechanism is implemented in\n              addition to on-chip protections that are already present. If this\n              debug access control is not implemented or the access control\n              check is not implemented properly, or if the hardware does not\n              clear secret keys, etc., when debug more is entered, an attacker\n              may be able to bypass on-chip access control mechanisms through\n              debug features/interfaces."
+  "A device's internal information may be accessed through a scan chain of interconnected internal registers usually through a JTAG interface. The JTAG interface provides access to these registers in a serial fashion in the form of a scan chain for the purposes of debugging programs running on a device. Since almost all information contained within a device may be accessed over this interface, device manufacturers typically insert some form of authentication and authorization to prevent unintended use of this sensitive information. This mechanism is implemented in addition to on-chip protections that are already present. If this control is not implemented or not implemented properly a user may be able to bypass on-chip protection mechanisms through debug interface."
  ]
 }

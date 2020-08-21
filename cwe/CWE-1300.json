@@ -1,0 +1,42 @@
+{
+ "ID": 1300,
+ "Name": "Improper Protection Against Physical Side Channels",
+ "Description": "The product is missing protections or implements insufficient protections against information leakage through physical channels such as power consumption, electromagnetic emissions (EME), acoustic emissions, or other physical attributes.",
+ "PotentialMitigations": {
+  "Mitigation": [
+   {
+    "Phase": [
+     "Architecture and Design"
+    ],
+    "Strategy": "",
+    "Description": null
+   },
+   {
+    "Phase": [
+     "Implementation"
+    ],
+    "Strategy": "",
+    "Description": null
+   }
+  ]
+ },
+ "RelatedAttackPatterns": {
+  "RelatedAttackPattern": null
+ },
+ "CommonConsequences": {
+  "Consequence": [
+   {
+    "Scope": [
+     "Confidentiality"
+    ],
+    "Impact": [
+     "Read Memory",
+     "Read Application Data"
+    ]
+   }
+  ]
+ },
+ "ExtendedDescription": [
+  "Physical properties of the hardware implementation such as power consumption or EME can result in data disclosure even if it is not possible to extract the information in the digital domain. Physical side channels such as power consumption, electromagnetic emissions (EME), and acoustic emissions have been well-studied for decades in the context of breaking implementations of cryptographic algorithms. These side-channels may be easily observed by an attacker with physical access to the device. Power, EME, and acoustic measurements obtained during hardware operation are correlated to data processed by the hardware, enabling recovery of secret keys and data."
+ ]
+}
