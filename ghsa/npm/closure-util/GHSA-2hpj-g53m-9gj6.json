@@ -1,6 +1,6 @@
 {
   "Severity": "HIGH",
-  "UpdatedAt": "2019-02-18T23:32:54Z",
+  "UpdatedAt": "2020-08-31T18:13:12Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "closure-util"
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10583"
       }
     ],
-    "Description": "closure-utils is Utilities for Closure Library based projects. closure-utils downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `closure-util` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `closure-util`.\n\n\n## Recommendation\n\nTo mitigate this issue:\n1. Install the package using npm's `--ignore-scripts` flag.\n2. Navigate to the package directory, and open `default-config.json` in a text editor\n3. Change the download URLs in the `compiler_url` and `library_url` to `https` equivalents\n4. run `npm i` in the package directory.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:58:03Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects closure-util",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in closure-util",
+    "UpdatedAt": "2020-08-31T18:13:12Z",
     "WithdrawnAt": ""
   },
   "Versions": [

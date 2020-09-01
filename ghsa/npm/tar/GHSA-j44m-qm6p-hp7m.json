@@ -27,12 +27,12 @@
         "Value": "CVE-2018-20834"
       }
     ],
-    "Description": "A vulnerability was found in node-tar before version 4.4.2. An Arbitrary File Overwrite issue exists when extracting a tarball containing a hardlink to a file that already exists on the system, in conjunction with a later plain file with the same name as the hardlink. This plain file content replaces the existing file content.",
+    "Description": "Versions of `tar` prior to 4.4.2 for 4.x and 2.2.2 for 2.x are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.\n\n\n## Recommendation\n\nFor tar 4.x, upgrade to version 4.4.2 or later.\nFor tar 2.x, upgrade to version 2.2.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-05-01T18:37:31Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects tar",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Summary": "Arbitrary File Overwrite in tar",
+    "UpdatedAt": "2020-08-31T22:28:35Z",
     "WithdrawnAt": ""
   },
   "Versions": [

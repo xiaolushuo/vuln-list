@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10534"
       }
     ],
-    "Description": "electron-packager is a command line tool that packages Electron source code into `.app` and `.exe` packages. along with Electron. The `--strict-ssl` command line option in electron-packager \u003e= 5.2.1 \u003c= 6.0.0 || \u003e=6.0.0 \u003c= 6.0.2 defaults to false if not explicitly set to true. This could allow an attacker to perform a man in the middle attack.",
+    "Description": "Affected versions of `electron-packager` configure the generated application to disable SSL certificate verification by default. \n\nThis could allow an attacker with a privileged network position to launch a Man In The Middle (MITM) attack on the install process, intercepting the step where electron-packager downloads Electron for supported target platforms and architectures, and replacing the valid download with a tampered malicious one.\n\nThis only affects users using the electron-packager CLI. The strict-ssl option defaults to true for the node.js API.\n\n\n## Recommendation\n\n1. Update to version 7.0.0 or later.\n2. Delete the `electron-download` cache folder, which is by default located at `~/.electron`.\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:58:24Z",
     "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects electron-packager",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "SSL Validation Defaults to False in electron-packager",
+    "UpdatedAt": "2020-08-31T18:11:04Z",
     "WithdrawnAt": ""
   },
   "Versions": [

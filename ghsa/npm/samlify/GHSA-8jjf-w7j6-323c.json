@@ -27,12 +27,12 @@
         "Value": "CVE-2017-1000452"
       }
     ],
-    "Description": "An XML Signature Wrapping vulnerability exists in Samlify 2.2.0 and earlier, and in predecessor Express-saml2 which could allow attackers to impersonate arbitrary users.",
+    "Description": "Versions of `samlify` prior to 2.4.0 are vulnerable to Authentication Bypass. The package fails to prevent XML Signature Wrapping, allowing tokens to be reused with different usernames. A remote attacker can modify SAML content for a SAML service provider without invalidating the cryptographic signature, which may allow attackers to bypass primary authentication for the affected SAML service provider.\n\n\n## Recommendation\n\nUpgrade to version 2.4.0 or later",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-01-04T21:03:33Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects samlify",
-    "UpdatedAt": "2019-07-03T21:02:00Z",
+    "Summary": "Authentication Bypass in samlify",
+    "UpdatedAt": "2020-08-31T18:42:27Z",
     "WithdrawnAt": ""
   },
   "Versions": [

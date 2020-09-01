@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:53:13Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10563"
       }
     ],
-    "Description": "During the installation process, the go-ipfs-deps module before 0.4.4 insecurely downloads resources over HTTP. This allows for a MITM attack to compromise the integrity of the resources used by this module and could allow for further compromise.",
+    "Description": "Affected versions of `go-ipfs-deps` insecurely download resources over HTTP. \n\nIn scenarios where an attacker has a privileged network position, they can modify or read such resources at will. While the exact severity of impact for a vulnerability like this is highly variable and depends on the behavior of the package itself, it ranges from being able to read sensitive information all the way up to and including remote code execution.\n\n\n## Recommendation\n\nUpdate to version 0.4.4 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:54:18Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects go-ipfs-dep",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Severity": "HIGH",
+    "Summary": "Downloads Resources over HTTP in go-ipfs-dep",
+    "UpdatedAt": "2020-08-31T18:12:52Z",
     "WithdrawnAt": ""
   },
   "Versions": [

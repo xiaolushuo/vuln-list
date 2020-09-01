@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10554"
       }
     ],
-    "Description": "sequelize is an Object-relational mapping, or a middleman to convert things from Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server into usable data for NodeJS. Before version 1.7.0-alpha3, sequelize defaulted SQLite to use MySQL backslash escaping, even though SQLite uses Postgres escaping.",
+    "Description": "Affected versions of `sequelize` use MySQL's backslash-based escape syntax when connecting to SQLite, despite the fact that SQLite uses PostgreSQL's escape syntax, which can result in a SQL Injection vulnerability.\n\n\n## Recommendation\n\nUpdate to version 1.7.0-alpha3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:54:28Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects sequelize",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Summary": "SQL Injection in sequelize",
+    "UpdatedAt": "2020-08-31T18:11:16Z",
     "WithdrawnAt": ""
   },
   "Versions": [

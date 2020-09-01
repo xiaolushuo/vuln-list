@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16107"
       }
     ],
-    "Description": "pooledwebsocket is vulnerable to a directory traversal issue, giving an attacker access to the filesystem by placing \"../\" in the url.",
+    "Description": "Affected versions of `pooledwebsocket` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nExample request:\n```\nGET /../../../../../../../../../../etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nUpdate to version 0.0.19 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T00:20:57Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects pooledwebsocket",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory traversal in pooledwebsocket",
+    "UpdatedAt": "2020-08-31T18:19:58Z",
     "WithdrawnAt": ""
   },
   "Versions": [

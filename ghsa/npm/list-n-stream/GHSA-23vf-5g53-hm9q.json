@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16084"
       }
     ],
-    "Description": "list-n-stream is a server for static files to list and stream local videos. list-n-stream v0.0.10 or lower is vulnerable to a directory traversal issue, giving an attacker access to the filesystem by placing \"../\" in the url.",
+    "Description": "Affected versions of `list-n-stream` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nExample request:\n```\nGET /../../../../../../../../../../etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nUpdate to version 0.0.11 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T14:57:31Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects list-n-stream",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory Traversal in list-n-stream",
+    "UpdatedAt": "2020-08-31T22:11:55Z",
     "WithdrawnAt": ""
   },
   "Versions": [

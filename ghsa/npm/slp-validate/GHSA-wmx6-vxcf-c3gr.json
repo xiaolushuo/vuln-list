@@ -30,12 +30,12 @@
         "Value": "CVE-2019-16761"
       }
     ],
-    "Description": "## Validator parsing discrepancy due to string encoding\n\n### Impact\r\nA specially crafted Bitcoin script can cause a discrepancy between the specified SLP consensus rules and the validation result of the slp-validate@1.0.0 npm package. An attacker could create a specially crafted Bitcoin script in order to cause a hard-fork from the SLP consensus.\r\n\r\n### Patches\r\nAll versions \u003e1.0.0 have been patched.\r\n\r\n### Workarounds\r\nUpgrade to any version \u003e 1.0.0.\r\n\r\n### References\r\nThe bug was located and fixed [here](https://github.com/simpleledger/slp-validate/commit/50ad96c2798dad6b9f9a13333dd05232defe5730#diff-fe58606994c412ba56a65141a7aa4a62L123).\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in [slp-validate](https://github.com/simpleledger/slp-validate)\r\n* Email us at [info@slp.cash](mailto:info@slp.cash)\n",
+    "Description": "Versions of `slp-validate` prior to 1.0.1 are vulnerable to a validation bypass. Bitcoin scripts may cause the validation result from `slp-validate` to differ from the specified SLP consensus. This allows an attacker to create a Bitcoin script that causes a hard-fork from the SLP consensus.\n\n\n## Recommendation\n\nUpgrade to version 1.0.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-11-15T23:10:19Z",
     "Severity": "CRITICAL",
-    "Summary": "Critical severity vulnerability that affects slp-validate",
-    "UpdatedAt": "2019-11-15T23:10:19Z",
+    "Summary": "Validation Bypass in slp-validate",
+    "UpdatedAt": "2020-08-31T18:58:48Z",
     "WithdrawnAt": ""
   },
   "Versions": [

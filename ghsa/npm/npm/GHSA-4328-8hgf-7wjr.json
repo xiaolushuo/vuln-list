@@ -30,12 +30,12 @@
         "Value": "CVE-2019-16777"
       }
     ],
-    "Description": "## Arbitrary File Overwrite\r\n\r\nVersions of  the npm CLI prior to 6.13.4 are vulnerable to an Arbitrary File Overwrite. It fails to prevent existing globally-installed binaries to be overwritten by other package installations. For example, if a package was installed globally and created a `serve` binary, any subsequent installs of packages that also create a `serve` binary would overwrite the previous `serve` binary.  \r\n\r\nThis behavior is still allowed in local installations and also through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.  \r\n\r\nThank you to Daniel Ruf for reporting the issue!\r\n\r\nFurther information: [npm blog post](https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli)\r\n",
+    "Description": "Versions of  the npm CLI prior to 6.13.4 are vulnerable to a Global node_modules Binary Overwrite. It fails to prevent existing globally-installed binaries to be overwritten by other package installations. \n\nFor example, if a package was installed globally and created a `serve` binary, any subsequent installs of packages that also create a `serve` binary would overwrite the first binary. This will not overwrite system binaries but only binaries put into the global node_modules directory.\n\nThis behavior is still allowed in local installations and also through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n\n## Recommendation\n\nUpgrade to version 6.13.4 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-12-13T15:39:32Z",
     "Severity": "LOW",
-    "Summary": "Arbitrary File Write in npm CLI",
-    "UpdatedAt": "2019-12-13T15:41:20Z",
+    "Summary": "Global node_modules Binary Overwrite in npm",
+    "UpdatedAt": "2020-08-31T18:59:19Z",
     "WithdrawnAt": ""
   },
   "Versions": [

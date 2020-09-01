@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10577"
       }
     ],
-    "Description": "ibm_db is an asynchronous/synchronous interface for node.js to IBM DB2 and IBM Informix. ibm_db before 1.0.2 downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `ibm_db` insecurely download resources over HTTP. \r\n\r\nIn scenarios where an attacker has a privileged network position, they can modify or read such resources at will. While the exact severity of impact for a vulnerability like this is highly variable and depends on the behavior of the package itself, it ranges from being able to read sensitive information all the way up to and including remote code execution.\n\n\n## Recommendation\n\nUpdate to version 1.0.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:51:59Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects ibm_db",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Summary": "Downloads Resources over HTTP in ibm_db",
+    "UpdatedAt": "2020-08-31T18:13:06Z",
     "WithdrawnAt": ""
   },
   "Versions": [

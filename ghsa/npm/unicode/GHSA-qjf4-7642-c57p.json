@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10578"
       }
     ],
-    "Description": "unicode loads unicode data downloaded from unicode.org into nodejs. Unicode before 9.0.0 downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks.",
+    "Description": "Affected versions of `unicode` insecurely download resources over HTTP. \r\n\r\nIn scenarios where an attacker has a privileged network position, they can modify or read such resources at will. While the exact severity of impact for a vulnerability like this is highly variable and depends on the behavior of the package itself, it ranges from being able to read sensitive information all the way up to and including remote code execution.\n\n\n## Recommendation\n\nUpdate to version 9.0.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:51:52Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects unicode",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Summary": "Downloads Resources over HTTP in unicode",
+    "UpdatedAt": "2020-08-31T18:13:03Z",
     "WithdrawnAt": ""
   },
   "Versions": [

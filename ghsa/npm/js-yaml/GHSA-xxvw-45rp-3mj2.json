@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2017-10-24T18:33:37Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2013-4660"
       }
     ],
-    "Description": "The JS-YAML module before 2.0.5 for Node.js parses input without properly considering the unsafe !!js/function tag, which allows remote attackers to execute arbitrary code via a crafted string that triggers an eval operation.",
+    "Description": "Versions 2.0.4 and earlier of `js-yaml` are affected by a code execution vulnerability in the YAML deserializer.\n\n## Proof of Concept\n```\nconst yaml = require('js-yaml');\n\nconst x = `test: !!js/function \u003e\nfunction f() { \nconsole.log(1); \n}();`\n\nyaml.load(x);\n```\n\n\n## Recommendation\n\nUpdate js-yaml to version 2.0.5 or later, and ensure that all instances where the `.load()` method is called are updated to use `.safeLoad()` instead.\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:37Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects js-yaml",
-    "UpdatedAt": "2019-07-03T21:02:00Z",
+    "Severity": "CRITICAL",
+    "Summary": "Deserialization Code Execution in js-yaml",
+    "UpdatedAt": "2020-08-31T18:07:56Z",
     "WithdrawnAt": ""
   },
   "Versions": [

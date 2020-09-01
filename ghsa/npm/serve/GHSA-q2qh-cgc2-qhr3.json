@@ -27,12 +27,12 @@
         "Value": "CVE-2018-3712"
       }
     ],
-    "Description": "serve node module before 6.4.9 suffers from a Path Traversal vulnerability due to not handling %2e (.) and %2f (/) and allowing them in paths, which allows a malicious user to view the contents of any directory with known path.",
+    "Description": "Affected versions of `serve` do not properly handle `%2e` (.) and `%2f` (/) characters, and allow the, characters to be used in paths. This can be used to traverse the directory tree and list content of any directory the user running the process has access to.\n\nMitigating factors:\nThis vulnerability only allows listing of directory contents and does not allow reading of arbitrary files.\n\n\n## Recommendation\n\nUpdate to version 6.4.9 later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-27T17:07:50Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects serve",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory Traversal in serve",
+    "UpdatedAt": "2020-08-31T22:18:47Z",
     "WithdrawnAt": ""
   },
   "Versions": [

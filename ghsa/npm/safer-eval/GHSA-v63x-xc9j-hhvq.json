@@ -1,6 +1,6 @@
 {
   "Severity": "CRITICAL",
-  "UpdatedAt": "2019-12-11T02:01:29Z",
+  "UpdatedAt": "2020-08-31T18:58:59Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "safer-eval"
@@ -30,12 +30,12 @@
         "Value": "CVE-2019-10769"
       }
     ],
-    "Description": "## Remote Code Execution Vulnerability due to Sandbox Bypass\r\n\r\n### Impact\r\n\r\n- Remote Code Execution\r\n- Cross Site Scripting\r\n\r\n### Patches\r\n\r\nThere will be no patch available.\r\n\r\n### Workarounds\r\n\r\nPlease use other packages like [vm2](https://www.npmjs.com/package/vm2).\r\n\r\n### References\r\n\r\nThe issue was originally reported to the project [vm2](https://github.com/patriksimek/vm2) by @XmiliaH in an issue [here](https://github.com/patriksimek/vm2/issues/197).\r\n\r\n\r\n",
+    "Description": "All versions of `safer-eval` are vulnerable to Sandbox Escape leading to Remote Code Execution. The package fails to restrict access to the main context and is not suited to process arbitrary user input. This may allow attackers to execute arbitrary code in the system.\n\n\n## Recommendation\n\nThe package is not meant to receive user input. Consider using an alternative package until a fix is made available.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-12-11T02:01:44Z",
     "Severity": "CRITICAL",
-    "Summary": "Remote code execution in npm safer-eval",
-    "UpdatedAt": "2019-12-11T02:01:44Z",
+    "Summary": "Sandbox Breakout / Arbitrary Code Execution in safer-eval",
+    "UpdatedAt": "2020-08-31T18:58:59Z",
     "WithdrawnAt": ""
   },
   "Versions": [

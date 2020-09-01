@@ -1,6 +1,6 @@
 {
   "Severity": "HIGH",
-  "UpdatedAt": "2019-02-18T23:43:22Z",
+  "UpdatedAt": "2020-08-31T18:16:57Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "phantomjs-cheniu"
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10661"
       }
     ],
-    "Description": "phantomjs-cheniu is a Headless WebKit with JS API phantomjs-cheniu downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested resources with an attacker controlled copy if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `phantomjs-cheniu` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `phantomjs-cheniu`.\n\n\n## Recommendation\n\nNo patch is currently available for this vulnerability.\r\n\r\nAs this package is just a fork of Medium's [`phantomjs-prebuilt`](https://github.com/Medium/phantomjs) package, the best mitigation is currently to install the `Medium` version of [`phantomjs-prebuilt`](https://github.com/Medium/phantomjs). This can be done via the following command:\r\n```\r\nnpm i phantomjs-prebuilt\r\n```\r\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:44:52Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects phantomjs-cheniu",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in phantomjs-cheniu",
+    "UpdatedAt": "2020-08-31T18:16:57Z",
     "WithdrawnAt": ""
   },
   "Versions": [

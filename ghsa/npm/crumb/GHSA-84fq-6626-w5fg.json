@@ -27,12 +27,12 @@
         "Value": "CVE-2014-7193"
       }
     ],
-    "Description": "The Crumb plugin before 3.0.0 for Node.js does not properly restrict token access in situations where a hapi route handler has CORS enabled, which allows remote attackers to obtain sensitive information, and potentially obtain the ability to spoof requests to non-CORS routes, via a crafted web site that is visited by an application consumer.",
+    "Description": "When CORS is enabled on a hapi route handler, it is possible to set a crumb token for a different domain. An attacker would need to have an application consumer visit a site they control, request a route supporting CORS, and then retrieve the token. With this token, they could possibly make requests to non CORS routes as this user.\n\nA configuration and scenario where this would occur is unlikely, as most configurations will set CORS globally (where crumb is not used), or not at all.\n\n\n## Recommendation\n\nUpdate to version 3.0.0 or greater.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:36Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects crumb",
-    "UpdatedAt": "2019-07-03T21:01:59Z",
+    "Summary": "CORS Token Disclosure in crumb",
+    "UpdatedAt": "2020-08-31T18:07:29Z",
     "WithdrawnAt": ""
   },
   "Versions": [

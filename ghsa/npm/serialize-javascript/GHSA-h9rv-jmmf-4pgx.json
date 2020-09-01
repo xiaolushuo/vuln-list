@@ -30,12 +30,12 @@
         "Value": "CVE-2019-16769"
       }
     ],
-    "Description": "## regular expressions Cross-Site Scripting (XSS) vulnerability\n\n### Impact\r\n\r\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS). It does not properly mitigate against unsafe characters in serialized regular expressions.\r\n\r\nThis vulnerability is not affected on Node.js environment since Node.js's implementation of `RegExp.prototype.toString()` backslash-escapes all forward slashes in regular expressions.\r\n\r\nIf serialized data of regular expression objects are used in an environment other than Node.js, it is affected by this vulnerability.\r\n\r\n### Patches\r\n\r\nThis was patched in v2.1.1.\r\n\n",
+    "Description": "Versions of `serialize-javascript` prior to 2.1.1 are vulnerable to Cross-Site Scripting (XSS). The package fails to sanitize serialized regular expressions. This vulnerability does not affect Node.js applications.\n\n\n## Recommendation\n\nUpgrade to version 2.1.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-12-05T18:44:37Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects serialize-javascript",
-    "UpdatedAt": "2019-12-05T18:44:37Z",
+    "Summary": "Cross-Site Scripting in serialize-javascript",
+    "UpdatedAt": "2020-08-31T18:58:54Z",
     "WithdrawnAt": ""
   },
   "Versions": [

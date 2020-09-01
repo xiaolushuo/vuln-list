@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16038"
       }
     ],
-    "Description": "`f2e-server` 1.12.11 and earlier is vulnerable to a directory traversal issue, giving an attacker access to the filesystem by placing \"../\" in the url. This is compounded by `f2e-server` requiring elevated privileges to run.",
+    "Description": "Affected versions of `f2e-server` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nExample request:\n```\nGET /../../../../../../../../../../etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nUpdate to version 1.12.12 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T16:29:12Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects f2e-server",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory Traversal in f2e-server",
+    "UpdatedAt": "2020-08-31T18:20:09Z",
     "WithdrawnAt": ""
   },
   "Versions": [

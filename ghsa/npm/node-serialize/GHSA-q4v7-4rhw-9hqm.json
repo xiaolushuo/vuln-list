@@ -1,6 +1,6 @@
 {
   "Severity": "CRITICAL",
-  "UpdatedAt": "2018-07-18T18:26:58Z",
+  "UpdatedAt": "2020-08-31T18:18:50Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "node-serialize"
@@ -27,12 +27,12 @@
         "Value": "CVE-2017-5941"
       }
     ],
-    "Description": "An issue was discovered in the node-serialize package 0.0.4 for Node.js. Untrusted data passed into the unserialize() function can be exploited to achieve arbitrary code execution by passing a JavaScript Object with an Immediately Invoked Function Expression (IIFE).",
+    "Description": "Affected versions of `node-serialize` can be abused to execute arbitrary code via an [immediately invoked function expression](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (IIFE) if untrusted user input is passed into `unserialize()`.\n\n\n## Recommendation\n\nThere is no direct patch for this issue. The package author has reviewed this advisory, and provided the following recommendation:\r\n\r\n```\r\nTo avoid the security issues, at least one of the following methods should be taken:\r\n\r\n1. Make sure to send serialized strings internally, isolating them from potential hackers. For example, only sending the strings from backend to fronend and always using HTTPS instead of HTTP.\r\n\r\n2. Introduce public-key cryptosystems (e.g. RSA) to ensure the strings not being tampered with.\r\n```",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-18T18:27:56Z",
     "Severity": "CRITICAL",
-    "Summary": "Critical severity vulnerability that affects node-serialize",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Code Execution through IIFE in node-serialize",
+    "UpdatedAt": "2020-08-31T18:18:50Z",
     "WithdrawnAt": ""
   },
   "Versions": [

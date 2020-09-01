@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10611"
       }
     ],
-    "Description": "strider-sauce is Sauce Labs / Selenium support for Strider. strider-sauce downloads zipped resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested zip file with an attacker controlled zip file if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `strider-sauce` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `strider-sauce`.\r\n\n\n\n## Recommendation\n\nWhile the package author has created a patch for this vulnerability, they have not yet published it to npm or bumped the version number.\n\nIn order to resolve the vulnerability, you will need to install the module manually from github:\n```\nnpm install github:Strider-CD/strider-sauce#5ff6d65\n```\n\nAs this vulnerability does not have a version bump included with the patch, it is possible that you have received a report for a vulnerable package, yet have installed the patched version and are no longer vulnerable. If that is the case, this advisory can be disregarded.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:47:53Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects strider-sauce",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in strider-sauce",
+    "UpdatedAt": "2020-08-31T18:14:36Z",
     "WithdrawnAt": ""
   },
   "Versions": [

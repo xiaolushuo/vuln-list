@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "LOW",
   "UpdatedAt": "2017-10-24T18:33:36Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2014-6394"
       }
     ],
-    "Description": "visionmedia send before 0.8.4 for Node.js uses a partial comparison for verifying whether a directory is within the document root, which allows remote attackers to access restricted directories, as demonstrated using \"public-restricted\" under a \"public\" directory.",
+    "Description": "Versions 0.8.3 and earlier of `send` are affected by a directory traversal vulnerability. When relying on the root option to restrict file access it may be possible for an application consumer to escape out of the restricted directory and access files in a similarly named directory. \n\nFor example, `static(_dirname + '/public')` would allow access to `_dirname + '/public-restricted'`.\n\n\n## Recommendation\n\nUpdate to version 0.8.4 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:36Z",
-    "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects send",
-    "UpdatedAt": "2019-07-03T21:01:59Z",
+    "Severity": "LOW",
+    "Summary": "Directory Traversal in send",
+    "UpdatedAt": "2020-08-31T18:08:35Z",
     "WithdrawnAt": ""
   },
   "Versions": [

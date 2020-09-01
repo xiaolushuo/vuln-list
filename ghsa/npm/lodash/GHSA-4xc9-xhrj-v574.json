@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-07T18:04:34Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2018-16487"
       }
     ],
-    "Description": "A prototype pollution vulnerability was found in lodash \u003c4.17.11 where the functions merge, mergeWith, and defaultsDeep can be tricked into adding or modifying properties of Object.prototype.",
+    "Description": "Versions of `lodash` before 4.17.5 are vulnerable to prototype pollution. \n\nThe vulnerable functions are 'defaultsDeep', 'merge', and 'mergeWith' which allow a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n\n\n\n## Recommendation\n\nUpdate to version 4.17.11 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-07T18:16:48Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects lodash",
-    "UpdatedAt": "2020-08-03T18:13:45Z",
+    "Severity": "HIGH",
+    "Summary": "Prototype Pollution in lodash",
+    "UpdatedAt": "2020-08-31T18:35:37Z",
     "WithdrawnAt": ""
   },
   "Versions": [

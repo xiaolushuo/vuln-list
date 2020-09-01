@@ -27,12 +27,12 @@
         "Value": "CVE-2015-9241"
       }
     ],
-    "Description": "Certain input passed into the If-Modified-Since or Last-Modified headers will cause an 'illegal access' exception to be raised. Instead of sending a HTTP 500 error back to the sender, hapi node module before 11.1.3 will continue to hold the socket open until timed out (default node timeout is 2 minutes).",
+    "Description": "Versions of `hapi` prior to 11.1.3 are affected by a denial of service vulnerability.\n\nThe vulnerability is triggered when certain input is passed into the If-Modified-Since or Last-Modified headers.\n\nThis causes an 'illegal access' exception to be raised, and instead of sending a HTTP 500 error back to the sender, hapi will continue to hold the socket open until timed out (default node timeout is 2 minutes).\n\n\n\n\n\n## Recommendation\n\nUpdate to v11.1.3 or later",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-06-07T19:43:15Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects hapi",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Denial of Service in hapi",
+    "UpdatedAt": "2020-08-31T22:19:27Z",
     "WithdrawnAt": ""
   },
   "Versions": [

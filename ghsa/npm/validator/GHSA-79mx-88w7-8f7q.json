@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2018-11-06T23:12:41Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2014-9772"
       }
     ],
-    "Description": "The validator package before 2.0.0 for Node.js allows remote attackers to bypass the cross-site scripting (XSS) filter via hex-encoded characters.",
+    "Description": "Versions of `validator` prior to 2.0.0 contained an xss filter method that is affected by several filter bypasses. This may result in a cross-site scripting vulnerability.\n\n\n## Proof of Concept\nThe xss() function removes the word \"javascript\" when contained inside an attribute.\n\nHowever, it does not properly handle cases where characters have been hex-encoded. \n\nAs a result, it is possible to build an input that bypasses the filter but which the browser will accept as valid JavaScript.\n\nFor example:\n```\u003ca href=\"jav\u0026#x61;script:...\"\u003eabc\u003c/a\u003e```\nwill render as:\n```\u003ca href=\"javascript:...\"\u003eabc\u003c/a\u003e```\n\n\n## Recommendation\n\nThe package author has decided to remove the xss filter functionality in the latest version of this module. If this feature is not currently being used, you are not affected by the vulnerability. If it is being used, updating to the latest version of the module will break your application.\n\nIn order for affected users to mitigate this vulnerability, it is necessary to use an [alternative package](https://www.npmjs.com/search?q=xss%20filter\u0026page=1\u0026ranking=optimal) that provides similar functionality.\n\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-06T23:12:49Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects validator",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Severity": "HIGH",
+    "Summary": "XSS Filter Bypass via Encoded URL in validator",
+    "UpdatedAt": "2020-08-31T18:09:02Z",
     "WithdrawnAt": ""
   },
   "Versions": [

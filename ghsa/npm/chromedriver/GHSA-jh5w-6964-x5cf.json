@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:33:04Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10579"
       }
     ],
-    "Description": "Chromedriver is an NPM wrapper for selenium ChromeDriver. Chromedriver before 2.26.1 downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `chromedriver` insecurely download resources over HTTP. \n\nIn scenarios where an attacker has a privileged network position, they can modify or read such resources at will. This may result in arbitrary code execution if an attacker intercepts and modifies the downloaded binary file, replacing it with a malicious one. \n\n\n\n## Recommendation\n\nUpdate to version 2.26.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:58:05Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects chromedriver",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "Downloads Resources over HTTP in chromedriver",
+    "UpdatedAt": "2020-08-31T18:12:59Z",
     "WithdrawnAt": ""
   },
   "Versions": [

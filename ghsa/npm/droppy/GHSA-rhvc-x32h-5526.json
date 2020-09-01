@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:36:44Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10529"
       }
     ],
-    "Description": "Droppy versions \u003c3.5.0 does not perform any verification for cross-domain websocket requests. An attacker is able to make a specially crafted page that can send requests as the context of the currently logged in user. For example this means the malicious user could add a new admin account under his control and delete others.",
+    "Description": "Affected versions of `droppy`  are vulnerable to cross-site socket forgery. The package does not perform verification for cross-domain websocket requests, and as a result, an attacker can create a web page that opens up a websocket connection on behalf of the user visiting the page. The attacker can then perform any action that the target user could, including adding a new admin account under their control, or deleting others.\n\n\n## Recommendation\n\nUpdate to version 3.5.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:39:32Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects droppy",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "No CSRF Validation in droppy",
+    "UpdatedAt": "2020-08-31T18:10:31Z",
     "WithdrawnAt": ""
   },
   "Versions": [

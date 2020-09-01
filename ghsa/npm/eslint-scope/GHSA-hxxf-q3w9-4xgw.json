@@ -11,7 +11,7 @@
     "GhsaId": "GHSA-hxxf-q3w9-4xgw",
     "References": [
       {
-        "Url": "https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes"
+        "Url": "https://github.com/eslint/eslint-scope/issues/39"
       },
       {
         "Url": "https://github.com/advisories/GHSA-hxxf-q3w9-4xgw"
@@ -23,12 +23,12 @@
         "Value": "GHSA-hxxf-q3w9-4xgw"
       }
     ],
-    "Description": "Version 3.7.2 of the popular package `eslint-scope` and version 5.0.2 were published without authorization ( see https://github.com/eslint/eslint-scope/issues/39 ). These versions contained apparently malicious code that attempted to steal npm login tokens. They have both been unpublished and are no longer available.\r\n\r\nnpm is aware of this issue and is providing updates on this issue at this page: https://status.npmjs.org/incidents/dn7c1fgrr7ng\r\n\r\n",
+    "Description": "Version 3.7.2 of `eslint-scope` was published without authorization and was found to contain malicious code. This code would read the users `.npmrc` file and send any found authentication tokens to 2 remote servers.\n\n\n## Recommendation\n\nThe best course of action if you found this package installed in your environment is to revoke all your npm tokens. You can find instructions on how to do that here. https://docs.npmjs.com/getting-started/working_with_tokens#how-to-revoke-tokens",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-12T19:52:02Z",
     "Severity": "CRITICAL",
-    "Summary": "Critical severity vulnerability that affects eslint-config-eslint and eslint-scope",
-    "UpdatedAt": "2018-10-02T16:30:41Z",
+    "Summary": "Malicious Package in eslint-scope",
+    "UpdatedAt": "2020-08-31T18:32:16Z",
     "WithdrawnAt": ""
   },
   "Versions": [

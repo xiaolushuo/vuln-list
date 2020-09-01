@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2020-05-06T19:32:07Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2020-6836"
       }
     ],
-    "Description": "grammar-parser.jison in the hot-formula-parser package before 3.0.1 for Node.js is vulnerable to arbitrary code injection. The package fails to sanitize values passed to the parse function and concatenates them in an eval call. If a value of the formula is taken from user-controlled input, it may allow attackers to run arbitrary commands on the server.",
+    "Description": "Versions of `hot-formula-parser` prior to 3.0.1 are vulnerable to Command Injection. The package fails to sanitize values passed to the  `parse` function and concatenates it in an `eval` call. If a value of the formula is supplied by user-controlled input it may allow attackers to run arbitrary commands in the server.  \nParsing the following formula creates a `test` file in the present directory:  \n`\"SUM([(function(){require('child_process').execSync('touch test')})(),2])\"`\n\n\n## Recommendation\n\nUpgrade to version 3.0.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-05-06T19:32:33Z",
-    "Severity": "HIGH",
-    "Summary": "Arbitrary code injection in Formula Parser",
-    "UpdatedAt": "2020-05-06T19:32:33Z",
+    "Severity": "CRITICAL",
+    "Summary": "Command Injection in hot-formula-parser",
+    "UpdatedAt": "2020-08-31T18:59:23Z",
     "WithdrawnAt": ""
   },
   "Versions": [

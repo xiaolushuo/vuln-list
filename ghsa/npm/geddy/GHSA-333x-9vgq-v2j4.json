@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2017-10-24T18:33:36Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2015-5688"
       }
     ],
-    "Description": "Directory traversal vulnerability in lib/app/index.js in Geddy before 13.0.8 for Node.js allows remote attackers to read arbitrary files via a ..%2f (dot dot encoded slash) in the PATH_INFO to the default URI.",
+    "Description": "Versions 13.0.8 and earlier of geddy are vulnerable to a directory traversal attack via URI encoded attack vectors.\n\n### Proof of Concept\n```\nhttp://localhost:4000/..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd\n```\n\n\n## Recommendation\n\nUpdate geddy to version \u003e= 13.0.8",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:36Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects geddy",
-    "UpdatedAt": "2019-07-03T21:01:59Z",
+    "Severity": "HIGH",
+    "Summary": "Directory Traversal in geddy",
+    "UpdatedAt": "2020-08-31T18:07:43Z",
     "WithdrawnAt": ""
   },
   "Versions": [

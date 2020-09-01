@@ -1,6 +1,6 @@
 {
-  "Severity": "LOW",
-  "UpdatedAt": "2019-02-18T23:32:59Z",
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-08-31T18:13:19Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "steroids"
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10581"
       }
     ],
-    "Description": "Steroids is PhoneGap on Steroids, providing native UI elements, multiple WebViews and enhancements for better developer productivity. steroids downloads zipped resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested tarball with an attacker controlled tarball if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `steroids` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `steroids`.\n\n\n## Recommendation\n\nThis vulnerability was discovered and reported in 2016, yet has not seen a patch issued as of 3/2018. \n\nThe best path forward for mitigating this issue is to attempt to use an alternative module that is actively maintained and which provides similar functionality, such as the native PhoneGap API.\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:35:01Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects steroids",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "Downloads Resources over HTTP in steroids",
+    "UpdatedAt": "2020-08-31T18:13:19Z",
     "WithdrawnAt": ""
   },
   "Versions": [

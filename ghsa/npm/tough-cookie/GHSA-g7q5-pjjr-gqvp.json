@@ -27,12 +27,12 @@
         "Value": "CVE-2017-15010"
       }
     ],
-    "Description": "A ReDoS (regular expression denial of service) flaw was found in the tough-cookie module before 2.3.3 for Node.js. An attacker that is able to make an HTTP request using a specially crafted cookie may cause the application to consume an excessive amount of CPU.",
+    "Description": "Affected versions of `tough-cookie` are susceptible to a regular expression denial of service.\n\nThe amplification on this vulnerability is relatively low - it takes around 2 seconds for the engine to execute on a malicious input which is 50,000 characters in length.\n\nIf node was compiled using the `-DHTTP_MAX_HEADER_SIZE` however, the impact of the vulnerability can be significant, as the primary limitation for the vulnerability is the default max HTTP header length in node.\n\n\n## Recommendation\n\nUpdate to version 2.3.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T20:14:39Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects tough-cookie",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Regular Expression Denial of Service in tough-cookie",
+    "UpdatedAt": "2020-08-31T18:26:28Z",
     "WithdrawnAt": ""
   },
   "Versions": [

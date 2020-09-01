@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "LOW",
   "UpdatedAt": "2020-04-16T02:58:24Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2015-8851"
       }
     ],
-    "Description": "node-uuid before 1.4.4 uses insufficiently random data to create a GUID, which could make it easier for attackers to have unspecified impact via brute force guessing.",
+    "Description": "Affected versions of `node-uuid` consistently fall back to using `Math.random` as an entropy source instead of `crypto`, which may result in guessable UUID's.\n\n\n\n## Recommendation\n\nUpdate to version 1.4.4 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-04-16T03:14:50Z",
-    "Severity": "MODERATE",
-    "Summary": "Insufficiently random GUIDs in node-uuid",
-    "UpdatedAt": "2020-04-16T03:14:50Z",
+    "Severity": "LOW",
+    "Summary": "Insecure Entropy Source - Math.random() in node-uuid",
+    "UpdatedAt": "2020-08-31T18:10:36Z",
     "WithdrawnAt": ""
   },
   "Versions": [

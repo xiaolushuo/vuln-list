@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10533"
       }
     ],
-    "Description": "express-restify-mongoose is a module to easily create a flexible REST interface for mongoose models. express-restify-mongoose 2.4.2 and earlier and 3.0.X through 3.0.1 allows a malicious user to send a request for `GET /User?distinct=password` and get all the passwords for all the users in the database, despite the field being set to private. This can be used for other private data if the malicious user knew what was set as private for specific routes.",
+    "Description": "Affected versions of `express-restify-mongoose` are susceptible to an information leakage vulnerability which may allow an attacker to access fields on a model even if those fields are marked as private.\n\n\n## Proof of Concept\n\nIf you have a user model that you want to protect, such as the following User model:\n```\nconst User = mongoose.model('User', new mongoose.Schema({\n    name: String,\n    password: String,\n}));\n```\n\nYou would normally do something such as:\n```\nrestify.serve(router, User, {\n    private: ['password'], // Set the password part of User as private, so outside people can't read it\n})\n```\n\nThis would hide the password field from people that send your application a `GET /User` and `GET /User/some-user-id` request. \n\nA malicious user can go to your application and send a request for `GET /User?distinct=password` and get all the passwords for all the users in the database, despite the field being set to private. This could be used for other private data, if the malicious user knew what was set as private for specific routes.\n\n\n## Recommendation\n\nVersion 2.x: Update to version 2.5.0 or later.\nVersion 3.x: Update to version 3.1.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-10-23T17:14:57Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects express-restify-mongoose",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "Private Data Disclosure in express-restify-mongoose",
+    "UpdatedAt": "2020-08-31T22:15:16Z",
     "WithdrawnAt": ""
   },
   "Versions": [

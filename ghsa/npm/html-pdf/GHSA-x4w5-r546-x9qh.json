@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2019-09-25T12:39:46Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-15138"
       }
     ],
-    "Description": "The html-pdf package 2.2.0 for Node.js has an arbitrary file read vulnerability via an HTML file that uses XMLHttpRequest to access a file:/// URL.",
+    "Description": "All versions of `html-pdf` are vulnerable to Arbitrary File Read. The package fails to sanitize the HTML input, allowing attackers to exfiltrate server files by supplying malicious HTML code. XHR requests in the HTML code are executed by the server. Input with an XHR request such as `request.open(\"GET\",\"file:///etc/passwd\")` will result in a PDF document with the contents of `/etc/passwd`.\n\n\n## Recommendation\n\nNo fix is currently available. There is a mitigation available in the provided reference.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-10-11T18:40:38Z",
-    "Severity": "HIGH",
-    "Summary": "Arbitrary file read vulnerability via an HTML file that uses XMLHttpRequest to access a file:/// URL",
-    "UpdatedAt": "2019-11-06T18:19:19Z",
+    "Severity": "CRITICAL",
+    "Summary": "Arbitrary File Read in html-pdf",
+    "UpdatedAt": "2020-08-31T18:47:07Z",
     "WithdrawnAt": ""
   },
   "Versions": [

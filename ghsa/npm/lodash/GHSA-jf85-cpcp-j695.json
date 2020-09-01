@@ -1,5 +1,5 @@
 {
-  "Severity": "CRITICAL",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-12-05T17:37:10Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-10744"
       }
     ],
-    "Description": "Affected versions of lodash are vulnerable to Prototype Pollution. \nThe function defaultsDeep could be tricked into adding or modifying properties of Object.prototype using a constructor payload.",
+    "Description": "Versions of `lodash` before 4.17.12 are vulnerable to Prototype Pollution.  The function `defaultsDeep` allows a malicious user to modify the prototype of `Object` via `{constructor: {prototype: {...}}}` causing the addition or modification of an existing property that will exist on all objects.\n\n\n\n\n## Recommendation\n\nUpdate to version 4.17.12 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-07-10T19:45:23Z",
-    "Severity": "CRITICAL",
-    "Summary": "Lodash vulnerable to Prototype Pollution",
-    "UpdatedAt": "2019-12-05T17:41:55Z",
+    "Severity": "HIGH",
+    "Summary": "Prototype Pollution in lodash",
+    "UpdatedAt": "2020-08-31T18:46:04Z",
     "WithdrawnAt": ""
   },
   "Versions": [

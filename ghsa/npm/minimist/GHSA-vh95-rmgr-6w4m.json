@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "LOW",
   "UpdatedAt": "2020-04-03T21:42:10Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2020-7598"
       }
     ],
-    "Description": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+    "Description": "Affected versions of `minimist` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of `Object`, causing the addition or modification of an existing property that will exist on all objects.  \nParsing the argument `--__proto__.y=Polluted` adds a `y` property with value `Polluted` to all objects. The argument `--__proto__=Polluted` raises and uncaught error and crashes the application.  \nThis is exploitable if attackers have control over the arguments being passed to `minimist`.\n\n\n\n## Recommendation\n\nUpgrade to versions 0.2.1, 1.2.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-04-03T21:48:32Z",
-    "Severity": "MODERATE",
-    "Summary": "Prototype pollution in minimist",
-    "UpdatedAt": "2020-05-13T16:03:55Z",
+    "Severity": "LOW",
+    "Summary": "Prototype Pollution in minimist",
+    "UpdatedAt": "2020-08-31T18:50:07Z",
     "WithdrawnAt": ""
   },
   "Versions": [

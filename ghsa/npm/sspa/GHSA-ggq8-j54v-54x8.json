@@ -1,6 +1,6 @@
 {
   "Severity": "HIGH",
-  "UpdatedAt": "2018-07-23T20:34:42Z",
+  "UpdatedAt": "2020-08-31T18:24:06Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "sspa"
@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16145"
       }
     ],
-    "Description": "sspa is a server dedicated to single-page apps. sspa is vulnerable to a directory traversal issue, giving an attacker access to the filesystem by placing \"../\" in the url.",
+    "Description": "Affected versions of `sspa` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nExample request:\n```\nGET /../../../../../../../../../../etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nNo patch is available for this vulnerability.\n\nIt is recommended that the package is only used for local development, and if the functionality is needed for production, a different package is used instead.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-23T20:47:02Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects sspa",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Directory Traversal in sspa",
+    "UpdatedAt": "2020-08-31T18:24:06Z",
     "WithdrawnAt": ""
   },
   "Versions": [

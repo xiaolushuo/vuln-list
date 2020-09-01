@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:37:30Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10537"
       }
     ],
-    "Description": "backbone is a module that adds in structure to a JavaScript heavy application through key-value pairs and custom events connecting to your RESTful API through JSON There exists a potential Cross Site Scripting vulnerability in the `Model#Escape` function of backbone 0.3.3 and earlier, if a user is able to supply input. This is due to the regex that's replacing things to miss the conversion of things such as `\u003c` to `\u003c`.",
+    "Description": "Affected versions of `backbone` are vulnerable to cross-site scripting when users are allowed to supply input to the `Model#Escape` function, and the output is then written to the DOM. \n\nThe vulnerability occurs as a result of the regular expression used to encode metacharacters failing to take HTML Entities such as `\u0026#60;` into account.\n\n\n## Recommendation\n\nUpdate to version 0.5.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:39:55Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects backbone",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "Cross-Site Scripting in backbone",
+    "UpdatedAt": "2020-08-31T18:11:09Z",
     "WithdrawnAt": ""
   },
   "Versions": [

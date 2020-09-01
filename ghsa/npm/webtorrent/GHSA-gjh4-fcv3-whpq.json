@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "LOW",
   "UpdatedAt": "2019-09-03T09:58:06Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-15782"
       }
     ],
-    "Description": "WebTorrent before 0.107.6 allows XSS in the HTTP server via a title or file name.",
+    "Description": "Versions of `webtorrent` prior to 0.107.6 are vulnerable to Cross-Site Scripting. `webtorrent` servers started with `torrent.createServer()` lists a torrent's title and files in the index page without sanitization. This allows attackers to execute arbitrary JavaScript in the victim's browser through files with names containing the malicious payload. The issue is mitigated due to the fact that the server only allows fetching data pieces from the torrent.\n\n\n## Recommendation\n\nUpgrade to version 0.107.6 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-09-04T10:02:50Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects webtorrent",
-    "UpdatedAt": "2019-09-04T10:02:50Z",
+    "Severity": "LOW",
+    "Summary": "Cross-Site Scripting in webtorrent",
+    "UpdatedAt": "2020-08-31T18:49:25Z",
     "WithdrawnAt": ""
   },
   "Versions": [

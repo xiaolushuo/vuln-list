@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10602"
       }
     ],
-    "Description": "haxe is a cross-platform toolkit haxe downloads zipped resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested zip file with an attacker controlled zip file if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `haxe` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `haxe`.\n\n\n## Recommendation\n\nUpdate to version 5.0.10 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:50:21Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects haxe",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in haxe",
+    "UpdatedAt": "2020-08-31T18:13:42Z",
     "WithdrawnAt": ""
   },
   "Versions": [

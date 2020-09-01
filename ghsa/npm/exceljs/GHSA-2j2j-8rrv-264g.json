@@ -27,12 +27,12 @@
         "Value": "CVE-2018-16459"
       }
     ],
-    "Description": "An unescaped payload in exceljs \u003cv1.6 allows a possible XSS via cell value when worksheet is displayed in browser.",
+    "Description": "Versions of `exceljs` before 1.6.0 are vulnerable to cross-site scripting. \n\nThis vulnerability is due to `exceljs` does not  validate data from parsed XLSX file and allows to embed HTML tags, like `\u003cscript\u003e`, directly in the sheet cells. Because of this it's possible to inject malicious JavaScript code and execute it when data from the sheet were displayed in the browser.\n\n\n\n\n## Recommendation\n\nUpdate to version 1.6.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-09-11T18:58:40Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects exceljs",
-    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "Summary": "Cross-Site Scripting in exceljs",
+    "UpdatedAt": "2020-08-31T18:33:51Z",
     "WithdrawnAt": ""
   },
   "Versions": [

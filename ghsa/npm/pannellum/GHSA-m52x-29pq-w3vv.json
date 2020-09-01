@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "MODERATE",
   "UpdatedAt": "2019-11-22T18:17:49Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -30,12 +30,12 @@
         "Value": "CVE-2019-16763"
       }
     ],
-    "Description": "## XSS vulnerability\r\n\r\n### Impact\r\nURLs were not sanitized for data URIs (or `vbscript:`), allowing for potential XSS attacks. Such an attack would require a user to click on a hot spot to execute and would require an attacker-provided configuration. The most plausible potential attack would be if `pannellum.htm` was hosted on a domain that shared cookies with the targeted site's user authentication; an  `\u003ciframe\u003e` could then be embedded on the attacker's site using `pannellum.htm` from the targeted site, which would allow the attacker to potentially access information from the targeted site as the authenticated user (or worse if the targeted site did not have adequate CSRF protections) if the user clicked on a hot spot in the attacker's embedded panorama viewer.\r\n\r\n### Patches\r\nThis was patched in version 2.5.5.\r\n\r\n### Workarounds\r\nDon't host `pannellum.htm` on a domain that shares cookies with user authentication.\r\n\r\n### Acknowledgments\r\nThank you to Max Schaefer of GitHub Security Lab for reporting this issue.\r\n",
+    "Description": "Versions of `pannellum ` prior to 2.5.6 are vulnerable to Cross-Site Scripting (XSS). The package fails to sanitize URLs for data URIs, which may allow attackers to execute arbitrary code in a victim's browser. \n\n\n## Recommendation\n\nUpgrade to version 2.5.6 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-11-22T18:18:03Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects pannellum",
-    "UpdatedAt": "2019-11-22T18:28:15Z",
+    "Severity": "MODERATE",
+    "Summary": "Cross-Site Scripting in pannellum",
+    "UpdatedAt": "2020-08-31T18:58:38Z",
     "WithdrawnAt": ""
   },
   "Versions": [

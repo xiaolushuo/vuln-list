@@ -27,12 +27,12 @@
         "Value": "CVE-2015-1370"
       }
     ],
-    "Description": "Incomplete blacklist vulnerability in marked 0.3.2 and earlier for Node.js allows remote attackers to conduct cross-site scripting (XSS) attacks via a vbscript tag in a link.",
+    "Description": "Versions 0.3.2 and earlier of `marked` are affected by a cross-site scripting vulnerability even when `sanitize:true` is set. \n\n## Proof of Concept ( IE10 Compatibility Mode Only )\n\n`[xss link](vbscript:alert(1\u0026#41;)`\n\nwill get a link\n\n`\u003ca href=\"vbscript:alert(1)\"\u003exss link\u003c/a\u003e`\n\n\n## Recommendation\n\nUpdate to version 0.3.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2017-10-24T18:33:36Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects marked",
-    "UpdatedAt": "2020-08-03T18:00:17Z",
+    "Summary": "VBScript Content Injection in marked",
+    "UpdatedAt": "2020-08-31T18:08:17Z",
     "WithdrawnAt": ""
   },
   "Versions": [

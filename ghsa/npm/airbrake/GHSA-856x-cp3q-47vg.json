@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10530"
       }
     ],
-    "Description": "The airbrake module 0.3.8 and earlier defaults to sending environment variables over HTTP. Environment variables can often times contain secret keys and other sensitive values. A malicious user could be on the same network as a regular user and intercept all the secret keys the user is sending. This goes against common best practice, which is to use HTTPS.",
+    "Description": "Affected versions of `airbrake` default to sending environment variables over an unencrypted HTTP connection. In scenarios where an attacker has a privileged network position, it is possible for them to capture and read these environment variables, which may result in leaking sensitive information.\n\n\n## Recommendation\n\nUpdate to version 0.4.0 or later, or upgrade from the now-deprecated `airbrake` module to its replacement, [`airbrake-js`](https://www.npmjs.com/package/airbrake-js).",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:58:13Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects airbrake",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Insecure Default Configuration in airbrake",
+    "UpdatedAt": "2020-08-31T18:10:47Z",
     "WithdrawnAt": ""
   },
   "Versions": [

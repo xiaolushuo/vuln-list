@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "LOW",
   "UpdatedAt": "2020-07-01T18:33:47Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-20149"
       }
     ],
-    "Description": "ctorName in index.js in kind-of v6.0.0 - v6.0.2 allows external user input to overwrite certain internal attributes via a conflicting name, as demonstrated by 'constructor': {'name':'Symbol'}. Hence, a crafted payload can overwrite this builtin attribute to manipulate the type detection result.",
+    "Description": "Versions of `kind-of` 6.x prior to 6.0.3 are vulnerable to a Validation Bypass. A maliciously crafted object can alter the result of the type check, allowing attackers to bypass the type checking validation. \n\n\n## Recommendation\n\nUpgrade to versions 6.0.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-03-31T15:59:54Z",
-    "Severity": "MODERATE",
-    "Summary": "Type checking vulnerability in kind-of",
-    "UpdatedAt": "2020-07-01T18:34:46Z",
+    "Severity": "LOW",
+    "Summary": "Validation Bypass in kind-of",
+    "UpdatedAt": "2020-08-31T19:01:19Z",
     "WithdrawnAt": ""
   },
   "Versions": [

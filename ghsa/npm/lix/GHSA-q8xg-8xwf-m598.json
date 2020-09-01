@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2020-04-16T03:10:40Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2020-10800"
       }
     ],
-    "Description": "lix through 15.8.7 allows man-in-the-middle attackers to execute arbitrary code by modifying the HTTP client-server data stream so that the Location header is associated with attacker-controlled executable content in the postDownload field.",
+    "Description": "All versions of `lix` are vulnerable to Machine-In-The-Middle. The package accepts downloads with `http` and follows `location` header redirects for package downloads. This allows for an attacker in a privileged network position to intercept a lix package installation and redirect the download to a malicious source.\n\n\n## Recommendation\n\nNo fix is currently available. Consider using an alternative package until a fix is made available.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-04-16T03:14:59Z",
-    "Severity": "MODERATE",
-    "Summary": "man-in-the-middle attack in lix",
-    "UpdatedAt": "2020-04-16T03:14:59Z",
+    "Severity": "CRITICAL",
+    "Summary": "Machine-In-The-Middle in lix",
+    "UpdatedAt": "2020-08-31T18:54:31Z",
     "WithdrawnAt": ""
   },
   "Versions": [

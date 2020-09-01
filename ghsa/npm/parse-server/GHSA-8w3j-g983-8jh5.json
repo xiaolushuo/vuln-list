@@ -30,12 +30,12 @@
         "Value": "CVE-2019-1020013"
       }
     ],
-    "Description": "## Enumeration Attack\r\n\r\n### Impact\r\n\r\nVersions prior to 3.6.0 could allow an account enumeration attack via account linking.\r\n\r\n`ParseError.ACCOUNT_ALREADY_LINKED(208)` was thrown BEFORE the AuthController checks the password and throws a `ParseError.SESSION_MISSING(206)` for Insufficient auth.  An attacker can guess ids and get information about linked accounts/email addresses.\r\n\r\n\r\n### Patches\r\n\r\nThe exploit is closed with the release of 3.6.0 of parse-server\r\n\r\n### Workarounds\r\n\r\nno\r\n\r\n### References\r\n\r\nDescription of [Enumeration Attack](https://www.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_(OWASP-AT-002)#Description_of_the_Issue)\r\n\r\nThe fix: [73b0f9a](https://github.com/parse-community/parse-server/commit/73b0f9a339b81f5d757725dc557955a7b670a3ec)\r\n\r\n### For more information\r\nIf you have any questions or comments about this advisory:\r\n* Open an issue in the [parse-server](https://github.com/parse-community/parse-server)\r\n* [Parse Community Vulnerability Disclosure Program](https://github.com/parse-community/parse-server/blob/master/SECURITY.md)\r\n\r\n",
+    "Description": "Versions of `parse-server` prior to 3.6.0 are vulnerable to Sensitive Data Exposure. The package throws the error `ParseError.ACCOUNT_ALREADY_LINKED(208)` before the authentication controller throws `ParseError.SESSION_MISSING(206)`. This allows unauthenticated attackers to enumerate user account by guessing ids and retrieving user information.\n\n\n## Recommendation\n\nUpgrade to version 3.6.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-07-11T14:23:09Z",
     "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects parse-server",
-    "UpdatedAt": "2019-08-01T18:22:29Z",
+    "Summary": "Sensitive Data Exposure in parse-server",
+    "UpdatedAt": "2020-08-31T18:47:49Z",
     "WithdrawnAt": ""
   },
   "Versions": [

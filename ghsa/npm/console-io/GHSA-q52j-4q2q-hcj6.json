@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2019-02-18T23:37:09Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10532"
       }
     ],
-    "Description": "console-io is a module that allows users to implement a web console in their application. A malicious user could bypass the authentication and execute any command that the user who is running the console-io application 2.2.13 and earlier is able to run. This means that if console-io was running from root, the attacker would have full access to the system. This vulnerability exists because the console-io application does not configure socket.io to require authentication, which allows a malicious user to connect via a websocket to send commands and receive the response.",
+    "Description": "Affected versions of the `console-io` package do not configure the underlying websocket library to require authentication, resulting in an authentication bypass vulnerability. As `console-io` allows terminal access on the server via a web page, an authentication bypass is essentially remote code execution.\n\n\n\n## Recommendation\n\nUpdate to version 2.3.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:39:39Z",
-    "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects console-io",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "CRITICAL",
+    "Summary": "Authentication Bypass in console-io",
+    "UpdatedAt": "2020-08-31T18:10:28Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16021"
       }
     ],
-    "Description": "uri-js is a module that tries to fully implement RFC 3986. One of these features is validating whether or not a supplied URL is valid or not. To do this, uri-js uses a regular expression, This regular expression is vulnerable to redos. This causes the program to hang and the CPU to idle at 100% usage while uri-js is trying to validate if the supplied URL is valid or not. To check if you're vulnerable, look for a call to `require(\"uri-js\").parse()` where a user is able to send their own input. This affects uri-js 2.1.1 and earlier.",
+    "Description": "Affected versions of `uri-js` is susceptible to a regular expression denial of service vulnerability when user input is sent to the `.parse()` method.\n\n\n\n## Recommendation\n\nUpdate to v3.0.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T20:00:30Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects uri-js",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Regular Expression Denial Of Service in uri-js",
+    "UpdatedAt": "2020-08-31T22:12:45Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2017-1000048"
       }
     ],
-    "Description": "the web framework using ljharb's qs module older than v6.3.2, v6.2.3, v6.1.2, and v6.0.4 is vulnerable to a DoS. A malicious user can send a evil request to cause the web framework crash.",
+    "Description": "Affected version of `qs` are vulnerable to Prototype Pollution because it is possible to bypass the protection. The `qs.parse` function fails to properly prevent an object's prototype to be altered when parsing arbitrary input. Input containing `[` or `]` may bypass the prototype pollution protection and alter the Object prototype. This allows attackers to override properties that will exist in all objects, which may lead to Denial of Service or Remote Code Execution in specific circumstances.\n\n\n## Recommendation\n\nUpgrade to 6.0.4, 6.1.2, 6.2.3, 6.3.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-04-30T17:16:47Z",
     "Severity": "HIGH",
-    "Summary": "NPM qs is vulnerable to DoS",
-    "UpdatedAt": "2020-04-30T17:16:47Z",
+    "Summary": "Prototype Pollution Protection Bypass in qs",
+    "UpdatedAt": "2020-08-31T19:00:30Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2015-9242"
       }
     ],
-    "Description": "Certain input strings when passed to new Date() or Date.parse() in ecstatic node module before 1.4.0 will cause v8 to raise an exception. This leads to a crash and denial of service in ecstatic when this input is passed into the server via the If-Modified-Since header.",
+    "Description": "Versions of `ecstatic` prior to 1.4.0 are affected by a denial of service vulnerability when certain input strings are sent via the `Last-Modified` or `If-Modified-Since` headers.\n\nParsing certain inputs with `new Date()` or `Date.parse()` cases v8 to crash. As ecstatic passes the value of the affected headers into one of these functions, sending certain inputs via one of the headers will cause the server to crash.\n\n\n\n## Recommendation\n\nUpdate to version 1.4.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-06-07T19:43:11Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects ecstatic",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Denial of Service in ecstatic",
+    "UpdatedAt": "2020-08-31T22:10:18Z",
     "WithdrawnAt": ""
   },
   "Versions": [

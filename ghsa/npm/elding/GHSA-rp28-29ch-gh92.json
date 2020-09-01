@@ -1,6 +1,6 @@
 {
   "Severity": "MODERATE",
-  "UpdatedAt": "2018-08-06T21:30:10Z",
+  "UpdatedAt": "2020-08-31T18:22:19Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "elding"
@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16222"
       }
     ],
-    "Description": "elding is a simple web server. elding is vulnerable to a directory traversal issue, allowing an attacker to access the filesystem by placing \"../\" in the url. The files accessible, however, are limited to files with a file extension. Sending a GET request to /../../../etc/passwd, for example, will return a 404 on etc/passwd/index.js.",
+    "Description": "Affected versions of `elding` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nThis vulnerability only affects files that have file extensions - i.e. `/etc/passwd` will be treated as a directory, and a read attempt on `/etc/passwd/index.js` will be made and subsequently fail. \n\nExample request:\n```\nGET /../../../../../../../../../../some_app_dir/secrets.json HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nNo patch is available for this vulnerability.\n\nIt is recommended that the package is only used for local development, and if the functionality is needed for production, a different package is used instead.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-08-06T21:30:15Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects elding",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory Traversal in elding",
+    "UpdatedAt": "2020-08-31T18:22:19Z",
     "WithdrawnAt": ""
   },
   "Versions": [

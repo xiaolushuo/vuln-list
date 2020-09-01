@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16083"
       }
     ],
-    "Description": "node-simple-router is a minimalistic router for Node. node-simple-router is vulnerable to a directory traversal issue, giving an attacker access to the filesystem by placing \"../\" in the URL.",
+    "Description": "Affected versions of `node-simple-router` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\nExample request:\n```\nGET /../../../../../../../../../../etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nUpdate to v0.10.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T19:42:39Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects node-simple-router",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Directory Traversal in node-simple-router",
+    "UpdatedAt": "2020-08-31T22:13:55Z",
     "WithdrawnAt": ""
   },
   "Versions": [

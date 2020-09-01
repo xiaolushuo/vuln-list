@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10536"
       }
     ],
-    "Description": "engine.io-client is the client for engine.io, the implementation of a transport-based cross-browser/cross-device bi-directional communication layer for Socket.IO. The vulnerability is related to the way that node.js handles the `rejectUnauthorized` setting. If the value is something that evaluates to false, certificate verification will be disabled. This is problematic as engine.io-client 1.6.8 and earlier passes in an object for settings that includes the rejectUnauthorized property, whether it has been set or not. If the value has not been explicitly changed, it will be passed in as `null`, resulting in certificate verification being turned off.",
+    "Description": "Affected versions of `engine.io-client` do not verify certificates by default, and as such may be vulnerable to Man-in-the-Middle attacks.\n\nThe vulnerability is related to the way that node.js handles the `rejectUnauthorized` setting. If the value is something that evaluates to false, such as undefined or null, certificate verification will be disabled. \n\n\n\n## Recommendation\n\nUpdate to version 1.6.9 or later.\n\nIf you are unable to upgrade, ensure all calls to socket.io to have a `rejectedUnauthorized: true` flag.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:39:50Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects engine.io-client",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Insecure Defaults Allow MITM Over TLS in engine.io-client",
+    "UpdatedAt": "2020-08-31T18:10:53Z",
     "WithdrawnAt": ""
   },
   "Versions": [

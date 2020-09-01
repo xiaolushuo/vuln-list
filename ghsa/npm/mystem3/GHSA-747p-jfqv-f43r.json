@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10626"
       }
     ],
-    "Description": "mystem3 is a NodeJS wrapper for the Yandex MyStem 3. mystem3 downloads binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `mystem3` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `mystem3`.\n\n\n## Recommendation\n\nUpdate to version 1.0.8 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:47:26Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects mystem3",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in mystem3",
+    "UpdatedAt": "2020-08-31T18:15:40Z",
     "WithdrawnAt": ""
   },
   "Versions": [

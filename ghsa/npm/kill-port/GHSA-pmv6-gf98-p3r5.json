@@ -27,12 +27,12 @@
         "Value": "CVE-2019-5414"
       }
     ],
-    "Description": "If an attacker can control the port, which in itself is a very sensitive value, they can inject arbitrary OS commands due to the usage of the exec function in a third-party module kill-port \u003c 1.3.2.",
+    "Description": "Versions of `kill-port` prior to 1.3.2 are vulnerable to Command Injection. The package does not validate user input on the `kill` function. This may allow attackers to run arbitrary commands in the system if user input (such as the port number) is passed directly to the function.\n\n\n## Recommendation\n\nUpgrade to version 1.3.2 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-03-25T16:17:18Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects kill-port",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Summary": "Command Injection in kill-port",
+    "UpdatedAt": "2020-08-31T18:42:21Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16031"
       }
     ],
-    "Description": "Socket.io is a realtime application framework that provides communication via websockets. Because socket.io 0.9.6 and earlier depends on `Math.random()` to create socket IDs, the IDs are predictable. An attacker is able to guess the socket ID and gain access to socket.io servers, potentially obtaining sensitive information.",
+    "Description": "Affected versions of `socket.io` depend on `Math.random()` to create socket IDs, and therefore the IDs are predictable. With enough information on prior IDs, an attacker may be able to guess the socket ID and gain access to socket.io servers without authorization.\n\n\n## Recommendation\n\nUpdate to v0.9.7 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-07T00:29:37Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects socket.io",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "Insecure randomness in socket.io",
+    "UpdatedAt": "2020-08-31T22:19:17Z",
     "WithdrawnAt": ""
   },
   "Versions": [

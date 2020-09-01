@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-11-27T03:26:57Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-10767"
       }
     ],
-    "Description": "An attacker can include file contents from outside the `/adapter/xxx/` directory, where `xxx` is the name of an existent adapter like \"admin\". It is exploited using the administrative web panel with a request for an adapter file. **Note:** The attacker has to be logged in if the authentication is enabled (by default isn't enabled).",
+    "Description": "Versions of `iobroker.controller` prior to 2.0.25 are vulnerable to Path Traversal. The package fails to restrict access to folders outside of the intended `/adapter/\u003cadapter-name\u003e` folder, which may allow attackers to include arbitrary files in the system. An attacker would need to be authenticated to perform the attack but the package has authentication disabled by default.\n\n\n## Recommendation\n\nUpgrade to version 2.0.25 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-12-02T18:06:14Z",
-    "Severity": "MODERATE",
-    "Summary": "Directory traversal in iobroker.js-controller",
-    "UpdatedAt": "2019-12-10T18:35:14Z",
+    "Severity": "HIGH",
+    "Summary": "Arbitrary File Write in iobroker.js-controller",
+    "UpdatedAt": "2020-08-31T18:58:42Z",
     "WithdrawnAt": ""
   },
   "Versions": [

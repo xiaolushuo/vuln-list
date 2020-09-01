@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:36:55Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10531"
       }
     ],
-    "Description": "marked is an application that is meant to parse and compile markdown. Due to the way that marked 0.3.5 and earlier parses input, specifically HTML entities, it's possible to bypass marked's content injection protection (`sanitize: true`) to inject a `javascript:` URL. This flaw exists because `\u0026#xNNanything;` gets parsed to what it could and leaves the rest behind, resulting in just `anything;` being left.",
+    "Description": "Affected versions of `marked` are susceptible to a cross-site scripting vulnerability in link components when `sanitize:true` is configured. \n\n## Proof of Concept\n\nThis flaw exists because link URIs containing HTML entities get processed in an abnormal manner. Any HTML Entities get parsed on a best-effort basis and included in the resulting link, while if that parsing fails that character is omitted.\n\nFor example:\n\nA link URI such as\n```\njavascript\u0026#x58document;alert\u0026#40;1\u0026#41;\n```\nRenders a valid link that when clicked will execute `alert(1)`.\n\n\n## Recommendation\n\nUpdate to version 0.3.6 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:58:20Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects marked",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "Sanitization bypass using HTML Entities in marked",
+    "UpdatedAt": "2020-08-31T18:10:58Z",
     "WithdrawnAt": ""
   },
   "Versions": [

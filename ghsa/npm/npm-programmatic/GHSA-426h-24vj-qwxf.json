@@ -1,5 +1,5 @@
 {
-  "Severity": "HIGH",
+  "Severity": "CRITICAL",
   "UpdatedAt": "2020-06-10T20:18:16Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2020-7614"
       }
     ],
-    "Description": "npm-programmatic through 0.0.12 is vulnerable to Command Injection.The packages and option properties are concatenated together without any validation and are used by the 'exec' function directly.",
+    "Description": "All versions of `npm-programmatic ` are vulnerable to Command Injection. The package fails to sanitize input rules and passes it directly to an `exec` call on the `install`, `uninstall` and `list` functions . This may allow attackers to execute arbitrary code in the system if the package name passed to the function is user-controlled.\n\n\n## Recommendation\n\nNo fix is currently available. Consider using an alternative package until a fix is made available.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-04-23T20:09:09Z",
-    "Severity": "HIGH",
-    "Summary": "npm-programmatic is vulnerable to Command Injection",
-    "UpdatedAt": "2020-06-10T20:18:16Z",
+    "Severity": "CRITICAL",
+    "Summary": "Command Injection in npm-programmatic",
+    "UpdatedAt": "2020-08-31T19:01:51Z",
     "WithdrawnAt": ""
   },
   "Versions": [

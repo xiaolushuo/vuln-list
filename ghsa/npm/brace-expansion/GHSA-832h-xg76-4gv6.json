@@ -27,12 +27,12 @@
         "Value": "CVE-2017-18077"
       }
     ],
-    "Description": "index.js in brace-expansion before 1.1.7 is vulnerable to Regular Expression Denial of Service (ReDoS) attacks, as demonstrated by an expand argument containing many comma characters.",
+    "Description": "Affected versions of `brace-expansion` are vulnerable to a regular expression denial of service condition.\n\n## Proof of Concept\n\n```\nvar expand = require('brace-expansion');\nexpand('{,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\\n}');\n```\n\n\n## Recommendation\n\nUpdate to version 1.1.7 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-01-29T15:50:46Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects brace-expansion",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "ReDoS in brace-expansion",
+    "UpdatedAt": "2020-08-31T18:19:51Z",
     "WithdrawnAt": ""
   },
   "Versions": [

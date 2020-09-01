@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-18T23:53:12Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10566"
       }
     ],
-    "Description": "install-nw is a module which quickly and robustly installs and caches NW.js. install-nw versions below 1.1.5 download binary resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested binary with an attacker controlled binary if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `install-nw` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `install-nw`.\n\n\n## Recommendation\n\nUpdate to version 1.1.5 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:54:09Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects install-nw",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Severity": "HIGH",
+    "Summary": "Downloads Resources over HTTP in install-nw",
+    "UpdatedAt": "2020-08-31T18:14:40Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "LOW",
   "UpdatedAt": "2019-02-18T23:56:00Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10518"
       }
     ],
-    "Description": "A vulnerability was found in the ping functionality of the ws module before 1.0.0 which allowed clients to allocate memory by sending a ping frame. The ping functionality by default responds with a pong frame and the previously given payload of the ping frame. This is exactly what you expect, but internally ws always transforms all data that we need to send to a Buffer instance and that is where the vulnerability existed. ws didn't do any checks for the type of data it was sending. With buffers in node when you allocate it when a number instead of a string it will allocate the amount of bytes.",
+    "Description": "Versions of `ws` prior to 1.0.1 are affected by a remote memory disclosure vulnerability.\n\nIn certain rare circumstances, applications which allow users to control the arguments of a `client.ping()` call will cause `ws` to send the contents of an allocated but non-zero-filled buffer to the server. This may disclose sensitive information that still exists in memory after previous use of the memory for other tasks.\n\n\n\n## Proof of Concept\n```\nvar ws = require('ws')\n\nvar server = new ws.Server({ port: 9000 })\nvar client = new ws('ws://localhost:9000')\n\nclient.on('open', function () {\n  console.log('open')\n  client.ping(50) // this sends a non-zeroed buffer of 50 bytes\n\n  client.on('pong', function (data) {\n    console.log('got pong')\n    console.log(data) // Data from the client. \n  })\n})\n```\n\n\n## Recommendation\n\nUpdate to version 1.0.1 or greater.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:56:42Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects ws",
-    "UpdatedAt": "2019-07-03T21:02:07Z",
+    "Severity": "LOW",
+    "Summary": "Remote Memory Disclosure in ws",
+    "UpdatedAt": "2020-08-31T18:09:58Z",
     "WithdrawnAt": ""
   },
   "Versions": [

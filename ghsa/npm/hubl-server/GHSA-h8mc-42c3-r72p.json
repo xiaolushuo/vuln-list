@@ -1,6 +1,6 @@
 {
   "Severity": "HIGH",
-  "UpdatedAt": "2018-07-24T15:40:41Z",
+  "UpdatedAt": "2020-08-31T18:19:42Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "hubl-server"
@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16035"
       }
     ],
-    "Description": "The hubl-server module is a wrapper for the HubL Development Server. During installation hubl-server downloads a set of dependencies from api.hubapi.com. It appears in the code that these files are downloaded over HTTPS however the api.hubapi.com endpoint redirects to a HTTP url. Because of this behavior an attacker with the ability to man-in-the-middle a developer or system performing a package installation could compromise the integrity of the installation.",
+    "Description": "Affected versions of `hubl-server` insecurely download dependencies over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the responses and replace the dependencies with malicious ones, resulting in code execution on the system running `hubl-server`.\n\n\n## Recommendation\n\nNo patch is currently available for this vulnerability, and it has not seen any updates since 2015.\r\n\r\nThe best mitigation is currently to avoid using this package, using a different package if available. \r\n\r\nAlternatively, the risk of exploitation can be reduced by ensuring that this package is not installed while connected to a public network. If the package is installed on a private network, the only people who can exploit this vulnerability are those who have compromised yo",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-24T15:40:47Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects hubl-server",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Downloads resources over HTTP in hubl-server",
+    "UpdatedAt": "2020-08-31T18:19:42Z",
     "WithdrawnAt": ""
   },
   "Versions": [

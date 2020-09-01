@@ -1,5 +1,5 @@
 {
-  "Severity": "LOW",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-02-07T18:13:32Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2018-16479"
       }
     ],
-    "Description": "Path traversal vulnerability in http-live-simulator \u003c1.0.7 causes unauthorized access to arbitrary files on disk by appending extra slashes after the URL.",
+    "Description": "Versions of `http-live-simulator` prior to 1.0.7 are vulnerable to Path Traversal.  Due to insufficient input sanitization, attackers can access server files by using relative paths. For example: `curl --path-as-is http://localhost:8080//../../../../etc/passwd`.\n\n\n## Recommendation\n\nUpgrade to version 1.0.7",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-07T18:14:21Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects http-live-simulator",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Severity": "HIGH",
+    "Summary": "Path Traversal in http-live-simulator",
+    "UpdatedAt": "2020-08-31T18:35:14Z",
     "WithdrawnAt": ""
   },
   "Versions": [

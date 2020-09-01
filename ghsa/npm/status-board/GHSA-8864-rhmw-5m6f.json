@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-09-19T15:16:10Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-15479"
       }
     ],
-    "Description": "Status Board 1.1.81 has reflected XSS via dashboard.ts.",
+    "Description": "All versions of `status-board` are vulnerable to Cross-Site Scripting. The `renderDashboard()` function concatenates the `safeDashboard` variable to the printed error message with insufficient sanitization. If this variable is controlled by user input it allows attackers to execute arbitrary JavaScript in a victim's browser.\n\n\n## Recommendation\n\nNo fix is currently available. Consider using an alternative package until a fix is made available.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-09-23T18:32:42Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects status-board",
-    "UpdatedAt": "2019-09-23T18:32:43Z",
+    "Severity": "HIGH",
+    "Summary": "Cross-Site Scripting in status-board",
+    "UpdatedAt": "2020-08-31T18:49:07Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16017"
       }
     ],
-    "Description": "sanitize-html is a library for scrubbing html input for malicious values Versions 1.2.2 and below have a cross site scripting vulnerability.",
+    "Description": "Affected versions of `sanitize-html` are vulnerable to cross-site scripting.\n\n## Proof of Concept:\n\n`\u003cIMG SRC= onmouseover=\"alert('XSS');\"\u003e`\nproduces the following:\n\n`\u003cimg src=\"onmouseover=\"alert('XSS');\"\" /\u003e`\nThis is definitely invalid HTML, but would suggest that it's being interpreted incorrectly by the parser.\n\n\n## Recommendation\n\nUpdate to version 1.2.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-09T17:45:55Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects sanitize-html",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "Cross-Site Scripting in sanitize-html",
+    "UpdatedAt": "2020-08-31T18:12:47Z",
     "WithdrawnAt": ""
   },
   "Versions": [

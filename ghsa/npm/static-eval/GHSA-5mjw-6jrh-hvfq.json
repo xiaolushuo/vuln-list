@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16226"
       }
     ],
-    "Description": "The static-eval module is intended to evaluate statically-analyzable expressions. In affected versions, untrusted user input is able to access the global function constructor, effectively allowing arbitrary code execution.",
+    "Description": "Affected versions of `static-eval` pass untrusted user input directly to the global function constructor, resulting in an arbitrary code execution vulnerability when user input is parsed via the package.\n\n## Proof of concept\n```\nvar evaluate = require('static-eval');\nvar parse = require('esprima').parse;\nvar src = '(function(){console.log(process.pid)})()';\nvar ast = parse(src).body[0].expression;\nvar res = evaluate(ast, {});\n// Will print the process id\n```\n\n\n## Recommendation\n\nUpdate to version 2.0.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-08-06T21:37:06Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects static-eval",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Sandbox Breakout / Arbitrary Code Execution in static-eval",
+    "UpdatedAt": "2020-08-31T18:27:22Z",
     "WithdrawnAt": ""
   },
   "Versions": [

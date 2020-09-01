@@ -27,12 +27,12 @@
         "Value": "CVE-2017-5954"
       }
     ],
-    "Description": "An issue was discovered in the serialize-to-js package 0.5.0 for Node.js. Untrusted data passed into the deserialize() function can be exploited to achieve arbitrary code execution by passing a JavaScript Object with an Immediately Invoked Function Expression (IIFE).",
+    "Description": "Affected versions of `serialize-to-js` may be vulnerable to arbitrary code execution through an Immediately Invoked Function Expression (IIFE). \n\n## Proof of Concept\n```\nvar payload = \"{e: (function(){ eval('console.log(`exploited`)') })() }\"\nvar serialize = require('serialize-to-js');\nserialize.deserialize(payload);\n```\n\n\n## Recommendation\n\nUpdate to version 1.0.0, or later, and review [this disclaimer](https://www.npmjs.com/package/serialize-to-js#deserialize) from the author.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-18T18:27:41Z",
     "Severity": "CRITICAL",
-    "Summary": "Critical severity vulnerability that affects serialize-to-js",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Code Execution Through IIFE in serialize-to-js",
+    "UpdatedAt": "2020-08-31T22:17:57Z",
     "WithdrawnAt": ""
   },
   "Versions": [

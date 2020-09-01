@@ -1,6 +1,6 @@
 {
   "Severity": "MODERATE",
-  "UpdatedAt": "2019-02-18T23:48:59Z",
+  "UpdatedAt": "2020-08-31T18:14:05Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "jser-stat"
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10592"
       }
     ],
-    "Description": "jser-stat is a JSer.info stat library. jser-stat downloads data resources over HTTP, which leaves it vulnerable to MITM attacks.",
+    "Description": "Affected versions of `jser-stat` insecurely downloads resources over HTTP. \r\n\r\nIn scenarios where an attacker has a privileged network position, they can modify or read such resources at will. While the exact severity of impact for a vulnerability like this is highly variable and depends on the behavior of the package itself, it ranges from being able to read sensitive information all the way up to and including remote code execution.\n\n\n## Recommendation\n\nNo patch is currently available for this vulnerability.\r\n\r\nThe best mitigation is currently to avoid using this package, using a different package if available. \r\n\r\nAlternatively, the risk of exploitation can be reduced by ensuring that this package is not installed while connected to a public network. If the package is installed on a private network, the only people who can exploit this vulnerability are those who have compromised your network or those who have privileged access to your ISP, such as Nation State Actors or Rogue ISP Employees.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-02-18T23:50:53Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects jser-stat",
-    "UpdatedAt": "2019-07-03T21:02:06Z",
+    "Summary": "Downloads Resources over HTTP in jser-stat",
+    "UpdatedAt": "2020-08-31T18:14:05Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-05-29T18:37:52Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-12313"
       }
     ],
-    "Description": "XSS exists in Shave before 2.5.3 because output encoding is mishandled during the overwrite of an HTML element.",
+    "Description": "Versions of `shave` prior to 2.5.3 are vulnerable to Cross-Site Scripting. The `shave` package overwrites HTML elements and in doing so fails to properly encode the output. If encoded HTML input is passed into `shave` the output will be decoded which may lead to Cross-Site Scripting.\n\n\n## Recommendation\n\nUpgrade to version 2.5.3 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-05-29T18:38:08Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects shave",
-    "UpdatedAt": "2019-10-10T20:53:11Z",
+    "Severity": "HIGH",
+    "Summary": "Cross-Site Scripting in shave",
+    "UpdatedAt": "2020-08-31T18:37:07Z",
     "WithdrawnAt": ""
   },
   "Versions": [

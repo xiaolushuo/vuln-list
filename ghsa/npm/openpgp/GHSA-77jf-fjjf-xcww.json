@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2019-08-23T21:39:37Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2019-9155"
       }
     ],
-    "Description": "A cryptographic issue in OpenPGP.js \u003c=4.2.0 allows an attacker who is able provide forged messages and gain feedback about whether decryption of these messages succeeded to conduct an invalid curve attack in order to gain the victim's ECDH private key.",
+    "Description": "Versions of `openpgp` prior to 4.3.0 are vulnerable to an Invalid Curve Attack. The package's implementation of ECDH fails to verify the validity of the communication partner's public key. The package calculates the resulting key secret based on an altered curve instead of the specified elliptic curve. Attackers may exfiltrate the victim's private key by choosing the altered curve. An attack requires the attacker being able to initiate message decryption and record the result. Furthermore the victim's key must offer an ECDH public key.\n\n\n## Recommendation\n\nUpgrade to version 4.3.0 or later.\nIf you are upgrading from a version \u003c4.0.0 it is highly recommended to read the `High-Level API Changes` section of the `openpgp` 4.0.0 release: https://github.com/openpgpjs/openpgpjs/releases/tag/v4.0.0",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-08-23T21:42:22Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects openpgp",
-    "UpdatedAt": "2019-08-23T21:42:22Z",
+    "Severity": "HIGH",
+    "Summary": "Invalid Curve Attack in openpgp",
+    "UpdatedAt": "2020-08-31T18:49:26Z",
     "WithdrawnAt": ""
   },
   "Versions": [

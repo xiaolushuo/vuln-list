@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16018"
       }
     ],
-    "Description": "Restify is a framework for building REST APIs. Restify \u003e=2.0.0 \u003c=4.0.4 using URL encoded script tags in a non-existent URL, an attacker can get script to run in some browsers.",
+    "Description": "Affected versions of `restify` are susceptible to a cross-site scripting vulnerability when using URL encoded script tags in a non-existent URL.\n\n## Proof of Concept:\n\nRequest\n```\nhttps://localhost:3000/no5_such3_file7.pl?%22%3E%3Cscript%3Ealert(73541);%3C/script%3E\n```\n\nWill be included in response:\n\n```\u003cscript\u003ealert(73541);\u003c/script\u003e```\n\n\n## Recommendation\n\nUpdate to version 4.1.0 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-09T17:45:38Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects restify",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "Cross-Site Scripting (XSS) in restify",
+    "UpdatedAt": "2020-08-31T18:18:57Z",
     "WithdrawnAt": ""
   },
   "Versions": [

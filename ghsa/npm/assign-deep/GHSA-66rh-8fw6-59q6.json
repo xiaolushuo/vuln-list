@@ -27,12 +27,12 @@
         "Value": "CVE-2019-10745"
       }
     ],
-    "Description": "assign-deep is vulnerable to Prototype Pollution in versions before 0.4.8 and version 1.0.0. The function assign-deep could be tricked into adding or modifying properties of Object.prototype using either a constructor or a _proto_ payload.",
+    "Description": "Versions of `assign-deep` prior to 1.0.1 are vulnerable to Prototype Pollution. The `assign` function fails to validate which Object properties it updates. This allows attackers to modify the prototype of Object, causing the addition or modification of an existing property on all objects.\n\n\n\n\n## Recommendation\n\nUpgrade to version 1.0.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2019-08-21T16:15:13Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects assign-deep",
-    "UpdatedAt": "2019-09-02T11:00:51Z",
+    "Summary": "Prototype Pollution in assign-deep",
+    "UpdatedAt": "2020-08-31T18:44:11Z",
     "WithdrawnAt": ""
   },
   "Versions": [

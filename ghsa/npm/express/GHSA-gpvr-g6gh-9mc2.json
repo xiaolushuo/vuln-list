@@ -27,12 +27,12 @@
         "Value": "CVE-2014-6393"
       }
     ],
-    "Description": "The Express web framework before 3.11 and 4.x before 4.5 for Node.js does not provide a charset field in HTTP Content-Type headers in 400 level responses, which might allow remote attackers to conduct cross-site scripting (XSS) attacks via characters in a non-standard encoding.",
+    "Description": "Vulnerable versions of express do not specify a charset field in the content-type header while displaying 400 level response messages. The lack of enforcing user's browser to set correct charset, could be leveraged by an attacker to perform a cross-site scripting attack, using non-standard encodings, like UTF-7.\n\n\n## Recommendation\n\nFor express 3.x, update express to version 3.11 or later.\nFor express 4.x, update express to version 4.5 or later. ",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-10-23T17:22:54Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects express",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Summary": "No Charset in Content-Type Header in express",
+    "UpdatedAt": "2020-08-31T18:07:38Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -1,6 +1,6 @@
 {
-  "Severity": "MODERATE",
-  "UpdatedAt": "2018-09-18T13:50:17Z",
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-08-31T18:27:46Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "augustine"
@@ -27,12 +27,12 @@
         "Value": "CVE-2017-0930"
       }
     ],
-    "Description": "augustine node module suffers from a Path Traversal vulnerability due to lack of validation of url, which allows a malicious user to read content of any file with known path.",
+    "Description": "Affected versions of `augustine` resolve relative file paths, resulting in a directory traversal vulnerability. A malicious actor can use this vulnerability to access files outside of the intended directory root, which may result in the disclosure of private files on the vulnerable system.\n\n## Proof of Concept\n```\nGET //etc/passwd HTTP/1.1\nhost:foo\n```\n\n\n## Recommendation\n\nNo direct patch is available at this time. \n\nCurrently, the best mitigation for this flaw is to use a different, functionally equivalent static file server package.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-09-18T13:50:25Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects augustine",
-    "UpdatedAt": "2019-07-03T21:02:03Z",
+    "Severity": "HIGH",
+    "Summary": "Directory Traversal in augustine",
+    "UpdatedAt": "2020-08-31T18:27:46Z",
     "WithdrawnAt": ""
   },
   "Versions": [

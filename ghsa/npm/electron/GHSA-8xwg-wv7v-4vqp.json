@@ -27,12 +27,12 @@
         "Value": "CVE-2018-1000136"
       }
     ],
-    "Description": "Electron version 1.7 up to 1.7.12; 1.8 up to 1.8.3 and 2.0.0 up to 2.0.0-beta.3 contains an improper handling of values vulnerability in Webviews that can result in remote code execution. This attack appear to be exploitable via an app which allows execution of 3rd party code AND disallows node integration AND has not specified if webview is enabled/disabled. This vulnerability appears to have been fixed in 1.7.13, 1.8.4, 2.0.0-beta.4.",
+    "Description": "Versions of electron \nA vulnerability has been discovered which allows Node.js integration to be re-enabled in some Electron applications that disable it.\n\nFor the application to be impacted by this vulnerability it must meet all of these conditions\n\n- Runs on Electron 1.7, 1.8, or a 2.0.0-beta\n- Allows execution of arbitrary remote code\n- Disables Node.js integration\n- Does not explicitly declare webviewTag: false in its webPreferences\n- Does not enable the nativeWindowOption option\n- Does not intercept new-window events and manually override event.newGuest without using the supplied options tag\n\n\n## Recommendation\n\nUpdate to `electron` version 1.7.13, 1.8.4, or 2.0.0.beta.5 or later\n\nIf you are unable to update your Electron version can mitigate the vulnerability with the following code.\n\n```\napp.on('web-contents-created', (event, win) =\u003e {\n  win.on('new-window', (event, newURL, frameName, disposition,\n                        options, additionalFeatures) =\u003e {\n    if (!options.webPreferences) options.webPreferences = {};\n    options.webPreferences.nodeIntegration = false;\n    options.webPreferences.nodeIntegrationInWorker = false;\n    options.webPreferences.webviewTag = false;\n    delete options.webPreferences.preload;\n  })\n})\n\n// and *IF* you don't use WebViews at all,\n// you might also want\napp.on('web-contents-created', (event, win) =\u003e {\n  win.on('will-attach-webview', (event, webPreferences, params) =\u003e {\n    event.preventDefault();\n  })\n})\n```",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-03-26T16:41:17Z",
     "Severity": "HIGH",
-    "Summary": "High severity vulnerability that affects electron",
-    "UpdatedAt": "2019-07-03T21:02:01Z",
+    "Summary": "Code Execution by Re-enabling Node.js integration in electron",
+    "UpdatedAt": "2020-08-31T18:28:23Z",
     "WithdrawnAt": ""
   },
   "Versions": [

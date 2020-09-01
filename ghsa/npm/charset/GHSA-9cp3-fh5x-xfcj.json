@@ -27,12 +27,12 @@
         "Value": "CVE-2017-16098"
       }
     ],
-    "Description": "charset 1.0.0 and below are vulnerable to regular expression denial of service. Input of around 50k characters is required for a slow down of around 2 seconds. Unless node was compiled using the -DHTTP_MAX_HEADER_SIZE= option the default header max length is 80kb, so the impact of the ReDoS is relatively low.",
+    "Description": "Affected versions of `charset` are susceptible to a regular expression denial of service.\n\nThe amplification on this vulnerability is relatively low - it takes around 2 seconds for the engine to execute on a malicious input which is 50,000 characters in length.\n\n\nIf node was compiled using the `-DHTTP_MAX_HEADER_SIZE` however, the impact of the vulnerability can be significant, as the primary limitation for the vulnerability is the default max HTTP header length in node.\n\n\n## Recommendation\n\nUpdate to version 1.0.1 or later.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-08-09T20:55:46Z",
     "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects charset",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Summary": "Regular Expression Denial of Service in charset",
+    "UpdatedAt": "2020-08-31T18:26:23Z",
     "WithdrawnAt": ""
   },
   "Versions": [

@@ -1,5 +1,5 @@
 {
-  "Severity": "MODERATE",
+  "Severity": "HIGH",
   "UpdatedAt": "2018-11-30T19:54:29Z",
   "Package": {
     "Ecosystem": "NPM",
@@ -27,12 +27,12 @@
         "Value": "CVE-2015-8861"
       }
     ],
-    "Description": "The handlebars package before 4.0.0 for Node.js allows remote attackers to conduct cross-site scripting (XSS) attacks by leveraging a template with an attribute that is not quoted.",
+    "Description": "Versions of `handlebars` prior to 4.0.0 are affected by a cross-site scripting vulnerability when attributes in handlebar templates are not quoted.\n\n\n## Proof of Concept\nTemplate:\n```\u003ca href={{foo}}/\u003e```\n\nInput:\n```{ 'foo' : 'test.com onload=alert(1)'}```\n\nRendered result:\n```\u003ca href=test.com onload=alert(1)/\u003e```\n\n\n## Recommendation\n\nUpdate to version 4.0.0 or later.\nAlternatively, ensure that all attributes in handlebars templates are encapsulated with quotes.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-10-23T17:20:12Z",
-    "Severity": "MODERATE",
-    "Summary": "Moderate severity vulnerability that affects handlebars",
-    "UpdatedAt": "2019-07-03T21:02:05Z",
+    "Severity": "HIGH",
+    "Summary": "Cross-Site Scripting in handlebars",
+    "UpdatedAt": "2020-08-31T18:09:43Z",
     "WithdrawnAt": ""
   },
   "Versions": [

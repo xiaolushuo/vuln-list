@@ -1,6 +1,6 @@
 {
-  "Severity": "LOW",
-  "UpdatedAt": "2018-07-31T22:46:02Z",
+  "Severity": "HIGH",
+  "UpdatedAt": "2020-08-31T18:18:33Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "react-native-baidu-voice-synthesizer"
@@ -27,12 +27,12 @@
         "Value": "CVE-2016-10697"
       }
     ],
-    "Description": "react-native-baidu-voice-synthesizer is a baidu voice speech synthesizer for react native. react-native-baidu-voice-synthesizer downloads resources over HTTP, which leaves it vulnerable to MITM attacks. It may be possible to cause remote code execution (RCE) by swapping out the requested resources with an attacker controlled copy if the attacker is on the network or positioned in between the user and the remote server.",
+    "Description": "Affected versions of `react-native-baidu-voice-synthesizer` insecurely download an executable over an unencrypted HTTP connection. \r\n\r\nIn scenarios where an attacker has a privileged network position, it is possible to intercept the response and replace the executable with a malicious one, resulting in code execution on the system running `react-native-baidu-voice-synthesizer`.\n\n\n## Recommendation\n\nNo patch is currently available for this vulnerability.\r\n\r\nThe best mitigation is currently to avoid using this package, using a different package if available. \r\n\r\nAlternatively, the risk of exploitation can be reduced by ensuring that this package is not installed while connected to a public network. If the package is installed on a private network, the only people who can exploit this vulnerability are those who have compromised your network or those who have privileged access to your ISP, such as Nation State Actors or Rogue ISP Employees.\r\n",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-07-31T22:47:16Z",
-    "Severity": "LOW",
-    "Summary": "Low severity vulnerability that affects react-native-baidu-voice-synthesizer",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "Severity": "HIGH",
+    "Summary": "Downloads Resources over HTTP in react-native-baidu-voice-synthesizer",
+    "UpdatedAt": "2020-08-31T18:18:33Z",
     "WithdrawnAt": ""
   },
   "Versions": [
