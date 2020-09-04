@@ -1,0 +1,42 @@
+{
+  "Severity": "LOW",
+  "UpdatedAt": "2020-08-31T18:42:10Z",
+  "Package": {
+    "Ecosystem": "NPM",
+    "Name": "node-sass"
+  },
+  "Advisory": {
+    "DatabaseId": 2655,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTl2NjItMjRjci01OGN4",
+    "GhsaId": "GHSA-9v62-24cr-58cx",
+    "References": [
+      {
+        "Url": "https://www.npmjs.com/advisories/961"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-9v62-24cr-58cx"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-9v62-24cr-58cx"
+      }
+    ],
+    "Description": "Affected versions of `node-sass` are vulnerable to Denial of Service (DoS). Crafted objects passed to the `renderSync` function may trigger C++ assertions in `CustomImporterBridge::get_importer_entry` and `CustomImporterBridge::post_process_return_value` that crash the Node process. This may allow attackers to crash the system's running Node process and lead to Denial of Service.\n\n\n## Recommendation\n\nUpgrade to version 4.13.1 or later",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-09-03T15:27:25Z",
+    "Severity": "LOW",
+    "Summary": "Denial of Service in node-sass",
+    "UpdatedAt": "2020-09-03T15:27:25Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "4.13.1"
+      },
+      "VulnerableVersionRange": "\u003e= 3.3.0, \u003c 4.13.1"
+    }
+  ]
+}
