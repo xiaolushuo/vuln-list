@@ -1,0 +1,290 @@
+{
+  "Title": "Security update for the Linux Kernel (Live Patch 34 for SLE 12 SP3)",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:2502-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-09-04T11:30:25Z",
+    "CurrentReleaseDate": "2020-09-04T11:30:25Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-09-04T11:30:25Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for the Linux Kernel (Live Patch 34 for SLE 12 SP3)",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for the Linux Kernel 4.4.180-94_127 fixes several issues.\n\nThe following security issues were fixed:\n\n- CVE-2020-14331: Fixed a buffer over-write in vgacon_scroll (bsc#1174247).\n- CVE-2019-16746: Fixed a buffer overflow in net/wireless/nl80211.c (bsc#1173659).\n- CVE-2020-11668: Fixed a memory corruption issue in the Xirlink camera USB driver (bsc#1173942).\n- CVE-2020-1749: Fixed a flaw in IPsec where some IPv6 protocols were not encrypted (bsc#1165631).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "kgraft-patch-4_4_121-92_135-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_4_180-94_121-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP3",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP3",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_4_121-92_135-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP2-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_4_121-92_135-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP2-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_4_180-94_121-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP3-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-4_4_180-94_121-default-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP3-LTSS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20202502-1/",
+      "Description": "Link for SUSE-SU-2020:2502-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007360.html",
+      "Description": "E-Mail link for SUSE-SU-2020:2502-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2019-16746",
+      "Description": "An issue was discovered in net/wireless/nl80211.c in the Linux kernel through 5.2.17. It does not check the length of variable elements in a beacon head, leading to a buffer overflow.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-16746.html",
+          "Description": "CVE-2019-16746"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1152107",
+          "Description": "SUSE Bug 1152107"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1173659",
+          "Description": "SUSE Bug 1173659"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-SLE12-SP3_Update_32-2-2.2"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-11668",
+      "Description": "In the Linux kernel before 5.6.1, drivers/media/usb/gspca/xirlink_cit.c (aka the Xirlink camera USB driver) mishandles invalid descriptors, aka CID-a246b4d54770.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-11668.html",
+          "Description": "CVE-2020-11668"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1168952",
+          "Description": "SUSE Bug 1168952"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1173942",
+          "Description": "SUSE Bug 1173942"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-SLE12-SP3_Update_32-2-2.2"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-14331",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-14331.html",
+          "Description": "CVE-2020-14331"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1174205",
+          "Description": "SUSE Bug 1174205"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1174247",
+          "Description": "SUSE Bug 1174247"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-SLE12-SP3_Update_32-2-2.2"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-1749",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-1749.html",
+          "Description": "CVE-2020-1749"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1165629",
+          "Description": "SUSE Bug 1165629"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1165631",
+          "Description": "SUSE Bug 1165631"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2-LTSS:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-4_4_121-92_135-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP2:kgraft-patch-SLE12-SP2_Update_35-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3-LTSS:kgraft-patch-SLE12-SP3_Update_32-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-4_4_180-94_121-default-2-2.2",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP3:kgraft-patch-SLE12-SP3_Update_32-2-2.2"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
