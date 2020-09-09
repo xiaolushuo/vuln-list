@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20172479",
+  "ID": "oval:com.redhat.rhsa:def:20203699",
   "Class": "patch",
-  "Title": "RHSA-2017:2479: httpd security update (Important)",
+  "Title": "RHSA-2020:3699: .NET Core 3.1 security and bugfix update (Important)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 7"
+        "Red Hat Enterprise Linux 8"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2017:2479",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2017:2479"
+      "RefID": "RHSA-2020:3699",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:3699"
     },
     {
       "XMLName": {
@@ -34,47 +34,11 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2017-3167",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-3167"
-    },
-    {
-      "XMLName": {
-        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-        "Local": "reference"
-      },
-      "Source": "CVE",
-      "RefID": "CVE-2017-3169",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-3169"
-    },
-    {
-      "XMLName": {
-        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-        "Local": "reference"
-      },
-      "Source": "CVE",
-      "RefID": "CVE-2017-7668",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-7668"
-    },
-    {
-      "XMLName": {
-        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-        "Local": "reference"
-      },
-      "Source": "CVE",
-      "RefID": "CVE-2017-7679",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-7679"
-    },
-    {
-      "XMLName": {
-        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-        "Local": "reference"
-      },
-      "Source": "CVE",
-      "RefID": "CVE-2017-9788",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-9788"
+      "RefID": "CVE-2020-1045",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1045"
     }
   ],
-  "Description": "The httpd packages provide the Apache HTTP Server, a powerful, efficient, and extensible web server.\n\nSecurity Fix(es):\n\n* It was discovered that the httpd's mod_auth_digest module did not properly initialize memory before using it when processing certain headers related to digest authentication. A remote attacker could possibly use this flaw to disclose potentially sensitive information or cause httpd child process to crash by sending specially crafted requests to a server. (CVE-2017-9788)\n\n* It was discovered that the use of httpd's ap_get_basic_auth_pw() API function outside of the authentication phase could lead to authentication bypass. A remote attacker could possibly use this flaw to bypass required authentication if the API was used incorrectly by one of the modules used by httpd. (CVE-2017-3167)\n\n* A NULL pointer dereference flaw was found in the httpd's mod_ssl module. A remote attacker could use this flaw to cause an httpd child process to crash if another module used by httpd called a certain API function during the processing of an HTTPS request. (CVE-2017-3169)\n\n* A buffer over-read flaw was found in the httpd's ap_find_token() function. A remote attacker could use this flaw to cause httpd child process to crash via a specially crafted HTTP request. (CVE-2017-7668)\n\n* A buffer over-read flaw was found in the httpd's mod_mime module. A user permitted to modify httpd's MIME configuration could use this flaw to cause httpd child process to crash. (CVE-2017-7679)",
+  "Description": ".NET Core is a managed-software framework. It implements a subset of the .NET framework APIs and several new APIs, and it includes a CLR implementation.\n\nNew versions of .NET Core that address security vulnerabilities are now available. The updated versions are .NET Core SDK 3.1.108 and .NET Core Runtime 3.1.8.\n\nSecurity Fixes:\n\n* .NET Core: ASP.NET cookie prefix spoofing vulnerability (CVE-2020-1045)\n\nDefault inclusions for applications built with .NET Core have been updated to reference the newest versions and their security fixes.\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
@@ -87,65 +51,13 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2017-3167",
+        "CveID": "CVE-2020-1045",
         "Cvss2": "",
-        "Cvss3": "7.4/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
-        "Cwe": "CWE-287",
-        "Impact": "moderate",
-        "Href": "https://access.redhat.com/security/cve/CVE-2017-3167",
-        "Public": "20170620"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "cve"
-        },
-        "CveID": "CVE-2017-3169",
-        "Cvss2": "",
-        "Cvss3": "3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
-        "Cwe": "CWE-476",
-        "Impact": "moderate",
-        "Href": "https://access.redhat.com/security/cve/CVE-2017-3169",
-        "Public": "20170620"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "cve"
-        },
-        "CveID": "CVE-2017-7668",
-        "Cvss2": "",
-        "Cvss3": "6.5/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:H",
-        "Cwe": "CWE-122",
-        "Impact": "moderate",
-        "Href": "https://access.redhat.com/security/cve/CVE-2017-7668",
-        "Public": "20170620"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "cve"
-        },
-        "CveID": "CVE-2017-7679",
-        "Cvss2": "",
-        "Cvss3": "3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
-        "Cwe": "CWE-125",
-        "Impact": "moderate",
-        "Href": "https://access.redhat.com/security/cve/CVE-2017-7679",
-        "Public": "20170620"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "cve"
-        },
-        "CveID": "CVE-2017-9788",
-        "Cvss2": "",
-        "Cvss3": "4.8/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
-        "Cwe": "CWE-456",
+        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "Cwe": "CWE-807",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2017-9788",
-        "Public": "20170711"
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1045",
+        "Public": "20200701"
       }
     ],
     "Bugzillas": [
@@ -154,59 +66,20 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1463194",
-        "URL": "https://bugzilla.redhat.com/1463194",
-        "Title": "CVE-2017-3167 httpd: ap_get_basic_auth_pw() authentication bypass"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "bugzilla"
-        },
-        "ID": "1463197",
-        "URL": "https://bugzilla.redhat.com/1463197",
-        "Title": "CVE-2017-3169 httpd: mod_ssl NULL pointer dereference"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "bugzilla"
-        },
-        "ID": "1463205",
-        "URL": "https://bugzilla.redhat.com/1463205",
-        "Title": "CVE-2017-7668 httpd: ap_find_token() buffer overread"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "bugzilla"
-        },
-        "ID": "1463207",
-        "URL": "https://bugzilla.redhat.com/1463207",
-        "Title": "CVE-2017-7679 httpd: mod_mime buffer overread"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "bugzilla"
-        },
-        "ID": "1470748",
-        "URL": "https://bugzilla.redhat.com/1470748",
-        "Title": "CVE-2017-9788 httpd: Uninitialized memory reflection in mod_auth_digest"
+        "ID": "1873451",
+        "URL": "https://bugzilla.redhat.com/1873451",
+        "Title": "CVE-2020-1045 dotnet: ASP.NET cookie prefix spoofing vulnerability"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation"
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
     ],
     "Issued": {
-      "Date": "2017-08-15"
+      "Date": "2020-09-08"
     },
     "Updated": {
-      "Date": "2017-08-15"
+      "Date": "2020-09-08"
     }
   },
   "Criteria": {
@@ -244,8 +117,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479001",
-                    "Comment": "httpd is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699001",
+                    "Comment": "aspnetcore-runtime-3.1 is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -253,8 +126,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194002",
-                    "Comment": "httpd is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250002",
+                    "Comment": "aspnetcore-runtime-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -272,8 +145,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479003",
-                    "Comment": "httpd-devel is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699003",
+                    "Comment": "aspnetcore-targeting-pack-3.1 is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -281,8 +154,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194004",
-                    "Comment": "httpd-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250004",
+                    "Comment": "aspnetcore-targeting-pack-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -300,8 +173,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479005",
-                    "Comment": "httpd-manual is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699005",
+                    "Comment": "dotnet is earlier than 0:3.1.108-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -309,8 +182,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194006",
-                    "Comment": "httpd-manual is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191259002",
+                    "Comment": "dotnet is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -328,8 +201,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479007",
-                    "Comment": "httpd-tools is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699007",
+                    "Comment": "dotnet-apphost-pack-3.1 is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -337,8 +210,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194008",
-                    "Comment": "httpd-tools is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250008",
+                    "Comment": "dotnet-apphost-pack-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -356,8 +229,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479009",
-                    "Comment": "mod_ldap is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699009",
+                    "Comment": "dotnet-host is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -365,8 +238,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194010",
-                    "Comment": "mod_ldap is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20191259006",
+                    "Comment": "dotnet-host is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -384,8 +257,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479011",
-                    "Comment": "mod_proxy_html is earlier than 1:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699011",
+                    "Comment": "dotnet-hostfxr-3.1 is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -393,8 +266,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194012",
-                    "Comment": "mod_proxy_html is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250012",
+                    "Comment": "dotnet-hostfxr-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -412,8 +285,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479013",
-                    "Comment": "mod_session is earlier than 0:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699013",
+                    "Comment": "dotnet-runtime-3.1 is earlier than 0:3.1.8-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -421,8 +294,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194014",
-                    "Comment": "mod_session is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250014",
+                    "Comment": "dotnet-runtime-3.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -440,8 +313,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20172479015",
-                    "Comment": "mod_ssl is earlier than 1:2.4.6-67.el7_4.2"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699015",
+                    "Comment": "dotnet-sdk-3.1 is earlier than 0:3.1.108-2.el8_2"
                   },
                   {
                     "XMLName": {
@@ -449,8 +322,120 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20152194016",
-                    "Comment": "mod_ssl is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250016",
+                    "Comment": "dotnet-sdk-3.1 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699017",
+                    "Comment": "dotnet-targeting-pack-3.1 is earlier than 0:3.1.8-2.el8_2"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250018",
+                    "Comment": "dotnet-targeting-pack-3.1 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699019",
+                    "Comment": "dotnet-templates-3.1 is earlier than 0:3.1.108-2.el8_2"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250020",
+                    "Comment": "dotnet-templates-3.1 is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699021",
+                    "Comment": "dotnet3.1-debugsource is earlier than 0:3.1.108-2.el8_2"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202250022",
+                    "Comment": "dotnet3.1-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203699023",
+                    "Comment": "netstandard-targeting-pack-2.1 is earlier than 0:3.1.108-2.el8_2"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200130024",
+                    "Comment": "netstandard-targeting-pack-2.1 is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -465,8 +450,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 is installed"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
           }
         ]
       }
@@ -478,7 +463,7 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
         "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
