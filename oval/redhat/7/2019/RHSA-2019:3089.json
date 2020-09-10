@@ -93,7 +93,7 @@
         },
         "CveID": "CVE-2019-10126",
         "Cvss2": "",
-        "Cvss3": "8/CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cvss3": "8.0/CVSS:3.0/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
         "Cwe": "CWE-122",
         "Impact": "",
         "Href": "https://access.redhat.com/security/cve/CVE-2019-10126",
@@ -198,6 +198,34 @@
         },
         "Operator": "AND",
         "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20193055033",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1062.4.1.rt56.1027.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20193089022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1062.4.1.rt56.1027.el7 is set to boot up on next boot"
+              }
+            ]
+          },
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",

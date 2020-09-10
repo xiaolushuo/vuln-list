@@ -713,7 +713,7 @@
         },
         "CveID": "CVE-2018-8781",
         "Cvss2": "",
-        "Cvss3": "7/CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cvss3": "7.0/CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
         "Cwe": "CWE-190",
         "Impact": "",
         "Href": "https://access.redhat.com/security/cve/CVE-2018-8781",
@@ -1053,6 +1053,34 @@
         },
         "Operator": "AND",
         "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20183083033",
+                "Comment": "kernel-rt earlier than 0:3.10.0-957.rt56.910.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20183096022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-957.rt56.910.el7 is set to boot up on next boot"
+              }
+            ]
+          },
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",

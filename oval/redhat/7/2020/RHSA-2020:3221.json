@@ -93,7 +93,7 @@
         },
         "CveID": "CVE-2020-10757",
         "Cvss2": "",
-        "Cvss3": "7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cvss3": "7.0/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
         "Cwe": "CWE-119",
         "Impact": "",
         "Href": "https://access.redhat.com/security/cve/CVE-2020-10757",
@@ -189,6 +189,34 @@
         },
         "Operator": "AND",
         "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20203220033",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1127.18.2.rt56.1116.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20203221022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1127.18.2.rt56.1116.el7 is set to boot up on next boot"
+              }
+            ]
+          },
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",

@@ -119,7 +119,7 @@
       "Date": "2018-11-27"
     },
     "Updated": {
-      "Date": "2018-11-26"
+      "Date": "2018-11-27"
     }
   },
   "Criteria": {
@@ -136,6 +136,34 @@
         },
         "Operator": "AND",
         "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20183651033",
+                "Comment": "kernel-rt earlier than 0:3.10.0-957.1.3.rt56.913.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20183666022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-957.1.3.rt56.913.el7 is set to boot up on next boot"
+              }
+            ]
+          },
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",

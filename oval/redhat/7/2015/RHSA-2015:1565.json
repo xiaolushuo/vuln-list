@@ -92,7 +92,7 @@
           "Local": "cve"
         },
         "CveID": "CVE-2015-2666",
-        "Cvss2": "6/AV:L/AC:H/Au:S/C:C/I:C/A:C",
+        "Cvss2": "6.0/AV:L/AC:H/Au:S/C:C/I:C/A:C",
         "Cvss3": "",
         "Cwe": "",
         "Impact": "",
@@ -198,6 +198,34 @@
         },
         "Operator": "AND",
         "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20151534031",
+                "Comment": "kernel-rt earlier than 0:3.10.0-229.11.1.rt56.141.11.el7_1 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20151565016",
+                "Comment": "kernel-rt earlier than 0:3.10.0-229.11.1.rt56.141.11.el7_1 is set to boot up on next boot"
+              }
+            ]
+          },
           {
             "XMLName": {
               "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
