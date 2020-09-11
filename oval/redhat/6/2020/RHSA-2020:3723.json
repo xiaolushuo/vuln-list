@@ -1,0 +1,514 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20203723",
+  "Class": "patch",
+  "Title": "RHSA-2020:3723: chromium-browser security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 6 Supplementary"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:3723",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:3723"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6559",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6559"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6560",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6560"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6561",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6561"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6562",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6562"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6563",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6563"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6564",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6564"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6565",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6565"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6566",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6566"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6567",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6567"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6568",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6568"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6569",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6569"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6570",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6570"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-6571",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-6571"
+    }
+  ],
+  "Description": "Chromium is an open-source web browser, powered by WebKit (Blink).\n\nThis update upgrades Chromium to version 85.0.4183.83.\n\nSecurity Fix(es):\n\n* chromium-browser: Use after free in presentation API (CVE-2020-6559)\n\n* chromium-browser: Incorrect security UI in Omnibox (CVE-2020-6571)\n\n* chromium-browser: Insufficient policy enforcement in autofill (CVE-2020-6560)\n\n* chromium-browser: Inappropriate implementation in Content Security Policy (CVE-2020-6561)\n\n* chromium-browser: Insufficient policy enforcement in Blink (CVE-2020-6562)\n\n* chromium-browser: Insufficient policy enforcement in intent handling (CVE-2020-6563)\n\n* chromium-browser: Incorrect security UI in permissions (CVE-2020-6564)\n\n* chromium-browser: Incorrect security UI in Omnibox (CVE-2020-6565)\n\n* chromium-browser: Insufficient policy enforcement in media (CVE-2020-6566)\n\n* chromium-browser: Insufficient validation of untrusted input in command line handling (CVE-2020-6567)\n\n* chromium-browser: Insufficient policy enforcement in intent handling (CVE-2020-6568)\n\n* chromium-browser: Integer overflow in WebUSB (CVE-2020-6569)\n\n* chromium-browser: Side-channel information leakage in WebRTC (CVE-2020-6570)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6559",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6559",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6560",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6560",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6561",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "CWE-358",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6561",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6562",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6562",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6563",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6563",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6564",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6564",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6565",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6565",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6566",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "Cwe": "",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6566",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6567",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-20",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6567",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6568",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6568",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6569",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-190",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6569",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6570",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-203",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6570",
+        "Public": "20200825"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-6571",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-6571",
+        "Public": "20200825"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872945",
+        "URL": "https://bugzilla.redhat.com/1872945",
+        "Title": "CVE-2020-6559 chromium-browser: Use after free in presentation API"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872946",
+        "URL": "https://bugzilla.redhat.com/1872946",
+        "Title": "CVE-2020-6560 chromium-browser: Insufficient policy enforcement in autofill"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872947",
+        "URL": "https://bugzilla.redhat.com/1872947",
+        "Title": "CVE-2020-6561 chromium-browser: Inappropriate implementation in Content Security Policy"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872948",
+        "URL": "https://bugzilla.redhat.com/1872948",
+        "Title": "CVE-2020-6562 chromium-browser: Insufficient policy enforcement in Blink"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872949",
+        "URL": "https://bugzilla.redhat.com/1872949",
+        "Title": "CVE-2020-6563 chromium-browser: Insufficient policy enforcement in intent handling"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872950",
+        "URL": "https://bugzilla.redhat.com/1872950",
+        "Title": "CVE-2020-6564 chromium-browser: Incorrect security UI in permissions"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872951",
+        "URL": "https://bugzilla.redhat.com/1872951",
+        "Title": "CVE-2020-6565 chromium-browser: Incorrect security UI in Omnibox"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872952",
+        "URL": "https://bugzilla.redhat.com/1872952",
+        "Title": "CVE-2020-6566 chromium-browser: Insufficient policy enforcement in media"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872953",
+        "URL": "https://bugzilla.redhat.com/1872953",
+        "Title": "CVE-2020-6567 chromium-browser: Insufficient validation of untrusted input in command line handling"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872955",
+        "URL": "https://bugzilla.redhat.com/1872955",
+        "Title": "CVE-2020-6568 chromium-browser: Insufficient policy enforcement in intent handling"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872956",
+        "URL": "https://bugzilla.redhat.com/1872956",
+        "Title": "CVE-2020-6569 chromium-browser: Integer overflow in WebUSB"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872957",
+        "URL": "https://bugzilla.redhat.com/1872957",
+        "Title": "CVE-2020-6570 chromium-browser: Side-channel information leakage in WebRTC"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1872958",
+        "URL": "https://bugzilla.redhat.com/1872958",
+        "Title": "CVE-2020-6571 chromium-browser: Incorrect security UI in Omnibox"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras:6",
+      "cpe:/a:redhat:rhel_extras:6"
+    ],
+    "Issued": {
+      "Date": "2020-09-10"
+    },
+    "Updated": {
+      "Date": "2020-09-10"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20111656003",
+            "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20203723001",
+            "Comment": "chromium-browser is earlier than 0:85.0.4183.83-1.el6_10"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20141626002",
+            "Comment": "chromium-browser is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20111656004",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
