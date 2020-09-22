@@ -1,15 +1,15 @@
 {
   "Title": "Security update for less",
   "Tracking": {
-    "ID": "openSUSE-SU-2015:0595-1",
+    "ID": "SUSE-SU-2020:2687-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2015-03-18T07:40:50Z",
-    "CurrentReleaseDate": "2015-03-18T07:40:50Z",
+    "InitialReleaseDate": "2020-09-21T08:54:58Z",
+    "CurrentReleaseDate": "2020-09-21T08:54:58Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2015-03-18T07:40:50Z",
+        "Date": "2020-09-21T08:54:58Z",
         "Description": "current"
       }
     ]
@@ -21,7 +21,7 @@
       "Type": "Summary"
     },
     {
-      "Text": "less was updated to fix one minor security issue:\n\nMalformed UTF-8 data could have caused an out of bounds read in the UTF-8 decoding routines, causing an invalid read access. (bnc#921719) (CVE-2014-9488)",
+      "Text": "This update for less fixes the following issues:\n\nSecurity issue fixed:\n\n- CVE-2014-9488: Malformed UTF-8 data could have caused an out of bounds read in \n  the UTF-8 decoding routines, causing an invalid read access (bsc#921719).\n",
       "Title": "Details",
       "Type": "General"
     },
@@ -32,12 +32,27 @@
     }
   ],
   "ProductTree": {
-    "Relationships": null
+    "Relationships": [
+      {
+        "ProductReference": "less-458-7.3.3",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "less-458-7.3.3",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      }
+    ]
   },
   "References": [
     {
-      "URL": "http://lists.opensuse.org/opensuse-updates/2015-03/msg00077.html",
-      "Description": "E-Mail link for openSUSE-SU-2015:0595-1"
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20202687-1/",
+      "Description": "Link for SUSE-SU-2020:2687-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007445.html",
+      "Description": "E-Mail link for SUSE-SU-2020:2687-1"
     },
     {
       "URL": "https://www.suse.com/support/security/rating/",
@@ -67,7 +82,10 @@
       "ProductStatuses": [
         {
           "Type": "Fixed",
-          "ProductID": null
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP5:less-458-7.3.3",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:less-458-7.3.3"
+          ]
         }
       ],
       "CVSSScoreSets": {}
