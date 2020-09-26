@@ -1,0 +1,166 @@
+{
+  "Title": "Security update for cifs-utils",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:2729-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-09-23T14:00:48Z",
+    "CurrentReleaseDate": "2020-09-23T14:00:48Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-09-23T14:00:48Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for cifs-utils",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for cifs-utils fixes the following issues:\n\n- CVE-2020-14342: Fixed a shell command injection vulnerability in mount.cifs (bsc#1174477). \n- Fixed an invalid free in mount.cifs; (bsc#1152930).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Ali",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-Azure",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-EC2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-GCE",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP1-CHOST-BYOS-OpenStack",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP2-CHOST-BYOS-Ali",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP2-CHOST-BYOS-Azure",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP2-CHOST-BYOS-EC2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP2-CHOST-BYOS-GCE",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "Image SLES15-SP2-CHOST-BYOS-OpenStack",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-devel-6.9-5.6.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-6.9-5.6.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cifs-utils-devel-6.9-5.6.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20202729-1/",
+      "Description": "Link for SUSE-SU-2020:2729-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-September/007471.html",
+      "Description": "E-Mail link for SUSE-SU-2020:2729-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-14342",
+      "Description": "It was found that cifs-utils' mount.cifs was invoking a shell when requesting the Samba password, which could be used to inject arbitrary commands. An attacker able to invoke mount.cifs with special permission, such as via sudo rules, could use this flaw to escalate their privileges.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "moderate"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-14342.html",
+          "Description": "CVE-2020-14342"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1174477",
+          "Description": "SUSE Bug 1174477"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Image SLES15-SP1-CHOST-BYOS-Ali:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP1-CHOST-BYOS-Azure:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP1-CHOST-BYOS-EC2:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP1-CHOST-BYOS-GCE:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP1-CHOST-BYOS-OpenStack:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP2-CHOST-BYOS-Ali:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP2-CHOST-BYOS-Azure:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP2-CHOST-BYOS-EC2:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP2-CHOST-BYOS-GCE:cifs-utils-6.9-5.6.1",
+            "Image SLES15-SP2-CHOST-BYOS-OpenStack:cifs-utils-6.9-5.6.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:cifs-utils-6.9-5.6.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP1:cifs-utils-devel-6.9-5.6.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:cifs-utils-6.9-5.6.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:cifs-utils-devel-6.9-5.6.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
