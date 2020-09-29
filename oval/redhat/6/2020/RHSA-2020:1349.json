@@ -98,74 +98,7 @@
           "Local": "criteria"
         },
         "Operator": "AND",
-        "Criterias": [
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201349001",
-                    "Comment": "krb5-appl-clients is earlier than 0:1.0.1-10.el6_10"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110920002",
-                    "Comment": "krb5-appl-clients is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201349003",
-                    "Comment": "krb5-appl-servers is earlier than 0:1.0.1-10.el6_10"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20110920004",
-                    "Comment": "krb5-appl-servers is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              }
-            ],
-            "Criterions": null
-          }
-        ],
+        "Criterias": null,
         "Criterions": [
           {
             "XMLName": {
@@ -175,6 +108,24 @@
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20111656003",
             "Comment": "Red Hat Enterprise Linux 6 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20201349001",
+            "Comment": "krb5-appl-servers is earlier than 0:1.0.1-10.el6_10"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20110920004",
+            "Comment": "krb5-appl-servers is signed with Red Hat redhatrelease2 key"
           }
         ]
       }

@@ -98,74 +98,7 @@
           "Local": "criteria"
         },
         "Operator": "AND",
-        "Criterias": [
-          {
-            "XMLName": {
-              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-              "Local": "criteria"
-            },
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201334001",
-                    "Comment": "telnet is earlier than 1:0.17-65.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201334002",
-                    "Comment": "telnet is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              },
-              {
-                "XMLName": {
-                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                  "Local": "criteria"
-                },
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201334003",
-                    "Comment": "telnet-server is earlier than 1:0.17-65.el7_8"
-                  },
-                  {
-                    "XMLName": {
-                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-                      "Local": "criterion"
-                    },
-                    "Negate": false,
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201334004",
-                    "Comment": "telnet-server is signed with Red Hat redhatrelease2 key"
-                  }
-                ]
-              }
-            ],
-            "Criterions": null
-          }
-        ],
+        "Criterias": null,
         "Criterions": [
           {
             "XMLName": {
@@ -175,6 +108,24 @@
             "Negate": false,
             "TestRef": "oval:com.redhat.rhba:tst:20150364027",
             "Comment": "Red Hat Enterprise Linux 7 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20201334001",
+            "Comment": "telnet-server is earlier than 1:0.17-65.el7_8"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20201334002",
+            "Comment": "telnet-server is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
