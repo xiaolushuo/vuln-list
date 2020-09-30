@@ -1,0 +1,1825 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20204062",
+  "Class": "patch",
+  "Title": "RHSA-2020:4062: kernel-rt security and bug fix update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:4062",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:4062"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2017-18551",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2017-18551"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2018-20836",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-20836"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15217",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15217"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15807",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15807"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-15917",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-15917"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-16231",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-16231"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-16233",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-16233"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-16994",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-16994"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-17053",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-17053"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-17055",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-17055"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-18808",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-18808"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19046",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19046"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19055",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19055"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19058",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19058"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19059",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19059"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19062",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19062"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19063",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19063"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19332",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19332"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19447",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19447"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19523",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19523"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19524",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19524"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19530",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19530"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19534",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19534"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19537",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19537"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19767",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19767"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-19807",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-19807"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-20054",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-20054"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-20095",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-20095"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-20636",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-20636"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-9454",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-9454"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-9458",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-9458"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10690",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10690"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10732",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10732"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10742",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10742"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10751",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10751"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10942",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10942"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-11565",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-11565"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-12770",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-12770"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-12826",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-12826"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-14305",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14305"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-1749",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1749"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-2732",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-2732"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-8647",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-8647"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-8649",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-8649"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-9383",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-9383"
+    }
+  ],
+  "Description": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: use-after-free in sound/core/timer.c (CVE-2019-19807)\n\n* kernel: out of bounds write in function i2c_smbus_xfer_emulated in drivers/i2c/i2c-core-smbus.c (CVE-2017-18551)\n\n* kernel: race condition in smp_task_timedout() and smp_task_done() in drivers/scsi/libsas/sas_expander.c leads to use-after-free (CVE-2018-20836)\n\n* kernel: out of bounds write in i2c driver leads to local escalation of privilege (CVE-2019-9454)\n\n* kernel: use after free due to race condition in the video driver leads to local privilege escalation (CVE-2019-9458)\n\nSpace precludes documenting all of the security fixes in this advisory. See the descriptions of the remaining security fixes in the related Knowledge Article:\n\nhttps://access.redhat.com/articles/5442481\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 7.9 Release Notes linked from the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2017-18551",
+        "Cvss2": "",
+        "Cvss3": "6.7/CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-787",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2017-18551",
+        "Public": "20190818"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2018-20836",
+        "Cvss2": "",
+        "Cvss3": "7.0/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-362 CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2018-20836",
+        "Public": "20180925"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15217",
+        "Cvss2": "",
+        "Cvss3": "4.6/CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-476",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15217",
+        "Public": "20190819"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15807",
+        "Cvss2": "",
+        "Cvss3": "4.7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15807",
+        "Public": "20190829"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-15917",
+        "Cvss2": "",
+        "Cvss3": "7.0/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-15917",
+        "Public": "20190904"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-16231",
+        "Cvss2": "",
+        "Cvss3": "4.1/CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-476",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-16231",
+        "Public": "20190911"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-16233",
+        "Cvss2": "",
+        "Cvss3": "4.1/CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-476",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-16233",
+        "Public": "20190909"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-16994",
+        "Cvss2": "",
+        "Cvss3": "4.7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-16994",
+        "Public": "20190930"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-17053",
+        "Cvss2": "",
+        "Cvss3": "4.0/CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+        "Cwe": "CWE-250",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-17053",
+        "Public": "20190920"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-17055",
+        "Cvss2": "",
+        "Cvss3": "4.0/CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "Cwe": "CWE-250",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-17055",
+        "Public": "20190920"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-18808",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-18808",
+        "Public": "20191118"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19046",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-401 CWE-400",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19046",
+        "Public": "20191118"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19055",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19055",
+        "Public": "20191005"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19058",
+        "Cvss2": "",
+        "Cvss3": "4.7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19058",
+        "Public": "20191121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19059",
+        "Cvss2": "",
+        "Cvss3": "4.7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19059",
+        "Public": "20191121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19062",
+        "Cvss2": "",
+        "Cvss3": "4.7/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19062",
+        "Public": "20191121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19063",
+        "Cvss2": "",
+        "Cvss3": "4.6/CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19063",
+        "Public": "20191121"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19332",
+        "Cvss2": "",
+        "Cvss3": "6.1/CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+        "Cwe": "CWE-787",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19332",
+        "Public": "20191203"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19447",
+        "Cvss2": "",
+        "Cvss3": "7.8/CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19447",
+        "Public": "20191210"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19523",
+        "Cvss2": "",
+        "Cvss3": "7.8/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416 CWE-476",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19523",
+        "Public": "20191004"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19524",
+        "Cvss2": "",
+        "Cvss3": "4.6/CVSS:3.0/AV:P/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19524",
+        "Public": "20191115"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19530",
+        "Cvss2": "",
+        "Cvss3": "5.7/CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19530",
+        "Public": "20190815"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19534",
+        "Cvss2": "",
+        "Cvss3": "4.6/CVSS:3.0/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "Cwe": "CWE-772 CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19534",
+        "Public": "20191104"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19537",
+        "Cvss2": "",
+        "Cvss3": "4.2/CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-362",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19537",
+        "Public": "20190812"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19767",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19767",
+        "Public": "20191107"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-19807",
+        "Cvss2": "",
+        "Cvss3": "7.8/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-19807",
+        "Public": "20191106"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-20054",
+        "Cvss2": "",
+        "Cvss3": "5.1/CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-119",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-20054",
+        "Public": "20191228"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-20095",
+        "Cvss2": "",
+        "Cvss3": "5.2/CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-772",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-20095",
+        "Public": "20191230"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-20636",
+        "Cvss2": "",
+        "Cvss3": "6.7/CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-787",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-20636",
+        "Public": "20200404"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-9454",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-787 CWE-119",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-9454",
+        "Public": "20190903"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-9458",
+        "Cvss2": "",
+        "Cvss3": "7.0/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-362 CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-9458",
+        "Public": "20190903"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10690",
+        "Cvss2": "",
+        "Cvss3": "6.5/CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10690",
+        "Public": "20191125:1253"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10732",
+        "Cvss2": "",
+        "Cvss3": "3.3/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "Cwe": "CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10732",
+        "Public": "20200501"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10742",
+        "Cvss2": "",
+        "Cvss3": "6.0/CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:H",
+        "Cwe": "CWE-121",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10742",
+        "Public": "20200513"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10751",
+        "Cvss2": "",
+        "Cvss3": "6.1/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+        "Cwe": "CWE-349",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10751",
+        "Public": "20200427:1400"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10942",
+        "Cvss2": "",
+        "Cvss3": "5.3/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H",
+        "Cwe": "CWE-20 CWE-119",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10942",
+        "Public": "20200322"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-11565",
+        "Cvss2": "",
+        "Cvss3": "6.0/CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+        "Cwe": "CWE-787",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-11565",
+        "Public": "20200401"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-12770",
+        "Cvss2": "",
+        "Cvss3": "6.7/CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-401 CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-12770",
+        "Public": "20200414"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-12826",
+        "Cvss2": "",
+        "Cvss3": "5.3/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+        "Cwe": "CWE-94",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-12826",
+        "Public": "20200512:0540"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-14305",
+        "Cvss2": "",
+        "Cvss3": "8.1/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-787",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14305",
+        "Public": "20200609"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-1749",
+        "Cvss2": "",
+        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "Cwe": "CWE-319",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1749",
+        "Public": "20200304:0129"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-2732",
+        "Cvss2": "",
+        "Cvss3": "5.8/CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "Cwe": "CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-2732",
+        "Public": "20200224:1800"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-8647",
+        "Cvss2": "",
+        "Cvss3": "6.1/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:H",
+        "Cwe": "CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-8647",
+        "Public": "20200130"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-8649",
+        "Cvss2": "",
+        "Cvss3": "5.9/CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+        "Cwe": "CWE-416",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-8649",
+        "Public": "20200130"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-9383",
+        "Cvss2": "",
+        "Cvss3": "7.1/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-9383",
+        "Public": "20200221"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1427551",
+        "URL": "https://bugzilla.redhat.com/1427551",
+        "Title": "mm/swap: Convert to percpu locked"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1707796",
+        "URL": "https://bugzilla.redhat.com/1707796",
+        "Title": "CVE-2018-20836 kernel: race condition in smp_task_timedout() and smp_task_done() in drivers/scsi/libsas/sas_expander.c leads to use-after-free"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1745528",
+        "URL": "https://bugzilla.redhat.com/1745528",
+        "Title": "CVE-2019-15217 kernel: null pointer dereference in drivers/media/usb/zr364xx/zr364xx.c driver"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1747216",
+        "URL": "https://bugzilla.redhat.com/1747216",
+        "Title": "CVE-2019-15807 kernel: Memory leak in drivers/scsi/libsas/sas_expander.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1757368",
+        "URL": "https://bugzilla.redhat.com/1757368",
+        "Title": "CVE-2017-18551 kernel: out of bounds write in function i2c_smbus_xfer_emulated in drivers/i2c/i2c-core-smbus.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1758242",
+        "URL": "https://bugzilla.redhat.com/1758242",
+        "Title": "CVE-2019-17053 kernel: unprivileged users able to create RAW sockets in AF_IEEE802154 network protocol"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1758248",
+        "URL": "https://bugzilla.redhat.com/1758248",
+        "Title": "CVE-2019-17055 kernel: unprivileged users able to create RAW sockets in AF_ISDN network protocol"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1759681",
+        "URL": "https://bugzilla.redhat.com/1759681",
+        "Title": "CVE-2019-16994 kernel: Memory leak in sit_init_net() in net/ipv6/sit.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1760100",
+        "URL": "https://bugzilla.redhat.com/1760100",
+        "Title": "CVE-2019-15917 kernel: use-after-free in drivers/bluetooth/hci_ldisc.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1760310",
+        "URL": "https://bugzilla.redhat.com/1760310",
+        "Title": "CVE-2019-16231 kernel: null-pointer dereference in drivers/net/fjes/fjes_main.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1760420",
+        "URL": "https://bugzilla.redhat.com/1760420",
+        "Title": "CVE-2019-16233 kernel: null pointer dereference in drivers/scsi/qla2xxx/qla_os.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1774988",
+        "URL": "https://bugzilla.redhat.com/1774988",
+        "Title": "CVE-2019-19046 kernel: Denial Of Service in the __ipmi_bmc_register() function in drivers/char/ipmi/ipmi_msghandler.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1775015",
+        "URL": "https://bugzilla.redhat.com/1775015",
+        "Title": "CVE-2019-19063 kernel: Two memory leaks in the rtl_usb_probe() function in drivers/net/wireless/realtek/rtlwifi/usb.c allow for a DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1775021",
+        "URL": "https://bugzilla.redhat.com/1775021",
+        "Title": "CVE-2019-19062 kernel: memory leak in the crypto_report() function in crypto/crypto_user_base.c allows for DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1775042",
+        "URL": "https://bugzilla.redhat.com/1775042",
+        "Title": "CVE-2019-19059 kernel: Multiple memory leaks in the iwl_pcie_ctxt_info_gen3_init() function in drivers/net/wireless/intel/iwlwifi/pcie/ctxt-info-gen3.c allows for a DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1775047",
+        "URL": "https://bugzilla.redhat.com/1775047",
+        "Title": "CVE-2019-19058 kernel: A memory leak in the alloc_sgtable() function in drivers/net/wireless/intel/iwlwifi/fw/dbg.c allows for a DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1775074",
+        "URL": "https://bugzilla.redhat.com/1775074",
+        "Title": "CVE-2019-19055 kernel: memory leak in the nl80211_get_ftm_responder_stats() function in net/wireless/nl80211.c allows DoS"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1777418",
+        "URL": "https://bugzilla.redhat.com/1777418",
+        "Title": "CVE-2019-18808 kernel: memory leak in ccp_run_sha_cmd() function in drivers/crypto/ccp/ccp-ops.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1779594",
+        "URL": "https://bugzilla.redhat.com/1779594",
+        "Title": "CVE-2019-19332 Kernel: kvm: OOB memory write via kvm_dev_ioctl_get_cpuid"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1781679",
+        "URL": "https://bugzilla.redhat.com/1781679",
+        "Title": "CVE-2019-19447 kernel: mounting a crafted ext4 filesystem image, performing some operations, and unmounting can lead to a use-after-free in ext4_put_super in fs/ext4/super.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783434",
+        "URL": "https://bugzilla.redhat.com/1783434",
+        "Title": "CVE-2019-19523 kernel: use-after-free caused by a malicious USB device in the drivers/usb/misc/adutux.c driver"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783459",
+        "URL": "https://bugzilla.redhat.com/1783459",
+        "Title": "CVE-2019-19524 kernel: a malicious USB device in the drivers/input/ff-memless.c leads to use-after-free"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783518",
+        "URL": "https://bugzilla.redhat.com/1783518",
+        "Title": "CVE-2019-19530 kernel: use-after-free caused by a malicious USB device in the drivers/usb/class/cdc-acm.c driver"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783540",
+        "URL": "https://bugzilla.redhat.com/1783540",
+        "Title": "CVE-2019-19534 kernel: information leak bug caused by a malicious USB device in the drivers/net/can/usb/peak_usb/pcan_usb_core.c driver"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1783561",
+        "URL": "https://bugzilla.redhat.com/1783561",
+        "Title": "CVE-2019-19537 kernel: race condition caused by a malicious USB device in the USB character device driver layer"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1786078",
+        "URL": "https://bugzilla.redhat.com/1786078",
+        "Title": "CVE-2019-19807 kernel: use-after-free in sound/core/timer.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1786160",
+        "URL": "https://bugzilla.redhat.com/1786160",
+        "Title": "CVE-2019-19767 kernel: use-after-free in __ext4_expand_extra_isize and ext4_xattr_set_entry related to fs/ext4/inode.c and fs/ext4/super.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1788009",
+        "URL": "https://bugzilla.redhat.com/1788009",
+        "Title": "Request nx_huge_pages=N as default value to avoid kvm-rt guest large latency spike"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1790063",
+        "URL": "https://bugzilla.redhat.com/1790063",
+        "Title": "CVE-2019-20054 kernel: Null pointer dereference in drop_sysctl_table() in fs/proc/proc_sysctl.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1791954",
+        "URL": "https://bugzilla.redhat.com/1791954",
+        "Title": "CVE-2019-20095 kernel: memory leak in mwifiex_tm_cmd in drivers/net/wireless/marvell/mwifiex/cfg80211.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1802555",
+        "URL": "https://bugzilla.redhat.com/1802555",
+        "Title": "CVE-2020-8649 kernel: invalid read location in vgacon_invert_region function in drivers/video/console/vgacon.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1802563",
+        "URL": "https://bugzilla.redhat.com/1802563",
+        "Title": "CVE-2020-8647 kernel: out-of-bounds read in in vc_do_resize function in drivers/tty/vt/vt.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1805135",
+        "URL": "https://bugzilla.redhat.com/1805135",
+        "Title": "CVE-2020-2732 Kernel: kvm: nVMX: L2 guest may trick the L0 hypervisor to access sensitive L1 resources"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1809833",
+        "URL": "https://bugzilla.redhat.com/1809833",
+        "Title": "CVE-2020-1749 kernel: some ipv6 protocols not encrypted over ipsec tunnel"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1810685",
+        "URL": "https://bugzilla.redhat.com/1810685",
+        "Title": "CVE-2020-9383 kernel: out-of-bounds read in set_fdc in drivers/block/floppy.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1817141",
+        "URL": "https://bugzilla.redhat.com/1817141",
+        "Title": "CVE-2020-10690 kernel: use-after-free in cdev_put() when a PTP device is removed while it's chardev is open"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1817718",
+        "URL": "https://bugzilla.redhat.com/1817718",
+        "Title": "CVE-2020-10942 kernel: vhost-net: stack overflow in get_raw_socket while checking sk_family field"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1818818",
+        "URL": "https://bugzilla.redhat.com/1818818",
+        "Title": "CVE-2019-9454 kernel: out of bounds write in i2c driver leads to local escalation of privilege"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1819377",
+        "URL": "https://bugzilla.redhat.com/1819377",
+        "Title": "CVE-2019-9458 kernel: use after free due to race condition in the video driver leads to local privilege escalation"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1822077",
+        "URL": "https://bugzilla.redhat.com/1822077",
+        "Title": "CVE-2020-12826 kernel: possible to send arbitrary signals to a privileged (suidroot) parent process"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1824059",
+        "URL": "https://bugzilla.redhat.com/1824059",
+        "Title": "CVE-2019-20636 kernel: out-of-bounds write via crafted keycode table"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1824918",
+        "URL": "https://bugzilla.redhat.com/1824918",
+        "Title": "CVE-2020-11565 kernel: out-of-bounds write in mpol_parse_str function in mm/mempolicy.c"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1831399",
+        "URL": "https://bugzilla.redhat.com/1831399",
+        "Title": "CVE-2020-10732 kernel: uninitialized kernel data leak in userspace coredumps"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1834845",
+        "URL": "https://bugzilla.redhat.com/1834845",
+        "Title": "CVE-2020-12770 kernel: sg_write function lacks an sg_remove_request call in a certain failure case"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1835127",
+        "URL": "https://bugzilla.redhat.com/1835127",
+        "Title": "CVE-2020-10742 kernel: NFS client crash due to index buffer overflow during Direct IO write causing kernel panic"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1839634",
+        "URL": "https://bugzilla.redhat.com/1839634",
+        "Title": "CVE-2020-10751 kernel: SELinux netlink permission check bypass"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1850716",
+        "URL": "https://bugzilla.redhat.com/1850716",
+        "Title": "CVE-2020-14305 kernel: memory corruption in Voice over IP nf_conntrack_h323 module"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras_rt:7",
+      "cpe:/a:redhat:rhel_extras_rt:7"
+    ],
+    "Issued": {
+      "Date": "2020-09-29"
+    },
+    "Updated": {
+      "Date": "2020-09-29"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20204062021",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1160.rt56.1131.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20204062022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1160.rt56.1131.el7 is set to boot up on next boot"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062001",
+                    "Comment": "kernel-rt is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727002",
+                    "Comment": "kernel-rt is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062003",
+                    "Comment": "kernel-rt-debug is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727004",
+                    "Comment": "kernel-rt-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062005",
+                    "Comment": "kernel-rt-debug-devel is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727006",
+                    "Comment": "kernel-rt-debug-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062007",
+                    "Comment": "kernel-rt-debug-kvm is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212008",
+                    "Comment": "kernel-rt-debug-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062009",
+                    "Comment": "kernel-rt-devel is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727008",
+                    "Comment": "kernel-rt-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062011",
+                    "Comment": "kernel-rt-doc is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727010",
+                    "Comment": "kernel-rt-doc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062013",
+                    "Comment": "kernel-rt-kvm is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212014",
+                    "Comment": "kernel-rt-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062015",
+                    "Comment": "kernel-rt-trace is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727012",
+                    "Comment": "kernel-rt-trace is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062017",
+                    "Comment": "kernel-rt-trace-devel is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727014",
+                    "Comment": "kernel-rt-trace-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204062019",
+                    "Comment": "kernel-rt-trace-kvm is earlier than 0:3.10.0-1160.rt56.1131.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212020",
+                    "Comment": "kernel-rt-trace-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
