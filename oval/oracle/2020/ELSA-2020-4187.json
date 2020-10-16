@@ -1,6 +1,6 @@
 {
   "Title": "ELSA-2020-4187:  spice and spice-gtk security update (IMPORTANT)",
-  "Description": "spice\n[0.14.0-9.1]\n- Fix multiple buffer overflows in QUIC decoding code\n  Resolves: CVE-2020-14355\n\nspice-gtk\n[0.35-5.1]\n- Fix multiple buffer overflows in QUIC decoding code\n  Resolves: CVE-2020-14355",
+  "Description": "spice\n[0.14.0-9.0.2.el7_9.1]\n- Add ARM support\n\n[0.14.0-9.1]\n- Fix multiple buffer overflows in QUIC decoding code\n  Resolves: CVE-2020-14355\n\nspice-gtk\n[0.35-5.1]\n- Fix multiple buffer overflows in QUIC decoding code\n  Resolves: CVE-2020-14355",
   "Platform": [
     "Oracle Linux 7"
   ],
@@ -99,10 +99,34 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "spice-server is earlier than 0:0.14.0-9.0.2.el7_9.1"
+              },
+              {
+                "Comment": "spice-server is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "spice-server is earlier than 0:0.14.0-9.el7_9.1"
               },
               {
                 "Comment": "spice-server is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "spice-server-devel is earlier than 0:0.14.0-9.0.2.el7_9.1"
+              },
+              {
+                "Comment": "spice-server-devel is signed with the Oracle Linux 7 key"
               }
             ]
           },
