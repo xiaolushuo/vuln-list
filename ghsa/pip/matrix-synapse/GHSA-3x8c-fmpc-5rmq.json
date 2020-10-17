@@ -1,0 +1,49 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-10-16T16:55:43Z",
+  "Package": {
+    "Ecosystem": "PIP",
+    "Name": "matrix-synapse"
+  },
+  "Advisory": {
+    "DatabaseId": 3138,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTN4OGMtZm1wYy01cm1x",
+    "GhsaId": "GHSA-3x8c-fmpc-5rmq",
+    "References": [
+      {
+        "Url": "https://github.com/matrix-org/synapse/security/advisories/GHSA-3x8c-fmpc-5rmq"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-26891"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-3x8c-fmpc-5rmq"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-3x8c-fmpc-5rmq"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-26891"
+      }
+    ],
+    "Description": "### Impact\nThe fallback authentication endpoint served via Synapse were vulnerable to cross-site scripting (XSS) attacks. The impact depends on the configuration of the domain that Synapse is deployed on, but may allow access to cookies and other browser data, CSRF vulnerabilities, and access to other resources served on the same domain or parent domains.\n\n### Patches\nThis is fixed by #8444, which is included in Synapse v1.21.0.\n\n### Workarounds\nIf the homeserver is not configured to use reCAPTCHA, consent (terms of service), or single sign-on then the affected endpoint can be blocked at a reverse proxy:\n\n* `/_matrix/client/r0/auth/.*/fallback/web`\n* `/_matrix/client/unstable/auth/.*/fallback/web`",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-10-16T16:56:04Z",
+    "Severity": "MODERATE",
+    "Summary": "Cross-site scripting (XSS) vulnerability in the fallback authentication endpoint",
+    "UpdatedAt": "2020-10-16T16:56:04Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "1.21.0"
+      },
+      "VulnerableVersionRange": "\u003c 1.21.0"
+    }
+  ]
+}
