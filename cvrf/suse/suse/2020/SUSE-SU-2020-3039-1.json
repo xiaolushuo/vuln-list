@@ -1,0 +1,548 @@
+{
+  "Title": "Security update for libvirt",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:3039-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-10-27T08:08:21Z",
+    "CurrentReleaseDate": "2020-10-27T08:08:21Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-10-27T08:08:21Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for libvirt",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for libvirt fixes the following issues:\n\n- CVE-2020-15708: Added a  note to libvirtd.conf about polkit auth in SUSE distros (bsc#1174955).\n- CVE-2020-25637: Fixed a double free in qemuAgentGetInterfaces() (bsc#1177155).\n- qemu: Adjust max memlock on mdev hotplug (bsc#1177480).\n- Xen: Don't add dom0 twice on driver reload (bsc#1176430).\t  \n- Fixed an issue where building was failing (bsc#1175574).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "libvirt-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-devel-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-admin-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-admin-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-client-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-client-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-config-network-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-config-network-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-interface-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-interface-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-network-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-network-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-secret-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-secret-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-hooks-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-hooks-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-lxc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-lxc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-qemu-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-qemu-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-xen-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-daemon-xen-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-doc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-doc-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-libs-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-libs-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-lock-sanlock-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-lock-sanlock-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-nss-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libvirt-nss-5.1.0-13.19.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20203039-1/",
+      "Description": "Link for SUSE-SU-2020:3039-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-October/007628.html",
+      "Description": "E-Mail link for SUSE-SU-2020:3039-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-15708",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-15708.html",
+          "Description": "CVE-2020-15708"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1174955",
+          "Description": "SUSE Bug 1174955"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-admin-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-client-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-config-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-interface-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-secret-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-hooks-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-xen-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-doc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-libs-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-lock-sanlock-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-nss-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-admin-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-client-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-config-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-interface-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-secret-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-hooks-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-xen-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-doc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-libs-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-lock-sanlock-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-nss-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Software Development Kit 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Software Development Kit 12 SP5:libvirt-devel-5.1.0-13.19.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-25637",
+      "Description": "A double free memory issue was found to occur in the libvirt API, in versions before 6.8.0, responsible for requesting information about network interfaces of a running QEMU domain. This flaw affects the polkit access control driver. Specifically, clients connecting to the read-write socket with limited ACL permissions could use this flaw to crash the libvirt daemon, resulting in a denial of service, or potentially escalate their privileges on the system. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-25637.html",
+          "Description": "CVE-2020-25637"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1174955",
+          "Description": "SUSE Bug 1174955"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1177155",
+          "Description": "SUSE Bug 1177155"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-admin-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-client-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-config-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-interface-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-secret-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-hooks-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-daemon-xen-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-doc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-libs-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-lock-sanlock-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server 12 SP5:libvirt-nss-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-admin-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-client-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-config-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-config-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-interface-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-libxl-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-network-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-nodedev-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-nwfilter-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-secret-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-core-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-disk-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-iscsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-logical-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-mpath-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-rbd-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-driver-storage-scsi-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-hooks-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-lxc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-qemu-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-daemon-xen-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-doc-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-libs-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-lock-sanlock-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:libvirt-nss-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Software Development Kit 12 SP5:libvirt-5.1.0-13.19.1",
+            "SUSE Linux Enterprise Software Development Kit 12 SP5:libvirt-devel-5.1.0-13.19.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
