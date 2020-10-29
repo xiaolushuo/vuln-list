@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2008-0581.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2008-0581.html",
       "ID": "ELSA-2008-0581"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2374.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2374.html",
       "ID": "CVE-2008-2374"
     }
   ],
@@ -22,6 +22,30 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "bluez-libs is earlier than 0:3.7-1.1"
+              },
+              {
+                "Comment": "bluez-libs is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "bluez-libs-devel is earlier than 0:3.7-1.1"
+              },
+              {
+                "Comment": "bluez-libs-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -45,30 +69,6 @@
                 "Comment": "bluez-utils-cups is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "bluez-libs-devel is earlier than 0:3.7-1.1"
-              },
-              {
-                "Comment": "bluez-libs-devel is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "bluez-libs is earlier than 0:3.7-1.1"
-              },
-              {
-                "Comment": "bluez-libs is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -84,7 +84,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2374.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2374.html",
       "ID": "CVE-2008-2374"
     }
   ]

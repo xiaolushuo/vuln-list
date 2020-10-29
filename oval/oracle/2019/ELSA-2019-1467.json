@@ -7,12 +7,17 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2019-1467.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2019-1467.html",
       "ID": "ELSA-2019-1467"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2019-9636.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2019-10160.html",
+      "ID": "CVE-2019-10160"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2019-9636.html",
       "ID": "CVE-2019-9636"
     }
   ],
@@ -22,6 +27,30 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python is earlier than 0:2.6.6-68.0.1.el6_10"
+              },
+              {
+                "Comment": "python is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python-devel is earlier than 0:2.6.6-68.0.1.el6_10"
+              },
+              {
+                "Comment": "python-devel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,10 +80,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "python-devel is earlier than 0:2.6.6-68.0.1.el6_10"
+                "Comment": "python-tools is earlier than 0:2.6.6-68.0.1.el6_10"
               },
               {
-                "Comment": "python-devel is signed with the Oracle Linux 6 key"
+                "Comment": "python-tools is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -67,30 +96,6 @@
               },
               {
                 "Comment": "tkinter is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "python is earlier than 0:2.6.6-68.0.1.el6_10"
-              },
-              {
-                "Comment": "python is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "python-tools is earlier than 0:2.6.6-68.0.1.el6_10"
-              },
-              {
-                "Comment": "python-tools is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -108,7 +113,12 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2019-9636.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2019-10160.html",
+      "ID": "CVE-2019-10160"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2019-9636.html",
       "ID": "CVE-2019-9636"
     }
   ]

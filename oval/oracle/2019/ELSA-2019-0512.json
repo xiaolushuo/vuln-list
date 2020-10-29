@@ -7,23 +7,23 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2019-0512.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2019-0512.html",
       "ID": "ELSA-2019-0512"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-17972.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-18445.html",
+      "ID": "CVE-2018-18445"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-17972.html",
       "ID": "CVE-2018-17972"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-9568.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-9568.html",
       "ID": "CVE-2018-9568"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-18445.html",
-      "ID": "CVE-2018-18445"
     }
   ],
   "Criteria": {
@@ -32,54 +32,6 @@
       {
         "Operator": "OR",
         "Criterias": [
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "kernel is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "python-perf is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "python-perf is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-headers is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "kernel-headers is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "perf is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "perf is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -97,46 +49,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-doc is earlier than 0:3.10.0-957.10.1.el7"
+                "Comment": "kernel is earlier than 0:3.10.0-957.10.1.el7"
               },
               {
-                "Comment": "kernel-doc is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-tools-libs is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "kernel-tools-libs is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-tools is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "kernel-tools is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-debug-devel is earlier than 0:3.10.0-957.10.1.el7"
-              },
-              {
-                "Comment": "kernel-debug-devel is signed with the Oracle Linux 7 key"
+                "Comment": "kernel is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -169,6 +85,18 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "kernel-debug-devel is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "kernel-debug-devel is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "kernel-devel is earlier than 0:3.10.0-957.10.1.el7"
               },
               {
@@ -181,10 +109,82 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "kernel-doc is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "kernel-doc is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-headers is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "kernel-headers is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-tools is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "kernel-tools is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-tools-libs is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "kernel-tools-libs is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "kernel-tools-libs-devel is earlier than 0:3.10.0-957.10.1.el7"
               },
               {
                 "Comment": "kernel-tools-libs-devel is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "perf is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "perf is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "python-perf is earlier than 0:3.10.0-957.10.1.el7"
+              },
+              {
+                "Comment": "python-perf is signed with the Oracle Linux 7 key"
               }
             ]
           }
@@ -202,18 +202,18 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-17972.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-18445.html",
+      "ID": "CVE-2018-18445"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-17972.html",
       "ID": "CVE-2018-17972"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-9568.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-9568.html",
       "ID": "CVE-2018-9568"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-18445.html",
-      "ID": "CVE-2018-18445"
     }
   ]
 }

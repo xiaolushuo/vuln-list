@@ -7,18 +7,18 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2008-0967.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2008-0967.html",
       "ID": "ELSA-2008-0967"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2364.html",
-      "ID": "CVE-2008-2364"
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2939.html",
+      "ID": "CVE-2008-2939"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2939.html",
-      "ID": "CVE-2008-2939"
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2364.html",
+      "ID": "CVE-2008-2364"
     }
   ],
   "Criteria": {
@@ -27,6 +27,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "httpd is earlier than 0:2.2.3-11.0.1.el5_2.4"
+              },
+              {
+                "Comment": "httpd is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -56,18 +68,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "httpd is earlier than 0:2.2.3-11.0.1.el5_2.4"
-              },
-              {
-                "Comment": "httpd is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "mod_ssl is earlier than 1:2.2.3-11.0.1.el5_2.4"
               },
               {
@@ -89,13 +89,13 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2364.html",
-      "ID": "CVE-2008-2364"
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2939.html",
+      "ID": "CVE-2008-2939"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2939.html",
-      "ID": "CVE-2008-2939"
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2364.html",
+      "ID": "CVE-2008-2364"
     }
   ]
 }

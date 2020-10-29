@@ -7,68 +7,68 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2008-0569.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2008-0569.html",
       "ID": "ELSA-2008-0569"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2798.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2798.html",
       "ID": "CVE-2008-2798"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2799.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2799.html",
       "ID": "CVE-2008-2799"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2800.html",
-      "ID": "CVE-2008-2800"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2801.html",
-      "ID": "CVE-2008-2801"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2802.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2802.html",
       "ID": "CVE-2008-2802"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2803.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2803.html",
       "ID": "CVE-2008-2803"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2805.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2805.html",
       "ID": "CVE-2008-2805"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2807.html",
-      "ID": "CVE-2008-2807"
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2801.html",
+      "ID": "CVE-2008-2801"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2808.html",
-      "ID": "CVE-2008-2808"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2809.html",
-      "ID": "CVE-2008-2809"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2810.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2810.html",
       "ID": "CVE-2008-2810"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-2811.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2811.html",
       "ID": "CVE-2008-2811"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2800.html",
+      "ID": "CVE-2008-2800"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2807.html",
+      "ID": "CVE-2008-2807"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2808.html",
+      "ID": "CVE-2008-2808"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-2809.html",
+      "ID": "CVE-2008-2809"
     }
   ],
   "Criteria": {
@@ -77,6 +77,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "devhelp is earlier than 0:0.12-17.el5"
+              },
+              {
+                "Comment": "devhelp is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -118,18 +130,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "yelp is earlier than 0:2.16.0-19.el5"
-              },
-              {
-                "Comment": "yelp is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "xulrunner-devel is earlier than 0:1.9-1.0.1.el5"
               },
               {
@@ -142,10 +142,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "devhelp is earlier than 0:0.12-17.el5"
+                "Comment": "xulrunner-devel-unstable is earlier than 0:1.9-1.0.1.el5"
               },
               {
-                "Comment": "devhelp is signed with the Oracle Linux 5 key"
+                "Comment": "xulrunner-devel-unstable is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -154,10 +154,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "xulrunner-devel-unstable is earlier than 0:1.9-1.0.1.el5"
+                "Comment": "yelp is earlier than 0:2.16.0-19.el5"
               },
               {
-                "Comment": "xulrunner-devel-unstable is signed with the Oracle Linux 5 key"
+                "Comment": "yelp is signed with the Oracle Linux 5 key"
               }
             ]
           }
@@ -175,63 +175,63 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2798.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2798.html",
       "ID": "CVE-2008-2798"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2799.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2799.html",
       "ID": "CVE-2008-2799"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2800.html",
-      "ID": "CVE-2008-2800"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2801.html",
-      "ID": "CVE-2008-2801"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2802.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2802.html",
       "ID": "CVE-2008-2802"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2803.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2803.html",
       "ID": "CVE-2008-2803"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2805.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2805.html",
       "ID": "CVE-2008-2805"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2807.html",
-      "ID": "CVE-2008-2807"
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2801.html",
+      "ID": "CVE-2008-2801"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2808.html",
-      "ID": "CVE-2008-2808"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2809.html",
-      "ID": "CVE-2008-2809"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2810.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2810.html",
       "ID": "CVE-2008-2810"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-2811.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2811.html",
       "ID": "CVE-2008-2811"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2800.html",
+      "ID": "CVE-2008-2800"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2807.html",
+      "ID": "CVE-2008-2807"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2808.html",
+      "ID": "CVE-2008-2808"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-2809.html",
+      "ID": "CVE-2008-2809"
     }
   ]
 }

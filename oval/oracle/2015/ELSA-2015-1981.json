@@ -8,22 +8,22 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2015-1981.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2015-1981.html",
       "ID": "ELSA-2015-1981"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-7181.html",
-      "ID": "CVE-2015-7181"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-7182.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-7182.html",
       "ID": "CVE-2015-7182"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-7183.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-7181.html",
+      "ID": "CVE-2015-7181"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-7183.html",
       "ID": "CVE-2015-7183"
     }
   ],
@@ -41,10 +41,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-util-devel is earlier than 0:3.19.1-2.el6_7"
+                    "Comment": "nspr is earlier than 0:4.10.8-2.el6_7"
                   },
                   {
-                    "Comment": "nss-util-devel is signed with the Oracle Linux 6 key"
+                    "Comment": "nspr is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nspr-devel is earlier than 0:4.10.8-2.el6_7"
+                  },
+                  {
+                    "Comment": "nspr-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -77,10 +89,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-tools is earlier than 0:3.19.1-5.0.1.el6_7"
+                    "Comment": "nss-pkcs11-devel is earlier than 0:3.19.1-5.0.1.el6_7"
                   },
                   {
-                    "Comment": "nss-tools is signed with the Oracle Linux 6 key"
+                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -101,22 +113,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nspr-devel is earlier than 0:4.10.8-2.el6_7"
+                    "Comment": "nss-tools is earlier than 0:3.19.1-5.0.1.el6_7"
                   },
                   {
-                    "Comment": "nspr-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-pkcs11-devel is earlier than 0:3.19.1-5.0.1.el6_7"
-                  },
-                  {
-                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 6 key"
+                    "Comment": "nss-tools is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -137,10 +137,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nspr is earlier than 0:4.10.8-2.el6_7"
+                    "Comment": "nss-util-devel is earlier than 0:3.19.1-2.el6_7"
                   },
                   {
-                    "Comment": "nspr is signed with the Oracle Linux 6 key"
+                    "Comment": "nss-util-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -160,6 +160,54 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nspr is earlier than 0:4.10.8-2.el7_1"
+                  },
+                  {
+                    "Comment": "nspr is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nspr-devel is earlier than 0:4.10.8-2.el7_1"
+                  },
+                  {
+                    "Comment": "nspr-devel is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss is earlier than 0:3.19.1-7.0.1.el7_1.2"
+                  },
+                  {
+                    "Comment": "nss is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-devel is earlier than 0:3.19.1-7.0.1.el7_1.2"
+                  },
+                  {
+                    "Comment": "nss-devel is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -189,58 +237,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nspr-devel is earlier than 0:4.10.8-2.el7_1"
-                  },
-                  {
-                    "Comment": "nspr-devel is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-util-devel is earlier than 0:3.19.1-4.el7_1"
-                  },
-                  {
-                    "Comment": "nss-util-devel is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "nss-tools is earlier than 0:3.19.1-7.0.1.el7_1.2"
                   },
                   {
                     "Comment": "nss-tools is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-devel is earlier than 0:3.19.1-7.0.1.el7_1.2"
-                  },
-                  {
-                    "Comment": "nss-devel is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nspr is earlier than 0:4.10.8-2.el7_1"
-                  },
-                  {
-                    "Comment": "nspr is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -261,10 +261,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss is earlier than 0:3.19.1-7.0.1.el7_1.2"
+                    "Comment": "nss-util-devel is earlier than 0:3.19.1-4.el7_1"
                   },
                   {
-                    "Comment": "nss is signed with the Oracle Linux 7 key"
+                    "Comment": "nss-util-devel is signed with the Oracle Linux 7 key"
                   }
                 ]
               }
@@ -285,17 +285,17 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-7181.html",
-      "ID": "CVE-2015-7181"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-7182.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-7182.html",
       "ID": "CVE-2015-7182"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-7183.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-7181.html",
+      "ID": "CVE-2015-7181"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-7183.html",
       "ID": "CVE-2015-7183"
     }
   ]

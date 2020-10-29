@@ -7,53 +7,53 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2007-0940.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2007-0940.html",
       "ID": "ELSA-2007-0940"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3105.html",
-      "ID": "CVE-2007-3105"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3380.html",
-      "ID": "CVE-2007-3380"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3513.html",
-      "ID": "CVE-2007-3513"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3731.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3731.html",
       "ID": "CVE-2007-3731"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3848.html",
-      "ID": "CVE-2007-3848"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3850.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3850.html",
       "ID": "CVE-2007-3850"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-4133.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3105.html",
+      "ID": "CVE-2007-3105"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3848.html",
+      "ID": "CVE-2007-3848"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-4133.html",
       "ID": "CVE-2007-4133"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-4308.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-4308.html",
       "ID": "CVE-2007-4308"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-4574.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-4574.html",
       "ID": "CVE-2007-4574"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3380.html",
+      "ID": "CVE-2007-3380"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3513.html",
+      "ID": "CVE-2007-3513"
     }
   ],
   "Criteria": {
@@ -67,34 +67,22 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "kernel is earlier than 0:2.6.18-8.1.15.0.1.el5"
+              },
+              {
+                "Comment": "kernel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "kernel-PAE is earlier than 0:2.6.18-8.1.15.0.1.el5"
               },
               {
                 "Comment": "kernel-PAE is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "ocfs2-2.6.18-8.1.15.0.1.el5PAE is earlier than 0:1.2.6-6.el5"
-              },
-              {
-                "Comment": "ocfs2-2.6.18-8.1.15.0.1.el5PAE is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5PAE is earlier than 0:2.0.4-1.el5"
-              },
-              {
-                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5PAE is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -115,22 +103,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5 is earlier than 0:2.0.4-1.el5"
+                "Comment": "kernel-devel is earlier than 0:2.6.18-8.1.15.0.1.el5"
               },
               {
-                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5 is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-xen is earlier than 0:2.6.18-8.1.15.0.1.el5"
-              },
-              {
-                "Comment": "kernel-xen is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-devel is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -151,10 +127,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel is earlier than 0:2.6.18-8.1.15.0.1.el5"
+                "Comment": "kernel-headers is earlier than 0:2.6.18-8.1.15.0.1.el5"
               },
               {
-                "Comment": "kernel is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-headers is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-xen is earlier than 0:2.6.18-8.1.15.0.1.el5"
+              },
+              {
+                "Comment": "kernel-xen is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -187,6 +175,18 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "ocfs2-2.6.18-8.1.15.0.1.el5PAE is earlier than 0:1.2.6-6.el5"
+              },
+              {
+                "Comment": "ocfs2-2.6.18-8.1.15.0.1.el5PAE is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "ocfs2-2.6.18-8.1.15.0.1.el5xen is earlier than 0:1.2.6-6.el5"
               },
               {
@@ -199,10 +199,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-headers is earlier than 0:2.6.18-8.1.15.0.1.el5"
+                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5 is earlier than 0:2.0.4-1.el5"
               },
               {
-                "Comment": "kernel-headers is signed with the Oracle Linux 5 key"
+                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5 is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5PAE is earlier than 0:2.0.4-1.el5"
+              },
+              {
+                "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5PAE is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -215,18 +227,6 @@
               },
               {
                 "Comment": "oracleasm-2.6.18-8.1.15.0.1.el5xen is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-devel is earlier than 0:2.6.18-8.1.15.0.1.el5"
-              },
-              {
-                "Comment": "kernel-devel is signed with the Oracle Linux 5 key"
               }
             ]
           }
@@ -244,48 +244,48 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3105.html",
-      "ID": "CVE-2007-3105"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3380.html",
-      "ID": "CVE-2007-3380"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3513.html",
-      "ID": "CVE-2007-3513"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3731.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3731.html",
       "ID": "CVE-2007-3731"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3848.html",
-      "ID": "CVE-2007-3848"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3850.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3850.html",
       "ID": "CVE-2007-3850"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-4133.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3105.html",
+      "ID": "CVE-2007-3105"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3848.html",
+      "ID": "CVE-2007-3848"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-4133.html",
       "ID": "CVE-2007-4133"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-4308.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-4308.html",
       "ID": "CVE-2007-4308"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-4574.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-4574.html",
       "ID": "CVE-2007-4574"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3380.html",
+      "ID": "CVE-2007-3380"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3513.html",
+      "ID": "CVE-2007-3513"
     }
   ]
 }

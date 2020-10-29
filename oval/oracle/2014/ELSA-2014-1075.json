@@ -7,18 +7,18 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2014-1075.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2014-1075.html",
       "ID": "ELSA-2014-1075"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-0222.html",
-      "ID": "CVE-2014-0222"
+      "URI": "https://linux.oracle.com/cve/CVE-2014-0223.html",
+      "ID": "CVE-2014-0223"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-0223.html",
-      "ID": "CVE-2014-0223"
+      "URI": "https://linux.oracle.com/cve/CVE-2014-0222.html",
+      "ID": "CVE-2014-0222"
     }
   ],
   "Criteria": {
@@ -27,6 +27,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "qemu-guest-agent is earlier than 2:0.12.1.2-2.415.el6_5.14"
+              },
+              {
+                "Comment": "qemu-guest-agent is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -62,18 +74,6 @@
                 "Comment": "qemu-kvm-tools is signed with the Oracle Linux 6 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "qemu-guest-agent is earlier than 2:0.12.1.2-2.415.el6_5.14"
-              },
-              {
-                "Comment": "qemu-guest-agent is signed with the Oracle Linux 6 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -89,13 +89,13 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-0222.html",
-      "ID": "CVE-2014-0222"
+      "Href": "https://linux.oracle.com/cve/CVE-2014-0223.html",
+      "ID": "CVE-2014-0223"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-0223.html",
-      "ID": "CVE-2014-0223"
+      "Href": "https://linux.oracle.com/cve/CVE-2014-0222.html",
+      "ID": "CVE-2014-0222"
     }
   ]
 }

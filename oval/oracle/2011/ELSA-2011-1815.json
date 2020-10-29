@@ -8,12 +8,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-1815.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-1815.html",
       "ID": "ELSA-2011-1815"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-4599.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-4599.html",
       "ID": "CVE-2011-4599"
     }
   ],
@@ -26,6 +26,18 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "icu is earlier than 0:3.6-5.16.1"
+                  },
+                  {
+                    "Comment": "icu is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -47,18 +59,6 @@
                   },
                   {
                     "Comment": "libicu-devel is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "icu is earlier than 0:3.6-5.16.1"
-                  },
-                  {
-                    "Comment": "icu is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -95,18 +95,6 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "libicu-devel is earlier than 0:4.2.1-9.1.el6_2"
-                  },
-                  {
-                    "Comment": "libicu-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "icu is earlier than 0:4.2.1-9.1.el6_2"
                   },
                   {
@@ -119,10 +107,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "libicu-doc is earlier than 0:4.2.1-9.1.el6_2"
+                    "Comment": "libicu is earlier than 0:4.2.1-9.1.el6_2"
                   },
                   {
-                    "Comment": "libicu-doc is signed with the Oracle Linux 6 key"
+                    "Comment": "libicu is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -131,10 +119,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "libicu is earlier than 0:4.2.1-9.1.el6_2"
+                    "Comment": "libicu-devel is earlier than 0:4.2.1-9.1.el6_2"
                   },
                   {
-                    "Comment": "libicu is signed with the Oracle Linux 6 key"
+                    "Comment": "libicu-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "libicu-doc is earlier than 0:4.2.1-9.1.el6_2"
+                  },
+                  {
+                    "Comment": "libicu-doc is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -155,7 +155,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-4599.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-4599.html",
       "ID": "CVE-2011-4599"
     }
   ]

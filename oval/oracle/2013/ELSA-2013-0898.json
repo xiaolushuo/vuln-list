@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2013-0898.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2013-0898.html",
       "ID": "ELSA-2013-0898"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-1993.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-1993.html",
       "ID": "CVE-2013-1993"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glx-utils is earlier than 0:6.5.1-7.11.el5_9"
+              },
+              {
+                "Comment": "glx-utils is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,34 +63,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "mesa-libOSMesa is earlier than 0:6.5.1-7.11.el5_9"
-              },
-              {
-                "Comment": "mesa-libOSMesa is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "mesa-libGLU is earlier than 0:6.5.1-7.11.el5_9"
               },
               {
                 "Comment": "mesa-libGLU is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "mesa-source is earlier than 0:6.5.1-7.11.el5_9"
-              },
-              {
-                "Comment": "mesa-source is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -99,6 +87,18 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "mesa-libGLw is earlier than 0:6.5.1-7.11.el5_9"
+              },
+              {
+                "Comment": "mesa-libGLw is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "mesa-libGLw-devel is earlier than 0:6.5.1-7.11.el5_9"
               },
               {
@@ -111,10 +111,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "mesa-libGLw is earlier than 0:6.5.1-7.11.el5_9"
+                "Comment": "mesa-libOSMesa is earlier than 0:6.5.1-7.11.el5_9"
               },
               {
-                "Comment": "mesa-libGLw is signed with the Oracle Linux 5 key"
+                "Comment": "mesa-libOSMesa is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -135,10 +135,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "glx-utils is earlier than 0:6.5.1-7.11.el5_9"
+                "Comment": "mesa-source is earlier than 0:6.5.1-7.11.el5_9"
               },
               {
-                "Comment": "glx-utils is signed with the Oracle Linux 5 key"
+                "Comment": "mesa-source is signed with the Oracle Linux 5 key"
               }
             ]
           }
@@ -156,7 +156,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-1993.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-1993.html",
       "ID": "CVE-2013-1993"
     }
   ]

@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2012-0813.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2012-0813.html",
       "ID": "ELSA-2012-0813"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2012-0833.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2012-0833.html",
       "ID": "CVE-2012-0833"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "389-ds-base is earlier than 0:1.2.10.2-15.el6"
+              },
+              {
+                "Comment": "389-ds-base is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -45,18 +57,6 @@
                 "Comment": "389-ds-base-libs is signed with the Oracle Linux 6 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "389-ds-base is earlier than 0:1.2.10.2-15.el6"
-              },
-              {
-                "Comment": "389-ds-base is signed with the Oracle Linux 6 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -72,7 +72,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2012-0833.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2012-0833.html",
       "ID": "CVE-2012-0833"
     }
   ]

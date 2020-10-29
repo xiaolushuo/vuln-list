@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2012-1208.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2012-1208.html",
       "ID": "ELSA-2012-1208"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2012-3480.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2012-3480.html",
       "ID": "CVE-2012-3480"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc is earlier than 0:2.12-1.80.el6_3.5"
+              },
+              {
+                "Comment": "glibc is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,10 +63,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "glibc-utils is earlier than 0:2.12-1.80.el6_3.5"
+                "Comment": "glibc-headers is earlier than 0:2.12-1.80.el6_3.5"
               },
               {
-                "Comment": "glibc-utils is signed with the Oracle Linux 6 key"
+                "Comment": "glibc-headers is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -75,10 +87,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "glibc is earlier than 0:2.12-1.80.el6_3.5"
+                "Comment": "glibc-utils is earlier than 0:2.12-1.80.el6_3.5"
               },
               {
-                "Comment": "glibc is signed with the Oracle Linux 6 key"
+                "Comment": "glibc-utils is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -91,18 +103,6 @@
               },
               {
                 "Comment": "nscd is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-headers is earlier than 0:2.12-1.80.el6_3.5"
-              },
-              {
-                "Comment": "glibc-headers is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -120,7 +120,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2012-3480.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2012-3480.html",
       "ID": "CVE-2012-3480"
     }
   ]

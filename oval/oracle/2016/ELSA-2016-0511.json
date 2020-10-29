@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-0511.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-0511.html",
       "ID": "ELSA-2016-0511"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0636.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0636.html",
       "ID": "CVE-2016-0636"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.99-2.6.5.0.0.1.el6_7"
+              },
+              {
+                "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,34 +63,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "java-1.7.0-openjdk-src is earlier than 1:1.7.0.99-2.6.5.0.0.1.el6_7"
-              },
-              {
-                "Comment": "java-1.7.0-openjdk-src is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.99-2.6.5.0.0.1.el6_7"
-              },
-              {
-                "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "java-1.7.0-openjdk-javadoc is earlier than 1:1.7.0.99-2.6.5.0.0.1.el6_7"
               },
               {
                 "Comment": "java-1.7.0-openjdk-javadoc is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.7.0-openjdk-src is earlier than 1:1.7.0.99-2.6.5.0.0.1.el6_7"
+              },
+              {
+                "Comment": "java-1.7.0-openjdk-src is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -96,7 +96,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0636.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0636.html",
       "ID": "CVE-2016-0636"
     }
   ]

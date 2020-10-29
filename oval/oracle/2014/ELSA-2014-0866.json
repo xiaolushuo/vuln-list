@@ -8,17 +8,17 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2014-0866.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2014-0866.html",
       "ID": "ELSA-2014-0866"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-0244.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-0244.html",
       "ID": "CVE-2014-0244"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-3493.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-3493.html",
       "ID": "CVE-2014-3493"
     }
   ],
@@ -36,34 +36,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "samba3x-doc is earlier than 0:3.6.6-0.140.el5_10"
+                    "Comment": "samba3x is earlier than 0:3.6.6-0.140.el5_10"
                   },
                   {
-                    "Comment": "samba3x-doc is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "samba3x-winbind is earlier than 0:3.6.6-0.140.el5_10"
-                  },
-                  {
-                    "Comment": "samba3x-winbind is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "samba3x-common is earlier than 0:3.6.6-0.140.el5_10"
-                  },
-                  {
-                    "Comment": "samba3x-common is signed with the Oracle Linux 5 key"
+                    "Comment": "samba3x is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -84,10 +60,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "samba3x-winbind-devel is earlier than 0:3.6.6-0.140.el5_10"
+                    "Comment": "samba3x-common is earlier than 0:3.6.6-0.140.el5_10"
                   },
                   {
-                    "Comment": "samba3x-winbind-devel is signed with the Oracle Linux 5 key"
+                    "Comment": "samba3x-common is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -96,10 +72,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "samba3x-swat is earlier than 0:3.6.6-0.140.el5_10"
+                    "Comment": "samba3x-doc is earlier than 0:3.6.6-0.140.el5_10"
                   },
                   {
-                    "Comment": "samba3x-swat is signed with the Oracle Linux 5 key"
+                    "Comment": "samba3x-doc is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -120,10 +96,34 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "samba3x is earlier than 0:3.6.6-0.140.el5_10"
+                    "Comment": "samba3x-swat is earlier than 0:3.6.6-0.140.el5_10"
                   },
                   {
-                    "Comment": "samba3x is signed with the Oracle Linux 5 key"
+                    "Comment": "samba3x-swat is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "samba3x-winbind is earlier than 0:3.6.6-0.140.el5_10"
+                  },
+                  {
+                    "Comment": "samba3x-winbind is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "samba3x-winbind-devel is earlier than 0:3.6.6-0.140.el5_10"
+                  },
+                  {
+                    "Comment": "samba3x-winbind-devel is signed with the Oracle Linux 5 key"
                   }
                 ]
               }
@@ -143,6 +143,30 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "libsmbclient is earlier than 0:3.6.9-169.el6_5"
+                  },
+                  {
+                    "Comment": "libsmbclient is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "libsmbclient-devel is earlier than 0:3.6.9-169.el6_5"
+                  },
+                  {
+                    "Comment": "libsmbclient-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -172,70 +196,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "samba-winbind is earlier than 0:3.6.9-169.el6_5"
-                  },
-                  {
-                    "Comment": "samba-winbind is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "samba-common is earlier than 0:3.6.9-169.el6_5"
                   },
                   {
                     "Comment": "samba-common is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "samba-winbind-devel is earlier than 0:3.6.9-169.el6_5"
-                  },
-                  {
-                    "Comment": "samba-winbind-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "samba-domainjoin-gui is earlier than 0:3.6.9-169.el6_5"
-                  },
-                  {
-                    "Comment": "samba-domainjoin-gui is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "samba-winbind-krb5-locator is earlier than 0:3.6.9-169.el6_5"
-                  },
-                  {
-                    "Comment": "samba-winbind-krb5-locator is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "libsmbclient-devel is earlier than 0:3.6.9-169.el6_5"
-                  },
-                  {
-                    "Comment": "libsmbclient-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -256,10 +220,34 @@
                 "Criterias": null,
                 "Criterions": [
                   {
+                    "Comment": "samba-domainjoin-gui is earlier than 0:3.6.9-169.el6_5"
+                  },
+                  {
+                    "Comment": "samba-domainjoin-gui is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
                     "Comment": "samba-swat is earlier than 0:3.6.9-169.el6_5"
                   },
                   {
                     "Comment": "samba-swat is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "samba-winbind is earlier than 0:3.6.9-169.el6_5"
+                  },
+                  {
+                    "Comment": "samba-winbind is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -280,10 +268,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "libsmbclient is earlier than 0:3.6.9-169.el6_5"
+                    "Comment": "samba-winbind-devel is earlier than 0:3.6.9-169.el6_5"
                   },
                   {
-                    "Comment": "libsmbclient is signed with the Oracle Linux 6 key"
+                    "Comment": "samba-winbind-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "samba-winbind-krb5-locator is earlier than 0:3.6.9-169.el6_5"
+                  },
+                  {
+                    "Comment": "samba-winbind-krb5-locator is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -304,12 +304,12 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-0244.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-0244.html",
       "ID": "CVE-2014-0244"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-3493.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-3493.html",
       "ID": "CVE-2014-3493"
     }
   ]

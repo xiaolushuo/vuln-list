@@ -8,12 +8,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-1187.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-1187.html",
       "ID": "ELSA-2011-1187"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-1929.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-1929.html",
       "ID": "CVE-2011-1929"
     }
   ],
@@ -48,6 +48,18 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "dovecot is earlier than 1:2.0.9-2.el6_1.1"
+                  },
+                  {
+                    "Comment": "dovecot is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -95,18 +107,6 @@
                     "Comment": "dovecot-pigeonhole is signed with the Oracle Linux 6 key"
                   }
                 ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "dovecot is earlier than 1:2.0.9-2.el6_1.1"
-                  },
-                  {
-                    "Comment": "dovecot is signed with the Oracle Linux 6 key"
-                  }
-                ]
               }
             ],
             "Criterions": null
@@ -125,7 +125,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-1929.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-1929.html",
       "ID": "CVE-2011-1929"
     }
   ]

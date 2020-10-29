@@ -7,43 +7,43 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-0200.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-0200.html",
       "ID": "ELSA-2011-0200"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-1322.html",
-      "ID": "CVE-2010-1322"
+      "URI": "https://linux.oracle.com/cve/CVE-2011-0282.html",
+      "ID": "CVE-2011-0282"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-1323.html",
-      "ID": "CVE-2010-1323"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-1324.html",
-      "ID": "CVE-2010-1324"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-4020.html",
-      "ID": "CVE-2010-4020"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-4022.html",
-      "ID": "CVE-2010-4022"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-0281.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-0281.html",
       "ID": "CVE-2011-0281"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-0282.html",
-      "ID": "CVE-2011-0282"
+      "URI": "https://linux.oracle.com/cve/CVE-2010-1322.html",
+      "ID": "CVE-2010-1322"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-4020.html",
+      "ID": "CVE-2010-4020"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-1324.html",
+      "ID": "CVE-2010-1324"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-4022.html",
+      "ID": "CVE-2010-4022"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-1323.html",
+      "ID": "CVE-2010-1323"
     }
   ],
   "Criteria": {
@@ -52,6 +52,54 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "krb5-devel is earlier than 0:1.8.2-3.el6_0.4"
+              },
+              {
+                "Comment": "krb5-devel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "krb5-libs is earlier than 0:1.8.2-3.el6_0.4"
+              },
+              {
+                "Comment": "krb5-libs is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "krb5-pkinit-openssl is earlier than 0:1.8.2-3.el6_0.4"
+              },
+              {
+                "Comment": "krb5-pkinit-openssl is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "krb5-server is earlier than 0:1.8.2-3.el6_0.4"
+              },
+              {
+                "Comment": "krb5-server is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -75,54 +123,6 @@
                 "Comment": "krb5-workstation is signed with the Oracle Linux 6 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "krb5-libs is earlier than 0:1.8.2-3.el6_0.4"
-              },
-              {
-                "Comment": "krb5-libs is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "krb5-devel is earlier than 0:1.8.2-3.el6_0.4"
-              },
-              {
-                "Comment": "krb5-devel is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "krb5-server is earlier than 0:1.8.2-3.el6_0.4"
-              },
-              {
-                "Comment": "krb5-server is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "krb5-pkinit-openssl is earlier than 0:1.8.2-3.el6_0.4"
-              },
-              {
-                "Comment": "krb5-pkinit-openssl is signed with the Oracle Linux 6 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -138,38 +138,38 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-1322.html",
-      "ID": "CVE-2010-1322"
+      "Href": "https://linux.oracle.com/cve/CVE-2011-0282.html",
+      "ID": "CVE-2011-0282"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-1323.html",
-      "ID": "CVE-2010-1323"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-1324.html",
-      "ID": "CVE-2010-1324"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-4020.html",
-      "ID": "CVE-2010-4020"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-4022.html",
-      "ID": "CVE-2010-4022"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-0281.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-0281.html",
       "ID": "CVE-2011-0281"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-0282.html",
-      "ID": "CVE-2011-0282"
+      "Href": "https://linux.oracle.com/cve/CVE-2010-1322.html",
+      "ID": "CVE-2010-1322"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-4020.html",
+      "ID": "CVE-2010-4020"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-1324.html",
+      "ID": "CVE-2010-1324"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-4022.html",
+      "ID": "CVE-2010-4022"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-1323.html",
+      "ID": "CVE-2010-1323"
     }
   ]
 }

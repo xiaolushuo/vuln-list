@@ -1,49 +1,49 @@
 {
   "Title": "ELSA-2018-3521:  java-11-openjdk security update (CRITICAL)",
-  "Description": "[1:11.0.1.13-3.0.1]\n- link atomic for ix86 build\n\n[1:11.0.1.13-3]\n- Bump release for rebuild.\n\n[1:11.0.1.13-2]\n- Use LTS designator in version output for RHEL.\n\n[1:11.0.1.13-1]\n- Update to October 2018 CPU release, 11.0.1+13.\n\n[1:11.0.0.28-2]\n- Use --with-vendor-version-string=18.9 so as to show original\n  GA date for the JDK.\n\n[1:11.0.0.28-1]\n- Identify as GA version and no longer as early access (EA).\n- JDK 11 has been released for GA on 2018-09-25.\n\n[1:11.0.ea.28-9]\n- Rework changes from 1:11.0.ea.22-6. RHBZ#1632174 supercedes\n  RHBZ-1624122.\n- Add patch, JDK-8210416-RHBZ-1632174-fdlibm-opt-fix.patch, so as to\n  optimize compilation of fdlibm library.\n- Add patch, JDK-8210425-RHBZ-1632174-sharedRuntimeTrig-opt-fix.patch, so\n  as to optimize compilation of sharedRuntime{Trig,Trans}.cpp\n- Add patch, JDK-8210647-RHBZ-1632174-libsaproc-opt-fix.patch, so as to\n  optimize compilation of libsaproc (extra c flags won't override\n  optimization).\n- Add patch, JDK-8210761-RHBZ-1632174-libjsig-opt-fix.patch, so as to\n  optimize compilation of libjsig.\n- Add patch, JDK-8210703-RHBZ-1632174-vmStructs-opt-fix.patch, so as to\n  optimize compilation of vmStructs.cpp (part of libjvm.so).\n- Reinstate filtering of opt flags coming from redhat-rpm-config.\n\n[1:11.0.ea.28-8]\n- removed version less provides\n- javadocdir moved to arched dir as it is no longer noarch\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.28-6]\n- Add patch, RHBZ-1630996-JDK-8210858-workaround-disable-aarch64-intrinsic-log.patch,\n  so as to disable log math intrinsic on aarch64. Work-around for\n  JDK-8210858\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.28-5]\n- Add patch, RHBZ-1628612-JDK-8210461-workaround-disable-aarch64-intrinsic.patch,\n  so as to disable dsin/dcos math intrinsics on aarch64. Work-around for\n  JDK-8210461.\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-6]\n- Add patch, JDK-8210416-RHBZ-1624122-fdlibm-opt-fix.patch, so as to\n  optimize compilation of fdlibm library.\n- Add patch, JDK-8210425-RHBZ-1624122-sharedRuntimeTrig-opt-fix.patch, so\n  as to optimize compilation of sharedRuntime{Trig,Trans}.cpp\n- Add patch, JDK-8210647-RHBZ-1624122-libsaproc-opt-fix.patch, so as to\n  optimize compilation of libsaproc (extra c flags won't override\n  optimization).\n- Add patch, JDK-8210703-RHBZ-1624122-vmStructs-opt-fix.patch, so as to\n  optimize compilation of vmStructs.cpp (part of libjvm.so).\n- No longer filter -O flags from C flags coming from\n  redhat-rpm-config.\n- Resolves: RHBZ#1570856\n\n[1:11.0.ea.28-4]\n- link to jhsdb followed its file to ifarch jit_arches ifnarch s390x\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.28-4]\n- modified to build by itself\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.28-3]\n- Enable ZGC on x86_64.\n- Resolves: RHBZ#1570856\n\n[1:11.0.ea.28-2]\n- jfr/*jfc files listed for all arches\n- lib/classlist do not exists s390, ifarch-ed via jit_arches out\n- specfile slightly improved to allow srpm rebuild on rhel8/fedoras\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.28-1]\n- Update to latest upstream build jdk11+28, the first release\n  candidate.\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-8]\n- Adjust system NSS patch, RHBZ-1565658-system-nss-SunEC.patch, so\n  as to filter -Wl,--as-needed from linker flags. Fixes FTBFS issue.\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-6]\n- dissabled accessibility, fixed provides for main package's debug variant\n- Resolves: RHBZ#1570856\n\n[1:11.0.ea.22-8]\n- jfr/*jfc files listed for all arches\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-7]\n- added space behind jmd slave\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-6]\n- jfr/*jfc files listed also for ppc\n- Resolves: rhbz#1570856\n\n[1:11.0.ea.22-5]\n- Initial Load\n- removed -fno-lifetime-dse; rhel7 gcc to old (4.8.5)\n- lib/classlist do not exists s390, ifarch-ed via jit_arches out\n- Resolves: rhbz#1570856",
+  "Description": "[1:11.0.1.13-3.0.1]\n- link atomic for ix86 build\n\n[1:11.0.1.13-3]\n- Bump release for rebuild.\n\n[1:11.0.1.13-2]\n- Use LTS designator in version output for RHEL.\n\n[1:11.0.1.13-1]\n- Update to October 2018 CPU release, 11.0.1+13.\n\n[1:11.0.0.28-2]\n- Use --with-vendor-version-string=18.9 so as to show original\n  GA date for the JDK.\n\n[1:11.0.0.28-1]\n- Identify as GA version and no longer as early access (EA).\n- JDK 11 has been released for GA on 2018-09-25.\n\n[1:11.0.ea.28-9]\n- Rework changes from 1:11.0.ea.22-6. RHBZ#1632174 supercedes\n  RHBZ-1624122.\n- Add patch, JDK-8210416-RHBZ-1632174-fdlibm-opt-fix.patch, so as to\n  optimize compilation of fdlibm library.\n- Add patch, JDK-8210425-RHBZ-1632174-sharedRuntimeTrig-opt-fix.patch, so\n  as to optimize compilation of sharedRuntime{Trig,Trans}.cpp\n- Add patch, JDK-8210647-RHBZ-1632174-libsaproc-opt-fix.patch, so as to\n  optimize compilation of libsaproc (extra c flags won't override\n  optimization).\n- Add patch, JDK-8210761-RHBZ-1632174-libjsig-opt-fix.patch, so as to\n  optimize compilation of libjsig.\n- Add patch, JDK-8210703-RHBZ-1632174-vmStructs-opt-fix.patch, so as to\n  optimize compilation of vmStructs.cpp (part of libjvm.so).\n- Reinstate filtering of opt flags coming from redhat-rpm-config.\n\n[1:11.0.ea.28-8]\n- removed version less provides\n- javadocdir moved to arched dir as it is no longer noarch\n- Resolves: rhbz#1570856",
   "Platform": [
     "Oracle Linux 7"
   ],
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2018-3521.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2018-3521.html",
       "ID": "ELSA-2018-3521"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3136.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3136.html",
       "ID": "CVE-2018-3136"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3180.html",
-      "ID": "CVE-2018-3180"
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3150.html",
+      "ID": "CVE-2018-3150"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3139.html",
-      "ID": "CVE-2018-3139"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3149.html",
-      "ID": "CVE-2018-3149"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3169.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3169.html",
       "ID": "CVE-2018-3169"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3183.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3180.html",
+      "ID": "CVE-2018-3180"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3183.html",
       "ID": "CVE-2018-3183"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3150.html",
-      "ID": "CVE-2018-3150"
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3139.html",
+      "ID": "CVE-2018-3139"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3149.html",
+      "ID": "CVE-2018-3149"
     }
   ],
   "Criteria": {
@@ -258,38 +258,38 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3136.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3136.html",
       "ID": "CVE-2018-3136"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3180.html",
-      "ID": "CVE-2018-3180"
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3150.html",
+      "ID": "CVE-2018-3150"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3139.html",
-      "ID": "CVE-2018-3139"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3149.html",
-      "ID": "CVE-2018-3149"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3169.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3169.html",
       "ID": "CVE-2018-3169"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3183.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3180.html",
+      "ID": "CVE-2018-3180"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3183.html",
       "ID": "CVE-2018-3183"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3150.html",
-      "ID": "CVE-2018-3150"
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3139.html",
+      "ID": "CVE-2018-3139"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3149.html",
+      "ID": "CVE-2018-3149"
     }
   ]
 }

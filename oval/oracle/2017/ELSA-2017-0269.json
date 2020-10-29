@@ -9,63 +9,63 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2017-0269.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2017-0269.html",
       "ID": "ELSA-2017-0269"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5546.html",
-      "ID": "CVE-2016-5546"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5547.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5547.html",
       "ID": "CVE-2016-5547"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5548.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5546.html",
+      "ID": "CVE-2016-5546"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5548.html",
       "ID": "CVE-2016-5548"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3241.html",
-      "ID": "CVE-2017-3241"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3252.html",
-      "ID": "CVE-2017-3252"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3253.html",
-      "ID": "CVE-2017-3253"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3272.html",
-      "ID": "CVE-2017-3272"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5552.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5552.html",
       "ID": "CVE-2016-5552"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3231.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3231.html",
       "ID": "CVE-2017-3231"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3261.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3253.html",
+      "ID": "CVE-2017-3253"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3261.html",
       "ID": "CVE-2017-3261"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-3289.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3272.html",
+      "ID": "CVE-2017-3272"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3289.html",
       "ID": "CVE-2017-3289"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3252.html",
+      "ID": "CVE-2017-3252"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-3241.html",
+      "ID": "CVE-2017-3241"
     }
   ],
   "Criteria": {
@@ -77,6 +77,42 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
+                  },
+                  {
+                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "java-1.7.0-openjdk-demo is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
+                  },
+                  {
+                    "Comment": "java-1.7.0-openjdk-demo is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "java-1.7.0-openjdk-devel is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
+                  },
+                  {
+                    "Comment": "java-1.7.0-openjdk-devel is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -98,42 +134,6 @@
                   },
                   {
                     "Comment": "java-1.7.0-openjdk-src is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
-                  },
-                  {
-                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "java-1.7.0-openjdk-devel is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
-                  },
-                  {
-                    "Comment": "java-1.7.0-openjdk-devel is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "java-1.7.0-openjdk-demo is earlier than 1:1.7.0.131-2.6.9.0.0.1.el5_11"
-                  },
-                  {
-                    "Comment": "java-1.7.0-openjdk-demo is signed with the Oracle Linux 5 key"
                   }
                 ]
               }
@@ -158,22 +158,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "java-1.7.0-openjdk-devel is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
+                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
                   },
                   {
-                    "Comment": "java-1.7.0-openjdk-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "java-1.7.0-openjdk-javadoc is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
-                  },
-                  {
-                    "Comment": "java-1.7.0-openjdk-javadoc is signed with the Oracle Linux 6 key"
+                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -194,10 +182,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
+                    "Comment": "java-1.7.0-openjdk-devel is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
                   },
                   {
-                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 6 key"
+                    "Comment": "java-1.7.0-openjdk-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "java-1.7.0-openjdk-javadoc is earlier than 1:1.7.0.131-2.6.9.0.0.1.el6_8"
+                  },
+                  {
+                    "Comment": "java-1.7.0-openjdk-javadoc is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -234,10 +234,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "java-1.7.0-openjdk-headless is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
+                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
                   },
                   {
-                    "Comment": "java-1.7.0-openjdk-headless is signed with the Oracle Linux 7 key"
+                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -246,10 +246,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "java-1.7.0-openjdk is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
+                    "Comment": "java-1.7.0-openjdk-accessibility is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
                   },
                   {
-                    "Comment": "java-1.7.0-openjdk is signed with the Oracle Linux 7 key"
+                    "Comment": "java-1.7.0-openjdk-accessibility is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "java-1.7.0-openjdk-demo is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
+                  },
+                  {
+                    "Comment": "java-1.7.0-openjdk-demo is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -270,10 +282,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "java-1.7.0-openjdk-demo is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
+                    "Comment": "java-1.7.0-openjdk-headless is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
                   },
                   {
-                    "Comment": "java-1.7.0-openjdk-demo is signed with the Oracle Linux 7 key"
+                    "Comment": "java-1.7.0-openjdk-headless is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -300,18 +312,6 @@
                     "Comment": "java-1.7.0-openjdk-src is signed with the Oracle Linux 7 key"
                   }
                 ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "java-1.7.0-openjdk-accessibility is earlier than 1:1.7.0.131-2.6.9.0.0.1.el7_3"
-                  },
-                  {
-                    "Comment": "java-1.7.0-openjdk-accessibility is signed with the Oracle Linux 7 key"
-                  }
-                ]
               }
             ],
             "Criterions": null
@@ -330,58 +330,58 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5546.html",
-      "ID": "CVE-2016-5546"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5547.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5547.html",
       "ID": "CVE-2016-5547"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5548.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5546.html",
+      "ID": "CVE-2016-5546"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5548.html",
       "ID": "CVE-2016-5548"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3241.html",
-      "ID": "CVE-2017-3241"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3252.html",
-      "ID": "CVE-2017-3252"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3253.html",
-      "ID": "CVE-2017-3253"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3272.html",
-      "ID": "CVE-2017-3272"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5552.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5552.html",
       "ID": "CVE-2016-5552"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3231.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3231.html",
       "ID": "CVE-2017-3231"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3261.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3253.html",
+      "ID": "CVE-2017-3253"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3261.html",
       "ID": "CVE-2017-3261"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-3289.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3272.html",
+      "ID": "CVE-2017-3272"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3289.html",
       "ID": "CVE-2017-3289"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3252.html",
+      "ID": "CVE-2017-3252"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-3241.html",
+      "ID": "CVE-2017-3241"
     }
   ]
 }

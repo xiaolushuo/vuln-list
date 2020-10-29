@@ -8,12 +8,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-1455.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-1455.html",
       "ID": "ELSA-2011-1455"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3439.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3439.html",
       "ID": "CVE-2011-3439"
     }
   ],
@@ -26,6 +26,18 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "freetype is earlier than 0:2.2.1-28.el5_7.2"
+                  },
+                  {
+                    "Comment": "freetype is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -47,18 +59,6 @@
                   },
                   {
                     "Comment": "freetype-devel is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "freetype is earlier than 0:2.2.1-28.el5_7.2"
-                  },
-                  {
-                    "Comment": "freetype is signed with the Oracle Linux 5 key"
                   }
                 ]
               }
@@ -131,7 +131,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3439.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3439.html",
       "ID": "CVE-2011-3439"
     }
   ]

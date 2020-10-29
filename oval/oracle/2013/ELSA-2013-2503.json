@@ -8,43 +8,43 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2013-2503.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2013-2503.html",
       "ID": "ELSA-2013-2503"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2012-4398.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2012-4398.html",
       "ID": "CVE-2012-4398"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2012-4461.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-0217.html",
+      "ID": "CVE-2013-0217"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2012-4461.html",
       "ID": "CVE-2012-4461"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2012-4530.html",
-      "ID": "CVE-2012-4530"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-0190.html",
-      "ID": "CVE-2013-0190"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-0231.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-0231.html",
       "ID": "CVE-2013-0231"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-0216.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-0190.html",
+      "ID": "CVE-2013-0190"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-0216.html",
       "ID": "CVE-2013-0216"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-0217.html",
-      "ID": "CVE-2013-0217"
+      "URI": "https://linux.oracle.com/cve/CVE-2012-4530.html",
+      "ID": "CVE-2012-4530"
     }
   ],
   "Criteria": {
@@ -56,6 +56,18 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek is earlier than 0:2.6.39-300.28.1.el5uek"
+                  },
+                  {
+                    "Comment": "kernel-uek is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -73,34 +85,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-firmware is earlier than 0:2.6.39-300.28.1.el5uek"
+                    "Comment": "kernel-uek-debug-devel is earlier than 0:2.6.39-300.28.1.el5uek"
                   },
                   {
-                    "Comment": "kernel-uek-firmware is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "kernel-uek-doc is earlier than 0:2.6.39-300.28.1.el5uek"
-                  },
-                  {
-                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "kernel-uek is earlier than 0:2.6.39-300.28.1.el5uek"
-                  },
-                  {
-                    "Comment": "kernel-uek is signed with the Oracle Linux 5 key"
+                    "Comment": "kernel-uek-debug-devel is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -121,10 +109,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-debug-devel is earlier than 0:2.6.39-300.28.1.el5uek"
+                    "Comment": "kernel-uek-doc is earlier than 0:2.6.39-300.28.1.el5uek"
                   },
                   {
-                    "Comment": "kernel-uek-debug-devel is signed with the Oracle Linux 5 key"
+                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek-firmware is earlier than 0:2.6.39-300.28.1.el5uek"
+                  },
+                  {
+                    "Comment": "kernel-uek-firmware is signed with the Oracle Linux 5 key"
                   }
                 ]
               }
@@ -149,22 +149,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-doc is earlier than 0:2.6.39-300.28.1.el6uek"
+                    "Comment": "kernel-uek is earlier than 0:2.6.39-300.28.1.el6uek"
                   },
                   {
-                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "kernel-uek-devel is earlier than 0:2.6.39-300.28.1.el6uek"
-                  },
-                  {
-                    "Comment": "kernel-uek-devel is signed with the Oracle Linux 6 key"
+                    "Comment": "kernel-uek is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -185,10 +173,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek is earlier than 0:2.6.39-300.28.1.el6uek"
+                    "Comment": "kernel-uek-debug-devel is earlier than 0:2.6.39-300.28.1.el6uek"
                   },
                   {
-                    "Comment": "kernel-uek is signed with the Oracle Linux 6 key"
+                    "Comment": "kernel-uek-debug-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -197,10 +185,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-debug-devel is earlier than 0:2.6.39-300.28.1.el6uek"
+                    "Comment": "kernel-uek-devel is earlier than 0:2.6.39-300.28.1.el6uek"
                   },
                   {
-                    "Comment": "kernel-uek-debug-devel is signed with the Oracle Linux 6 key"
+                    "Comment": "kernel-uek-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek-doc is earlier than 0:2.6.39-300.28.1.el6uek"
+                  },
+                  {
+                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -233,38 +233,38 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2012-4398.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2012-4398.html",
       "ID": "CVE-2012-4398"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2012-4461.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-0217.html",
+      "ID": "CVE-2013-0217"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2012-4461.html",
       "ID": "CVE-2012-4461"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2012-4530.html",
-      "ID": "CVE-2012-4530"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-0190.html",
-      "ID": "CVE-2013-0190"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-0231.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-0231.html",
       "ID": "CVE-2013-0231"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-0216.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-0190.html",
+      "ID": "CVE-2013-0190"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-0216.html",
       "ID": "CVE-2013-0216"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-0217.html",
-      "ID": "CVE-2013-0217"
+      "Href": "https://linux.oracle.com/cve/CVE-2012-4530.html",
+      "ID": "CVE-2012-4530"
     }
   ]
 }

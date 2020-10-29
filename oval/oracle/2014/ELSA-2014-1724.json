@@ -7,33 +7,33 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2014-1724.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2014-1724.html",
       "ID": "ELSA-2014-1724"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-4653.html",
-      "ID": "CVE-2014-4653"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-5077.html",
-      "ID": "CVE-2014-5077"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-3611.html",
-      "ID": "CVE-2014-3611"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-3645.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-3645.html",
       "ID": "CVE-2014-3645"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-3646.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-3646.html",
       "ID": "CVE-2014-3646"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-4653.html",
+      "ID": "CVE-2014-4653"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-3611.html",
+      "ID": "CVE-2014-3611"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-5077.html",
+      "ID": "CVE-2014-5077"
     }
   ],
   "Criteria": {
@@ -47,10 +47,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-tools-libs-devel is earlier than 0:3.10.0-123.9.2.el7"
+                "Comment": "kernel is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
-                "Comment": "kernel-tools-libs-devel is signed with the Oracle Linux 7 key"
+                "Comment": "kernel is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -59,22 +59,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-doc is earlier than 0:3.10.0-123.9.2.el7"
+                "Comment": "kernel-abi-whitelists is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
-                "Comment": "kernel-doc is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "python-perf is earlier than 0:3.10.0-123.9.2.el7"
-              },
-              {
-                "Comment": "python-perf is signed with the Oracle Linux 7 key"
+                "Comment": "kernel-abi-whitelists is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -95,6 +83,18 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "kernel-debug-devel is earlier than 0:3.10.0-123.9.2.el7"
+              },
+              {
+                "Comment": "kernel-debug-devel is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "kernel-devel is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
@@ -107,10 +107,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel is earlier than 0:3.10.0-123.9.2.el7"
+                "Comment": "kernel-doc is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
-                "Comment": "kernel is signed with the Oracle Linux 7 key"
+                "Comment": "kernel-doc is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-headers is earlier than 0:3.10.0-123.9.2.el7"
+              },
+              {
+                "Comment": "kernel-headers is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -143,22 +155,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-abi-whitelists is earlier than 0:3.10.0-123.9.2.el7"
+                "Comment": "kernel-tools-libs-devel is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
-                "Comment": "kernel-abi-whitelists is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-headers is earlier than 0:3.10.0-123.9.2.el7"
-              },
-              {
-                "Comment": "kernel-headers is signed with the Oracle Linux 7 key"
+                "Comment": "kernel-tools-libs-devel is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -179,10 +179,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-debug-devel is earlier than 0:3.10.0-123.9.2.el7"
+                "Comment": "python-perf is earlier than 0:3.10.0-123.9.2.el7"
               },
               {
-                "Comment": "kernel-debug-devel is signed with the Oracle Linux 7 key"
+                "Comment": "python-perf is signed with the Oracle Linux 7 key"
               }
             ]
           }
@@ -200,28 +200,28 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-4653.html",
-      "ID": "CVE-2014-4653"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-5077.html",
-      "ID": "CVE-2014-5077"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-3611.html",
-      "ID": "CVE-2014-3611"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-3645.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-3645.html",
       "ID": "CVE-2014-3645"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-3646.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-3646.html",
       "ID": "CVE-2014-3646"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-4653.html",
+      "ID": "CVE-2014-4653"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-3611.html",
+      "ID": "CVE-2014-3611"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-5077.html",
+      "ID": "CVE-2014-5077"
     }
   ]
 }

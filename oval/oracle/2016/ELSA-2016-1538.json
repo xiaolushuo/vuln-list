@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-1538.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-1538.html",
       "ID": "ELSA-2016-1538"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5386.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5386.html",
       "ID": "CVE-2016-5386"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "golang is earlier than 0:1.6.3-1.el7_2.1"
+              },
+              {
+                "Comment": "golang is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -63,18 +75,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "golang-tests is earlier than 0:1.6.3-1.el7_2.1"
-              },
-              {
-                "Comment": "golang-tests is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "golang-src is earlier than 0:1.6.3-1.el7_2.1"
               },
               {
@@ -87,10 +87,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "golang is earlier than 0:1.6.3-1.el7_2.1"
+                "Comment": "golang-tests is earlier than 0:1.6.3-1.el7_2.1"
               },
               {
-                "Comment": "golang is signed with the Oracle Linux 7 key"
+                "Comment": "golang-tests is signed with the Oracle Linux 7 key"
               }
             ]
           }
@@ -108,7 +108,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5386.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5386.html",
       "ID": "CVE-2016-5386"
     }
   ]

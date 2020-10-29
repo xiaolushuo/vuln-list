@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2009-1646.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2009-1646.html",
       "ID": "ELSA-2009-1646"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2009-3736.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2009-3736.html",
       "ID": "CVE-2009-3736"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libtool is earlier than 0:1.5.22-7.el5_4"
+              },
+              {
+                "Comment": "libtool is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -45,18 +57,6 @@
                 "Comment": "libtool-ltdl-devel is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libtool is earlier than 0:1.5.22-7.el5_4"
-              },
-              {
-                "Comment": "libtool is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -72,7 +72,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2009-3736.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2009-3736.html",
       "ID": "CVE-2009-3736"
     }
   ]

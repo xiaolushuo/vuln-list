@@ -7,43 +7,43 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-0050.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-0050.html",
       "ID": "ELSA-2016-0050"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-7575.html",
-      "ID": "CVE-2015-7575"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0402.html",
-      "ID": "CVE-2016-0402"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0448.html",
-      "ID": "CVE-2016-0448"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0466.html",
-      "ID": "CVE-2016-0466"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0475.html",
-      "ID": "CVE-2016-0475"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0483.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0483.html",
       "ID": "CVE-2016-0483"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-0494.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0494.html",
       "ID": "CVE-2016-0494"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0466.html",
+      "ID": "CVE-2016-0466"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0448.html",
+      "ID": "CVE-2016-0448"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-7575.html",
+      "ID": "CVE-2015-7575"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0402.html",
+      "ID": "CVE-2016-0402"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-0475.html",
+      "ID": "CVE-2016-0475"
     }
   ],
   "Criteria": {
@@ -52,6 +52,30 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.8.0-openjdk is earlier than 1:1.8.0.71-1.b15.el6_7"
+              },
+              {
+                "Comment": "java-1.8.0-openjdk is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.8.0-openjdk-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
+              },
+              {
+                "Comment": "java-1.8.0-openjdk-debug is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -69,10 +93,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "java-1.8.0-openjdk-javadoc-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
+                "Comment": "java-1.8.0-openjdk-demo-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
               },
               {
-                "Comment": "java-1.8.0-openjdk-javadoc-debug is signed with the Oracle Linux 6 key"
+                "Comment": "java-1.8.0-openjdk-demo-debug is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -81,10 +105,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "java-1.8.0-openjdk-headless-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
+                "Comment": "java-1.8.0-openjdk-devel is earlier than 1:1.8.0.71-1.b15.el6_7"
               },
               {
-                "Comment": "java-1.8.0-openjdk-headless-debug is signed with the Oracle Linux 6 key"
+                "Comment": "java-1.8.0-openjdk-devel is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -117,58 +141,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "java-1.8.0-openjdk-src is earlier than 1:1.8.0.71-1.b15.el6_7"
+                "Comment": "java-1.8.0-openjdk-headless-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
               },
               {
-                "Comment": "java-1.8.0-openjdk-src is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "java-1.8.0-openjdk-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
-              },
-              {
-                "Comment": "java-1.8.0-openjdk-debug is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "java-1.8.0-openjdk-devel is earlier than 1:1.8.0.71-1.b15.el6_7"
-              },
-              {
-                "Comment": "java-1.8.0-openjdk-devel is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "java-1.8.0-openjdk-demo-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
-              },
-              {
-                "Comment": "java-1.8.0-openjdk-demo-debug is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "java-1.8.0-openjdk-src-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
-              },
-              {
-                "Comment": "java-1.8.0-openjdk-src-debug is signed with the Oracle Linux 6 key"
+                "Comment": "java-1.8.0-openjdk-headless-debug is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -189,10 +165,34 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "java-1.8.0-openjdk is earlier than 1:1.8.0.71-1.b15.el6_7"
+                "Comment": "java-1.8.0-openjdk-javadoc-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
               },
               {
-                "Comment": "java-1.8.0-openjdk is signed with the Oracle Linux 6 key"
+                "Comment": "java-1.8.0-openjdk-javadoc-debug is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.8.0-openjdk-src is earlier than 1:1.8.0.71-1.b15.el6_7"
+              },
+              {
+                "Comment": "java-1.8.0-openjdk-src is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "java-1.8.0-openjdk-src-debug is earlier than 1:1.8.0.71-1.b15.el6_7"
+              },
+              {
+                "Comment": "java-1.8.0-openjdk-src-debug is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -210,38 +210,38 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-7575.html",
-      "ID": "CVE-2015-7575"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0402.html",
-      "ID": "CVE-2016-0402"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0448.html",
-      "ID": "CVE-2016-0448"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0466.html",
-      "ID": "CVE-2016-0466"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0475.html",
-      "ID": "CVE-2016-0475"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0483.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0483.html",
       "ID": "CVE-2016-0483"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-0494.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0494.html",
       "ID": "CVE-2016-0494"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0466.html",
+      "ID": "CVE-2016-0466"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0448.html",
+      "ID": "CVE-2016-0448"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-7575.html",
+      "ID": "CVE-2015-7575"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0402.html",
+      "ID": "CVE-2016-0402"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-0475.html",
+      "ID": "CVE-2016-0475"
     }
   ]
 }

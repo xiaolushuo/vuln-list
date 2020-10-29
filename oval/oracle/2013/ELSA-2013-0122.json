@@ -7,18 +7,18 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2013-0122.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2013-0122.html",
       "ID": "ELSA-2013-0122"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-4772.html",
-      "ID": "CVE-2007-4772"
+      "URI": "https://linux.oracle.com/cve/CVE-2007-6067.html",
+      "ID": "CVE-2007-6067"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-6067.html",
-      "ID": "CVE-2007-6067"
+      "URI": "https://linux.oracle.com/cve/CVE-2007-4772.html",
+      "ID": "CVE-2007-4772"
     }
   ],
   "Criteria": {
@@ -27,6 +27,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "tcl is earlier than 0:8.4.13-6.el5"
+              },
+              {
+                "Comment": "tcl is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -50,18 +62,6 @@
                 "Comment": "tcl-html is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "tcl is earlier than 0:8.4.13-6.el5"
-              },
-              {
-                "Comment": "tcl is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -77,13 +77,13 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-4772.html",
-      "ID": "CVE-2007-4772"
+      "Href": "https://linux.oracle.com/cve/CVE-2007-6067.html",
+      "ID": "CVE-2007-6067"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-6067.html",
-      "ID": "CVE-2007-6067"
+      "Href": "https://linux.oracle.com/cve/CVE-2007-4772.html",
+      "ID": "CVE-2007-4772"
     }
   ]
 }

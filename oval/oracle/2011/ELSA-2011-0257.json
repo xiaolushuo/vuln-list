@@ -7,18 +7,18 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-0257.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-0257.html",
       "ID": "ELSA-2011-0257"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-4539.html",
-      "ID": "CVE-2010-4539"
+      "URI": "https://linux.oracle.com/cve/CVE-2010-4644.html",
+      "ID": "CVE-2010-4644"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-4644.html",
-      "ID": "CVE-2010-4644"
+      "URI": "https://linux.oracle.com/cve/CVE-2010-4539.html",
+      "ID": "CVE-2010-4539"
     }
   ],
   "Criteria": {
@@ -27,6 +27,42 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "mod_dav_svn is earlier than 0:1.6.11-7.el5_6.1"
+              },
+              {
+                "Comment": "mod_dav_svn is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "subversion is earlier than 0:1.6.11-7.el5_6.1"
+              },
+              {
+                "Comment": "subversion is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "subversion-devel is earlier than 0:1.6.11-7.el5_6.1"
+              },
+              {
+                "Comment": "subversion-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -62,42 +98,6 @@
                 "Comment": "subversion-ruby is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "subversion-devel is earlier than 0:1.6.11-7.el5_6.1"
-              },
-              {
-                "Comment": "subversion-devel is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "mod_dav_svn is earlier than 0:1.6.11-7.el5_6.1"
-              },
-              {
-                "Comment": "mod_dav_svn is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "subversion is earlier than 0:1.6.11-7.el5_6.1"
-              },
-              {
-                "Comment": "subversion is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -113,13 +113,13 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-4539.html",
-      "ID": "CVE-2010-4539"
+      "Href": "https://linux.oracle.com/cve/CVE-2010-4644.html",
+      "ID": "CVE-2010-4644"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-4644.html",
-      "ID": "CVE-2010-4644"
+      "Href": "https://linux.oracle.com/cve/CVE-2010-4539.html",
+      "ID": "CVE-2010-4539"
     }
   ]
 }

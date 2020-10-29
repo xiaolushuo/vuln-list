@@ -8,28 +8,28 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2013-0737.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2013-0737.html",
       "ID": "ELSA-2013-0737"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-1845.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-1849.html",
+      "ID": "CVE-2013-1849"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-1845.html",
       "ID": "CVE-2013-1845"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-1846.html",
-      "ID": "CVE-2013-1846"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-1847.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-1847.html",
       "ID": "CVE-2013-1847"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-1849.html",
-      "ID": "CVE-2013-1849"
+      "URI": "https://linux.oracle.com/cve/CVE-2013-1846.html",
+      "ID": "CVE-2013-1846"
     }
   ],
   "Criteria": {
@@ -41,6 +41,42 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-11.el5_9"
+                  },
+                  {
+                    "Comment": "mod_dav_svn is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion is earlier than 0:1.6.11-11.el5_9"
+                  },
+                  {
+                    "Comment": "subversion is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-devel is earlier than 0:1.6.11-11.el5_9"
+                  },
+                  {
+                    "Comment": "subversion-devel is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -76,42 +112,6 @@
                     "Comment": "subversion-ruby is signed with the Oracle Linux 5 key"
                   }
                 ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-devel is earlier than 0:1.6.11-11.el5_9"
-                  },
-                  {
-                    "Comment": "subversion-devel is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion is earlier than 0:1.6.11-11.el5_9"
-                  },
-                  {
-                    "Comment": "subversion is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-11.el5_9"
-                  },
-                  {
-                    "Comment": "mod_dav_svn is signed with the Oracle Linux 5 key"
-                  }
-                ]
               }
             ],
             "Criterions": null
@@ -134,82 +134,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "subversion-devel is earlier than 0:1.6.11-9.el6_4"
+                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-9.el6_4"
                   },
                   {
-                    "Comment": "subversion-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-javahl is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-javahl is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-svn2cl is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-svn2cl is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-ruby is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-ruby is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-perl is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-perl is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-gnome is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-gnome is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "subversion-kde is earlier than 0:1.6.11-9.el6_4"
-                  },
-                  {
-                    "Comment": "subversion-kde is signed with the Oracle Linux 6 key"
+                    "Comment": "mod_dav_svn is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -230,10 +158,82 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "mod_dav_svn is earlier than 0:1.6.11-9.el6_4"
+                    "Comment": "subversion-devel is earlier than 0:1.6.11-9.el6_4"
                   },
                   {
-                    "Comment": "mod_dav_svn is signed with the Oracle Linux 6 key"
+                    "Comment": "subversion-devel is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-gnome is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-gnome is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-javahl is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-javahl is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-kde is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-kde is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-perl is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-perl is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-ruby is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-ruby is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "subversion-svn2cl is earlier than 0:1.6.11-9.el6_4"
+                  },
+                  {
+                    "Comment": "subversion-svn2cl is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -254,23 +254,23 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-1845.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-1849.html",
+      "ID": "CVE-2013-1849"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-1845.html",
       "ID": "CVE-2013-1845"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-1846.html",
-      "ID": "CVE-2013-1846"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-1847.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-1847.html",
       "ID": "CVE-2013-1847"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-1849.html",
-      "ID": "CVE-2013-1849"
+      "Href": "https://linux.oracle.com/cve/CVE-2013-1846.html",
+      "ID": "CVE-2013-1846"
     }
   ]
 }

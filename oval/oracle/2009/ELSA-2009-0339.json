@@ -7,22 +7,22 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2009-0339.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2009-0339.html",
       "ID": "ELSA-2009-0339"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2009-0581.html",
-      "ID": "CVE-2009-0581"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2009-0723.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2009-0723.html",
       "ID": "CVE-2009-0723"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2009-0733.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2009-0581.html",
+      "ID": "CVE-2009-0581"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2009-0733.html",
       "ID": "CVE-2009-0733"
     }
   ],
@@ -32,6 +32,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "lcms is earlier than 0:1.18-0.1.beta1.el5_3.2"
+              },
+              {
+                "Comment": "lcms is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -55,18 +67,6 @@
                 "Comment": "python-lcms is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "lcms is earlier than 0:1.18-0.1.beta1.el5_3.2"
-              },
-              {
-                "Comment": "lcms is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -82,17 +82,17 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2009-0581.html",
-      "ID": "CVE-2009-0581"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2009-0723.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2009-0723.html",
       "ID": "CVE-2009-0723"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2009-0733.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2009-0581.html",
+      "ID": "CVE-2009-0581"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2009-0733.html",
       "ID": "CVE-2009-0733"
     }
   ]

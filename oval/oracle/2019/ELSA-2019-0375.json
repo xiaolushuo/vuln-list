@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2019-0375.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2019-0375.html",
       "ID": "ELSA-2019-0375"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2019-8308.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2019-8308.html",
       "ID": "CVE-2019-8308"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "flatpak is earlier than 0:1.0.2-4.el7_6"
+              },
+              {
+                "Comment": "flatpak is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -57,18 +69,6 @@
                 "Comment": "flatpak-libs is signed with the Oracle Linux 7 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "flatpak is earlier than 0:1.0.2-4.el7_6"
-              },
-              {
-                "Comment": "flatpak is signed with the Oracle Linux 7 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -84,7 +84,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2019-8308.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2019-8308.html",
       "ID": "CVE-2019-8308"
     }
   ]

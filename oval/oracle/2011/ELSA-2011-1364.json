@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-1364.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-1364.html",
       "ID": "ELSA-2011-1364"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3365.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3365.html",
       "ID": "CVE-2011-3365"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kdelibs is earlier than 6:4.3.4-11.el6_1.4"
+              },
+              {
+                "Comment": "kdelibs is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -57,18 +69,6 @@
                 "Comment": "kdelibs-devel is signed with the Oracle Linux 6 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kdelibs is earlier than 6:4.3.4-11.el6_1.4"
-              },
-              {
-                "Comment": "kdelibs is signed with the Oracle Linux 6 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -84,7 +84,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3365.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3365.html",
       "ID": "CVE-2011-3365"
     }
   ]

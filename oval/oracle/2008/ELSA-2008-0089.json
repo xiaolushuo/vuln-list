@@ -7,32 +7,32 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2008-0089.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2008-0089.html",
       "ID": "ELSA-2008-0089"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-3104.html",
-      "ID": "CVE-2007-3104"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-5904.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-5904.html",
       "ID": "CVE-2007-5904"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-6206.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-6206.html",
       "ID": "CVE-2007-6206"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2007-6416.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-3104.html",
+      "ID": "CVE-2007-3104"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2007-6416.html",
       "ID": "CVE-2007-6416"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2008-0001.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2008-0001.html",
       "ID": "CVE-2008-0001"
     }
   ],
@@ -42,6 +42,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel is earlier than 0:2.6.18-53.1.6.0.1.el5"
+              },
+              {
+                "Comment": "kernel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -71,10 +83,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "ocfs2-2.6.18-53.1.6.0.1.el5PAE is earlier than 0:1.2.7-1.el5"
+                "Comment": "kernel-debug is earlier than 0:2.6.18-53.1.6.0.1.el5"
               },
               {
-                "Comment": "ocfs2-2.6.18-53.1.6.0.1.el5PAE is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-debug is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -83,10 +95,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5PAE is earlier than 0:2.0.4-1.el5"
+                "Comment": "kernel-debug-devel is earlier than 0:2.6.18-53.1.6.0.1.el5"
               },
               {
-                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5PAE is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-debug-devel is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -107,42 +119,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-headers is earlier than 0:2.6.18-53.1.6.0.1.el5"
-              },
-              {
-                "Comment": "kernel-headers is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5 is earlier than 0:2.0.4-1.el5"
-              },
-              {
-                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5 is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel is earlier than 0:2.6.18-53.1.6.0.1.el5"
-              },
-              {
-                "Comment": "kernel is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "kernel-doc is earlier than 0:2.6.18-53.1.6.0.1.el5"
               },
               {
@@ -155,10 +131,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-debug is earlier than 0:2.6.18-53.1.6.0.1.el5"
+                "Comment": "kernel-headers is earlier than 0:2.6.18-53.1.6.0.1.el5"
               },
               {
-                "Comment": "kernel-debug is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-headers is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-xen is earlier than 0:2.6.18-53.1.6.0.1.el5"
+              },
+              {
+                "Comment": "kernel-xen is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -191,10 +179,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-debug-devel is earlier than 0:2.6.18-53.1.6.0.1.el5"
+                "Comment": "ocfs2-2.6.18-53.1.6.0.1.el5PAE is earlier than 0:1.2.7-1.el5"
               },
               {
-                "Comment": "kernel-debug-devel is signed with the Oracle Linux 5 key"
+                "Comment": "ocfs2-2.6.18-53.1.6.0.1.el5PAE is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -215,10 +203,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-xen is earlier than 0:2.6.18-53.1.6.0.1.el5"
+                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5 is earlier than 0:2.0.4-1.el5"
               },
               {
-                "Comment": "kernel-xen is signed with the Oracle Linux 5 key"
+                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5 is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5PAE is earlier than 0:2.0.4-1.el5"
+              },
+              {
+                "Comment": "oracleasm-2.6.18-53.1.6.0.1.el5PAE is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -248,27 +248,27 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-3104.html",
-      "ID": "CVE-2007-3104"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-5904.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-5904.html",
       "ID": "CVE-2007-5904"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-6206.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-6206.html",
       "ID": "CVE-2007-6206"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2007-6416.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-3104.html",
+      "ID": "CVE-2007-3104"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2007-6416.html",
       "ID": "CVE-2007-6416"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2008-0001.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2008-0001.html",
       "ID": "CVE-2008-0001"
     }
   ]

@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-0175.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-0175.html",
       "ID": "ELSA-2016-0175"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-7547.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-7547.html",
       "ID": "CVE-2015-7547"
     }
   ],
@@ -22,6 +22,42 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc is earlier than 0:2.12-1.166.el6_7.7"
+              },
+              {
+                "Comment": "glibc is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-common is earlier than 0:2.12-1.166.el6_7.7"
+              },
+              {
+                "Comment": "glibc-common is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-devel is earlier than 0:2.12-1.166.el6_7.7"
+              },
+              {
+                "Comment": "glibc-devel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -69,42 +105,6 @@
                 "Comment": "nscd is signed with the Oracle Linux 6 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc is earlier than 0:2.12-1.166.el6_7.7"
-              },
-              {
-                "Comment": "glibc is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-common is earlier than 0:2.12-1.166.el6_7.7"
-              },
-              {
-                "Comment": "glibc-common is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-devel is earlier than 0:2.12-1.166.el6_7.7"
-              },
-              {
-                "Comment": "glibc-devel is signed with the Oracle Linux 6 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -120,7 +120,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-7547.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-7547.html",
       "ID": "CVE-2015-7547"
     }
   ]

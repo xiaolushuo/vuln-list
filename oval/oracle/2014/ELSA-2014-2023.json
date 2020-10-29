@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2014-2023.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2014-2023.html",
       "ID": "ELSA-2014-2023"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2014-7817.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2014-7817.html",
       "ID": "CVE-2014-7817"
     }
   ],
@@ -22,6 +22,54 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc is earlier than 0:2.17-55.0.4.el7_0.3"
+              },
+              {
+                "Comment": "glibc is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-common is earlier than 0:2.17-55.0.4.el7_0.3"
+              },
+              {
+                "Comment": "glibc-common is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-devel is earlier than 0:2.17-55.0.4.el7_0.3"
+              },
+              {
+                "Comment": "glibc-devel is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "glibc-headers is earlier than 0:2.17-55.0.4.el7_0.3"
+              },
+              {
+                "Comment": "glibc-headers is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,58 +99,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "glibc is earlier than 0:2.17-55.0.4.el7_0.3"
-              },
-              {
-                "Comment": "glibc is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-headers is earlier than 0:2.17-55.0.4.el7_0.3"
-              },
-              {
-                "Comment": "glibc-headers is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "nscd is earlier than 0:2.17-55.0.4.el7_0.3"
               },
               {
                 "Comment": "nscd is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-common is earlier than 0:2.17-55.0.4.el7_0.3"
-              },
-              {
-                "Comment": "glibc-common is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "glibc-devel is earlier than 0:2.17-55.0.4.el7_0.3"
-              },
-              {
-                "Comment": "glibc-devel is signed with the Oracle Linux 7 key"
               }
             ]
           }
@@ -120,7 +120,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2014-7817.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2014-7817.html",
       "ID": "CVE-2014-7817"
     }
   ]

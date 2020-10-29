@@ -1,23 +1,23 @@
 {
   "Title": "ELSA-2018-0292:  kernel security update (IMPORTANT)",
-  "Description": "- 2.6.18-419.0.0.0.8\n- Backport CVEs to RHCK/OL5 [orabug 27547712] {CVE-2017-5753} {CVE-2017-5754}\n\n- 2.6.18-419.0.0.0.5\n- [fs] fix kernel panic on boot on ia64 guests (Honglei Wang) [orabug 26934100]\n\n- 2.6.18-419.0.0.0.4\n- [fs] fix bug in loading of PIE binaries (Michael Davidson) [orabug 26916951] {CVE-2017-1000253}\n\n- 2.6.18-419.0.0.0.3\n- nfsd: stricter decoding of write-like NFSv2/v3 ops (J. Bruce Fields) [orabug 26586706] {CVE-2017-7895}",
+  "Description": "- 2.6.18-419.0.0.0.8\n- Backport CVEs to RHCK/OL5 [orabug 27547712] {CVE-2017-5753} {CVE-2017-5754}\n\n- 2.6.18-419.0.0.0.5\n- [fs] fix kernel panic on boot on ia64 guests (Honglei Wang) [orabug 26934100]",
   "Platform": [
     "Oracle Linux 5"
   ],
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2018-0292.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2018-0292.html",
       "ID": "ELSA-2018-0292"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-5753.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-5753.html",
       "ID": "CVE-2017-5753"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-5754.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-5754.html",
       "ID": "CVE-2017-5754"
     }
   ],
@@ -27,18 +27,6 @@
       {
         "Operator": "OR",
         "Criterias": [
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-PAE is earlier than 0:2.6.18-419.0.0.0.8.el5"
-              },
-              {
-                "Comment": "kernel-PAE is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -56,22 +44,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-xen-devel is earlier than 0:2.6.18-419.0.0.0.8.el5"
+                "Comment": "kernel-PAE is earlier than 0:2.6.18-419.0.0.0.8.el5"
               },
               {
-                "Comment": "kernel-xen-devel is signed with the Oracle Linux 5 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-devel is earlier than 0:2.6.18-419.0.0.0.8.el5"
-              },
-              {
-                "Comment": "kernel-devel is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-PAE is signed with the Oracle Linux 5 key"
               }
             ]
           },
@@ -116,6 +92,30 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "kernel-devel is earlier than 0:2.6.18-419.0.0.0.8.el5"
+              },
+              {
+                "Comment": "kernel-devel is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-doc is earlier than 0:2.6.18-419.0.0.0.8.el5"
+              },
+              {
+                "Comment": "kernel-doc is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "kernel-headers is earlier than 0:2.6.18-419.0.0.0.8.el5"
               },
               {
@@ -140,10 +140,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-doc is earlier than 0:2.6.18-419.0.0.0.8.el5"
+                "Comment": "kernel-xen-devel is earlier than 0:2.6.18-419.0.0.0.8.el5"
               },
               {
-                "Comment": "kernel-doc is signed with the Oracle Linux 5 key"
+                "Comment": "kernel-xen-devel is signed with the Oracle Linux 5 key"
               }
             ]
           }
@@ -161,12 +161,12 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-5753.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-5753.html",
       "ID": "CVE-2017-5753"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-5754.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-5754.html",
       "ID": "CVE-2017-5754"
     }
   ]

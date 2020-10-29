@@ -7,23 +7,23 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-2577.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-2577.html",
       "ID": "ELSA-2016-2577"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5008.html",
-      "ID": "CVE-2016-5008"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-5160.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-5160.html",
       "ID": "CVE-2015-5160"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-5313.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-5313.html",
       "ID": "CVE-2015-5313"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5008.html",
+      "ID": "CVE-2016-5008"
     }
   ],
   "Criteria": {
@@ -37,10 +37,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt-daemon-driver-lxc is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -49,10 +49,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-docs is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt-client is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt-docs is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt-client is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt-daemon is earlier than 0:2.0.0-10.el7"
+              },
+              {
+                "Comment": "libvirt-daemon is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -65,30 +77,6 @@
               },
               {
                 "Comment": "libvirt-daemon-config-network is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt-daemon-driver-storage is earlier than 0:2.0.0-10.el7"
-              },
-              {
-                "Comment": "libvirt-daemon-driver-storage is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:2.0.0-10.el7"
-              },
-              {
-                "Comment": "libvirt-daemon-driver-nodedev is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -121,22 +109,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt-daemon-kvm is earlier than 0:2.0.0-10.el7"
-              },
-              {
-                "Comment": "libvirt-daemon-kvm is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt-daemon-driver-lxc is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -157,10 +133,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt-daemon-driver-qemu is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt-daemon-driver-nodedev is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -181,10 +157,58 @@
             "Criterias": null,
             "Criterions": [
               {
+                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:2.0.0-10.el7"
+              },
+              {
+                "Comment": "libvirt-daemon-driver-qemu is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
                 "Comment": "libvirt-daemon-driver-secret is earlier than 0:2.0.0-10.el7"
               },
               {
                 "Comment": "libvirt-daemon-driver-secret is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt-daemon-driver-storage is earlier than 0:2.0.0-10.el7"
+              },
+              {
+                "Comment": "libvirt-daemon-driver-storage is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt-daemon-kvm is earlier than 0:2.0.0-10.el7"
+              },
+              {
+                "Comment": "libvirt-daemon-kvm is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt-daemon-lxc is earlier than 0:2.0.0-10.el7"
+              },
+              {
+                "Comment": "libvirt-daemon-lxc is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -205,10 +229,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-daemon is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt-docs is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt-daemon is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt-docs is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -217,22 +241,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-client is earlier than 0:2.0.0-10.el7"
+                "Comment": "libvirt-lock-sanlock is earlier than 0:2.0.0-10.el7"
               },
               {
-                "Comment": "libvirt-client is signed with the Oracle Linux 7 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt-daemon-lxc is earlier than 0:2.0.0-10.el7"
-              },
-              {
-                "Comment": "libvirt-daemon-lxc is signed with the Oracle Linux 7 key"
+                "Comment": "libvirt-lock-sanlock is signed with the Oracle Linux 7 key"
               }
             ]
           },
@@ -259,18 +271,6 @@
                 "Comment": "libvirt-nss is signed with the Oracle Linux 7 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt-lock-sanlock is earlier than 0:2.0.0-10.el7"
-              },
-              {
-                "Comment": "libvirt-lock-sanlock is signed with the Oracle Linux 7 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -286,18 +286,18 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5008.html",
-      "ID": "CVE-2016-5008"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-5160.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-5160.html",
       "ID": "CVE-2015-5160"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-5313.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-5313.html",
       "ID": "CVE-2015-5313"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5008.html",
+      "ID": "CVE-2016-5008"
     }
   ]
 }

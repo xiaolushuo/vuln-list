@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2015-2369.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2015-2369.html",
       "ID": "ELSA-2015-2369"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2015-3248.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2015-3248.html",
       "ID": "CVE-2015-3248"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "openhpi is earlier than 0:3.4.0-2.el7"
+              },
+              {
+                "Comment": "openhpi is signed with the Oracle Linux 7 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -45,18 +57,6 @@
                 "Comment": "openhpi-libs is signed with the Oracle Linux 7 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "openhpi is earlier than 0:3.4.0-2.el7"
-              },
-              {
-                "Comment": "openhpi is signed with the Oracle Linux 7 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -72,7 +72,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2015-3248.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2015-3248.html",
       "ID": "CVE-2015-3248"
     }
   ]

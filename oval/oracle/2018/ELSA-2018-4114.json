@@ -8,48 +8,48 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2018-4114.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2018-4114.html",
       "ID": "ELSA-2018-4114"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-1000410.html",
-      "ID": "CVE-2017-1000410"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-5750.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-5750.html",
       "ID": "CVE-2018-5750"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2017-18203.html",
-      "ID": "CVE-2017-18203"
+      "URI": "https://linux.oracle.com/cve/CVE-2017-1000410.html",
+      "ID": "CVE-2017-1000410"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-6927.html",
-      "ID": "CVE-2018-6927"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-3639.html",
-      "ID": "CVE-2018-3639"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-5333.html",
-      "ID": "CVE-2018-5333"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-10323.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-10323.html",
       "ID": "CVE-2018-10323"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2018-10675.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2017-18203.html",
+      "ID": "CVE-2017-18203"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-10675.html",
       "ID": "CVE-2018-10675"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-3639.html",
+      "ID": "CVE-2018-3639"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-6927.html",
+      "ID": "CVE-2018-6927"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2018-5333.html",
+      "ID": "CVE-2018-5333"
     }
   ],
   "Criteria": {
@@ -61,6 +61,30 @@
           {
             "Operator": "OR",
             "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek is earlier than 0:4.1.12-124.15.2.el6uek"
+                  },
+                  {
+                    "Comment": "kernel-uek is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek-debug is earlier than 0:4.1.12-124.15.2.el6uek"
+                  },
+                  {
+                    "Comment": "kernel-uek-debug is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -102,34 +126,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek is earlier than 0:4.1.12-124.15.2.el6uek"
-                  },
-                  {
-                    "Comment": "kernel-uek is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "kernel-uek-firmware is earlier than 0:4.1.12-124.15.2.el6uek"
                   },
                   {
                     "Comment": "kernel-uek-firmware is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "kernel-uek-debug is earlier than 0:4.1.12-124.15.2.el6uek"
-                  },
-                  {
-                    "Comment": "kernel-uek-debug is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -154,34 +154,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-debug is earlier than 0:4.1.12-124.15.2.el7uek"
-                  },
-                  {
-                    "Comment": "kernel-uek-debug is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "kernel-uek-doc is earlier than 0:4.1.12-124.15.2.el7uek"
-                  },
-                  {
-                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "kernel-uek is earlier than 0:4.1.12-124.15.2.el7uek"
                   },
                   {
                     "Comment": "kernel-uek is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek-debug is earlier than 0:4.1.12-124.15.2.el7uek"
+                  },
+                  {
+                    "Comment": "kernel-uek-debug is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -202,10 +190,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-firmware is earlier than 0:4.1.12-124.15.2.el7uek"
+                    "Comment": "kernel-uek-devel is earlier than 0:4.1.12-124.15.2.el7uek"
                   },
                   {
-                    "Comment": "kernel-uek-firmware is signed with the Oracle Linux 7 key"
+                    "Comment": "kernel-uek-devel is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -214,10 +202,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "kernel-uek-devel is earlier than 0:4.1.12-124.15.2.el7uek"
+                    "Comment": "kernel-uek-doc is earlier than 0:4.1.12-124.15.2.el7uek"
                   },
                   {
-                    "Comment": "kernel-uek-devel is signed with the Oracle Linux 7 key"
+                    "Comment": "kernel-uek-doc is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "kernel-uek-firmware is earlier than 0:4.1.12-124.15.2.el7uek"
+                  },
+                  {
+                    "Comment": "kernel-uek-firmware is signed with the Oracle Linux 7 key"
                   }
                 ]
               }
@@ -238,43 +238,43 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-1000410.html",
-      "ID": "CVE-2017-1000410"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-5750.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-5750.html",
       "ID": "CVE-2018-5750"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2017-18203.html",
-      "ID": "CVE-2017-18203"
+      "Href": "https://linux.oracle.com/cve/CVE-2017-1000410.html",
+      "ID": "CVE-2017-1000410"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-6927.html",
-      "ID": "CVE-2018-6927"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-3639.html",
-      "ID": "CVE-2018-3639"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-5333.html",
-      "ID": "CVE-2018-5333"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-10323.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-10323.html",
       "ID": "CVE-2018-10323"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2018-10675.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2017-18203.html",
+      "ID": "CVE-2017-18203"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-10675.html",
       "ID": "CVE-2018-10675"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-3639.html",
+      "ID": "CVE-2018-3639"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-6927.html",
+      "ID": "CVE-2018-6927"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2018-5333.html",
+      "ID": "CVE-2018-5333"
     }
   ]
 }

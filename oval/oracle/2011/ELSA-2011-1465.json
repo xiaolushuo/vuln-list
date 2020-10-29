@@ -7,68 +7,68 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-1465.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-1465.html",
       "ID": "ELSA-2011-1465"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-1162.html",
-      "ID": "CVE-2011-1162"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-1577.html",
-      "ID": "CVE-2011-1577"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-2494.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-2494.html",
       "ID": "CVE-2011-2494"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-2699.html",
-      "ID": "CVE-2011-2699"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-2905.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-2905.html",
       "ID": "CVE-2011-2905"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3188.html",
-      "ID": "CVE-2011-3188"
+      "URI": "https://linux.oracle.com/cve/CVE-2011-1577.html",
+      "ID": "CVE-2011-1577"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3191.html",
-      "ID": "CVE-2011-3191"
+      "URI": "https://linux.oracle.com/cve/CVE-2011-2699.html",
+      "ID": "CVE-2011-2699"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3353.html",
-      "ID": "CVE-2011-3353"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3359.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3359.html",
       "ID": "CVE-2011-3359"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3363.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-4326.html",
+      "ID": "CVE-2011-4326"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-1162.html",
+      "ID": "CVE-2011-1162"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3188.html",
+      "ID": "CVE-2011-3188"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3191.html",
+      "ID": "CVE-2011-3191"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3353.html",
+      "ID": "CVE-2011-3353"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3363.html",
       "ID": "CVE-2011-3363"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-3593.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-3593.html",
       "ID": "CVE-2011-3593"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-4326.html",
-      "ID": "CVE-2011-4326"
     }
   ],
   "Criteria": {
@@ -77,6 +77,30 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel is earlier than 0:2.6.32-131.21.1.el6"
+              },
+              {
+                "Comment": "kernel is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kernel-debug is earlier than 0:2.6.32-131.21.1.el6"
+              },
+              {
+                "Comment": "kernel-debug is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -94,10 +118,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "perf is earlier than 0:2.6.32-131.21.1.el6"
+                "Comment": "kernel-devel is earlier than 0:2.6.32-131.21.1.el6"
               },
               {
-                "Comment": "perf is signed with the Oracle Linux 6 key"
+                "Comment": "kernel-devel is signed with the Oracle Linux 6 key"
               }
             ]
           },
@@ -130,30 +154,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel-devel is earlier than 0:2.6.32-131.21.1.el6"
-              },
-              {
-                "Comment": "kernel-devel is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kernel-debug is earlier than 0:2.6.32-131.21.1.el6"
-              },
-              {
-                "Comment": "kernel-debug is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "kernel-headers is earlier than 0:2.6.32-131.21.1.el6"
               },
               {
@@ -166,10 +166,10 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "kernel is earlier than 0:2.6.32-131.21.1.el6"
+                "Comment": "perf is earlier than 0:2.6.32-131.21.1.el6"
               },
               {
-                "Comment": "kernel is signed with the Oracle Linux 6 key"
+                "Comment": "perf is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -187,63 +187,63 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-1162.html",
-      "ID": "CVE-2011-1162"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-1577.html",
-      "ID": "CVE-2011-1577"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-2494.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-2494.html",
       "ID": "CVE-2011-2494"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-2699.html",
-      "ID": "CVE-2011-2699"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-2905.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-2905.html",
       "ID": "CVE-2011-2905"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3188.html",
-      "ID": "CVE-2011-3188"
+      "Href": "https://linux.oracle.com/cve/CVE-2011-1577.html",
+      "ID": "CVE-2011-1577"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3191.html",
-      "ID": "CVE-2011-3191"
+      "Href": "https://linux.oracle.com/cve/CVE-2011-2699.html",
+      "ID": "CVE-2011-2699"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3353.html",
-      "ID": "CVE-2011-3353"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3359.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3359.html",
       "ID": "CVE-2011-3359"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3363.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-4326.html",
+      "ID": "CVE-2011-4326"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-1162.html",
+      "ID": "CVE-2011-1162"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3188.html",
+      "ID": "CVE-2011-3188"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3191.html",
+      "ID": "CVE-2011-3191"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3353.html",
+      "ID": "CVE-2011-3353"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3363.html",
       "ID": "CVE-2011-3363"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-3593.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-3593.html",
       "ID": "CVE-2011-3593"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-4326.html",
-      "ID": "CVE-2011-4326"
     }
   ]
 }

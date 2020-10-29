@@ -9,23 +9,23 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2016-2779.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2016-2779.html",
       "ID": "ELSA-2016-2779"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-2834.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2016-2834.html",
       "ID": "CVE-2016-2834"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-5285.html",
-      "ID": "CVE-2016-5285"
+      "URI": "https://linux.oracle.com/cve/CVE-2016-8635.html",
+      "ID": "CVE-2016-8635"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2016-8635.html",
-      "ID": "CVE-2016-8635"
+      "URI": "https://linux.oracle.com/cve/CVE-2016-5285.html",
+      "ID": "CVE-2016-5285"
     }
   ],
   "Criteria": {
@@ -37,18 +37,6 @@
           {
             "Operator": "OR",
             "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-pkcs11-devel is earlier than 0:3.21.3-2.el5_11"
-                  },
-                  {
-                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 5 key"
-                  }
-                ]
-              },
               {
                 "Operator": "AND",
                 "Criterias": null,
@@ -66,10 +54,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-tools is earlier than 0:3.21.3-2.el5_11"
+                    "Comment": "nss-devel is earlier than 0:3.21.3-2.el5_11"
                   },
                   {
-                    "Comment": "nss-tools is signed with the Oracle Linux 5 key"
+                    "Comment": "nss-devel is signed with the Oracle Linux 5 key"
                   }
                 ]
               },
@@ -78,10 +66,22 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-devel is earlier than 0:3.21.3-2.el5_11"
+                    "Comment": "nss-pkcs11-devel is earlier than 0:3.21.3-2.el5_11"
                   },
                   {
-                    "Comment": "nss-devel is signed with the Oracle Linux 5 key"
+                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 5 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-tools is earlier than 0:3.21.3-2.el5_11"
+                  },
+                  {
+                    "Comment": "nss-tools is signed with the Oracle Linux 5 key"
                   }
                 ]
               }
@@ -106,34 +106,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-util-devel is earlier than 0:3.21.3-1.el6_8"
-                  },
-                  {
-                    "Comment": "nss-util-devel is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
                     "Comment": "nss is earlier than 0:3.21.3-2.0.1.el6_8"
                   },
                   {
                     "Comment": "nss is signed with the Oracle Linux 6 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-sysinit is earlier than 0:3.21.3-2.0.1.el6_8"
-                  },
-                  {
-                    "Comment": "nss-sysinit is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -166,10 +142,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-util is earlier than 0:3.21.3-1.el6_8"
+                    "Comment": "nss-sysinit is earlier than 0:3.21.3-2.0.1.el6_8"
                   },
                   {
-                    "Comment": "nss-util is signed with the Oracle Linux 6 key"
+                    "Comment": "nss-sysinit is signed with the Oracle Linux 6 key"
                   }
                 ]
               },
@@ -182,6 +158,30 @@
                   },
                   {
                     "Comment": "nss-tools is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-util is earlier than 0:3.21.3-1.el6_8"
+                  },
+                  {
+                    "Comment": "nss-util is signed with the Oracle Linux 6 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-util-devel is earlier than 0:3.21.3-1.el6_8"
+                  },
+                  {
+                    "Comment": "nss-util-devel is signed with the Oracle Linux 6 key"
                   }
                 ]
               }
@@ -206,46 +206,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-tools is earlier than 0:3.21.3-2.0.1.el7_3"
+                    "Comment": "nss is earlier than 0:3.21.3-2.0.1.el7_3"
                   },
                   {
-                    "Comment": "nss-tools is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-sysinit is earlier than 0:3.21.3-2.0.1.el7_3"
-                  },
-                  {
-                    "Comment": "nss-sysinit is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-util-devel is earlier than 0:3.21.3-1.1.el7_3"
-                  },
-                  {
-                    "Comment": "nss-util-devel is signed with the Oracle Linux 7 key"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterias": null,
-                "Criterions": [
-                  {
-                    "Comment": "nss-util is earlier than 0:3.21.3-1.1.el7_3"
-                  },
-                  {
-                    "Comment": "nss-util is signed with the Oracle Linux 7 key"
+                    "Comment": "nss is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -266,10 +230,10 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss is earlier than 0:3.21.3-2.0.1.el7_3"
+                    "Comment": "nss-pkcs11-devel is earlier than 0:3.21.3-2.0.1.el7_3"
                   },
                   {
-                    "Comment": "nss is signed with the Oracle Linux 7 key"
+                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 7 key"
                   }
                 ]
               },
@@ -278,10 +242,46 @@
                 "Criterias": null,
                 "Criterions": [
                   {
-                    "Comment": "nss-pkcs11-devel is earlier than 0:3.21.3-2.0.1.el7_3"
+                    "Comment": "nss-sysinit is earlier than 0:3.21.3-2.0.1.el7_3"
                   },
                   {
-                    "Comment": "nss-pkcs11-devel is signed with the Oracle Linux 7 key"
+                    "Comment": "nss-sysinit is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-tools is earlier than 0:3.21.3-2.0.1.el7_3"
+                  },
+                  {
+                    "Comment": "nss-tools is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-util is earlier than 0:3.21.3-1.1.el7_3"
+                  },
+                  {
+                    "Comment": "nss-util is signed with the Oracle Linux 7 key"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "Comment": "nss-util-devel is earlier than 0:3.21.3-1.1.el7_3"
+                  },
+                  {
+                    "Comment": "nss-util-devel is signed with the Oracle Linux 7 key"
                   }
                 ]
               }
@@ -302,18 +302,18 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-2834.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2016-2834.html",
       "ID": "CVE-2016-2834"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-5285.html",
-      "ID": "CVE-2016-5285"
+      "Href": "https://linux.oracle.com/cve/CVE-2016-8635.html",
+      "ID": "CVE-2016-8635"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2016-8635.html",
-      "ID": "CVE-2016-8635"
+      "Href": "https://linux.oracle.com/cve/CVE-2016-5285.html",
+      "ID": "CVE-2016-5285"
     }
   ]
 }

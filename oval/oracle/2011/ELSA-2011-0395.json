@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2011-0395.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2011-0395.html",
       "ID": "ELSA-2011-0395"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2011-0727.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2011-0727.html",
       "ID": "CVE-2011-0727"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "gdm is earlier than 1:2.30.4-21.0.2.el6_0.1"
+              },
+              {
+                "Comment": "gdm is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -63,18 +75,6 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "gdm is earlier than 1:2.30.4-21.0.2.el6_0.1"
-              },
-              {
-                "Comment": "gdm is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "gdm-user-switch-applet is earlier than 1:2.30.4-21.0.2.el6_0.1"
               },
               {
@@ -96,7 +96,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2011-0727.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2011-0727.html",
       "ID": "CVE-2011-0727"
     }
   ]

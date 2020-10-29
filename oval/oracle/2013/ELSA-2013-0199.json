@@ -7,12 +7,12 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2013-0199.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2013-0199.html",
       "ID": "ELSA-2013-0199"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2013-0170.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2013-0170.html",
       "ID": "CVE-2013-0170"
     }
   ],
@@ -22,6 +22,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt is earlier than 0:0.9.10-21.0.1.el6_3.8"
+              },
+              {
+                "Comment": "libvirt is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -51,34 +63,22 @@
             "Criterias": null,
             "Criterions": [
               {
-                "Comment": "libvirt-python is earlier than 0:0.9.10-21.0.1.el6_3.8"
-              },
-              {
-                "Comment": "libvirt-python is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "libvirt is earlier than 0:0.9.10-21.0.1.el6_3.8"
-              },
-              {
-                "Comment": "libvirt is signed with the Oracle Linux 6 key"
-              }
-            ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
                 "Comment": "libvirt-lock-sanlock is earlier than 0:0.9.10-21.0.1.el6_3.8"
               },
               {
                 "Comment": "libvirt-lock-sanlock is signed with the Oracle Linux 6 key"
+              }
+            ]
+          },
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "libvirt-python is earlier than 0:0.9.10-21.0.1.el6_3.8"
+              },
+              {
+                "Comment": "libvirt-python is signed with the Oracle Linux 6 key"
               }
             ]
           }
@@ -96,7 +96,7 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2013-0170.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2013-0170.html",
       "ID": "CVE-2013-0170"
     }
   ]

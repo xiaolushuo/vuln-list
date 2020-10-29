@@ -7,28 +7,28 @@
   "References": [
     {
       "Source": "elsa",
-      "URI": "http://linux.oracle.com/errata/ELSA-2010-0088.html",
+      "URI": "https://linux.oracle.com/errata/ELSA-2010-0088.html",
       "ID": "ELSA-2010-0088"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-0297.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-0309.html",
+      "ID": "CVE-2010-0309"
+    },
+    {
+      "Source": "CVE",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-0297.html",
       "ID": "CVE-2010-0297"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-0298.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-0298.html",
       "ID": "CVE-2010-0298"
     },
     {
       "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-0306.html",
+      "URI": "https://linux.oracle.com/cve/CVE-2010-0306.html",
       "ID": "CVE-2010-0306"
-    },
-    {
-      "Source": "CVE",
-      "URI": "http://linux.oracle.com/cve/CVE-2010-0309.html",
-      "ID": "CVE-2010-0309"
     }
   ],
   "Criteria": {
@@ -37,6 +37,18 @@
       {
         "Operator": "OR",
         "Criterias": [
+          {
+            "Operator": "AND",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "Comment": "kmod-kvm is earlier than 0:83-105.0.1.el5_4.22"
+              },
+              {
+                "Comment": "kmod-kvm is signed with the Oracle Linux 5 key"
+              }
+            ]
+          },
           {
             "Operator": "AND",
             "Criterias": null,
@@ -72,18 +84,6 @@
                 "Comment": "kvm-tools is signed with the Oracle Linux 5 key"
               }
             ]
-          },
-          {
-            "Operator": "AND",
-            "Criterias": null,
-            "Criterions": [
-              {
-                "Comment": "kmod-kvm is earlier than 0:83-105.0.1.el5_4.22"
-              },
-              {
-                "Comment": "kmod-kvm is signed with the Oracle Linux 5 key"
-              }
-            ]
           }
         ],
         "Criterions": null
@@ -99,23 +99,23 @@
   "Cves": [
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-0297.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-0309.html",
+      "ID": "CVE-2010-0309"
+    },
+    {
+      "Impact": "",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-0297.html",
       "ID": "CVE-2010-0297"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-0298.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-0298.html",
       "ID": "CVE-2010-0298"
     },
     {
       "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-0306.html",
+      "Href": "https://linux.oracle.com/cve/CVE-2010-0306.html",
       "ID": "CVE-2010-0306"
-    },
-    {
-      "Impact": "",
-      "Href": "http://linux.oracle.com/cve/CVE-2010-0309.html",
-      "ID": "CVE-2010-0309"
     }
   ]
 }
