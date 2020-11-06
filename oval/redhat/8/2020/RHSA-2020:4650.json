@@ -1,0 +1,281 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20204650",
+  "Class": "patch",
+  "Title": "RHSA-2020:4650: cloud-init security, bug fix, and enhancement update (Moderate)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:4650",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:4650"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-8631",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-8631"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-8632",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-8632"
+    }
+  ],
+  "Description": "The cloud-init packages provide a set of init scripts for cloud instances. Cloud instances need special scripts to run during initialization to retrieve and install SSH keys, and to let the user run various scripts.\n\nSecurity Fix(es):\n\n* cloud-init: Use of random.choice when generating random password (CVE-2020-8631)\n\n* cloud-init: Too short random password length in cc_set_password in config/cc_set_passwords.py (CVE-2020-8632)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.3 Release Notes linked from the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Moderate",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-8631",
+        "Cvss2": "",
+        "Cvss3": "8.1/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-330",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-8631",
+        "Public": "20200205"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-8632",
+        "Cvss2": "",
+        "Cvss3": "8.1/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-330",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-8632",
+        "Public": "20200205"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1760394",
+        "URL": "https://bugzilla.redhat.com/1760394",
+        "Title": "[RHEL8] cloudinit/net/sysconfig.py write incorrect config for dhcp-stateless openstack subnets"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1761598",
+        "URL": "https://bugzilla.redhat.com/1761598",
+        "Title": "[RHEL8] DHCP Stateful - Openstack DHCPv6 instance get no default gateway and is unable to send IPv6 traffic (Network unreachable errors)."
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1794664",
+        "URL": "https://bugzilla.redhat.com/1794664",
+        "Title": "[RHEL8] swapon fails with \"swapfile has holes\" when created on a xfs filesystem by cloud-init"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1798728",
+        "URL": "https://bugzilla.redhat.com/1798728",
+        "Title": "CVE-2020-8632 cloud-init: Too short random password length in cc_set_password in config/cc_set_passwords.py"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1798731",
+        "URL": "https://bugzilla.redhat.com/1798731",
+        "Title": "CVE-2020-8631 cloud-init: Use of random.choice when generating random password"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1803095",
+        "URL": "https://bugzilla.redhat.com/1803095",
+        "Title": "[RHEL-8.3.0] cloud-init rebase to 19.4"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1803928",
+        "URL": "https://bugzilla.redhat.com/1803928",
+        "Title": "[RHEL8.3] Race condition of starting cloud-init and NetworkManager"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1810706",
+        "URL": "https://bugzilla.redhat.com/1810706",
+        "Title": "[RFE] Backport IMDSv2 from cloud-init 19.4+ RHEL 8"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1822343",
+        "URL": "https://bugzilla.redhat.com/1822343",
+        "Title": "[RHEL8.3] Do not log IMDSv2 token values into cloud-init.log"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1833874",
+        "URL": "https://bugzilla.redhat.com/1833874",
+        "Title": "[rhel-8.3]using root user error should cause a non-zero exit code"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1834173",
+        "URL": "https://bugzilla.redhat.com/1834173",
+        "Title": "[rhel-8.3]Incorrect ds-identify check in cloud-init-generator"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1839662",
+        "URL": "https://bugzilla.redhat.com/1839662",
+        "Title": "[ESXi][RHEL8.3][cloud-init]ERROR log in cloud-init.log after clone VM on ESXi platform"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1840648",
+        "URL": "https://bugzilla.redhat.com/1840648",
+        "Title": "[cloud-init][RHEL-8.2.0] /etc/resolv.conf lose config after reboot (initial instance is ok)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1846240",
+        "URL": "https://bugzilla.redhat.com/1846240",
+        "Title": "[cloud-init test] Cloud-init rebase to 19.4 testing in rhel-8.3.0"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
+    ],
+    "Issued": {
+      "Date": "2020-11-04"
+    },
+    "Updated": {
+      "Date": "2020-11-04"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20204650001",
+            "Comment": "cloud-init is earlier than 0:19.4-11.el8"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20203050002",
+            "Comment": "cloud-init is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
