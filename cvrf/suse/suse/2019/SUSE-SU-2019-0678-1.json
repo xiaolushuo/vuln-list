@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2019:0678-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2019-03-21T09:40:36Z",
-    "CurrentReleaseDate": "2019-03-21T09:40:36Z",
+    "InitialReleaseDate": "2019-03-21T09:40:31Z",
+    "CurrentReleaseDate": "2019-03-21T09:40:31Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2019-03-21T09:40:36Z",
+        "Date": "2019-03-21T09:40:31Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,26 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "libopenssl1_1-1.1.0i-4.21.1",
+        "RelatesToProductReference": "Container suse/sle15:15.0",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openssl-1_1-1.1.0i-4.21.1",
+        "RelatesToProductReference": "Container suse/sle15:15.0",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libopenssl1_1-1.1.0i-4.21.1",
+        "RelatesToProductReference": "Image SLES15-EC2-CHOST-HVM-BYOS",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "openssl-1_1-1.1.0i-4.21.1",
+        "RelatesToProductReference": "Image SLES15-EC2-CHOST-HVM-BYOS",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "libopenssl-1_1-devel-1.1.0i-4.21.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15",
@@ -126,6 +146,10 @@
         {
           "Type": "Fixed",
           "ProductID": [
+            "Container suse/sle15:15.0:libopenssl1_1-1.1.0i-4.21.1",
+            "Container suse/sle15:15.0:openssl-1_1-1.1.0i-4.21.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:libopenssl1_1-1.1.0i-4.21.1",
+            "Image SLES15-EC2-CHOST-HVM-BYOS:openssl-1_1-1.1.0i-4.21.1",
             "SUSE Linux Enterprise Module for Basesystem 15:libopenssl-1_1-devel-1.1.0i-4.21.1",
             "SUSE Linux Enterprise Module for Basesystem 15:libopenssl1_1-1.1.0i-4.21.1",
             "SUSE Linux Enterprise Module for Basesystem 15:libopenssl1_1-32bit-1.1.0i-4.21.1",

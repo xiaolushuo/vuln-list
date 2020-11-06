@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2019:0482-2",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2019-04-26T20:13:56Z",
-    "CurrentReleaseDate": "2019-04-26T20:13:56Z",
+    "InitialReleaseDate": "2019-02-25T10:57:46Z",
+    "CurrentReleaseDate": "2019-02-25T10:57:46Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2019-04-26T20:13:56Z",
+        "Date": "2019-02-25T10:57:46Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,46 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "libpython2_7-1_0-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-api:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-api:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-base-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-api:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-xml-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-api:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libpython2_7-1_0-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-master:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-master:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-base-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-master:beta1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python-xml-2.7.13-28.21.1",
+        "RelatesToProductReference": "Container caasp/v4/salt-master:beta1",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "libpython2_7-1_0-2.7.13-28.21.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP1",
@@ -127,7 +167,7 @@
   "Vulnerabilities": [
     {
       "CVE": "CVE-2018-14647",
-      "Description": "Python's elementtree C accelerator failed to initialise Expat's hash salt during initialization. This could make it easy to conduct denial of service attacks against Expat by constructing an XML document that would cause pathological hash collisions in Expat's internal data structures, consuming large amounts CPU and RAM. Python 3.8, 3.7, 3.6, 3.5, 3.4, 2.7 are believed to be vulnerable.",
+      "Description": "Python's elementtree C accelerator failed to initialise Expat's hash salt during initialization. This could make it easy to conduct denial of service attacks against Expat by constructing an XML document that would cause pathological hash collisions in Expat's internal data structures, consuming large amounts CPU and RAM. The vulnerability exists in Python versions 3.7.0, 3.6.0 through 3.6.6, 3.5.0 through 3.5.6, 3.4.0 through 3.4.9, 2.7.0 through 2.7.15.",
       "Threats": [
         {
           "Type": "Impact",
@@ -152,6 +192,14 @@
         {
           "Type": "Fixed",
           "ProductID": [
+            "Container caasp/v4/salt-api:beta1:libpython2_7-1_0-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-base-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-xml-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:libpython2_7-1_0-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-base-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-xml-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:libpython2_7-1_0-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:libpython2_7-1_0-32bit-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:python-2.7.13-28.21.1",
@@ -199,6 +247,14 @@
         {
           "Type": "Fixed",
           "ProductID": [
+            "Container caasp/v4/salt-api:beta1:libpython2_7-1_0-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-base-2.7.13-28.21.1",
+            "Container caasp/v4/salt-api:beta1:python-xml-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:libpython2_7-1_0-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-base-2.7.13-28.21.1",
+            "Container caasp/v4/salt-master:beta1:python-xml-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:libpython2_7-1_0-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:libpython2_7-1_0-32bit-2.7.13-28.21.1",
             "SUSE Linux Enterprise Server for SAP Applications 12 SP1:python-2.7.13-28.21.1",

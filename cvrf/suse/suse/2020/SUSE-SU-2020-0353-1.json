@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2020:0353-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2020-02-06T16:34:44Z",
-    "CurrentReleaseDate": "2020-02-06T16:34:44Z",
+    "InitialReleaseDate": "2020-02-06T16:34:41Z",
+    "CurrentReleaseDate": "2020-02-06T16:34:41Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2020-02-06T16:34:44Z",
+        "Date": "2020-02-06T16:34:41Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,16 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "libsystemd0-228-157.9.1",
+        "RelatesToProductReference": "Container suse/sles12sp5:latest",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libudev1-228-157.9.1",
+        "RelatesToProductReference": "Container suse/sles12sp5:latest",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "libudev-devel-228-157.9.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Software Development Kit 12 SP5",
@@ -178,6 +188,8 @@
         {
           "Type": "Fixed",
           "ProductID": [
+            "Container suse/sles12sp5:latest:libsystemd0-228-157.9.1",
+            "Container suse/sles12sp5:latest:libudev1-228-157.9.1",
             "SUSE Linux Enterprise Server 12 SP5:libsystemd0-228-157.9.1",
             "SUSE Linux Enterprise Server 12 SP5:libsystemd0-32bit-228-157.9.1",
             "SUSE Linux Enterprise Server 12 SP5:libudev1-228-157.9.1",

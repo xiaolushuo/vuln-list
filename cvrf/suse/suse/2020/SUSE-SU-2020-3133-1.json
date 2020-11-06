@@ -1,0 +1,94 @@
+{
+  "Title": "Security update for opensc",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:3133-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-11-03T11:11:36Z",
+    "CurrentReleaseDate": "2020-11-03T11:11:36Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-11-03T11:11:36Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for opensc",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for opensc fixes the following issues:\n\nSecurity issue fixed:\n\n- CVE-2019-6502: Fixed a memory leak in sc_context_create() (bsc#1122756).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "opensc-0.13.0-3.6.27",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server 12 SP5",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "opensc-0.13.0-3.6.27",
+        "RelatesToProductReference": "SUSE Linux Enterprise Server for SAP Applications 12 SP5",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20203133-1/",
+      "Description": "Link for SUSE-SU-2020:3133-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-November/007686.html",
+      "Description": "E-Mail link for SUSE-SU-2020:3133-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2019-6502",
+      "Description": "sc_context_create in ctx.c in libopensc in OpenSC 0.19.0 has a memory leak, as demonstrated by a call from eidenv.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "low"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2019-6502.html",
+          "Description": "CVE-2019-6502"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1122756",
+          "Description": "SUSE Bug 1122756"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Server 12 SP5:opensc-0.13.0-3.6.27",
+            "SUSE Linux Enterprise Server for SAP Applications 12 SP5:opensc-0.13.0-3.6.27"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}

@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2020:0819-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2020-03-31T11:01:40Z",
-    "CurrentReleaseDate": "2020-03-31T11:01:40Z",
+    "InitialReleaseDate": "2020-03-31T11:01:34Z",
+    "CurrentReleaseDate": "2020-03-31T11:01:34Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2020-03-31T11:01:40Z",
+        "Date": "2020-03-31T11:01:34Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,16 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "libicu60_2-60.2-3.9.1",
+        "RelatesToProductReference": "Image caasp4/caasp-389-ds-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libicu60_2-ledata-60.2-3.9.1",
+        "RelatesToProductReference": "Image caasp4/caasp-389-ds-image",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "icu-60.2-3.9.1",
         "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP1",
@@ -192,12 +202,18 @@
         {
           "URL": "https://bugzilla.suse.com/1166844",
           "Description": "SUSE Bug 1166844"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1175778",
+          "Description": "SUSE Bug 1175778"
         }
       ],
       "ProductStatuses": [
         {
           "Type": "Fixed",
           "ProductID": [
+            "Image caasp4/caasp-389-ds-image:libicu60_2-60.2-3.9.1",
+            "Image caasp4/caasp-389-ds-image:libicu60_2-ledata-60.2-3.9.1",
             "SUSE Linux Enterprise High Performance Computing 15-ESPOS:icu-60.2-3.9.1",
             "SUSE Linux Enterprise High Performance Computing 15-ESPOS:libicu-devel-60.2-3.9.1",
             "SUSE Linux Enterprise High Performance Computing 15-ESPOS:libicu60_2-60.2-3.9.1",

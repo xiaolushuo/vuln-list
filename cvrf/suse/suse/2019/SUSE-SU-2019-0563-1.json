@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2019:0563-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2019-03-06T16:20:16Z",
-    "CurrentReleaseDate": "2019-03-06T16:20:16Z",
+    "InitialReleaseDate": "2019-03-06T16:20:15Z",
+    "CurrentReleaseDate": "2019-03-06T16:20:15Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2019-03-06T16:20:16Z",
+        "Date": "2019-03-06T16:20:15Z",
         "Description": "current"
       }
     ]
@@ -33,6 +33,16 @@
   ],
   "ProductTree": {
     "Relationships": [
+      {
+        "ProductReference": "libaudit1-2.8.1-10.3.2",
+        "RelatesToProductReference": "Container suse/sles12sp4:latest",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libaudit1-2.8.1-10.3.2",
+        "RelatesToProductReference": "Container suse/sles12sp5:latest",
+        "RelationType": "Default Component Of"
+      },
       {
         "ProductReference": "audit-2.8.1-10.3.2",
         "RelatesToProductReference": "SUSE Linux Enterprise Desktop 12 SP4",
@@ -188,6 +198,8 @@
         {
           "Type": "Fixed",
           "ProductID": [
+            "Container suse/sles12sp4:latest:libaudit1-2.8.1-10.3.2",
+            "Container suse/sles12sp5:latest:libaudit1-2.8.1-10.3.2",
             "SUSE Linux Enterprise Desktop 12 SP4:audit-2.8.1-10.3.2",
             "SUSE Linux Enterprise Desktop 12 SP4:audit-secondary-2.8.1-10.3.2",
             "SUSE Linux Enterprise Desktop 12 SP4:libaudit1-2.8.1-10.3.2",

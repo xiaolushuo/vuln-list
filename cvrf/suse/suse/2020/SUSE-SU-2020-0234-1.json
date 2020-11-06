@@ -4,12 +4,12 @@
     "ID": "SUSE-SU-2020:0234-1",
     "Status": "Final",
     "Version": "1",
-    "InitialReleaseDate": "2020-01-24T15:34:00Z",
-    "CurrentReleaseDate": "2020-01-24T15:34:00Z",
+    "InitialReleaseDate": "2020-01-24T15:33:52Z",
+    "CurrentReleaseDate": "2020-01-24T15:33:52Z",
     "RevisionHistory": [
       {
         "Number": "1",
-        "Date": "2020-01-24T15:34:00Z",
+        "Date": "2020-01-24T15:33:52Z",
         "Description": "current"
       }
     ]
@@ -1035,8 +1035,24 @@
           "Description": "CVE-2013-1752"
         },
         {
+          "URL": "https://bugzilla.suse.com/856835",
+          "Description": "SUSE Bug 856835"
+        },
+        {
           "URL": "https://bugzilla.suse.com/856836",
           "Description": "SUSE Bug 856836"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/863741",
+          "Description": "SUSE Bug 863741"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/885882",
+          "Description": "SUSE Bug 885882"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/898572",
+          "Description": "SUSE Bug 898572"
         }
       ],
       "ProductStatuses": [
@@ -1303,8 +1319,24 @@
           "Description": "CVE-2014-4650"
         },
         {
+          "URL": "https://bugzilla.suse.com/856835",
+          "Description": "SUSE Bug 856835"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/856836",
+          "Description": "SUSE Bug 856836"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/863741",
+          "Description": "SUSE Bug 863741"
+        },
+        {
           "URL": "https://bugzilla.suse.com/885882",
           "Description": "SUSE Bug 885882"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/898572",
+          "Description": "SUSE Bug 898572"
         }
       ],
       "ProductStatuses": [
@@ -2086,7 +2118,7 @@
     },
     {
       "CVE": "CVE-2018-14647",
-      "Description": "Python's elementtree C accelerator failed to initialise Expat's hash salt during initialization. This could make it easy to conduct denial of service attacks against Expat by constructing an XML document that would cause pathological hash collisions in Expat's internal data structures, consuming large amounts CPU and RAM. Python 3.8, 3.7, 3.6, 3.5, 3.4, 2.7 are believed to be vulnerable.",
+      "Description": "Python's elementtree C accelerator failed to initialise Expat's hash salt during initialization. This could make it easy to conduct denial of service attacks against Expat by constructing an XML document that would cause pathological hash collisions in Expat's internal data structures, consuming large amounts CPU and RAM. The vulnerability exists in Python versions 3.7.0, 3.6.0 through 3.6.6, 3.5.0 through 3.5.6, 3.4.0 through 3.4.9, 2.7.0 through 2.7.15.",
       "Threats": [
         {
           "Type": "Impact",
@@ -2466,7 +2498,7 @@
     },
     {
       "CVE": "CVE-2019-9636",
-      "Description": "Python 2.7.x through 2.7.16 and 3.x through 3.7.2 is affected by: Improper Handling of Unicode Encoding (with an incorrect netloc) during NFKC normalization. The impact is: Information disclosure (credentials, cookies, etc. that are cached against a given hostname). The components are: urllib.parse.urlsplit, urllib.parse.urlparse. The attack vector is: A specially crafted URL could be incorrectly parsed to locate cookies or authentication data and send that information to a different host than when parsed correctly.",
+      "Description": "Python 2.7.x through 2.7.16 and 3.x through 3.7.2 is affected by: Improper Handling of Unicode Encoding (with an incorrect netloc) during NFKC normalization. The impact is: Information disclosure (credentials, cookies, etc. that are cached against a given hostname). The components are: urllib.parse.urlsplit, urllib.parse.urlparse. The attack vector is: A specially crafted URL could be incorrectly parsed to locate cookies or authentication data and send that information to a different host than when parsed correctly. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.7, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.3, v3.7.3rc1, v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9.",
       "Threats": [
         {
           "Type": "Impact",
@@ -2536,7 +2568,7 @@
     },
     {
       "CVE": "CVE-2019-9947",
-      "Description": "An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \\r\\n (specifically in the path component of a URL that lacks a ? character) followed by an HTTP header or a Redis command. This is similar to the CVE-2019-9740 query string issue.",
+      "Description": "An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \\r\\n (specifically in the path component of a URL that lacks a ? character) followed by an HTTP header or a Redis command. This is similar to the CVE-2019-9740 query string issue. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9.",
       "Threats": [
         {
           "Type": "Impact",
