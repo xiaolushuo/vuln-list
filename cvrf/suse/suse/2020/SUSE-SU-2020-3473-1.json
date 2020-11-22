@@ -1,0 +1,262 @@
+{
+  "Title": "Security update for ceph",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:3473-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-11-20T18:08:33Z",
+    "CurrentReleaseDate": "2020-11-20T18:08:33Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-11-20T18:08:33Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for ceph",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for ceph fixes the following issues:\n\n- CVE-2020-25660: Bring back CEPHX_V2 authorizer challenges (bsc#1177843).\n- Added --container-init feature (bsc#1177319, bsc#1163764)\n- Made journald as the logdriver again (bsc#1177933)\n- Fixes a condition check for copy_tree, copy_files, and move_files in cephadm (bsc#1177676)\n- Fixed a bug where device_health_metrics pool gets created even without any OSDs in the cluster (bsc#1173079)\n- Log cephadm output /var/log/ceph/cephadm.log (bsc#1174644)\n- Fixed a bug where the orchestrator didn't come up anymore after the deletion of OSDs (bsc#1176499)\n- Fixed a bug where cephadm fails to deploy all OSDs and gets stuck (bsc#1177450)\n- python-common will no longer skip unavailable disks (bsc#1177151)\n- Added snap-schedule module (jsc#SES-704)\n- Updated the SES7 downstream branding (bsc#1175120, bsc#1175161, bsc#1175169, bsc#1170498)\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ceph-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libcephfs-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librados-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libradospp-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librbd-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librgw-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "rados-objclass-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "rbd-nbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Basesystem 15 SP2",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20203473-1/",
+      "Description": "Link for SUSE-SU-2020:3473-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-November/007834.html",
+      "Description": "E-Mail link for SUSE-SU-2020:3473-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-25660",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-25660.html",
+          "Description": "CVE-2020-25660"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1177843",
+          "Description": "SUSE Bug 1177843"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Image caasp45/caasp-kube-controller-manager-image:ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:ceph-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:libcephfs-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librados-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:libradospp-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librbd-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librgw-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:rados-objclass-devel-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Linux Enterprise Module for Basesystem 15 SP2:rbd-nbd-15.2.5.667+g1a579d5bf2-3.5.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
