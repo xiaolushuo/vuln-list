@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhsa:def:20191476",
+  "ID": "oval:com.redhat.rhsa:def:20205164",
   "Class": "patch",
-  "Title": "RHSA-2019:1476: flash-plugin security update (Critical)",
+  "Title": "RHSA-2020:5164: thunderbird security update (Important)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 6 Supplementary"
+        "Red Hat Enterprise Linux 6"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHSA-2019:1476",
-      "RefURL": "https://access.redhat.com/errata/RHSA-2019:1476"
+      "RefID": "RHSA-2020:5164",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5164"
     },
     {
       "XMLName": {
@@ -34,52 +34,30 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2019-7845",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-7845"
-    },
-    {
-      "XMLName": {
-        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-        "Local": "reference"
-      },
-      "Source": "CVE",
-      "RefID": "CVE-2019-8075",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-8075"
+      "RefID": "CVE-2020-26950",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-26950"
     }
   ],
-  "Description": "The flash-plugin package contains a Mozilla Firefox compatible Adobe Flash Player web browser plug-in.\n\nThis update upgrades Flash Player to version 32.0.0.207.\n\nSecurity Fix(es):\n\n* flash-plugin: Arbitrary Code Execution vulnerability (APSB19-30) (CVE-2019-7845)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Description": "Mozilla Thunderbird is a standalone mail and newsgroup client.\n\nThis update upgrades Thunderbird to version 78.4.3.\n\nSecurity Fix(es):\n\n* Mozilla: Write side effects in MCallGetProperty opcode not accounted for (CVE-2020-26950)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Critical",
+    "Severity": "Important",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2019-7845",
+        "CveID": "CVE-2020-26950",
         "Cvss2": "",
         "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-        "Cwe": "",
-        "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2019-7845",
-        "Public": "20190611"
-      },
-      {
-        "XMLName": {
-          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
-          "Local": "cve"
-        },
-        "CveID": "CVE-2019-8075",
-        "Cvss2": "",
-        "Cvss3": "7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
-        "Cwe": "",
-        "Impact": "important",
-        "Href": "https://access.redhat.com/security/cve/CVE-2019-8075",
-        "Public": "20201117"
+        "Cwe": "CWE-416",
+        "Impact": "critical",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-26950",
+        "Public": "20201109"
       }
     ],
     "Bugzillas": [
@@ -88,20 +66,22 @@
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "bugzilla"
         },
-        "ID": "1719449",
-        "URL": "https://bugzilla.redhat.com/1719449",
-        "Title": "CVE-2019-7845 flash-plugin: Arbitrary Code Execution vulnerability (APSB19-30)"
+        "ID": "1896306",
+        "URL": "https://bugzilla.redhat.com/1896306",
+        "Title": "CVE-2020-26950 Mozilla: Write side effects in MCallGetProperty opcode not accounted for"
       }
     ],
     "AffectedCPEList": [
-      "cpe:/a:redhat:rhel_extras:6",
-      "cpe:/a:redhat:rhel_extras:6"
+      "cpe:/o:redhat:enterprise_linux:6",
+      "cpe:/o:redhat:enterprise_linux:6::client",
+      "cpe:/o:redhat:enterprise_linux:6::server",
+      "cpe:/o:redhat:enterprise_linux:6::workstation"
     ],
     "Issued": {
-      "Date": "2019-06-17"
+      "Date": "2020-11-23"
     },
     "Updated": {
-      "Date": "2019-06-17"
+      "Date": "2020-11-23"
     }
   },
   "Criteria": {
@@ -134,8 +114,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhsa:tst:20191476001",
-            "Comment": "flash-plugin is earlier than 0:32.0.0.207-1.el6_10"
+            "TestRef": "oval:com.redhat.rhsa:tst:20205164001",
+            "Comment": "thunderbird is earlier than 0:78.4.3-1.el6_10"
           },
           {
             "XMLName": {
@@ -143,8 +123,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhsa:tst:20100867002",
-            "Comment": "flash-plugin is signed with Red Hat redhatrelease2 key"
+            "TestRef": "oval:com.redhat.rhsa:tst:20100896002",
+            "Comment": "thunderbird is signed with Red Hat redhatrelease2 key"
           }
         ]
       }
