@@ -1,0 +1,238 @@
+{
+  "Title": "Security update for ceph",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:3473-2",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-11-20T18:08:33Z",
+    "CurrentReleaseDate": "2020-11-20T18:08:33Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-11-20T18:08:33Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for ceph",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for ceph fixes the following issues:\n\n- CVE-2020-25660: Bring back CEPHX_V2 authorizer challenges (bsc#1177843).\n- Added --container-init feature (bsc#1177319, bsc#1163764)\n- Made journald as the logdriver again (bsc#1177933)\n- Fixes a condition check for copy_tree, copy_files, and move_files in cephadm (bsc#1177676)\n- Fixed a bug where device_health_metrics pool gets created even without any OSDs in the cluster (bsc#1173079)\n- Log cephadm output /var/log/ceph/cephadm.log (bsc#1174644)\n- Fixed a bug where the orchestrator didn't come up anymore after the deletion of OSDs (bsc#1176499)\n- Fixed a bug where cephadm fails to deploy all OSDs and gets stuck (bsc#1177450)\n- python-common will no longer skip unavailable disks (bsc#1177151)\n- Added snap-schedule module (jsc#SES-704)\n- Updated the SES7 downstream branding (bsc#1175120, bsc#1175161, bsc#1175169, bsc#1170498)\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "Image caasp45/caasp-kube-controller-manager-image",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ceph-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ceph-base-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "cephadm-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "rbd-nbd-15.2.5.667+g1a579d5bf2-3.5.1",
+        "RelatesToProductReference": "SUSE Enterprise Storage 7",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20203473-2/",
+      "Description": "Link for SUSE-SU-2020:3473-2"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-November/007877.html",
+      "Description": "E-Mail link for SUSE-SU-2020:3473-2"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-25660",
+      "Description": "A flaw was found in the Cephx authentication protocol in versions before 15.2.6 and before 14.2.14, where it does not verify Ceph clients correctly and is then vulnerable to replay attacks in Nautilus. This flaw allows an attacker with access to the Ceph cluster network to authenticate with the Ceph service via a packet sniffer and perform actions allowed by the Ceph service. This issue is a reintroduction of CVE-2018-1128, affecting the msgr2 protocol. The msgr 2 protocol is used for all communication except older clients that do not support the msgr2 protocol. The msgr1 protocol is not affected. The highest threat from this vulnerability is to confidentiality, integrity, and system availability.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-25660.html",
+          "Description": "CVE-2020-25660"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1177843",
+          "Description": "SUSE Bug 1177843"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "Image caasp45/caasp-kube-controller-manager-image:ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+            "Image caasp45/caasp-kube-controller-manager-image:python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:ceph-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:ceph-base-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:cephadm-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:libcephfs2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:librados2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:librbd1-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:librgw2-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-ceph-argparse-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-ceph-common-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-cephfs-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-rados-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-rbd-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:python3-rgw-15.2.5.667+g1a579d5bf2-3.5.1",
+            "SUSE Enterprise Storage 7:rbd-nbd-15.2.5.667+g1a579d5bf2-3.5.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
