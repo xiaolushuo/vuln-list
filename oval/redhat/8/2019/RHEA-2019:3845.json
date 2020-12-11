@@ -1,0 +1,214 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhea:def:20193845",
+  "Class": "patch",
+  "Title": "RHEA-2019:3845: microcode_ctl bug fix and enhancement update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHEA-2019:3845",
+      "RefURL": "https://access.redhat.com/errata/RHEA-2019:3845"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-0117",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-0117"
+    }
+  ],
+  "Description": "The microcode_ctl packages provide microcode updates for Intel x86 processors.\n\nWith this update, the Intel microcode version has been updated to microcode-20191112.\n\nUsers of microcode_ctl are advised to upgrade to these updated packages, which add this enhancement.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-0117",
+        "Cvss2": "",
+        "Cvss3": "6.0/CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:N/A:N",
+        "Cwe": "CWE-1220 CWE-200",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-0117",
+        "Public": "20191112:1800"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753062",
+        "URL": "https://bugzilla.redhat.com/1753062",
+        "Title": "CVE-2019-11135 hw: TSX Transaction Asynchronous Abort (TAA)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753064",
+        "URL": "https://bugzilla.redhat.com/1753064",
+        "Title": "hw: Target Array Sharing side channel attack"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753065",
+        "URL": "https://bugzilla.redhat.com/1753065",
+        "Title": "hw: VERW information leak - incomplete fix of buffer clearing for previous MDS fixes"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753066",
+        "URL": "https://bugzilla.redhat.com/1753066",
+        "Title": "hw: SHUF instruction implementation flaw"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753068",
+        "URL": "https://bugzilla.redhat.com/1753068",
+        "Title": "hw: Fully integrated voltage regulation error condition handling (FIVR)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1753113",
+        "URL": "https://bugzilla.redhat.com/1753113",
+        "Title": "hw: Conditional Jump Macro-fusion (JCC)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1758414",
+        "URL": "https://bugzilla.redhat.com/1758414",
+        "Title": "CVE-2019-0117 hw: Intel SGX information leak"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1760200",
+        "URL": "https://bugzilla.redhat.com/1760200",
+        "Title": "hw: EGETKEY erratum"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1765481",
+        "URL": "https://bugzilla.redhat.com/1765481",
+        "Title": "CVE-2019-11139 hw: voltage modulation technical advisory"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/o:redhat:enterprise_linux:8",
+      "cpe:/o:redhat:enterprise_linux:8::baseos"
+    ],
+    "Issued": {
+      "Date": "2019-11-12"
+    },
+    "Updated": {
+      "Date": "2019-11-12"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhea:tst:20193845001",
+            "Comment": "microcode_ctl is earlier than 4:20190618-1.20191112.1.el8_1"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhea:tst:20193845002",
+            "Comment": "microcode_ctl is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

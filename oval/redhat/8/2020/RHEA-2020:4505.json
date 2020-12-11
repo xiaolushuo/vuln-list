@@ -3,9 +3,9 @@
     "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
     "Local": "definition"
   },
-  "ID": "oval:com.redhat.rhba:def:20171991",
+  "ID": "oval:com.redhat.rhea:def:20204505",
   "Class": "patch",
-  "Title": "RHBA-2017:1991: libtirpc bug fix update (Low)",
+  "Title": "RHEA-2020:4505: python-rtslib bug fix and enhancement update (Moderate)",
   "Affecteds": [
     {
       "XMLName": {
@@ -14,7 +14,7 @@
       },
       "Family": "unix",
       "Platforms": [
-        "Red Hat Enterprise Linux 7"
+        "Red Hat Enterprise Linux 8"
       ]
     }
   ],
@@ -25,8 +25,8 @@
         "Local": "reference"
       },
       "Source": "RHSA",
-      "RefID": "RHBA-2017:1991",
-      "RefURL": "https://access.redhat.com/errata/RHBA-2017:1991"
+      "RefID": "RHEA-2020:4505",
+      "RefURL": "https://access.redhat.com/errata/RHEA-2020:4505"
     },
     {
       "XMLName": {
@@ -34,45 +34,70 @@
         "Local": "reference"
       },
       "Source": "CVE",
-      "RefID": "CVE-2018-14622",
-      "RefURL": "https://access.redhat.com/security/cve/CVE-2018-14622"
+      "RefID": "CVE-2020-14019",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14019"
     }
   ],
-  "Description": "The libtirpc packages contain SunLib's implementation of transport-independent remote procedure call (TI-RPC) documentation, which includes a library required by programs in the nfs-utils and rpcbind packages.\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 7.4 Release Notes linked from the References section.\n\nUsers of libtirpc are advised to upgrade to these updated packages.",
+  "Description": "For detailed information on changes in this release, see the Red Hat\nEnterprise Linux 8.3 Release Notes linked from the References section.",
   "Advisory": {
     "XMLName": {
       "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
       "Local": "advisory"
     },
-    "Severity": "Low",
+    "Severity": "Moderate",
     "Cves": [
       {
         "XMLName": {
           "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
           "Local": "cve"
         },
-        "CveID": "CVE-2018-14622",
+        "CveID": "CVE-2020-14019",
         "Cvss2": "",
-        "Cvss3": "5.3/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-        "Cwe": "CWE-252",
+        "Cvss3": "6.6/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+        "Cwe": "CWE-282",
         "Impact": "",
-        "Href": "https://access.redhat.com/security/cve/CVE-2018-14622",
-        "Public": "20160303"
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14019",
+        "Public": "20200619"
       }
     ],
-    "Bugzillas": null,
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1820170",
+        "URL": "https://bugzilla.redhat.com/1820170",
+        "Title": "RHEL8.3: update rtslib to the latest version"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1849651",
+        "URL": "https://bugzilla.redhat.com/1849651",
+        "Title": "CVE-2020-14019 RHEL8.3: rtslib: weak permissions for /etc/target/saveconfig.json"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1858856",
+        "URL": "https://bugzilla.redhat.com/1858856",
+        "Title": "RHEL8.3: rtslib: shutil.copy() opens the file with wrong permissions"
+      }
+    ],
     "AffectedCPEList": [
-      "cpe:/o:redhat:enterprise_linux:7",
-      "cpe:/o:redhat:enterprise_linux:7::client",
-      "cpe:/o:redhat:enterprise_linux:7::computenode",
-      "cpe:/o:redhat:enterprise_linux:7::server",
-      "cpe:/o:redhat:enterprise_linux:7::workstation"
+      "cpe:/o:redhat:enterprise_linux:8",
+      "cpe:/o:redhat:enterprise_linux:8::baseos"
     ],
     "Issued": {
-      "Date": "2017-08-01"
+      "Date": "2020-11-04"
     },
     "Updated": {
-      "Date": "2017-08-01"
+      "Date": "2020-11-04"
     }
   },
   "Criteria": {
@@ -110,8 +135,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171991001",
-                    "Comment": "libtirpc is earlier than 0:0.2.4-0.10.el7"
+                    "TestRef": "oval:com.redhat.rhea:tst:20204505001",
+                    "Comment": "python3-rtslib is earlier than 0:2.1.73-2.el8"
                   },
                   {
                     "XMLName": {
@@ -119,8 +144,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171991002",
-                    "Comment": "libtirpc is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhea:tst:20204505002",
+                    "Comment": "python3-rtslib is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               },
@@ -138,8 +163,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171991003",
-                    "Comment": "libtirpc-devel is earlier than 0:0.2.4-0.10.el7"
+                    "TestRef": "oval:com.redhat.rhea:tst:20204505003",
+                    "Comment": "target-restore is earlier than 0:2.1.73-2.el8"
                   },
                   {
                     "XMLName": {
@@ -147,8 +172,8 @@
                       "Local": "criterion"
                     },
                     "Negate": false,
-                    "TestRef": "oval:com.redhat.rhba:tst:20171991004",
-                    "Comment": "libtirpc-devel is signed with Red Hat redhatrelease2 key"
+                    "TestRef": "oval:com.redhat.rhea:tst:20204505004",
+                    "Comment": "target-restore is signed with Red Hat redhatrelease2 key"
                   }
                 ]
               }
@@ -163,8 +188,8 @@
               "Local": "criterion"
             },
             "Negate": false,
-            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
-            "Comment": "Red Hat Enterprise Linux 7 is installed"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
           }
         ]
       }
@@ -176,7 +201,7 @@
           "Local": "criterion"
         },
         "Negate": false,
-        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
         "Comment": "Red Hat Enterprise Linux must be installed"
       }
     ]
