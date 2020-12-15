@@ -1,0 +1,49 @@
+{
+  "Severity": "MODERATE",
+  "UpdatedAt": "2020-12-02T02:25:42Z",
+  "Package": {
+    "Ecosystem": "MAVEN",
+    "Name": "org.eclipse.jetty:jetty-server"
+  },
+  "Advisory": {
+    "DatabaseId": 3210,
+    "Id": "MDE2OlNlY3VyaXR5QWR2aXNvcnlHSFNBLTg2d20tcnJqbS04d2g4",
+    "GhsaId": "GHSA-86wm-rrjm-8wh8",
+    "References": [
+      {
+        "Url": "https://github.com/eclipse/jetty.project/security/advisories/GHSA-86wm-rrjm-8wh8"
+      },
+      {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-27218"
+      },
+      {
+        "Url": "https://github.com/advisories/GHSA-86wm-rrjm-8wh8"
+      }
+    ],
+    "Identifiers": [
+      {
+        "Type": "GHSA",
+        "Value": "GHSA-86wm-rrjm-8wh8"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-27218"
+      }
+    ],
+    "Description": "### Impact\nIf GZIP request body inflation is enabled and requests from different clients are multiplexed onto a single connection and if an \nattacker can send a request with a body that is received entirely by not consumed by the application, then a subsequent request\non the same connection will see that body prepended to it's body.\n\nThe attacker will not see any data, but may inject data into the body of the subsequent request\n\nCVE score is [4.8 AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L\u0026version=3.1)\n\n### Workarounds\nThe problem can be worked around by either:\n- Disabling compressed request body inflation by GzipHandler.\n- By always fully consuming the request content before sending a response.\n- By adding a `Connection: close` to any response where the servlet does not fully consume request content.",
+    "Origin": "UNSPECIFIED",
+    "PublishedAt": "2020-12-02T18:28:18Z",
+    "Severity": "MODERATE",
+    "Summary": "Buffer not correctly recycled in Gzip Request inflation",
+    "UpdatedAt": "2020-12-14T22:08:52Z",
+    "WithdrawnAt": ""
+  },
+  "Versions": [
+    {
+      "FirstPatchedVersion": {
+        "Identifier": "9.4.35.v20201120"
+      },
+      "VulnerableVersionRange": "\u003e= 9.4.0, \u003c= 9.4.34"
+    }
+  ]
+}

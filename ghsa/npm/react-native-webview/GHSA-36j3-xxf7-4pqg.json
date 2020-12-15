@@ -1,6 +1,6 @@
 {
   "Severity": "HIGH",
-  "UpdatedAt": "2020-10-02T16:22:02Z",
+  "UpdatedAt": "2020-12-07T20:32:48Z",
   "Package": {
     "Ecosystem": "NPM",
     "Name": "react-native-webview"
@@ -14,6 +14,9 @@
         "Url": "https://github.com/react-native-community/react-native-webview/security/advisories/GHSA-36j3-xxf7-4pqg"
       },
       {
+        "Url": "https://nvd.nist.gov/vuln/detail/CVE-2020-6506"
+      },
+      {
         "Url": "https://github.com/advisories/GHSA-36j3-xxf7-4pqg"
       }
     ],
@@ -21,22 +24,26 @@
       {
         "Type": "GHSA",
         "Value": "GHSA-36j3-xxf7-4pqg"
+      },
+      {
+        "Type": "CVE",
+        "Value": "CVE-2020-6506"
       }
     ],
-    "Description": "A universal cross-site scripting (UXSS) vulnerability, CVE-2020-6506 (https://crbug.com/1083819), has been identified in the Android WebView system component, which allows cross-origin iframes to execute arbitrary JavaScript in the top-level document. This vulnerability affects React Native apps which use a `react-native-webview` that allows navigation to arbitrary URLs, and when that app runs on systems with an Android WebView version prior to 83.0.4103.106.\n\n## Pending mitigation\n\nEnsure users update their Android WebView system component via the Google Play Store to 83.0.4103.106 or higher to avoid this UXSS. 'react-native-webview' is working on a mitigation but it could take some time.\n\n### References\n\nhttps://alesandroortiz.com/articles/uxss-android-webview-cve-2020-6506/",
+    "Description": "A universal cross-site scripting (UXSS) vulnerability, CVE-2020-6506 (https://crbug.com/1083819), has been identified in the Android WebView system component, which allows cross-origin iframes to execute arbitrary JavaScript in the top-level document. This vulnerability affects React Native apps which use a `react-native-webview` that allows navigation to arbitrary URLs, and when that app runs on systems with an Android WebView version prior to 83.0.4103.106.\n\n## Mitigation\n\nreact-native-webview 11.0.0+ has introduced a new prop to mitigate this issue.  Updating to a later version is recommended.\n\n### References\n\nhttps://alesandroortiz.com/articles/uxss-android-webview-cve-2020-6506/",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2020-10-02T16:22:41Z",
     "Severity": "HIGH",
     "Summary": "Universal XSS in Android WebView",
-    "UpdatedAt": "2020-10-02T16:22:41Z",
+    "UpdatedAt": "2020-12-07T20:37:31Z",
     "WithdrawnAt": ""
   },
   "Versions": [
     {
       "FirstPatchedVersion": {
-        "Identifier": ""
+        "Identifier": "11.0.0"
       },
-      "VulnerableVersionRange": "\u003e 0"
+      "VulnerableVersionRange": "\u003c= 10.10.2"
     }
   ]
 }
