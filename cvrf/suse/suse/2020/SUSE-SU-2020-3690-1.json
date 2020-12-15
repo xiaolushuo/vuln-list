@@ -1,0 +1,136 @@
+{
+  "Title": "Security update for the Linux Kernel (Live Patch 18 for SLE 15 SP1)",
+  "Tracking": {
+    "ID": "SUSE-SU-2020:3690-1",
+    "Status": "Final",
+    "Version": "1",
+    "InitialReleaseDate": "2020-12-07T16:33:34Z",
+    "CurrentReleaseDate": "2020-12-07T16:33:34Z",
+    "RevisionHistory": [
+      {
+        "Number": "1",
+        "Date": "2020-12-07T16:33:34Z",
+        "Description": "current"
+      }
+    ]
+  },
+  "Notes": [
+    {
+      "Text": "Security update for the Linux Kernel (Live Patch 18 for SLE 15 SP1)",
+      "Title": "Topic",
+      "Type": "Summary"
+    },
+    {
+      "Text": "This update for the Linux Kernel 4.12.14-197_67 fixes several issues.\n\nThe following security issues were fixed:\n\n- CVE-2020-25668: Fixed a concurrency use-after-free in con_font_op (bsc#1178622).\n- CVE-2020-25705: Fixed a flaw which could have allowed an off-path remote user to effectively bypass source port UDP randomization (bsc#1178783).\n",
+      "Title": "Details",
+      "Type": "General"
+    },
+    {
+      "Text": "The CVRF data is provided by SUSE under the Creative Commons License 4.0 with Attribution for Non-Commercial usage (CC-BY-NC-4.0).",
+      "Title": "Terms of Use",
+      "Type": "Legal Disclaimer"
+    }
+  ],
+  "ProductTree": {
+    "Relationships": [
+      {
+        "ProductReference": "kernel-livepatch-4_12_14-197_67-default-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Live Patching 15 SP1",
+        "RelationType": "Default Component Of"
+      },
+      {
+        "ProductReference": "kernel-livepatch-SLE15-SP1_Update_18-2-2.1",
+        "RelatesToProductReference": "SUSE Linux Enterprise Module for Live Patching 15 SP1",
+        "RelationType": "Default Component Of"
+      }
+    ]
+  },
+  "References": [
+    {
+      "URL": "https://www.suse.com/support/update/announcement/2020/suse-su-20203690-1/",
+      "Description": "Link for SUSE-SU-2020:3690-1"
+    },
+    {
+      "URL": "http://lists.suse.com/pipermail/sle-security-updates/2020-December/007926.html",
+      "Description": "E-Mail link for SUSE-SU-2020:3690-1"
+    },
+    {
+      "URL": "https://www.suse.com/support/security/rating/",
+      "Description": "SUSE Security Ratings"
+    }
+  ],
+  "Vulnerabilities": [
+    {
+      "CVE": "CVE-2020-25668",
+      "Description": "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem. When the candidate has been publicized, the details for this candidate will be provided.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "important"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-25668.html",
+          "Description": "CVE-2020-25668"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1178123",
+          "Description": "SUSE Bug 1178123"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1178622",
+          "Description": "SUSE Bug 1178622"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-4_12_14-197_67-default-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-SLE15-SP1_Update_18-2-2.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    },
+    {
+      "CVE": "CVE-2020-25705",
+      "Description": "A flaw in the way reply ICMP packets are limited in the Linux kernel functionality was found that allows to quickly scan open UDP ports. This flaw allows an off-path remote user to effectively bypassing source port UDP randomization. The highest threat from this vulnerability is to confidentiality and possibly integrity, because software that relies on UDP source port randomization are indirectly affected as well. Kernel versions before 5.10 may be vulnerable to this issue.",
+      "Threats": [
+        {
+          "Type": "Impact",
+          "Severity": "critical"
+        }
+      ],
+      "References": [
+        {
+          "URL": "https://www.suse.com/security/cve/CVE-2020-25705.html",
+          "Description": "CVE-2020-25705"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1175721",
+          "Description": "SUSE Bug 1175721"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1178782",
+          "Description": "SUSE Bug 1178782"
+        },
+        {
+          "URL": "https://bugzilla.suse.com/1178783",
+          "Description": "SUSE Bug 1178783"
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Fixed",
+          "ProductID": [
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-4_12_14-197_67-default-2-2.1",
+            "SUSE Linux Enterprise Module for Live Patching 15 SP1:kernel-livepatch-SLE15-SP1_Update_18-2-2.1"
+          ]
+        }
+      ],
+      "CVSSScoreSets": {}
+    }
+  ]
+}
