@@ -1,0 +1,145 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205434",
+  "Class": "patch",
+  "Title": "RHSA-2020:5434: targetcli security update (Moderate)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5434",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5434"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-13867",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-13867"
+    }
+  ],
+  "Description": "The targetcli package contains an administration shell for configuring Internet Small Computer System Interface (iSCSI), Fibre Channel over Ethernet (FCoE), and other SCSI targets, using the Target Core Mod/Linux-IO (TCM/LIO) kernel target subsystem. FCoE users also need to install and use the fcoe-utils package.\n\nThe following packages have been upgraded to a later upstream version: targetcli (2.1.53). (BZ#1853645)\n\nSecurity Fix(es):\n\n* targetcli: weak permissions for /etc/target and backup files (CVE-2020-13867)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Moderate",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-13867",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "Cwe": "CWE-276",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-13867",
+        "Public": "20200605"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1848143",
+        "URL": "https://bugzilla.redhat.com/1848143",
+        "Title": "CVE-2020-13867 targetcli: weak permissions for /etc/target and backup files"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
+    ],
+    "Issued": {
+      "Date": "2020-12-15"
+    },
+    "Updated": {
+      "Date": "2020-12-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": null,
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20205434001",
+            "Comment": "targetcli is earlier than 0:2.1.53-1.el7_9"
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhsa:tst:20205434002",
+            "Comment": "targetcli is signed with Red Hat redhatrelease2 key"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

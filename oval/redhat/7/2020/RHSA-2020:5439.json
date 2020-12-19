@@ -1,0 +1,992 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205439",
+  "Class": "patch",
+  "Title": "RHSA-2020:5439: samba security and bug fix update (Moderate)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5439",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5439"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-14318",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14318"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-14323",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14323"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-1472",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1472"
+    }
+  ],
+  "Description": "Samba is an open-source implementation of the Server Message Block (SMB) protocol and the related Common Internet File System (CIFS) protocol, which allow PC-compatible machines to share files, printers, and various information.\n\nSecurity Fix(es):\n\n* samba: Netlogon elevation of privilege vulnerability (Zerologon) (CVE-2020-1472)\n\n* samba: Missing handle permissions check in SMB1/2/3 ChangeNotify (CVE-2020-14318)\n\n* samba: Unprivileged user can crash winbind (CVE-2020-14323)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* The 'require_membership_of' documentation in pam_winbind manpage is incorrect (BZ#1853272)\n\n* Malfunctioning %U substitution in valid users option (BZ#1868917)\n\n* Regression: smbd and nmbd are restarted when samba-winbind package is upgraded (BZ#1878205)\n\n* winbindd memory leak on wbinfo -u with security=ADS (BZ#1892313)",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Moderate",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-14318",
+        "Cvss2": "",
+        "Cvss3": "4.3/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "Cwe": "CWE-266",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14318",
+        "Public": "20201029"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-14323",
+        "Cvss2": "",
+        "Cvss3": "5.0/CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-170",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14323",
+        "Public": "20201029"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-1472",
+        "Cvss2": "",
+        "Cvss3": "9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-287",
+        "Impact": "critical",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1472",
+        "Public": "20200911"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1853272",
+        "URL": "https://bugzilla.redhat.com/1853272",
+        "Title": "The 'require_membership_of' documentation in pam_winbind manpage is incorrect [rhel-7.9.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1868917",
+        "URL": "https://bugzilla.redhat.com/1868917",
+        "Title": "Malfunctioning %U substitution in valid users option [rhel-7.9.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1878205",
+        "URL": "https://bugzilla.redhat.com/1878205",
+        "Title": "Regression: smbd and nmbd are restarted when samba-winbind package is upgraded [rhel-7.9.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1879822",
+        "URL": "https://bugzilla.redhat.com/1879822",
+        "Title": "CVE-2020-1472 samba: Netlogon elevation of privilege vulnerability (Zerologon)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1891685",
+        "URL": "https://bugzilla.redhat.com/1891685",
+        "Title": "CVE-2020-14323 samba: Unprivileged user can crash winbind"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1892313",
+        "URL": "https://bugzilla.redhat.com/1892313",
+        "Title": "winbindd memory leak on wbinfo -u with security=ADS [rhel-7.9.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1892631",
+        "URL": "https://bugzilla.redhat.com/1892631",
+        "Title": "CVE-2020-14318 samba: Missing handle permissions check in SMB1/2/3 ChangeNotify"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
+    ],
+    "Issued": {
+      "Date": "2020-12-15"
+    },
+    "Updated": {
+      "Date": "2020-12-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439001",
+                    "Comment": "ctdb is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258002",
+                    "Comment": "ctdb is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439003",
+                    "Comment": "ctdb-tests is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258006",
+                    "Comment": "ctdb-tests is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439005",
+                    "Comment": "libsmbclient is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258008",
+                    "Comment": "libsmbclient is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439007",
+                    "Comment": "libsmbclient-devel is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258010",
+                    "Comment": "libsmbclient-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439009",
+                    "Comment": "libwbclient is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258012",
+                    "Comment": "libwbclient is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439011",
+                    "Comment": "libwbclient-devel is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258014",
+                    "Comment": "libwbclient-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439013",
+                    "Comment": "samba is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258016",
+                    "Comment": "samba is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439015",
+                    "Comment": "samba-client is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258018",
+                    "Comment": "samba-client is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439017",
+                    "Comment": "samba-client-libs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258020",
+                    "Comment": "samba-client-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439019",
+                    "Comment": "samba-common is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258022",
+                    "Comment": "samba-common is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439021",
+                    "Comment": "samba-common-libs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258024",
+                    "Comment": "samba-common-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439023",
+                    "Comment": "samba-common-tools is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258026",
+                    "Comment": "samba-common-tools is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439025",
+                    "Comment": "samba-dc is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258028",
+                    "Comment": "samba-dc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439027",
+                    "Comment": "samba-dc-libs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258030",
+                    "Comment": "samba-dc-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439029",
+                    "Comment": "samba-devel is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258032",
+                    "Comment": "samba-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439031",
+                    "Comment": "samba-krb5-printing is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20171265032",
+                    "Comment": "samba-krb5-printing is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439033",
+                    "Comment": "samba-libs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258034",
+                    "Comment": "samba-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439035",
+                    "Comment": "samba-pidl is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258036",
+                    "Comment": "samba-pidl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439037",
+                    "Comment": "samba-python is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258038",
+                    "Comment": "samba-python is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439039",
+                    "Comment": "samba-python-test is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20183056040",
+                    "Comment": "samba-python-test is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439041",
+                    "Comment": "samba-test is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258040",
+                    "Comment": "samba-test is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439043",
+                    "Comment": "samba-test-libs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258044",
+                    "Comment": "samba-test-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439045",
+                    "Comment": "samba-vfs-glusterfs is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258046",
+                    "Comment": "samba-vfs-glusterfs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439047",
+                    "Comment": "samba-winbind is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258048",
+                    "Comment": "samba-winbind is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439049",
+                    "Comment": "samba-winbind-clients is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258050",
+                    "Comment": "samba-winbind-clients is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439051",
+                    "Comment": "samba-winbind-krb5-locator is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258052",
+                    "Comment": "samba-winbind-krb5-locator is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205439053",
+                    "Comment": "samba-winbind-modules is earlier than 0:4.10.16-9.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20152258054",
+                    "Comment": "samba-winbind-modules is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

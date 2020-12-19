@@ -1,0 +1,638 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205441",
+  "Class": "patch",
+  "Title": "RHSA-2020:5441: kernel-rt security and bug fix update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5441",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5441"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2019-18282",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2019-18282"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-10769",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-10769"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-14314",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14314"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-14385",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14385"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-24394",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-24394"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-25212",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-25212"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-25643",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-25643"
+    }
+  ],
+  "Description": "The kernel-rt packages provide the Real Time Linux Kernel, which enables fine-tuning for systems with extremely high determinism requirements.\n\nSecurity Fix(es):\n\n* kernel: metadata validator in XFS may cause an inode with a valid, user-creatable extended attribute to be flagged as corrupt (CVE-2020-14385)\n\n* kernel: The flow_dissector feature allows device tracking (CVE-2019-18282)\n\n* kernel: Buffer over-read in crypto_authenc_extractkeys() when a payload longer than 4 bytes is not aligned. (CVE-2020-10769)\n\n* kernel: buffer uses out of index in ext3/4 filesystem (CVE-2020-14314)\n\n* kernel: umask not applied on filesystem without ACL support (CVE-2020-24394)\n\n* kernel: TOCTOU mismatch in the NFS client code (CVE-2020-25212)\n\n* kernel: improper input validation in ppp_cp_parse_cr function leads to memory corruption and read overflow (CVE-2020-25643)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* kernel-rt: update to the latest RHEL7.9.z2 source tree (BZ#1873318)\n\n* deadlock between handle_mm_fault() and ptep_clear_flush() (BZ#1888872)",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2019-18282",
+        "Cvss2": "",
+        "Cvss3": "5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "Cwe": "CWE-200",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2019-18282",
+        "Public": "20191022"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-10769",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-119",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-10769",
+        "Public": "20191105"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-14314",
+        "Cvss2": "",
+        "Cvss3": "5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-125",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14314",
+        "Public": "20200605:1645"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-14385",
+        "Cvss2": "",
+        "Cvss3": "6.2/CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-131",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-14385",
+        "Public": "20200825:0900"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-24394",
+        "Cvss2": "",
+        "Cvss3": "7.1/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "Cwe": "CWE-732",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-24394",
+        "Public": "20200605"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-25212",
+        "Cvss2": "",
+        "Cvss3": "7.0/CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-367",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-25212",
+        "Public": "20200909"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-25643",
+        "Cvss2": "",
+        "Cvss3": "6.6/CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-20",
+        "Impact": "moderate",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-25643",
+        "Public": "20200925"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1708775",
+        "URL": "https://bugzilla.redhat.com/1708775",
+        "Title": "CVE-2020-10769 kernel: Buffer over-read in crypto_authenc_extractkeys() when a payload longer than 4 bytes is not aligned."
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1796360",
+        "URL": "https://bugzilla.redhat.com/1796360",
+        "Title": "CVE-2019-18282 kernel: The flow_dissector feature allows device tracking"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1853922",
+        "URL": "https://bugzilla.redhat.com/1853922",
+        "Title": "CVE-2020-14314 kernel: buffer uses out of index in ext3/4 filesystem"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1869141",
+        "URL": "https://bugzilla.redhat.com/1869141",
+        "Title": "CVE-2020-24394 kernel: umask not applied on filesystem without ACL support"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1874800",
+        "URL": "https://bugzilla.redhat.com/1874800",
+        "Title": "CVE-2020-14385 kernel: metadata validator in XFS may cause an inode with a valid, user-creatable extended attribute to be flagged as corrupt"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1877575",
+        "URL": "https://bugzilla.redhat.com/1877575",
+        "Title": "CVE-2020-25212 kernel: TOCTOU mismatch in the NFS client code"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1879981",
+        "URL": "https://bugzilla.redhat.com/1879981",
+        "Title": "CVE-2020-25643 kernel: improper input validation in ppp_cp_parse_cr function leads to memory corruption and read overflow"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1888872",
+        "URL": "https://bugzilla.redhat.com/1888872",
+        "Title": "deadlock between handle_mm_fault() and ptep_clear_flush() [rhel-7.9.z]"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:rhel_extras_rt:7",
+      "cpe:/a:redhat:rhel_extras_rt:7"
+    ],
+    "Issued": {
+      "Date": "2020-12-15"
+    },
+    "Updated": {
+      "Date": "2020-12-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": null,
+            "Criterions": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20205437031",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1160.11.1.rt56.1145.el7 is currently running"
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criterion"
+                },
+                "Negate": false,
+                "TestRef": "oval:com.redhat.rhsa:tst:20205441022",
+                "Comment": "kernel-rt earlier than 0:3.10.0-1160.11.1.rt56.1145.el7 is set to boot up on next boot"
+              }
+            ]
+          },
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441001",
+                    "Comment": "kernel-rt is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727002",
+                    "Comment": "kernel-rt is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441003",
+                    "Comment": "kernel-rt-debug is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727004",
+                    "Comment": "kernel-rt-debug is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441005",
+                    "Comment": "kernel-rt-debug-devel is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727006",
+                    "Comment": "kernel-rt-debug-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441007",
+                    "Comment": "kernel-rt-debug-kvm is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212008",
+                    "Comment": "kernel-rt-debug-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441009",
+                    "Comment": "kernel-rt-devel is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727008",
+                    "Comment": "kernel-rt-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441011",
+                    "Comment": "kernel-rt-doc is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727010",
+                    "Comment": "kernel-rt-doc is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441013",
+                    "Comment": "kernel-rt-kvm is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212014",
+                    "Comment": "kernel-rt-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441015",
+                    "Comment": "kernel-rt-trace is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727012",
+                    "Comment": "kernel-rt-trace is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441017",
+                    "Comment": "kernel-rt-trace-devel is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20150727014",
+                    "Comment": "kernel-rt-trace-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205441019",
+                    "Comment": "kernel-rt-trace-kvm is earlier than 0:3.10.0-1160.11.1.rt56.1145.el7"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20160212020",
+                    "Comment": "kernel-rt-trace-kvm is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

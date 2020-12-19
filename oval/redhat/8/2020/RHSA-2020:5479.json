@@ -1,0 +1,723 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205479",
+  "Class": "patch",
+  "Title": "RHSA-2020:5479: linux-firmware security and enhancement update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5479",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5479"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-12321",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-12321"
+    }
+  ],
+  "Description": "The linux-firmware packages contain all of the firmware files that are required by various devices to operate.\n\nSecurity Fix(es):\n\n* hardware: buffer overflow in bluetooth firmware (CVE-2020-12321)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nEnhancement(s):\n\n* [Intel 8.3 FEAT] ice: Update to the Default OS DDP Package for ice driver (BZ#1896597)\n\n* [Intel 8.3 FEAT] ice: Pull Comms Market Segment Package into RHEL 8.3 (BZ#1896598)",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-12321",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-120",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-12321",
+        "Public": "20201110:1355"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1893914",
+        "URL": "https://bugzilla.redhat.com/1893914",
+        "Title": "CVE-2020-12321 hardware: buffer overflow in bluetooth firmware"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/o:redhat:enterprise_linux:8",
+      "cpe:/o:redhat:enterprise_linux:8::baseos"
+    ],
+    "Issued": {
+      "Date": "2020-12-15"
+    },
+    "Updated": {
+      "Date": "2020-12-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479001",
+                    "Comment": "iwl100-firmware is earlier than 0:39.31.5.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479002",
+                    "Comment": "iwl100-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479003",
+                    "Comment": "iwl1000-firmware is earlier than 1:39.31.5.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479004",
+                    "Comment": "iwl1000-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479005",
+                    "Comment": "iwl105-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479006",
+                    "Comment": "iwl105-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479007",
+                    "Comment": "iwl135-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479008",
+                    "Comment": "iwl135-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479009",
+                    "Comment": "iwl2000-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479010",
+                    "Comment": "iwl2000-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479011",
+                    "Comment": "iwl2030-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479012",
+                    "Comment": "iwl2030-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479013",
+                    "Comment": "iwl3160-firmware is earlier than 1:25.30.13.0-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479014",
+                    "Comment": "iwl3160-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479015",
+                    "Comment": "iwl3945-firmware is earlier than 0:15.32.2.9-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479016",
+                    "Comment": "iwl3945-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479017",
+                    "Comment": "iwl4965-firmware is earlier than 0:228.61.2.24-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479018",
+                    "Comment": "iwl4965-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479019",
+                    "Comment": "iwl5000-firmware is earlier than 0:8.83.5.1_1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479020",
+                    "Comment": "iwl5000-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479021",
+                    "Comment": "iwl5150-firmware is earlier than 0:8.24.2.2-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479022",
+                    "Comment": "iwl5150-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479023",
+                    "Comment": "iwl6000-firmware is earlier than 0:9.221.4.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479024",
+                    "Comment": "iwl6000-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479025",
+                    "Comment": "iwl6000g2a-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479026",
+                    "Comment": "iwl6000g2a-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479027",
+                    "Comment": "iwl6000g2b-firmware is earlier than 0:18.168.6.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479028",
+                    "Comment": "iwl6000g2b-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479029",
+                    "Comment": "iwl6050-firmware is earlier than 0:41.28.5.1-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479030",
+                    "Comment": "iwl6050-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479031",
+                    "Comment": "iwl7260-firmware is earlier than 1:25.30.13.0-101.el8_3.1"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479032",
+                    "Comment": "iwl7260-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479033",
+                    "Comment": "libertas-sd8686-firmware is earlier than 0:20200619-101.git3890db36.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479034",
+                    "Comment": "libertas-sd8686-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479035",
+                    "Comment": "libertas-sd8787-firmware is earlier than 0:20200619-101.git3890db36.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479036",
+                    "Comment": "libertas-sd8787-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479037",
+                    "Comment": "libertas-usb8388-firmware is earlier than 2:20200619-101.git3890db36.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479038",
+                    "Comment": "libertas-usb8388-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479039",
+                    "Comment": "libertas-usb8388-olpc-firmware is earlier than 0:20200619-101.git3890db36.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479040",
+                    "Comment": "libertas-usb8388-olpc-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479041",
+                    "Comment": "linux-firmware is earlier than 0:20200619-101.git3890db36.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205479042",
+                    "Comment": "linux-firmware is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205503",
+  "Class": "patch",
+  "Title": "RHSA-2020:5503: mariadb-connector-c security, bug fix, and enhancement update (Moderate)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 8"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5503",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5503"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-13249",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-13249"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-2574",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-2574"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-2752",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-2752"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-2922",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-2922"
+    }
+  ],
+  "Description": "The MariaDB Native Client library (C driver) is used to connect applications developed in C/C++ to MariaDB and MySQL databases. \n\nThe following packages have been upgraded to a later upstream version: mariadb-connector-c (3.1.11). (BZ#1898993)\n\nSecurity Fix(es):\n\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2752)\n\n* mysql: C API unspecified vulnerability (CPU Apr 2020) (CVE-2020-2922)\n\n* mariadb-connector-c: Improper validation of content in a OK packet received from server (CVE-2020-13249)\n\n* mysql: C API unspecified vulnerability (CPU Jan 2020) (CVE-2020-2574)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nBug Fix(es):\n\n* Code utilizing plugins can't be compiled properly (BZ#1899001)\n\n* Add \"zlib-devel\" requirement in \"-devel\" subpackage (BZ#1899005)\n\n* Replace hard-coded /usr with %{_prefix} (BZ#1899099)",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Moderate",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-13249",
+        "Cvss2": "",
+        "Cvss3": "8.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "Cwe": "CWE-20",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-13249",
+        "Public": "20200520"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-2574",
+        "Cvss2": "",
+        "Cvss3": "5.9/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-400",
+        "Impact": "low",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-2574",
+        "Public": "20200205"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-2752",
+        "Cvss2": "",
+        "Cvss3": "5.3/CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-2752",
+        "Public": "20200414"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-2922",
+        "Cvss2": "",
+        "Cvss3": "3.7/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "Cwe": "",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-2922",
+        "Public": "20200414"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1798587",
+        "URL": "https://bugzilla.redhat.com/1798587",
+        "Title": "CVE-2020-2574 mysql: C API unspecified vulnerability (CPU Jan 2020)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1835849",
+        "URL": "https://bugzilla.redhat.com/1835849",
+        "Title": "CVE-2020-2752 mysql: C API unspecified vulnerability (CPU Apr 2020)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1835850",
+        "URL": "https://bugzilla.redhat.com/1835850",
+        "Title": "CVE-2020-2922 mysql: C API unspecified vulnerability (CPU Apr 2020)"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1839827",
+        "URL": "https://bugzilla.redhat.com/1839827",
+        "Title": "CVE-2020-13249 mariadb-connector-c: Improper validation of content in a OK packet received from server"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1898993",
+        "URL": "https://bugzilla.redhat.com/1898993",
+        "Title": "Tracker: MariaDB Connector C rebase to the latest version (3.1.11) [rhel-8.3.0.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1899001",
+        "URL": "https://bugzilla.redhat.com/1899001",
+        "Title": "Code utilizing plugins can´t be compiled properly [rhel-8.3.0.z]"
+      },
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1899099",
+        "URL": "https://bugzilla.redhat.com/1899099",
+        "Title": "Replace hard-coded /usr with %{_prefix} [rhel-8.3.0.z]"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/a:redhat:enterprise_linux:8",
+      "cpe:/a:redhat:enterprise_linux:8::appstream"
+    ],
+    "Issued": {
+      "Date": "2020-12-15"
+    },
+    "Updated": {
+      "Date": "2020-12-15"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503001",
+                    "Comment": "mariadb-connector-c is earlier than 0:3.1.11-2.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503002",
+                    "Comment": "mariadb-connector-c is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503003",
+                    "Comment": "mariadb-connector-c-config is earlier than 0:3.1.11-2.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503004",
+                    "Comment": "mariadb-connector-c-config is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503005",
+                    "Comment": "mariadb-connector-c-debugsource is earlier than 0:3.1.11-2.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503006",
+                    "Comment": "mariadb-connector-c-debugsource is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503007",
+                    "Comment": "mariadb-connector-c-devel is earlier than 0:3.1.11-2.el8_3"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205503008",
+                    "Comment": "mariadb-connector-c-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20193384074",
+            "Comment": "Red Hat Enterprise Linux 8 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20193384075",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}

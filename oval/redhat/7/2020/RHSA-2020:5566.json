@@ -1,0 +1,278 @@
+{
+  "XMLName": {
+    "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+    "Local": "definition"
+  },
+  "ID": "oval:com.redhat.rhsa:def:20205566",
+  "Class": "patch",
+  "Title": "RHSA-2020:5566: openssl security update (Important)",
+  "Affecteds": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "affected"
+      },
+      "Family": "unix",
+      "Platforms": [
+        "Red Hat Enterprise Linux 7"
+      ]
+    }
+  ],
+  "References": [
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "RHSA",
+      "RefID": "RHSA-2020:5566",
+      "RefURL": "https://access.redhat.com/errata/RHSA-2020:5566"
+    },
+    {
+      "XMLName": {
+        "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+        "Local": "reference"
+      },
+      "Source": "CVE",
+      "RefID": "CVE-2020-1971",
+      "RefURL": "https://access.redhat.com/security/cve/CVE-2020-1971"
+    }
+  ],
+  "Description": "OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.\n\nSecurity Fix(es):\n\n* openssl: EDIPARTYNAME NULL pointer de-reference (CVE-2020-1971)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+  "Advisory": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "advisory"
+    },
+    "Severity": "Important",
+    "Cves": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "cve"
+        },
+        "CveID": "CVE-2020-1971",
+        "Cvss2": "",
+        "Cvss3": "5.9/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "Cwe": "CWE-476",
+        "Impact": "",
+        "Href": "https://access.redhat.com/security/cve/CVE-2020-1971",
+        "Public": "20201208"
+      }
+    ],
+    "Bugzillas": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "bugzilla"
+        },
+        "ID": "1903409",
+        "URL": "https://bugzilla.redhat.com/1903409",
+        "Title": "CVE-2020-1971 openssl: EDIPARTYNAME NULL pointer de-reference"
+      }
+    ],
+    "AffectedCPEList": [
+      "cpe:/o:redhat:enterprise_linux:7",
+      "cpe:/o:redhat:enterprise_linux:7::client",
+      "cpe:/o:redhat:enterprise_linux:7::computenode",
+      "cpe:/o:redhat:enterprise_linux:7::server",
+      "cpe:/o:redhat:enterprise_linux:7::workstation"
+    ],
+    "Issued": {
+      "Date": "2020-12-16"
+    },
+    "Updated": {
+      "Date": "2020-12-16"
+    }
+  },
+  "Criteria": {
+    "XMLName": {
+      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+      "Local": "criteria"
+    },
+    "Operator": "OR",
+    "Criterias": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criteria"
+        },
+        "Operator": "AND",
+        "Criterias": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criteria"
+            },
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205566001",
+                    "Comment": "openssl is earlier than 1:1.0.2k-21.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929002",
+                    "Comment": "openssl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205566003",
+                    "Comment": "openssl-devel is earlier than 1:1.0.2k-21.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929004",
+                    "Comment": "openssl-devel is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205566005",
+                    "Comment": "openssl-libs is earlier than 1:1.0.2k-21.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929006",
+                    "Comment": "openssl-libs is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205566007",
+                    "Comment": "openssl-perl is earlier than 1:1.0.2k-21.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929008",
+                    "Comment": "openssl-perl is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              },
+              {
+                "XMLName": {
+                  "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                  "Local": "criteria"
+                },
+                "Operator": "AND",
+                "Criterias": null,
+                "Criterions": [
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205566009",
+                    "Comment": "openssl-static is earlier than 1:1.0.2k-21.el7_9"
+                  },
+                  {
+                    "XMLName": {
+                      "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+                      "Local": "criterion"
+                    },
+                    "Negate": false,
+                    "TestRef": "oval:com.redhat.rhba:tst:20171929010",
+                    "Comment": "openssl-static is signed with Red Hat redhatrelease2 key"
+                  }
+                ]
+              }
+            ],
+            "Criterions": null
+          }
+        ],
+        "Criterions": [
+          {
+            "XMLName": {
+              "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+              "Local": "criterion"
+            },
+            "Negate": false,
+            "TestRef": "oval:com.redhat.rhba:tst:20150364027",
+            "Comment": "Red Hat Enterprise Linux 7 is installed"
+          }
+        ]
+      }
+    ],
+    "Criterions": [
+      {
+        "XMLName": {
+          "Space": "http://oval.mitre.org/XMLSchema/oval-definitions-5",
+          "Local": "criterion"
+        },
+        "Negate": false,
+        "TestRef": "oval:com.redhat.rhba:tst:20150364028",
+        "Comment": "Red Hat Enterprise Linux must be installed"
+      }
+    ]
+  }
+}
