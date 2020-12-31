@@ -1,0 +1,232 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhba:def:20120763",
+  "Version": "633",
+  "Metadata": {
+    "Title": "RHBA-2012:0763: glibc bug fix and enhancement update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 6"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHBA-2012:0763",
+        "RefURL": "https://access.redhat.com/errata/RHBA-2012:0763"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2012-6686",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2012-6686"
+      }
+    ],
+    "Description": "The glibc packages provide the standard C and standard math libraries used by multiple programs on the system. Without these libraries, the Linux system cannot function correctly.\n\nThese updated glibc packages include numerous bug fixes and one enhancement. Space precludes documenting all of these changes in this advisory. Users are directed to the Red Hat Enterprise Linux 6.3 Technical Notes for information on the most significant of these changes:\n\nhttps://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/6.3_Technical_Notes/glibc.html#RHBA-2012-0763\n\nUsers of glibc are advised to upgrade to these updated packages, which fix these bugs and add this enhancement.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2012 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2012-06-20"
+      },
+      "Updated": {
+        "Date": "2012-06-20"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2012-6686",
+          "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:N/A:P",
+          "Cwe": "CWE-121",
+          "Href": "https://access.redhat.com/security/cve/CVE-2012-6686",
+          "Public": "20110413"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/657572",
+          "ID": "657572"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/697421",
+          "ID": "697421"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/749188",
+          "ID": "749188"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/752122",
+          "ID": "752122"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/757888",
+          "ID": "757888"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/781646",
+          "ID": "781646"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/785984",
+          "ID": "785984"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/789189",
+          "ID": "789189"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/789209",
+          "ID": "789209"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/797094",
+          "ID": "797094"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/804630",
+          "ID": "804630"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/804689",
+          "ID": "804689"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/808337",
+          "ID": "808337"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/809602",
+          "ID": "809602"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/o:redhat:enterprise_linux:6",
+        "cpe:/o:redhat:enterprise_linux:6::client",
+        "cpe:/o:redhat:enterprise_linux:6::computenode",
+        "cpe:/o:redhat:enterprise_linux:6::server",
+        "cpe:/o:redhat:enterprise_linux:6::workstation"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20022439072"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 6 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20022439071"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763001"
+                  },
+                  {
+                    "Comment": "glibc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc-common is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763003"
+                  },
+                  {
+                    "Comment": "glibc-common is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc-devel is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763005"
+                  },
+                  {
+                    "Comment": "glibc-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc-headers is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763007"
+                  },
+                  {
+                    "Comment": "glibc-headers is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc-static is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763009"
+                  },
+                  {
+                    "Comment": "glibc-static is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glibc-utils is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763011"
+                  },
+                  {
+                    "Comment": "glibc-utils is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nscd is earlier than 0:2.12-1.80.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20120763013"
+                  },
+                  {
+                    "Comment": "nscd is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20095155004"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

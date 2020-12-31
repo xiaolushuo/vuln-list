@@ -1,0 +1,459 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20111531",
+  "Version": "651",
+  "Metadata": {
+    "Title": "RHSA-2011:1531: qemu-kvm security, bug fix, and enhancement update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 6"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2011:1531",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2011:1531"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2011-2527",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2011-2527"
+      }
+    ],
+    "Description": "KVM (Kernel-based Virtual Machine) is a full virtualization solution for\nLinux on AMD64 and Intel 64 systems. qemu-kvm is the user-space component\nfor running virtual machines using KVM.\n\nIt was found that qemu-kvm did not properly drop supplemental group\nprivileges when the root user started guests from the command line\n(\"/usr/libexec/qemu-kvm\") with the \"-runas\" option. A qemu-kvm process\nstarted this way could use this flaw to gain access to files on the host\nthat are accessible to the supplementary groups and not accessible to the\nprimary group. (CVE-2011-2527)\n\nNote: This issue only affected qemu-kvm when it was started directly from\nthe command line. It did not affect the Red Hat Enterprise Virtualization\nplatform or applications that start qemu-kvm via libvirt, such as the\nVirtual Machine Manager (virt-manager).\n\nThis update also fixes several bugs and adds various enhancements.\nDocumentation for these bug fixes and enhancements will be available\nshortly from the Technical Notes document, linked to in the References\nsection.\n\nAll users of qemu-kvm are advised to upgrade to these updated packages,\nwhich contain backported patches to correct these issues and add these\nenhancements. After installing this update, shut down all running virtual\nmachines. Once all virtual machines have shut down, start them again for\nthis update to take effect.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2011 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2011-12-05"
+      },
+      "Updated": {
+        "Date": "2011-12-06"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2011-2527",
+          "Cvss2": "3.7/AV:L/AC:H/Au:N/C:P/I:P/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2011-2527",
+          "Public": "20110709"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/561414",
+          "ID": "561414"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/599306",
+          "ID": "599306"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/609342",
+          "ID": "609342"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/621482",
+          "ID": "621482"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/624983",
+          "ID": "624983"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/627585",
+          "ID": "627585"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/633370",
+          "ID": "633370"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/633380",
+          "ID": "633380"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/645351",
+          "ID": "645351"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/655719",
+          "ID": "655719"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/656779",
+          "ID": "656779"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/658467",
+          "ID": "658467"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/669581",
+          "ID": "669581"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/676982",
+          "ID": "676982"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/678729",
+          "ID": "678729"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/678731",
+          "ID": "678731"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/680378",
+          "ID": "680378"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/681736",
+          "ID": "681736"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/682227",
+          "ID": "682227"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/693645",
+          "ID": "693645"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/694373",
+          "ID": "694373"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/694378",
+          "ID": "694378"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/698537",
+          "ID": "698537"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/700134",
+          "ID": "700134"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/705070",
+          "ID": "705070"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/707130",
+          "ID": "707130"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/709397",
+          "ID": "709397"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/710046",
+          "ID": "710046"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/711354",
+          "ID": "711354"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/712046",
+          "ID": "712046"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/714773",
+          "ID": "714773"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/715017",
+          "ID": "715017"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/715141",
+          "ID": "715141"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/715582",
+          "ID": "715582"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/717958",
+          "ID": "717958"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/718664",
+          "ID": "718664"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/720237",
+          "ID": "720237"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/720773",
+          "ID": "720773"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/720979",
+          "ID": "720979"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/722728",
+          "ID": "722728"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/723270",
+          "ID": "723270"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/723858",
+          "ID": "723858"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/723863",
+          "ID": "723863"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/723864",
+          "ID": "723864"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/723870",
+          "ID": "723870"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/725565",
+          "ID": "725565"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/725625",
+          "ID": "725625"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/725965",
+          "ID": "725965"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/726014",
+          "ID": "726014"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/726015",
+          "ID": "726015"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/726020",
+          "ID": "726020"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/726023",
+          "ID": "726023"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/728120",
+          "ID": "728120"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/728464",
+          "ID": "728464"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/729104",
+          "ID": "729104"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/729572",
+          "ID": "729572"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/729621",
+          "ID": "729621"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/729869",
+          "ID": "729869"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/729969",
+          "ID": "729969"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/731759",
+          "ID": "731759"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/732949",
+          "ID": "732949"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/733010",
+          "ID": "733010"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/733993",
+          "ID": "733993"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/734860",
+          "ID": "734860"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/734995",
+          "ID": "734995"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/735716",
+          "ID": "735716"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/736975",
+          "ID": "736975"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/737921",
+          "ID": "737921"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/738487",
+          "ID": "738487"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/738555",
+          "ID": "738555"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/739480",
+          "ID": "739480"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/740547",
+          "ID": "740547"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/741878",
+          "ID": "741878"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742401",
+          "ID": "742401"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742458",
+          "ID": "742458"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742469",
+          "ID": "742469"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742476",
+          "ID": "742476"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742480",
+          "ID": "742480"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/742484",
+          "ID": "742484"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/743269",
+          "ID": "743269"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/743342",
+          "ID": "743342"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/743391",
+          "ID": "743391"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/744518",
+          "ID": "744518"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/744780",
+          "ID": "744780"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/o:redhat:enterprise_linux:6",
+        "cpe:/o:redhat:enterprise_linux:6::client",
+        "cpe:/o:redhat:enterprise_linux:6::computenode",
+        "cpe:/o:redhat:enterprise_linux:6::server",
+        "cpe:/o:redhat:enterprise_linux:6::workstation"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20022439072"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 6 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20022439071"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "qemu-img is earlier than 2:0.12.1.2-2.209.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111531001"
+                  },
+                  {
+                    "Comment": "qemu-img is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20122652006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "qemu-kvm is earlier than 2:0.12.1.2-2.209.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111531003"
+                  },
+                  {
+                    "Comment": "qemu-kvm is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20122652002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "qemu-kvm-tools is earlier than 2:0.12.1.2-2.209.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20111531005"
+                  },
+                  {
+                    "Comment": "qemu-kvm-tools is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20122652008"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

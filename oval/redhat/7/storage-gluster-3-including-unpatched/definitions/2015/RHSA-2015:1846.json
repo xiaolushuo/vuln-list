@@ -1,0 +1,234 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20151846",
+  "Version": "641",
+  "Metadata": {
+    "Title": "RHSA-2015:1846: Red Hat Gluster Storage 3.1 update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Native Client for RHEL 7 for Red Hat Storage"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2015:1846",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2015:1846"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-8177",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-8177"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2015-1856",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2015-1856"
+      }
+    ],
+    "Description": "Red Hat Gluster Storage is a software only scale-out storage solution that\nprovides flexible and affordable unstructured data storage. It unifies data\nstorage and infrastructure, increases performance, and improves\navailability and manageability to meet enterprise-level storage challenges.\n\nRed Hat Gluster Storage's Unified File and Object Storage is built on\nOpenStack's Object Storage (swift).\n\nA flaw was found in the metadata constraints in Red Hat Gluster Storage's\nOpenStack Object Storage (swiftonfile). By adding metadata in several\nseparate calls, a malicious user could bypass the max_meta_count\nconstraint, and store more metadata than allowed by the configuration.\n(CVE-2014-8177)\n\nThis update also fixes numerous bugs and adds various enhancements. Space\nprecludes documenting all of these changes in this advisory. Users are\ndirected to the Red Hat Gluster Storage 3.1 Technical Notes, linked to in\nthe References section, for information on the most significant of these\nchanges.\n\nThis advisory introduces the following new features:\n\n* Gdeploy is a tool which automates the process of creating, formatting,\nand mounting bricks. When setting up a fresh cluster, gdeploy could be the\npreferred choice of cluster set up, as manually executing numerous commands\ncan be error prone. The advantages of using gdeploy includes automated\nbrick creation, flexibility in choosing the drives to configure (sd, vd,\netc.), and flexibility in naming the logical volumes (LV) and volume groups\n(VG). (BZ#1248899)\n\n* The gstatus command is now fully supported. The gstatus command provides\nan easy-to-use, high-level view of the health of a trusted storage pool\nwith a single command. It gathers information about the health of a Red Hat\nGluster Storage trusted storage pool for distributed, replicated,\ndistributed-replicated, dispersed, and distributed-dispersed volumes.\n(BZ#1250453)\n\n* You can now recover a bad file detected by BitRot from a replicated\nvolume. The information about the bad file will be logged in the scrubber\nlog file located at /var/log/glusterfs/scrub.log. (BZ#1238171)\n\n* Two tailored tuned profiles are introduced to improve the performance for\nspecific Red Hat Gluster Storage workloads. They are: rhgs-sequential-io,\nwhich improves performance of large files with sequential I/O workloads,\nand rhgs-random-io, which improves performance of small files with random\nI/O workloads (BZ# 1251360)\n\nAll users of Red Hat Gluster Storage are advised to apply this update.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2015 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2015-10-05"
+      },
+      "Updated": {
+        "Date": "2015-10-05"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2014-8177",
+          "Cvss2": "4.0/AV:N/AC:L/Au:S/C:N/I:N/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-8177",
+          "Public": "20150821"
+        },
+        {
+          "CveID": "CVE-2015-1856",
+          "Cvss2": "3.5/AV:N/AC:M/Au:S/C:N/I:N/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2015-1856",
+          "Public": "20150415"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1242749",
+          "ID": "1242749"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1257525",
+          "ID": "1257525"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1259221",
+          "ID": "1259221"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:storage:3",
+        "cpe:/a:redhat:storage:3:client:el7"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20137459006"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20137459005"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846001"
+                  },
+                  {
+                    "Comment": "glusterfs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846003"
+                  },
+                  {
+                    "Comment": "glusterfs-api is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api-devel is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846005"
+                  },
+                  {
+                    "Comment": "glusterfs-api-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-cli is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846007"
+                  },
+                  {
+                    "Comment": "glusterfs-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-client-xlators is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846009"
+                  },
+                  {
+                    "Comment": "glusterfs-client-xlators is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-devel is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846011"
+                  },
+                  {
+                    "Comment": "glusterfs-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-fuse is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846013"
+                  },
+                  {
+                    "Comment": "glusterfs-fuse is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-libs is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846015"
+                  },
+                  {
+                    "Comment": "glusterfs-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-rdma is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846017"
+                  },
+                  {
+                    "Comment": "glusterfs-rdma is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhea:tst:20193249018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-gluster is earlier than 0:3.7.1-16.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846019"
+                  },
+                  {
+                    "Comment": "python-gluster is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846020"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

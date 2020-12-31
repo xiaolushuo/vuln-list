@@ -1,0 +1,839 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20172299",
+  "Version": "640",
+  "Metadata": {
+    "Title": "RHSA-2017:2299: NetworkManager and libnl3 security, bug fix and enhancement update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 7"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2017:2299",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2017:2299"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2017-0553",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2017-0553"
+      }
+    ],
+    "Description": "NetworkManager is a system network service that manages network devices and connections, attempting to keep active network connectivity when available. Its capabilities include managing Ethernet, wireless, mobile broadband (WWAN), and PPPoE devices, as well as providing VPN integration with a variety of different VPN services.\n\nThe libnl3 packages contain a convenience library that simplifies using the Linux kernel's Netlink sockets interface for network manipulation.\n\nThe following packages have been upgraded to a later upstream version: NetworkManager (1.8.0), network-manager-applet (1.8.0). (BZ#1413312, BZ#1414103, BZ#1441621)\n\nSecurity Fix(es) in the libnl3 component:\n\n* An integer overflow leading to a heap-buffer overflow was found in the libnl library. An attacker could use this flaw to cause an application compiled with libnl to crash or possibly execute arbitrary code in the context of the user running such an application. (CVE-2017-0553)\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 7.4 Release Notes linked from the References section.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2017 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2017-08-01"
+      },
+      "Updated": {
+        "Date": "2017-08-01"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2017-0553",
+          "Cvss3": "7.0/CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "Cwe": "CWE-190",
+          "Href": "https://access.redhat.com/security/cve/CVE-2017-0553",
+          "Public": "20170207"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1231526",
+          "ID": "1231526"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1256822",
+          "ID": "1256822"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1312359",
+          "ID": "1312359"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1344303",
+          "ID": "1344303"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1348198",
+          "ID": "1348198"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1349266",
+          "ID": "1349266"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1351263",
+          "ID": "1351263"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1360386",
+          "ID": "1360386"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1367752",
+          "ID": "1367752"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1368353",
+          "ID": "1368353"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1369008",
+          "ID": "1369008"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1369380",
+          "ID": "1369380"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1369716",
+          "ID": "1369716"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1371126",
+          "ID": "1371126"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1371433",
+          "ID": "1371433"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1376199",
+          "ID": "1376199"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1378418",
+          "ID": "1378418"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1380165",
+          "ID": "1380165"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1384937",
+          "ID": "1384937"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1386106",
+          "ID": "1386106"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1388286",
+          "ID": "1388286"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1388613",
+          "ID": "1388613"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1391170",
+          "ID": "1391170"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1391477",
+          "ID": "1391477"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1393853",
+          "ID": "1393853"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1393997",
+          "ID": "1393997"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394334",
+          "ID": "1394334"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394344",
+          "ID": "1394344"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394345",
+          "ID": "1394345"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394500",
+          "ID": "1394500"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394579",
+          "ID": "1394579"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1398932",
+          "ID": "1398932"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1398934",
+          "ID": "1398934"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1404148",
+          "ID": "1404148"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1404594",
+          "ID": "1404594"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1404598",
+          "ID": "1404598"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1405431",
+          "ID": "1405431"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1413312",
+          "ID": "1413312"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1414103",
+          "ID": "1414103"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1420244",
+          "ID": "1420244"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1420708",
+          "ID": "1420708"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1421019",
+          "ID": "1421019"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1421429",
+          "ID": "1421429"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1422610",
+          "ID": "1422610"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1422786",
+          "ID": "1422786"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1423490",
+          "ID": "1423490"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1424641",
+          "ID": "1424641"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1425409",
+          "ID": "1425409"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1425818",
+          "ID": "1425818"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1426748",
+          "ID": "1426748"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1427482",
+          "ID": "1427482"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1432251",
+          "ID": "1432251"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1433303",
+          "ID": "1433303"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1433883",
+          "ID": "1433883"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1434317",
+          "ID": "1434317"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1434555",
+          "ID": "1434555"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436600",
+          "ID": "1436600"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436601",
+          "ID": "1436601"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436602",
+          "ID": "1436602"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436770",
+          "ID": "1436770"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436978",
+          "ID": "1436978"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436990",
+          "ID": "1436990"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1436993",
+          "ID": "1436993"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1437438",
+          "ID": "1437438"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1439118",
+          "ID": "1439118"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440077",
+          "ID": "1440077"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440087",
+          "ID": "1440087"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440089",
+          "ID": "1440089"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440090",
+          "ID": "1440090"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440171",
+          "ID": "1440171"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440623",
+          "ID": "1440623"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440788",
+          "ID": "1440788"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1440957",
+          "ID": "1440957"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1442064",
+          "ID": "1442064"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1443437",
+          "ID": "1443437"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1443878",
+          "ID": "1443878"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1444374",
+          "ID": "1444374"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1445414",
+          "ID": "1445414"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1446367",
+          "ID": "1446367"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1448165",
+          "ID": "1448165"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1448907",
+          "ID": "1448907"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1448987",
+          "ID": "1448987"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1449296",
+          "ID": "1449296"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1450444",
+          "ID": "1450444"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1450459",
+          "ID": "1450459"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1452062",
+          "ID": "1452062"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1452585",
+          "ID": "1452585"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1452648",
+          "ID": "1452648"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1454385",
+          "ID": "1454385"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1456362",
+          "ID": "1456362"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1456826",
+          "ID": "1456826"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1456911",
+          "ID": "1456911"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1457242",
+          "ID": "1457242"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1457909",
+          "ID": "1457909"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1458399",
+          "ID": "1458399"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1458567",
+          "ID": "1458567"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1459579",
+          "ID": "1459579"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1459580",
+          "ID": "1459580"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1459604",
+          "ID": "1459604"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1459813",
+          "ID": "1459813"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1459932",
+          "ID": "1459932"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1460219",
+          "ID": "1460219"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1460527",
+          "ID": "1460527"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1460760",
+          "ID": "1460760"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/o:redhat:enterprise_linux:7",
+        "cpe:/o:redhat:enterprise_linux:7::client",
+        "cpe:/o:redhat:enterprise_linux:7::computenode",
+        "cpe:/o:redhat:enterprise_linux:7::server",
+        "cpe:/o:redhat:enterprise_linux:7::workstation"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20042779006"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20042779005"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnl3 is earlier than 0:3.2.28-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299001"
+                  },
+                  {
+                    "Comment": "libnl3 is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnl3-cli is earlier than 0:3.2.28-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299003"
+                  },
+                  {
+                    "Comment": "libnl3-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnl3-devel is earlier than 0:3.2.28-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299005"
+                  },
+                  {
+                    "Comment": "libnl3-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnl3-doc is earlier than 0:3.2.28-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299007"
+                  },
+                  {
+                    "Comment": "libnl3-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-libreswan is earlier than 0:1.2.4-2.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299009"
+                  },
+                  {
+                    "Comment": "NetworkManager-libreswan is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-libreswan-gnome is earlier than 0:1.2.4-2.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299011"
+                  },
+                  {
+                    "Comment": "NetworkManager-libreswan-gnome is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnm-gtk is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299013"
+                  },
+                  {
+                    "Comment": "libnm-gtk is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnm-gtk-devel is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299015"
+                  },
+                  {
+                    "Comment": "libnm-gtk-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnma is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299017"
+                  },
+                  {
+                    "Comment": "libnma is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libnma-devel is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299019"
+                  },
+                  {
+                    "Comment": "libnma-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162581020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "network-manager-applet is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299021"
+                  },
+                  {
+                    "Comment": "network-manager-applet is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nm-connection-editor is earlier than 0:1.8.0-3.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299023"
+                  },
+                  {
+                    "Comment": "nm-connection-editor is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20152315018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299025"
+                  },
+                  {
+                    "Comment": "NetworkManager is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-adsl is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299027"
+                  },
+                  {
+                    "Comment": "NetworkManager-adsl is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-bluetooth is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299029"
+                  },
+                  {
+                    "Comment": "NetworkManager-bluetooth is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135036"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-config-server is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299031"
+                  },
+                  {
+                    "Comment": "NetworkManager-config-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-dispatcher-routing-rules is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299033"
+                  },
+                  {
+                    "Comment": "NetworkManager-dispatcher-routing-rules is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-glib is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299035"
+                  },
+                  {
+                    "Comment": "NetworkManager-glib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135028"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-glib-devel is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299037"
+                  },
+                  {
+                    "Comment": "NetworkManager-glib-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-libnm is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299039"
+                  },
+                  {
+                    "Comment": "NetworkManager-libnm is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135030"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-libnm-devel is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299041"
+                  },
+                  {
+                    "Comment": "NetworkManager-libnm-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-ppp is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299043"
+                  },
+                  {
+                    "Comment": "NetworkManager-ppp is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-team is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299045"
+                  },
+                  {
+                    "Comment": "NetworkManager-team is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-tui is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299047"
+                  },
+                  {
+                    "Comment": "NetworkManager-tui is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135034"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-wifi is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299049"
+                  },
+                  {
+                    "Comment": "NetworkManager-wifi is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "NetworkManager-wwan is earlier than 1:1.8.0-9.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20172299051"
+                  },
+                  {
+                    "Comment": "NetworkManager-wwan is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20181000135026"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

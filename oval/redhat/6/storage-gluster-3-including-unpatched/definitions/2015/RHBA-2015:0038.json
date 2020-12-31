@@ -1,0 +1,393 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhba:def:20150038",
+  "Version": "646",
+  "Metadata": {
+    "Title": "RHBA-2015:0038: Red Hat Storage 3.0 enhancement and bug fix update #3 (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Native Client for RHEL 6 for Red Hat Storage"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHBA-2015:0038",
+        "RefURL": "https://access.redhat.com/errata/RHBA-2015:0038"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-3619",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-3619"
+      }
+    ],
+    "Description": "Red Hat Storage is software-only, scale-out storage that provides flexible\nand affordable unstructured data storage for an enterprise. GlusterFS, a\nkey building block of Red Hat Storage, is based on a stackable user-space\ndesign and can deliver exceptional performance for diverse workloads.\nGlusterFS aggregates various storage servers over network interconnections\ninto one large, parallel network file system.\n\nThis update fixes numerous bugs and adds various enhancements in RDMA, \nSMB, Snapshot, Swift, NFS, Quota, and Geo-replication. Space precludes\ndocumenting  all of these changes in this advisory. Users are \ndirected to the Red Hat Storage 3 Technical Notes, linked to in \nthe References section, for information on the most significant \nof these changes.\n\nThis advisory adds the following enhancements:\n\n-  With this advisory, User Serviceability Snapshot is out of technology\npreview and is supported. You can now view and retrieve snapshots \nusing CIFS for a Windows client. A new volume set option\n'features.show-snapshot-directory' is added to make the '.snaps' directory \nexplicitly visible at the root of the share. (BZ#1094830)\n\n- With this advisory, Remote Direct Memory Access (RDMA) support for\ncommunication between GlusterFS bricks and clients is out of technology\npreview and is supported. It fixes bugs and provides options to configure\nRDMA support for the new and existing volumes. (BZ#852276)\n   \n- Red Hat Storage Object Store has been rebased to Red Hat OpenStack Icehouse.\nThis feature allows you to schedule deletion of objects which are stored \nin the Red Hat Storage volume. You can use the Object expiration feature\nto specify a lifetime for objects in the volume. When the lifetime of \nan object expires, it automatically stops serving that object at the\nspecified time and shortly thereafter removes the object from the \nRed Hat Storage volume. (BZ#1180463)\n\n- A new command, 'gstatus' provides an easy-to-use, high-level view of the\nhealth of a trusted storage pool with a single command. It gathers \ninformation by executing the GlusterFS commands, to gather information\nabout the statuses of the Red Hat Storage nodes, volumes, and bricks. \nThe gstatus command is under technology preview. (BZ#1171546)\n\nAll users of Red Hat Storage are advised to install these updated packages.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2015 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2015-01-15"
+      },
+      "Updated": {
+        "Date": "2015-01-15"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2014-3619",
+          "Cvss2": "5.0/AV:N/AC:L/Au:N/C:N/I:N/A:P",
+          "Cwe": "CWE-835",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-3619",
+          "Public": "20140912"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/991300",
+          "ID": "991300"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1050823",
+          "ID": "1050823"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1061585",
+          "ID": "1061585"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1065501",
+          "ID": "1065501"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1101438",
+          "ID": "1101438"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1102647",
+          "ID": "1102647"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1104635",
+          "ID": "1104635"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1107606",
+          "ID": "1107606"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1115441",
+          "ID": "1115441"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1115899",
+          "ID": "1115899"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1120072",
+          "ID": "1120072"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1122886",
+          "ID": "1122886"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1122978",
+          "ID": "1122978"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1123732",
+          "ID": "1123732"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1127658",
+          "ID": "1127658"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1130158",
+          "ID": "1130158"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1138547",
+          "ID": "1138547"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1139156",
+          "ID": "1139156"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1140517",
+          "ID": "1140517"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1142087",
+          "ID": "1142087"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1142283",
+          "ID": "1142283"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1142960",
+          "ID": "1142960"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1144423",
+          "ID": "1144423"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1144428",
+          "ID": "1144428"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1146830",
+          "ID": "1146830"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1146906",
+          "ID": "1146906"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1147427",
+          "ID": "1147427"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1154617",
+          "ID": "1154617"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1157334",
+          "ID": "1157334"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1158844",
+          "ID": "1158844"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1158883",
+          "ID": "1158883"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1158898",
+          "ID": "1158898"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1159173",
+          "ID": "1159173"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1159705",
+          "ID": "1159705"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1160138",
+          "ID": "1160138"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1160233",
+          "ID": "1160233"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1160641",
+          "ID": "1160641"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1161531",
+          "ID": "1161531"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1162468",
+          "ID": "1162468"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1163030",
+          "ID": "1163030"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1163209",
+          "ID": "1163209"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1163703",
+          "ID": "1163703"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1164721",
+          "ID": "1164721"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165026",
+          "ID": "1165026"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165097",
+          "ID": "1165097"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165255",
+          "ID": "1165255"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165704",
+          "ID": "1165704"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165904",
+          "ID": "1165904"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1167613",
+          "ID": "1167613"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1168873",
+          "ID": "1168873"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1169764",
+          "ID": "1169764"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1175088",
+          "ID": "1175088"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1177927",
+          "ID": "1177927"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1179704",
+          "ID": "1179704"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1180463",
+          "ID": "1180463"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:storage:3",
+        "cpe:/a:redhat:storage:3:client:el6"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:201610089010"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 6 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:201610089009"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038001"
+                  },
+                  {
+                    "Comment": "glusterfs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038003"
+                  },
+                  {
+                    "Comment": "glusterfs-api is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api-devel is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038005"
+                  },
+                  {
+                    "Comment": "glusterfs-api-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-devel is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038007"
+                  },
+                  {
+                    "Comment": "glusterfs-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-fuse is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038009"
+                  },
+                  {
+                    "Comment": "glusterfs-fuse is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-libs is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038011"
+                  },
+                  {
+                    "Comment": "glusterfs-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-rdma is earlier than 0:3.6.0.42-1.el6",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038013"
+                  },
+                  {
+                    "Comment": "glusterfs-rdma is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038014"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

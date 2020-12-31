@@ -1,0 +1,263 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20162596",
+  "Version": "637",
+  "Metadata": {
+    "Title": "RHSA-2016:2596: pcs security, bug fix, and enhancement update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 7"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2016:2596",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2016:2596"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2016-0720",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2016-0720"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2016-0721",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2016-0721"
+      }
+    ],
+    "Description": "The pcs packages provide a command-line configuration system for the Pacemaker and Corosync utilities.\n\nThe following packages have been upgraded to a newer upstream version: pcs (0.9.152). (BZ#1299847)\n\nSecurity Fix(es):\n\n* A Cross-Site Request Forgery (CSRF) flaw was found in the pcsd web UI. A remote attacker could provide a specially crafted web page that, when visited by a user with a valid pcsd session, would allow the attacker to trigger requests on behalf of the user, for example removing resources or restarting/removing nodes. (CVE-2016-0720)\n\n* It was found that pcsd did not invalidate cookies on the server side when a user logged out. This could potentially allow an attacker to perform session fixation attacks on pcsd. (CVE-2016-0721)\n\nThese issues were discovered by Martin Prpic (Red Hat Product Security).\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 7.3 Release Notes linked from the References section.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2016 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2016-11-03"
+      },
+      "Updated": {
+        "Date": "2016-11-03"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2016-0720",
+          "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+          "Cwe": "CWE-352",
+          "Href": "https://access.redhat.com/security/cve/CVE-2016-0720",
+          "Public": "20160216"
+        },
+        {
+          "CveID": "CVE-2016-0721",
+          "Cvss2": "4.3/AV:N/AC:M/Au:N/C:N/I:P/A:N",
+          "Cwe": "CWE-613 CWE-384",
+          "Href": "https://access.redhat.com/security/cve/CVE-2016-0721",
+          "Public": "20160216"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1158500",
+          "ID": "1158500"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1158805",
+          "ID": "1158805"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1164402",
+          "ID": "1164402"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1207405",
+          "ID": "1207405"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1219581",
+          "ID": "1219581"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1220512",
+          "ID": "1220512"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225423",
+          "ID": "1225423"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225946",
+          "ID": "1225946"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229822",
+          "ID": "1229822"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231858",
+          "ID": "1231858"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1248990",
+          "ID": "1248990"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1249085",
+          "ID": "1249085"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1252050",
+          "ID": "1252050"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1264360",
+          "ID": "1264360"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1269242",
+          "ID": "1269242"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281364",
+          "ID": "1281364"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281371",
+          "ID": "1281371"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281391",
+          "ID": "1281391"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1286664",
+          "ID": "1286664"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1287320",
+          "ID": "1287320"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1290512",
+          "ID": "1290512"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1298585",
+          "ID": "1298585"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1299614",
+          "ID": "1299614"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1299615",
+          "ID": "1299615"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1299847",
+          "ID": "1299847"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1301993",
+          "ID": "1301993"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1302010",
+          "ID": "1302010"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1303136",
+          "ID": "1303136"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1305786",
+          "ID": "1305786"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1315357",
+          "ID": "1315357"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1315652",
+          "ID": "1315652"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1315743",
+          "ID": "1315743"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1327739",
+          "ID": "1327739"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1328066",
+          "ID": "1328066"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1329472",
+          "ID": "1329472"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1341114",
+          "ID": "1341114"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1346852",
+          "ID": "1346852"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1349465",
+          "ID": "1349465"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1354498",
+          "ID": "1354498"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357945",
+          "ID": "1357945"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1359154",
+          "ID": "1359154"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366307",
+          "ID": "1366307"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/o:redhat:enterprise_linux:7",
+        "cpe:/o:redhat:enterprise_linux:7::server"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20042779006"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20042779005"
+          },
+          {
+            "Comment": "pcs is earlier than 0:0.9.152-10.el7",
+            "TestRef": "oval:com.redhat.rhsa:tst:20162596001"
+          },
+          {
+            "Comment": "pcs is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.cve:tst:20172661006"
+          }
+        ]
+      }
+    ]
+  }
+}

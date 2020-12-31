@@ -1,0 +1,1281 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20162577",
+  "Version": "637",
+  "Metadata": {
+    "Title": "RHSA-2016:2577: libvirt security, bug fix, and enhancement update (Moderate)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 7"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2016:2577",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2016:2577"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2015-5160",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2015-5160"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2015-5313",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2015-5313"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2016-5008",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2016-5008"
+      }
+    ],
+    "Description": "The libvirt library contains a C API for managing and interacting with the virtualization capabilities of Linux and other operating systems. In addition, libvirt provides tools for remote management of virtualized systems.\n\nThe following packages have been upgraded to a newer upstream version: libvirt (2.0.0). (BZ#830971, BZ#1286679)\n\nSecurity Fix(es):\n\n* It was found that the libvirt daemon, when using RBD (RADOS Block Device), leaked private credentials to the process list. A local attacker could use this flaw to perform certain privileged operations within the cluster. (CVE-2015-5160)\n\n* A path-traversal flaw was found in the way the libvirt daemon handled filesystem names for storage volumes. A libvirt user with privileges to create storage volumes and without privileges to create and modify domains could possibly use this flaw to escalate their privileges. (CVE-2015-5313)\n\n* It was found that setting a VNC password to an empty string in libvirt did not disable all access to the VNC server as documented, instead it allowed access with no authentication required. An attacker could use this flaw to access a VNC server with an empty VNC password without any authentication. (CVE-2016-5008)\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 7.3 Release Notes linked from the References section.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Moderate",
+      "Rights": "Copyright 2016 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2016-11-03"
+      },
+      "Updated": {
+        "Date": "2016-11-03"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2015-5160",
+          "Cvss2": "2.1/AV:L/AC:L/Au:N/C:P/I:N/A:N",
+          "Cvss3": "3.3/CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+          "Href": "https://access.redhat.com/security/cve/CVE-2015-5160",
+          "Public": "20150810"
+        },
+        {
+          "CveID": "CVE-2015-5313",
+          "Cvss2": "4.9/AV:N/AC:H/Au:S/C:N/I:C/A:N",
+          "Cwe": "CWE-22",
+          "Href": "https://access.redhat.com/security/cve/CVE-2015-5313",
+          "Public": "20151211"
+        },
+        {
+          "CveID": "CVE-2016-5008",
+          "Cvss2": "5.1/AV:N/AC:H/Au:N/C:P/I:P/A:P",
+          "Cvss3": "5.6/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+          "Href": "https://access.redhat.com/security/cve/CVE-2016-5008",
+          "Public": "20150118"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/846810",
+          "ID": "846810"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/868771",
+          "ID": "868771"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/921135",
+          "ID": "921135"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/986365",
+          "ID": "986365"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/997561",
+          "ID": "997561"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1002423",
+          "ID": "1002423"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1004593",
+          "ID": "1004593"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1004602",
+          "ID": "1004602"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1025230",
+          "ID": "1025230"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1026136",
+          "ID": "1026136"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1038888",
+          "ID": "1038888"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1046833",
+          "ID": "1046833"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1051350",
+          "ID": "1051350"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1055331",
+          "ID": "1055331"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1077068",
+          "ID": "1077068"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1097930",
+          "ID": "1097930"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1103314",
+          "ID": "1103314"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1103845",
+          "ID": "1103845"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1120053",
+          "ID": "1120053"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1134878",
+          "ID": "1134878"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1139766",
+          "ID": "1139766"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1151723",
+          "ID": "1151723"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1159219",
+          "ID": "1159219"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1163091",
+          "ID": "1163091"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1166452",
+          "ID": "1166452"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1168453",
+          "ID": "1168453"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1180092",
+          "ID": "1180092"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1180486",
+          "ID": "1180486"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1195176",
+          "ID": "1195176"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1196711",
+          "ID": "1196711"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1197592",
+          "ID": "1197592"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1209802",
+          "ID": "1209802"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1210587",
+          "ID": "1210587"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215968",
+          "ID": "1215968"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1216281",
+          "ID": "1216281"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1220702",
+          "ID": "1220702"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227880",
+          "ID": "1227880"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231114",
+          "ID": "1231114"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233003",
+          "ID": "1233003"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233115",
+          "ID": "1233115"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235180",
+          "ID": "1235180"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235581",
+          "ID": "1235581"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240439",
+          "ID": "1240439"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1243684",
+          "ID": "1243684"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1244128",
+          "ID": "1244128"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1244567",
+          "ID": "1244567"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245476",
+          "ID": "1245476"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245525",
+          "ID": "1245525"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245647",
+          "ID": "1245647"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1247521",
+          "ID": "1247521"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1247987",
+          "ID": "1247987"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1248277",
+          "ID": "1248277"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1249441",
+          "ID": "1249441"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1249981",
+          "ID": "1249981"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1250287",
+          "ID": "1250287"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1250331",
+          "ID": "1250331"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1251461",
+          "ID": "1251461"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1253107",
+          "ID": "1253107"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1254152",
+          "ID": "1254152"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1256999",
+          "ID": "1256999"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1257486",
+          "ID": "1257486"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1260576",
+          "ID": "1260576"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1260749",
+          "ID": "1260749"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1261432",
+          "ID": "1261432"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1263574",
+          "ID": "1263574"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1264008",
+          "ID": "1264008"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1265049",
+          "ID": "1265049"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1265114",
+          "ID": "1265114"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1266078",
+          "ID": "1266078"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1266982",
+          "ID": "1266982"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1267256",
+          "ID": "1267256"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1269575",
+          "ID": "1269575"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1269715",
+          "ID": "1269715"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1270427",
+          "ID": "1270427"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1270709",
+          "ID": "1270709"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1270715",
+          "ID": "1270715"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1271069",
+          "ID": "1271069"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1271107",
+          "ID": "1271107"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1272301",
+          "ID": "1272301"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1273480",
+          "ID": "1273480"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1273491",
+          "ID": "1273491"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1273686",
+          "ID": "1273686"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1275039",
+          "ID": "1275039"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1276198",
+          "ID": "1276198"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1277121",
+          "ID": "1277121"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1277781",
+          "ID": "1277781"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1278068",
+          "ID": "1278068"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1278404",
+          "ID": "1278404"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1278421",
+          "ID": "1278421"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1278727",
+          "ID": "1278727"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281706",
+          "ID": "1281706"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281707",
+          "ID": "1281707"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1281710",
+          "ID": "1281710"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1282288",
+          "ID": "1282288"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1282744",
+          "ID": "1282744"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1282846",
+          "ID": "1282846"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1283085",
+          "ID": "1283085"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1285665",
+          "ID": "1285665"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1286679",
+          "ID": "1286679"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1288000",
+          "ID": "1288000"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1288690",
+          "ID": "1288690"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1289288",
+          "ID": "1289288"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1289363",
+          "ID": "1289363"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1289391",
+          "ID": "1289391"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1290324",
+          "ID": "1290324"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1293241",
+          "ID": "1293241"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1293804",
+          "ID": "1293804"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1293899",
+          "ID": "1293899"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1294617",
+          "ID": "1294617"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1297020",
+          "ID": "1297020"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1297690",
+          "ID": "1297690"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1298065",
+          "ID": "1298065"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1299696",
+          "ID": "1299696"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1301021",
+          "ID": "1301021"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1302373",
+          "ID": "1302373"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1305922",
+          "ID": "1305922"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1306556",
+          "ID": "1306556"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1308317",
+          "ID": "1308317"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1312188",
+          "ID": "1312188"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1313264",
+          "ID": "1313264"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1313314",
+          "ID": "1313314"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1313627",
+          "ID": "1313627"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1314594",
+          "ID": "1314594"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1315059",
+          "ID": "1315059"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1316371",
+          "ID": "1316371"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1316384",
+          "ID": "1316384"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1316420",
+          "ID": "1316420"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1316433",
+          "ID": "1316433"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1316465",
+          "ID": "1316465"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1317531",
+          "ID": "1317531"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1318569",
+          "ID": "1318569"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1318993",
+          "ID": "1318993"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1319044",
+          "ID": "1319044"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1320447",
+          "ID": "1320447"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1320470",
+          "ID": "1320470"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1320500",
+          "ID": "1320500"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1320836",
+          "ID": "1320836"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1320893",
+          "ID": "1320893"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1321546",
+          "ID": "1321546"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1322210",
+          "ID": "1322210"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1323085",
+          "ID": "1323085"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1324551",
+          "ID": "1324551"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1324757",
+          "ID": "1324757"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325043",
+          "ID": "1325043"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325072",
+          "ID": "1325072"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325075",
+          "ID": "1325075"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325080",
+          "ID": "1325080"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325757",
+          "ID": "1325757"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1325996",
+          "ID": "1325996"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1326270",
+          "ID": "1326270"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1326660",
+          "ID": "1326660"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1327499",
+          "ID": "1327499"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1327537",
+          "ID": "1327537"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1328003",
+          "ID": "1328003"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1328301",
+          "ID": "1328301"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1328401",
+          "ID": "1328401"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1329041",
+          "ID": "1329041"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1329045",
+          "ID": "1329045"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1329046",
+          "ID": "1329046"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1329819",
+          "ID": "1329819"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1331228",
+          "ID": "1331228"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1332446",
+          "ID": "1332446"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1332705",
+          "ID": "1332705"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1332854",
+          "ID": "1332854"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1333248",
+          "ID": "1333248"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1333404",
+          "ID": "1333404"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1334237",
+          "ID": "1334237"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1335617",
+          "ID": "1335617"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1337073",
+          "ID": "1337073"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1337490",
+          "ID": "1337490"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1337869",
+          "ID": "1337869"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1339900",
+          "ID": "1339900"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1340976",
+          "ID": "1340976"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1341415",
+          "ID": "1341415"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1341460",
+          "ID": "1341460"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1342342",
+          "ID": "1342342"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1342874",
+          "ID": "1342874"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1342962",
+          "ID": "1342962"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1343442",
+          "ID": "1343442"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1344892",
+          "ID": "1344892"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1345743",
+          "ID": "1345743"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1346723",
+          "ID": "1346723"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1346724",
+          "ID": "1346724"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1346730",
+          "ID": "1346730"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1347642",
+          "ID": "1347642"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1350688",
+          "ID": "1350688"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1350772",
+          "ID": "1350772"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1351057",
+          "ID": "1351057"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1351473",
+          "ID": "1351473"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1351514",
+          "ID": "1351514"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1354238",
+          "ID": "1354238"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1356436",
+          "ID": "1356436"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1356461",
+          "ID": "1356461"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1356858",
+          "ID": "1356858"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1356937",
+          "ID": "1356937"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357346",
+          "ID": "1357346"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357363",
+          "ID": "1357363"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357364",
+          "ID": "1357364"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357776",
+          "ID": "1357776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1357924",
+          "ID": "1357924"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1358712",
+          "ID": "1358712"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1358728",
+          "ID": "1358728"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1359071",
+          "ID": "1359071"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1361172",
+          "ID": "1361172"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1361948",
+          "ID": "1361948"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1362349",
+          "ID": "1362349"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1363627",
+          "ID": "1363627"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1363636",
+          "ID": "1363636"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1363648",
+          "ID": "1363648"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1363773",
+          "ID": "1363773"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1365004",
+          "ID": "1365004"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1365500",
+          "ID": "1365500"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1365903",
+          "ID": "1365903"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366097",
+          "ID": "1366097"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366119",
+          "ID": "1366119"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366484",
+          "ID": "1366484"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366611",
+          "ID": "1366611"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366989",
+          "ID": "1366989"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1367130",
+          "ID": "1367130"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1367259",
+          "ID": "1367259"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1367260",
+          "ID": "1367260"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1367269",
+          "ID": "1367269"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1368774",
+          "ID": "1368774"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1370066",
+          "ID": "1370066"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1372251",
+          "ID": "1372251"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1374613",
+          "ID": "1374613"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1375783",
+          "ID": "1375783"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1377212",
+          "ID": "1377212"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/o:redhat:enterprise_linux:7",
+        "cpe:/o:redhat:enterprise_linux:7::client",
+        "cpe:/o:redhat:enterprise_linux:7::computenode",
+        "cpe:/o:redhat:enterprise_linux:7::server",
+        "cpe:/o:redhat:enterprise_linux:7::workstation"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20042779006"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20042779005"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577001"
+                  },
+                  {
+                    "Comment": "libvirt is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-client is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577003"
+                  },
+                  {
+                    "Comment": "libvirt-client is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577005"
+                  },
+                  {
+                    "Comment": "libvirt-daemon is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-config-network is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577007"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-config-network is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456038"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577009"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-config-nwfilter is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-interface is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577011"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-interface is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456058"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-lxc is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577013"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-lxc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456024"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-network is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577015"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-network is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456060"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577017"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-nodedev is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456034"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577019"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-nwfilter is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-qemu is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577021"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-qemu is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456066"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-secret is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577023"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-secret is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-driver-storage is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577025"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-driver-storage is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-kvm is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577027"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-kvm is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456052"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-daemon-lxc is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577029"
+                  },
+                  {
+                    "Comment": "libvirt-daemon-lxc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-devel is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577031"
+                  },
+                  {
+                    "Comment": "libvirt-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456044"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-docs is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577033"
+                  },
+                  {
+                    "Comment": "libvirt-docs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456056"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-lock-sanlock is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577035"
+                  },
+                  {
+                    "Comment": "libvirt-lock-sanlock is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456042"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-login-shell is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577037"
+                  },
+                  {
+                    "Comment": "libvirt-login-shell is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-nss is earlier than 0:2.0.0-10.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20162577039"
+                  },
+                  {
+                    "Comment": "libvirt-nss is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:20136456030"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

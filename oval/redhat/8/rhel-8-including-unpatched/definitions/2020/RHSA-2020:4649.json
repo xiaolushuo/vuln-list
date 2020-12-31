@@ -1,0 +1,385 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20204649",
+  "Version": "634",
+  "Metadata": {
+    "Title": "RHSA-2020:4649: evolution security and bug fix update (Low)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Enterprise Linux 8"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2020:4649",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2020:4649"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2020-14928",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2020-14928"
+      }
+    ],
+    "Description": "Evolution is a GNOME application that provides integrated email, calendar, contact management, and communications functionality.\n\nThe evolution-data-server packages provide a unified back end for applications which interact with contacts, tasks and calendar information. Evolution Data Server was originally developed as a back end for the Evolution information management application, but is now used by various other applications.\n\nOpenChange provides libraries to access Microsoft Exchange servers using native protocols.\n\nSecurity Fix(es):\n\n* evolution-data-server: Response injection via STARTTLS in SMTP and POP3 (CVE-2020-14928)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nFor detailed information on changes in this release, see the Red Hat Enterprise Linux 8.3 Release Notes linked from the References section.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Low",
+      "Rights": "Copyright 2020 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2020-11-04"
+      },
+      "Updated": {
+        "Date": "2020-11-04"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2020-14928",
+          "Cvss3": "5.3/CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+          "Cwe": "CWE-20",
+          "Href": "https://access.redhat.com/security/cve/CVE-2020-14928",
+          "Public": "20200704"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1825447",
+          "ID": "1825447"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1836165",
+          "ID": "1836165"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1836279",
+          "ID": "1836279"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1857470",
+          "ID": "1857470"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:enterprise_linux:8",
+        "cpe:/a:redhat:enterprise_linux:8::appstream",
+        "cpe:/a:redhat:enterprise_linux:8::crb"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.cve:tst:20137488004"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 8 is installed",
+            "TestRef": "oval:com.redhat.cve:tst:20137488003"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "bogofilter is earlier than 0:1.2.5-2.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649001"
+                  },
+                  {
+                    "Comment": "bogofilter is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "bogofilter-debugsource is earlier than 0:1.2.5-2.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649003"
+                  },
+                  {
+                    "Comment": "bogofilter-debugsource is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openchange is earlier than 0:2.3-26.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649005"
+                  },
+                  {
+                    "Comment": "openchange is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201878002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openchange-debugsource is earlier than 0:2.3-26.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649007"
+                  },
+                  {
+                    "Comment": "openchange-debugsource is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201878004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-mapi is earlier than 0:3.28.3-3.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649009"
+                  },
+                  {
+                    "Comment": "evolution-mapi is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-mapi-debugsource is earlier than 0:3.28.3-3.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649011"
+                  },
+                  {
+                    "Comment": "evolution-mapi-debugsource is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-mapi-langpacks is earlier than 0:3.28.3-3.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649013"
+                  },
+                  {
+                    "Comment": "evolution-mapi-langpacks is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649015"
+                  },
+                  {
+                    "Comment": "evolution is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-bogofilter is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649017"
+                  },
+                  {
+                    "Comment": "evolution-bogofilter is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-debugsource is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649019"
+                  },
+                  {
+                    "Comment": "evolution-debugsource is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-devel is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649021"
+                  },
+                  {
+                    "Comment": "evolution-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-help is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649023"
+                  },
+                  {
+                    "Comment": "evolution-help is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-langpacks is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649025"
+                  },
+                  {
+                    "Comment": "evolution-langpacks is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-pst is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649027"
+                  },
+                  {
+                    "Comment": "evolution-pst is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-spamassassin is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649029"
+                  },
+                  {
+                    "Comment": "evolution-spamassassin is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202011879022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649031"
+                  },
+                  {
+                    "Comment": "evolution-data-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-debugsource is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649033"
+                  },
+                  {
+                    "Comment": "evolution-data-server-debugsource is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-devel is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649035"
+                  },
+                  {
+                    "Comment": "evolution-data-server-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-doc is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649037"
+                  },
+                  {
+                    "Comment": "evolution-data-server-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-langpacks is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649039"
+                  },
+                  {
+                    "Comment": "evolution-data-server-langpacks is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-perl is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649041"
+                  },
+                  {
+                    "Comment": "evolution-data-server-perl is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "evolution-data-server-tests is earlier than 0:3.28.5-14.el8",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204649043"
+                  },
+                  {
+                    "Comment": "evolution-data-server-tests is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.cve:tst:202016117012"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
