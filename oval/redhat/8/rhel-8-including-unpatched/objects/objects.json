@@ -6351,6 +6351,21 @@
       "Name": "containernetworking-plugins"
     },
     {
+      "ID": "oval:com.redhat.cve:obj:20200499001",
+      "Version": "631",
+      "Name": "flac-libs"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:20200499002",
+      "Version": "631",
+      "Name": "flac-devel"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:20200499003",
+      "Version": "631",
+      "Name": "flac"
+    },
+    {
       "ID": "oval:com.redhat.cve:obj:202010134001",
       "Version": "631",
       "Name": "bluez-hid2hci-debuginfo"
@@ -8494,6 +8509,76 @@
       "ID": "oval:com.redhat.cve:obj:202029652010",
       "Version": "631",
       "Name": "buildah-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512001",
+      "Version": "631",
+      "Name": "dbus-devel"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512002",
+      "Version": "631",
+      "Name": "dbus-x11-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512003",
+      "Version": "631",
+      "Name": "dbus-debugsource"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512004",
+      "Version": "631",
+      "Name": "dbus"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512005",
+      "Version": "631",
+      "Name": "dbus-tests-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512006",
+      "Version": "631",
+      "Name": "dbus-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512007",
+      "Version": "631",
+      "Name": "dbus-daemon"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512008",
+      "Version": "631",
+      "Name": "dbus-daemon-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512009",
+      "Version": "631",
+      "Name": "dbus-tools"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512010",
+      "Version": "631",
+      "Name": "dbus-common"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512011",
+      "Version": "631",
+      "Name": "dbus-libs"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512012",
+      "Version": "631",
+      "Name": "dbus-x11"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512013",
+      "Version": "631",
+      "Name": "dbus-libs-debuginfo"
+    },
+    {
+      "ID": "oval:com.redhat.cve:obj:202035512014",
+      "Version": "631",
+      "Name": "dbus-tools-debuginfo"
     },
     {
       "ID": "oval:com.redhat.cve:obj:202035738001",
@@ -11989,46 +12074,6 @@
       "ID": "oval:com.redhat.rhsa:obj:20193704003",
       "Version": "634",
       "Name": "python3-numpy-f2py"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707001",
-      "Version": "634",
-      "Name": "dbus"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707002",
-      "Version": "634",
-      "Name": "dbus-common"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707003",
-      "Version": "634",
-      "Name": "dbus-daemon"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707004",
-      "Version": "634",
-      "Name": "dbus-debugsource"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707005",
-      "Version": "634",
-      "Name": "dbus-devel"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707006",
-      "Version": "634",
-      "Name": "dbus-libs"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707007",
-      "Version": "634",
-      "Name": "dbus-tools"
-    },
-    {
-      "ID": "oval:com.redhat.rhsa:obj:20193707008",
-      "Version": "634",
-      "Name": "dbus-x11"
     },
     {
       "ID": "oval:com.redhat.rhsa:obj:20193708020",
@@ -17541,21 +17586,6 @@
       "Name": "mod_auth_openidc-debuginfo"
     },
     {
-      "ID": "oval:com.redhat.unaffected:obj:20176888001",
-      "Version": "631",
-      "Name": "flac-libs"
-    },
-    {
-      "ID": "oval:com.redhat.unaffected:obj:20176888002",
-      "Version": "631",
-      "Name": "flac"
-    },
-    {
-      "ID": "oval:com.redhat.unaffected:obj:20176888003",
-      "Version": "631",
-      "Name": "flac-devel"
-    },
-    {
       "ID": "oval:com.redhat.unaffected:obj:20178315001",
       "Version": "631",
       "Name": "eclipse-equinox-osgi"
@@ -20752,6 +20782,38 @@
     {
       "ID": "oval:com.redhat.rhsa:obj:20205506015",
       "Version": "637",
+      "Filepath": {
+        "Text": "/boot/grub2/grub.cfg",
+        "Datatype": "string"
+      },
+      "Pattern": {
+        "Text": "^menuentry.*",
+        "Operation": "pattern match"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "VarRef": "oval:com.redhat.rhsa:var:20191167001"
+      }
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210003026",
+      "Version": "635",
+      "Filepath": {
+        "Text": "/boot/grub2/grub.cfg",
+        "Datatype": "string"
+      },
+      "Pattern": {
+        "Text": "^menuentry.*",
+        "Operation": "pattern match"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "VarRef": "oval:com.redhat.rhsa:var:20191167001"
+      }
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210004015",
+      "Version": "634",
       "Filepath": {
         "Text": "/boot/grub2/grub.cfg",
         "Datatype": "string"
