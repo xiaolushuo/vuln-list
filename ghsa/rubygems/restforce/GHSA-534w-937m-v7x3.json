@@ -27,12 +27,12 @@
         "Value": "CVE-2018-3777"
       }
     ],
-    "Description": "A flaw in how restforce constructs URLs may allow an attacker to inject additional parameters into Salesforce API requests.   \r\n\r\nImpact\r\n------\r\nThis flaw is only exploitable in applications that pass user input directly to restforce's select, find, describe, update, upsert, and destroy methods.\r\n\r\nVulnerable code might look like:\r\n```ruby\r\n  client.select('SomeSalesForceObject', params[:some-id],\r\n     ...)\r\n```\r\n\r\nIn such an application, attackers could pass `0016000000MRatd/describe`  as a request parameter, causing the server to make a request to a different endpoint than the server is designed to handle. Since the Salesforce REST API supports overriding HTTP methods via a request parameter, an attacker could also cause the client's `select()` method to modify data, by passing `0016000000MRatd/?_HttpMethod=PATCH\u0026other-query-params=...`.\r\n\r\nWorkarounds\r\n------\r\nIf possible, applications should track salesforce IDs internally, rather than passing user-supplied IDs to salesforce. Such practice mitigates this vulnerability, and in general is desirable for ensuring strong access control.",
+    "Description": "A flaw in how restforce constructs URLs may allow an attacker to inject additional parameters into Salesforce API requests.   \n\nImpact\n------\nThis flaw is only exploitable in applications that pass user input directly to restforce's select, find, describe, update, upsert, and destroy methods.\n\nVulnerable code might look like:\n```ruby\n  client.select('SomeSalesForceObject', params[:some-id],\n     ...)\n```\n\nIn such an application, attackers could pass `0016000000MRatd/describe`  as a request parameter, causing the server to make a request to a different endpoint than the server is designed to handle. Since the Salesforce REST API supports overriding HTTP methods via a request parameter, an attacker could also cause the client's `select()` method to modify data, by passing `0016000000MRatd/?_HttpMethod=PATCH\u0026other-query-params=...`.\n\nWorkarounds\n------\nIf possible, applications should track salesforce IDs internally, rather than passing user-supplied IDs to salesforce. Such practice mitigates this vulnerability, and in general is desirable for ensuring strong access control.",
     "Origin": "UNSPECIFIED",
     "PublishedAt": "2018-08-03T21:04:02Z",
     "Severity": "HIGH",
     "Summary": "High severity vulnerability that affects restforce",
-    "UpdatedAt": "2019-07-03T21:02:02Z",
+    "UpdatedAt": "2021-01-08T19:52:05Z",
     "WithdrawnAt": ""
   },
   "Versions": [
