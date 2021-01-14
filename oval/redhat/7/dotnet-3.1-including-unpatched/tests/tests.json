@@ -2,6 +2,50 @@
   "RpminfoTests": [
     {
       "Check": "at least one",
+      "Comment": "rh-dotnet31 is installed",
+      "ID": "oval:com.redhat.cve:tst:20211723001",
+      "Version": "631",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723001"
+      },
+      "State": {}
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31 is signed with Red Hat redhatrelease2 key",
+      "ID": "oval:com.redhat.cve:tst:20211723002",
+      "Version": "631",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723001"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-runtime is installed",
+      "ID": "oval:com.redhat.cve:tst:20211723003",
+      "Version": "631",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723002"
+      },
+      "State": {}
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-runtime is signed with Red Hat redhatrelease2 key",
+      "ID": "oval:com.redhat.cve:tst:20211723004",
+      "Version": "631",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723002"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
+      }
+    },
+    {
+      "Check": "at least one",
       "Comment": "rh-dotnet31-aspnetcore-runtime-3.1 is earlier than 0:3.1.1-4.el7",
       "ID": "oval:com.redhat.rhsa:tst:20200134001",
       "Version": "637",
@@ -21,7 +65,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134001"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -45,7 +89,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134002"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -69,7 +113,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134003"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -93,7 +137,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134004"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -117,7 +161,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134005"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -141,7 +185,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134006"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -165,7 +209,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134007"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -189,7 +233,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134008"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -213,7 +257,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134009"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -237,7 +281,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134010"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -261,7 +305,7 @@
         "ObjectRef": "oval:com.redhat.rhsa:obj:20200134011"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134002"
+        "StateRef": "oval:com.redhat.cve:ste:20211723001"
       }
     },
     {
@@ -926,13 +970,135 @@
     },
     {
       "Check": "at least one",
-      "Comment": "rh-dotnet31 is installed",
-      "ID": "oval:com.redhat.unaffected:tst:20200605001",
-      "Version": "631",
+      "Comment": "rh-dotnet31-aspnetcore-runtime-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114001",
+      "Version": "636",
       "Object": {
-        "ObjectRef": "oval:com.redhat.unaffected:obj:20200605001"
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134001"
       },
-      "State": {}
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-aspnetcore-targeting-pack-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114003",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134002"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet is earlier than 0:3.1.111-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114005",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134003"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114003"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-apphost-pack-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114007",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134004"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-host is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114009",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134005"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-hostfxr-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114011",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134006"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-runtime-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114013",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134007"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-sdk-3.1 is earlier than 0:3.1.111-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114015",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134008"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114003"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-targeting-pack-3.1 is earlier than 0:3.1.11-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114017",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134009"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-dotnet-templates-3.1 is earlier than 0:3.1.111-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114019",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134010"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114003"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "rh-dotnet31-netstandard-targeting-pack-2.1 is earlier than 0:3.1.111-1.el7_9",
+      "ID": "oval:com.redhat.rhsa:tst:20210114021",
+      "Version": "636",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134011"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210114003"
+      }
     },
     {
       "Check": "at least one",
@@ -941,17 +1107,7 @@
       "Version": "631",
       "CheckExistence": "none_exist",
       "Object": {
-        "ObjectRef": "oval:com.redhat.unaffected:obj:20200605001"
-      },
-      "State": {}
-    },
-    {
-      "Check": "at least one",
-      "Comment": "rh-dotnet31-runtime is installed",
-      "ID": "oval:com.redhat.unaffected:tst:20200605003",
-      "Version": "631",
-      "Object": {
-        "ObjectRef": "oval:com.redhat.unaffected:obj:20200605002"
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723001"
       },
       "State": {}
     },
@@ -962,7 +1118,7 @@
       "Version": "631",
       "CheckExistence": "none_exist",
       "Object": {
-        "ObjectRef": "oval:com.redhat.unaffected:obj:20200605002"
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723002"
       },
       "State": {}
     },
@@ -1286,25 +1442,25 @@
     {
       "Check": "at least one",
       "Comment": "Red Hat Enterprise Linux 7 is installed",
-      "ID": "oval:com.redhat.rhsa:tst:20200134023",
-      "Version": "637",
+      "ID": "oval:com.redhat.cve:tst:20211723005",
+      "Version": "631",
       "Object": {
-        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134012"
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723003"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134004"
+        "StateRef": "oval:com.redhat.cve:ste:20211723002"
       }
     },
     {
       "Check": "none satisfy",
       "Comment": "Red Hat Enterprise Linux must be installed",
-      "ID": "oval:com.redhat.rhsa:tst:20200134024",
-      "Version": "637",
+      "ID": "oval:com.redhat.cve:tst:20211723006",
+      "Version": "631",
       "Object": {
-        "ObjectRef": "oval:com.redhat.rhsa:obj:20200134012"
+        "ObjectRef": "oval:com.redhat.cve:obj:20211723003"
       },
       "State": {
-        "StateRef": "oval:com.redhat.rhsa:ste:20200134005"
+        "StateRef": "oval:com.redhat.cve:ste:20211723003"
       }
     }
   ]
