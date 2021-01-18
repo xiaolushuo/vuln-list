@@ -1,0 +1,222 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20170260",
+  "Version": "643",
+  "Metadata": {
+    "Title": "RHSA-2017:0260: ansible and gdeploy security and bug fix update (Important)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Gluster Storage 3.1 for RHEL 7"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2017:0260",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2017:0260"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2016-9587",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2016-9587"
+      }
+    ],
+    "Description": "Ansible is a simple model-driven configuration management, multi-node deployment, and remote task execution system. Ansible works over SSH and does not require any software or daemons to be installed on remote nodes. Extension modules can be written in any language and are transferred to managed machines automatically.\n\nThe gdeploy package provides Ansible modules to setup and configure GluterFS.\n\nSecurity Fix(es):\n\n* An input validation vulnerability was found in Ansible's handling of data sent from client systems. An attacker with control over a client system being managed by Ansible and the ability to send facts back to the Ansible server could use this flaw to execute arbitrary code on the Ansible server using the Ansible-server privileges. (CVE-2016-9587)\n\nBug Fix(es):\n\n* Previously, if SELinux Policy Management tool was not installed, gdeploy did not display any error. Hence, the SELinux context was not being set. With this update, gdeploy throws error if SELinux Policy Management tool is not installed on the machine. (BZ#1340038)\n\n* This update introduces the Slice Unit configuration feature for the glusterfs services to organize a hierarchy for barriering the processes within a specific memory, cpu limits. This feature ensures that the Red Hat Gluster Storage's systemd unit(s) starts within the specified Slice. To configure Slice, add the following parameter to the configuration file: slice_setup=yes (BZ#1349790)",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Important",
+      "Rights": "Copyright 2017 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2017-02-07"
+      },
+      "Updated": {
+        "Date": "2017-02-07"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2016-9587",
+          "Cvss2": "6.8/AV:N/AC:M/Au:N/C:P/I:P/A:P",
+          "Cvss3": "6.6/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+          "Cwe": "CWE-20",
+          "Href": "https://access.redhat.com/security/cve/CVE-2016-9587",
+          "Public": "20170109"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1335080",
+          "ID": "1335080"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1340038",
+          "ID": "1340038"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1342519",
+          "ID": "1342519"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1342713",
+          "ID": "1342713"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1344603",
+          "ID": "1344603"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1346244",
+          "ID": "1346244"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1348881",
+          "ID": "1348881"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1349790",
+          "ID": "1349790"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1360461",
+          "ID": "1360461"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1360523",
+          "ID": "1360523"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1362570",
+          "ID": "1362570"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366203",
+          "ID": "1366203"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1366306",
+          "ID": "1366306"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1380091",
+          "ID": "1380091"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1380098",
+          "ID": "1380098"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1380315",
+          "ID": "1380315"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1380689",
+          "ID": "1380689"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1387174",
+          "ID": "1387174"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1387545",
+          "ID": "1387545"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1390871",
+          "ID": "1390871"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1390872",
+          "ID": "1390872"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1393204",
+          "ID": "1393204"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1394636",
+          "ID": "1394636"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1396008",
+          "ID": "1396008"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1404378",
+          "ID": "1404378"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:storage:3.1",
+        "cpe:/a:redhat:storage:3.1:server:el7"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.rhba:tst:20191965048"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.rhba:tst:20191965047"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "gdeploy is earlier than 0:2.0.1-8.el7rhgs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170260001"
+                  },
+                  {
+                    "Comment": "gdeploy is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151846056"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python2-passlib is earlier than 0:1.6.5-1.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170260003"
+                  },
+                  {
+                    "Comment": "python2-passlib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170260004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible is earlier than 0:2.2.1.0-2.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170260005"
+                  },
+                  {
+                    "Comment": "ansible is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20170260006"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

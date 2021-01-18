@@ -1,0 +1,2994 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20151495",
+  "Version": "648",
+  "Metadata": {
+    "Title": "RHSA-2015:1495: Red Hat Gluster Storage 3.1 update (Important)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "Red Hat Gluster Storage 3.1 for RHEL 6"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2015:1495",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2015:1495"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-5338",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-5338"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-5339",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-5339"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-5340",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-5340"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2014-7960",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2014-7960"
+      }
+    ],
+    "Description": "Red Hat Gluster Storage is a software only scale-out storage solution that\nprovides flexible and affordable unstructured data storage. It unifies data storage and infrastructure, increases performance, and improves availability and manageability to meet enterprise-level storage challenges.\n\nRed Hat Gluster Storage's Unified File and Object Storage is built on\nOpenStack's Object Storage (swift).\n\nA flaw was found in the metadata constraints in OpenStack Object Storage\n(swift). By adding metadata in several separate calls, a malicious user\ncould bypass the max_meta_count constraint, and store more metadata than\nallowed by the configuration. (CVE-2014-7960)\n\nMultiple flaws were found in check-mk, a plug-in for the Nagios monitoring\nsystem, which is used to provide monitoring and alerts for the Red Hat\nGluster Storage network and infrastructure: a reflected cross-site\nscripting flaw due improper output encoding, a flaw that could allow\nattackers to write .mk files in arbitrary file system locations, and a flaw\nthat could possibly allow remote attackers to execute code in the wato (web\nbased admin) module due to the unsafe use of the pickle() function.\n(CVE-2014-5338, CVE-2014-5339, CVE-2014-5340)\n\nThis update also fixes numerous bugs and adds various enhancements. Space\nprecludes documenting all of these changes in this advisory. Users are\ndirected to the Red Hat Gluster Storage 3.1 Technical Notes, linked to in\nthe References section, for information on the most significant of these\nchanges.\n\nThis advisory introduces the following new features:\n\n* NFS-Ganesha is now supported in highly available active-active\nenvironment. In a highly available active-active environment, if a\nNFS-Ganesha server that is connected to a NFS client running a particular\napplication crashes, the application/NFS client is seamlessly connected to\nanother NFS-Ganesha server without any administrative intervention.\n\n* Snapshot scheduler creates snapshots automatically based on the\nconfigured scheduled interval of time. The snapshots can be created every\nhour, a particular day of the month, particular month, or a particular day\nof the week.\n\n* You can now create a clone of a snapshot. This is a writable clone and\nbehaves like a regular volume. A new volume can be created from a\nparticular snapshot clone. Snapshot Clone is a technology preview feature.\n\n* Red Hat Gluster Storage supports network encryption using TLS/SSL.\nRed Hat Gluster Storage uses TLS/SSL for authentication and authorization,\nin place of the home grown authentication framework used for normal connections.\n\n* BitRot detection is a technique used in Red Hat Gluster Storage to\nidentify the silent corruption of data with no indication from the disk to\nthe storage software layer when the error has occurred. BitRot also helps\nin catching backend tinkering of bricks, where the data is directly\nmanipulated on the bricks without going through FUSE, NFS or any other\naccess protocols.\n\n* Glusterfind is a utility that provides the list of files that are\nmodified between the previous backup session and the current period.\nThis list of files can then be used by any industry standard backup\napplication for backup.\n\n* The Parallel Network File System (pNFS) is part of the NFS v4.1 protocol\nthat allows compute clients to access storage devices directly and in\nparallel. pNFS is a technology preview feature.\n\n* Tiering improves the performance, and the compliance aspects in a Red Hat\nGluster Storage environment. It serves as an enabling technology for other\nenhancements by combining cost-effective or archivally oriented storage for\nthe majority of user data with high-performance storage to absorb the\nmajority of I/O workload. Tiering is a technology preview feature.\n\nAll users of Red Hat Gluster Storage are advised to apply this update.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Important",
+      "Rights": "Copyright 2015 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2015-07-29"
+      },
+      "Updated": {
+        "Date": "2015-07-29"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2014-5338",
+          "Cvss2": "7.5/AV:N/AC:L/Au:N/C:P/I:P/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-5338",
+          "Public": "20140505"
+        },
+        {
+          "CveID": "CVE-2014-5339",
+          "Cvss2": "7.5/AV:N/AC:L/Au:N/C:P/I:P/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-5339",
+          "Public": "20140505"
+        },
+        {
+          "CveID": "CVE-2014-5340",
+          "Cvss2": "7.5/AV:N/AC:L/Au:N/C:P/I:P/A:P",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-5340",
+          "Public": "20140505"
+        },
+        {
+          "CveID": "CVE-2014-7960",
+          "Cvss2": "4.0/AV:N/AC:L/Au:S/C:N/I:N/A:P",
+          "Cwe": "CWE-400",
+          "Impact": "moderate",
+          "Href": "https://access.redhat.com/security/cve/CVE-2014-7960",
+          "Public": "20140904"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/826836",
+          "ID": "826836"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/871727",
+          "ID": "871727"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/874745",
+          "ID": "874745"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/980043",
+          "ID": "980043"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/987980",
+          "ID": "987980"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/990029",
+          "ID": "990029"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1002991",
+          "ID": "1002991"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1006840",
+          "ID": "1006840"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1008826",
+          "ID": "1008826"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1009351",
+          "ID": "1009351"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1010327",
+          "ID": "1010327"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1021820",
+          "ID": "1021820"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1023416",
+          "ID": "1023416"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1026831",
+          "ID": "1026831"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1027142",
+          "ID": "1027142"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1027693",
+          "ID": "1027693"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1027710",
+          "ID": "1027710"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1028965",
+          "ID": "1028965"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1029104",
+          "ID": "1029104"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1031515",
+          "ID": "1031515"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1032445",
+          "ID": "1032445"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1039008",
+          "ID": "1039008"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1039674",
+          "ID": "1039674"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1044344",
+          "ID": "1044344"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1047481",
+          "ID": "1047481"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1048122",
+          "ID": "1048122"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1054154",
+          "ID": "1054154"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1059255",
+          "ID": "1059255"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1062401",
+          "ID": "1062401"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1063215",
+          "ID": "1063215"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1082659",
+          "ID": "1082659"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1083024",
+          "ID": "1083024"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1085202",
+          "ID": "1085202"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1093838",
+          "ID": "1093838"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1098093",
+          "ID": "1098093"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1098200",
+          "ID": "1098200"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1101270",
+          "ID": "1101270"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1101697",
+          "ID": "1101697"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1102047",
+          "ID": "1102047"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1103971",
+          "ID": "1103971"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1104478",
+          "ID": "1104478"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1109111",
+          "ID": "1109111"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1109689",
+          "ID": "1109689"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1110715",
+          "ID": "1110715"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1113424",
+          "ID": "1113424"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1114015",
+          "ID": "1114015"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1114976",
+          "ID": "1114976"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1116084",
+          "ID": "1116084"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1117172",
+          "ID": "1117172"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1117270",
+          "ID": "1117270"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1120907",
+          "ID": "1120907"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1121560",
+          "ID": "1121560"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1122064",
+          "ID": "1122064"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1127401",
+          "ID": "1127401"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1130998",
+          "ID": "1130998"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1131044",
+          "ID": "1131044"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1131418",
+          "ID": "1131418"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1131968",
+          "ID": "1131968"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1132026",
+          "ID": "1132026"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1132337",
+          "ID": "1132337"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1134690",
+          "ID": "1134690"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1139106",
+          "ID": "1139106"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1140183",
+          "ID": "1140183"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1140506",
+          "ID": "1140506"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1141433",
+          "ID": "1141433"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1144088",
+          "ID": "1144088"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1147627",
+          "ID": "1147627"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1150461",
+          "ID": "1150461"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1150899",
+          "ID": "1150899"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1156637",
+          "ID": "1156637"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1160790",
+          "ID": "1160790"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1165663",
+          "ID": "1165663"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1171662",
+          "ID": "1171662"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1176835",
+          "ID": "1176835"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1177911",
+          "ID": "1177911"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1178130",
+          "ID": "1178130"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1179701",
+          "ID": "1179701"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1181108",
+          "ID": "1181108"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1183988",
+          "ID": "1183988"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1186328",
+          "ID": "1186328"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1195659",
+          "ID": "1195659"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1198021",
+          "ID": "1198021"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1201712",
+          "ID": "1201712"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1201732",
+          "ID": "1201732"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1202237",
+          "ID": "1202237"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1202388",
+          "ID": "1202388"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1203901",
+          "ID": "1203901"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1204044",
+          "ID": "1204044"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1208420",
+          "ID": "1208420"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1209132",
+          "ID": "1209132"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1211839",
+          "ID": "1211839"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1212576",
+          "ID": "1212576"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1212701",
+          "ID": "1212701"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1213245",
+          "ID": "1213245"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1213325",
+          "ID": "1213325"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1214211",
+          "ID": "1214211"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1214253",
+          "ID": "1214253"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1214258",
+          "ID": "1214258"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1214616",
+          "ID": "1214616"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215430",
+          "ID": "1215430"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215635",
+          "ID": "1215635"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215637",
+          "ID": "1215637"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215640",
+          "ID": "1215640"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1215885",
+          "ID": "1215885"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1216941",
+          "ID": "1216941"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1217852",
+          "ID": "1217852"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1218902",
+          "ID": "1218902"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1219793",
+          "ID": "1219793"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1220999",
+          "ID": "1220999"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1221344",
+          "ID": "1221344"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1221585",
+          "ID": "1221585"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1221612",
+          "ID": "1221612"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1221743",
+          "ID": "1221743"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1222442",
+          "ID": "1222442"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1222776",
+          "ID": "1222776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1222785",
+          "ID": "1222785"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1222856",
+          "ID": "1222856"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223201",
+          "ID": "1223201"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223205",
+          "ID": "1223205"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223206",
+          "ID": "1223206"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223209",
+          "ID": "1223209"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223225",
+          "ID": "1223225"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223238",
+          "ID": "1223238"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223299",
+          "ID": "1223299"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223677",
+          "ID": "1223677"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223695",
+          "ID": "1223695"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223715",
+          "ID": "1223715"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223738",
+          "ID": "1223738"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1223906",
+          "ID": "1223906"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224033",
+          "ID": "1224033"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224043",
+          "ID": "1224043"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224046",
+          "ID": "1224046"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224065",
+          "ID": "1224065"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224068",
+          "ID": "1224068"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224076",
+          "ID": "1224076"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224077",
+          "ID": "1224077"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224081",
+          "ID": "1224081"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224086",
+          "ID": "1224086"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224109",
+          "ID": "1224109"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224126",
+          "ID": "1224126"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224159",
+          "ID": "1224159"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224164",
+          "ID": "1224164"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224165",
+          "ID": "1224165"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224175",
+          "ID": "1224175"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224183",
+          "ID": "1224183"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224215",
+          "ID": "1224215"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224218",
+          "ID": "1224218"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224229",
+          "ID": "1224229"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224232",
+          "ID": "1224232"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224236",
+          "ID": "1224236"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224239",
+          "ID": "1224239"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224240",
+          "ID": "1224240"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224246",
+          "ID": "1224246"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224609",
+          "ID": "1224609"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224610",
+          "ID": "1224610"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224615",
+          "ID": "1224615"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224618",
+          "ID": "1224618"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224619",
+          "ID": "1224619"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224629",
+          "ID": "1224629"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224639",
+          "ID": "1224639"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224658",
+          "ID": "1224658"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1224662",
+          "ID": "1224662"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225338",
+          "ID": "1225338"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225371",
+          "ID": "1225371"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225417",
+          "ID": "1225417"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1225507",
+          "ID": "1225507"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226132",
+          "ID": "1226132"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226167",
+          "ID": "1226167"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226168",
+          "ID": "1226168"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226820",
+          "ID": "1226820"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226844",
+          "ID": "1226844"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226863",
+          "ID": "1226863"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226889",
+          "ID": "1226889"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1226898",
+          "ID": "1226898"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227029",
+          "ID": "1227029"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227179",
+          "ID": "1227179"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227187",
+          "ID": "1227187"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227197",
+          "ID": "1227197"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227241",
+          "ID": "1227241"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227311",
+          "ID": "1227311"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227317",
+          "ID": "1227317"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227326",
+          "ID": "1227326"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227469",
+          "ID": "1227469"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227618",
+          "ID": "1227618"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227649",
+          "ID": "1227649"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227691",
+          "ID": "1227691"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227704",
+          "ID": "1227704"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227709",
+          "ID": "1227709"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1227869",
+          "ID": "1227869"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228017",
+          "ID": "1228017"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228127",
+          "ID": "1228127"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228150",
+          "ID": "1228150"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228152",
+          "ID": "1228152"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228153",
+          "ID": "1228153"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228155",
+          "ID": "1228155"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228164",
+          "ID": "1228164"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228173",
+          "ID": "1228173"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228222",
+          "ID": "1228222"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228225",
+          "ID": "1228225"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228246",
+          "ID": "1228246"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228247",
+          "ID": "1228247"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228294",
+          "ID": "1228294"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228315",
+          "ID": "1228315"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228495",
+          "ID": "1228495"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228496",
+          "ID": "1228496"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228525",
+          "ID": "1228525"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228529",
+          "ID": "1228529"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228597",
+          "ID": "1228597"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228598",
+          "ID": "1228598"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228626",
+          "ID": "1228626"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1228674",
+          "ID": "1228674"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229202",
+          "ID": "1229202"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229242",
+          "ID": "1229242"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229245",
+          "ID": "1229245"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229248",
+          "ID": "1229248"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229251",
+          "ID": "1229251"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229256",
+          "ID": "1229256"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229257",
+          "ID": "1229257"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229260",
+          "ID": "1229260"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229261",
+          "ID": "1229261"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229263",
+          "ID": "1229263"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229266",
+          "ID": "1229266"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229268",
+          "ID": "1229268"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229274",
+          "ID": "1229274"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229567",
+          "ID": "1229567"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229569",
+          "ID": "1229569"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229607",
+          "ID": "1229607"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229623",
+          "ID": "1229623"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229664",
+          "ID": "1229664"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229667",
+          "ID": "1229667"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1229674",
+          "ID": "1229674"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230101",
+          "ID": "1230101"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230129",
+          "ID": "1230129"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230186",
+          "ID": "1230186"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230202",
+          "ID": "1230202"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230252",
+          "ID": "1230252"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230269",
+          "ID": "1230269"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230513",
+          "ID": "1230513"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230522",
+          "ID": "1230522"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230607",
+          "ID": "1230607"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230612",
+          "ID": "1230612"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230635",
+          "ID": "1230635"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230646",
+          "ID": "1230646"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1230764",
+          "ID": "1230764"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231166",
+          "ID": "1231166"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231210",
+          "ID": "1231210"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231223",
+          "ID": "1231223"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231635",
+          "ID": "1231635"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231647",
+          "ID": "1231647"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231651",
+          "ID": "1231651"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231732",
+          "ID": "1231732"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231771",
+          "ID": "1231771"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231775",
+          "ID": "1231775"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231776",
+          "ID": "1231776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231778",
+          "ID": "1231778"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231781",
+          "ID": "1231781"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231782",
+          "ID": "1231782"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231784",
+          "ID": "1231784"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231788",
+          "ID": "1231788"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231792",
+          "ID": "1231792"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231797",
+          "ID": "1231797"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231813",
+          "ID": "1231813"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231831",
+          "ID": "1231831"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1231835",
+          "ID": "1231835"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232159",
+          "ID": "1232159"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232230",
+          "ID": "1232230"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232237",
+          "ID": "1232237"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232272",
+          "ID": "1232272"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232428",
+          "ID": "1232428"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232603",
+          "ID": "1232603"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232609",
+          "ID": "1232609"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232624",
+          "ID": "1232624"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232625",
+          "ID": "1232625"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232641",
+          "ID": "1232641"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1232691",
+          "ID": "1232691"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233033",
+          "ID": "1233033"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233062",
+          "ID": "1233062"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233147",
+          "ID": "1233147"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233248",
+          "ID": "1233248"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233486",
+          "ID": "1233486"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233575",
+          "ID": "1233575"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1233694",
+          "ID": "1233694"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1234419",
+          "ID": "1234419"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1234720",
+          "ID": "1234720"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1234725",
+          "ID": "1234725"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1234916",
+          "ID": "1234916"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235121",
+          "ID": "1235121"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235147",
+          "ID": "1235147"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235225",
+          "ID": "1235225"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235244",
+          "ID": "1235244"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235540",
+          "ID": "1235540"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235544",
+          "ID": "1235544"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235547",
+          "ID": "1235547"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235599",
+          "ID": "1235599"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235613",
+          "ID": "1235613"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235628",
+          "ID": "1235628"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235735",
+          "ID": "1235735"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1235776",
+          "ID": "1235776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1236556",
+          "ID": "1236556"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1236980",
+          "ID": "1236980"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1237053",
+          "ID": "1237053"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1237063",
+          "ID": "1237063"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1237065",
+          "ID": "1237065"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1237085",
+          "ID": "1237085"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1237165",
+          "ID": "1237165"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1238149",
+          "ID": "1238149"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1238156",
+          "ID": "1238156"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1238979",
+          "ID": "1238979"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1239057",
+          "ID": "1239057"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1239108",
+          "ID": "1239108"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1239280",
+          "ID": "1239280"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1239317",
+          "ID": "1239317"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240168",
+          "ID": "1240168"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240196",
+          "ID": "1240196"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240228",
+          "ID": "1240228"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240233",
+          "ID": "1240233"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240245",
+          "ID": "1240245"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240251",
+          "ID": "1240251"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240253",
+          "ID": "1240253"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240617",
+          "ID": "1240617"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240782",
+          "ID": "1240782"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1240800",
+          "ID": "1240800"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241150",
+          "ID": "1241150"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241366",
+          "ID": "1241366"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241449",
+          "ID": "1241449"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241772",
+          "ID": "1241772"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241839",
+          "ID": "1241839"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241843",
+          "ID": "1241843"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1241996",
+          "ID": "1241996"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242162",
+          "ID": "1242162"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242367",
+          "ID": "1242367"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242423",
+          "ID": "1242423"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242487",
+          "ID": "1242487"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242543",
+          "ID": "1242543"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1242767",
+          "ID": "1242767"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1243297",
+          "ID": "1243297"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1243358",
+          "ID": "1243358"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1243725",
+          "ID": "1243725"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1243732",
+          "ID": "1243732"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1244338",
+          "ID": "1244338"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245563",
+          "ID": "1245563"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245896",
+          "ID": "1245896"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1245988",
+          "ID": "1245988"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1246128",
+          "ID": "1246128"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1246216",
+          "ID": "1246216"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:storage:3.1",
+        "cpe:/a:redhat:storage:3.1:nagios:el6",
+        "cpe:/a:redhat:storage:3.1:nfs:el6",
+        "cpe:/a:redhat:storage:3.1:samba:el6",
+        "cpe:/a:redhat:storage:3.1:server:el6"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.rhba:tst:20150038108"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 6 is installed",
+            "TestRef": "oval:com.redhat.rhba:tst:20150038107"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "userspace-rcu is earlier than 0:0.7.9-2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495001"
+                  },
+                  {
+                    "Comment": "userspace-rcu is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "userspace-rcu-devel is earlier than 0:0.7.9-2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495003"
+                  },
+                  {
+                    "Comment": "userspace-rcu-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "gluster-nagios-common is earlier than 0:0.2.0-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495005"
+                  },
+                  {
+                    "Comment": "gluster-nagios-common is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libtalloc is earlier than 0:2.1.1-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495007"
+                  },
+                  {
+                    "Comment": "libtalloc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libtalloc-devel is earlier than 0:2.1.1-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495009"
+                  },
+                  {
+                    "Comment": "libtalloc-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pytalloc is earlier than 0:2.1.1-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495011"
+                  },
+                  {
+                    "Comment": "pytalloc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pytalloc-devel is earlier than 0:2.1.1-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495013"
+                  },
+                  {
+                    "Comment": "pytalloc-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libvirt-lock-sanlock is earlier than 0:0.10.2-54.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495015"
+                  },
+                  {
+                    "Comment": "libvirt-lock-sanlock is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pnp4nagios is earlier than 0:0.6.22-2.1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495017"
+                  },
+                  {
+                    "Comment": "pnp4nagios is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pynag is earlier than 0:0.9.1-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495019"
+                  },
+                  {
+                    "Comment": "pynag is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pynag-examples is earlier than 0:0.9.1-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495021"
+                  },
+                  {
+                    "Comment": "pynag-examples is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-pyudev is earlier than 0:0.15-2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495023"
+                  },
+                  {
+                    "Comment": "python-pyudev is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495024"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins is earlier than 0:1.4.16-12.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495025"
+                  },
+                  {
+                    "Comment": "nagios-plugins is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495026"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins-dummy is earlier than 0:1.4.16-12.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495027"
+                  },
+                  {
+                    "Comment": "nagios-plugins-dummy is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495028"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins-ide_smart is earlier than 0:1.4.16-12.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495029"
+                  },
+                  {
+                    "Comment": "nagios-plugins-ide_smart is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495030"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins-ping is earlier than 0:1.4.16-12.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495031"
+                  },
+                  {
+                    "Comment": "nagios-plugins-ping is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495032"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins-procs is earlier than 0:1.4.16-12.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495033"
+                  },
+                  {
+                    "Comment": "nagios-plugins-procs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495034"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-plugins-nrpe is earlier than 0:2.15-4.1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495035"
+                  },
+                  {
+                    "Comment": "nagios-plugins-nrpe is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495036"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nrpe is earlier than 0:2.15-4.1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495037"
+                  },
+                  {
+                    "Comment": "nrpe is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495038"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "augeas is earlier than 0:1.0.0-10.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495039"
+                  },
+                  {
+                    "Comment": "augeas is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495040"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "augeas-devel is earlier than 0:1.0.0-10.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495041"
+                  },
+                  {
+                    "Comment": "augeas-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495042"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "augeas-libs is earlier than 0:1.0.0-10.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495043"
+                  },
+                  {
+                    "Comment": "augeas-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495044"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clusterlib is earlier than 0:3.0.12.1-73.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495045"
+                  },
+                  {
+                    "Comment": "clusterlib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495046"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clusterlib-devel is earlier than 0:3.0.12.1-73.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495047"
+                  },
+                  {
+                    "Comment": "clusterlib-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495048"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cman is earlier than 0:3.0.12.1-73.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495049"
+                  },
+                  {
+                    "Comment": "cman is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495050"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "gfs2-utils is earlier than 0:3.0.12.1-73.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495051"
+                  },
+                  {
+                    "Comment": "gfs2-utils is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495052"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495053"
+                  },
+                  {
+                    "Comment": "vdsm is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-cli is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495055"
+                  },
+                  {
+                    "Comment": "vdsm-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-debug-plugin is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495057"
+                  },
+                  {
+                    "Comment": "vdsm-debug-plugin is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-gluster is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495059"
+                  },
+                  {
+                    "Comment": "vdsm-gluster is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-hook-ethtool-options is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495061"
+                  },
+                  {
+                    "Comment": "vdsm-hook-ethtool-options is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495062"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-hook-faqemu is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495063"
+                  },
+                  {
+                    "Comment": "vdsm-hook-faqemu is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-hook-openstacknet is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495065"
+                  },
+                  {
+                    "Comment": "vdsm-hook-openstacknet is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-hook-qemucmdline is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495067"
+                  },
+                  {
+                    "Comment": "vdsm-hook-qemucmdline is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-jsonrpc is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495069"
+                  },
+                  {
+                    "Comment": "vdsm-jsonrpc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-python is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495071"
+                  },
+                  {
+                    "Comment": "vdsm-python is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038022"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-python-zombiereaper is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495073"
+                  },
+                  {
+                    "Comment": "vdsm-python-zombiereaper is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038024"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-reg is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495075"
+                  },
+                  {
+                    "Comment": "vdsm-reg is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038026"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-tests is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495077"
+                  },
+                  {
+                    "Comment": "vdsm-tests is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038028"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-xmlrpc is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495079"
+                  },
+                  {
+                    "Comment": "vdsm-xmlrpc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038030"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "vdsm-yajsonrpc is earlier than 0:4.16.20-1.2.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495081"
+                  },
+                  {
+                    "Comment": "vdsm-yajsonrpc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038032"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pcs is earlier than 0:0.9.139-9.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495083"
+                  },
+                  {
+                    "Comment": "pcs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495084"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "corosync is earlier than 0:1.4.7-2.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495085"
+                  },
+                  {
+                    "Comment": "corosync is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495086"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "corosynclib is earlier than 0:1.4.7-2.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495087"
+                  },
+                  {
+                    "Comment": "corosynclib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495088"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "corosynclib-devel is earlier than 0:1.4.7-2.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495089"
+                  },
+                  {
+                    "Comment": "corosynclib-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495090"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "resource-agents is earlier than 0:3.9.5-24.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495091"
+                  },
+                  {
+                    "Comment": "resource-agents is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495092"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "resource-agents-sap is earlier than 0:3.9.5-24.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495093"
+                  },
+                  {
+                    "Comment": "resource-agents-sap is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495094"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495095"
+                  },
+                  {
+                    "Comment": "pacemaker is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495096"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-cli is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495097"
+                  },
+                  {
+                    "Comment": "pacemaker-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495098"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-cluster-libs is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495099"
+                  },
+                  {
+                    "Comment": "pacemaker-cluster-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495100"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-cts is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495101"
+                  },
+                  {
+                    "Comment": "pacemaker-cts is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495102"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-doc is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495103"
+                  },
+                  {
+                    "Comment": "pacemaker-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495104"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-libs is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495105"
+                  },
+                  {
+                    "Comment": "pacemaker-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495106"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-libs-devel is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495107"
+                  },
+                  {
+                    "Comment": "pacemaker-libs-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495108"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "pacemaker-remote is earlier than 0:1.1.12-8.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495109"
+                  },
+                  {
+                    "Comment": "pacemaker-remote is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495110"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libqb is earlier than 0:0.17.1-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495111"
+                  },
+                  {
+                    "Comment": "libqb is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495112"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "libqb-devel is earlier than 0:0.17.1-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495113"
+                  },
+                  {
+                    "Comment": "libqb-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495114"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-prettytable is earlier than 0:0.7.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495115"
+                  },
+                  {
+                    "Comment": "python-prettytable is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495116"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-blivet is earlier than 1:1.0.0.2-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495117"
+                  },
+                  {
+                    "Comment": "python-blivet is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495118"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-cpopen is earlier than 0:1.3-4.el6_5",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495119"
+                  },
+                  {
+                    "Comment": "python-cpopen is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495120"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-greenlet is earlier than 0:0.4.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495121"
+                  },
+                  {
+                    "Comment": "python-greenlet is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495122"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-greenlet-devel is earlier than 0:0.4.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495123"
+                  },
+                  {
+                    "Comment": "python-greenlet-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495124"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495125"
+                  },
+                  {
+                    "Comment": "openstack-swift is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038034"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift-account is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495127"
+                  },
+                  {
+                    "Comment": "openstack-swift-account is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038036"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift-container is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495129"
+                  },
+                  {
+                    "Comment": "openstack-swift-container is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038038"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift-doc is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495131"
+                  },
+                  {
+                    "Comment": "openstack-swift-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038040"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift-object is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495133"
+                  },
+                  {
+                    "Comment": "openstack-swift-object is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038042"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openstack-swift-proxy is earlier than 0:1.13.1-4.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495135"
+                  },
+                  {
+                    "Comment": "openstack-swift-proxy is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038044"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-eventlet is earlier than 0:0.14.0-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495137"
+                  },
+                  {
+                    "Comment": "python-eventlet is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495138"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-eventlet-doc is earlier than 0:0.14.0-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495139"
+                  },
+                  {
+                    "Comment": "python-eventlet-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495140"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-keystoneclient is earlier than 1:0.9.0-5.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495141"
+                  },
+                  {
+                    "Comment": "python-keystoneclient is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495142"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-keystoneclient-doc is earlier than 1:0.9.0-5.el6ost",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495143"
+                  },
+                  {
+                    "Comment": "python-keystoneclient-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495144"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "gluster-nagios-addons is earlier than 0:0.2.4-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495145"
+                  },
+                  {
+                    "Comment": "gluster-nagios-addons is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038054"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nagios-server-addons is earlier than 0:0.2.1-4.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495147"
+                  },
+                  {
+                    "Comment": "nagios-server-addons is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495148"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nfs-ganesha is earlier than 0:2.2.0-5.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495149"
+                  },
+                  {
+                    "Comment": "nfs-ganesha is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495150"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nfs-ganesha-gluster is earlier than 0:2.2.0-5.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495151"
+                  },
+                  {
+                    "Comment": "nfs-ganesha-gluster is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495152"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "nfs-ganesha-nullfs is earlier than 0:2.2.0-5.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495153"
+                  },
+                  {
+                    "Comment": "nfs-ganesha-nullfs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495154"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ctdb2.5 is earlier than 0:2.5.5-7.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495155"
+                  },
+                  {
+                    "Comment": "ctdb2.5 is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495156"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "check-mk is earlier than 0:1.2.6p1-3.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495157"
+                  },
+                  {
+                    "Comment": "check-mk is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495158"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "check-mk-livestatus is earlier than 0:1.2.6p1-3.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495159"
+                  },
+                  {
+                    "Comment": "check-mk-livestatus is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495160"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "gstatus is earlier than 0:0.64-3.1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495161"
+                  },
+                  {
+                    "Comment": "gstatus is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038056"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495163"
+                  },
+                  {
+                    "Comment": "glusterfs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038086"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495165"
+                  },
+                  {
+                    "Comment": "glusterfs-api is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038088"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-api-devel is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495167"
+                  },
+                  {
+                    "Comment": "glusterfs-api-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038090"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-cli is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495169"
+                  },
+                  {
+                    "Comment": "glusterfs-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038092"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-client-xlators is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495171"
+                  },
+                  {
+                    "Comment": "glusterfs-client-xlators is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495172"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-devel is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495173"
+                  },
+                  {
+                    "Comment": "glusterfs-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038094"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-fuse is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495175"
+                  },
+                  {
+                    "Comment": "glusterfs-fuse is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038096"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-ganesha is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495177"
+                  },
+                  {
+                    "Comment": "glusterfs-ganesha is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495178"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-geo-replication is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495179"
+                  },
+                  {
+                    "Comment": "glusterfs-geo-replication is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038098"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-libs is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495181"
+                  },
+                  {
+                    "Comment": "glusterfs-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038100"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-rdma is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495183"
+                  },
+                  {
+                    "Comment": "glusterfs-rdma is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038102"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "glusterfs-server is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495185"
+                  },
+                  {
+                    "Comment": "glusterfs-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038104"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-gluster is earlier than 0:3.7.1-11.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495187"
+                  },
+                  {
+                    "Comment": "python-gluster is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495188"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "redhat-storage-server is earlier than 0:3.1.0.3-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495189"
+                  },
+                  {
+                    "Comment": "redhat-storage-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhba:tst:20150038084"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "redhat-storage-logos is earlier than 0:60.0.20-1.el6rhs",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495191"
+                  },
+                  {
+                    "Comment": "redhat-storage-logos is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495192"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virt is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495193"
+                  },
+                  {
+                    "Comment": "fence-virt is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495194"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virtd is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495195"
+                  },
+                  {
+                    "Comment": "fence-virtd is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495196"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virtd-checkpoint is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495197"
+                  },
+                  {
+                    "Comment": "fence-virtd-checkpoint is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495198"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virtd-libvirt is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495199"
+                  },
+                  {
+                    "Comment": "fence-virtd-libvirt is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495200"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virtd-multicast is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495201"
+                  },
+                  {
+                    "Comment": "fence-virtd-multicast is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495202"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "fence-virtd-serial is earlier than 0:0.2.3-19.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495203"
+                  },
+                  {
+                    "Comment": "fence-virtd-serial is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495204"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clufter-cli is earlier than 0:0.11.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495205"
+                  },
+                  {
+                    "Comment": "clufter-cli is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495206"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clufter-lib-ccs is earlier than 0:0.11.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495207"
+                  },
+                  {
+                    "Comment": "clufter-lib-ccs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495208"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clufter-lib-general is earlier than 0:0.11.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495209"
+                  },
+                  {
+                    "Comment": "clufter-lib-general is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495210"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "clufter-lib-pcs is earlier than 0:0.11.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495211"
+                  },
+                  {
+                    "Comment": "clufter-lib-pcs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495212"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-clufter is earlier than 0:0.11.2-1.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495213"
+                  },
+                  {
+                    "Comment": "python-clufter is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495214"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openais is earlier than 0:1.1.1-7.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495215"
+                  },
+                  {
+                    "Comment": "openais is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495216"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openaislib is earlier than 0:1.1.1-7.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495217"
+                  },
+                  {
+                    "Comment": "openaislib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495218"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "openaislib-devel is earlier than 0:1.1.1-7.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495219"
+                  },
+                  {
+                    "Comment": "openaislib-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495220"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ccs is earlier than 0:0.16.2-81.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495221"
+                  },
+                  {
+                    "Comment": "ccs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495222"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ricci is earlier than 0:0.16.2-81.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495223"
+                  },
+                  {
+                    "Comment": "ricci is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495224"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cluster-cim is earlier than 0:0.16.2-31.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495225"
+                  },
+                  {
+                    "Comment": "cluster-cim is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495226"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cluster-snmp is earlier than 0:0.16.2-31.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495227"
+                  },
+                  {
+                    "Comment": "cluster-snmp is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495228"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "modcluster is earlier than 0:0.16.2-31.el6",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495229"
+                  },
+                  {
+                    "Comment": "modcluster is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20151495230"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

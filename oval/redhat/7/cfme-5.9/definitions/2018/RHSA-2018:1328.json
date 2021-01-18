@@ -1,0 +1,1627 @@
+{
+  "Class": "patch",
+  "ID": "oval:com.redhat.rhsa:def:20181328",
+  "Version": "635",
+  "Metadata": {
+    "Title": "RHSA-2018:1328: CloudForms 4.6.2 bug fix and enhancement update (Important)",
+    "AffectedList": [
+      {
+        "Family": "unix",
+        "Platforms": [
+          "CloudForms Management Engine 5.9"
+        ]
+      }
+    ],
+    "References": [
+      {
+        "Source": "RHSA",
+        "RefID": "RHSA-2018:1328",
+        "RefURL": "https://access.redhat.com/errata/RHSA-2018:1328"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2018-1101",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2018-1101"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2018-1104",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2018-1104"
+      },
+      {
+        "Source": "CVE",
+        "RefID": "CVE-2018-7750",
+        "RefURL": "https://access.redhat.com/security/cve/CVE-2018-7750"
+      }
+    ],
+    "Description": "Red Hat CloudForms Management Engine delivers the insight, control, and automation needed to address the challenges of managing virtual environments. CloudForms Management Engine is built on Ruby on Rails, a model-view-controller (MVC) framework for web application development. Action Pack implements the controller and the view components.\n\nSecurity Fix(es):\n\n* python-paramiko: Authentication bypass in transport.py (CVE-2018-7750)\n\n* ansible-tower: Privilege escalation flaw allows for organization admins to obtain system privileges (CVE-2018-1101)\n\nRed Hat would like to thank Graham Mainwaring of Red Hat for reporting CVE-2018-1101.\n\n* ansible-tower: Remote code execution by users with access to define variables in job templates (CVE-2018-1104)\n\nRed Hat would like to thank Simon Vikström for reporting CVE-2018-1104.\n\nFor more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.\n\nAdditional Changes:\n\nThis update also fixes several bugs and adds various enhancements. Documentation for these changes is available from the Release Notes document linked to in the References section.",
+    "Advisory": {
+      "From": "secalert@redhat.com",
+      "Severity": "Important",
+      "Rights": "Copyright 2018 Red Hat, Inc.",
+      "Issued": {
+        "Date": "2018-05-07"
+      },
+      "Updated": {
+        "Date": "2018-05-07"
+      },
+      "Cves": [
+        {
+          "CveID": "CVE-2018-1101",
+          "Cvss3": "8.0/CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+          "Cwe": "CWE-266",
+          "Href": "https://access.redhat.com/security/cve/CVE-2018-1101",
+          "Public": "20180427"
+        },
+        {
+          "CveID": "CVE-2018-1104",
+          "Cvss3": "8.8/CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "Cwe": "CWE-20",
+          "Href": "https://access.redhat.com/security/cve/CVE-2018-1104",
+          "Public": "20180427"
+        },
+        {
+          "CveID": "CVE-2018-7750",
+          "Cvss3": "9.8/CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "Cwe": "CWE-287",
+          "Impact": "critical",
+          "Href": "https://access.redhat.com/security/cve/CVE-2018-7750",
+          "Public": "20180313"
+        }
+      ],
+      "Bugzilla": [
+        {
+          "Href": "https://bugzilla.redhat.com/1495849",
+          "ID": "1495849"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1510499",
+          "ID": "1510499"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1526086",
+          "ID": "1526086"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1526088",
+          "ID": "1526088"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1530680",
+          "ID": "1530680"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1530760",
+          "ID": "1530760"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1533220",
+          "ID": "1533220"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1533233",
+          "ID": "1533233"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1533515",
+          "ID": "1533515"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1538094",
+          "ID": "1538094"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1538100",
+          "ID": "1538100"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1549625",
+          "ID": "1549625"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1549722",
+          "ID": "1549722"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1550728",
+          "ID": "1550728"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1550730",
+          "ID": "1550730"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1550736",
+          "ID": "1550736"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1551692",
+          "ID": "1551692"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1551696",
+          "ID": "1551696"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1551698",
+          "ID": "1551698"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1551703",
+          "ID": "1551703"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552266",
+          "ID": "1552266"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552269",
+          "ID": "1552269"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552278",
+          "ID": "1552278"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552282",
+          "ID": "1552282"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552288",
+          "ID": "1552288"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552290",
+          "ID": "1552290"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552301",
+          "ID": "1552301"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552303",
+          "ID": "1552303"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552305",
+          "ID": "1552305"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552323",
+          "ID": "1552323"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552334",
+          "ID": "1552334"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552335",
+          "ID": "1552335"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552671",
+          "ID": "1552671"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552673",
+          "ID": "1552673"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552677",
+          "ID": "1552677"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552704",
+          "ID": "1552704"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552707",
+          "ID": "1552707"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552723",
+          "ID": "1552723"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552735",
+          "ID": "1552735"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552737",
+          "ID": "1552737"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552739",
+          "ID": "1552739"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552740",
+          "ID": "1552740"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552741",
+          "ID": "1552741"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552743",
+          "ID": "1552743"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552746",
+          "ID": "1552746"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552748",
+          "ID": "1552748"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552753",
+          "ID": "1552753"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552762",
+          "ID": "1552762"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552763",
+          "ID": "1552763"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552776",
+          "ID": "1552776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552782",
+          "ID": "1552782"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552783",
+          "ID": "1552783"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552785",
+          "ID": "1552785"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552790",
+          "ID": "1552790"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552791",
+          "ID": "1552791"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552792",
+          "ID": "1552792"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552794",
+          "ID": "1552794"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552796",
+          "ID": "1552796"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552798",
+          "ID": "1552798"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552800",
+          "ID": "1552800"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552801",
+          "ID": "1552801"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552802",
+          "ID": "1552802"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552804",
+          "ID": "1552804"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552809",
+          "ID": "1552809"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552817",
+          "ID": "1552817"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552824",
+          "ID": "1552824"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552826",
+          "ID": "1552826"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552828",
+          "ID": "1552828"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552838",
+          "ID": "1552838"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552842",
+          "ID": "1552842"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552873",
+          "ID": "1552873"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552879",
+          "ID": "1552879"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552880",
+          "ID": "1552880"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552882",
+          "ID": "1552882"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552884",
+          "ID": "1552884"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552886",
+          "ID": "1552886"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552889",
+          "ID": "1552889"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552890",
+          "ID": "1552890"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552895",
+          "ID": "1552895"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552900",
+          "ID": "1552900"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552903",
+          "ID": "1552903"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552904",
+          "ID": "1552904"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1552908",
+          "ID": "1552908"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553191",
+          "ID": "1553191"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553197",
+          "ID": "1553197"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553214",
+          "ID": "1553214"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553224",
+          "ID": "1553224"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553241",
+          "ID": "1553241"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553242",
+          "ID": "1553242"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553243",
+          "ID": "1553243"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553244",
+          "ID": "1553244"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553251",
+          "ID": "1553251"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553288",
+          "ID": "1553288"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553295",
+          "ID": "1553295"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553304",
+          "ID": "1553304"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553307",
+          "ID": "1553307"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553309",
+          "ID": "1553309"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553311",
+          "ID": "1553311"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553315",
+          "ID": "1553315"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553316",
+          "ID": "1553316"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553317",
+          "ID": "1553317"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553319",
+          "ID": "1553319"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553322",
+          "ID": "1553322"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553323",
+          "ID": "1553323"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553326",
+          "ID": "1553326"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553327",
+          "ID": "1553327"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553329",
+          "ID": "1553329"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553336",
+          "ID": "1553336"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553340",
+          "ID": "1553340"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553345",
+          "ID": "1553345"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553362",
+          "ID": "1553362"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553384",
+          "ID": "1553384"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553389",
+          "ID": "1553389"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553392",
+          "ID": "1553392"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553393",
+          "ID": "1553393"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553396",
+          "ID": "1553396"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553397",
+          "ID": "1553397"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553399",
+          "ID": "1553399"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553480",
+          "ID": "1553480"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553482",
+          "ID": "1553482"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553483",
+          "ID": "1553483"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553768",
+          "ID": "1553768"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553776",
+          "ID": "1553776"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553779",
+          "ID": "1553779"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553780",
+          "ID": "1553780"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553789",
+          "ID": "1553789"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553791",
+          "ID": "1553791"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553836",
+          "ID": "1553836"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553873",
+          "ID": "1553873"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1553903",
+          "ID": "1553903"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554358",
+          "ID": "1554358"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554370",
+          "ID": "1554370"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554454",
+          "ID": "1554454"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554532",
+          "ID": "1554532"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554541",
+          "ID": "1554541"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554823",
+          "ID": "1554823"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554825",
+          "ID": "1554825"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554832",
+          "ID": "1554832"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554839",
+          "ID": "1554839"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554889",
+          "ID": "1554889"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554898",
+          "ID": "1554898"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1554901",
+          "ID": "1554901"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557130",
+          "ID": "1557130"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557353",
+          "ID": "1557353"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557361",
+          "ID": "1557361"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557367",
+          "ID": "1557367"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557378",
+          "ID": "1557378"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557380",
+          "ID": "1557380"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557388",
+          "ID": "1557388"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557391",
+          "ID": "1557391"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1557400",
+          "ID": "1557400"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558030",
+          "ID": "1558030"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558038",
+          "ID": "1558038"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558040",
+          "ID": "1558040"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558046",
+          "ID": "1558046"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558048",
+          "ID": "1558048"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558078",
+          "ID": "1558078"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558092",
+          "ID": "1558092"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558142",
+          "ID": "1558142"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558144",
+          "ID": "1558144"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558544",
+          "ID": "1558544"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558594",
+          "ID": "1558594"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558610",
+          "ID": "1558610"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558621",
+          "ID": "1558621"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1558626",
+          "ID": "1558626"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559475",
+          "ID": "1559475"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559479",
+          "ID": "1559479"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559483",
+          "ID": "1559483"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559543",
+          "ID": "1559543"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559544",
+          "ID": "1559544"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559550",
+          "ID": "1559550"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559552",
+          "ID": "1559552"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559609",
+          "ID": "1559609"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1559624",
+          "ID": "1559624"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560004",
+          "ID": "1560004"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560096",
+          "ID": "1560096"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560098",
+          "ID": "1560098"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560100",
+          "ID": "1560100"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560104",
+          "ID": "1560104"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560692",
+          "ID": "1560692"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560699",
+          "ID": "1560699"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560703",
+          "ID": "1560703"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1560708",
+          "ID": "1560708"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561076",
+          "ID": "1561076"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561079",
+          "ID": "1561079"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561085",
+          "ID": "1561085"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561091",
+          "ID": "1561091"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561096",
+          "ID": "1561096"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561107",
+          "ID": "1561107"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561216",
+          "ID": "1561216"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561218",
+          "ID": "1561218"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1561222",
+          "ID": "1561222"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562075",
+          "ID": "1562075"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562235",
+          "ID": "1562235"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562772",
+          "ID": "1562772"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562777",
+          "ID": "1562777"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562779",
+          "ID": "1562779"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562780",
+          "ID": "1562780"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562782",
+          "ID": "1562782"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562785",
+          "ID": "1562785"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562788",
+          "ID": "1562788"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562791",
+          "ID": "1562791"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562797",
+          "ID": "1562797"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562800",
+          "ID": "1562800"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562803",
+          "ID": "1562803"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1562811",
+          "ID": "1562811"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563268",
+          "ID": "1563268"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563351",
+          "ID": "1563351"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563358",
+          "ID": "1563358"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563359",
+          "ID": "1563359"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563361",
+          "ID": "1563361"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563363",
+          "ID": "1563363"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563364",
+          "ID": "1563364"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563492",
+          "ID": "1563492"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563731",
+          "ID": "1563731"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1563740",
+          "ID": "1563740"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565139",
+          "ID": "1565139"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565140",
+          "ID": "1565140"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565142",
+          "ID": "1565142"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565147",
+          "ID": "1565147"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565148",
+          "ID": "1565148"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565151",
+          "ID": "1565151"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565156",
+          "ID": "1565156"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565160",
+          "ID": "1565160"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565167",
+          "ID": "1565167"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565232",
+          "ID": "1565232"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565677",
+          "ID": "1565677"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565686",
+          "ID": "1565686"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565756",
+          "ID": "1565756"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1565862",
+          "ID": "1565862"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566255",
+          "ID": "1566255"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566526",
+          "ID": "1566526"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566529",
+          "ID": "1566529"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566530",
+          "ID": "1566530"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566541",
+          "ID": "1566541"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566557",
+          "ID": "1566557"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566562",
+          "ID": "1566562"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566563",
+          "ID": "1566563"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566568",
+          "ID": "1566568"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566572",
+          "ID": "1566572"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566577",
+          "ID": "1566577"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1566658",
+          "ID": "1566658"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1567278",
+          "ID": "1567278"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1567962",
+          "ID": "1567962"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568023",
+          "ID": "1568023"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568091",
+          "ID": "1568091"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568156",
+          "ID": "1568156"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568158",
+          "ID": "1568158"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568162",
+          "ID": "1568162"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568467",
+          "ID": "1568467"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568473",
+          "ID": "1568473"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568550",
+          "ID": "1568550"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568559",
+          "ID": "1568559"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1568602",
+          "ID": "1568602"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569099",
+          "ID": "1569099"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569103",
+          "ID": "1569103"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569113",
+          "ID": "1569113"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569177",
+          "ID": "1569177"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569236",
+          "ID": "1569236"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569472",
+          "ID": "1569472"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1569551",
+          "ID": "1569551"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1570118",
+          "ID": "1570118"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1570821",
+          "ID": "1570821"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1570950",
+          "ID": "1570950"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1570989",
+          "ID": "1570989"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1571310",
+          "ID": "1571310"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1571976",
+          "ID": "1571976"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1571989",
+          "ID": "1571989"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1572711",
+          "ID": "1572711"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1572716",
+          "ID": "1572716"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1572718",
+          "ID": "1572718"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1573215",
+          "ID": "1573215"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1573246",
+          "ID": "1573246"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1573254",
+          "ID": "1573254"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1573539",
+          "ID": "1573539"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1573990",
+          "ID": "1573990"
+        }
+      ],
+      "AffectedCpeList": [
+        "cpe:/a:redhat:cloudforms_managementengine:5.9",
+        "cpe:/a:redhat:cloudforms_managementengine:5.9::el7"
+      ]
+    }
+  },
+  "Criteria": {
+    "Operator": "OR",
+    "Criterions": [
+      {
+        "Comment": "Red Hat Enterprise Linux must be installed",
+        "TestRef": "oval:com.redhat.rhsa:tst:20180380202"
+      }
+    ],
+    "Criterias": [
+      {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "Comment": "Red Hat Enterprise Linux 7 is installed",
+            "TestRef": "oval:com.redhat.rhsa:tst:20180380201"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterias": [
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96 is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328001"
+                  },
+                  {
+                    "Comment": "postgresql96 is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328002"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-contrib is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328003"
+                  },
+                  {
+                    "Comment": "postgresql96-contrib is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328004"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-devel is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328005"
+                  },
+                  {
+                    "Comment": "postgresql96-devel is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328006"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-docs is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328007"
+                  },
+                  {
+                    "Comment": "postgresql96-docs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328008"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-libs is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328009"
+                  },
+                  {
+                    "Comment": "postgresql96-libs is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328010"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-plperl is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328011"
+                  },
+                  {
+                    "Comment": "postgresql96-plperl is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328012"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-plpython is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328013"
+                  },
+                  {
+                    "Comment": "postgresql96-plpython is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328014"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-pltcl is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328015"
+                  },
+                  {
+                    "Comment": "postgresql96-pltcl is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328016"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-server is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328017"
+                  },
+                  {
+                    "Comment": "postgresql96-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328018"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "postgresql96-test is earlier than 0:9.6.6-1PGDG.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328019"
+                  },
+                  {
+                    "Comment": "postgresql96-test is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328020"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "rh-ruby23-rubygem-json is earlier than 0:2.1.0-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328021"
+                  },
+                  {
+                    "Comment": "rh-ruby23-rubygem-json is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380064"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "rh-ruby23-rubygem-json-doc is earlier than 0:2.1.0-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328023"
+                  },
+                  {
+                    "Comment": "rh-ruby23-rubygem-json-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380066"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "dbus-api-service is earlier than 0:1.0.1-3.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328025"
+                  },
+                  {
+                    "Comment": "dbus-api-service is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380110"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "httpd-configmap-generator is earlier than 0:0.2.1-2.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328027"
+                  },
+                  {
+                    "Comment": "httpd-configmap-generator is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380114"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "rh-ruby23-rubygem-qpid_proton is earlier than 0:0.22.0-2.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328029"
+                  },
+                  {
+                    "Comment": "rh-ruby23-rubygem-qpid_proton is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380174"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "rh-ruby23-rubygem-qpid_proton-doc is earlier than 0:0.22.0-2.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328031"
+                  },
+                  {
+                    "Comment": "rh-ruby23-rubygem-qpid_proton-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380176"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-paramiko is earlier than 0:2.1.1-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328033"
+                  },
+                  {
+                    "Comment": "python-paramiko is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380184"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "python-paramiko-doc is earlier than 0:2.1.1-4.el7",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328035"
+                  },
+                  {
+                    "Comment": "python-paramiko-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380186"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328037"
+                  },
+                  {
+                    "Comment": "ansible-tower is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380126"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower-server is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328039"
+                  },
+                  {
+                    "Comment": "ansible-tower-server is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380128"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower-setup is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328041"
+                  },
+                  {
+                    "Comment": "ansible-tower-setup is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380130"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower-ui is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328043"
+                  },
+                  {
+                    "Comment": "ansible-tower-ui is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380132"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower-venv-ansible is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328045"
+                  },
+                  {
+                    "Comment": "ansible-tower-venv-ansible is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328046"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-tower-venv-tower is earlier than 0:3.2.4-1.el7at",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328047"
+                  },
+                  {
+                    "Comment": "ansible-tower-venv-tower is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328048"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible is earlier than 0:2.4.4.0-1.el7ae",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328049"
+                  },
+                  {
+                    "Comment": "ansible is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380180"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "ansible-doc is earlier than 0:2.4.4.0-1.el7ae",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328051"
+                  },
+                  {
+                    "Comment": "ansible-doc is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380182"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328053"
+                  },
+                  {
+                    "Comment": "cfme is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380190"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme-appliance is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328055"
+                  },
+                  {
+                    "Comment": "cfme-appliance is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380192"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme-appliance-common is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328057"
+                  },
+                  {
+                    "Comment": "cfme-appliance-common is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380194"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme-appliance-tools is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328059"
+                  },
+                  {
+                    "Comment": "cfme-appliance-tools is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380196"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme-gemset is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328061"
+                  },
+                  {
+                    "Comment": "cfme-gemset is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380200"
+                  }
+                ]
+              },
+              {
+                "Operator": "AND",
+                "Criterions": [
+                  {
+                    "Comment": "cfme-amazon-smartstate is earlier than 0:5.9.2.4-1.el7cf",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20181328063"
+                  },
+                  {
+                    "Comment": "cfme-amazon-smartstate is signed with Red Hat redhatrelease2 key",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20180380198"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
