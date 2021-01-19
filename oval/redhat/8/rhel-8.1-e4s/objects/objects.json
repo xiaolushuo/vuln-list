@@ -7234,6 +7234,81 @@
       "ID": "oval:com.redhat.rhsa:obj:20205660004",
       "Version": "633",
       "Name": "mariadb-connector-c-devel"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210165001",
+      "Version": "634",
+      "Name": "libpq"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210165002",
+      "Version": "634",
+      "Name": "libpq-devel"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166001",
+      "Version": "634",
+      "Name": "postgresql"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166002",
+      "Version": "634",
+      "Name": "postgresql-contrib"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166003",
+      "Version": "634",
+      "Name": "postgresql-docs"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166004",
+      "Version": "634",
+      "Name": "postgresql-plperl"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166005",
+      "Version": "634",
+      "Name": "postgresql-plpython3"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166006",
+      "Version": "634",
+      "Name": "postgresql-pltcl"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166007",
+      "Version": "634",
+      "Name": "postgresql-server"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166008",
+      "Version": "634",
+      "Name": "postgresql-server-devel"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166009",
+      "Version": "634",
+      "Name": "postgresql-static"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166010",
+      "Version": "634",
+      "Name": "postgresql-test"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166011",
+      "Version": "634",
+      "Name": "postgresql-test-rpm-macros"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166012",
+      "Version": "634",
+      "Name": "postgresql-upgrade"
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166013",
+      "Version": "634",
+      "Name": "postgresql-upgrade-devel"
     }
   ],
   "RpmverifyfileObjects": [
@@ -8055,6 +8130,22 @@
       "Instance": {
         "Datatype": "int",
         "VarRef": "oval:com.redhat.rhsa:var:20191167001"
+      }
+    },
+    {
+      "ID": "oval:com.redhat.rhsa:obj:20210166014",
+      "Version": "634",
+      "Filepath": {
+        "Text": "/etc/dnf/modules.d/postgresql.module",
+        "Datatype": "string"
+      },
+      "Pattern": {
+        "Text": "\\[postgresql\\][\\w\\W]*",
+        "Operation": "pattern match"
+      },
+      "Instance": {
+        "Text": "1",
+        "Datatype": "int"
       }
     }
   ],
