@@ -640,50 +640,6 @@
     },
     {
       "Check": "at least one",
-      "Comment": "python2-urllib3 is installed",
-      "ID": "oval:com.redhat.cve:tst:202026137001",
-      "Version": "631",
-      "Object": {
-        "ObjectRef": "oval:com.redhat.cve:obj:202026137001"
-      },
-      "State": {}
-    },
-    {
-      "Check": "at least one",
-      "Comment": "python2-urllib3 is signed with Red Hat redhatrelease2 key",
-      "ID": "oval:com.redhat.cve:tst:202026137002",
-      "Version": "631",
-      "Object": {
-        "ObjectRef": "oval:com.redhat.cve:obj:202026137001"
-      },
-      "State": {
-        "StateRef": "oval:com.redhat.cve:ste:201714623001"
-      }
-    },
-    {
-      "Check": "at least one",
-      "Comment": "python-urllib3 is installed",
-      "ID": "oval:com.redhat.cve:tst:202026137003",
-      "Version": "631",
-      "Object": {
-        "ObjectRef": "oval:com.redhat.cve:obj:202026137002"
-      },
-      "State": {}
-    },
-    {
-      "Check": "at least one",
-      "Comment": "python-urllib3 is signed with Red Hat redhatrelease2 key",
-      "ID": "oval:com.redhat.cve:tst:202026137004",
-      "Version": "631",
-      "Object": {
-        "ObjectRef": "oval:com.redhat.cve:obj:202026137002"
-      },
-      "State": {
-        "StateRef": "oval:com.redhat.cve:ste:201714623001"
-      }
-    },
-    {
-      "Check": "at least one",
       "Comment": "blosc is installed",
       "ID": "oval:com.redhat.cve:tst:202029367001",
       "Version": "631",
@@ -1872,10 +1828,22 @@
       "ID": "oval:com.redhat.rhba:tst:20202785001",
       "Version": "634",
       "Object": {
-        "ObjectRef": "oval:com.redhat.cve:obj:202026137001"
+        "ObjectRef": "oval:com.redhat.rhba:obj:20202785001"
       },
       "State": {
         "StateRef": "oval:com.redhat.rhba:ste:20202785001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "python2-urllib3 is signed with Red Hat redhatrelease2 key",
+      "ID": "oval:com.redhat.rhba:tst:20202785002",
+      "Version": "634",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhba:obj:20202785001"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.cve:ste:201714623001"
       }
     },
     {
@@ -3424,6 +3392,30 @@
       },
       "State": {
         "StateRef": "oval:com.redhat.rhsa:ste:20210030001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "python2-urllib3 is earlier than 0:1.26.2-1.el7",
+      "ID": "oval:com.redhat.rhsa:tst:20210034001",
+      "Version": "641",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.rhba:obj:20202785001"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210034001"
+      }
+    },
+    {
+      "Check": "at least one",
+      "Comment": "jenkins-2-plugins is earlier than 0:4.5.1610108899-1.el7",
+      "ID": "oval:com.redhat.rhsa:tst:20210034003",
+      "Version": "641",
+      "Object": {
+        "ObjectRef": "oval:com.redhat.cve:obj:20191003000001"
+      },
+      "State": {
+        "StateRef": "oval:com.redhat.rhsa:ste:20210034003"
       }
     },
     {
