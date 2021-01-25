@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201913",
-  "Version": "636",
+  "Version": "637",
   "Metadata": {
     "Title": "RHSA-2020:1913: e2fsprogs security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -48,18 +48,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1768555",
           "ID": "1768555"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1780279",
-          "ID": "1780279"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1783777",
-          "ID": "1783777"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1788573",
-          "ID": "1788573"
         }
       ],
       "AffectedCpeList": [
@@ -73,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -82,7 +70,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -106,11 +94,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "e2fsprogs-debugsource is earlier than 0:1.45.4-3.el8",
+                    "Comment": "e2fsprogs-devel is earlier than 0:1.45.4-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913003"
                   },
                   {
-                    "Comment": "e2fsprogs-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "e2fsprogs-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913004"
                   }
                 ]
@@ -119,11 +107,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "e2fsprogs-devel is earlier than 0:1.45.4-3.el8",
+                    "Comment": "e2fsprogs-libs is earlier than 0:1.45.4-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913005"
                   },
                   {
-                    "Comment": "e2fsprogs-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "e2fsprogs-libs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913006"
                   }
                 ]
@@ -132,11 +120,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "e2fsprogs-libs is earlier than 0:1.45.4-3.el8",
+                    "Comment": "libcom_err is earlier than 0:1.45.4-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913007"
                   },
                   {
-                    "Comment": "e2fsprogs-libs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libcom_err is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913008"
                   }
                 ]
@@ -145,11 +133,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libcom_err is earlier than 0:1.45.4-3.el8",
+                    "Comment": "libcom_err-devel is earlier than 0:1.45.4-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913009"
                   },
                   {
-                    "Comment": "libcom_err is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libcom_err-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913010"
                   }
                 ]
@@ -158,25 +146,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libcom_err-devel is earlier than 0:1.45.4-3.el8",
+                    "Comment": "libss is earlier than 0:1.45.4-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201913011"
                   },
                   {
-                    "Comment": "libcom_err-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201913012"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libss is earlier than 0:1.45.4-3.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201913013"
-                  },
-                  {
                     "Comment": "libss is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201913014"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201913012"
                   }
                 ]
               }

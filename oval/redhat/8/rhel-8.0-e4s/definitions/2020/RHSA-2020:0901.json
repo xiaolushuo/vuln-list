@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20200901",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:0901: icu security update (Important)",
     "AffectedList": [
@@ -94,11 +94,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "icu-debugsource is earlier than 0:60.3-2.el8_0",
+                    "Comment": "libicu is earlier than 0:60.3-2.el8_0",
                     "TestRef": "oval:com.redhat.rhsa:tst:20200901003"
                   },
                   {
-                    "Comment": "icu-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libicu is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20200901004"
                   }
                 ]
@@ -107,11 +107,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libicu is earlier than 0:60.3-2.el8_0",
+                    "Comment": "libicu-devel is earlier than 0:60.3-2.el8_0",
                     "TestRef": "oval:com.redhat.rhsa:tst:20200901005"
                   },
                   {
-                    "Comment": "libicu is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libicu-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20200901006"
                   }
                 ]
@@ -120,25 +120,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libicu-devel is earlier than 0:60.3-2.el8_0",
+                    "Comment": "libicu-doc is earlier than 0:60.3-2.el8_0",
                     "TestRef": "oval:com.redhat.rhsa:tst:20200901007"
                   },
                   {
-                    "Comment": "libicu-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200901008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libicu-doc is earlier than 0:60.3-2.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200901009"
-                  },
-                  {
                     "Comment": "libicu-doc is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200901010"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20200901008"
                   }
                 ]
               }

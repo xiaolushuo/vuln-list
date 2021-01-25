@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204638",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2020:4638: sysstat security update (Low)",
     "AffectedList": [
@@ -71,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.cve:tst:20137488003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sysstat is earlier than 0:11.7.3-5.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204638001"
-                  },
-                  {
-                    "Comment": "sysstat is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201819416004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sysstat-debugsource is earlier than 0:11.7.3-5.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204638003"
-                  },
-                  {
-                    "Comment": "sysstat-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201819416002"
-                  }
-                ]
-              }
-            ]
+            "Comment": "sysstat is earlier than 0:11.7.3-5.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20204638001"
+          },
+          {
+            "Comment": "sysstat is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.cve:tst:201819416004"
           }
         ]
       }

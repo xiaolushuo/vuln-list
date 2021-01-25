@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20205146",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2020:5146: thunderbird security update (Important)",
     "AffectedList": [
@@ -62,7 +62,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -71,40 +71,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "thunderbird is earlier than 0:78.4.3-1.el8_3",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205146001"
-                  },
-                  {
-                    "Comment": "thunderbird is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191144002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "thunderbird-debugsource is earlier than 0:78.4.3-1.el8_3",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205146003"
-                  },
-                  {
-                    "Comment": "thunderbird-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191144004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "thunderbird is earlier than 0:78.4.3-1.el8_3",
+            "TestRef": "oval:com.redhat.rhsa:tst:20205146001"
+          },
+          {
+            "Comment": "thunderbird is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20191144002"
           }
         ]
       }

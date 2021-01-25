@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201340",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:1340: firefox security update (Critical)",
     "AffectedList": [
@@ -87,39 +87,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.rhea:tst:20200635003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "firefox is earlier than 0:68.6.1-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201340001"
-                  },
-                  {
-                    "Comment": "firefox is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190966002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "firefox-debugsource is earlier than 0:68.6.1-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201340003"
-                  },
-                  {
-                    "Comment": "firefox-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190966004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "firefox is earlier than 0:68.6.1-1.el8_0",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201340001"
+          },
+          {
+            "Comment": "firefox is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20190966002"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201804",
-  "Version": "636",
+  "Version": "637",
   "Metadata": {
     "Title": "RHSA-2020:1804: sudo security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -46,24 +46,8 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1679508",
-          "ID": "1679508"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1715516",
-          "ID": "1715516"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1733961",
-          "ID": "1733961"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1786704",
           "ID": "1786704"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1796518",
-          "ID": "1796518"
         }
       ],
       "AffectedCpeList": [
@@ -87,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.cve:tst:20137488003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sudo is earlier than 0:1.8.29-5.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201804001"
-                  },
-                  {
-                    "Comment": "sudo is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201919234004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sudo-debugsource is earlier than 0:1.8.29-5.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201804003"
-                  },
-                  {
-                    "Comment": "sudo-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201919234002"
-                  }
-                ]
-              }
-            ]
+            "Comment": "sudo is earlier than 0:1.8.29-5.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201804001"
+          },
+          {
+            "Comment": "sudo is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.cve:tst:201919234004"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20202041",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:2041: squid:4 security update (Important)",
     "AffectedList": [
@@ -94,7 +94,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -103,11 +103,11 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           },
           {
             "Comment": "Module squid:4 is enabled",
-            "TestRef": "oval:com.redhat.rhsa:tst:20192593011"
+            "TestRef": "oval:com.redhat.rhsa:tst:20192593007"
           }
         ],
         "Criterias": [
@@ -131,11 +131,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libecap-debugsource is earlier than 0:1.0.1-2.module+el8.1.0+4044+36416a77",
+                    "Comment": "libecap-devel is earlier than 0:1.0.1-2.module+el8.1.0+4044+36416a77",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193476003"
                   },
                   {
-                    "Comment": "libecap-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libecap-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20192593004"
                   }
                 ]
@@ -144,38 +144,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libecap-devel is earlier than 0:1.0.1-2.module+el8.1.0+4044+36416a77",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193476005"
-                  },
-                  {
-                    "Comment": "libecap-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192593006"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "squid is earlier than 7:4.4-8.module+el8.2.0+6449+6ba3df3e.1",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202041007"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202041005"
                   },
                   {
                     "Comment": "squid is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192593008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "squid-debugsource is earlier than 7:4.4-8.module+el8.2.0+6449+6ba3df3e.1",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202041009"
-                  },
-                  {
-                    "Comment": "squid-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192593010"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20192593006"
                   }
                 ]
               }

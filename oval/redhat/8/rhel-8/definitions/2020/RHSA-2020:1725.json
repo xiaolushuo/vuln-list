@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201725",
-  "Version": "640",
+  "Version": "641",
   "Metadata": {
     "Title": "RHSA-2020:1725: haproxy security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -62,16 +62,8 @@
           "ID": "1759697"
         },
         {
-          "Href": "https://bugzilla.redhat.com/1774745",
-          "ID": "1774745"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1777584",
           "ID": "1777584"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1778844",
-          "ID": "1778844"
         }
       ],
       "AffectedCpeList": [
@@ -85,7 +77,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -94,40 +86,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "haproxy is earlier than 0:1.8.23-3.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201725001"
-                  },
-                  {
-                    "Comment": "haproxy is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201288002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "haproxy-debugsource is earlier than 0:1.8.23-3.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201725003"
-                  },
-                  {
-                    "Comment": "haproxy-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201288004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "haproxy is earlier than 0:1.8.23-3.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201725001"
+          },
+          {
+            "Comment": "haproxy is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201288002"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20193391",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2019:3391: libreswan security and bug fix update (Low)",
     "AffectedList": [
@@ -59,44 +59,12 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1608353",
-          "ID": "1608353"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1679394",
-          "ID": "1679394"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1683706",
-          "ID": "1683706"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1699318",
-          "ID": "1699318"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1706180",
-          "ID": "1706180"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1712555",
-          "ID": "1712555"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1713734",
-          "ID": "1713734"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1714141",
           "ID": "1714141"
         },
         {
-          "Href": "https://bugzilla.redhat.com/1714331",
-          "ID": "1714331"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1723957",
-          "ID": "1723957"
+          "Href": "https://bugzilla.redhat.com/1716918",
+          "ID": "1716918"
         }
       ],
       "AffectedCpeList": [
@@ -110,7 +78,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -119,40 +87,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libreswan is earlier than 0:3.29-6.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391001"
-                  },
-                  {
-                    "Comment": "libreswan is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libreswan-debugsource is earlier than 0:3.29-6.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391003"
-                  },
-                  {
-                    "Comment": "libreswan-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193391004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "libreswan is earlier than 0:3.29-6.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20193391001"
+          },
+          {
+            "Comment": "libreswan is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20193391002"
           }
         ]
       }

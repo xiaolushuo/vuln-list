@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204599",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:4599: curl security and bug fix update (Moderate)",
     "AffectedList": [
@@ -47,10 +47,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1847915",
           "ID": "1847915"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1854369",
-          "ID": "1854369"
         }
       ],
       "AffectedCpeList": [
@@ -64,7 +60,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -73,7 +69,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -97,11 +93,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "curl-debugsource is earlier than 0:7.61.1-14.el8",
+                    "Comment": "libcurl is earlier than 0:7.61.1-14.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204599003"
                   },
                   {
-                    "Comment": "curl-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libcurl is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193701004"
                   }
                 ]
@@ -110,11 +106,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libcurl is earlier than 0:7.61.1-14.el8",
+                    "Comment": "libcurl-devel is earlier than 0:7.61.1-14.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204599005"
                   },
                   {
-                    "Comment": "libcurl is signed with Red Hat redhatrelease2 key",
+                    "Comment": "libcurl-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193701006"
                   }
                 ]
@@ -123,25 +119,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libcurl-devel is earlier than 0:7.61.1-14.el8",
+                    "Comment": "libcurl-minimal is earlier than 0:7.61.1-14.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204599007"
                   },
                   {
-                    "Comment": "libcurl-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193701008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libcurl-minimal is earlier than 0:7.61.1-14.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204599009"
-                  },
-                  {
                     "Comment": "libcurl-minimal is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193701010"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193701008"
                   }
                 ]
               }

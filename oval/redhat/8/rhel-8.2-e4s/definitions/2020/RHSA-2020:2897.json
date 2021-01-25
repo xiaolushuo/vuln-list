@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20202897",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:2897: jbig2dec security update (Important)",
     "AffectedList": [
@@ -39,7 +39,7 @@
         {
           "CveID": "CVE-2020-12268",
           "Cvss3": "9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-          "Cwe": "CWE-190 CWE-122",
+          "Cwe": "CWE-190-\u003eCWE-122",
           "Href": "https://access.redhat.com/security/cve/CVE-2020-12268",
           "Public": "20200127"
         }
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -70,40 +70,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "jbig2dec-debugsource is earlier than 0:0.14-4.el8_2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202897001"
-                  },
-                  {
-                    "Comment": "jbig2dec-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202897002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "jbig2dec-libs is earlier than 0:0.14-4.el8_2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202897003"
-                  },
-                  {
-                    "Comment": "jbig2dec-libs is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202897004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "jbig2dec-libs is earlier than 0:0.14-4.el8_2",
+            "TestRef": "oval:com.redhat.rhsa:tst:20202897001"
+          },
+          {
+            "Comment": "jbig2dec-libs is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20202897002"
           }
         ]
       }

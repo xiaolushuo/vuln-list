@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhba:def:20193674",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHBA-2019:3674: openldap bug fix and enhancement update (Low)",
     "AffectedList": [
@@ -46,8 +46,8 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1740070",
-          "ID": "1740070"
+          "Href": "https://bugzilla.redhat.com/1853350",
+          "ID": "1853350"
         }
       ],
       "AffectedCpeList": [
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -70,7 +70,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -107,25 +107,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openldap-debugsource is earlier than 0:2.4.46-10.el8",
+                    "Comment": "openldap-devel is earlier than 0:2.4.46-10.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20193674005"
                   },
                   {
-                    "Comment": "openldap-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20193674006"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "openldap-devel is earlier than 0:2.4.46-10.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20193674007"
-                  },
-                  {
                     "Comment": "openldap-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20193674008"
+                    "TestRef": "oval:com.redhat.rhba:tst:20193674006"
                   }
                 ]
               }

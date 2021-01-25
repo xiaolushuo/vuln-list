@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204482",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:4482: libgcrypt security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -46,14 +46,6 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1762741",
-          "ID": "1762741"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1762765",
-          "ID": "1762765"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1764018",
           "ID": "1764018"
         }
@@ -69,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -78,7 +70,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -102,25 +94,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libgcrypt-debugsource is earlier than 0:1.8.5-4.el8",
+                    "Comment": "libgcrypt-devel is earlier than 0:1.8.5-4.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204482003"
                   },
                   {
-                    "Comment": "libgcrypt-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204482004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libgcrypt-devel is earlier than 0:1.8.5-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204482005"
-                  },
-                  {
                     "Comment": "libgcrypt-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204482006"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204482004"
                   }
                 ]
               }

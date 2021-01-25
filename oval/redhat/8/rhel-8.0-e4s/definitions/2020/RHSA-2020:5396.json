@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20205396",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:5396: libexif security update (Important)",
     "AffectedList": [
@@ -71,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.rhea:tst:20200635003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libexif is earlier than 0:0.6.21-18.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205396001"
-                  },
-                  {
-                    "Comment": "libexif is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202474002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libexif-debugsource is earlier than 0:0.6.21-18.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205396003"
-                  },
-                  {
-                    "Comment": "libexif-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202474004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "libexif is earlier than 0:0.6.21-18.el8_0",
+            "TestRef": "oval:com.redhat.rhsa:tst:20205396001"
+          },
+          {
+            "Comment": "libexif is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20202474002"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20202639",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:2639: gnutls security update (Important)",
     "AffectedList": [
@@ -122,11 +122,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "gnutls-debugsource is earlier than 0:3.6.5-3.el8_0",
+                    "Comment": "gnutls-devel is earlier than 0:3.6.5-3.el8_0",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202639007"
                   },
                   {
-                    "Comment": "gnutls-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "gnutls-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202639008"
                   }
                 ]
@@ -135,25 +135,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "gnutls-devel is earlier than 0:3.6.5-3.el8_0",
+                    "Comment": "gnutls-utils is earlier than 0:3.6.5-3.el8_0",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202639009"
                   },
                   {
-                    "Comment": "gnutls-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202639010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "gnutls-utils is earlier than 0:3.6.5-3.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202639011"
-                  },
-                  {
                     "Comment": "gnutls-utils is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202639012"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20202639010"
                   }
                 ]
               }

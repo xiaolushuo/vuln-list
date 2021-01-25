@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20193525",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2019:3525: dhcp security and bug fix update (Moderate)",
     "AffectedList": [
@@ -45,14 +45,6 @@
         }
       ],
       "Bugzilla": [
-        {
-          "Href": "https://bugzilla.redhat.com/1660865",
-          "ID": "1660865"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1685560",
-          "ID": "1685560"
-        },
         {
           "Href": "https://bugzilla.redhat.com/1708641",
           "ID": "1708641"
@@ -115,11 +107,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dhcp-debugsource is earlier than 12:4.3.6-34.el8",
+                    "Comment": "dhcp-libs is earlier than 12:4.3.6-34.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193525005"
                   },
                   {
-                    "Comment": "dhcp-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "dhcp-libs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193525006"
                   }
                 ]
@@ -128,11 +120,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dhcp-libs is earlier than 12:4.3.6-34.el8",
+                    "Comment": "dhcp-relay is earlier than 12:4.3.6-34.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193525007"
                   },
                   {
-                    "Comment": "dhcp-libs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "dhcp-relay is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193525008"
                   }
                 ]
@@ -141,25 +133,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dhcp-relay is earlier than 12:4.3.6-34.el8",
+                    "Comment": "dhcp-server is earlier than 12:4.3.6-34.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193525009"
                   },
                   {
-                    "Comment": "dhcp-relay is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193525010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "dhcp-server is earlier than 12:4.3.6-34.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193525011"
-                  },
-                  {
                     "Comment": "dhcp-server is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193525012"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193525010"
                   }
                 ]
               }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20200707",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:0707: http-parser security update (Important)",
     "AffectedList": [
@@ -71,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.rhea:tst:20200635003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "http-parser is earlier than 0:2.8.0-2.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200707001"
-                  },
-                  {
-                    "Comment": "http-parser is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200707002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "http-parser-debugsource is earlier than 0:2.8.0-2.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200707003"
-                  },
-                  {
-                    "Comment": "http-parser-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200707004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "http-parser is earlier than 0:2.8.0-2.el8_0.2",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200707001"
+          },
+          {
+            "Comment": "http-parser is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200707002"
           }
         ]
       }

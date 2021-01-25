@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204508",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:4508: libsolv security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -46,16 +46,8 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1796536",
-          "ID": "1796536"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1797072",
           "ID": "1797072"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1809106",
-          "ID": "1809106"
         }
       ],
       "AffectedCpeList": [
@@ -102,25 +94,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libsolv-debugsource is earlier than 0:0.7.11-1.el8",
+                    "Comment": "python3-solv is earlier than 0:0.7.11-1.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204508003"
                   },
                   {
-                    "Comment": "libsolv-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193583004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "python3-solv is earlier than 0:0.7.11-1.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204508005"
-                  },
-                  {
                     "Comment": "python3-solv is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204508006"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204508004"
                   }
                 ]
               }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204436",
-  "Version": "636",
+  "Version": "637",
   "Metadata": {
     "Title": "RHSA-2020:4436: gnome-software and fwupd security, bug fix, and enhancement update (Low)",
     "AffectedList": [
@@ -46,28 +46,8 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1797932",
-          "ID": "1797932"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1815502",
-          "ID": "1815502"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1839774",
-          "ID": "1839774"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1844316",
           "ID": "1844316"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1844488",
-          "ID": "1844488"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1845714",
-          "ID": "1845714"
         }
       ],
       "AffectedCpeList": [
@@ -83,7 +63,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -92,7 +72,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -116,38 +96,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libxmlb-debugsource is earlier than 0:0.1.15-1.el8",
+                    "Comment": "gnome-software is earlier than 0:3.36.1-4.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204436003"
                   },
                   {
-                    "Comment": "libxmlb-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "gnome-software is earlier than 0:3.36.1-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436005"
-                  },
-                  {
                     "Comment": "gnome-software is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193553082"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "gnome-software-debugsource is earlier than 0:3.36.1-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436007"
-                  },
-                  {
-                    "Comment": "gnome-software-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193553084"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193553060"
                   }
                 ]
               },
@@ -156,11 +110,11 @@
                 "Criterions": [
                   {
                     "Comment": "appstream-data is earlier than 0:8-20200724.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436009"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204436005"
                   },
                   {
                     "Comment": "appstream-data is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193553150"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193553122"
                   }
                 ]
               },
@@ -169,24 +123,11 @@
                 "Criterions": [
                   {
                     "Comment": "fwupd is earlier than 0:1.4.2-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436011"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204436007"
                   },
                   {
                     "Comment": "fwupd is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203216010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "fwupd-debugsource is earlier than 0:1.4.2-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204436013"
-                  },
-                  {
-                    "Comment": "fwupd-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203216012"
                   }
                 ]
               }

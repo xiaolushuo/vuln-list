@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20202295",
-  "Version": "636",
+  "Version": "637",
   "Metadata": {
     "Title": "RHSA-2020:2295: openvswitch2.13 security, bug fix and enhancement update (Important)",
     "AffectedList": [
@@ -98,14 +98,6 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1803082",
-          "ID": "1803082"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1824825",
-          "ID": "1824825"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1828867",
           "ID": "1828867"
         },
@@ -183,11 +175,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.13-debugsource is earlier than 0:2.13.0-25.el8fdp.1",
+                    "Comment": "openvswitch2.13-devel is earlier than 0:2.13.0-25.el8fdp.1",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202295005"
                   },
                   {
-                    "Comment": "openvswitch2.13-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openvswitch2.13-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20205310006"
                   }
                 ]
@@ -196,11 +188,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.13-devel is earlier than 0:2.13.0-25.el8fdp.1",
+                    "Comment": "openvswitch2.13-test is earlier than 0:2.13.0-25.el8fdp.1",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202295007"
                   },
                   {
-                    "Comment": "openvswitch2.13-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openvswitch2.13-test is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20205310008"
                   }
                 ]
@@ -209,25 +201,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.13-test is earlier than 0:2.13.0-25.el8fdp.1",
+                    "Comment": "python3-openvswitch2.13 is earlier than 0:2.13.0-25.el8fdp.1",
                     "TestRef": "oval:com.redhat.rhsa:tst:20202295009"
                   },
                   {
-                    "Comment": "openvswitch2.13-test is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20205310010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "python3-openvswitch2.13 is earlier than 0:2.13.0-25.el8fdp.1",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20202295011"
-                  },
-                  {
                     "Comment": "python3-openvswitch2.13 is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20205310012"
+                    "TestRef": "oval:com.redhat.rhba:tst:20205310010"
                   }
                 ]
               }

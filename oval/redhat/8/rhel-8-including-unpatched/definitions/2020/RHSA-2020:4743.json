@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204743",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2020:4743: squid:4 security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -180,7 +180,7 @@
         {
           "CveID": "CVE-2019-18676",
           "Cvss3": "5.9/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
-          "Cwe": "CWE-20 CWE-119",
+          "Cwe": "CWE-20-\u003eCWE-119",
           "Href": "https://access.redhat.com/security/cve/CVE-2019-18676",
           "Public": "20191105"
         },
@@ -208,7 +208,7 @@
         {
           "CveID": "CVE-2019-18860",
           "Cvss3": "6.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
-          "Cwe": "CWE-20 CWE-79",
+          "Cwe": "CWE-20-\u003eCWE-79",
           "Href": "https://access.redhat.com/security/cve/CVE-2019-18860",
           "Public": "20191103"
         },
@@ -370,21 +370,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libecap-debugsource is earlier than 0:1.0.1-2.module+el8.1.0+4044+36416a77",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193476003"
-                  },
-                  {
-                    "Comment": "libecap-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201912522008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "libecap-devel is earlier than 0:1.0.1-2.module+el8.1.0+4044+36416a77",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193476005"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193476003"
                   },
                   {
                     "Comment": "libecap-devel is signed with Red Hat redhatrelease2 key",
@@ -397,24 +384,11 @@
                 "Criterions": [
                   {
                     "Comment": "squid is earlier than 7:4.11-3.module+el8.3.0+7851+7808b5f9",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204743007"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204743005"
                   },
                   {
                     "Comment": "squid is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.cve:tst:201912522002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "squid-debugsource is earlier than 7:4.11-3.module+el8.3.0+7851+7808b5f9",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204743009"
-                  },
-                  {
-                    "Comment": "squid-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201912522004"
                   }
                 ]
               }

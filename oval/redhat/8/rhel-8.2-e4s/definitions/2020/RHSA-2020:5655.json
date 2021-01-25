@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20205655",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:5655: mariadb-connector-c security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -95,18 +95,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1839827",
           "ID": "1839827"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1898994",
-          "ID": "1898994"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899002",
-          "ID": "1899002"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899100",
-          "ID": "1899100"
         }
       ],
       "AffectedCpeList": [
@@ -120,7 +108,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -129,7 +117,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -166,25 +154,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-connector-c-debugsource is earlier than 0:3.1.11-2.el8_2",
+                    "Comment": "mariadb-connector-c-devel is earlier than 0:3.1.11-2.el8_2",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205655005"
                   },
                   {
-                    "Comment": "mariadb-connector-c-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205655006"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mariadb-connector-c-devel is earlier than 0:3.1.11-2.el8_2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205655007"
-                  },
-                  {
                     "Comment": "mariadb-connector-c-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205655008"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205655006"
                   }
                 ]
               }

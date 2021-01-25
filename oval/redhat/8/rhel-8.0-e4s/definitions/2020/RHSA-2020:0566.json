@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20200566",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:0566: python-pillow security update (Important)",
     "AffectedList": [
@@ -104,39 +104,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.rhea:tst:20200635003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "python-pillow-debugsource is earlier than 0:5.1.1-10.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200566001"
-                  },
-                  {
-                    "Comment": "python-pillow-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200566002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "python3-pillow is earlier than 0:5.1.1-10.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200566003"
-                  },
-                  {
-                    "Comment": "python3-pillow is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200566004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "python3-pillow is earlier than 0:5.1.1-10.el8_0",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200566001"
+          },
+          {
+            "Comment": "python3-pillow is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200566002"
           }
         ]
       }

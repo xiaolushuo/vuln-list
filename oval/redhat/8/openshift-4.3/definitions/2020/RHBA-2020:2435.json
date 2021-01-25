@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhba:def:20202435",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHBA-2020:2435: OpenShift Container Platform 4.3.25 packages update (Important)",
     "AffectedList": [
@@ -85,8 +85,20 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1843457",
-          "ID": "1843457"
+          "Href": "https://bugzilla.redhat.com/1819190",
+          "ID": "1819190"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1819198",
+          "ID": "1819198"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1819211",
+          "ID": "1819211"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1819222",
+          "ID": "1819222"
         }
       ],
       "AffectedCpeList": [
@@ -198,11 +210,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-debugsource is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-devel is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435013"
                   },
                   {
-                    "Comment": "s390utils-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435014"
                   }
                 ]
@@ -211,11 +223,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-devel is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-hmcdrvfs is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435015"
                   },
                   {
-                    "Comment": "s390utils-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-hmcdrvfs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435016"
                   }
                 ]
@@ -224,11 +236,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-hmcdrvfs is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-iucvterm is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435017"
                   },
                   {
-                    "Comment": "s390utils-hmcdrvfs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-iucvterm is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435018"
                   }
                 ]
@@ -237,11 +249,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-iucvterm is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-mon_statd is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435019"
                   },
                   {
-                    "Comment": "s390utils-iucvterm is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-mon_statd is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435020"
                   }
                 ]
@@ -250,11 +262,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-mon_statd is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-osasnmpd is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435021"
                   },
                   {
-                    "Comment": "s390utils-mon_statd is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-osasnmpd is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435022"
                   }
                 ]
@@ -263,11 +275,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-osasnmpd is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-zdsfs is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435023"
                   },
                   {
-                    "Comment": "s390utils-osasnmpd is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-zdsfs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435024"
                   }
                 ]
@@ -276,11 +288,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-zdsfs is earlier than 2:2.6.0-23.el8",
+                    "Comment": "s390utils-ziomon is earlier than 2:2.6.0-23.el8",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435025"
                   },
                   {
-                    "Comment": "s390utils-zdsfs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "s390utils-ziomon is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20202435026"
                   }
                 ]
@@ -289,21 +301,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "s390utils-ziomon is earlier than 2:2.6.0-23.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435027"
-                  },
-                  {
-                    "Comment": "s390utils-ziomon is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435028"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "cri-o is earlier than 0:1.16.6-15.dev.rhaos4.3.gitebc053b.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435029"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435027"
                   },
                   {
                     "Comment": "cri-o is signed with Red Hat redhatrelease2 key",
@@ -315,25 +314,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "cri-o-debugsource is earlier than 0:1.16.6-15.dev.rhaos4.3.gitebc053b.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435031"
-                  },
-                  {
-                    "Comment": "cri-o-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200522004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "conmon is earlier than 2:2.0.17-1.rhaos4.3.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435033"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435029"
                   },
                   {
                     "Comment": "conmon is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435034"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435030"
                   }
                 ]
               },
@@ -342,7 +328,7 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-hyperkube is earlier than 0:4.3.25-202006060952.git.1.96c30f6.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435035"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435031"
                   },
                   {
                     "Comment": "openshift-hyperkube is signed with Red Hat redhatrelease2 key",
@@ -355,7 +341,7 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-clients is earlier than 0:4.3.25-202006060952.git.1.fd93102.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435037"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435033"
                   },
                   {
                     "Comment": "openshift-clients is signed with Red Hat redhatrelease2 key",
@@ -368,7 +354,7 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-clients-redistributable is earlier than 0:4.3.25-202006060952.git.1.fd93102.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435039"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435035"
                   },
                   {
                     "Comment": "openshift-clients-redistributable is signed with Red Hat redhatrelease2 key",
@@ -381,11 +367,11 @@
                 "Criterions": [
                   {
                     "Comment": "machine-config-daemon is earlier than 0:4.3.25-202006081518.git.1.478b31a.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435041"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435037"
                   },
                   {
                     "Comment": "machine-config-daemon is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200522012"
+                    "TestRef": "oval:com.redhat.rhba:tst:20200522010"
                   }
                 ]
               },
@@ -394,11 +380,11 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-kuryr-cni is earlier than 0:4.3.25-202006081518.git.1.240b401.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435043"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435039"
                   },
                   {
                     "Comment": "openshift-kuryr-cni is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200527040"
+                    "TestRef": "oval:com.redhat.rhba:tst:20200527034"
                   }
                 ]
               },
@@ -407,11 +393,11 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-kuryr-common is earlier than 0:4.3.25-202006081518.git.1.240b401.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435045"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435041"
                   },
                   {
                     "Comment": "openshift-kuryr-common is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200527042"
+                    "TestRef": "oval:com.redhat.rhba:tst:20200527036"
                   }
                 ]
               },
@@ -420,11 +406,11 @@
                 "Criterions": [
                   {
                     "Comment": "openshift-kuryr-controller is earlier than 0:4.3.25-202006081518.git.1.240b401.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435047"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435043"
                   },
                   {
                     "Comment": "openshift-kuryr-controller is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200527044"
+                    "TestRef": "oval:com.redhat.rhba:tst:20200527038"
                   }
                 ]
               },
@@ -433,11 +419,11 @@
                 "Criterions": [
                   {
                     "Comment": "python3-kuryr-kubernetes is earlier than 0:4.3.25-202006081518.git.1.240b401.el8",
-                    "TestRef": "oval:com.redhat.rhba:tst:20202435049"
+                    "TestRef": "oval:com.redhat.rhba:tst:20202435045"
                   },
                   {
                     "Comment": "python3-kuryr-kubernetes is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20200527046"
+                    "TestRef": "oval:com.redhat.rhba:tst:20200527040"
                   }
                 ]
               }

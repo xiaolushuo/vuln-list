@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20205620",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:5620: postgresql:12 security update (Important)",
     "AffectedList": [
@@ -102,7 +102,7 @@
         {
           "CveID": "CVE-2020-25696",
           "Cvss3": "7.5/CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
-          "Cwe": "CWE-183 CWE-270",
+          "Cwe": "CWE-183-\u003eCWE-270",
           "Impact": "moderate",
           "Href": "https://access.redhat.com/security/cve/CVE-2020-25696",
           "Public": "20201112"
@@ -158,7 +158,7 @@
           },
           {
             "Comment": "Module postgresql:12 is enabled",
-            "TestRef": "oval:com.redhat.rhsa:tst:20205620037"
+            "TestRef": "oval:com.redhat.rhsa:tst:20205620031"
           }
         ],
         "Criterias": [
@@ -182,11 +182,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "pgaudit-debugsource is earlier than 0:1.4.0-4.module+el8.3.0+9042+664538f4",
+                    "Comment": "postgres-decoderbufs is earlier than 0:0.10.0-2.module+el8.3.0+9042+664538f4",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205620003"
                   },
                   {
-                    "Comment": "pgaudit-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgres-decoderbufs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205620004"
                   }
                 ]
@@ -195,34 +195,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgres-decoderbufs is earlier than 0:0.10.0-2.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620005"
-                  },
-                  {
-                    "Comment": "postgres-decoderbufs is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620006"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "postgres-decoderbufs-debugsource is earlier than 0:0.10.0-2.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620007"
-                  },
-                  {
-                    "Comment": "postgres-decoderbufs-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "postgresql is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620009"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620005"
                   },
                   {
                     "Comment": "postgresql is signed with Red Hat redhatrelease2 key",
@@ -235,7 +209,7 @@
                 "Criterions": [
                   {
                     "Comment": "postgresql-contrib is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620011"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620007"
                   },
                   {
                     "Comment": "postgresql-contrib is signed with Red Hat redhatrelease2 key",
@@ -247,11 +221,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-debugsource is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620013"
+                    "Comment": "postgresql-docs is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620009"
                   },
                   {
-                    "Comment": "postgresql-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-docs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669006"
                   }
                 ]
@@ -260,11 +234,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-docs is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620015"
+                    "Comment": "postgresql-plperl is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620011"
                   },
                   {
-                    "Comment": "postgresql-docs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-plperl is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669008"
                   }
                 ]
@@ -273,11 +247,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-plperl is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620017"
+                    "Comment": "postgresql-plpython3 is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620013"
                   },
                   {
-                    "Comment": "postgresql-plperl is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-plpython3 is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669010"
                   }
                 ]
@@ -286,11 +260,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-plpython3 is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620019"
+                    "Comment": "postgresql-pltcl is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620015"
                   },
                   {
-                    "Comment": "postgresql-plpython3 is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-pltcl is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669012"
                   }
                 ]
@@ -299,11 +273,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-pltcl is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620021"
+                    "Comment": "postgresql-server is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620017"
                   },
                   {
-                    "Comment": "postgresql-pltcl is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-server is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669014"
                   }
                 ]
@@ -312,11 +286,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-server is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620023"
+                    "Comment": "postgresql-server-devel is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620019"
                   },
                   {
-                    "Comment": "postgresql-server is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-server-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669016"
                   }
                 ]
@@ -325,11 +299,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-server-devel is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620025"
+                    "Comment": "postgresql-static is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620021"
                   },
                   {
-                    "Comment": "postgresql-server-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-static is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669018"
                   }
                 ]
@@ -338,11 +312,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-static is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620027"
+                    "Comment": "postgresql-test is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620023"
                   },
                   {
-                    "Comment": "postgresql-static is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-test is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669020"
                   }
                 ]
@@ -351,11 +325,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-test is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620029"
+                    "Comment": "postgresql-test-rpm-macros is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620025"
                   },
                   {
-                    "Comment": "postgresql-test is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-test-rpm-macros is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669022"
                   }
                 ]
@@ -364,11 +338,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-test-rpm-macros is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620031"
+                    "Comment": "postgresql-upgrade is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620027"
                   },
                   {
-                    "Comment": "postgresql-test-rpm-macros is signed with Red Hat redhatrelease2 key",
+                    "Comment": "postgresql-upgrade is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20203669024"
                   }
                 ]
@@ -377,25 +351,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "postgresql-upgrade is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620033"
-                  },
-                  {
-                    "Comment": "postgresql-upgrade is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203669026"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "postgresql-upgrade-devel is earlier than 0:12.5-1.module+el8.3.0+9042+664538f4",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205620035"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205620029"
                   },
                   {
                     "Comment": "postgresql-upgrade-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20203669028"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20203669026"
                   }
                 ]
               }

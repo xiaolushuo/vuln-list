@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204629",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:4629: libvpx security update (Moderate)",
     "AffectedList": [
@@ -75,7 +75,7 @@
         {
           "CveID": "CVE-2019-9433",
           "Cvss3": "6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
-          "Cwe": "CWE-416 CWE-200",
+          "Cwe": "CWE-416-\u003eCWE-200",
           "Href": "https://access.redhat.com/security/cve/CVE-2019-9433",
           "Public": "20191026"
         }
@@ -110,7 +110,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -119,7 +119,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -143,25 +143,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "libvpx-debugsource is earlier than 0:1.7.0-8.el8",
+                    "Comment": "libvpx-devel is earlier than 0:1.7.0-8.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204629003"
                   },
                   {
-                    "Comment": "libvpx-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204629004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "libvpx-devel is earlier than 0:1.7.0-8.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204629005"
-                  },
-                  {
                     "Comment": "libvpx-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204629006"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204629004"
                   }
                 ]
               }

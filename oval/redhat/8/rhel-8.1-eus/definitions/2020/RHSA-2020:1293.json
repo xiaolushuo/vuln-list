@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201293",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:1293: nodejs:12 security update (Important)",
     "AffectedList": [
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -70,11 +70,11 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           },
           {
             "Comment": "Module nodejs:12 is enabled",
-            "TestRef": "oval:com.redhat.rhea:tst:20200330015"
+            "TestRef": "oval:com.redhat.rhea:tst:20200330013"
           }
         ],
         "Criterias": [
@@ -98,11 +98,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "nodejs-debugsource is earlier than 1:12.16.1-2.module+el8.1.0+6117+b25a342c",
+                    "Comment": "nodejs-devel is earlier than 1:12.16.1-2.module+el8.1.0+6117+b25a342c",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201293003"
                   },
                   {
-                    "Comment": "nodejs-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "nodejs-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20200330004"
                   }
                 ]
@@ -111,11 +111,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "nodejs-devel is earlier than 1:12.16.1-2.module+el8.1.0+6117+b25a342c",
+                    "Comment": "nodejs-docs is earlier than 1:12.16.1-2.module+el8.1.0+6117+b25a342c",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201293005"
                   },
                   {
-                    "Comment": "nodejs-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "nodejs-docs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20200330006"
                   }
                 ]
@@ -124,11 +124,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "nodejs-docs is earlier than 1:12.16.1-2.module+el8.1.0+6117+b25a342c",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201293007"
+                    "Comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module+el8.1.0+3369+37ae6a45",
+                    "TestRef": "oval:com.redhat.rhea:tst:20200330007"
                   },
                   {
-                    "Comment": "nodejs-docs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "nodejs-nodemon is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20200330008"
                   }
                 ]
@@ -137,11 +137,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "nodejs-nodemon is earlier than 0:1.18.3-1.module+el8.1.0+3369+37ae6a45",
+                    "Comment": "nodejs-packaging is earlier than 0:17-3.module+el8.1.0+3369+37ae6a45",
                     "TestRef": "oval:com.redhat.rhea:tst:20200330009"
                   },
                   {
-                    "Comment": "nodejs-nodemon is signed with Red Hat redhatrelease2 key",
+                    "Comment": "nodejs-packaging is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20200330010"
                   }
                 ]
@@ -150,25 +150,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "nodejs-packaging is earlier than 0:17-3.module+el8.1.0+3369+37ae6a45",
-                    "TestRef": "oval:com.redhat.rhea:tst:20200330011"
-                  },
-                  {
-                    "Comment": "nodejs-packaging is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhea:tst:20200330012"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "npm is earlier than 1:6.13.4-1.12.16.1.2.module+el8.1.0+6117+b25a342c",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201293013"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201293011"
                   },
                   {
                     "Comment": "npm is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhea:tst:20200330014"
+                    "TestRef": "oval:com.redhat.rhea:tst:20200330012"
                   }
                 ]
               }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201604",
-  "Version": "636",
+  "Version": "637",
   "Metadata": {
     "Title": "RHSA-2020:1604: tcpdump security update (Low)",
     "AffectedList": [
@@ -48,10 +48,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1655374",
           "ID": "1655374"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1715423",
-          "ID": "1715423"
         }
       ],
       "AffectedCpeList": [
@@ -75,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.cve:tst:20137488003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "tcpdump is earlier than 14:4.9.2-6.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201604001"
-                  },
-                  {
-                    "Comment": "tcpdump is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:20208037002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "tcpdump-debugsource is earlier than 14:4.9.2-6.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201604003"
-                  },
-                  {
-                    "Comment": "tcpdump-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:20208037004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "tcpdump is earlier than 14:4.9.2-6.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201604001"
+          },
+          {
+            "Comment": "tcpdump is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.cve:tst:20208037002"
           }
         ]
       }

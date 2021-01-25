@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20205663",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:5663: mariadb:10.3 security, bug fix, and enhancement update (Important)",
     "AffectedList": [
@@ -279,7 +279,7 @@
         {
           "CveID": "CVE-2020-15180",
           "Cvss3": "9.0/CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
-          "Cwe": "CWE-20 CWE-96",
+          "Cwe": "CWE-20-\u003eCWE-96",
           "Href": "https://access.redhat.com/security/cve/CVE-2020-15180",
           "Public": "20201006"
         },
@@ -434,26 +434,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1894919",
           "ID": "1894919"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899012",
-          "ID": "1899012"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899020",
-          "ID": "1899020"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899025",
-          "ID": "1899025"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899085",
-          "ID": "1899085"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1899089",
-          "ID": "1899089"
         }
       ],
       "AffectedCpeList": [
@@ -480,7 +460,7 @@
           },
           {
             "Comment": "Module mariadb:10.3 is enabled",
-            "TestRef": "oval:com.redhat.rhsa:tst:20205663037"
+            "TestRef": "oval:com.redhat.rhsa:tst:20205663031"
           }
         ],
         "Criterias": [
@@ -504,11 +484,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "Judy-debugsource is earlier than 0:1.0.5-18.module+el8+2765+cfa4f87b",
+                    "Comment": "galera is earlier than 0:25.3.31-1.module+el8.0.0+9239+73817dd5",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663003"
                   },
                   {
-                    "Comment": "Judy-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "galera is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663004"
                   }
                 ]
@@ -517,11 +497,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "galera is earlier than 0:25.3.31-1.module+el8.0.0+9239+73817dd5",
+                    "Comment": "mariadb is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663005"
                   },
                   {
-                    "Comment": "galera is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663006"
                   }
                 ]
@@ -530,11 +510,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "galera-debugsource is earlier than 0:25.3.31-1.module+el8.0.0+9239+73817dd5",
+                    "Comment": "mariadb-backup is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663007"
                   },
                   {
-                    "Comment": "galera-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-backup is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663008"
                   }
                 ]
@@ -543,11 +523,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-common is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663009"
                   },
                   {
-                    "Comment": "mariadb is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-common is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663010"
                   }
                 ]
@@ -556,11 +536,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-backup is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-devel is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663011"
                   },
                   {
-                    "Comment": "mariadb-backup is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663012"
                   }
                 ]
@@ -569,11 +549,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-common is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-embedded is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663013"
                   },
                   {
-                    "Comment": "mariadb-common is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-embedded is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663014"
                   }
                 ]
@@ -582,11 +562,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-debugsource is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-embedded-devel is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663015"
                   },
                   {
-                    "Comment": "mariadb-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-embedded-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663016"
                   }
                 ]
@@ -595,11 +575,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-devel is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-errmsg is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663017"
                   },
                   {
-                    "Comment": "mariadb-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-errmsg is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663018"
                   }
                 ]
@@ -608,11 +588,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-embedded is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-gssapi-server is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663019"
                   },
                   {
-                    "Comment": "mariadb-embedded is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-gssapi-server is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663020"
                   }
                 ]
@@ -621,11 +601,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-embedded-devel is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-oqgraph-engine is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663021"
                   },
                   {
-                    "Comment": "mariadb-embedded-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-oqgraph-engine is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663022"
                   }
                 ]
@@ -634,11 +614,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-errmsg is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-server is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663023"
                   },
                   {
-                    "Comment": "mariadb-errmsg is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-server is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663024"
                   }
                 ]
@@ -647,11 +627,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-gssapi-server is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-server-galera is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663025"
                   },
                   {
-                    "Comment": "mariadb-gssapi-server is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-server-galera is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663026"
                   }
                 ]
@@ -660,11 +640,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-oqgraph-engine is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-server-utils is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663027"
                   },
                   {
-                    "Comment": "mariadb-oqgraph-engine is signed with Red Hat redhatrelease2 key",
+                    "Comment": "mariadb-server-utils is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663028"
                   }
                 ]
@@ -673,51 +653,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "mariadb-server is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
+                    "Comment": "mariadb-test is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
                     "TestRef": "oval:com.redhat.rhsa:tst:20205663029"
                   },
                   {
-                    "Comment": "mariadb-server is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663030"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mariadb-server-galera is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663031"
-                  },
-                  {
-                    "Comment": "mariadb-server-galera is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663032"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mariadb-server-utils is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663033"
-                  },
-                  {
-                    "Comment": "mariadb-server-utils is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663034"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mariadb-test is earlier than 3:10.3.27-3.module+el8.0.0+9160+9822c5c7",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663035"
-                  },
-                  {
                     "Comment": "mariadb-test is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20205663036"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20205663030"
                   }
                 ]
               }

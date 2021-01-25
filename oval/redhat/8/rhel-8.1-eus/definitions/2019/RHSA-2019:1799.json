@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20191799",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2019:1799: thunderbird security and bug fix update (Important)",
     "AffectedList": [
@@ -134,10 +134,6 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1725919",
-          "ID": "1725919"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1728430",
           "ID": "1728430"
         },
@@ -181,7 +177,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -190,40 +186,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "thunderbird is earlier than 0:60.8.0-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191799001"
-                  },
-                  {
-                    "Comment": "thunderbird is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191144002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "thunderbird-debugsource is earlier than 0:60.8.0-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191799003"
-                  },
-                  {
-                    "Comment": "thunderbird-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20191144004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "thunderbird is earlier than 0:60.8.0-1.el8_0",
+            "TestRef": "oval:com.redhat.rhsa:tst:20191799001"
+          },
+          {
+            "Comment": "thunderbird is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20191144002"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20200388",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:0388: sudo security update (Important)",
     "AffectedList": [
@@ -71,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.rhea:tst:20200635003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sudo is earlier than 0:1.8.25p1-4.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200388001"
-                  },
-                  {
-                    "Comment": "sudo is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200388002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "sudo-debugsource is earlier than 0:1.8.25p1-4.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200388003"
-                  },
-                  {
-                    "Comment": "sudo-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200388004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "sudo is earlier than 0:1.8.25p1-4.el8_0.2",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200388001"
+          },
+          {
+            "Comment": "sudo is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200388002"
           }
         ]
       }

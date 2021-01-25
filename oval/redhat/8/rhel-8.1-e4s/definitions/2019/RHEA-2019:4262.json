@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhea:def:20194262",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHEA-2019:4262: webkit2gtk3 enhancement update (Moderate)",
     "AffectedList": [
@@ -221,8 +221,72 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1755824",
-          "ID": "1755824"
+          "Href": "https://bugzilla.redhat.com/1876542",
+          "ID": "1876542"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876592",
+          "ID": "1876592"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876593",
+          "ID": "1876593"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876608",
+          "ID": "1876608"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876609",
+          "ID": "1876609"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876610",
+          "ID": "1876610"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876613",
+          "ID": "1876613"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876615",
+          "ID": "1876615"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876626",
+          "ID": "1876626"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876628",
+          "ID": "1876628"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876629",
+          "ID": "1876629"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876631",
+          "ID": "1876631"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876646",
+          "ID": "1876646"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876648",
+          "ID": "1876648"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876651",
+          "ID": "1876651"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876652",
+          "ID": "1876652"
+        },
+        {
+          "Href": "https://bugzilla.redhat.com/1876656",
+          "ID": "1876656"
         }
       ],
       "AffectedCpeList": [
@@ -236,7 +300,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -245,7 +309,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -269,11 +333,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "webkit2gtk3-debugsource is earlier than 0:2.24.4-2.el8_1",
+                    "Comment": "webkit2gtk3-devel is earlier than 0:2.24.4-2.el8_1",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262003"
                   },
                   {
-                    "Comment": "webkit2gtk3-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "webkit2gtk3-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262004"
                   }
                 ]
@@ -282,11 +346,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "webkit2gtk3-devel is earlier than 0:2.24.4-2.el8_1",
+                    "Comment": "webkit2gtk3-jsc is earlier than 0:2.24.4-2.el8_1",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262005"
                   },
                   {
-                    "Comment": "webkit2gtk3-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "webkit2gtk3-jsc is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262006"
                   }
                 ]
@@ -295,11 +359,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "webkit2gtk3-jsc is earlier than 0:2.24.4-2.el8_1",
+                    "Comment": "webkit2gtk3-jsc-devel is earlier than 0:2.24.4-2.el8_1",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262007"
                   },
                   {
-                    "Comment": "webkit2gtk3-jsc is signed with Red Hat redhatrelease2 key",
+                    "Comment": "webkit2gtk3-jsc-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262008"
                   }
                 ]
@@ -308,25 +372,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "webkit2gtk3-jsc-devel is earlier than 0:2.24.4-2.el8_1",
+                    "Comment": "webkit2gtk3-plugin-process-gtk2 is earlier than 0:2.24.4-2.el8_1",
                     "TestRef": "oval:com.redhat.rhea:tst:20194262009"
                   },
                   {
-                    "Comment": "webkit2gtk3-jsc-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhea:tst:20194262010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "webkit2gtk3-plugin-process-gtk2 is earlier than 0:2.24.4-2.el8_1",
-                    "TestRef": "oval:com.redhat.rhea:tst:20194262011"
-                  },
-                  {
                     "Comment": "webkit2gtk3-plugin-process-gtk2 is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhea:tst:20194262012"
+                    "TestRef": "oval:com.redhat.rhea:tst:20194262010"
                   }
                 ]
               }

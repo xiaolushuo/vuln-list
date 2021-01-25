@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201912",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2020:1912: bluez security update (Low)",
     "AffectedList": [
@@ -64,7 +64,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -73,7 +73,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -110,11 +110,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "bluez-debugsource is earlier than 0:5.50-3.el8",
+                    "Comment": "bluez-hid2hci is earlier than 0:5.50-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912005"
                   },
                   {
-                    "Comment": "bluez-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "bluez-hid2hci is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912006"
                   }
                 ]
@@ -123,11 +123,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "bluez-hid2hci is earlier than 0:5.50-3.el8",
+                    "Comment": "bluez-libs is earlier than 0:5.50-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912007"
                   },
                   {
-                    "Comment": "bluez-hid2hci is signed with Red Hat redhatrelease2 key",
+                    "Comment": "bluez-libs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912008"
                   }
                 ]
@@ -136,11 +136,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "bluez-libs is earlier than 0:5.50-3.el8",
+                    "Comment": "bluez-libs-devel is earlier than 0:5.50-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912009"
                   },
                   {
-                    "Comment": "bluez-libs is signed with Red Hat redhatrelease2 key",
+                    "Comment": "bluez-libs-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912010"
                   }
                 ]
@@ -149,25 +149,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "bluez-libs-devel is earlier than 0:5.50-3.el8",
+                    "Comment": "bluez-obexd is earlier than 0:5.50-3.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201912011"
                   },
                   {
-                    "Comment": "bluez-libs-devel is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201912012"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "bluez-obexd is earlier than 0:5.50-3.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201912013"
-                  },
-                  {
                     "Comment": "bluez-obexd is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201912014"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201912012"
                   }
                 ]
               }

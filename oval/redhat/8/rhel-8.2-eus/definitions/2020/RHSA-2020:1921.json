@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201921",
-  "Version": "637",
+  "Version": "638",
   "Metadata": {
     "Title": "RHSA-2020:1921: fontforge security update (Moderate)",
     "AffectedList": [
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -70,40 +70,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "fontforge is earlier than 0:20170731-14.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201921001"
-                  },
-                  {
-                    "Comment": "fontforge is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201921002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "fontforge-debugsource is earlier than 0:20170731-14.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201921003"
-                  },
-                  {
-                    "Comment": "fontforge-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201921004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "fontforge is earlier than 0:20170731-14.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201921001"
+          },
+          {
+            "Comment": "fontforge is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201921002"
           }
         ]
       }

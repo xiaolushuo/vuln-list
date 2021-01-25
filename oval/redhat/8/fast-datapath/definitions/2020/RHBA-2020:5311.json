@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhba:def:20205311",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHBA-2020:5311: openvswitch2.11 bug fix and enhancement update (Important)",
     "AffectedList": [
@@ -46,8 +46,8 @@
       ],
       "Bugzilla": [
         {
-          "Href": "https://bugzilla.redhat.com/1894092",
-          "ID": "1894092"
+          "Href": "https://bugzilla.redhat.com/1896536",
+          "ID": "1896536"
         }
       ],
       "AffectedCpeList": [
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20205310014"
+        "TestRef": "oval:com.redhat.rhba:tst:20205310012"
       }
     ],
     "Criterias": [
@@ -70,7 +70,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20205310013"
+            "TestRef": "oval:com.redhat.rhba:tst:20205310011"
           }
         ],
         "Criterias": [
@@ -107,11 +107,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.11-debugsource is earlier than 0:2.11.3-74.el8fdp",
+                    "Comment": "openvswitch2.11-devel is earlier than 0:2.11.3-74.el8fdp",
                     "TestRef": "oval:com.redhat.rhba:tst:20205311005"
                   },
                   {
-                    "Comment": "openvswitch2.11-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openvswitch2.11-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20205311006"
                   }
                 ]
@@ -120,11 +120,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.11-devel is earlier than 0:2.11.3-74.el8fdp",
+                    "Comment": "openvswitch2.11-test is earlier than 0:2.11.3-74.el8fdp",
                     "TestRef": "oval:com.redhat.rhba:tst:20205311007"
                   },
                   {
-                    "Comment": "openvswitch2.11-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openvswitch2.11-test is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhba:tst:20205311008"
                   }
                 ]
@@ -133,25 +133,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openvswitch2.11-test is earlier than 0:2.11.3-74.el8fdp",
+                    "Comment": "python3-openvswitch2.11 is earlier than 0:2.11.3-74.el8fdp",
                     "TestRef": "oval:com.redhat.rhba:tst:20205311009"
                   },
                   {
-                    "Comment": "openvswitch2.11-test is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20205311010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "python3-openvswitch2.11 is earlier than 0:2.11.3-74.el8fdp",
-                    "TestRef": "oval:com.redhat.rhba:tst:20205311011"
-                  },
-                  {
                     "Comment": "python3-openvswitch2.11 is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhba:tst:20205311012"
+                    "TestRef": "oval:com.redhat.rhba:tst:20205311010"
                   }
                 ]
               }

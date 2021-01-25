@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20193700",
-  "Version": "633",
+  "Version": "634",
   "Metadata": {
     "Title": "RHSA-2019:3700: openssl security, bug fix, and enhancement update (Low)",
     "AffectedList": [
@@ -78,40 +78,8 @@
           "ID": "1644364"
         },
         {
-          "Href": "https://bugzilla.redhat.com/1668880",
-          "ID": "1668880"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1686058",
-          "ID": "1686058"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1686548",
-          "ID": "1686548"
-        },
-        {
           "Href": "https://bugzilla.redhat.com/1695954",
           "ID": "1695954"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1697915",
-          "ID": "1697915"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1706104",
-          "ID": "1706104"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1706915",
-          "ID": "1706915"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1712023",
-          "ID": "1712023"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1714245",
-          "ID": "1714245"
         }
       ],
       "AffectedCpeList": [
@@ -125,7 +93,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -134,7 +102,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -158,11 +126,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openssl-debugsource is earlier than 1:1.1.1c-2.el8",
+                    "Comment": "openssl-devel is earlier than 1:1.1.1c-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193700003"
                   },
                   {
-                    "Comment": "openssl-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openssl-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193700004"
                   }
                 ]
@@ -171,11 +139,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openssl-devel is earlier than 1:1.1.1c-2.el8",
+                    "Comment": "openssl-libs is earlier than 1:1.1.1c-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193700005"
                   },
                   {
-                    "Comment": "openssl-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "openssl-libs is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193700006"
                   }
                 ]
@@ -184,25 +152,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "openssl-libs is earlier than 1:1.1.1c-2.el8",
+                    "Comment": "openssl-perl is earlier than 1:1.1.1c-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193700007"
                   },
                   {
-                    "Comment": "openssl-libs is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193700008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "openssl-perl is earlier than 1:1.1.1c-2.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193700009"
-                  },
-                  {
                     "Comment": "openssl-perl is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193700010"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193700008"
                   }
                 ]
               }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20201600",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:1600: evolution security and bug fix update (Moderate)",
     "AffectedList": [
@@ -39,7 +39,7 @@
         {
           "CveID": "CVE-2018-15587",
           "Cvss3": "5.4/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
-          "Cwe": "CWE-290 CWE-347",
+          "Cwe": "(CWE-290|CWE-347)",
           "Href": "https://access.redhat.com/security/cve/CVE-2018-15587",
           "Public": "20180527"
         }
@@ -48,34 +48,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1677650",
           "ID": "1677650"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1741091",
-          "ID": "1741091"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1753220",
-          "ID": "1753220"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1764818",
-          "ID": "1764818"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1765005",
-          "ID": "1765005"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1778799",
-          "ID": "1778799"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1788478",
-          "ID": "1788478"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1791547",
-          "ID": "1791547"
         }
       ],
       "AffectedCpeList": [
@@ -123,11 +95,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "evolution-ews-debugsource is earlier than 0:3.28.5-9.el8",
+                    "Comment": "evolution-ews-langpacks is earlier than 0:3.28.5-9.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20201600003"
                   },
                   {
-                    "Comment": "evolution-ews-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "evolution-ews-langpacks is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193699004"
                   }
                 ]
@@ -136,21 +108,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "evolution-ews-langpacks is earlier than 0:3.28.5-9.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600005"
-                  },
-                  {
-                    "Comment": "evolution-ews-langpacks is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193699006"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "evolution is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600007"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600005"
                   },
                   {
                     "Comment": "evolution is signed with Red Hat redhatrelease2 key",
@@ -163,7 +122,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-bogofilter is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600009"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600007"
                   },
                   {
                     "Comment": "evolution-bogofilter is signed with Red Hat redhatrelease2 key",
@@ -175,21 +134,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "evolution-debugsource is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600011"
-                  },
-                  {
-                    "Comment": "evolution-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:202011879002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "evolution-devel is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600013"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600009"
                   },
                   {
                     "Comment": "evolution-devel is signed with Red Hat redhatrelease2 key",
@@ -202,7 +148,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-help is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600015"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600011"
                   },
                   {
                     "Comment": "evolution-help is signed with Red Hat redhatrelease2 key",
@@ -215,7 +161,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-langpacks is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600017"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600013"
                   },
                   {
                     "Comment": "evolution-langpacks is signed with Red Hat redhatrelease2 key",
@@ -228,7 +174,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-pst is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600019"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600015"
                   },
                   {
                     "Comment": "evolution-pst is signed with Red Hat redhatrelease2 key",
@@ -241,7 +187,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-spamassassin is earlier than 0:3.28.5-12.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600021"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600017"
                   },
                   {
                     "Comment": "evolution-spamassassin is signed with Red Hat redhatrelease2 key",
@@ -254,7 +200,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-data-server is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600023"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600019"
                   },
                   {
                     "Comment": "evolution-data-server is signed with Red Hat redhatrelease2 key",
@@ -266,21 +212,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "evolution-data-server-debugsource is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600025"
-                  },
-                  {
-                    "Comment": "evolution-data-server-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:202016117004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "evolution-data-server-devel is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600027"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600021"
                   },
                   {
                     "Comment": "evolution-data-server-devel is signed with Red Hat redhatrelease2 key",
@@ -293,7 +226,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-data-server-doc is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600029"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600023"
                   },
                   {
                     "Comment": "evolution-data-server-doc is signed with Red Hat redhatrelease2 key",
@@ -306,7 +239,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-data-server-langpacks is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600031"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600025"
                   },
                   {
                     "Comment": "evolution-data-server-langpacks is signed with Red Hat redhatrelease2 key",
@@ -319,7 +252,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-data-server-perl is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600033"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600027"
                   },
                   {
                     "Comment": "evolution-data-server-perl is signed with Red Hat redhatrelease2 key",
@@ -332,7 +265,7 @@
                 "Criterions": [
                   {
                     "Comment": "evolution-data-server-tests is earlier than 0:3.28.5-13.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201600035"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20201600029"
                   },
                   {
                     "Comment": "evolution-data-server-tests is signed with Red Hat redhatrelease2 key",

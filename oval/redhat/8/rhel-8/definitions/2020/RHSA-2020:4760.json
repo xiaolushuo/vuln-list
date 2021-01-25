@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204760",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2020:4760: tcpdump security, bug fix, and enhancement update (Moderate)",
     "AffectedList": [
@@ -437,10 +437,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1760520",
           "ID": "1760520"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1804063",
-          "ID": "1804063"
         }
       ],
       "AffectedCpeList": [
@@ -454,7 +450,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -463,40 +459,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "tcpdump is earlier than 14:4.9.3-1.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204760001"
-                  },
-                  {
-                    "Comment": "tcpdump is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201604002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "tcpdump-debugsource is earlier than 14:4.9.3-1.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204760003"
-                  },
-                  {
-                    "Comment": "tcpdump-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20201604004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "tcpdump is earlier than 14:4.9.3-1.el8",
+            "TestRef": "oval:com.redhat.rhsa:tst:20204760001"
+          },
+          {
+            "Comment": "tcpdump is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20201604002"
           }
         ]
       }

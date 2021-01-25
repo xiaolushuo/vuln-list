@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20200559",
-  "Version": "637",
+  "Version": "638",
   "Metadata": {
     "Title": "RHSA-2020:0559: ksh security update (Important)",
     "AffectedList": [
@@ -61,7 +61,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -70,40 +70,15 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
-          }
-        ],
-        "Criterias": [
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "ksh is earlier than 0:20120801-253.el8_1",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200559001"
-                  },
-                  {
-                    "Comment": "ksh is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200559002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "ksh-debugsource is earlier than 0:20120801-253.el8_1",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200559003"
-                  },
-                  {
-                    "Comment": "ksh-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20200559004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "ksh is earlier than 0:20120801-253.el8_1",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200559001"
+          },
+          {
+            "Comment": "ksh is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20200559002"
           }
         ]
       }

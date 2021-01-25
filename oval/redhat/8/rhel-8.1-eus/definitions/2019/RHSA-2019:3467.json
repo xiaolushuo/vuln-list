@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20193467",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2019:3467: dovecot security and bug fix update (Moderate)",
     "AffectedList": [
@@ -62,7 +62,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -71,7 +71,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -95,11 +95,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dovecot-debugsource is earlier than 1:2.2.36-10.el8",
+                    "Comment": "dovecot-devel is earlier than 1:2.2.36-10.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193467003"
                   },
                   {
-                    "Comment": "dovecot-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "dovecot-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20192822004"
                   }
                 ]
@@ -108,11 +108,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dovecot-devel is earlier than 1:2.2.36-10.el8",
+                    "Comment": "dovecot-mysql is earlier than 1:2.2.36-10.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193467005"
                   },
                   {
-                    "Comment": "dovecot-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "dovecot-mysql is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20192822006"
                   }
                 ]
@@ -121,11 +121,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dovecot-mysql is earlier than 1:2.2.36-10.el8",
+                    "Comment": "dovecot-pgsql is earlier than 1:2.2.36-10.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193467007"
                   },
                   {
-                    "Comment": "dovecot-mysql is signed with Red Hat redhatrelease2 key",
+                    "Comment": "dovecot-pgsql is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20192822008"
                   }
                 ]
@@ -134,25 +134,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "dovecot-pgsql is earlier than 1:2.2.36-10.el8",
+                    "Comment": "dovecot-pigeonhole is earlier than 1:2.2.36-10.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20193467009"
                   },
                   {
-                    "Comment": "dovecot-pgsql is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192822010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "dovecot-pigeonhole is earlier than 1:2.2.36-10.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193467011"
-                  },
-                  {
                     "Comment": "dovecot-pigeonhole is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20193467012"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20193467010"
                   }
                 ]
               }

@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20192663",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2019:2663: firefox security update (Important)",
     "AffectedList": [
@@ -104,7 +104,7 @@
         {
           "CveID": "CVE-2019-11733",
           "Cvss3": "5.0/CVSS:3.0/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
-          "Cwe": "CWE-862 CWE-306",
+          "Cwe": "(CWE-862|CWE-306)",
           "Impact": "moderate",
           "Href": "https://access.redhat.com/security/cve/CVE-2019-11733",
           "Public": "20190814"
@@ -209,6 +209,10 @@
       ],
       "Bugzilla": [
         {
+          "Href": "https://bugzilla.redhat.com/1745687",
+          "ID": "1745687"
+        },
+        {
           "Href": "https://bugzilla.redhat.com/1748652",
           "ID": "1748652"
         },
@@ -282,39 +286,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.cve:tst:20137488003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "firefox is earlier than 0:68.1.0-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192663001"
-                  },
-                  {
-                    "Comment": "firefox is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201812398004"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "firefox-debugsource is earlier than 0:68.1.0-1.el8_0",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20192663003"
-                  },
-                  {
-                    "Comment": "firefox-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:201812398002"
-                  }
-                ]
-              }
-            ]
+            "Comment": "firefox is earlier than 0:68.1.0-1.el8_0",
+            "TestRef": "oval:com.redhat.rhsa:tst:20192663001"
+          },
+          {
+            "Comment": "firefox is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.cve:tst:201812398004"
           }
         ]
       }

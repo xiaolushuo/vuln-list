@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20190985",
-  "Version": "632",
+  "Version": "633",
   "Metadata": {
     "Title": "RHSA-2019:0985: mod_auth_mellon security update (Important)",
     "AffectedList": [
@@ -71,39 +71,14 @@
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
             "TestRef": "oval:com.redhat.cve:tst:20137488003"
-          }
-        ],
-        "Criterias": [
+          },
           {
-            "Operator": "OR",
-            "Criterias": [
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mod_auth_mellon is earlier than 0:0.14.0-3.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190985001"
-                  },
-                  {
-                    "Comment": "mod_auth_mellon is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190985002"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "mod_auth_mellon-debugsource is earlier than 0:0.14.0-3.el8_0.2",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190985003"
-                  },
-                  {
-                    "Comment": "mod_auth_mellon-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20190985004"
-                  }
-                ]
-              }
-            ]
+            "Comment": "mod_auth_mellon is earlier than 0:0.14.0-3.el8_0.2",
+            "TestRef": "oval:com.redhat.rhsa:tst:20190985001"
+          },
+          {
+            "Comment": "mod_auth_mellon is signed with Red Hat redhatrelease2 key",
+            "TestRef": "oval:com.redhat.rhsa:tst:20190985002"
           }
         ]
       }

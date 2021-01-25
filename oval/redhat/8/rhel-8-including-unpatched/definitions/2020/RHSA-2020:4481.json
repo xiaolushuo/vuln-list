@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204481",
-  "Version": "635",
+  "Version": "636",
   "Metadata": {
     "Title": "RHSA-2020:4481: bluez security update (Moderate)",
     "AffectedList": [
@@ -39,7 +39,7 @@
         {
           "CveID": "CVE-2020-0556",
           "Cvss3": "7.1/CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
-          "Cwe": "CWE-400 CWE-266",
+          "Cwe": "(CWE-400|CWE-266)",
           "Href": "https://access.redhat.com/security/cve/CVE-2020-0556",
           "Public": "20200310"
         }
@@ -110,21 +110,8 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "bluez-debugsource is earlier than 0:5.50-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204481005"
-                  },
-                  {
-                    "Comment": "bluez-debugsource is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.cve:tst:202010134008"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
                     "Comment": "bluez-hid2hci is earlier than 0:5.50-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204481007"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204481005"
                   },
                   {
                     "Comment": "bluez-hid2hci is signed with Red Hat redhatrelease2 key",
@@ -137,7 +124,7 @@
                 "Criterions": [
                   {
                     "Comment": "bluez-libs is earlier than 0:5.50-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204481009"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204481007"
                   },
                   {
                     "Comment": "bluez-libs is signed with Red Hat redhatrelease2 key",
@@ -150,7 +137,7 @@
                 "Criterions": [
                   {
                     "Comment": "bluez-libs-devel is earlier than 0:5.50-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204481011"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204481009"
                   },
                   {
                     "Comment": "bluez-libs-devel is signed with Red Hat redhatrelease2 key",
@@ -163,7 +150,7 @@
                 "Criterions": [
                   {
                     "Comment": "bluez-obexd is earlier than 0:5.50-4.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204481013"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204481011"
                   },
                   {
                     "Comment": "bluez-obexd is signed with Red Hat redhatrelease2 key",

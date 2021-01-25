@@ -1,7 +1,7 @@
 {
   "Class": "patch",
   "ID": "oval:com.redhat.rhsa:def:20204539",
-  "Version": "634",
+  "Version": "635",
   "Metadata": {
     "Title": "RHSA-2020:4539: pcre2 security and enhancement update (Moderate)",
     "AffectedList": [
@@ -48,10 +48,6 @@
         {
           "Href": "https://bugzilla.redhat.com/1735494",
           "ID": "1735494"
-        },
-        {
-          "Href": "https://bugzilla.redhat.com/1822698",
-          "ID": "1822698"
         }
       ],
       "AffectedCpeList": [
@@ -67,7 +63,7 @@
     "Criterions": [
       {
         "Comment": "Red Hat Enterprise Linux must be installed",
-        "TestRef": "oval:com.redhat.rhba:tst:20193384075"
+        "TestRef": "oval:com.redhat.rhba:tst:20193384067"
       }
     ],
     "Criterias": [
@@ -76,7 +72,7 @@
         "Criterions": [
           {
             "Comment": "Red Hat Enterprise Linux 8 is installed",
-            "TestRef": "oval:com.redhat.rhba:tst:20193384074"
+            "TestRef": "oval:com.redhat.rhba:tst:20193384066"
           }
         ],
         "Criterias": [
@@ -100,11 +96,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "pcre2-debugsource is earlier than 0:10.32-2.el8",
+                    "Comment": "pcre2-devel is earlier than 0:10.32-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539003"
                   },
                   {
-                    "Comment": "pcre2-debugsource is signed with Red Hat redhatrelease2 key",
+                    "Comment": "pcre2-devel is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539004"
                   }
                 ]
@@ -113,11 +109,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "pcre2-devel is earlier than 0:10.32-2.el8",
+                    "Comment": "pcre2-tools is earlier than 0:10.32-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539005"
                   },
                   {
-                    "Comment": "pcre2-devel is signed with Red Hat redhatrelease2 key",
+                    "Comment": "pcre2-tools is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539006"
                   }
                 ]
@@ -126,11 +122,11 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "pcre2-tools is earlier than 0:10.32-2.el8",
+                    "Comment": "pcre2-utf16 is earlier than 0:10.32-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539007"
                   },
                   {
-                    "Comment": "pcre2-tools is signed with Red Hat redhatrelease2 key",
+                    "Comment": "pcre2-utf16 is signed with Red Hat redhatrelease2 key",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539008"
                   }
                 ]
@@ -139,25 +135,12 @@
                 "Operator": "AND",
                 "Criterions": [
                   {
-                    "Comment": "pcre2-utf16 is earlier than 0:10.32-2.el8",
+                    "Comment": "pcre2-utf32 is earlier than 0:10.32-2.el8",
                     "TestRef": "oval:com.redhat.rhsa:tst:20204539009"
                   },
                   {
-                    "Comment": "pcre2-utf16 is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204539010"
-                  }
-                ]
-              },
-              {
-                "Operator": "AND",
-                "Criterions": [
-                  {
-                    "Comment": "pcre2-utf32 is earlier than 0:10.32-2.el8",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204539011"
-                  },
-                  {
                     "Comment": "pcre2-utf32 is signed with Red Hat redhatrelease2 key",
-                    "TestRef": "oval:com.redhat.rhsa:tst:20204539012"
+                    "TestRef": "oval:com.redhat.rhsa:tst:20204539010"
                   }
                 ]
               }
