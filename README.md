@@ -1,4 +1,5 @@
 # vuln-list
+漏洞库
 Collect vulnerability information and save it in parsable format automatically
 
 ## Source
